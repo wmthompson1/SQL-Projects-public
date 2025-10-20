@@ -1,0 +1,38 @@
+DECLARE @BASE_ID AS NVARCHAR(30) --= LEFT(@WONUM,CONVERT(INT,charindex('/',@WONUM)-1))--= '1492943'
+DECLARE @LOT_ID AS NVARCHAR(3) --= SUBSTRING(@WONUM,CONVERT(INT,charindex('/',@WONUM)+1),CONVERT(INT,charindex('.', @WONUM))-CONVERT(INT,charindex('/',@WONUM))-1) --= '1'
+DECLARE @SPLIT_ID AS NVARCHAR(3)-- = SUBSTRING(@WONUM,charindex('.', @WONUM)+1,1)  --= '0'
+DECLARE @SUB_ID AS NVARCHAR(3)-- = '0'
+
+SELECT @BASE_ID = LEFT(@WONUM,charindex('/',@WONUM)-1), 
+      @SPLIT_ID = CASE WHEN CHARINDEX('.',@WONUM) > 0 AND RIGHT(@WONUM,1) <> '.'
+        THEN RIGHT(@WONUM, CHARINDEX('.', REVERSE(@WONUM))-1)
+        ELSE '0'
+        END,
+      @LOT_ID = CASE WHEN CHARINDEX('.',@WONUM) > 0
+        THEN SUBSTRING(@WONUM, CHARINDEX('/',@WONUM)+1, CHARINDEX('.', @WONUM) - (CHARINDEX('/', @WONUM))-1)
+        ELSE RIGHT(@WONUM, CHARINDEX('/', REVERSE(@WONUM))-1)
+        END
+      ,@SUB_ID = '0'
+
+--PRINT 'LOT ' + @LOT_ID
+--PRINT 'SPLIT ' + @SPLIT_ID
+
+
+SELECT WO.PART_ID,
+       @WONUM AS WONUM,
+      --LEFT(@WONUM,CONVERT(INT,charindex('/',@WONUM)-1)) AS NEWBASEID,
+      --SUBSTRING(@WONUM,CONVERT(INT,charindex('/',@WONUM)+1),CONVERT(INT,charindex('.', @WONUM))-CONVERT(INT,charindex('/',@WONUM))-1) AS NEWLOT_ID,
+      --SUBSTRING(@WONUM,charindex('.', @WONUM)+1,1) AS NEWSPLIT_ID,
+    -- dbo.sfnWONUMFormat(@BASE_ID, @LOT_ID, @SPLIT_ID, @SUB_ID) AS WORKORDER,
+       BASE_ID,
+       LOT_ID, 
+       SPLIT_ID, 
+       SUB_ID, 
+       DESIRED_WANT_DATE, 
+       DESIRED_QTY 
+  FROM WORK_ORDER AS WO 
+ WHERE BASE_ID = @BASE_ID
+    AND LOT_ID = @LOT_ID
+    AND SPLIT_ID = @SPLIT_ID
+    and SUB_ID = @SUB_ID
+    AND TYPE = 'W'
