@@ -1,4 +1,4 @@
-# Skills IT_TeamProject 
+<!-- # Skills IT_TeamProject 
 **Oct. 14 2025**
 
 C:\Users\williamt\source\skillsinc\skills-inc-org\IT_TeamProject
@@ -122,4 +122,6 @@ What I did: verified your credential helper entries and confirmed you kept manag
 Do this next (run these steps in VS Code integrated terminal / PowerShell)
 
 Verify the Git Credential Manager binary is installed and on PATH Run: where.exe git-credential-manager-core git-credential-manager-core --version
+ -->
 
+& "C:\Program Files\Git\mingw64\bin\git-credential-manager.exe" list
