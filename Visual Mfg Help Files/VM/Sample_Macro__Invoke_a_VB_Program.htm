@@ -1,0 +1,76 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Sample Macro: Invoke a VB Program</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Sample Macro: Invoke a VB Program</h1>
+	</div>
+	<p class="First">In this sample macro, a VB program that prompts the 
+	 user for information to use in a customer order.</p>
+	<p>If you need a better development environment in which to create 
+	 external programs you can use full Visual Basic. You can execute VB 
+	 programs by the CreateObject method of VBScript assuming you have 
+	 created a VB ActiveX EXE or DLL.</p>
+	<p>It is very important that you use only Dialog Boxes to interact 
+	 with the user. If you use modeless forms you will not be able to get 
+	 a response from the user before the script returns to the program, 
+	 thus, it will appear that the macro has no affect on the program variables 
+	 in Order Entry.</p>
+	<p>Create a small VB ActiveX program that invokes a dialog box modally 
+	 in one of its methods. You can do anything you want on the dialog 
+	 since it prevents the method from returning until you close the dialog. 
+	 For instance, prompt for some data fields on the order entry form 
+	 and perform some unique calculation on the results.</p>
+	<p>What the VB program does is entirely up to you. You may want to 
+	 create a second VB program to act as a test fixture for the class 
+	 you develop that runs essentially the code you will give to VBScript 
+	 but in a disconnected way.</p>
+	<p>The example below is being run in the line item context, rather 
+	 than the header context in the preceding example.</p>
+	<p>The code needed to invoke the VB program in VBScript is:</p>
+	<p>Dim pgm</p>
+	<p>Set pgm = CreateObject(&quot;VBProgram.VBClass&quot;)</p>
+	<p>&#160;</p>
+	<p>‘ set some properties in the pgm. You defined these.</p>
+	<p>pgm.OrderID = ORDER_ID</p>
+	<p>pgm.Qty = USER_ORDER_QTY</p>
+	<p>pgm.UnitPrice = UNIT_PRICE</p>
+	<p>&#160;</p>
+	<p>‘ dialog</p>
+	<p>pgm.ShowUserTheDialog</p>
+	<p>&#160;</p>
+	<p>‘ get some properties back</p>
+	<p>USER_ORDER_QTY = pgm.Qty</p>
+	<p>UNIT_PRICE = pgm.UnitPrice</p>
+	<p>TRADE_DISC_PERCENT = pgm.TradeDiscPercent</p>
+	<p>. . .</p>
+	<p>&#160;</p>
+	<p>Set pgm = Nothing</p>
+	<p>&#160;</p>
+	<p>Note that VBProgram should be the name of your Project in VB and 
+	 VBClass should be the name you assigned to the main class in the Project.</p>
+	<p>The properties and methods for pgm above should be assumed to be 
+	 part of the code written for the VBProgram in question. You are free 
+	 to do almost anything you can imagine a VB program can do including 
+	 but not limited to connecting to databases, invoking other languages 
+	 (as long as forms are modal), calling remote procedures on other computers, 
+	 etc.</p>
+	<p>To cause the calling program, in this case Order Entry, to reload 
+	 the current order or the order you have modified in the script, set 
+	 the value of ORDER_ID, or in the case of lines, either ORDER_ID or 
+	 LINE_NO. In either case, the entire order will be reloaded by the 
+	 program on return.</p>
+</div>
+</body>
+</html>

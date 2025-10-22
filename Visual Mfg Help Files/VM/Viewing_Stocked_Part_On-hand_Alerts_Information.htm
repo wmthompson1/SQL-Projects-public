@@ -1,0 +1,115 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Stocked Part On-hand Alerts Information</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Stocked Part On-hand Alerts Information</h1>
+	</div>
+	<p>This dialog box shows supply problems with stocked parts. Parts 
+	 are displayed in this table if their current stock level is less than 
+	 or equal to their top of yellow zone quantity. The top of yellow zone 
+	 quantity is the total of your top of red zone and the yellow zone. 
+	 You can also display parts that are over-stocked. An over-stocked 
+	 part is a part whose quantity exceeds the top of green zone.</p>
+	<p>To view this information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, in the Buffer Management window click the 
+		 <span class="Bold">Site ID</span>&#160;button and select the site 
+		 whose buffer intrusions you want to view. If you are licensed 
+		 to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">View</span>, 
+		 <span class="Bold">Stocked Part On-hand Alerts</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the information 
+		 to view in the analysis. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span>&#160;– 
+	 This field is displayed only if you plan by warehouse. To view information 
+	 for a particular independently planned warehouse, specify the warehouse 
+	 in this field. To view information for your universally planned warehouses, 
+	 specify Universal. To view information for all warehouses, specify 
+	 All Warehouses.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Type</span>&#160;– 
+	 Under the warehouse ID field, specify the type of part to view in 
+	 the analysis. To view fabricated parts only, click Fabricated. To 
+	 view purchased parts only, click Purchased. To view all parts, click 
+	 All.</p>
+	<p class="Numbered-Indent"><span class="Bold">Include Overstock</span>&#160;– 
+	 To include parts that are overstocked, click this check box. An overstocked 
+	 part has an on-hand quantity that exceeds the top of green level. 
+	 To exclude overstocked parts and view only those parts with stock 
+	 levels less than or equal to their top of yellow zone, clear this 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Include Green Zone</span>&#160;– 
+	 To include parts with on-hand buffer statuses in the green zone, select 
+	 this check box. To exclude parts with on-hand buffer statuses in the 
+	 green zone, clear this check box.</p>
+	<ol start="4" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">View this information 
+		 in the table:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> – The 
+	 ID of the part is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">On-hand Buffer Status</span>&#160;– 
+	 The current on-hand buffer status is inserted. This column takes into 
+	 consideration only parts that are currently in your inventory. Parts 
+	 on order are ignored. This formula is used to calculate the current 
+	 on-hand buffer status: ((Replenishment level – on-hand quantity) / 
+	 Replenishment level) * 100. The cell is shaded in red if the calculated 
+	 buffer status falls into the on-hand red alert zone. If the buffer 
+	 status is in the red zone but not in the red alert zone, then the 
+	 part is considered to be in the yellow zone for this analysis. If 
+	 you are viewing overstocked parts, a negative number indicates that 
+	 the part is overstocked.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fab</span>&#160;– If 
+	 this part is a fabricated part, then this check box is selected. If 
+	 this part is not a fabricate part, then this check box is cleared.</p>
+	<p class="Numbered-Indent"><span class="Bold">Pur</span>&#160;– if 
+	 this part is a purchased part, then this check box is selected. If 
+	 this part is not a purchased part, then this check box is cleared.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity On-hand</span> 
+	 – The quantity of this part currently in your inventory is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity On-order</span>&#160;– 
+	 The quantity of this part currently on order during the planning lead-time 
+	 is inserted. The demand horizon is specified in Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity In-demand</span>&#160;– 
+	 The current demand for this part during the planning lead-time is 
+	 inserted. The demand horizon is specified in Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Avail. Buffer Status</span>&#160;– 
+	 The available buffer status is calculated and inserted in this field. 
+	 This formula is used to calculate the current available buffer status: 
+	 (replenishment level - (qty on-hand + qty on-order - qty in-demand)) 
+	 / replenishment level * 100.</p>
+	<p class="Numbered-Indent"><span class="Bold">Planning Horizon End 
+	 Date</span>&#160;– The last date used to find supply and demand for 
+	 this part. The planning lead-time value is added to the current date 
+	 to calculate this value.</p>
+	<p class="Numbered-Indent"><span class="Bold">Low Red Zone</span> – 
+	 The buffer status that defines the bottom of the red zone is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Low Yellow Zone</span>&#160;– 
+	 The buffer status that defines the bottom of the yellow zone is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Low Alert Status</span> 
+	 – The buffer status that defines the bottom of the red alert zone 
+	 is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Planning Lead-time</span>&#160;– 
+	 The number of days into the future that supply and demand is considered 
+	 for this analysis.</p>
+	<p>To view the information in the table as a graph, click <span class="Bold">Graph</span>.</p>
+	<p>To export the information in the table to Microsoft Excel, click 
+	 <span class="Bold">Send to Excel</span>.</p>
+</div>
+</body>
+</html>

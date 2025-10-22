@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Information on the Defaults Tab</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Information on the Defaults Tab</h1>
+	</div>
+	<p>Use the Defaults tab to specify requisition approval group names, 
+	 how purchase requisition approval tasks are generated, and requisition 
+	 rejection codes.</p>
+	<p>To specify this information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Defaults</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In each of the Approval 
+		 Label fields, specify the label to display on the Approval tab 
+		 of the Purchase Requisition Entry window.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To generate all purchase 
+		 requisition approval tasks for groups simultaneously, select the 
+		 <span class="Bold">Generate All Tasks Simultaneously</span> check 
+		 box. To generate approval tasks in sequential order, clear the 
+		 check box. When you clear the check box, the first group must 
+		 approve the purchase requisition before the second group’s approval 
+		 tasks are generated.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To require users to 
+		 enter passwords for fields you have secured, select the <span 
+		 class="Bold">Passwords Required for Secured Fields</span> check 
+		 box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To create one batch 
+		 per transaction when you post to the general ledger, select the 
+		 <span class="Bold">Create Financial Batches with Only One Transaction</span>. 
+		 If you post multiple transactions to the general ledger at the 
+		 same time, a batch is created for each transaction. Clear this 
+		 check box to create one batch for all transactions in the posting. 
+		 </p></li>
+		<li class="p-Numbered"><p class="Numbered">In the AP/AR Cash Management 
+		 section, specify the default bank accounts to use for this entity. 
+		 You can override the defaults on individual transactions. Specify 
+		 this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Cash Receipt Default 
+	 Bank Acct</span> – Click the browse button and select the default 
+	 account to use for cash receipts. You can select any bank account 
+	 associated with the current entity.</p>
+	<p class="Numbered-Indent"><span class="Bold">Cash Payment Default 
+	 Bank Acct</span> – Click the browse button and select the default 
+	 account to use for payments. You can select any bank account associated 
+	 with the current entity.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Customer Balance 
+		 Method section, specify how to calculated the customer’s open 
+		 balance. Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Orders, uninvoiced shipments 
+	 and unpaid invoices</span> – Click this option to calculate the customer’s 
+	 open balance as the total of open orders, uninvoiced shipments, and 
+	 unpaid invoices. An order line is considered open if the line status 
+	 is Released, Firmed, or On Hold. An order line is also considered 
+	 open if the line status is Inherit and the header status of the order 
+	 is Released, Firmed, or On Hold.</p>
+	<p class="Numbered-Indent"><span class="Bold">Uninvoiced shipments 
+	 and unpaid invoices</span> – Click this option to calculate the customer’s 
+	 open balance as the total of uninvoiced shipments and unpaid invoices. 
+	 Open customer order lines are excluded from the calculation.</p>
+	<p class="Numbered-Indent"><span class="Bold">Unpaid A/R Invoices</span> 
+	 – Click this option to calculate the customer’s open balance as the 
+	 total of unpaid accounts receivable invoices only.</p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<h2>Specifying Task Rejection Codes</h2>
+	<p>Before creating any purchase requisitions, add the rejection codes 
+	 you want to use to your database. Rejection codes help you classify 
+	 rejected purchase requisition tasks.</p>
+	<p>Purchase Requisition Entry and ECN Entry share a common Rejection 
+	 Code table. This feature is available from both the ECN tab in Site 
+	 Maintenance and the Default tab in Accounting Entity Maintenance.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Rejection 
+		 Codes</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Code</span> – Specify 
+	 an identifier for the rejection code.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description for this code.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

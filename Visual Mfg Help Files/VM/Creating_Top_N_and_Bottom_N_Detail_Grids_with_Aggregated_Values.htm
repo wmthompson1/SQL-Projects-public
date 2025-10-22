@@ -1,0 +1,111 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating Top N and Bottom N Detail Grids with Aggregated Values</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating Top N and Bottom N Detail Grids with Aggregated Values</h1>
+	</div>
+	<p class="First">Use the settings described in this procedure to create 
+	 a grid that identifies the top aggregated values or bottom aggregated 
+	 values in a column in your data source. For example, you could use 
+	 these settings to identify the customers with the lowest total amount 
+	 ordered. </p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Dashboard</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Edit Detail Grid</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Configuration ID</span>&#160;– 
+	 Specify a name for the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span>&#160;– 
+	 Specify a description of the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Data Source ID</span> 
+	 – Specify the data source to use as the basis of this analytic.</p>
+	<p class="Numbered-Indent"><span class="Bold">Title</span>&#160;– Specify 
+	 the title of the grid. When users add the detail grid to their dashboards, 
+	 the title is displayed in the title bar of the detail grid. </p>
+	<p class="Numbered-Indent"><span class="Bold">Grid Type</span>&#160;– 
+	 Specify <span class="Bold">Top N</span>&#160;to create a grid that 
+	 contains the largest results. Specify <span class="Bold">Bottom N</span>&#160;to 
+	 create a grid that contains the smallest results.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">In the Value Column 
+		 field, click the drop-down button and select the column to evaluate.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Value Aggregation 
+		 field, specify <span class="Bold">Sum</span>. </p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Top N or Bottom 
+		 N field, specify the number of results to display in the metric. 
+		 The label of this field changes depending on the value that you 
+		 select in the Grid Type field. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the default 
+		 date filters:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To use periods, 
+		 click the Period Type drop-down button and select the type of 
+		 period to use. In the Periods field, specify the number of past 
+		 periods to include in the date filter. In the Horizon Periods 
+		 field, specify the number of future periods to include in the 
+		 date filter. For example, to create a date filter that includes 
+		 records from two weeks before today and one week after today, 
+		 specify Weeks in the Period Type field, 2 in the Periods field, 
+		 and 1 in the Horizon Periods field.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To specify 
+		 a date range, click the Period Type drop-down button and select 
+		 <span class="Bold">Date Range</span>. Specify the first date in 
+		 the range in the Begin Date field. Specify the last date in the 
+		 range in the End Date field.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When users add the detail grid to their 
+	 dashboards, they can specify different date filters. </p>
+	<ol start="8" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">In the Columns table, 
+		 select the column to use as the value category. This column determines 
+		 how values in the value column are added. For example, to calculate 
+		 the total amount ordered by customer, specify AMOUNT_ORDERED in 
+		 the Value Column field and select the Customer ID check box in 
+		 the column table. </p></li>
+	</ol>
+	<p class="Numbered-Indent">You can select additional columns. Any other 
+	 columns that you select become part of the definition of the value 
+	 category. For example, if you selected both Customer ID and Part ID 
+	 in the Columns table and specified AMOUNT_ORDERED in the Value Column, 
+	 a metric that shows the total amount ordered for each customer ID/part 
+	 ID combination is displayed. </p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 </p></li>
+		<li class="p-Numbered"><p class="Numbered">To review the appearance 
+		 and performance of the detail grid, click the <span class="Bold">Data</span>&#160;tab. 
+		 </p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the <span class="Bold">Populate 
+		 Detail</span>&#160;check box. The detail grid is constructed based 
+		 on the parameters that you specified. The number of rows included 
+		 in the grid, the amount of time it took to construct the grid, 
+		 and the number of rows per second are displayed. </p></li>
+		<li class="p-Numbered"><p class="Numbered">When you are finished 
+		 creating the detail grid, click the Status drop-down button and 
+		 select <span class="Bold">Active</span>. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 Users can now add the detail grid to their dashboards. </p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Custom_Metrics.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Custom Metrics</p>
+<p class="SeeAlsoNext"><a href="Building_Detail_Grids.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Building Detail Grids</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

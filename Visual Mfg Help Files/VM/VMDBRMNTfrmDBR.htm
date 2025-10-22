@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up Buffers for the CCR</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1><a name="XREF_31219_Setting_Up_Buffers" id="XREF_31219_Setting_Up_Buffers"></a>Setting 
+		 Up Buffers for the CCR</h1>
+	</div>
+	<p><a name="cmbSITE_ID" id="cmbSITE_ID"></a><a name="cbSHOW_ACTIVE_CCRS" 
+													 id="cbSHOW_ACTIVE_CCRS"></a><a 
+	 name="tblCCR" id="tblCCR"></a><a name="tblCCR_Buffer" id="tblCCR_Buffer"></a><a 
+	 name="cbWORK_ORDERS" id="cbWORK_ORDERS"></a><a name="cbENG_MASTERS" 
+													 id="cbENG_MASTERS"></a><a 
+	 name="cbSTOCKED_PARTS" id="cbSTOCKED_PARTS"></a><a name="cbPURC_ORDERS" 
+														 id="cbPURC_ORDERS"></a>After 
+	 you have decided which resources to declare as CCRs, you must set 
+	 up appropriate buffers. When you are making decisions regarding appropriate 
+	 buffer sizes, you must consider the following:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">The placement of the CCR 
+		 within your manufacturing routing: is the CCR at the beginning, 
+		 middle, or end of our production process.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Make your buffers generous 
+		 in size (compared to the time to do the work) so that you can 
+		 protect your delivery dates from unforeseen events and your CCR 
+		 from starvation. However, you should not make buffer sizes so 
+		 large that your delivery dates are delayed. The buffer sizes dictate 
+		 the lead times you quote to your customers and the amount of work-in-process 
+		 you have.</p></li>
+	</ul>
+	<p>To set up buffers for your resources:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Scheduling</span>, 
+		 <span class="Bold">DBR Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span>&#160;arrow 
+		 and select the site to use. If you are licensed to use a single 
+		 site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 toolbar button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">CCR ID</span>&#160;– 
+	 Double-click the <span class="Bold">CCR ID</span>&#160;button, and 
+	 select the resource that is the CCR.</p>
+	<p class="Numbered-Indent"><span class="Bold">Rank</span>&#160;– Specify 
+	 the rank of this CCR. If you have multiple CCRs, the DBR scheduler 
+	 processes the CCRs in order of rank, starting with the lowest ranked 
+	 CCR. For example, a CCR with a rank of 1 would be processed before 
+	 a CCR with a rank of 2.</p>
+	<p class="Numbered-Indent"><span class="Bold">Active</span>&#160;– 
+	 If this resource is an active CCR, select this check box. If this 
+	 resource is not currently the CCR, clear the check box. If you clear 
+	 the check box, you cannot create a schedule for the resource.</p>
+	<p class="Numbered-Indent"><span class="Bold">Is a Group</span> – If 
+	 the selected resource is a resource group, this check box is selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipping</span>&#160;<span 
+	 class="Bold">Buffer</span>&#160;– Specify the default shipping buffer 
+	 in hours for this CCR. The shipping buffer is the amount of time it 
+	 takes to complete a work order after the materials pass through the 
+	 CCR. The consumption of the shipping buffer begins after the CCR operation 
+	 is complete and ends when the work order header is closed. The shipping 
+	 buffer is used to protect your delivery date.</p>
+	<p class="Numbered-Indent"><span class="Bold">CCR</span>&#160;<span 
+	 class="Bold">Buffer</span> – Specify the default CCR buffer in hours. 
+	 The CCR buffer is the amount of time it takes to complete all operations 
+	 preceding the CCR in a work order. This is the amount of time between 
+	 the issue of materials to the work order and the start of the CCR 
+	 operation. Enter the number of hours you want to use for a CCR buffer 
+	 for orders that pass through this resource. The CCR buffer help to 
+	 ensure that the CCR is used at full capacity.</p>
+	<p class="Numbered-Indent"><span class="Bold">Assembly</span>&#160;<span 
+	 class="Bold">Buffer</span>&#160;– Specify the default assembly buffer 
+	 in hours. The assembly buffer is used when parts that have passed 
+	 through the CCR are combined with parts that have not passed through 
+	 the CCR. The assembly buffer is the amount of time between the issue 
+	 of raw materials to the point where CCR parts are combined with non-CCR 
+	 parts. The assembly buffer is used in conjunction with the shipping 
+	 buffer to allow parts that do not use the CCR sufficient time to pass 
+	 through the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Rod</span>&#160;– Specify 
+	 the default rod value in hours. A rod is used when a CCR is used more 
+	 than once on a work order. parts move through a CCR more than once. 
+	 The rod is the minimum amount of time that passes between the CCR 
+	 operations.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipping buffer % check</span>&#160;– 
+	 Specify how much of the shipping buffer to use when checking the validity 
+	 of the production schedule. When you build a production schedule, 
+	 this is the percentage of the shipping buffer that should remain after 
+	 the CCR operation is complete. If less than the percentage you specify 
+	 is remaining, then the work order may not be completed on time.</p>
+	<p class="Numbered-Indent"><span class="Bold">Emergency Zone %</span>&#160;– 
+	 Specify the percentage that represents the top of the red zone. Specify 
+	 this value as a percentage of the total buffer consumed. For example, 
+	 if your shipping buffer is 40, and your red zone is 0 to 8 hours, 
+	 specify 80 in this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Yellow Zone</span>&#160;– 
+	 Specify the percentage that represents the top of the yellow zone. 
+	 Specify this value as a percentage of the total buffer consumed. For 
+	 example, if your shipping buffer is 40, and the top of your yellow 
+	 zone is 24 hours, then specify 40 in this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Emerg. Stock %</span>&#160;– 
+	 This serves as a default emergency stock percentage for parts for 
+	 which you do not enter a part specific Emergency Stock %.</p>
+	<p class="Numbered-Indent"><span class="Bold">MTS CCR Buffer</span> 
+	 – Specify the default CCR buffer for made-to-stock orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Collect Data for Intrusions</span> 
+	 – Specify which zone intrusions to track. Select one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">A</span> – Select this option 
+	 to track intrusions into all zones.</p>
+	<p class="DoubleIndent"><span class="Bold">Y</span> – Select this option 
+	 to track intrusions into the yellow and red zones.</p>
+	<p class="DoubleIndent"><span class="Bold">E</span> – Select this option 
+	 to track intrusions into the red zone only.</p>
+	<ol start="5" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+</div>
+</body>
+</html>

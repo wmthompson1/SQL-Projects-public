@@ -1,0 +1,133 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Adding Piece Tracked Parts to Work Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Adding Piece Tracked Parts as Material Requirements</h1>
+	</div>
+	<p class="First">To add a piece-tracked part as a material requirement:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Eng/Mfg</span>, 
+		 <span class="Bold">Manufacturing Window</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open the work order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Follow the standard 
+		 procedure for adding a material card. See <a href="VMMFGWINfrmMaterial.htm">Adding 
+		 Material Requirements</a>. In the Part ID field, specify the ID 
+		 for a piece tracked part.</p></li>
+		<li class="p-Numbered"><p class="Numbered">On the Quantities tab, 
+		 specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Qty Per</span> – Specify 
+	 the quantity required to make one unit of finished product. Use the 
+	 Qty Per (Start Qty) button to specify Quantity Per based on the amount 
+	 needed per incoming material. Use the Quantity Per (End Qty) button 
+	 to specify Quantity Per based on the amount needed per unit of outgoing 
+	 master (the End Quantity).</p>
+	<p class="Numbered-Indent"><span class="Bold">Fixed Qty</span> – Specify 
+	 the fixed material requirement quantity. A fixed material quantity 
+	 is a quantity of material required one time, regardless of work order 
+	 quantity. This could be fixed scrap caused by setup or test, or could 
+	 be any material required to produce the parent part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Scrap %</span> – Specify 
+	 the percentage of material lost to scrap. This percentage is added 
+	 to the base quantity required to make up for the loss.</p>
+	<p class="Numbered-Indent"><span class="Bold">Length, Width, and Height</span> 
+	 – Specify the dimensions of one piece of this material requirement. 
+	 If a particular dimension is not required, the field is not available. 
+	 Specify the dimensions in the unit of measure displayed in the Usage 
+	 U/M field.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">On the Planning tab, 
+		 review this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Required Date</span> 
+	 – The required date is the date on which the Concurrent Scheduler 
+	 determines the material requirement is required. Before you run the 
+	 scheduler, the field is filled with the work order’s Release Date.</p>
+	<p class="Numbered-Indent">Several factors influence how the date is 
+	 determined. If you specify that the Concurrent Scheduler forward schedule 
+	 the work order from release date or that the release date is hard, 
+	 you may receive a different date than if you permit the normal backwards 
+	 scheduling scenarios to run. </p>
+	<p class="Numbered-Indent"><span class="Bold">Calculated Quantity</span> 
+	 – The quantity of the material required according to the work order 
+	 is displayed. You must change the status of the work order to Released 
+	 before quantities are recalculated and this value is displayed.</p>
+	<p class="Numbered-Indent">For piece tracked parts, the calculation 
+	 made for this field depends upon the CalcQtyByPieces setting in Preferences 
+	 Maintenance. If this setting is set to Y, then the calculated quantity 
+	 is equal to the Calculated Piece Qty. If this setting is set to N, 
+	 then &#160;the calculated quantity is equal to the actual quantity 
+	 used in the work order. See <a href="Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm">Calculated 
+	 Quantity Values for Piece Tracked Parts</a>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Issued Quantity</span> 
+	 – The quantity of the material you have issued thus far to satisfy 
+	 the requirement. When the Issued Quantity matches the Calculated Quantity, 
+	 you have fully met the material requirement.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Quantity</span> 
+	 – The quantity you have issued to the material requirement from any 
+	 one or multiple sources of supply. Types of supply include (CP) Coproducts, 
+	 (I) Inventory, (PD) Purchase Order Delivery Schedules, (PO) Purchase 
+	 Orders, (WH) Interbranch Transfers, and (WO) Work Orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Quantity</span> 
+	 – After you have allocated a quantity to a material requirement, you 
+	 must, depending on which supply type you specified, issue/receive 
+	 the quantity from the source of supply (the 6 supply types above) 
+	 to the material requirement. Before supply arrives and is available 
+	 for use on the work order, it is considered allocated; upon reception/issue, 
+	 it becomes a fulfilled quantity.</p>
+	<p class="Numbered-Indent">After a requirement receives the allocated 
+	 quantity, the Fulfilled Quantity field is populated with the appropriate 
+	 amount. For example, if you allocate an unreceived purchase order 
+	 line with a quantity of 200 to a work order material requirement, 
+	 the Planning tab would display an Allocated Quantity of 200, but a 
+	 Fulfilled Quantity of 0. After you receive the purchase order into 
+	 the appropriate warehouse using Purchase Receipt Entry, the Fulfilled 
+	 Quantity on the Planning tab would then display 200, as the allocated 
+	 quantity—the conditional source of supply until now—is real, in the 
+	 warehouse and fulfilling its purpose of supplying the requirement.</p>
+	<p class="Numbered-Indent"><span class="Bold">Calculated # of Pcs</span> 
+	 – A value is displayed in this field only if this requirement is a 
+	 piece tracked part. To determine the value in this field, the total 
+	 amount of part needed to meet this requirement is divided by the size 
+	 of one material piece. The value is rounded up to the next whole number 
+	 and inserted in this field. If you place a purchase order for this 
+	 requirement, the value in this field is inserted in the # Pieces column 
+	 on the purchase order line. See <a href="Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm">Calculated 
+	 Quantity Values for Piece Tracked Parts</a>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Calculated Piece Qty</span> 
+	 – A value is displayed in this field only if this requirement is a 
+	 piece tracked part. To determine the value in this field, the Calculated 
+	 # of Pcs is multiplied by the size of one material piece. If you place 
+	 a purchase order for this requirement, this value is inserted in the 
+	 Quantity field on the purchase order line. See <a href="Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm">Calculated 
+	 Quantity Values for Piece Tracked Parts</a>.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Complete the information 
+		 on the Material card.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Dimensional_Inventory.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

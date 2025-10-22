@@ -1,0 +1,62 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Unit Prices for Parts Before Shipment</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Unit Prices for Parts Before Shipment</h1>
+	</div>
+	<p class="First">Before VISUAL ships any order lines, it checks to 
+	 see if the part on the order line has a unit price that is in effect 
+	 for the customer. Price effectivity hinges on a specific combination 
+	 of factors, all of which VISUAL obtains from the CUST_PRICE_EFFECT 
+	 table in the database. When trying to ship an order, VISUAL references 
+	 this table and looks for the following things:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">a part to customer relationship 
+		 that matches the one in the customer order</p></li>
+		<li class="p-Bullet"><p class="Bullet">a effective date range within 
+		 which the ship date occurs</p></li>
+	</ul>
+	<p>Finding both of these things, it retrieves the effective price for 
+	 the customer from the appropriate date range, and fills the Unit Price 
+	 column with the unit price of the part on the line. The total value, 
+	 then, is based on the quantity of the order line and any established 
+	 break quantities for the customer. See Part Maintenance for more information 
+	 on quantity price breaks.</p>
+	<p>If one or both of these things are not present, VISUAL disallows 
+	 shipment until you set up an effective price for the customer.</p>
+	<p>For example, on January 10, 2002, you are going to ship an order 
+	 for Customer A that contains 3 lines, all for the same part, Part 
+	 A. Before you created the order and it arrived at the shipping stage, 
+	 you used Part Maintenance to add effective date prices to Part A’s 
+	 master.</p>
+	<p>In the master, you specified that Customer A, for the dates of January 
+	 1, 2004 through July 1, 2004, must pay 1.00 per unit of Part A.</p>
+	<p>Now, back at the Shipping Entry window, VISUAL checks Part A’s master 
+	 to see if Customer A is eligible to order it, and, providing that 
+	 they are, what date/price scheme is in effect.</p>
+	<p>Finding that the order date is within the date range for Part A, 
+	 VISUAL knows to charge 1.00 per unit of Part A, and updates the Unit 
+	 Price with any quantity break information.</p>
+	<p><a href="Price_Effectivity_in_Shipping_Entry.htm">Price Effectivity 
+	 in Shipping Entry</a></p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shipping_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,164 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Calculated Quantity Values for Piece Tracked Parts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Calculated Quantity Values for Piece Tracked Parts</h1>
+	</div>
+	<p>If you use piece tracked parts as material requirements, you can 
+	 choose how to determine the quantity in the Calculated Value field 
+	 on the Material card. The Calculated Value field is used to determine 
+	 the actual quantity of the material requirement and the cost of the 
+	 material in the work order. Specify your choice in Preferences Maintenance. 
+	 Your choice is particularly important if you specify a scrap percentage 
+	 or fixed quantity for materials.</p>
+	<p>To make your decision, it is important to understand how material 
+	 quantities are calculated for piece tracked parts. These calculations 
+	 are made:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">The size of the material 
+		 requirement piece is calculated. To calculate the size of each 
+		 piece, the dimensions specified on the Material Requirements card 
+		 are multiplied. If the usage unit of measure is different from 
+		 the stock unit of measure, the dimensions are multiplied by the 
+		 conversion factor:</p></li>
+	</ol>
+	<p class="Numbered-Indent">Length * Width * Height * Conversion Factor</p>
+	<ol start="2" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">After the size of the 
+		 piece is determined, the total amount required for the work order 
+		 is calculated:</p></li>
+	</ol>
+	<p class="Numbered-Indent">Work Order or Leg Header Quantity * ((1 
+	 + Scrap %) * Qty Per) + Fixed Quantity) * Dimensions * the conversion 
+	 factor between the usage unit of measure and the stock unit of measure</p>
+	<p class="Numbered-Indent">This is the quantity of material actually 
+	 used for the work order.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">To determine the number 
+		 of pieces needed to meet the requirement, the total quantity required 
+		 for the work order is divided by the size of the material requirement 
+		 and then rounded up to the next whole number:</p></li>
+	</ol>
+	<p class="Numbered-Indent">Total amount required/piece size, rounded 
+	 the next whole number</p>
+	<p>The result of these calculations is inserted in the Calculated # 
+	 of Pcs field on the Planning tab. To determine the value in the Calculated 
+	 Piece Qty field, the Calculated # of Pcs is multiplied by the piece 
+	 size.</p>
+	<p>The value used for the Calculated Qty field is determined by the 
+	 CalcQtyByPieces preference setting in Preferences Maintenance:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet"><span class="Bold">CalcQtyByPieces=Y</span> 
+		 – If you choose this option, then the Calculated Value field is 
+		 equal to the Calculated Piece Quantity. If you choose this option, 
+		 then the whole number of pieces is the total requirement. This 
+		 is the default option.</p></li>
+		<li class="p-Bullet"><p class="Bullet"><span class="Bold">CalcQtyByPieces=N</span> 
+		 – If you choose this option, then the Calculated Value field is 
+		 equal to the actual amount used for the work order.</p></li>
+	</ul>
+	<h2>Example</h2>
+	<p>Presume you have a work order with these parameters:</p>
+	<p><span class="Bold">Work Order Header Qty:</span> 5</p>
+	<p><span class="Bold">Material Card Qty Per:</span> 1</p>
+	<p><span class="Bold">Scrap Percentage:</span> 25%</p>
+	<p><span class="Bold">Dimensions:</span> 100 length * 45 width</p>
+	<p><span class="Bold">Usage U/M:</span> Square Inches</p>
+	<p><span class="Bold">Stock U/M:</span> Square Feet</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Calculate the size of 
+		 the material requirement piece by multiplying the dimensions and 
+		 the conversion factor between the usage u/m and stock u/m:</p></li>
+	</ol>
+	<p class="Numbered-Indent">100 *45 * 0.006944 = 31.25</p>
+	<p class="Numbered-Indent">The size of the material requirement piece 
+	 is 31.25 square feet. When you purchase quantities for this work order, 
+	 the piece is purchased in multiples of 31.25.</p>
+	<ol start="2" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Calculate the total 
+		 required for the work order by multiplying the quantity on the 
+		 work order header by the total amount required on the material 
+		 requirement card. The value is converted to the stock unit of 
+		 measure:</p></li>
+	</ol>
+	<p class="Numbered-Indent">5 * ((1 + 0.25) * 1) + 0) * (100 * 45) * 
+	 .006944 = 5 * 1.25 *4500 * .006944 = 195.30</p>
+	<p class="Numbered-Indent">This is the quantity you actually use in 
+	 the work order.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Calculate the number 
+		 of pieces required by dividing the total required for the work 
+		 order by the size of the piece and rounding up to the next whole 
+		 number:</p></li>
+	</ol>
+	<p class="Numbered-Indent">195.30/31.25 = 6.25, rounded up to 7</p>
+	<p>On the Planning tab of the material requirement card, these values 
+	 are used:</p>
+	<p><span class="Bold">Calculated # of Pieces</span> – 7</p>
+	<p><span class="Bold">Calculated Piece Qty</span> – This value is equal 
+	 to the Calculated # of Pieces multiplied by the piece size:</p>
+	<p>7 * 31.25 = 218.75</p>
+	<p><span class="Bold">Calculated Qty</span> – The value used in this 
+	 field is determined by the CalcQtyByPieces preference in Preference 
+	 Maintenance. If the preference is set to Y, then this value in equal 
+	 to the Calculated Piece Qty. In this example, the value is 218.75. 
+	 If the preference is set to N, then this value is equal to the total 
+	 required for the work order. In this example, the value is 195.30.</p>
+	<h2>Specifying the CalcQtyByPieces Preference Setting</h2>
+	<p>To specify the CalcQtyByPieces preference setting:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Section</span> – Specify 
+	 <span class="Bold">Visual Mfg</span>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Entry</span> – Specify 
+	 <span class="Bold">CalcQtyByPieces</span>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – To use 
+	 the calculated piece quantity as the calculated quantity, specify 
+	 <span class="Bold">Y</span>. To use the total quantity actually used 
+	 in the work order, specify <span class="Bold">N</span>.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p><span class="Bold">Note:</span> If you change your CalcQtyByPieces 
+	 preferences settings, you must recalculate quantities on work orders, 
+	 engineering masters, and quote masters that use piece-tracked parts. 
+	 When you recalculate quantities, posting candidate flags are set to 
+	 Yes. When you run costing, the work orders will be processed.</p>
+	<h2><span style="font-family: Arial, sans-serif; mso-font-width: 100%; 
+				 font-weight: normal; mso-bidi-font-weight: bold;">Purchasing 
+	 Piece Tracked Parts for Material Requirements</span></h2>
+	<p>When you purchase a piece tracked part, the number of pieces you 
+	 order must be a whole number.<span style="mso-spacerun: yes;">&#160;</span>&#160;When 
+	 you use the Purchase this Material/Service function to purchase a 
+	 piece tracked part in the Manufacturing Window, the number of pieces 
+	 on the purchase order line is equal to the Calculated # of Pcs field 
+	 on the Planning tab of the Material card. The quantity is equal to 
+	 the Calculated Piece Qty on the Planning tab of the Material card. 
+	 If you use the CalcQtyByPieces = N setting in Preferences Maintenance, 
+	 the amount you purchase might exceed the amount needed to fulfill 
+	 the material requirement. You can return any unused pieces to your 
+	 inventory. <span style="font-size: 10.5pt; mso-font-width: 100%; mso-spacerun: yes;">&#160;</span></p>
+</div>
+</body>
+</html>

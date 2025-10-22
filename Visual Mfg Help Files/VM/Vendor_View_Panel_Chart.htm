@@ -1,0 +1,134 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Vendor View Panel Chart</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Vendor View Panel Chart</h1>
+	</div>
+	<p>The Vendor View Panel shows information about your outstanding transactions 
+	 with the vendor. Information is shown at the accounting entity level.</p>
+	<p>In Purchase Order Entry, the Purchase Management Window, Purchase 
+	 Requisition Entry, the Material Planning Window, and AP Invoice Entry, 
+	 the chart shows information for the parent accounting entity of the 
+	 site specified on the header. &#160;In Vendor Maintenance and Accounts 
+	 Payable Inquiry, use the drop-down menu at the top of the panel to 
+	 specify the accounting entity.</p>
+	<p>In the Material Planning Window, the panel is displayed for purchased 
+	 parts only. Information is shown for the preferred vendor of the part. 
+	 In all other cases, information is shown for the vendor selected in 
+	 the main window.</p>
+	<p>All values are shown in the accounting entity’s functional currency.</p>
+	<p>This table shows information about the bars in the chart:</p>
+	<table style="border-collapse: separate; border-collapse: separate;" 
+			 cellspacing="0" width="100%" border="1">
+		<col style="width: 16.835%;">
+		<col style="width: 27.783%;">
+		<col style="width: 55.382%;">
+		<tr>
+			<td><p><span class="Bold">Bar</span></p></td>
+			<td><p><span class="Bold">This bar shows...</span></p></td>
+			<td><p><span class="Bold">Click a bar to view...</span></p></td>
+		</tr>
+		<tr>
+			<td class="hcp1"><p>Orders</p></td>
+			<td class="hcp1"><p>The total amount of open 
+			 orders. If any lines on the order have been completely received, 
+			 then those lines are not included in the calculation. An open 
+			 order has the status of Firmed or Released.</p>
+			<p>Sales tax and VAT are not included in the amount calculations.</p></td>
+			<td><p><span class="Bold">Order ID</span> – The ID of the purchase 
+			 order is displayed. Click an ID to open the order in Purchase 
+			 Order Entry. If you are viewing the Vendor View Panel in Purchase 
+			 Order Entry, then the order you select replaces the order 
+			 you were viewing in order entry.</p>
+			<p><span class="Bold">Desired Recv Date</span> – The date that 
+			 you want to receive the order is displayed.</p>
+			<p><span class="Bold">Order Amt</span> – The monetary value 
+			 of the order line. If the order is late, then the amount is 
+			 displayed in red. An order is considered to be late if it 
+			 has not been received the desired receive date.</p>
+			<p><span class="Bold">Received Amt</span> – The monetary value 
+			 of any receipts made against the order. Only partial receipts 
+			 are considered. If a particular line on the purchase order 
+			 is closed, the line is not considered in the calculation.</p>
+			<p><span class="Bold">Currency ID</span> – The functional currency 
+			 ID of the current site’s parent accounting entity is displayed.</p>
+			<p><span class="Bold">Site ID</span> – The Site ID associated 
+			 with the transaction is displayed.</p></td>
+		</tr>
+		<tr>
+			<td><p>Received</p></td>
+			<td><p>The total amount of uninvoiced receipts.</p>
+			<p>Sales tax and VAT are not included in the amount calculations.</p></td>
+			<td><p><span class="Bold">Receiver ID</span> – The ID of the 
+			 receiver and the receiver line are displayed. Click the ID 
+			 to open the receipt in Purchase Receipt Entry.</p>
+			<p><span class="Bold">Received Amount</span> – The monetary 
+			 value of the receipt. Only uninvoiced values are shown. If 
+			 the order was not received before the desired receive date, 
+			 then the value is displayed in red.</p>
+			<p><span class="Bold">Received Date</span> – The date that 
+			 the order was received is displayed.</p>
+			<p><span class="Bold">Purchase Order ID</span> – The ID of 
+			 the purchase order that was received. Click the ID to open 
+			 the order in Purchase Order Entry.</p>
+			<p><span class="Bold">Ship Via</span> – The shipping method 
+			 that the vendor used to ship the order is displayed.</p>
+			<p><span class="Bold">Currency ID</span> – The functional currency 
+			 ID of the current site’s parent accounting entity is displayed.</p>
+			<p><span class="Bold">Site ID</span> – The Site ID associated 
+			 with the transaction is displayed.</p></td>
+		</tr>
+		<tr>
+			<td><p>Invoices</p></td>
+			<td><p>The total amount of unpaid invoices.</p>
+			<p>Sales tax and VAT are included in the amount calculations.</p></td>
+			<td><p><span class="Bold">Voucher ID</span> – The ID of the 
+			 voucher is displayed. Click the ID to open the voucher in 
+			 Accounts Payable Invoice Entry.</p>
+			<p><span class="Bold">Balance Amount</span> – The total outstanding 
+			 balance is displayed. If the amount is overdue, then the amount 
+			 is displayed in red.</p>
+			<p><span class="Bold">Invoice Date</span> – The date of the 
+			 invoice is displayed.</p>
+			<p><span class="Bold">Invoice Amount</span> – The total amount 
+			 of the invoice is displayed. If the amount is overdue, then 
+			 the amount is displayed in red.</p>
+			<p><span class="Bold">Paid Amount</span> – The amount paid 
+			 to date is displayed. &#160;</p>
+			<p><span class="Bold">Currency ID</span> – The functional currency 
+			 ID of the current site’s parent accounting entity is displayed.</p>
+			<p><span class="Bold">Site ID</span> – The Site ID associated 
+			 with the transaction is displayed.</p></td>
+		</tr>
+		<tr>
+			<td><p>Total</p></td>
+			<td><p>The total amount of open orders, uninvoiced receipts, 
+			 and unpaid invoices.</p></td>
+			<td><p>Information about all transactions that contribute to 
+			 your open balance with the vendor. The information shown in 
+			 the table is a combination of the other three bars. The Type 
+			 column shows whether the transaction is a purchase order, 
+			 a receiver, or an invoice. Click an ID to open the transaction.</p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+</div>
+</body>
+</html>

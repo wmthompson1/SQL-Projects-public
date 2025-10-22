@@ -1,0 +1,93 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Receiving by Part</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Receiving by Part</h1>
+	</div>
+	<p class="First">If you work in a repetitive manufacturing industry 
+	 and issue several work orders for the same part, you may find it more 
+	 appropriate to receive by part ID instead of by the individual work 
+	 orders used to manufacture the parts.</p>
+	<p>When you click Receipt by Part, a list of release work orders for 
+	 the part is displayed. When you specify a quantity to receive, the 
+	 quantity is automatically distributed to the open orders starting 
+	 with the work order with the earliest Desired Want Date. If the Receipt 
+	 Qty plus Work order Received Qty plus any Allocated Qty (for linked 
+	 customer orders) is greater than the first work order’s Desired Qty, 
+	 the remaining quantity is distributed to the next oldest work order. 
+	 You can override the calculated quantities.</p>
+	<p>If you specify a quantity greater than the quantity due for released 
+	 work orders, you can apply the excess inventory to firmed work orders 
+	 or closed work orders.</p>
+	<p>To receive inventory by part:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Inventory Transaction Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site for the transaction. If you are licensed to use a single 
+		 site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Receipt 
+		 by Part</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Part ID field, 
+		 specify the part to receive. The total quantity desired, received, 
+		 and due for all released jobs are inserted into the appropriate 
+		 fields. A list of released work orders for the manufacture of 
+		 the Part ID is displayed in the Job ID table. The work orders 
+		 are listed in order of the most recent Desired Want Date. To view 
+		 all of the work orders for this part regardless of their status, 
+		 select <span class="Bold">Options</span>, <span class="Bold">View 
+		 All Work Orders</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the quantity 
+		 of finished goods you are receiving and the location in which 
+		 to receive them. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> – Specify 
+	 the quantity to receive.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse</span> – Specify 
+	 the ID of the warehouse receiving the finished goods. If a warehouse 
+	 is specified on the work order header, than that warehouse ID is inserted. 
+	 If no warehouse is specified on the work order header, then the default 
+	 warehouse specified for the part is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Location</span> – Specify 
+	 the ID of the location receiving the finished goods. To view a list 
+	 of locations that can store the part, click the Location browse button. 
+	 Depending on your Part Location on the Fly settings in Site Maintenance, 
+	 you may be able to specify a new location for the part. See <a href="Specifying_Information_on_the_General_Tab_site.htm">Specifying 
+	 Information on the General Tab</a>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description of the transaction.</p>
+	<p class="Numbered-Indent"><span class="Bold">Employee ID</span> – 
+	 This field is displayed only if you selected the Autogen Labor During 
+	 Receipt check box in Site Maintenance. If you autogenerate labor tickets, 
+	 specify the ID of the employee who complete the labor for this finished 
+	 good. See <a href="Specifying_Information_on_the_Defaults_Tab_site.htm">Specifying 
+	 Information on the Defaults Tab</a>.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">In the work order table, 
+		 the quantity you specified is assigned to open orders. To adjust 
+		 the quantity received to an order, specify a new value in the 
+		 ReceiptQty field. The total amount remaining to be applied to 
+		 an order is displayed above the table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

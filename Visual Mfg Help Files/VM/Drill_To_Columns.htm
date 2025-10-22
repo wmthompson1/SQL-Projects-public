@@ -1,0 +1,336 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Drill To Columns</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+th.hcp1 { border-top:solid 1px #808080;
+vertical-align:top;
+padding-left:6.00pt;
+padding-top:3.00pt;
+padding-right:6.00pt;
+padding-bottom:3.00pt; }
+td.hcp2 { border-bottom:solid 1px #808080;
+vertical-align:top;
+padding-left:6.00pt;
+padding-top:3.00pt;
+padding-right:6.00pt;
+padding-bottom:3.00pt; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Drill To Columns</h1>
+	</div>
+	<p>When you create a data source, you can specify which columns in 
+	 the metric grids are drill-to columns. When a grid column is a drill-to 
+	 column, users can click the information in the column to view more 
+	 information in a related VISUAL&#160;executable. 
+	 To create drill-to columns and to specify the VISUAL&#160;executable 
+	 that is opened when a user clicks a dill to link, use the Class Name 
+	 field. </p>
+	<p>Depending on the value that you specify in the Class Name field, 
+	 the column becomes a drill-to column in the grid. If you specify Date 
+	 in the Class Name field, the column does not become a drill-to column. 
+	 In all other cases, the class name that you select determines the 
+	 window that is opened when a user clicks a drill-to link. For example, 
+	 if you select Activity ID in the Class Name field, then clicking the 
+	 drill-to link opens Activity Maintenance.</p>
+	<p>To function properly, the primary key for the window that is opened 
+	 with the drill-to link must be provided. If the column where you add 
+	 the drill-to link contains the primary key, then you do not need to 
+	 complete any additional configuration steps. For example, if Seq No 
+	 6 in your data source is set up to show customer_order.customer_ID, 
+	 and you specify Customer ID in the Class Name field, then the drill-to 
+	 to Customer Maintenance is complete. </p>
+	<p>If the column where you add the drill-to link does not contain the 
+	 primary key for the drill-to window, then you must use the Drill To 
+	 Configuration dialog to complete the drill-to link. The Drill To Configuration 
+	 dialog lists the parameters that are used to open the associated window. 
+	 For each parameter, specify either a column from your data source 
+	 or a literal value. If you use a literal value, then the value you 
+	 specify is always used for the parameter. For example, if you are 
+	 creating a drill-to link for work order IDs, you can specify the literal 
+	 value W for work order type instead of including a work order type 
+	 column in your data source. </p>
+	<p>This table shows the class names, the window associated with each 
+	 class name, and the expected parameters for each class:</p>
+	
+	<table dir="ltr" style="padding-left: 2.00pt; padding-top: 2.00pt; 
+			 padding-right: 2.00pt; padding-bottom: 2.00pt; margin-left: 27.00pt;" 
+			 cellspacing="0" width="624">
+		<tr style="height: 17.00pt;" bgcolor="#E6E6E6">
+			<th width="156" bgcolor="#E6E6E6" class="hcp1"><p 
+				 class="FM_CellHeading">Class name</p></th>
+			<th width="156" bgcolor="#E6E6E6" class="hcp1"><p 
+				 class="FM_CellHeading">Window</p></th>
+			<th width="156" bgcolor="#E6E6E6" class="hcp1"><p 
+				 class="FM_CellHeading">Expected Parameters</p></th>
+			<th width="156" bgcolor="#E6E6E6" class="hcp1"><p 
+				 class="FM_CellHeading">Notes</p></th>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Activity 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Activity 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Activity 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Control 
+			 No</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Accounts 
+			 Payable Payment Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Bank 
+			 Account ID</p>
+			<p class="FM_CellBody">Control No</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link. </p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Name</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link. </p></td>
+		</tr>
+		<tr style="height: 24.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Order ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Order Entry</p>
+			<p class="FM_CellBody">Order Management Window</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 Order ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Date</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">n/a</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">n/a</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Use 
+			 the Date class name to create a standard date column. </p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">IBT 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">IBT 
+			 Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">IBT 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Inventory 
+			 Transaction ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Inventory 
+			 Transaction Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Inventory 
+			 Transaction ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 24.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Invoice 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Accounts 
+			 Receivable Invoice Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Invoice 
+			 ID (Accounts Receivable)</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Labor 
+			 Transaction ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Labor 
+			 Ticket Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Labor 
+			 Transaction ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Packlist 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Shipping 
+			 Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Packlist 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 134.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 ID</p>
+			<p class="FM_CellBody">Site ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Site 
+			 ID is optional. To specify site information, you must use 
+			 the Drill To Configuration dialog. If you specify a value 
+			 for the Site ID parameter, then the site-level record for 
+			 the part is opened in Part Maintenance. If you do not specify 
+			 a Site ID parameter, then the tenant-level record is opened. 
+			 </p></td>
+		</tr>
+		<tr style="height: 79.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 Description</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Part 
+			 ID </p>
+			<p class="FM_CellBody">Site ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link.</p>
+			<p class="FM_CellBody">&#160;</p>
+			<p class="FM_CellBody">Site ID is optional. See the notes for 
+			 the Part ID class name. </p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Payment 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Cash 
+			 Application</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Customer 
+			 ID</p>
+			<p class="FM_CellBody">Payment ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link.</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Project 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Project 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Project 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Purchase 
+			 Order ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Purchase 
+			 Order Entry</p>
+			<p class="FM_CellBody">Purchase Management Window</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Purchase 
+			 Order ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Quote 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Estimating 
+			 Window</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Quote 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Receiver 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Purchase 
+			 Receipt Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Receiver 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 24.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Resource 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Shop 
+			 Resource Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Resource 
+			 ID</p>
+			<p class="FM_CellBody">Site ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">If 
+			 the column contains the resource ID, you do not need to configure 
+			 the parameters.</p></td>
+		</tr>
+		<tr style="height: 24.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">RFQ 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Request 
+			 for Quote Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">RFQ 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 13.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 35.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 Name</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 Maintenance</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Vendor 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link.</p></td>
+		</tr>
+		<tr style="height: 24.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Voucher 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Accounts 
+			 Payable Invoice Entry</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Voucher 
+			 ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">&#160;</p></td>
+		</tr>
+		<tr style="height: 57.00pt;">
+			<td width="156" class="hcp2"><p class="FM_CellBody">Work 
+			 Order ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Manufacturing 
+			 Window</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">Type</p>
+			<p class="FM_CellBody">Base ID</p>
+			<p class="FM_CellBody">Lot ID</p>
+			<p class="FM_CellBody">Split ID</p>
+			<p class="FM_CellBody">Part ID</p></td>
+			<td width="156" class="hcp2"><p class="FM_CellBody">You 
+			 must use the Drill To Configuration dialog to set up this 
+			 drill-to link.</p>
+			<p class="FM_CellBody">&#160;</p>
+			<p class="FM_CellBody">Part ID is optional. </p></td>
+		</tr>
+	</table>
+	
+	</div>
+</body>
+</html>

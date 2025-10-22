@@ -1,0 +1,46 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up the Client</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Up the Client</h1>
+	</div>
+	<p>To set up the client machine to use single sign on, either add -SSO 
+	 to the target in the shortcut to VM.exe or add the SingleSignOn=Y 
+	 value to the VIsualMfg section of the VISUAL.ini file.</p>
+	<h2>Adding -SSO to the Shortcut</h2>
+	<p>To add -SSO to the shortcut:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Right-click the shortcut 
+		 and select <span class="Bold">Properties</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Target field, 
+		 add -SSO after the executable path.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<h2>Adding SingleSignOn to the VISUAL.ini File</h2>
+	<p>To enable single sign on for the client using the VISUAL.ini file:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Navigate to the VISUAL.ini 
+		 file and open it in a text editor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Add this line to the 
+		 VisualMfg section in the VISUAL.ini file:</p></li>
+	</ol>
+	<p class="Numbered-Indent">SingleSignOn=Y.</p>
+	<ol start="3" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

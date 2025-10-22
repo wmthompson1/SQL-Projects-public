@@ -1,0 +1,43 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+ 
+<title>Repairing Indexes</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Repairing Indexes</h1>
+	</div>
+	<p class="First">Before you perform this procedure, ensure that only 
+	 the SYSADM user is signed into the database. </p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Examine Indexes</span>. The current version 
+		 of VISUAL, the database brand and patch level, and the database 
+		 version are displayed. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Run</span> 
+		 button. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Repair</span> 
+		 button. The tool attempts to add missing indexes to your database. 
+		 It also drops incorrect indexes and recreates them. If a missing 
+		 or incorrect index was not repaired, information about the index 
+		 is written to the VMCHKIDX_ERROR.LOG. This log file is located 
+		 in the same directory as your VISUAL executables. </p></li>
+	</ol>
+	<p class="Numbered-Indent">If you use Oracle as your database engine, 
+	 then indexes could be created with incorrect names. If an index does 
+	 not have a name, then Oracle then generates a name for the index.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Admin_Guide.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="VMCHKIDXfrmTestIndexes.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Analyzing Indexes</p>
+</body>
+</html>

@@ -1,0 +1,302 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Operations</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Operations</h1>
+	</div>
+	<p class="First">Operations represent one step in the manufacturing 
+	 process that is performed using a single resource. In terms of scheduling, 
+	 material planning, and costing, operations are the most basic components 
+	 of the manufacturing process.</p>
+	<p>An Operation Sequence Number is assigned to each operation on a 
+	 leg. Each leg has its own sequence of numbers. These components are 
+	 used to identify an operation:</p>
+	<p><span class="Bold">Base ID</span> - Identifies the master or work 
+	 order</p>
+	<p><span class="Bold">Lot/Eng ID</span> - Identifies the work order 
+	 lot, or revision of the master</p>
+	<p><span class="Bold">Split ID</span> - Identifies sub-lot produced 
+	 by a lot split</p>
+	<p><span class="Bold">Sub ID</span> - Identifies the leg on which the 
+	 operation exists</p>
+	<p><span class="Bold">Operation Seq. No.</span> - Identifies the operation 
+	 among the others on the same leg</p>
+	<p>Infor VISUAL supports two classes of operation:</p>
+	<p><span class="Bold">In-house Operation</span> - This is an operation 
+	 performed using the equipment, labor, and other resources of your 
+	 plant.</p>
+	<p><span class="Bold">Sub-contracted Operation</span> - This is an 
+	 operation where in-process material is shipped from your facility 
+	 to have one or more operations performed on it by a contracted service 
+	 vendor.</p>
+	<h2>Operation Resources</h2>
+	<p>Each operation uses one and only one primary resource. Define VISUAL 
+	 shop resources in Shop Resource Maintenance.</p>
+	<p><span class="Bold">VISUAL resources are divided into three classes:</span></p>
+	<p><span class="Bold">Work Center</span> - A piece of equipment, grouping 
+	 of equipment, work area, production line, or any other facility that 
+	 is scheduled, managed, and costed as a single unit.</p>
+	<p><span class="Bold">Individual/Team</span> - A person or team of 
+	 persons with a particular skill set or role. Again, the key factor 
+	 is the scheduling and management of this resource as a unit with a 
+	 specific capacity and calendar.</p>
+	<p><span class="Bold">Sub-Contractor</span> - Specifies a particular 
+	 kind of subcontract resource that is supplied by an external vendor. 
+	 Unlike the other two resource types, schedule and capacity are not 
+	 maintained by you. When specifying a Sub-Contractor resource, you 
+	 also specify a Service ID that indicates the actual service you want 
+	 to use to fulfill this resource requirement.</p>
+	<p><span class="Bold">Concurrent Resources</span> - You can also specify 
+	 subordinate setup and run resources for an operation. These must be 
+	 of the Individual/Group type, and indicate a person or persons that 
+	 are needed to setup and run an operation. Specification of concurrent 
+	 resources allows the scheduler to constrain the schedule when the 
+	 work center capacity is greater than the labor capacity needed to 
+	 staff it.</p>
+	<h2>Operation Quantities</h2>
+	<p>Work orders always specify a number of pieces or amount of material 
+	 for the order to complete. This is the desired quantity. The system 
+	 manages the production of the desired work order quantity at the operation 
+	 level by tracking two basic quantities:</p>
+	<p><span class="Bold">Start Quantity</span> - The number of pieces 
+	 or amount of material entering the operation, from the previous one.</p>
+	<p><span class="Bold">End Quantity</span> - The number of pieces or 
+	 amount of material leaving the operation. These pieces either flow 
+	 to the next operation, or to finished goods. If this is the last operation, 
+	 the End Quantity equals the work order Desired Quantity.</p>
+	<p>The Manufacturing Window manages these quantities without your intervention, 
+	 based on the following information:</p>
+	<p><span class="Bold">Next Start Qty</span> - The Start Quantity required 
+	 for the next operation determines the End Quantity needed from this 
+	 one. If this is the last operation, then the Desired Quantity for 
+	 the work order determines the End Quantity needed.</p>
+	<p><span class="Bold">Scrap/Yield %</span> - You can specify how many 
+	 pieces or how much quantity will be lost due to scrappage, or how 
+	 much will remain as the final yield. You specify both as a percentage 
+	 of the total incoming material.</p>
+	<p><span class="Bold">Fixed Scrap</span> - A fixed number of pieces 
+	 or amount of material to be scrapped, often due to setup loss or testing.</p>
+	<p>The resulting equation is straightforward: Start Quantity for an 
+	 operation equals the Start Quantity needed for the next operation, 
+	 plus additional quantity to make up any loss due to fixed or variable 
+	 scrap in the current operation.</p>
+	<p>This includes the implied scrap specified by a yield percentage 
+	 less than 100%. When no scrap is specified for an operation, the Start 
+	 Quantity equals the Start Quantity needed for the next operation. 
+	 The Manufacturing Window works backward from the Desired Quantity 
+	 for the work order to calculate the Start and End Quantity of each 
+	 preceding operation.</p>
+	<p>When necessary, you are allowed to explicitly override these quantities.</p>
+	<p>It is important for you to understand Start and End Quantity in 
+	 terms of the final yield, and to understand how material requirement 
+	 quantities are calculated.</p>
+	<h2>Minimum Move Quantity</h2>
+	<p>When a product is produced in discrete pieces or quantities that 
+	 can be individually processed, you can specify a minimum move quantity 
+	 for an operation. This is the minimum number of pieces that can move 
+	 from one operation to the next when finished. This allows the schedules 
+	 of sequential operations to overlap, because the output of one can 
+	 immediately begin to feed the next. When you do not specify Minimum 
+	 Move Quantity, all pieces must be completed before the next operation 
+	 can start.</p>
+	<h2>Operation Labor Hours</h2>
+	<p>A key component of an operation's specifications are the setup and 
+	 run time required to perform the operation. This data is central to 
+	 the estimation of time and cost necessary to perform the operation.</p>
+	<p>Setup time is always specified in hours. It represents the onetime 
+	 labor required regardless of the number of pieces running for the 
+	 operation.</p>
+	<p>You can specify run time in a number of ways. In each case, you 
+	 can use the one best suited to the operation. Supported units are 
+	 hours per piece, pieces per hour, minutes per piece, pieces per minute, 
+	 loads per hour, and hours per load. The last two options allow the 
+	 specification to be constrained by any standard load size that is 
+	 required for the resource. When you use this, you must also specify 
+	 a loadsize in pieces. For example, a heat treating facility might 
+	 be capable of processing one load of 100 parts at a time, a load taking 
+	 4 hours. You can specify the time as 4 hours per load, with a loadsize 
+	 of 100. If 150 pieces are needed, the estimated time is 8 hours, since 
+	 two loads are required.</p>
+	<p>The system uses setup and run time specified in an operation for 
+	 estimation and projection only. Actual hours are always obtained from 
+	 labor tickets recorded against the operation.</p>
+	<h2>Standard Operation Rates</h2>
+	<p>Costs for an operation are estimated by multiplying labor hours 
+	 applied by the standard rate for the operation. Run costs can also 
+	 be determined based on quantity completed, rather than hours worked. 
+	 These costs include both direct Labor, and Burden. The different options 
+	 for each rate can be used simultaneously, and all add together.</p>
+	<table cellspacing="0" width="360">
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p><span class="Bold">Rate</span></p></td>
+			<td width="252" class="hcp2"><p><span class="Bold">Specified 
+			 As</span></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p>Setup Labor</p></td>
+			<td width="252" class="hcp2"><p>Setup Cost per Hour</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p>Run Labor</p></td>
+			<td width="252" class="hcp2"><p>Run Cost per Hour 
+			 or Run Cost per Unit Completed</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p>Setup Burden</p></td>
+			<td width="252" class="hcp2"><p>Burden per Hour, 
+			 or as a Burden % of the Run Labor cost</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p>Run Burden</p></td>
+			<td width="252" class="hcp2"><p>Burden per Hour, 
+			 or Burden per Unit Completed, or Burden % of the Run Labor 
+			 cost</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="108" class="hcp2"><p>Fixed Burden</p></td>
+			<td width="252" class="hcp2"><p>Onetime dollar value 
+			 associated with the operation</p></td>
+		</tr>
+	</table>
+	<p>Sub-contract rates are specified strictly in terms of Run Cost per 
+	 Unit.</p>
+	<p>When you specify the resource for an operation, the standard rates 
+	 are copied into the operation. Although you can override them at this 
+	 point, the standard rated only provide cost estimations for the operation. 
+	 Actual cost rates are taken from the resource master, for standard 
+	 costing, or from the employee's pay rate, for actual costing.</p>
+	<h2>Operation Costs</h2>
+	<p><span class="Bold">Operations contribute to work order costs in 
+	 the following way:</span></p>
+	<p><span class="Bold">In-house Operations</span> - Labor and Burden 
+	 costs are incurred based on the number of hours worked on the setup 
+	 and run phases of the operation. Run costs can also be calculated 
+	 based on the number of pieces produced, rather than the hours worked. 
+	 VISUAL allows you to use these methods in combination, even within 
+	 the same operation.</p>
+	<p>Cost calculation depends upon the method of costing in use. For 
+	 standard costing, VISUAL uses the standard cost rates you specified 
+	 in the resource master. For actual costing, the system uses the labor 
+	 rate of the employees performing the tasks.</p>
+	<p>Costs generated by material requirements for an operation are also 
+	 considered to be part of the operation's overall cost. See Material 
+	 Requirements for more information on these.</p>
+	<p><span class="Bold">Sub-contracted Operations</span> - Subcontracted 
+	 operations have their own cost category - Service cost. All costs 
+	 incurred for subcontracted operations are accumulated in this category.</p>
+	<h2>Operation Scheduling</h2>
+	<p>The Global Scheduler determines a shop schedule for each resource. 
+	 The Scheduler schedules operations using the following information 
+	 that you specify with the operation:</p>
+	<p><span class="Bold">Setup Time</span> - Applied one time for the 
+	 operation.</p>
+	<p><span class="Bold">Run Time</span> - Applied based on the incoming 
+	 quantity of the operation.</p>
+	<p><span class="Bold">Setup Overlaps Previous Operation</span> - If 
+	 you select this check box, then the set up of the operation is scheduled 
+	 to begin before the previous operation is completed. </p>
+	<p><span class="Bold">Move Hours</span> - You can also specify a number 
+	 of move hours for an operation. This is the actual clock time necessary 
+	 between this operation and the next, because of transportation time 
+	 or other factors that don't allow immediate start of the next operation. 
+	 Move hours drives the scheduling process only. It does not contribute 
+	 to the cost of the work order.</p>
+	<p>Setup time, run time, and move time for all previous operations 
+	 define an implied lead time for this operation - the production hours 
+	 between the start of the first operation and the time when this operation 
+	 can begin.</p>
+	<p><span class="Bold">Minimum and Maximum Capacity</span> - Shop Resource 
+	 Maintenance allows the specification of one or more units of capacity 
+	 for a work center or individual/group resource. When the Scheduler 
+	 schedules for that resource, it has a number of concurrent units with 
+	 which to work.</p>
+	<p>When you specify Minimum Capacity Use for an operation, the Scheduler 
+	 does not schedule the operation unless it has at least the minimum 
+	 number of units to use. The default is one - any available unit is 
+	 used to run the operation.</p>
+	<p>When you specify Maximum Capacity Use for an operation, the Scheduler 
+	 does not schedule the operation to use more units at once than the 
+	 maximum - even if more units are available. The default is the minimum 
+	 capacity use. This parameter can prevent a specific operation from 
+	 using all of a resource. It is also useful if there is an actual physical 
+	 maximum.</p>
+	<p><span class="Bold">Concurrent Resources</span> - These are required 
+	 in parallel with the setup and/or run of the primary resource.</p>
+	<p><span class="Bold">Material Requirements</span> - During scheduling, 
+	 if material availability checks are enabled, the Schedule does not 
+	 schedule an operation to start unless material is planned to be available. 
+	 If no actual material supply is planned, the lead-time for material 
+	 acquisition is included in the scheduling process.</p>
+	<p><span class="Bold">Maximum Percent Complete</span> – A value can 
+	 be specified in this field only if the Quantity Complete by Hours 
+	 check box is selected. If a value is specified in the Max Percent 
+	 Complete field, then a percentage of the hours for the operation remains 
+	 on the schedule until the operation is manually closed. </p>
+	<p>For example, presume an operation takes 10 hours to complete and 
+	 80% is specified in the Maximum Percent Complete field. For the first 
+	 8 hours of labor reporting, percentage of completion is updated and 
+	 the amount of time remaining on the operation is reduced. After 8 
+	 labor hours have been reported, updates to the percentage of completion 
+	 stop and 2 hours remain on the schedule until the operation is manually 
+	 closed. An operation can be manually closed by indicating that the 
+	 run is complete on the labor ticket or by changing the operation’s 
+	 status in the Manufacturing Window.</p>
+	<p>All hours that are reported for an operation, including hours logged 
+	 after the maximum percent complete threshold has been reached, are 
+	 recorded for costing purposes.</p>
+	<p>&#160;</p>
+	<h2>Operation Actuals</h2>
+	<p>This section covers information associated with an actual operation 
+	 on a work order. The following additional information is associated 
+	 with such an operation:</p>
+	<p><span class="Bold">Status</span> - Operations have their own private 
+	 status - they can be released or unreleased independently. An operation 
+	 is automatically closed when the reported Quantity Complete meets 
+	 the End Quantity required. The system maintains the close date of 
+	 an operation. For operations, an additional status indicates whether 
+	 the setup portion of the operation has been completed.</p>
+	<p><span class="Bold">Scheduled Start Date</span> - The date on which 
+	 the operation is scheduled to start.</p>
+	<p><span class="Bold">Scheduled Finish Date</span> - The date on which 
+	 the operation is scheduled to finish.</p>
+	<p><span class="Bold">Labor Hours</span> - The setup and run hours 
+	 actually performed against the operation, as reported through labor 
+	 ticket entry.</p>
+	<p><span class="Bold">Quantity Completed</span> - Total quantity of 
+	 goods so far reported completed from the operation, through labor 
+	 ticket entry.</p>
+	<p><span class="Bold">Quantity Deviated</span> - Total quantity of 
+	 rejected goods reported for the operation, through labor ticket entry.</p>
+	<p><span class="Bold">Labor Tickets</span> - Labor tickets report completion 
+	 quantities and labor hours against a work order operation. These are 
+	 permanently linked and can be viewed if necessary.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

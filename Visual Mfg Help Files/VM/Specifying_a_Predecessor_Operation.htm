@@ -1,0 +1,57 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying a Predecessor Operation</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying a Predecessor Operation</h1>
+	</div>
+	<p>Specify a predecessor operation on the Other tab. The operation 
+	 that you specify as the predecessor operation must be scheduled to 
+	 be complete before the selected operation. For example, if you specify 
+	 4/20 as the predecessor operation of operation 5/10, then operation 
+	 4/20 is scheduled to be complete before operation 5/10.</p>
+	<p>You can specify any operation as the predecessor of another operation 
+	 provided that the predecessor operation is not in the same sub ID 
+	 structure. If you specify a predecessor operation that would result 
+	 in a loop, the system prevents you from saving the predecessor operation. 
+	 For example, if you specify 4/20 as the predecessor operation of operation 
+	 5/10, you could not successfully specify 5/10 as the predecessor of 
+	 4/20.</p>
+	<p>To specify a predecessor operation:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Open the operation card 
+		 you want to use. The operation you open is the operation that 
+		 has a required predecessor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Other</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Pred 
+		 Sub ID</span> browse button and select the operation that must 
+		 be completed before the work on the operation you are viewing 
+		 can begin.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>When the system schedules the work order, the system schedules the 
+	 predecessor operation before the selected operation.</p>
+	<h2>Viewing Predecessor Operations</h2>
+	<p>You can view the predecessor operations defined on a work order 
+	 or engineering master. Select <span class="Bold">Info</span>, <span 
+	 class="Bold">Predecessor Operations</span>. The system displays operations 
+	 along with their predecessors.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,323 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Information on the Defaults Tab</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Information on the Defaults Tab</h1>
+	</div>
+	<p>The settings you specify on this tab apply to several areas of your 
+	 sites.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Site Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Site ID field, 
+		 specify the site for which you are specifying information.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Defaults</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Inventory/Labor 
+		 section, select these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Autogen Labor During 
+	 Receipt</span> – Select this check box to backflush labor when you 
+	 receive a work order into inventory or when you ship a customer order 
+	 that is linked to a work order. </p>
+	<p class="Numbered-Indent">If you clear this check box, then backflushing 
+	 is triggered in labor entry only. If you clear this check box, then 
+	 the last operation in a work order must not use an auto-reporting 
+	 resource. You cannot manually report labor to an auto-reporting resource.</p>
+	<p class="Numbered-Indent"><span class="Bold">Default Employee</span> 
+	 – If you selected the Autogen Labor During Receipt check box, specify 
+	 the ID of the employee to use on labor tickets that are generated 
+	 when you ship a customer order that is linked to a work order. </p>
+	<p class="Numbered-Indent"><span class="Bold">Backflush Subordinate 
+	 Legs</span> – Select this option to backflush labor to subordinate 
+	 legs. In addition to selecting this check box, you must also specify 
+	 an auto-reporting resource on the last operation in the leg to initiate 
+	 the backflush of legs.</p>
+	<p class="Numbered-Indent"><span class="Bold">Generate Labor Tickets 
+	 During Backflush</span> – Select this check box to generate labor 
+	 tickets for operations that have been backflushed. The costs that 
+	 are specified on the Costs tab of the operation are used to determine 
+	 the labor costs. </p>
+	<p class="Numbered-Indent">Clear this check box if you do not want 
+	 to generate labor tickets for backflushed operations. If you clear 
+	 this check box, then backflushed operations do not have any labor 
+	 costs. </p>
+	<p class="Numbered-Indent"><span class="Bold">Require Issue Reason 
+	 for All Issues</span> – To require reason codes for every material 
+	 issue you enter, select the Require Issue Reason for All Issues check 
+	 box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Require Issue Reason 
+	 for All Issue Returns</span> – To require reason codes for every material 
+	 return you enter, select the Require Issue Reason for All Issue Returns 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Percent Complete</span> 
+	 – To report labor ticket quantities based on percentage complete instead 
+	 of quantity complete, select this check box. If you select this check 
+	 box, then quantities for all run operations that you create for this 
+	 site are reported as a percentage. These changes are made:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">In Labor Ticket 
+		 Entry, Qty Remaining and Qty Completed labels are replaced with 
+		 Percent Remaining and Percent Completed labels.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">In Wedge Barcode 
+		 Labor Entry, Op Qty Completed, Op Qty Remaining, and Op Qty Remaining 
+		 labels are replaced with Op Prcnt Complete, Op Prcnt Remaining, 
+		 and Percent Completed prompts.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent" style="mso-list: l0 level1 lfo2;">In 
+		 ALTS, the Quantity Completed prompt is replaced by a Percent Completed 
+		 prompt.</p></li>
+	</ul>
+	<p class="Numbered-Indent">If you clear this check box, you can set 
+	 up whether to report labor quantities as percentages on individual 
+	 work orders or operations. </p>
+	<p class="Numbered-Indent"><span class="Bold">Require Deviation Reason 
+	 for Deviated Quantities</span> – To require reason codes for every 
+	 deviation quantity you enter during labor ticket entry, select the 
+	 Require Deviation Reason for Deviated Quantities check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Require Adjustment Reason 
+	 for All Adjust Ins</span> – To require reason codes for all of your 
+	 inventory adjust ins, select the Require Adjustment Reason for All 
+	 Adjust Ins check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Require Adjustment Reason 
+	 for All Adjust Outs</span> – To require reason codes for all of your 
+	 inventory adjust outs, select the Require Adjustment Reason for All 
+	 Adjust Outs check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Require Transfer Reason 
+	 for All Transfers</span> – To require reason codes for all inventory 
+	 transfer transactions, select the Require Transfer Reason for All 
+	 Transfers check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Complete by 
+	 Hours</span> – To automatically calculate quantity complete or percentage 
+	 of completion based on the hours reported on the labor ticket, select 
+	 this check box.</p>
+	<p class="Numbered-Indent">If you report labor based on quantity complete, 
+	 then this calculation is made to determine the quantity completed 
+	 during the labor ticket:</p>
+	<p class="DoubleIndent">(hours reported on ticket/total estimated hours 
+	 for operation) * operation quantity</p>
+	<p class="Numbered-Indent">If you report labor based on percentage 
+	 complete, then this calculation is made to determine the percentage:</p>
+	<p class="DoubleIndent">(hours reported on ticket/estimated hours for 
+	 operation) * 100</p>
+	<p class="Numbered-Indent">The operation is automatically closed when 
+	 the quantity or percentage complete equals or exceeds the operation 
+	 quantity. </p>
+	<p class="Numbered-Indent">If you select the Quantity Complete by Hours 
+	 check box in Site Maintenance, then all run type labor transactions 
+	 in the site are automatically calculated. </p>
+	<p class="Numbered-Indent"><span class="Bold">Max Percent Completed</span> 
+	 – If you selected the Quantity Complete by Hours check box, use this 
+	 field to specify the maximum percentage that can be calculated automatically. 
+	 When the percentage complete meets the threshold that you specify, 
+	 automatic calculation of quantity complete is stopped. The operation 
+	 remains on your schedule until the operation is manually closed. This 
+	 formula is used to calculate the number of hours for the operation 
+	 that remain on your schedule:</p>
+	<p class="DoubleIndent">((100 - value specified in Max Percent Completed 
+	 field)/100) * total hours required for the operation</p>
+	<p class="Numbered-Indent">If you specify a value in this field, then 
+	 automatic calculation of labor on all operations in the site will 
+	 stop at the value that you specify. </p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use WIP inventory tracking, specify the defaults for new move 
+		 requests:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Default Matl WIP Delivery 
+	 Type</span> – Specify the default delivery type to use on move requests 
+	 that are created in Inventory Transaction Entry. Select Drop Only 
+	 if the material will be used immediately. Select WIP Inventory if 
+	 the material will be stored in a WIP location. If you do not want 
+	 to set a default value, leave this field blank. </p>
+	<p class="Numbered-Indent"><span class="Bold">Default Labor WIP Delivery 
+	 Type</span> – Specify the default delivery type to use on move requests 
+	 that are created in Labor Ticket Entry. Select Drop Only if the material 
+	 will be used immediately. Select WIP Inventory if the material will 
+	 be stored in a WIP location. If you do not want to set a default value, 
+	 leave this field blank. </p>
+	<p class="Numbered-Indent"><span class="Bold">Default Matl Move Request 
+	 Status</span> – Specify the default status of move requests that are 
+	 created in Inventory Transaction Entry. Select one of these options, 
+	 or leave the field blank if you do not want to set a default:</p>
+	<p class="DoubleIndent"><span class="Bold">Pending</span> – The parts 
+	 in the move request are waiting to be loaded or picked. If you choose 
+	 not to use the Loading status for any move requests, you can also 
+	 use the pending status to indicate that the order is being loaded.</p>
+	<p class="DoubleIndent"><span class="Bold">Loading</span> – The parts 
+	 in the move request are being loaded or picked. </p>
+	<p class="DoubleIndent"><span class="Bold">Ready for Pickup</span> 
+	 – The parts in the move request are ready to be delivered by shop 
+	 floor personnel. </p>
+	<p class="Numbered-Indent"><span class="Bold">Default Labor Move Request 
+	 Status</span> – Specify the default status of move requests that are 
+	 created in Labor Ticket Entry. Select one of these options, &#160;or 
+	 leave the field blank if you do not want to set a default:</p>
+	<p class="DoubleIndent"><span class="Bold">Pending</span> – The parts 
+	 in the move request are waiting to be loaded or picked. If you choose 
+	 not to use the Loading status for any move requests, you can also 
+	 use the pending status to indicate that the order is being loaded.</p>
+	<p class="DoubleIndent"><span class="Bold">Loading</span> – The parts 
+	 in the move request are being loaded or picked. </p>
+	<p class="DoubleIndent"><span class="Bold">Ready for Pickup</span> 
+	 – The parts in the move request are ready to be delivered by shop 
+	 floor personnel. </p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you are integrated 
+		 to Infor Quality Management, specify settings in the Inspections 
+		 section. Select these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Require Completed Inspections 
+	 on Labor Tickets</span> – To require users to select the Quality Data 
+	 Collection Complete check box in the Labor Ticket Entry window before 
+	 they can save the labor ticket, select the Require Complete Inspections 
+	 on Labor Tickets check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Require Completed Inspections 
+	 for Return/Release</span> – To require users to select the Quality 
+	 Data Collection Complete check box in the Receiving Inspection dialog 
+	 box of the Purchase Receipt Entry window, select the Require Completed 
+	 Inspections for Return/Release check box.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use Projects functionality, in the Projects section specify 
+		 the default warehouse to use as the basis for your project warehouses.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Auto Issue Method 
+		 section, click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Based on Operation Qty 
+	 Complete</span> – Click this option to auto-issue material requirements 
+	 incrementally based on the quantity or percent complete on each labor 
+	 ticket. For example, presume that the operation is for a quantity 
+	 of 5 and the Qty Per for the material requirement is 1. If a quantity 
+	 of 2 is completed on a labor ticket, then 2 units of the material 
+	 requirement are issued (presuming that there is no fixed scrap or 
+	 deviated quantity). If an operation is closed before all quantities 
+	 are completed, then the material requirement is also closed short. 
+	 </p>
+	<p class="Numbered-Indent"><span class="Bold">Based on the Full Requirement 
+	 Qty on First Labor Ticket</span> – Click this option to auto-issue 
+	 the full material requirement quantity after the first labor ticket 
+	 is reported for the operation. If you backflush labor without creating 
+	 labor tickets, then the full material requirement is issued after 
+	 the first quantity is backflushed. </p>
+	<p class="Numbered-Indent">Depending on how you set up Preferences 
+	 Maintenance, the issued quantity can include fixed scrap and extra 
+	 materials for deviated quantities that are reported on the first labor 
+	 ticket.</p>
+	<p class="Numbered-Indent">If a labor ticket has already been created 
+	 for the operation or a quantity has already been backflushed, then 
+	 additional material is not issued. For example, if you created a labor 
+	 ticket for an operation and then increased the quantity of the material 
+	 requirement, the additional requirement will not be issued. </p>
+	<p class="Numbered-Indent">If operations are in process when you select 
+	 this auto-issue method, additional materials are not issued to any 
+	 in-process operation. To complete material issues for in-process operations, 
+	 you must manually issue the materials. </p>
+	<p class="Numbered-Indent"><span class="Bold">Based on Full Remaining 
+	 Req Qty on Run Complete</span> – When you use this option, materials 
+	 are issued in proportion to the quantity or percent complete on the 
+	 operation until the Run Complete labor ticket is saved to the operation. 
+	 When the Run Complete labor ticket is saved, all remaining material 
+	 requirements are issued to the operation, even if the operation is 
+	 closed short. If you backflush labor during the shipment of customer 
+	 orders, then the full remaining quantity of a material requirement 
+	 is issued when the full quantity of the order line has been shipped 
+	 or when the line is closed short. </p>
+	<p class="Numbered-Indent">Depending on how you set up Preferences 
+	 Maintenance, this quantity can include fixed scrap and extra materials 
+	 for deviated quantities.</p>
+	<p class="Numbered-Indent">For more information on setting up auto-issue 
+	 parts, see <a href="Auto-issue_Parts.htm">Auto-issue Parts</a>. </p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">You can specify a default 
+		 internal customer ID to use when this site buys items from another 
+		 site. Click the Default Internal Customer ID browse button and 
+		 select the customer ID to use.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can override the default setting on 
+	 the purchase order.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In Vendor Maintenance, 
+		 you can set up a list of buyers who are not allowed to purchase 
+		 materials from a particular vendor. These buyers are excluded 
+		 buyers. If you create a purchasing document for that vendor, you 
+		 cannot specify an excluded buyer in the Buyer ID field. In the 
+		 Vendor Exclusion Mode section, specify the purchasing information 
+		 an excluded buyer can access. Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Exclude buyers from using 
+	 vendor</span> – Click this option to prevent the use of an excluded 
+	 buyer on a purchasing document. If the excluded buyer is a user, the 
+	 buyer can still create purchasing documents, but cannot be the buyer 
+	 specified on the document.</p>
+	<p class="Numbered-Indent"><span class="Bold">Exclude users and buyers 
+	 from using vendor</span> – If an excluded buyer is also a database 
+	 user, click this option to prevent the buyer from creating any purchasing 
+	 documents for vendors that the buyers are not allowed to use. Users 
+	 can still view purchasing documents from any vendor. To prevent excluded 
+	 buyers from editing purchasing documents for vendors they are not 
+	 allowed to use, select the <span class="Bold">Read only mode for excluded 
+	 vendor documents</span>.</p>
+	<ol start="10" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you are integrated 
+		 to Infor PLM, you can directly access PLM from Part Maintenance. 
+		 Use the PLM Integration section to specify PLM access information 
+		 for the site. You can use the default connection information specified 
+		 in Application Global Maintenance, or you can specify site-specific 
+		 connection information in Site Maintenance. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Login URL</span> – If 
+	 this site uses a unique URL to access PLM, specify the external launch 
+	 URL for Web PLM in this field. If this site uses the default URL specified 
+	 in <a href="Specifying_Default_Information_tenant.htm">Application 
+	 Global Maintenance</a>, leave this field blank.</p>
+	<p class="Numbered-Indent"><span class="Bold">Enable</span> – Specify 
+	 whether you can directly access PLM from Part Maintenance when viewing 
+	 a part for this site. Specify one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">Default</span> – Specify 
+	 Default to use the enable setting specified in Application Global 
+	 Maintenance. If you specify Default and the Enable check box is selected 
+	 in Application Global Maintenance, then you can access PLM from Part 
+	 Maintenance when viewing parts for this site. If you specified a URL 
+	 in Site Maintenance, then that URL is used to access PLM. If you left 
+	 the Login URL in Site Maintenance blank, then the URL specified in 
+	 Application Global Maintenance is used to access PLM. If you specify 
+	 Default and the Enable check box is cleared in Application Global 
+	 Maintenance, then you cannot access PLM when viewing parts for this 
+	 site, regardless if you have specified a URL in either Site Maintenance 
+	 or Application Global Maintenance.</p>
+	<p class="DoubleIndent"><span class="Bold">No</span> – Specify No if 
+	 you cannot access PLM in Part Maintenance when viewing parts for this 
+	 site. If you specify this option, you cannot access PLM when viewing 
+	 parts for this site even if you specify a Login URL in Site Maintenance 
+	 or Application Global Maintenance.</p>
+	<p class="DoubleIndent"><span class="Bold">Yes</span> – Specify Yes 
+	 if you can access PLM in Part Maintenance when viewing parts for this 
+	 site. If you specify this option and you specify a login URL in Site 
+	 Maintenance, then the URL you specify in Site Maintenance is used 
+	 to access PLM. If you specify this option and you leave the Login 
+	 URL field blank in Site Maintenance, then the login URL specified 
+	 in Application Global Maintenance is used to access PLM.</p>
+	<ol start="11" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User Defined Help</p>
+</body>
+</html>

@@ -1,0 +1,159 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>The Master/Work Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>The Master/Work Order</h1>
+	</div>
+	<p class="First">The term &quot;master/work order&quot; refers to any 
+	 of the three objects that you can use in the Manufacturing Window. 
+	 The term &quot;header,&quot; for example, &quot;work order header,&quot; 
+	 sometimes refers to the part of the master/work order that contains 
+	 general data for the entire structure. This is to distinguish from 
+	 the legs, operations, and material requirements that make up a large 
+	 part of the substructure of a master/work order.</p>
+	<h2>Master/Work Order Identification</h2>
+	<p>Masters and work orders are identified by a number of key fields 
+	 that form a logical structure:</p>
+	<p><span class="Bold">Base ID</span> - This is the top-level identification 
+	 for a master or work order.</p>
+	<p>For an engineering master, the Base ID must be the same as the Part 
+	 ID that it represents.</p>
+	<p>For a quote master, the Base ID always matches the Quote ID of the 
+	 quotation to which it belongs.</p>
+	<p>For a work order, the Base ID is sometimes called the Job ID and 
+	 uniquely identifies the order.</p>
+	<p><span class="Bold">Lot ID/Eng ID</span> - For a work order, the 
+	 Lot ID identifies a specific lot within a larger work order specified 
+	 by Base ID. This allows all of the lots to have the same Base ID.</p>
+	<p>For an engineering master, this field is the Engineering ID, which 
+	 allows multiple revisions of the same part. You can use the engineering 
+	 ID to maintain multiple variations of the same part. If you are licensed 
+	 to use multiple sites, use the engineering ID to create unique engineering 
+	 masters for a part that is used in multiple sties.</p>
+	<p>For a quote master, this field uniquely identifies the quote master 
+	 from others attached to the same quote.</p>
+	<p><span class="Bold">Split ID</span> - Split ID uniquely identifies 
+	 the child lots of a split work order. This way, all splits can have 
+	 the same Base ID/Lot ID as the parent lot. This field allows a manual 
+	 split. For engineering masters, this field should always be zero.</p>
+	<p><span class="Bold">Sub ID</span> - Masters and work orders can have 
+	 a number of subassembly legs, each of which represents the independent 
+	 production of a subassembly required by the parent operation. The 
+	 Sub ID uniquely identifies a leg within the work order. The primary 
+	 leg is always Sub ID zero.</p>
+	<p>The first three fields uniquely identify a master or work order. 
+	 When taken together, they are usually shown in the following format: 
+	 Base ID/Lot ID, Split ID. If Split ID is 0, it is usually not shown. 
+	 When used for a work order, the combination is sometimes called a 
+	 Work Order ID.</p>
+	<p>All four fields uniquely identify a leg of a master or work order. 
+	 When taken together, they usually appear in the following format: 
+	 Base ID-Sub ID/Lot ID, Split ID. When Sub ID is zero, it is usually 
+	 not shown.</p>
+	<h2>Master/Work Order Quantity</h2>
+	<p>The Quantity associated with an engineering or quote master represents 
+	 a standard lot size for any work orders produced.</p>
+	<p>The Quantity associated with a work order is sometimes called the 
+	 Desired Quantity, and is the quantity that should be received into 
+	 finished goods.</p>
+	<h2>Master/Work Order Costs</h2>
+	<p>Master/work order manufacturing costs are broken out into four categories:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Material</p></li>
+		<li class="p-Bullet"><p class="Bullet">Labor</p></li>
+		<li class="p-Bullet"><p class="Bullet">Burden</p></li>
+		<li class="p-Bullet"><p class="Bullet">Service</p></li>
+	</ul>
+	<p>In short, the total cost for a master/work order in each category 
+	 is the sum of those costs for all operations on all legs of the master/work 
+	 order.</p>
+	<h2>Work Order Scheduling</h2>
+	<p>The Global Scheduler schedules work orders; you can view the output 
+	 in the Scheduling Window. The following data drives the schedule:</p>
+	<p><span class="Bold">Release Date</span> - The earliest date the work 
+	 order can start production.</p>
+	<p><span class="Bold">Want Date</span> - The Date the finished goods 
+	 from the work order should be available.</p>
+	<p><span class="Bold">Desired Quantity</span> - The quantity that should 
+	 be received into finished goods. This ultimately drives the actual 
+	 run time of each operation, and thus the entire schedule.</p>
+	<p><span class="Bold">Forward Schedule</span> - If you set the Forward 
+	 Scheduled from Release Date option, then the Scheduler works forward 
+	 from the release, trying to schedule the work order for completion 
+	 as soon as possible. Otherwise, the Scheduler attempts to have the 
+	 work order finish to meet the Want Date of it and all other work orders.</p>
+	<p><span class="Bold">Priority</span> - You can set work order priorities 
+	 in the Global Scheduler. Priorities affect which work orders take 
+	 precedence over others. By default, all work orders have the same 
+	 priority.</p>
+	<p><span class="Bold">Operations &amp; Requirements</span> - Operations 
+	 dictate the actual scheduling of individual resources. Material requirements 
+	 are important if the Scheduler uses the Check Material Availability 
+	 option.</p>
+	<h2>Work Order Actuals</h2>
+	<p>A work order contains additional data beyond that for a master. 
+	 Because it represents an actual instance of production, a work order 
+	 must have the ability to track status and scheduling. The following 
+	 information is associated with a work order:</p>
+	<p><span class="Bold">Status</span> - This is the master status for 
+	 the work order, although sub-components have their own status.</p>
+	<p>The system considers <span class="Bold">Unreleased</span> work orders 
+	 to be in the engineering process and/or unauthorized for release.</p>
+	<p>The system considers <span class="Bold">Firm</span> work orders 
+	 to be firm in terms of quantity, release, and want date, but not authorized 
+	 to begin. Released work orders can begin production on the scheduled 
+	 start date.</p>
+	<p><span class="Bold">Closed</span> work orders are finished productions.</p>
+	<p><span class="Bold">Canceled</span> work orders are not produced.</p>
+	<p><span class="Bold">Scheduled Start Date</span> - Date on which the 
+	 work order is scheduled to start by the Global Scheduler.</p>
+	<p><span class="Bold">Scheduled Finish Date</span> - Date on which 
+	 the work order is scheduled to finish by the Global Scheduler.</p>
+	<p><span class="Bold">Determinant Path</span> - The &quot;determinant 
+	 path&quot; for a work order is the string of operations (a path) that 
+	 controls the total duration of the work order. Whereas &quot;critical 
+	 path&quot; is the controlling path in an ideally scheduled work order, 
+	 the determinant path also takes into account schedule delays caused 
+	 by unavailability of resources.</p>
+	<p>Identifying the determinant path shows the operations, and therefore 
+	 resources, that you can focus on to reduce the duration of the work 
+	 order. Modifying other operations cannot shorten the duration.</p>
+	<p><span class="Bold">Quantity Received</span> - Total quantity so 
+	 far received into finished goods.</p>
+	<p><span class="Bold">Linked Demand</span> - You can directly link 
+	 customer orders, customer order delivery schedules, interbranch transfers, 
+	 inventory, and other work order's material requirements to a work 
+	 order. This can be a one-to-one link, where the order is strictly 
+	 for the demand, or can be a reservation, where a work order is planned 
+	 to meet a number of demands.</p>
+	<h2>Master/Work Order Variables</h2>
+	<p>You can set up any number of variables for a master/work order. 
+	 These are named items with changeable values. Variables primarily 
+	 define material requirements in terms of variable dimensions. For 
+	 example, an engineering master to produce a door might specify variables 
+	 of length and width. In a material requirement for a piece of sheet 
+	 metal, you can specify the area needed in terms of the length and 
+	 width. When the system creates a work order for an actual door, you 
+	 can set the length and width as appropriate, and the material requirement 
+	 quantity is calculated automatically.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

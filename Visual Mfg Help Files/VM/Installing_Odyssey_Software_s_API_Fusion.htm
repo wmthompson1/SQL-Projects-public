@@ -1,0 +1,82 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Installing Odyssey Software's API Fusion</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Installing Odyssey Software's API Fusion</h1>
+	</div>
+	<p class="First">For Odyssey Software’s (www.odysseysoftware.com) API-Fusion, 
+	 you will want to download <span class="Bold">apifnsetup.exe</span> 
+	 at</p>
+	<p><a href="http://www.odysseysoftware.com/download.htm">http://www.odysseysoftware.com/products_apifusion.aspl</a>.</p>
+	<p>You will need the following demo keys to unlock the ComServer / 
+	 ODBC Agent temporarily. The keys last 3 months and it takes a week 
+	 to get new keys after they run out. This prevents anyone from trying 
+	 to use the demo keys in a production environment.</p>
+	<p>1QR0-1QQW-GW3B-NX6G-BARE-Y2AE -&gt; CommunicationsServer</p>
+	<p>GC44-1R91-S01P-FFM8-499X-T2BE -&gt; OdbcAgent</p>
+	<p>Install API-Fusion on an NT workstation or NT Server which has an 
+	 ODBC link to Infor VISUAL Database depending on how you want to test. 
+	 There is virtually no difference, except you can assemble a complete 
+	 testing setup on an NT workstation, whereas with NT server you will 
+	 need a client to verify with.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In <span class="Bold">Start</span>, 
+		 <span class="Bold">Programs</span>, <span class="Bold">API Fusion</span>, 
+		 <span class="Bold">Configuration</span>, <span class="Bold">Communications 
+		 Server</span>, configure the keys as provided by Odyssey Software.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In <span class="Bold">Start</span>, 
+		 <span class="Bold">Programs</span>, <span class="Bold">API Fusion</span>, 
+		 <span class="Bold">Configuration</span>, <span class="Bold">ODBC 
+		 Agent</span>, configure the keys as provided by Odyssey Software.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In <span class="Bold">Start</span>, 
+		 <span class="Bold">Settings</span>, <span class="Bold">Control 
+		 Panel</span>, <span class="Bold">32Bit ODBC</span>, add an ODBC 
+		 DSN through the 32bit ODBC setup for a connection to your VISUAL 
+		 Database. This will vary and is dependent on your database brand 
+		 (SQLBase, Oracle, SQL Server, DB2, etc…) and type of ODBC connection.</p></li>
+		<li class="p-Numbered"><p class="Numbered">4.&#160;In <span class="Bold">Start</span>, 
+		 <span class="Bold">Programs</span>, <span class="Bold">API-Fusion</span>, 
+		 <span class="Bold">Configuration</span>, <span class="Bold">ODBC 
+		 Agent</span>, add an ODBC alias, the alias will need to be directed 
+		 to the Infor VISUAL Database that you defined in the 32Bit ODBC 
+		 Control Panel setup.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Once you have these 
+		 installed, execute the ComServer and ODBC Agent services in Debug 
+		 mode. This allows you to check the progress of each transaction 
+		 as it is executed. (In a standard customer installation you will 
+		 add these as NT services on automatic start.)</p></li>
+		<li class="p-Numbered"><p class="Numbered">Finally, open a DOS 
+		 command window on any PC on the same LAN as the API-Fusion server/workstation 
+		 and execute the following programs in this order:</p></li>
+	</ol>
+	<p class="Numbered-Indent">afnb.exe (..\Program Files\APIfusion\Clients\afnb.exe) 
+	 (or aftcp.exe*)</p>
+	<p class="Numbered-Indent">amtsbi.exe (..(vdev)zip\amtsbi.zip)</p>
+	<p class="Numbered-Indent">afnb.exe /u (unloads afnb.exe and frees 
+	 up the protocol connection)</p>
+	<p class="Numbered-Indent">At this point you can follow the prompts 
+	 for amtsbi.exe and scan or type information into the <span class="Bold">DOS 
+	 command window</span>. You must realize that every prompt has to be 
+	 validated, so incomplete or invalid data will not be allowed.</p>
+</div>
+<p class="SeeAlsoNext"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"> Odyssey 
+ Software’s API Fusion – User Defined Information</p>
+</body>
+</html>

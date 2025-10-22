@@ -1,0 +1,50 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using the Primary Warehouse and Location as the Default From Location</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using the Primary Warehouse and Location as the Default From 
+		 Location</h1>
+	</div>
+	<p class="First">Use the preference described in this topic in conjunction 
+	 with <a href="VMINVENT_APLfrmInventoryTransfer.htm">Transferring Inventory 
+	 Between Locations</a> in Inventory Transaction Entry.</p>
+	<p>You can set up a preference in Preferences Maintenance to always 
+	 use a part’s primary warehouse and location as the default location 
+	 when transferring parts between warehouses. When you set up this preference, 
+	 the primary warehouse and primary location specified for the part 
+	 in the selected site are inserted into the From fields in the Inventory 
+	 Transfers dialog. If you specified only a primary warehouse on the 
+	 Part record, then the first location found for the warehouse is used 
+	 as the default location. In addition, the quantity on-hand in the 
+	 part location is inserted into the Quantity field in the Inventory 
+	 Transfers dialog. You can override all default information.</p>
+	<p>To set up the preference:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Section</span> – InventoryEntry</p>
+	<p class="Numbered-Indent"><span class="Bold">Entry</span> – AutoFillLocation</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – Y</p>
+	<ol start="4" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>You may need to exit and relaunch VISUAL for the preference to take 
+	 effect.</p>
+</div>
+</body>
+</html>

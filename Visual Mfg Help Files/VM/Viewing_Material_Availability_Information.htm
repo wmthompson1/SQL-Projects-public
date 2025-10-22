@@ -1,0 +1,313 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Material Availability Information</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border-top:solid #808080 1.0pt;
+border-left:none;
+border-bottom:solid #808080 1.0pt;
+border-right:none;
+mso-border-top-alt:solid gray .5pt;
+mso-border-bottom-alt:solid gray .5pt;
+mso-shading:windowtext;
+mso-pattern:solid #F2F2F2;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp2 { vertical-align:top;
+border:none;
+border-bottom:solid #808080 1.0pt;
+mso-border-bottom-alt:solid gray .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp3 { border:none;
+border-bottom:solid #808080 1.0pt;
+mso-border-bottom-alt:solid gray .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Material Availability Information</h1>
+	</div>
+	<p>Use the Material Availability window to examine the availability 
+	 of all inventory parts required on the master/work order, and the 
+	 potential impact of each requirement on inventory levels for that 
+	 part.</p>
+	<p>The inventory quantities shown in this dialog box depend upon the 
+	 value you choose for the &#160;UseUniversalForMaterialAvailability 
+	 in Preferences Maintenance. If you specify Y for this preference setting, 
+	 then inventory in all universally planned warehouses is displayed 
+	 in the Project Available (after issue), On Hand, and Available columns. 
+	 If you specify N for this preference setting and a specific universally 
+	 planned warehouse is identified for the material, then only the inventory 
+	 in the specified warehouse is displayed. See <a href="Setting_the_UseUniversalForMaterialAvailability_Preference.htm">Setting 
+	 the UseUniversalForMaterialAvailability Preference</a>.</p>
+	<p>If you perform an action that affects material availability, such 
+	 as creating a purchase order or updating and recalculating material 
+	 quantities, you can click the <span class="Bold">Refresh</span> button 
+	 on the Manufacturing Window toolbar to refresh the information in 
+	 the Material Availability dialog.</p>
+	<p>To view material availability information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Info</span>, 
+		 <span class="Bold">Material Availability</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To view leg header part 
+		 IDs, select the <span class="Bold">Include Leg Header Requirements</span> 
+		 check box. To view only material requirements attached to operations, 
+		 clear the <span class="Bold">Include Leg Header Requirements</span> 
+		 check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">For each material requirement, 
+		 this information is displayed:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Detail</span> - Operation 
+	 Number, Piece Number, Part ID, and Description of the material requirement. 
+	 If the part is a non-inventory part, then the Specification from the 
+	 material requirement is shown instead of the Part ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> - The 
+	 ID of the required part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock UM</span> - The 
+	 unit of measure used to stock the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Subord Sub ID</span> 
+	 – The sub ID of the leg header.</p>
+	<p class="Numbered-Indent"><span class="Bold">Seq #</span> - The operation 
+	 sequence number.</p>
+	<p class="Numbered-Indent"><span class="Bold">Pc #</span> - The material 
+	 piece number.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Required</span> 
+	 - The required quantity of the material for the operation.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Issued</span> 
+	 - The quantity that you have issued to the material requirement thus 
+	 far.</p>
+	<p class="Numbered-Indent"><span class="Bold">Unit Cost</span> – The 
+	 cost of per unit of the material as specified on the material card.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fixed Cost</span> – The 
+	 fixed cost charged for the part as specified on the material card.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor Part ID</span> 
+	 – The ID the vendor uses for the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Required Date</span> 
+	 - The date the material must be available for the operation, as determined 
+	 by the Concurrent Scheduler. If the work order has not been scheduled, 
+	 or this is a master, this field reads <span class="Bold">Not Sched</span>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Projected Available (after 
+	 issue)</span> - This column displays the total quantity remaining 
+	 in warehouse locations with a status of Available after the part is 
+	 issued to all outstanding work orders.</p>
+	<p class="Numbered-Indent">The supply calculation depends upon whether 
+	 a warehouse ID is displayed in the Warehouse ID column and the value 
+	 specified for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the quantity remaining in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the total quantity remaining in all universal 
+		 warehouse locations with a status of Available. If you are using 
+		 multiple sites, the quantity shown is for the site specified in 
+		 the order header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the quantity stored in available locations 
+		 for the specified warehouse.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 total quantity remaining in all universal warehouse locations 
+		 with a status of Available. If you are using multiple sites, the 
+		 quantity shown is for the site specified in the order header only.</p></li>
+	</ul>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse</span> - The 
+	 Warehouse ID of the material requirement.</p>
+	<p class="Numbered-Indent"><span class="Bold">On Hand</span> - For 
+	 inventory parts only. Gives the current total on hand quantity of 
+	 this part in all locations.</p>
+	<p class="Numbered-Indent"><span class="Bold">On Hand</span> – This 
+	 column shows the quantity currently stored in warehouse locations 
+	 with any status.</p>
+	<p class="Numbered-Indent">The calculation depends upon whether a warehouse 
+	 ID is displayed in the Warehouse ID column and the value specified 
+	 for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the current quantity in all locations in the 
+		 specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all universal warehouse 
+		 locations. If you are using multiple sites, the quantity shown 
+		 is for the site specified in the order header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all locations in 
+		 the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 current quantity in all universal warehouse locations. If you 
+		 are using multiple sites, the quantity shown is for the site specified 
+		 in the order header only.</p></li>
+	</ul>
+	<p class="Numbered-Indent"><span class="Bold">Available</span> – This 
+	 column shows the quantity currently stored in warehouse locations 
+	 with the Available status.</p>
+	<p class="Numbered-Indent">The calculation depends upon whether a warehouse 
+	 ID is displayed in the Warehouse ID column and the value specified 
+	 for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the current quantity in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all universal warehouse 
+		 locations with the status of Available. If you are using multiple 
+		 sites, the quantity shown is for the site specified in the order 
+		 header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 current quantity in all universal warehouse locations with the 
+		 status of Available. If you are using multiple sites, the quantity 
+		 shown is for the site specified in the order header only.</p></li>
+	</ul>
+	<p class="Numbered-Indent"><span class="Bold">Dimensional Info</span> 
+	 - If any parts are piece tracked, the number of pieces, the length, 
+	 width, and height dimensions, and the dimension unit-of-measure appear 
+	 in the Dimensional Info column.</p>
+	<p class="Numbered-Indent"><span class="Bold"># Pieces</span> – The 
+	 quantity of material required per unit.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dimension UM</span> – 
+	 If this is a piece-tracked part, then unit used to measure the part’s 
+	 dimensions.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor</span> – The ID 
+	 of the preferred vendor.</p>
+	<p class="Numbered-Indent"><span class="Bold">Purchase Order</span> 
+	 - If material has been purchased directly to this requirement, then 
+	 a purchase order number appears.</p>
+	<p class="Numbered-Indent"><span class="Bold">Status</span> - The status 
+	 of the purchase order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Desired Recv Date</span> 
+	 - The date the customer should receive the order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Original Promise Date</span> 
+	 - The date by which you originally promised to have completed the 
+	 work order and delivered it to the customer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Qty Ordered</span> - 
+	 The total of all orders.</p>
+	<p class="Numbered-Indent">Potential PO Supply Orders – The total quantity 
+	 on order that could meet demand. </p>
+	<p class="Numbered-Indent">To calculate the quantity, firmed and released 
+	 purchase orders for eligible warehouses are identified. This table 
+	 shows the purchase orders that are used depending on the warehouse 
+	 that is specified on the Material card: </p>
+	<table class="StandardTable" style="border-collapse: collapse; mso-table-layout-alt: fixed; 
+			 mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; margin-left: 48px;" 
+			 cellspacing="0">
+		<tr class="t1st" style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; 
+			 height: 17.0pt;">
+			<td height="23" width="332" bgcolor="#F2F2F2" class="hcp1"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Material requirement warehouse 
+			 type</b></p></td>
+			<td height="23" width="291" bgcolor="#F2F2F2" class="hcp1"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Purchase Orders</b></p></td>
+		</tr>
+		<tr class="t2Row" style="mso-yfti-irow: 1; height: 27.0pt;">
+			<td height="36" width="332" class="hcp2"><p>Independently 
+			 planned</p></td>
+			<td height="36" width="291" class="hcp2"><p>Only 
+			 purchase orders for the independently planned warehouse are 
+			 considered. </p></td>
+		</tr>
+		<tr class="t1Row" style="mso-yfti-irow: 2; height: 207.0pt;">
+			<td height="276" width="332" class="hcp2"><p>Universally 
+			 planned</p></td>
+			<td height="276" width="291" class="hcp2"><p>The 
+			 purchase orders that are included depend upon the value that 
+			 is specified for the UseUniversalForMaterialAvaillability 
+			 entry in the Visual Mfg section of Preferences Maintenance:</p>
+			<ul>
+				<li class="p-Bullet"><p class="Bullet">If the UseUniversalForMaterialAvailability 
+				 entry is false or not specified, then only purchase orders 
+				 for the warehouse that is specified on the requirement 
+				 are included in the calculation.</p></li>
+				<li class="p-Bullet"><p class="Bullet">If the UseUniversalForMaterialAvailability 
+				 entry is true, then purchase orders for all universally 
+				 planned warehouses are included in the calculation. Purchase 
+				 orders with no warehouse are also included. </p></li>
+			</ul></td>
+		</tr>
+		<tr class="t2Row" style="mso-yfti-irow: 3; mso-yfti-lastrow: yes; 
+			 height: 88.0pt;">
+			<td height="117" width="332" class="hcp3"><p>Warehouse 
+			 not specified</p></td>
+			<td height="117" width="291" class="hcp3"><p>Purchase 
+			 orders for all universally planned warehouses and purchase 
+			 orders with no warehouses are included in the calculation. 
+			 Purchase orders for independently planned warehouses are not 
+			 included.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent">&#160;</p>
+	<p class="Numbered-Indent">Received or allocated quantities on eligible 
+	 purchase orders are subtracted from the total quantity that has been 
+	 ordered or fulfilled. Purchase order lines with negative quantities 
+	 are not included in the calculation. The result is displayed in the 
+	 Potential PO Supply Orders column. </p>
+	<p class="Numbered-Indent"><span class="Bold">Link Quantity Allocated</span> 
+	 - The portion of this material's <span class="Bold">Quantity Required</span> 
+	 that you have allocated through the establishment of supply links 
+	 to the requirement or demand links from the requirement. </p>
+	<p class="Numbered-Indent"><span class="Bold">Link Quantity Received</span> 
+	 - The portion of a linked quantity that you have received. For example, 
+	 if there is a purchase order link to a material requirement, after 
+	 you receive that purchase order, the portion of the P/O Order Quantity 
+	 that you allocated appears here.</p>
+	<p class="Numbered-Indent"><span class="Bold">Required Quantity Allocated</span> 
+	 - The portion of the material requirement's <span class="Bold">Required 
+	 Quantity</span> that you have accounted for through the use of allocations.</p>
+	<p class="Numbered-Indent"><span class="Bold">Required Quantity Fulfilled</span> 
+	 - The portion of the material requirement's Required Quantity that 
+	 has been fulfilled through the use allocations.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Identifying the CCR</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Identifying the CCR</h1>
+	</div>
+	<p>To determine which of your resources are CCRs, you must calculate 
+	 your resource planned load.</p>
+	<p>To find your resource planned load:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Scheduling</span>, 
+		 <span class="Bold">DBR Scheduler</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the production 
+		 schedule. If you are licensed to use multiple sites, select the 
+		 production schedule for the appropriate site.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">DBR Schedule</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Options section, 
+		 select <span class="Bold">Create DBR Product Schedule Only</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">After the scheduler 
+		 runs, select <span class="Bold">File</span>, <span class="Bold">Planned 
+		 Load</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Resource ID</span>&#160;– 
+	 To view planned load information for a particular resource, select 
+	 the resource. Only the resources whose load you are monitoring are 
+	 displayed. To view planned load information for all resources whose 
+	 load you are monitoring, select *All*.</p>
+	<p class="Numbered-Indent"><span class="Bold">Calculation Date</span>&#160;– 
+	 The current date is inserted. You cannot edit this field. This date 
+	 is used in conjunction with the value you specify in the Load Horizon 
+	 field to determine the date range to use to search for demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Load Horizon</span>&#160;– 
+	 Specify the number of days from the Calculation Date to look for demand. 
+	 The value you specify here determines the end date of the demand horizon.</p>
+	<p class="Numbered-Indent"><span class="Bold">Create a Horizon Every</span>&#160;– 
+	 To specify a subset of the load horizon, specify the subset in this 
+	 field. For example, if you specified 30 in the Load Horizon field, 
+	 but wanted to view demand information for every two days, specify 
+	 2 in this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Intermediate Horizons</span>&#160;– 
+	 To display a line for every horizon subset as defined in the Create 
+	 a Horizon Every field, select this check box. To display a single 
+	 line for the horizon duration specified in the Load Horizon field, 
+	 clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Apply Calendar Exceptions</span>&#160;– 
+	 To take into account any calendar exceptions, select this check box. 
+	 To ignore calendar exceptions and use the standard shop schedule in 
+	 the load analysis, clear this check box.</p>
+	<ol start="8" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Generate</span>. 
+		 The load for horizon you specified is calculated.</p></li>
+	</ol>
+</div>
+</body>
+</html>

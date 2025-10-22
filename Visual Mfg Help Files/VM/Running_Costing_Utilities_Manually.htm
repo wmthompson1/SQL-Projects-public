@@ -1,0 +1,98 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Running Costing Utilities Manually</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Running Costing Utilities Manually</h1>
+	</div>
+	<p class="First">Use the Costing Utilities window to run costing manually 
+	 at any time. You can also set up a service to run costing. See <a 
+	 href="VMCSTSVCWhat.htm">Running Costing with the Costing Service</a>.</p>
+	<p class="First">To run costing utilities manually:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Eng/Mfg</span>, 
+		 <span class="Bold">Costing Utilities</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Setup</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To assume that all materials 
+		 and operations are closed if the work order is closed, select 
+		 this check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To repeat the costing 
+		 run until it cannot find updates to perform, select the <span 
+		 class="Bold">Continue Running...</span> check box. If you select 
+		 this check box, click in the Cycles are performed text box and 
+		 enter the number of costing runs to perform. Leave the field empty 
+		 to continue processing until all transactions have been costed. 
+		 If you specify a 0, this value is considered the same as the value 
+		 of 1.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">OK</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site for which you are running costing utilities. 
+		 If you are licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select inventory related 
+		 costing options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Receipt Transaction Costing</span> 
+	 – VISUAL updates your work order receipt costs with the most up-to-date 
+	 receipt transaction data. Actual cost transactions are updated for 
+	 Closed orders and partial receipts are updated based upon WIP costing 
+	 method.</p>
+	<p class="Numbered-Indent">Standard Costs are used to determine Finished 
+	 Goods Variances.</p>
+	<p class="Numbered-Indent"><span class="Bold">Inventory Transaction 
+	 Costing</span> – VISUAL updates your inventory costs with your most 
+	 up-to-date receipt transaction data. If you use the Standard costing 
+	 method, this option is not displayed.</p>
+	<p class="Numbered-Indent">To keep your costing values up to date, 
+	 run the Costing Utilities with these settings often. You do not have 
+	 to generate distributions until you are ready to post to your ledgers.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">When you are ready to 
+		 generate journals, select the appropriate check boxes for the 
+		 journals to prepare.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This function only prepares the journals: 
+	 you must use the Post Manufacturing Journals program to post distributions 
+	 to your ledger. To prepare distributions only, select the journals 
+	 to create and clear the two check boxes in the top section of the 
+	 window.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Run</span> 
+		 toolbar button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">As the Costing Utility runs, the current 
+	 part appears in the Costing Utility window.</p>
+	<p class="Numbered-Indent">To stop the costing process, click the Stop 
+	 toolbar button.</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">When the costing run 
+		 has finished, an information dialog appears notifying you of the 
+		 costing results. This information is also stored in the VMAPLUTL.log 
+		 file.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">OK</span> 
+		 button on the dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Exit</span> 
+		 toolbar button on the Costing Utility.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Costing_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

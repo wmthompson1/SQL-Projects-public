@@ -1,0 +1,89 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Configuring Audit Files</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Configuring Audit Files</h1>
+	</div>
+	<p>Before you can track information throughout VISUAL, you must tell 
+	 the system you want to track it. To do so, use the Audit Configuration 
+	 window.</p>
+	<p>To specify the information to track:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Audit Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the Audit Maintenance 
+		 window, select <span class="Bold">File</span>, <span class="Bold">Configure 
+		 Auditing</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">To build the list of tables that can be 
+	 audited, all database tables are read. This process may take a few 
+	 minutes.</p>
+	<p class="Numbered-Indent"><a name="tblColumns" id="tblColumns"></a>The 
+	 left side of the Audit Configuration window includes a list of all 
+	 tables within your VISUAL applications. The right side of the window 
+	 displays all table columns for which you have configured tracking. 
+	 If you have not yet configured audit tracking, the table appears blank.</p>
+	<p class="Numbered-Indent">For any database table that has unsaved 
+	 configuration(s) within the Audit Configuration window, the table’s 
+	 icon on the left pane appears in red.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">To add a table to the 
+		 Audit Configuration table, click the table name in the left pane.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The table name and column names are shown 
+	 in the Audit Configuration table. If a column is a primary key, the 
+	 Primary Key check box is selected. The type of data and length of 
+	 the column is shown in the Data Type field.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">To track a column, select 
+		 the <span class="Bold">Tracked</span> check box. To track all 
+		 columns, click the Select All Columns button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the actions 
+		 to track. When you select the Tracked check box, the Insert, Update, 
+		 and Delete check boxes are selected by default. Select or clear 
+		 these check boxes:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Insert</span> – Select 
+	 this check box to track when users add data in this column. Clear 
+	 the Insert check box if you do not want to track when users add data 
+	 in this column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Update</span> – Select 
+	 this check box to track when users edit data in this column. Clear 
+	 the Update check box if you do not want to track user edits.</p>
+	<p class="Numbered-Indent"><span class="Bold">Delete</span> – Select 
+	 this check box to track when users delete data in this column. Clear 
+	 the Delete check box if you do not want to track user deletions.</p>
+	<ol start="6" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">To save the configuration 
+		 for the current table, click the <span class="Bold">Save [table_name]</span> 
+		 button. The name of the table is shown in the tool tip for the 
+		 Save button. To save the configuration for all tables, click the 
+		 <span class="Bold">Save All Tables</span> button. Your configurations 
+		 are written to the HISTORY_DEFINITION table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To complete the configuration, 
+		 write the database triggers. To write the triggers for the current 
+		 table only, click the <span class="Bold">Write Triggers for [table_name]</span> 
+		 button. The name of the table is shown in the tool tip for the 
+		 Write Triggers button. To write the triggers for all tables, click 
+		 the <span class="Bold">Write All Triggers</span> button.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User-defined_Help_Files_-_Audit_Maintenance.htm"><img src="btn_mini.gif" alt="" style="border: none;" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

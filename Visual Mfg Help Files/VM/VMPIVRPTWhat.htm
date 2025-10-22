@@ -1,0 +1,109 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>What is the Inventory Valuation Report?</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>What is the Inventory Valuation Report?</h1>
+	</div>
+	<p class="First">This report provides a breakdown and total value for 
+	 all parts in your inventory. For each Part ID, the following information 
+	 is shown:</p>
+	<p>Description</p>
+	<p>On-Hand Quantity</p>
+	<p>Material Cost</p>
+	<p>Labor Cost</p>
+	<p>Burden Cost</p>
+	<p>Service Cost</p>
+	<p>Total Value = Material + Labor + Burden + Service</p>
+	<p>Total value is also shown for entire inventory.</p>
+	<p>When printing by Part ID w/Cost Layer Detail, each of the inventory 
+	 transactions that make up the cost layers for a part will be listed, 
+	 with the following information:</p>
+	<p>Inventory Transaction ID</p>
+	<p>Transaction Type and Associated Work Order ID, if any</p>
+	<p>Material Cost</p>
+	<p>Labor Cost</p>
+	<p>Burden Cost</p>
+	<p>Service Cost</p>
+	<p>Quantity of Transaction</p>
+	<p>Total Value</p>
+	<h2>Options</h2>
+	<h2>Use Part Standard Unit Cost Instead of FIFO Actual</h2>
+	<p>If using actual costing, received materials are valued at FIFO based 
+	 on the invoice or purchase order amount. Depending upon your use of 
+	 the report, you may wish to value inventory based on the standard 
+	 cost as defined in Part Maintenance, rather than actual costs.</p>
+	<h2>Show Parts with Non-Zero Amounts Only</h2>
+	<p>If you have many part masters for which you aren’t currently carrying 
+	 inventory, you may want to use this option to reduce the size of the 
+	 report.</p>
+	<h2>Cost Layer Detail Options</h2>
+	<p>These options apply to the Part ID w/Cost Layer Detail option. If 
+	 choosing this option, you must use the FIFO Actual values. These options 
+	 can only be used if you are using the actual costing method. You have 
+	 three choices:</p>
+	<p class="Numbered-Indent"><span class="Bold">Show All Parts in Range</span> 
+	 - All parts will be reported regardless of zero or negative cost layers.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Parts with Zero 
+	 Cost Layers Only</span> - The report will only be printed for parts 
+	 that have one or more cost layers with a zero value. This option helps 
+	 you track down any parts that may not have been valued correctly. 
+	 This could happen, for example, if you adjusted parts into inventory 
+	 and forgot to provide the appropriate cost.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Parts with Negative 
+	 Balance Cost Layers</span> - The report will only be printed for parts 
+	 that have one or more cost layers with a negative value.</p>
+	<h2>Sequencing</h2>
+	<p>This report can be sequenced by Part ID, Product Code, or Commodity 
+	 Code. For all sequences, you can choose a range of Part ID’s to report 
+	 on.</p>
+	<h2>QRP Files</h2>
+	<table style="margin-left: 18.00pt;" cellspacing="0" width="276">
+		<tr class="hcp1">
+			<td width="150" class="hcp2"><p>By Part ID</p></td>
+			<td width="126" class="hcp2"><p>VMPIVRPT.QRP</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="150" class="hcp2"><p>By Part ID with Detail</p></td>
+			<td width="126" class="hcp2"><p>VMPIVRP3.QRP</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="150" class="hcp2"><p>By Product Code</p></td>
+			<td width="126" class="hcp2"><p>VMPIVRP1.QRP</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="150" class="hcp2"><p class="header">By 
+			 Commodity Code</p></td>
+			<td width="126" class="hcp2"><p class="header">VMPIVRP2.QRP</p></td>
+		</tr>
+	</table>
+</div>
+<p class="SeeAlsoNext"><a href="VMPIVRPTfrmPrintInventoryValueReport.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Printing</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Inventory_Valuation_Report.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

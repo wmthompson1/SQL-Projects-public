@@ -1,0 +1,474 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assembly Record Layout (Leg Headers)</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+mso-shading:windowtext;
+mso-pattern:gray-30 gray;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp2 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%;
+mso-ansi-language:EN-US; }
+td.hcp3 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-top-alt:solid windowtext .5pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp4 { vertical-align:top;
+border:none;
+mso-border-top-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assembly Record Layout (Leg Headers)</h1>
+	</div>
+	<p class="First">Assembly records add Sub-IDs (leg-headers) to the 
+	 previous MASTER record. The OPERATION that requires the Sub-ID <span 
+	 class="Bold">MUST</span> be listed prior to the ASSEMBLY record.</p>
+	<p class="First">This table shows the layout of the file. It shows 
+	 the data that is expected in each token, the length and type of the 
+	 data, and whether you are required to include the data in your import 
+	 file. For NumberString data types, the first value indicates the number 
+	 of digits that can be included to the left of the decimal point. The 
+	 second value indicates the number of digits that can be included to 
+	 the right of the decimal point.</p>
+	<table class="MsoNormalTable" style="margin-left: 26.75pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; 
+			 mso-border-insideh: .5pt solid windowtext;" cellspacing="0">
+		<col width="68">
+		<col width="108">
+		<col>
+		<col>
+		<col>
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td height="23" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Token #</span></b></p></td>
+			<td height="23" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Name</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Data type</span></b></p></td>
+			<td height="23" width="57" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Required</span></b></p></td>
+			<td height="23" width="288" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Notes</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">0</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Record 
+			 Type Indicator</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ASSEMBLY</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">You must specify ASSEMBLY.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">1</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Parent 
+			 Assembly</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The level of parent assembly. This 
+			 is the Sub ID of the parent record. The default value is 0, 
+			 which is also the top-level.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">2</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation 
+			 Number</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(5)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The operation sequence number of 
+			 the parent operation.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">3</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Piece 
+			 Number</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(5)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The piece number of the material. 
+			 This must be a valid Part ID. The default is the next piece 
+			 number for the part assembly number.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 5; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">4</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Part 
+			 ID</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Part ID of the material.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 6; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">5</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Quantity 
+			 Per</span> </p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(12.8)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The quantity of material required 
+			 for each part produced by operations. If you do not specify 
+			 a value, a value of 1 is used.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 7; height: 68.0pt;">
+			<td height="91" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">6</span></p></td>
+			<td height="91" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Quantity 
+			 Per Type</span></p></td>
+			<td height="91" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="91" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="91" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The quantity per type code. Because 
+			 of scrap and yield, the start quantity may be different than 
+			 the end quantity. This field indicates to use start quantity 
+			 or end quantity when calculating quantity per.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp2">S</span></b> 
+			 <span class="hcp2">(Start 
+			 Qty), also the default</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp2">E</span></b> 
+			 <span class="hcp2">(End 
+			 Qty)</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 8; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">7</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Usage 
+			 UM</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The unit of measure of the material. 
+			 This must be a valid unit of measure.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 9; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">8</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing 
+			 ID</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Drawing ID of the assembly.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 10; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">9</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing 
+			 Rev Number</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(8)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The revision number of the drawing.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 11; height: 46.0pt;">
+			<td height="61" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">10</span></p></td>
+			<td height="61" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Unit 
+			 Material Cost</span></p></td>
+			<td height="61" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(15.8)</span></p></td>
+			<td height="61" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="61" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The unit cost of this material. 
+			 The Data Import Utility uses the part cost from the existing 
+			 part table, unless you specify a different value. If you specify 
+			 a value, it overrides the default.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 12; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">11</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing 
+			 File</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(100)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The full file path to and name 
+			 of the drawing file.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 13; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">12</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Sub 
+			 ID</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The sequential number of this assembly. 
+			 Specify the Sub-ID for this leg-header here. The Data Import 
+			 Utility automatically increments to the next Sub ID.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 14; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">12</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Length</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(10.4)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Only applies if the material is 
+			 piece tracked and requires length.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 15; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">13</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Width</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(10.4)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Only applies if the material is 
+			 piece tracked and requires width.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 16; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">14</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Height</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(10.4)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Only applies if the material is 
+			 piece tracked and requires height.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 17; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">15</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Dimension 
+			 UM</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The unit of measure of the material. 
+			 This only applies to piece tracked parts and must be a valid 
+			 unit of measure.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 18; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">16</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Scrap 
+			 Percent</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(3.2)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The scrap percent of the material. 
+			 The Data Import Utility creates material records with a default 
+			 scrap percent value of 0.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 19; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">17</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Fixed 
+			 Quantity</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(12.8)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The fixed quantity of the material. 
+			 The Data Import Utility creates material records with a default 
+			 fixed quantity value of 0.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 20; height: 35.0pt;">
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">18</span></p></td>
+			<td height="47" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Dimensions</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This dimension formula must equal 
+			 a valid numeric expression. This is not applicable for piece 
+			 tracked parts.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 21; height: 24.0pt;">
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">19</span></p></td>
+			<td height="32" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Reference 
+			 #</span> </p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(10)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The reference number to an item 
+			 number on a drawing.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 22; height: 46.0pt;">
+			<td height="61" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">20</span></p></td>
+			<td height="61" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Issued 
+			 Quantity #</span></p></td>
+			<td height="61" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(12.8)</span></p></td>
+			<td height="61" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="61" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The quantity of the requirement 
+			 that has been issued to date. If the quantity issued meets 
+			 or exceeds the material requirement, this material requirement 
+			 is considered complete.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 23; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">21</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 1</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 1.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 24; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">22</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 2</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 2.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 25; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">23</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 3</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 3.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 26; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">24</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 4</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 4.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 27; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">25</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 5</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 5.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 28; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">26</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 6</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 6.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 29; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">27</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 7</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 7.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 30; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">28</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 8</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 8.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 31; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">29</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 9</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 9.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 32; height: 14.0pt;">
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">30</span></p></td>
+			<td height="19" class="hcp3"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF 10</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 10.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 33; mso-yfti-lastrow: yes; height: 24.0pt;">
+			<td height="32" class="hcp4"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">31</span></p></td>
+			<td height="32" class="hcp4"><p 
+				 class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Assembly 
+			 UDF Layout ID</span></p></td>
+			<td height="32" width="120" class="hcp4"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="57" class="hcp4"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp4"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The ID of the UDF Layout.</span></p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

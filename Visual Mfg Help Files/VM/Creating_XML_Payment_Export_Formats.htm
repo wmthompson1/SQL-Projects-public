@@ -1,0 +1,292 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating XML Payment Export Formats</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+p.hcp2 { font-weight:bold; }
+td.hcp3 { border-top:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp4 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp5 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating XML Payment Export Formats</h1>
+	</div>
+	<p>You can create an AP export file format in XML. Use the Payment/XML 
+	 format to export payments to Single Euro Payment Area (SEPA)-compliant 
+	 file transfer systems. You can create an export format to use with 
+	 release version 4.0 for SEPA Credit Transfers. For more information, 
+	 refer to <a href="http://www.europeanpaymentscouncil.eu/index.cfm">http://www.europeanpaymentscouncil.eu/index.cfm</a>.</p>
+	<p>You can also use XML file format to create a custom export file 
+	 format.</p>
+	<p>You should have an understanding of XML before setting up export 
+	 file formats.</p>
+	<p>To create a simple XML payment export format:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Application Global Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Export Formats</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Type</span> 
+		 arrow and select Payment/XML.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify an Export ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Seq No</span> – Specify 
+	 a sequence number for the line. The sequence number indicates the 
+	 order of the lines in the XML document. The line with the lowest number 
+	 is inserted in the document first. You can specify a negative number.</p>
+	<p class="Numbered-Indent"><span class="Bold">Indent Level</span> – 
+	 Specify an indent number for the line. Indent numbers identify how 
+	 the lines are grouped together.</p>
+	<p class="Numbered-Indent"><span class="Bold">Element</span> – Specify 
+	 the name of the element. The element is the tag name. You do not have 
+	 to specify the starting tag or ending tag.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – Specify 
+	 the value to use for the element. Click the arrow to select from common 
+	 database fields. You can also enter your own value.</p>
+	<p class="Numbered-Indent"><span class="Bold">Is An Attribute?</span> 
+	 – If the line in an attribute to the element, select the Is An Attribute 
+	 check box. If you designate an attribute, you should sequence the 
+	 line so that it is immediately after the element with which it is 
+	 associated. You should specify the same indent level.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Repeat steps 5 and 6 
+		 to insert additional lines.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>For example, say you entered the following lines:</p>
+	<table style="vertical-align: top; left: 0px; top: 644px;" cellspacing="0" 
+			 width="633">
+		<col style="width: 10.044%;">
+		<col style="width: 14.343%;">
+		<col style="width: 20.219%;">
+		<col style="width: 32.162%;">
+		<col style="width: 22.282%;">
+		<tr class="hcp1">
+			<td style="border: Solid 1px #000000; width: 10.044%; padding-right: 10px; 
+				 padding-left: 10px;"><p class="hcp2">Seq</p></td>
+			<td style="width:14.343%;" class="hcp3"><p class="hcp2">Indent</p></td>
+			<td style="width:20.219%;" class="hcp3"><p class="hcp2">Tag</p></td>
+			<td style="width:32.162%;" class="hcp3"><p class="hcp2">Tag 
+			 Value</p></td>
+			<td style="width:22.282%;" class="hcp3"><p class="hcp2">Is 
+			 an Attribute?</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:10.044%;" class="hcp4"><p>1</p></td>
+			<td style="width:14.343%;" class="hcp5"><p>0</p></td>
+			<td style="width:20.219%;" class="hcp5"><p>Payment</p></td>
+			<td style="width:32.162%;" class="hcp5"><p>&#160;</p></td>
+			<td style="width:22.282%;" class="hcp5"><p>n</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:10.044%;" class="hcp4"><p>2</p></td>
+			<td style="width:14.343%;" class="hcp5"><p>1</p></td>
+			<td style="width:20.219%;" class="hcp5"><p>Code</p></td>
+			<td style="width:32.162%;" class="hcp5"><p>SEPA</p></td>
+			<td style="width:22.282%;" class="hcp5"><p>n</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:10.044%;" class="hcp4"><p>3</p></td>
+			<td style="width:14.343%;" class="hcp5"><p>2</p></td>
+			<td style="width:20.219%;" class="hcp5"><p>Amount</p></td>
+			<td style="width:32.162%;" class="hcp5"><p>AMOUNT 
+			 (selected from drop-down menu)</p></td>
+			<td style="width:22.282%;" class="hcp5"><p>n</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:10.044%;" class="hcp4"><p>4</p></td>
+			<td style="width:14.343%;" class="hcp5"><p>2</p></td>
+			<td style="width:20.219%;" class="hcp5"><p>Currency 
+			 ID</p></td>
+			<td style="width:32.162%;" class="hcp5"><p>CURRENCY_ID 
+			 (selected from drop-down menu)</p></td>
+			<td style="width:22.282%;" class="hcp5"><p>y</p></td>
+		</tr>
+	</table>
+	<p>The system would generate the following XML:</p>
+	<p>&lt;Payment&gt;</p>
+	<p>&lt;Code&gt;SEPA&lt;/Code&gt;</p>
+	<p>&lt;Amount CurrencyID=”USD”&gt;1234.00&lt;/Amount&gt;</p>
+	<p>The system would extract the USD and 1234.00 values from the database.</p>
+	<h2>Building Payment/XML Formats with the Context Menu</h2>
+	<p>You can build more complex Payment/XML formats using built-in macros 
+	 and the Context menu. The Context menu automatically inserts standard 
+	 elements into the XML file. You can use each context once in each 
+	 Export ID. The macros and contexts indicate how the files are linked 
+	 together.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Specify an Export ID 
+		 in the Export ID field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Build the File Header. 
+		 Click the <span class="Bold">Context</span> arrow and select File 
+		 Header.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The system inserts the doctype and root 
+	 elements. The system inserts the standard xml version identification 
+	 information in the Value field associated with the doctype element. 
+	 Enter a value for the root element. The root element is the first 
+	 tag in the XML file. &#160;</p>
+	<ol start="3" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button and specify any other elements you would like to use in 
+		 the file header.</p></li>
+	</ol>
+	<p class="Numbered-Indent">At the point where you would like to include 
+	 the Header context information, click the Insert button and specify 
+	 %HEADER% in the Element column. This indicates that the system will 
+	 look for the Header context information. If you create additional 
+	 lines after the %HEADER% line, the system will insert those lines 
+	 after it inserts the entire Header.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Build the Header context 
+		 information. Specify the same Export ID as you entered in step 
+		 1, then click the <span class="Bold">Context</span> arrow and 
+		 select Header.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the Insert button 
+		 and specify the elements and attributes you want to use for the 
+		 document header.</p></li>
+		<li class="p-Numbered"><p class="Numbered">At the point where you 
+		 would like to include the Line Item context information, click 
+		 the <span class="Bold">Insert</span> button and specify %LINEITEM% 
+		 in the Element column. This indicates that the system will look 
+		 for the Line Item information. If you create additional lines 
+		 after the %LINEITEM% line, the system will insert those lines 
+		 after it inserts the entire Line Item context information.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Build the Line Item 
+		 context information. Specify the same Export ID as you entered 
+		 in Step 1, then click the <span class="Bold">Context</span> arrow 
+		 and select Line Item.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button and specify the elements and attributes you want to use 
+		 for the line items.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>The system links together the information you built for the File 
+	 Header, Header, and Line Item contexts.</p>
+	<h2>Complex Expressions</h2>
+	<p>You can combine simple calls for data from the database with expressions 
+	 that convert the data to a different format or prompt the system to 
+	 choose between two values. You can use the following expressions:</p>
+	<p><span class="Bold">@FORMATNUMBER</span> – Use this expression to 
+	 change the format of a number. You can specify the number of decimal 
+	 places and the separator characters you use. To use the expression, 
+	 specify the number you would like to convert, then specify the format. 
+	 For example:</p>
+	<p>@FORMATNUMBER (1235,99, “#,##0&quot;) would convert 1235,99 to 1,235.</p>
+	<p><span class="Bold">@FORMATDATE</span> – Use this expression to change 
+	 the format of a date. To use the expression, specify the date you 
+	 would like to convert, then specify the format. For example:</p>
+	<p>@FORMATDATE (2010-07-14, “mm/dd/yyyy&quot;) would convert 2010-07-14 
+	 to 07/14/2010.</p>
+	<p><span class="Bold">@UTCDATE</span> – Use this expression to change 
+	 the format of a date into universal time coordinate (UTC) format. 
+	 To use the expression, specify the date you would like to convert, 
+	 specify if you would like to show the time, and specify if you would 
+	 like to show the offset. To specify whether or not to show the time 
+	 or offset, use True to show the time or offset and False to not show 
+	 the time or offset. For example,</p>
+	<p>@UTCDATE (2010-07-14, TRUE, FALSE) would convert 2010-07-14 to 2010-07-14T16.25.54.18z. 
+	 If you specified @UTCDATE (2010-07-14, TRUE, TRUE), the date would 
+	 convert to 2010-07-14T16:25:54.18Z-04:00.</p>
+	<p><span class="Bold">@ROUND</span> – Use this expression to round 
+	 a fractional number to a specific number of decimal places. To use 
+	 this expression, specify the number you would like to round followed 
+	 by the precision and scale. &#160;Precision is the number of digits 
+	 in the number; scale is the number of digits after the decimal point. 
+	 For example:</p>
+	<p>@ROUND (6543.1267, 6, 2) will convert 6543.1267 to 6543.13. If you 
+	 specified @ROUND (6543.1267, 5, 2), 6543.1267 would be converted to 
+	 6543.1 Since the number is limited to 5 digits in the definition, 
+	 the system would only include one digit after the decimal point.</p>
+	<p><span class="Bold">@LOOKUP</span> – Use this expression to retrieve 
+	 a cross-referenced value from the database. To use the expression, 
+	 specify the key, table, keyfield, and datafield. For example,</p>
+	<p>@LOOKUP (‘CURRENCY_ID’, ‘CURRENCY’, ‘ID’, ‘ISO_CODE’) would retrieve 
+	 the ISO code for the currency ID.</p>
+	<p><span class="Bold">@SQL</span> – Use this expression to execute 
+	 a simple select SQL statement against the database. For example:</p>
+	<p>@SQL (‘SELECT COMPANY_NAME FROM APPLICATION_GLOBAL’) would retrieve 
+	 the company_name data from the application_global table.</p>
+	<p><span class="Bold">@IF</span> – Use this expression to ask the system 
+	 to return one of two values based on the result of a test you specify. 
+	 To use this expression, specify a test (for example, 1&lt;2), the 
+	 value the system returns if the test is true, and the value the system 
+	 returns if the test is false. For example,</p>
+	<p>@IF (1&gt;2, ‘1 is greater than 2’, ‘1 is not greater than 2,’) 
+	 &#160;would return 1 is not greater than 2. The system would evaluate 
+	 the test, 1&gt;2, determine that the test is false (1 is less than 
+	 2), and return the value you specified for a false test, 1 is not 
+	 greater than 2.</p>
+	<h2>Concatenation</h2>
+	<p>You can join simple expressions or a string values and a simple 
+	 expressions together using a concatenation operator. The concatenation 
+	 operator is a double pipe: ||. For example:</p>
+	<p>VEND_BANK_CITY || ’,’ || VEND_BANK_STATE || VEND_BANK_ZIPCODE would 
+	 produce the vendor bank’s city, state and zip code in the following 
+	 format: Boston, MA 02123. In this example, the comma is a string value 
+	 and the references to database columns are simple expressions.</p>
+	<h2>Other Functions</h2>
+	<p>You may find the following useful in your export file formats:</p>
+	<p><span class="Bold">SalDateCurrent()</span> – Use this function to 
+	 return the current date and time. You can use this function in conjunction 
+	 with a complex expression to specify a format for the data. For example:</p>
+	<p>@UTCDATE ( SalDateCurrent(), TRUE, FALSE) would return the current 
+	 date expressed in UTC format without offset. For example, 2010-07-14T14:58:27.68Z.</p>
+	<p><span class="Bold">SalStrLeftX( string, length)</span> – Use this 
+	 function to return a portion of the string value you specify. For 
+	 example:</p>
+	<p>SalStrLeftX (DESCRIPTION, 40) would return the first 40 characters 
+	 in the DESCRIPTION database column.</p>
+	<p><span class="Bold">SalStrTrimX (string)</span> – Use this function 
+	 to remove all blanks from the string value. For example:</p>
+	<p>SalStrTrimX (COMPANY_NAME) would return MajesticManufacturingCompany 
+	 instead of Majestic Manufacturing Company.</p>
+	<p><span class="Bold">SalStrScan (string 1, string2)</span> – Use this 
+	 function to find the value you specify for string2 in string1. For 
+	 example:</p>
+	<p>SalStrScan (VENDOR_NAME, ‘Steel’) would return vendor names that 
+	 included the word ‘steel’ .</p>
+	<p><span class="Bold">SalNumberAbs (number)</span> – Use this function 
+	 to return the absolute number.</p>
+	<h2>Using the SQL Dialog Box</h2>
+	<p>After you specify your export file format, click the <span class="Bold">SQL</span> 
+	 button. The system constructs a SQL statement that you can use to 
+	 add the export file format to your database. Copy the SQL statement 
+	 from the dialog box and paste it into a database management tool.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

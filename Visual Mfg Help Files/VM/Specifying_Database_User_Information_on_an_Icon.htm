@@ -1,0 +1,57 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Database User Information on an Icon</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Database User Information on an Icon</h1>
+	</div>
+	<p class="First">VISUAL works in the context of a specific relational 
+	 database. It is possible for you to have more than one database. During 
+	 implementation, you may have a test or demo database, along with the 
+	 actual production one. When starting, VISUAL must have access to the 
+	 name of the database.</p>
+	<p>Additionally, you need a user name and password to gain access to 
+	 a database. These items are specific to an individual database. To 
+	 have access to two different databases, a user must have an account 
+	 in both.</p>
+	<p>When a database is created, there is always a default user that 
+	 has the privilege to add other users. See your relational database 
+	 administrator documentation for details.</p>
+	<p>You can specify database, user name, and password in the definition 
+	 of the program icon, or in the VISUAL.INI file. If you specify all 
+	 three of these items, VISUAL starts up directly, without requiring 
+	 you to go through a login dialog box. If you do not specify one or 
+	 more, the login dialog box appears and requires you to complete the 
+	 information. To specify this information in an icon, use these switches 
+	 on the command line:</p>
+	<p>-D Database Name</p>
+	<p>-U Username</p>
+	<p>-P Password</p>
+	<p>You can enter these parameters in any order. For example, to start 
+	 VISUAL with database VMFG and username JOE, you would specify this 
+	 information:</p>
+	<p>C:\Infor\VISUAL\VM.EXE -D VMFG -U JOE</p>
+	<p>The user is required to enter the password upon start-up.</p>
+	<p>You can also specify this information in the Default Login Profile 
+	 option of Application Global Maintenance.</p>
+	<p>Any specification of database, user, or password information on 
+	 the command line for the icon overrides settings in the VISUAL.ini 
+	 file.</p>
+	<p>If system security is an issue for you, you should never specify 
+	 a password in an icon or in the VISUAL.ini file. This not only allows 
+	 access to anyone with access to the machine, but also allows the password 
+	 text to be read from the file or icon.</p>
+</div>
+</body>
+</html>

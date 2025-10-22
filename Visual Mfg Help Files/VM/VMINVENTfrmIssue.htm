@@ -1,0 +1,114 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Issuing Materials to Work Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+ol.hcp2 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Issuing Materials to Work Orders</h1>
+	</div>
+	<p class="First">Use Inventory Transaction Entry to issue materials 
+	 your inventory to a work order material requirement. Use this function 
+	 to issue materials to requirements that are not linked to purchase 
+	 orders.</p>
+	<p>For requirements linked to purchase orders, use Purchase Receipt 
+	 Entry to create inventory transactions. When you receive a linked 
+	 purchase order, two inventory transactions are created. A receipt 
+	 transaction is created to receive the quantity into inventory. An 
+	 issue transaction to the requirement is then created.</p>
+	<p>When you issue materials through a manual issue transaction or through 
+	 a purchase receipt, the material requirement completion percentage 
+	 is updated in the Manufacturing Window. If you receive the total required 
+	 quantity, the material requirement is closed.</p>
+	<p>Use the Issue function in the main Inventory Transaction window 
+	 to issue a particular part to a single requirement. To issue parts 
+	 to all requirements, use the Issue By Exception feature. See <a href="VMINVENT_APLfrmIssue.htm">Using 
+	 Issue By Exception</a>.</p>
+	<p>To issue parts to a material requirement:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Inventory Transaction Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site for the transaction. If you are licensed 
+		 to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Issue</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the Work Order 
+		 ID browse button and select the Work Order to which to issue materials.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the Piece No browse 
+		 button and select the material requirement. After you select a 
+		 piece number, the Part ID is displayed. In the Quantities section, 
+		 the total quantity required, the quantity previously issued to 
+		 the requirement, and the remaining quantity due to be issued are 
+		 displayed. In addition, the current quantity of the part on hand 
+		 and the current quantity available are displayed.</p></li>
+	</ol>
+	<table x-use-null-cellsstyle="width: 342px; border-spacing: 0px; border-spacing: 0px;" 
+			 style="left: 0px; top: 131px; height: 48px; margin-left: 40px;" 
+			 cellspacing="0" width="379">
+		<col>
+		<col width="329">
+		<tr style="vertical-align: top;">
+			<td width="31" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gifstyle=&quot;width:" height:="" border-style:="" title="POSTIT.gifstyle=&quot;width:" width="25" height="25" border="0"></p></td>
+			<td class="hcp1"><p>If you are the SYSADM user, you 
+			 can add a requirement directly in Inventory Transaction. You 
+			 must have the NewMaterialMode entry in the InventoryEntry 
+			 section of Preferences Maintenance set to On to add new material 
+			 requirements in the Inventory Transaction Entry window. To 
+			 add a requirement, specify a piece number that does not exist 
+			 as a material requirement on the work order. Select the <span 
+			 class="Bold">New Material Req’d</span> check box and use the 
+			 <span class="Bold">Part ID</span> browse button to select 
+			 the part to add.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent">&#160;</p>
+	<ol start="6" class="hcp2">
+		<li class="p-Numbered"><p class="Numbered">Specify the quantity 
+		 of materials you are issuing and the location from which to issue 
+		 them. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> – Specify 
+	 the quantity to issue.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse</span> – Specify 
+	 the ID of the warehouse issuing the materials.</p>
+	<p class="Numbered-Indent"><span class="Bold">Location</span> – Specify 
+	 the ID of the location issuing the materials.</p>
+	<p class="Numbered-Indent"><span class="Bold">Issue Reason</span> – 
+	 Specify the code that indicates the reason you are issuing the materials. 
+	 Depending on the settings in Site Maintenance, this field may &#160;be 
+	 required. See <a href="Specifying_Information_on_the_Defaults_Tab_site.htm">Specifying 
+	 Information on the Defaults Tab</a>.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description of the transaction.</p>
+	<ol start="7" class="hcp2">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 A transaction ID is generated.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Inventory_Transaction_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

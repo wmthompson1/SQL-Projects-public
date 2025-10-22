@@ -1,0 +1,201 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Examples of Printed Revenue Reports</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-style:normal; }
+span.hcp2 { text-decoration:underline; }
+span.hcp3 { font-size:10pt; }
+span.hcp4 { font-family:Arial, sans-serif;
+font-size:10pt; }
+span.hcp5 { font-style:italic;
+font-family:Arial, sans-serif;
+font-size:10pt; }
+span.hcp6 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Examples of Printed Revenue Reports</h1>
+	</div>
+	<p class="hcp1"><span class="Bold">Example 1:</span> 
+	 A Revenue Report for a work order that is not linked with a customer 
+	 order.</p>
+	<p class="Normal-Indent"><span class="hcp2">Scenario:</span> 
+	 Your work order for 100 12” Galvanized Hinges is finished on 10/12/2015. 
+	 Their unit price is $20.00 each.</p>
+	<p class="Normal-Indent"><span class="hcp2">Result:</span> 
+	 The Revenue Report lists the transaction for October 2015 with a revenue 
+	 of $2,000.</p>
+	<p class="hcp1"><span class="Bold">Example 2:</span> 
+	 A Revenue Report for a customer order line that is not linked with 
+	 a work order and does not has a delivery schedule.</p>
+	<p class="Normal-Indent"><span class="hcp2">Scenario:</span> 
+	 Your customer order has a line item for 10,000 3/4” stainless steel 
+	 bolts with a unit price of $1.00. The bolts are discounted at 10%, 
+	 or 0.10 cents per bolt. The customer order line lists a desired ship 
+	 date of 06/01/2016. The desired ship date listed on the customer order 
+	 line item, or if unavailable the customer order header, is used as 
+	 the revenue date.</p>
+	<p class="Normal-Indent"><span class="hcp2">Result:</span> 
+	 The Revenue Report lists the transaction for June 2016 with a revenue 
+	 of $9,000.</p>
+	<p class="hcp1"><span class="Bold">Example 3:</span> 
+	 A Revenue Report for a customer order line that is not linked with 
+	 a work order but has a delivery schedule.</p>
+	<p class="Normal-Indent"><span class="hcp2">Scenario:</span> 
+	 Your customer order has a line item for 10,000 3/4” stainless steel 
+	 bolts with a unit price of $1.00. The bolts are discounted at 10%, 
+	 or 0.10 cents per bolt. Five thousand bolts are scheduled to be delivered 
+	 on 05/01/2016. The other 5,000 are scheduled for delivery on 07/01/2016. 
+	 The Delivery Schedule’s desired ship date is used as the revenue date.</p>
+	<p class="Normal-Indent"><span class="hcp2">Result:</span> 
+	 The Revenue Report lists the transaction for the initial 5,000 bolts 
+	 May 2016 with a revenue of $4,500 and the transaction for the second 
+	 5,000 July 2016 with a revenue of $4,500.</p>
+	<p class="hcp1"><span class="Bold">Example 4:</span> 
+	 A Revenue Report for a customer order line with a delivery schedule 
+	 and a link with a work order.</p>
+	<p class="Normal-Indent"><span class="hcp2">Scenario:</span> 
+	 Your customer order has a line item for 50 seat cushions at $50 each 
+	 with a desired ship date of 03/01/2017. Forty seat cushions are scheduled 
+	 to be delivered on 01/01/2017. The other 10 are scheduled for delivery 
+	 on 03/01/2017. The work order is finished on 04/01/2017. The revenue 
+	 date is the later of the work order’s finish date or the desired delivery 
+	 date designated in the delivery schedule, customer order line item, 
+	 or header.</p>
+	<p class="Normal-Indent"><span class="hcp2">Result:</span> 
+	 The Revenue Report lists the transaction for April 2017 with a revenue 
+	 of $2,500.</p>
+	<p class="hcp1"><span class="Bold">Example 5:</span> 
+	 A Revenue Report for a customer order line of which half is allocated 
+	 to a linked work order.</p>
+	<p class="Normal-Indent"><span class="hcp2">Scenario:</span> 
+	 Your customer order has a line item for 50 seat cushions at $50 each 
+	 with a desired ship date of 09/01/2017. The 25 allocated to the work 
+	 order is finished on 11/01/2017. The revenue date for the allocated 
+	 portion is the later of the work order’s finish date or the customer 
+	 order’s desired ship date. The revenue date for the unallocated 25 
+	 is the desired ship date designated for the delivery schedule, customer 
+	 order line item, or header.</p>
+	<p class="Normal-Indent"><span class="hcp2">Result:</span> 
+	 The Revenue Report lists the allocated transaction for November 2017 
+	 with a revenue of $1,250 and the unallocated transaction is listed 
+	 in September 2017 with a revenue of $1,250.</p>
+	<p class="Normal-Indent">&#160;</p>
+	<p class="hcp1">This table shows a synopsis of how the 
+	 revenue date is determined:</p>
+	<table class="BlueHeaderRow" style="margin-left: 15px;" cellspacing="0px" width="95%">
+		<col style="width: 13.681%;">
+		<col style="width: 10.89%;">
+		<col style="width: 11.727%;">
+		<col style="width: 12.844%;">
+		<col style="width: 11.727%;">
+		<col style="width: 39.131%;">
+		<tr class="t1st">
+			<td><span class="hcp3">Transaction Type</span></td>
+			<td><span class="hcp3">Linked to a Work Order</span></td>
+			<td><span class="hcp3">Linked to a Customer Order</span></td>
+			<td><span class="hcp3">Delivery Scheduled</span></td>
+			<td><span class="hcp3">Partially Allocated</span></td>
+			<td><span class="hcp3">Revenue Date is based on 
+			 ...</span></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><span class="hcp3">Customer Order</span></p></td>
+			<td><p><span class="hcp3">No</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp3">Yes</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp3">The delivery schedule’s 
+			 Desired Ship Date. Revenue is shown for each delivery schedule 
+			 line.</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><span class="hcp4">Customer 
+			 Order</span></p></td>
+			<td><p><span class="hcp4">No</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp4">No</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp4">The 
+			 customer order Line’s Desired Ship Date, or if none exists 
+			 the Customer Order Header Desired Ship Date. Revenue is shown 
+			 for each customer order line.</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><span class="hcp3">Customer Order</span></p></td>
+			<td><p><span class="hcp3">Yes</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp3">Yes</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp3">The later of either the 
+			 work order’s Finish Date or the Desired Ship Date of the delivery 
+			 schedule, customer order line item, or header. Revenue is 
+			 shown for each delivery schedule line.</span></p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><span class="hcp4">Customer 
+			 Order</span></p></td>
+			<td><p><span class="hcp4">Yes</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp4">Yes</span></p></td>
+			<td><p><span class="hcp4">Yes</span></p></td>
+			<td><p><span class="hcp4">The</span> 
+			 <span class="hcp5">allocated</span> <span class="hcp4">items use the later of either the work order’s 
+			 Finish Date or the Desired Ship Date of the delivery schedule, 
+			 customer order line item or header.</span></p>
+			<p><span class="hcp4">The</span> 
+			 <span class="hcp5">unallocated</span> <span class="hcp4">items use the Desired Ship Date.</span></p>
+			<p><span class="hcp4">Revenue 
+			 is shown for each delivery schedule line. The delivery schedule 
+			 line is shown twice: once for the allocated quantity and once 
+			 for the unallocated quantity.</span></p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><span class="hcp3">Customer Order</span></p></td>
+			<td><p><span class="hcp3">Yes</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp3">No</span></p></td>
+			<td><p><span class="hcp3">Yes</span></p></td>
+			<td><p>The <span class="hcp6">allocated</span> 
+			 items use the later of either the work order’s Finish Date 
+			 or the Desired Ship Date of the customer order line item or 
+			 customer order header.</p>
+			<p>The <span class="hcp6">unallocated</span> 
+			 items use the Desired Ship Date.</p>
+			<p>Revenue is shown for each allocated quantity and unallocated 
+			 quantity.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><span class="hcp4">Work 
+			 Order</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp4">No</span></p></td>
+			<td><p><span class="hcp4">No</span></p></td>
+			<td><p>&#160;</p></td>
+			<td><p><span class="hcp4">The 
+			 work order’s Finish Date. Work orders with co-products are 
+			 shown multiple times, once for each product produced in the 
+			 work order.</span></p></td>
+		</tr>
+	</table>
+	<p style="font-style: italic;">&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="VMREVRPTWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ What is the Revenue Report?</p>
+<p class="SeeAlsoNext"><a href="VMREVRPTfrmPrintRevenueReport.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Printing Revenue Reports</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Revenue_Report.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

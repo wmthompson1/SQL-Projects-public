@@ -1,0 +1,84 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Copying Macros from a Workstation to the Database</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Copying Macros from a Workstation to the Database</h1>
+	</div>
+	<p class="First">If you previously stored macros on a workstation, 
+	 but you now store macros in the database, you can copy the macros 
+	 from the workstation to the database. When you copy macros from the 
+	 workstation to the database, the macro files are not deleted from 
+	 the workstation. While the macro files are still stored on the workstation, 
+	 the workstation macros are no longer used.</p>
+	<p>Before you begin this procedure, make sure that the Store Macros 
+	 in Database check box on the Defaults tab in Application Global Maintenance 
+	 is selected. See <a href="Setting_Up_VISUAL_to_Store_Macros_in_the_Database.htm">Setting 
+	 Up VISUAL to Store Macros in the Database</a>.</p>
+	<p>When you copy macros from a workstation, the macros are associated 
+	 with the user who is signed in. For example, if you sign in as user 
+	 JSMITH and then copy macros into the database, then all the macros 
+	 are associated with JSMITH. Only JSMITH can run the macros. If you 
+	 sign in as user SYSADM and then copy macros into the database, then 
+	 the macros are associated with SYSADM, but the SYSADM user can share 
+	 the macros with others in Security Maintenance.</p>
+	<p>Before you copy macros into your database, we recommend that you 
+	 evaluate who should use the macros. If the macros currently stored 
+	 on the workstation should be available to all users, then the SYSADM 
+	 user should copy the macros into the database. If the macros currently 
+	 stored on the workstation are private macros intended for use by a 
+	 particular user, then that user should copy the macros into the database. 
+	 If some of the macros should be shared and others are private, then 
+	 we recommend using this process to load macros into the database:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Remove any private macros 
+		 from the VISUAL executable directory and store them in another 
+		 location. Leave the shared macros in the VISUAL executable directory.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Sign in as the SYSADM 
+		 user and load the shared macros into the database.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Remove the shared macros 
+		 from the VISUAL executable directory and store them in another 
+		 location. Restore the private macros to the VISUAL executable 
+		 directory.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Sign is as the user 
+		 who owns the private macros and load them into the database.</p></li>
+	</ol>
+	<p>To copy macros from a workstation to the database:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">On the workstation, 
+		 sign into VISUAL as the user who owns the macros.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Load Macros</span>. In the title bar of the 
+		 dialog, Copy Macros to Database is displayed. All macros currently 
+		 on the workstation and currently stored in the database are displayed. 
+		 An arrow is displayed in the row header of the macros that are 
+		 going to be copied to the database. For each macro that is to 
+		 be copied, this information is displayed:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">File Name</span> – The 
+	 name of the current vms file is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Program</span> – The 
+	 executable file name of the VISUAL program where the macro was created 
+	 is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Name</span> – The name 
+	 of the macro is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Macro</span> – The macro 
+	 code is displayed.</p>
+	<ol start="3" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 The macro files are generated and saved to the workstation.</p></li>
+	</ol>
+</div>
+</body>
+</html>

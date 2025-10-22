@@ -1,0 +1,316 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Audit History</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border-top:solid #000000 1.0pt;
+border-left:none;
+border-bottom:solid #000000 1.0pt;
+border-right:none;
+mso-border-top-alt:solid black .5pt;
+mso-border-bottom-alt:solid black .5pt;
+mso-shading:windowtext;
+mso-pattern:gray-10 black;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp2 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%; }
+td.hcp3 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid black .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Audit History for a Single Record</h1>
+	</div>
+	<p class="First">You can use the Audit History dialog to view audit 
+	 results for a single record. The Audit History dialog is available 
+	 on the Info menu in certain windows, such as Customer Maintenance 
+	 and Customer Order Entry.</p>
+	<p>To view audit results for a single record, you must audit at least 
+	 one column in a table related to the record. For example, to display 
+	 information in the Audit History dialog in Customer Maintenance, you 
+	 must audit at least one column in a table related to customer IDs, 
+	 such as CUSTOMER, CUSTOMER_BANK, or CUSTOMER_SITE. This table shows 
+	 where the Audit History dialog is available and the database tables 
+	 that can be included in the audit history:</p>
+	<table class="MsoNormalTable" style="margin-left: 27.0pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt;" 
+			 cellspacing="0">
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td height="23" width="175" bgcolor="#E5E5E5" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Window</span></b></p></td>
+			<td height="23" width="448" bgcolor="#E5E5E5" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Tracked 
+			 Tables</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 123.0pt;">
+			<td height="164" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Accounting 
+			 Window</span></p></td>
+			<td height="164" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_AT_NATIVE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_BAL_DIM</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_BAL_SUM</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_BALANCE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_BUDGET</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_BUDGET_SUM</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_PERIOD</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_PROFILE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">ACCOUNT_SITE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 13.0pt;">
+			<td height="17" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Contact 
+			 Maintenance</span></p></td>
+			<td height="17" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">CONTACT</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 112.0pt;">
+			<td height="149" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Customer 
+			 Order Entry</span></p></td>
+			<td height="149" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_ORDER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_SHARE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_TYPE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_BILLING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_DEL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_TRC_CTL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRICE_EFFECT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRICE_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRIORITY</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; height: 68.0pt;">
+			<td height="91" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Customer 
+			 Maintenance</span></p></td>
+			<td height="91" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_BANK</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_CONTACT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_ENTITY</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_GROUP_RELATION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_SITE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 5; height: 79.0pt;">
+			<td height="105" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Estimating</span></p></td>
+			<td height="105" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">QUOTE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTE_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTE_LINE_BILLING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTE_ORDER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTE_ORDER_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTE_PRICE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">QUOTED_OPTIONS</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 6; height: 101.0pt;">
+			<td height="135" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Manufacturing 
+			 Window</span></p></td>
+			<td height="135" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">WORK_ORDER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">REQUIREMENT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">REQUIREMENT_COST</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">REQUIREMENT_SUM</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION_AUDIT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION_RESOURCE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION_SUMMARY</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION_TYPE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 7; height: 112.0pt;">
+			<td height="149" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Outside 
+			 Service Maintenance</span></p></td>
+			<td height="149" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">SERVICE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_CHARGE_</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_DISP_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_DISPATCH</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_DISPATCHED</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_RECVR_DISP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_RECEIPT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_SHIPPING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_SITE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SERVICE_UNIT_CONV</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 8; height: 167.0pt;">
+			<td height="223" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Part 
+			 Maintenance</span></p></td>
+			<td height="223" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">PART</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_ALIAS</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_ALIAS_TYPE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_ALTERNATE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_CROSS_SELLING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_LOCATION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART-PRICE_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_REPLENISHMENT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_SHIPPING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_SITE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_SUBSTITUTE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_TRACE_LOCATION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_UNITS_CONV</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PARRT_WAREHOUSE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PART_WHS_REPLENSIH</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 9; height: 134.0pt;">
+			<td height="179" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Project 
+			 Maintenance</span></p></td>
+			<td height="179" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">PROJ_SUMM_BURD_AMT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_BASELINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_BATCH_LINK</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_BUDGET</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_CEILING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_EAC_POC</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_ETC</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_GL_TRANS</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_INFO</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_STATUS</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_SUMMARY</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PROJECT_TYPE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 10; height: 79.0pt;">
+			<td height="105" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Purchase 
+			 Order Entry</span></p></td>
+			<td height="105" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">PURC_LINE_DEL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_LINE_TRC_CTL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_REQ</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_RFQ</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURCHASE_CONTRACT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURCHASE_ORDER</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 11; height: 79.0pt;">
+			<td height="105" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Purchase 
+			 Management Window</span></p></td>
+			<td height="105" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">PURC_LINE_DEL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_LINE_TRC_CTL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_REQ</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_ORDER_RFQ</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURCHASE_CONTRACT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURCHASE_ORDER</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 12; height: 46.0pt;">
+			<td height="61" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Requisitions</span></p></td>
+			<td height="61" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">PURC_REQ_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_REQ_LINE_DEL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_REQUISITION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">PURC_RFQ_REQ</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 13; height: 46.0pt;">
+			<td height="61" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">RFQ 
+			 Entry</span></p></td>
+			<td height="61" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">REQUEST_FOR_QUOTE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">RFQ_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">RFQ_VENDOR</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">RFQ_VENDOR_QUOTE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 14; height: 24.0pt;">
+			<td height="32" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">RMA 
+			 Entry</span></p></td>
+			<td height="32" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">RMA</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">RMA_LINE</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 15; height: 112.0pt;">
+			<td height="149" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Order 
+			 Management Window</span></p></td>
+			<td height="149" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">CUSTOMER_ORDER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_LINE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_SHARE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_ORDER_TYPE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_BILLING</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_DEL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_LINE_TRC_CTL</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRICE_EFFECT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRICE_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">CUST_PRIORITY</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 16; height: 46.0pt;">
+			<td height="61" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Shop 
+			 Resource Maintenance</span></p></td>
+			<td height="61" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">SHOP_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SHOP_RESOURCE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SHOP_RESOURCE_SITE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">SHOP_VIEW</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 17; height: 189.0pt;">
+			<td height="252" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Vendor 
+			 Maintenance</span></p></td>
+			<td height="252" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">VEND_BANK_ACCOUNT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VEND_CONTACT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VEND_GROUP_RELATION</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_ADDRESS</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_BANK</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_BUYER</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_CALENDAR</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_CONTACT</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_ENTITY</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_GROUP</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_PART</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_QUOTE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_REMIT_ADDR</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_SERV_QUOTE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_SERVICE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">VENDOR_WEEK</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 18; mso-yfti-lastrow: yes; height: 35.0pt;">
+			<td height="47" width="175" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">Warehouse 
+			 Maintenance</span></p></td>
+			<td height="47" width="448" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp2">WAREHOUSE</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">WAREHOUSE_ADDRESS</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">WAREHOUSE_WIP_VAS</span></p></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

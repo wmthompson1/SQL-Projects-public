@@ -1,0 +1,56 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Coordinating MRP and Scheduling Service Schedules</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Coordinating MRP and Scheduling Service Schedules</h1>
+	</div>
+	<p>Since material requirements planning and scheduling can be dependent 
+	 upon each other, you can set up the schedules for these services to 
+	 ensure that each runs only when the other is not running. When you 
+	 set up the MRP service schedule, select the Delay for Scheduling check 
+	 box to ensure that MRP is not run while scheduling is being run. When 
+	 you set up the Scheduling service schedule, select the Delay for MRP 
+	 check box to ensure that Scheduling is not run while MRP is being 
+	 run.</p>
+	<p>If you want to run the MRP service and Scheduling service in a particular 
+	 order, you should consider the polling interval that you use for the 
+	 services when you specify start times. When you set up a schedule 
+	 for a service, the service may not start exactly at the run time you 
+	 specify because of the polling interval. For example, if you specified 
+	 that a service should start at 7:00:00 a.m. and your polling interval 
+	 is 600 seconds, the service could start as late as 7:09:59. To run 
+	 services in a particular order, the start time of the second service 
+	 should be greater than the start time of the first service plus the 
+	 largest polling interval used on the services. For example, if you 
+	 set up services with these parameters, then the MRP service will be 
+	 run before the Scheduling service:</p>
+	<p><span class="Bold">MRP Service</span></p>
+	<p><span class="Bold">Polling Interval</span> – 300 seconds</p>
+	<p><span class="Bold">Run At time</span> – 7:00:00 a.m.</p>
+	<p><span class="Bold">Delay for Scheduling check box</span> – selected</p>
+	<p><span class="Bold">Scheduling Service</span></p>
+	<p><span class="Bold">Polling Interval</span> – 600 seconds</p>
+	<p><span class="Bold">Run At time</span> – 7:11:00 a.m.</p>
+	<p><span class="Bold">Delay for MRP check box</span> – selected</p>
+	<p>To make the start of the Scheduling service more predictable, you 
+	 can adjust the start time of the Scheduling service to account for 
+	 the typical duration of the MRP run. For example, if MRP typically 
+	 takes an hour to run, you could set the Scheduling service to start 
+	 an 75 minutes after the MRP service. Since the MRP service would be 
+	 complete before the scheduled start of the Scheduling service, the 
+	 Scheduling service would more likely start nearer to the start time 
+	 you specified.</p>
+</div>
+</body>
+</html>

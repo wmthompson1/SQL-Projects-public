@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Generating the Common Materials Report</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1><a name="XREF_50920_Generating_the" id="XREF_50920_Generating_the"></a>Generating 
+		 the Common Materials Report</h1>
+	</div>
+	<p>Use the common materials report to identify materials used as requirements 
+	 in more than one released order.</p>
+	<p>If you are licensed to use multiple sites, you can run this report 
+	 on a site-by-site basis. The site used for the report is the site 
+	 associated with the schedule you select before you access the report 
+	 dialog box.</p>
+	<p>To generate the report:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Perform one of these 
+		 steps.</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">In the DBR 
+		 Scheduler window, select the schedule to use. Then, select <span 
+		 class="Bold">File</span>, <span class="Bold">Print Common Materials 
+		 Report.</span></p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">In the Buffer 
+		 Management window, select the site to use. Then, select <span 
+		 class="Bold">File</span>, <span class="Bold">Print Common Materials 
+		 Report.</span></p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">In the DBR 
+		 Dashboard, select the site to use. Then, select <span class="Bold">File</span>, 
+		 <span class="Bold">Print Common Materials Report.</span></p></li>
+	</ul>
+	<ol start="2" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Select the information 
+		 for the report. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Starting Part ID</span> 
+	 – Specify the first part alphanumerically to view in the report.</p>
+	<p class="Numbered-Indent"><span class="Bold">Ending Part ID</span> 
+	 – Specify the last part alphanumerically to view in the report.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">To view a single part 
+		 in the report, specify the same ID in both the Starting Part ID 
+		 and Ending Part ID field. To view all parts, leave both fields 
+		 blank.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify how to sort 
+		 the information in the report. The part is first sorted by Part 
+		 ID. Specify the secondary sort order for the report. Select Work 
+		 Order ID to sort the report by work order. Select Do Not Use Before 
+		 Date to sort the report by the do not use before date. The do 
+		 not use before date is calculated differently depending on the 
+		 buffer the common part feeds. These calculations are used:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">CCR buffer</span>&#160;– 
+	 If the part feeds the CCR buffer, then the do not use before time 
+	 is the CCR schedule minus the CCR buffer, which is equal to the release 
+	 date.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipping buffer after 
+	 a CCR operation</span>&#160;– If the part feeds the shipping buffer 
+	 after the CCR, then the do not use before time is the starting time 
+	 of the CCR schedule or the due date minus the shipping buffer, which 
+	 ever time is later.</p>
+	<p class="Numbered-Indent"><span class="Bold">Assembly buffer</span>&#160;– 
+	 If the part feeds the assembly buffer, then the do not use before 
+	 time is equal to the release date, calculated as the due date minus 
+	 the shipping buffer minus the assembly buffer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Free W/O</span>&#160;– 
+	 If the work order is a free work order, then the time is the due date 
+	 minus the shipping buffer.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify how to output 
+		 the report. Specify one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Print</span> – Specify 
+	 this option to send the report to a printer.</p>
+	<p class="Numbered-Indent"><span class="Bold">View</span> – Specify 
+	 this option to view the report in the report viewer.</p>
+	<p class="Numbered-Indent"><span class="Bold">File</span> – Specify 
+	 this option to save the report as a file.</p>
+	<p class="Numbered-Indent"><span class="Bold">E-mail</span> – Specify 
+	 this option to generate the report and e-mail it. Select the PDF check 
+	 box to e-mail the report as a PDF. Clear the PDF check box to e-mail 
+	 the report as a comma-separated file.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to generate the report.</p></li>
+	</ol>
+</div>
+</body>
+</html>

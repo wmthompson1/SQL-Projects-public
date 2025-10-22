@@ -1,0 +1,114 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Installing the Scheduling Service</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Installing the Scheduling Service</h1>
+	</div>
+	<p class="First">To run the Concurrent Scheduler with a service instead 
+	 of manually, install the Scheduling Service. The Scheduling Service 
+	 is installed by site. If you have multiple sites, install the service 
+	 for each site whose schedules you would like to run with the service.</p>
+	<p>Before you install the service, make sure the computer where you 
+	 are installing the service meets the <a href="Prerequisites_for_Installing_VISUAL_Services.htm">prerequisites</a>.</p>
+	<p>To install the service:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In your VISUAL executables 
+		 directory, locate VMSCHSVC.EXE.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Perform one of these 
+		 steps:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you do 
+		 not use single sign-on, right-click VMSCHSVC.EXE and select <span 
+		 class="Bold">Run as Administrator</span>. The Sign In dialog is 
+		 displayed.</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you do 
+		 use single sign-on, run a command prompt as the System Administrator. 
+		 In the Command Prompt line, specify &lt;service path&gt;/VMSCHSVC.EXE 
+		 -SYSADM. Replace &lt;Service path&gt; with the path where VMSCHSVC.EXE 
+		 is installed.</p></li>
+	</ul>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">User ID</span> – Specify 
+	 the user ID that the service uses to sign into the VISUAL database. 
+	 This can be any valid VISUAL user ID who has access to the site for 
+	 which you are setting up the service. This user must also have security 
+	 permissions to access the Concurrent Scheduler (VMGLBSCH.exe)</p>
+	<p class="Numbered-Indent"><span class="Bold">Password</span> – Specify 
+	 the password associated with the user ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Database</span> – Specify 
+	 the database on which to run the service.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Sign 
+		 In</span>. The name and description of the service is displayed.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold"><a name="cmbSITE_ID_USER" 
+													 id="cmbSITE_ID_USER"></a>Site 
+	 ID</span> – Specify the ID of the site whose schedules you want to 
+	 run with the service.</p>
+	<p class="Numbered-Indent"><a name="dfsLOG_FILE_DIR" id="dfsLOG_FILE_DIR"></a><span 
+	 class="Bold">Log File Directory</span> – Specify where to store the 
+	 log file for the service.</p>
+	<p class="Numbered-Indent"><a name="dfnPOLLING_INTERVAL" id="dfnPOLLING_INTERVAL"></a><span 
+	 class="Bold">Polling Interval</span> – Specify how frequently the 
+	 service should check to see if the concurrent scheduler should be 
+	 run for the site. Specify the interval in seconds. The maximum value 
+	 is 900 seconds. If you specify a value greater than 900, your value 
+	 is replaced with 900.</p>
+	<p class="Numbered-Indent"><span class="Bold">Log Level</span> – Specify 
+	 the level of information to write to the log file. Click one of these 
+	 options:</p>
+	<p class="DoubleIndent"><a name="rbNONE" id="rbNONE"></a><span class="Bold">None</span> 
+	 – To write the time the service started, click this option. This option 
+	 is recommended for normal production environments.</p>
+	<p class="DoubleIndent"><a name="rbERROR" id="rbERROR"></a><span class="Bold">Error</span> 
+	 – To write the time the service started and any error messages, click 
+	 this option.</p>
+	<p class="DoubleIndent"><a name="rbINFO" id="rbINFO"></a><span class="Bold">Info</span> 
+	 – To write to the time the service started, error messages, and additional 
+	 information about the service, click this option. The use of this 
+	 option is recommended only if you are troubleshooting issues with 
+	 the service. When you use this option, the size of the log file grows 
+	 quickly.</p>
+	<p class="Numbered-Indent">The log file's name is VMSCHSVC_[Your Site 
+	 Name].log. The size of the log file is limited to 1 MB. When the log 
+	 file approaches 1 MB, the log is renamed to VMSCHSVC_[Your Site Name]_[Current_date_time].log, 
+	 and a new VMSCHSVC_[Your Site Name].log is created.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Install 
+		 Service</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To install the service 
+		 for another site, repeat steps 5 and 6. Repeat these steps for 
+		 each site whose schedules you would like to run with the service.</p></li>
+	</ol>
+	<p>After you install the service, specify <a href="Scheduling_the_Scheduler_Service.htm">when 
+	 to run the service</a> in the Set as Schedule dialog in the Concurrent 
+	 Scheduler window.</p>
+	<p class="Numbered">&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="VMSCHSVCWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ What is the Scheduling Service?</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Concurrent_Scheduler.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

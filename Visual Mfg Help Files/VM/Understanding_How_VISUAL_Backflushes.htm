@@ -1,0 +1,80 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Understanding How VISUAL Backflushes</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<div id="content">
+	<div id="banner">
+		<h1>Understanding How VISUAL Backflushes</h1>
+	</div>
+	<p class="First">When you receive the part on your work order into 
+	 inventory or enter a labor ticket for the last operation on the root 
+	 of your work order, VISUAL backflushes the automatic reporting materials 
+	 and operations in a specific order.</p>
+	<p>For an example, click <a href="javascript:void(0);" id="A1" onmouseover="if (parseInt(navigator.appVersion) >= 4 &amp;&amp; typeof(BSPSPopupOnMouseOver) == 'function') BSPSPopupOnMouseOver(event);" class="BSSCPopup" onclick="BSSCPopup('Work_Order_Example.htm');return false;">here</a>.</p>
+	<p>With <span class="Bold">Autogen Labor on Receipt</span>, <span class="Bold">Backflush 
+	 Subordinate Legs</span>, and <span class="Bold">Generate Labor Tickets 
+	 During Backflush</span> selected in the Application Global Maintenance 
+	 window, when you receive the part described on Sub 0 or enter a labor 
+	 ticket for Sub 0 Op 80, VISUAL backflushes in the following order:</p>
+	<p>1.&#160;Sub 0, Op 70.</p>
+	<p>2.&#160;Sub 0, Op 60.</p>
+	<p>3.&#160;Sub 1, Op 60.</p>
+	<p>4.&#160;Sub 1, Op 50.</p>
+	<p>5.&#160;Sub 3, Op 40.</p>
+	<p>6.&#160;Sub 3, Op 30.</p>
+	<p>7.&#160;Sub 4, Op 30.</p>
+	<p>8.&#160;Sub 4, Op 20.</p>
+	<p>9.&#160;Sub 1, Op 40.</p>
+	<p>10.&#160;Sub 1, Op 30.</p>
+	<p>11.&#160;Sub 2, Op 30.</p>
+	<p>12.&#160;Sub 1, Op 20.</p>
+	<p>13.&#160;Sub 0, Op 50.</p>
+	<p>14.&#160;VISUAL stops backflushing because it reaches a non-auto 
+	 reporting resource on Sub 0, Op 40.</p>
+	<p class="First">In order for you take advantage of VISUAL’s backflushing 
+	 for the remainder of the work order, you would—in no particular order—have 
+	 to enter labor tickets for:</p>
+	<p><span class="Bold">Sub 2, Op 20</span> - VISUAL backflushes:</p>
+	<p>1.&#160;Sub 2, Op 20.</p>
+	<p>2.&#160;Sub 2, Op 10.</p>
+	<p>3.&#160;VISUAL stops backflushing because VISUAL only backflushes 
+	 subordinate legs and not preceding legs. In this example, there are 
+	 no subordinate legs to backflush.</p>
+	<p><span class="Bold">Sub 0, Op 40</span> - VISUAL backflushes:</p>
+	<p>1.&#160;Sub 0, Op 30.</p>
+	<p>2.&#160;Sub 0, Op 20.</p>
+	<p>3.&#160;VISUAL stops backflushing because it reaches a non-auto 
+	 reporting resource on Sub 0, Op 10.</p>
+	<p class="First">Because</p>
+	<p>Sub 1, Op 10,</p>
+	<p>Sub 3, Op 10,</p>
+	<p>Sub 3, Op 20, and</p>
+	<p>Sub 4, Op 10</p>
+	<p class="First">have non-auto reporting operations immediately preceding 
+	 them, VISUAL will not perform any backflushing when you report labor 
+	 against them.</p>
+</div>
+<p class="SeeAlsoNext"><a href="Backflushing_Labor_Tickets.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Working with Backflushing</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Labor_Ticket_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( FilePopupInit ) != 'function' ) FilePopupInit = new Function();
+	FilePopupInit('A1');
+//]]></script>
+</body>
+</html>

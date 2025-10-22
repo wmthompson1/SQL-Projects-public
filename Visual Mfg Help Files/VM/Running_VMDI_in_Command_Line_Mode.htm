@@ -1,0 +1,131 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Running VMDI in Command Line Mode</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-bottom:1px;
+padding-top:1px;
+padding-left:1px;
+padding-right:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Running VMDI in Command Line Mode</h1>
+	</div>
+	<p class="First">There are two modes of operation for VMDIXCHG: Standard 
+	 and Command Line mode. Standard mode requires input from the user; 
+	 Command line mode does not. If VMDIXCHG finds a valid command line, 
+	 it executes in command line mode. Command line mode allows you to 
+	 specify the run options currently available through the main screen.</p>
+	<p>When you run the program in command line mode, you use a cumulative 
+	 log file, VMDIXCHG.XML. Each time you execute the program, VMDIXCHG 
+	 appends time stamped status information to the end of the file.</p>
+	<p>The VMDIXCHG.XML file resides in the same directory as all other 
+	 *.VDI and *.LOG files. When you run the program in batch mode, you 
+	 can exchange multiple types of data (i.e. PLN, VPO, etc.) in the same 
+	 run.</p>
+	<p>Command Line:</p>
+	<p>The command line must conform to the following format.</p>
+	<p>The first value is always the executable program name, VMDIXCHG.</p>
+	<p>The next three values are the database connection strings. The data 
+	 base connection strings follow standard Infor VISUAL format:</p>
+	<p><span class="Bold">-D &lt;database name&gt;</span></p>
+	<p><span class="Bold">-U &lt;User ID&gt;</span></p>
+	<p><span class="Bold">-P &lt;password&gt;</span></p>
+	<p>All command line arguments up to this point are mandatory. The remaining 
+	 arguments are optional. If you do not specify a particular argument, 
+	 VMDIXCHG applies a default value where applicable.</p>
+	<p><span class="Bold">Exchange File Path:</span></p>
+	<p><span class="Bold">-F &lt;file path&gt;</span></p>
+	<p>If you omit the –F argument, VMDIXCHG uses the value from the Preferences 
+	 Maintenance EDI Exchange section, DataFilePath entry. You should only 
+	 use the –F option if you need to temporarily override the default 
+	 directory path.</p>
+	<p>Next, list the types of values you want to exchange. You may list 
+	 more than one type. Keep in mind that you must separate additional 
+	 values with a space. The valid types are ACK, ASN, CPO, CSH, INV, 
+	 PLN, RCA, VPO, or WSA. You must specify at least one valid data type, 
+	 each of which must have a 4 digit unique identifier following it. 
+	 The data type / numeric identifier combination equates to the KEY 
+	 and VERSION columns of the VMDI_LAYOUT table.</p>
+	<h2>Inbound Duplicate Rules:</h2>
+	<table cellspacing="0">
+		<tr class="hcp1">
+			<td width="54" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gifstyle=&quot;width:" height:="" border-style:="" title="POSTIT.gifstyle=&quot;width:" width="25" height="25" border="0"></p></td>
+			<td width="324" class="hcp2"><p>Inbound rule parameters 
+			 are only applicable for inbound types such as CPO, CSH, and 
+			 PLN.</p></td>
+		</tr>
+	</table>
+	<p>Use the following arguments with CPO imports:&#160;</p>
+	<p><span class="Bold">-L</span> &#160;Delete Unshipped Lines</p>
+	<p><span class="Bold">-S</span>&#160;Delete Unshipped Schedules</p>
+	<p><span class="Bold">-V</span>&#160;Close Partial Shipped Schedules</p>
+	<p><span class="Bold">-I</span>&#160;Include Today in Proration</p>
+	<p>For example: <span class="Bold">CPO0001 –L –S –V –I</span></p>
+	<p>Use the following arguments with PLN imports:</p>
+	<p><span class="Bold">-I</span>&#160;Include Today in Proration</p>
+	<p>For example: <span class="Bold">PLN0000 –I</span></p>
+	<h2>Outbound Rules:</h2>
+	<table cellspacing="0">
+		<tr class="hcp1">
+			<td width="54" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gifstyle=&quot;width:" height:="" border-style:="" title="POSTIT.gifstyle=&quot;width:" width="25" height="25" border="0"></p></td>
+			<td width="324" class="hcp2"><p>Outbound rule parameters 
+			 are only applicable for outbound types such as ACK, ASN, INV, 
+			 RCA, VPO, and WSA.</p></td>
+		</tr>
+	</table>
+	<p>The Outbound Rules allow VMDI Exchange to either append the outbound 
+	 data to existing output files, or create a new files each time.</p>
+	<p>Use the following arguments with INV, VPO, ACK, RCA, and ASN exports.</p>
+	<p><span class="Bold">-O</span>&#160;Overlays the files (this is the 
+	 default if no argument is specified)</p>
+	<p>or</p>
+	<p><span class="Bold">-A</span>&#160;Appends the files</p>
+	<p>For example: <span class="Bold">ASN0001 -O</span></p>
+	<p>The following example illustrates a command line that executes VMDIXCHG 
+	 connected to database VMFG as user MIKE and password OCEAN, and executes 
+	 the exchanges for CPO0000, PLN0000, INV9999, and ASN3333. VMDIXCHG 
+	 overrides the EDI file directory for this run with C:\Infor\EDI\TEMP. 
+	 In addition, the INV output file is overlayed and the ASN output file 
+	 is appended onto it.</p>
+	<p>The CPO0000 import deletes unshipped lines and schedules and closes 
+	 any partial shipped schedules. The PLN0000 import in this example 
+	 Includes Today in the Proration.</p>
+	<p>VMDIXCHG –D VMFG –U MIKE –P OCEAN –F C:\Infor\EDI\TEMP CPO0000 –L 
+	 –S –V PLN0000 –I INV9999 –O ASN3333 -A</p>
+	<p>Because the program is running without user intervention, you cannot 
+	 change the run date parameter. The run &quot;as of date&quot; for 
+	 each data type that you are exchanging is from the LAST_RUN_DATE column 
+	 of the VMDI_LAYOUT table for each layout key.</p>
+	<p>VMDIXCHG.XML</p>
+	<p>The following example illustrates the log file created when you 
+	 run the program in batch mode:</p>
+	<p>8/21/15 11:07:13: ********** Session Started **********</p>
+	<p>8/21/15 11:07:13: Begin program execution in command line mode. 
+	 ExtCommandLine=-DVMFG52 -USYSADM -PSYSADM PLN0000</p>
+	<p>8/21/15 11:34:20: Import of PLN0000 data to c:\Infor\bak\edi\pln0000.vdi 
+	 has begun</p>
+	<p>8/21/15 11:34:23: 60 PLN records imported</p>
+	<p>8/21/15 11:34:24: ————— Session Ended —————</p>
+</div>
+</body>
+</html>

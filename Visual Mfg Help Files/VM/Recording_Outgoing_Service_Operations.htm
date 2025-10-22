@@ -1,0 +1,79 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Recording Outgoing Service Operations</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Recording Outgoing Service Operations</h1>
+	</div>
+	<p class="First">You can record outgoing service operations using Service 
+	 Receipt Entry.</p>
+	<p class="First">To update service status:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Service 
+		 Status</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Service Status dialog box appears. This 
+	 dialog displays service information for a specified subcontractor 
+	 resource.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Enter the Resource ID 
+		 for the subcontractor resource. You can also press the <span class="Bold">Resource 
+		 ID</span> button and select the Resource ID from the Shop Resources 
+		 table. All shop resources appear in the browse list; you can only 
+		 select subcontractor type resources.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The table displays one line for each firmed 
+	 or released work order operation that uses the specified subcontractor 
+	 resource.</p>
+	<p class="Numbered-Indent">The following read-only information appears:</p>
+	<p class="Numbered-Indent"><span class="Bold">Work Order ID</span> 
+	 - This column shows the work order Base ID, Lot ID, and Sub ID of 
+	 the service operation, in the format Base ID - Sub ID / Lot ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Oper #</span> - The sequence 
+	 number of the operation.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID/Description</span> 
+	 - The Part ID and Part Description of the fabricated part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> - The 
+	 number of pieces that require the specified subcontracted service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Scheduled Start Date/Scheduled 
+	 Finish Date</span> - The scheduled start and finish date for the service 
+	 operation. The Global Scheduler determines these dates for the production 
+	 schedule. If the Scheduler has not scheduled this operation, no dates 
+	 appear in these fields.</p>
+	<p class="Numbered-Indent"><span class="Bold">Service Begin Date</span> 
+	 - This is the only editable field. Use this field to record the date 
+	 that service materials were shipped to the contractor.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">To indicate that materials 
+		 have been shipped for subcontract work, enter the Service Begin 
+		 Date for any work order operations that have been shipped.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If this field is initially blank, it automatically 
+	 defaults to the current date when you click this field. You can change 
+	 it to another date, if required.</p>
+	<p class="Numbered-Indent">The Global Scheduler uses this date to relieve 
+	 the schedule of any in-transit days for subcontracted operations that 
+	 have already passed. For example, consider a new global schedule run 
+	 on 9/15/2001, and a work order service operation that has a Service 
+	 Begin Date of 9/10/2001. If the service operation has 10 transit days, 
+	 the scheduler understands that only 5 of these now apply.</p>
+</div>
+</body>
+</html>

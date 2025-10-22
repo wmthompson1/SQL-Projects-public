@@ -1,0 +1,92 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up User Defined Buffers for Made-to-Order Parts</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Up User Defined Buffers for Made-to-Order Parts</h1>
+	</div>
+	<p>You can specify additional buffer time for resources on made-to-order 
+	 parts only. You can specify this additional time on resources and 
+	 legs on your engineering masters or on individual work orders. When 
+	 you add a user-defined buffer to a resource or leg, the buffer time 
+	 is added to the shipping buffer. This provides extra protection to 
+	 the resource or leg and allows materials to be issued to the resource 
+	 or leg earlier.</p>
+	<p>To specify a user-defined buffer an a non-stocked part:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Eng/Mfg</span>, 
+		 <span class="Bold">Manufacturing Window</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open the engineering 
+		 master or work order to which you are applying a user-defined 
+		 buffer.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the user defined 
+		 buffer:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="FM_Dingbats"><span 
+		 style="word-spacing: normal; font: 6.0pt 'Times New Roman';">&#160;</span></span>To 
+		 specify a user-defined buffer for an operation, open the operation 
+		 card. Click the <span class="Bold">Other</span>&#160;tab, and 
+		 then specify the length of the buffer in hours in the Buffer Size 
+		 (Hrs) field.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To specify 
+		 a user-defined buffer for a leg, open the leg header card. Click 
+		 the <span class="Bold">Specifications</span>&#160;tab, and then 
+		 specify the length of the buffer in hours in the Buffer Size (Hrs) 
+		 field.</p></li>
+	</ol>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">If you have not previously 
+		 applied a buffer to the operation or leg, you are asked if you 
+		 would like to update the buffer. Click <span class="Bold">Yes</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>You can view information about the user-defined buffers applied 
+	 to your work orders in DBR Maintenance.</p>
+	<p>When you apply a user-defined buffer to an operation, the buffer 
+	 time is added to the shipping buffer for materials preceding the operation 
+	 where the buffer is applied. For example, if you applied a user-defined 
+	 buffer of 40 hours to operation 50, the user-defined buffer is applied 
+	 to material requirements for operations 10 through 40.</p>
+	<p>When you apply a user-defined buffer to a leg, the buffer time is 
+	 added to the material requirements used on the leg.</p>
+	<p>Multiple user-defined buffers can apply to materials. For example, 
+	 if a user-defined buffer of 40 hours was applied to operation 50, 
+	 and a leg with a user defined buffer of 30 is added to operation 10, 
+	 then both user-defined buffers are applied to the material requirements 
+	 on the leg.</p>
+	<p>This example demonstrates how user-defined buffers are applied. 
+	 These buffers are used:</p>
+	<p><span class="Bold">Shipping buffer</span> - 80 hours</p>
+	<p><span class="Bold">User-defined buffer applied to operation 50</span> 
+	 - 40 hours</p>
+	<p><span class="Bold">User-defined buffer applied to leg on operation 
+	 10</span> - 30 hours</p>
+	<p><span class="Bold">User-defined buffer applied to leg on operation 
+	 60</span> - 20 hours</p>
+	<p><img src="Graphics/UserDefinedBuffer.gif" alt="" style="border: none;" width="600" height="318" border="0"></p>
+	<p>In this example, the material requirements for operations 10 and 
+	 20 have a total buffer of 120 hours, or the shipping buffer plus the 
+	 user-defined buffer on operation 50.</p>
+	<p>The material requirement for operation 60 has a total buffer of 
+	 80, which is the shipping buffer.</p>
+	<p>The leg used on operation 10 has a total buffer of 150 hours, or 
+	 the shipping buffer plus the user-defined buffer on the leg plus the 
+	 buffer on operation 50.</p>
+	<p>The leg used on operation 60 has a total buffer of 100, or the shipping 
+	 buffer plus the user-defined buffer on the leg.</p>
+	<p>&#160;</p>
+</div>
+</body>
+</html>

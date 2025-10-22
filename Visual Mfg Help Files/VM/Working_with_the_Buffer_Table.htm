@@ -1,0 +1,117 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Working with the Buffer Table</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { margin-left:36px; }
+tr.hcp2 { vertical-align:top; }
+td.hcp3 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Working with the Buffer Table</h1>
+	</div>
+	<p class="First">After you have generated the buffers for a CCR ID, 
+	 the information appears in the Buffer table of the DBR Maintenance 
+	 window. Each line in the window appears for each buffer of each work 
+	 order or engineering master.</p>
+	<p>The Buffer table window contains the following information:</p>
+	<p class="Normal-Indent"><span class="Bold">Work Order ID</span> - 
+	 The identification number for the work order appears in the Work Order 
+	 ID column.</p>
+	<p class="Normal-Indent"><span class="Bold">Seq No.</span> - The appropriate 
+	 sequence number of the work order appears in the Seq No. column.</p>
+	<p class="Normal-Indent"><span class="Bold">Piece No.</span> - The 
+	 appropriate piece number appears in the Piece No. column.</p>
+	<p class="Normal-Indent"><span class="Bold">Type</span> - The Type 
+	 column contains the type of buffer to which this line refers.</p>
+	<p class="Normal-Indent"><span class="Bold">State</span> - The State 
+	 column contains the state of the buffer to which this line refers.</p>
+	<p class="Normal-Indent"><span class="Bold">Active</span>, Closed, 
+	 or M (Engineering Master) may appear in the State column.</p>
+	<p class="Normal-Indent"><span class="Bold">Factor</span> - The factor 
+	 by which you want to multiply the default buffer size to which this 
+	 line refers, appears in the Factor column.</p>
+	<p class="Normal-Indent">If you want to change this factor at this 
+	 time, click the appropriate factor and make the changes you want. 
+	 Click <span class="Bold">Save</span>.</p>
+	<p class="Normal-Indent"><span class="Bold">Service Time</span> - The 
+	 cumulative service time (in hours) of all the service operations covered 
+	 by this buffer, appears in the Service Time column.</p>
+	<p class="Normal-Indent"><span class="Bold">Size in Hours</span> - 
+	 The size (in hours) of the buffer to which this line refers appears 
+	 in the Size in Hours column.</p>
+	<p class="Normal-Indent"><span class="Bold">W/O DBR Type</span> - The 
+	 type of work order to which the line refers appears in the W/O DBR 
+	 Type column.</p>
+	<table cellspacing="0" width="366" class="hcp1">
+		<tr class="hcp2">
+			<td width="60" class="hcp3"><p><img src="TIP.gif" alt="TIP.gif" title="TIP.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp3"><p>The W/O DBR Type 
+			 only appears on lines that refer to shipping buffers.</p></td>
+		</tr>
+	</table>
+	<p>W/O DBR Types are:</p>
+	<p class="Normal-Indent"><span class="Bold">Replenishment (R) order</span> 
+	 - The DBR priority for a replenishment order depend on the replenishment 
+	 and emergency level settings you make on the DBR tab of the Part Maintenance 
+	 window.</p>
+	<p class="Normal-Indent"><span class="Bold">Make-to-order (O)</span> 
+	 - The DBR priority for make-to-order work orders depends on the due 
+	 date.</p>
+	<p class="Normal-Indent"><span class="Bold">Make-to-stock s</span> 
+	 - DBR assigns make-to-stock work orders the lowest priority.</p>
+	<p class="Normal-Indent"><span class="Bold">W/O DBR Priority</span> 
+	 - The priority of the work order to which this line refers appears 
+	 in the W/O DBR Priority column.</p>
+	<table cellspacing="0" width="366" class="hcp1">
+		<tr class="hcp2">
+			<td width="60" class="hcp3"><p><img src="TIP.gif" alt="TIP.gif" title="TIP.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp3"><p>The W/O DBR Priority 
+			 only appears on lines that refer to shipping buffers.</p></td>
+		</tr>
+	</table>
+	<p>W/O DBR Priorities are:</p>
+	<p class="Normal-Indent"><span class="Bold">Emergency (E)</span> - 
+	 If your stock level falls below the emergency stock percentage level 
+	 (DBR tab of the Part Maintenance window), DBR assigns a priority of 
+	 Emergency.</p>
+	<p class="Normal-Indent"><span class="Bold">On-time (O)</span> - Make 
+	 this order on time without pushing the order to a future date to satisfy 
+	 material availability.</p>
+	<p class="Normal-Indent"><span class="Bold">Normal (N)</span> - Make 
+	 this order normally.</p>
+	<p class="Normal-Indent"><span class="Bold">Part ID</span> - The part 
+	 identification number associated with the work order to which this 
+	 line refers appears in the Part ID column.</p>
+	<table cellspacing="0" width="366" class="hcp1">
+		<tr class="hcp2">
+			<td width="60" class="hcp3"><p><img src="TIP.gif" alt="TIP.gif" title="TIP.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp3"><p>The Part ID only 
+			 appears on lines that refer to shipping buffers.</p></td>
+		</tr>
+	</table>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_DBR_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

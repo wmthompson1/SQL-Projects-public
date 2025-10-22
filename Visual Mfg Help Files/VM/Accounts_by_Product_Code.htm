@@ -1,0 +1,66 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Accounts by Product Code</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Accounts by Product Code</h1>
+	</div>
+	<p class="First">The accounts used by the Costing Utility program can 
+	 be a function of the Product Code Table from Part Maintenance. Here 
+	 you can specify the accounts to be used by a part’s product code unless 
+	 an override account was specified elsewhere. If no product code is 
+	 specified in the part, then the appropriate override account is used. 
+	 </p>
+	<p>You can specify these accounts:</p>
+	<p><span class="Bold">Revenue Account</span> – The default account 
+	 for use when shipments are invoiced. You can override this account 
+	 at the Customer Order Line. The default account is from the General 
+	 Ledger Interface table. (Default Accounts Receivable Sales Revenue).</p>
+	<p><span class="Bold">Adjustment</span> – The default to be used when 
+	 making inventory adjustments. You can override this account when entering 
+	 inventory adjustments in Inventory Transaction Entry. If not specified 
+	 here, the adjustment account from the General Ledger Interface Table 
+	 is used.</p>
+	<p><span class="Bold">Inventory</span> – The Raw Material or Finished 
+	 Goods accounts for use when receiving issuing, returning, or adjusting 
+	 inventory for a specified part code. If not specified here, the system 
+	 uses the account numbers specified in the Part Master and then the 
+	 default from the General Ledger Interface Table.</p>
+	<p><span class="Bold">Work In Process</span> – The default Work In 
+	 Process accounts for this product code. You can override this account 
+	 at the Quote/Engineering Master/Work Order. If not specified here 
+	 or in the work order, the default account in the General Ledger Interface 
+	 Table is used.</p>
+	<p><span class="Bold">Variance</span> – The Purchase Price Variance 
+	 account for purchased parts or the Manufacturing variance account 
+	 for Fabricated parts. These accounts are only used in standard costing. 
+	 The variance account is used for purchased parts in an actual cost 
+	 system if costs are captured at Purchase Order price rather than invoice 
+	 value. This variance is taken when the Accounts Payable invoice is 
+	 matched to the Purchase Order Receiver in Accounts Payable Invoice 
+	 Entry.</p>
+	<p><span class="Bold">Cost of Goods Sold</span> – The Cost of Goods 
+	 Sold account used for the specified product code. You can override 
+	 this accounts at the Customer Order line item in Customer Order Entry. 
+	 If not specified here or in Order Entry, the default COGS accounts 
+	 in the General Ledger Interface Table is used.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Costing_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

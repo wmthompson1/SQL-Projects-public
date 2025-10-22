@@ -1,0 +1,175 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Scheduling the Costing Service</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Scheduling the Costing Service</h1>
+	</div>
+	<p>After you <a href="VMCSTSVCfrmMain.htm">install the Costing Service</a>, 
+	 specify when the Costing Service should be prompted to run costing 
+	 for a site.</p>
+	<p>You can set up different schedules for transaction costing and journal 
+	 preparation. For example, you can schedule the Costing Service to 
+	 run transaction costing daily and prepare manufacturing journals weekly.</p>
+	<p>To schedule the Costing Service:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Eng/Mfg</span>, 
+		 <span class="Bold">Costing Utilities</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the site ID field, 
+		 select the site where you will run costing utilities with the 
+		 service. Make sure you select a site for which you have installed 
+		 the Costing Service.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Costing Service Schedule</span>. The ID of 
+		 the site you selected is displayed in the title bar of the dialog.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify when the service 
+		 is active. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Start Date</span> – Specify 
+	 the date that the service should start checking to see if costing 
+	 needs to be run. Leave this field blank or specify today’s date if 
+	 you do not want to delay the start of the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">End Date</span> – Specify 
+	 the last date that the service should check to see if costing needs 
+	 to be run. Leave this field blank if you do not want to set up an 
+	 expiration date for the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Enabled</span> – To use 
+	 the service with the selected site, select this check box. To stop 
+	 using the service, clear this check box.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">In the Run Type section, 
+		 weekly is selected. You cannot change this selection. This selection 
+		 indicates that the service should check for updates only on the 
+		 days and times you specify.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Transaction Costing 
+		 section, specify the settings to use when the service runs transaction 
+		 costing. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Receipt Transaction Costing</span> 
+	 – To update your work order receipt costs with the most up-to-date 
+	 receipt transaction data, select this check box. Actual cost transactions 
+	 are updated for Closed orders and partial receipts are updated based 
+	 upon WIP costing method.</p>
+	<p class="Numbered-Indent">Standard Costs are used to determine Finished 
+	 Goods Variances.</p>
+	<p class="Numbered-Indent"><span class="Bold">Inventory Transaction 
+	 Costing</span> – To update your inventory costs with your most up-to-date 
+	 receipt transaction data, select this check box. If you use the Standard 
+	 costing method, this option is not displayed.</p>
+	<p class="Numbered-Indent">Assume that operations and materials are 
+	 closed if work order is closed – To automatically close any operations 
+	 and materials on a closed work order during the costing run, select 
+	 this check box. To retain the current status of any operation and 
+	 material cards on a closed work order, clear this check box.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify when to run 
+		 transactions costing. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Days of Week</span> – 
+	 In the Days of Week section under the Transaction Costing section, 
+	 specify on which days to run transaction costing with the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Run At</span> – Specify 
+	 the times of day that the service should check to see if transaction 
+	 costing should be run. The times you specify apply to all days that 
+	 you run the service for transaction costing. You can run the service 
+	 up to 6 times a day. If you select a day in the Days of Week section 
+	 but leave all Run At fields blank, then the service is run at 12:00 
+	 AM on the days you selected.</p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Journal Preparation 
+		 section, use the check boxes to specify which journals to prepare 
+		 when the service runs costing. Then, specify when to prepare the 
+		 journals. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Days of Week</span> – 
+	 In the Days of Week section under the Journal Preparation section, 
+	 specify on which days to prepare journals using the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Run At</span> – Specify 
+	 the times of day that the service should check to see if journals 
+	 need to be prepared. The times you specify apply to all days that 
+	 you run the service for journal preparation. You can run the service 
+	 up to 6 times a day. If you select a day in the Days of Week section 
+	 but leave all Run At fields blank, then the service is run at 12:00 
+	 AM on the days you selected.</p>
+	<p class="Numbered-Indent">Depending on the polling interval that was 
+	 specified when the service was installed, costing might not be run 
+	 exactly at the time you specify. At the times that you specified, 
+	 costing is flagged as needing to be run. Costing is started when the 
+	 costing service polls the database and finds that costing needs to 
+	 be run. When you specify a time, costing could be run at any time 
+	 between the time that you specify and the time that you specify plus 
+	 the polling interval. For example, if you specify 7:00:00 as the start 
+	 time and the polling interval is 600 seconds, then costing is started 
+	 sometime between 7:00:00 and 7:10:00.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">To recalculate standard 
+		 costs, select the <span class="Bold">Enabled</span> check box 
+		 in the Recalc Std Costs Options section. This check box is available 
+		 when you select the <span class="Bold">Enabled</span> check box 
+		 under the Start Date and End Date fields. If the parent entity 
+		 of the site uses Standard costing, you cannot use the options 
+		 in the Recalc Std Costs Options section. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Fabricated/Purchased/All</span> 
+	 – Click <span class="Bold">Fabricated</span> to recalculate the standard 
+	 costs of fabricated parts only. Click <span class="Bold">Purchased</span> 
+	 to recalculate the standard costs of purchased parts only. Click <span 
+	 class="Bold">All</span> to recalculate the standard costs of all parts.</p>
+	<p class="Numbered-Indent"><span class="Bold">Threshold Plus/Minus%</span> 
+	 – Specify the threshold that triggers a standard cost update. Parts 
+	 with cost differences that fall within the threshold that you specify 
+	 are updated. For example, if you specify 10 in this field and the 
+	 cost of a part is 100, then the standard cost is updated if the new 
+	 cost is between 90 and 110. If the new cost falls outside of the threshold, 
+	 the part is not updated. Specify 0 if you do not want to use a threshold.</p>
+	<p class="Numbered-Indent"><span class="Bold">Recent Selection Option</span> 
+	 – Use this section to specify the work order receipts and purchase 
+	 order receipts to use to calculate standard costs. </p>
+	<p class="DoubleIndent"><span class="Bold">Within days from current 
+	 date</span> – To use a date range, click this option, and then specify 
+	 the number of days. Receipts that were created in the time range are 
+	 included in the calculation. For example, specify 30 to examine receipts 
+	 that were made in the last 30 days. </p>
+	<p class="DoubleIndent"><span class="Bold">All receipts</span> – Click 
+	 this option to include all receipts in the costing calculations.</p>
+	<p class="DoubleIndent"><span class="Bold">Use the latest receipt if 
+	 no receipts occurred during the date range</span> – If you clicked 
+	 the <span class="Bold">WIthin days from current date</span> option, 
+	 select this check box to use the most recent receipt if there are 
+	 no receipts for a part during the date range.</p>
+	<p class="Numbered-Indent"><span class="Bold">Days of Week</span> – 
+	 In the Days of Week section under the Transaction Costing section, 
+	 specify on which days to update costs. You can select any day on which 
+	 transaction costing is run. If transaction costing is not run on a 
+	 day, then you cannot select that day to update costs. Costs are updated 
+	 after the time that you specify in the Time 1 field. </p>
+	<p class="Numbered-Indent"><span class="Bold">Log Details to CSV file</span> 
+	 – Select this check box to save information about the recalculated 
+	 costs to a CSV file. The CSV file includes the old costs, the new 
+	 cost calculations, and whether the costs have been updated. &#160;</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="VMCSTSVCWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Running Costing with the Costing Service</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Costing_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

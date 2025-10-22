@@ -1,0 +1,156 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Preparing Quote Prices</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { margin-left:48px; }
+tr.hcp2 { vertical-align:top; }
+td.hcp3 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Preparing Quote Prices</h1>
+	</div>
+	<p class="First">To set price markups and calculate final pricing:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site that contains the quote. If you are 
+		 licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 line item from the line item table in the Estimating Window.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Prices</span> 
+		 button. You can also select <span class="Bold">Quote Line Item 
+		 Price</span> from the <span class="Bold">Edit</span> menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Quote Price dialog box appears.</p>
+	<p class="Numbered-Indent">All Prices (not costs) are in terms of the 
+	 currency defined for the customer or prospect. The currency in use 
+	 appears on the left-hand side of the window, directly above the Markups 
+	 box.</p>
+	<p class="Numbered-Indent">The table at the top of the dialog has one 
+	 line for each quoted quantity.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Select a line item for 
+		 which you want to set the markups.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Markups appear in the fields at the bottom 
+	 of the window. The markups that appear are always the markups that 
+	 apply to the selected line.</p>
+	<table cellspacing="0" width="372" class="hcp1">
+		<tr class="hcp2">
+			<td width="60" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="312" class="hcp3"><p>Before adjusting 
+			 markups, always be sure to have the appropriate line selected.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent">You can apply markups to each of five separate 
+	 cost categories: Purchased Material, Fabricated Material, Labor Cost, 
+	 Burden Cost, and Service Cost. For each category, there are three 
+	 markups:</p>
+	<p class="Numbered-Indent"><span class="Bold">GSA %</span> - Specifies 
+	 your General Services Administration cost as a percentage of the Total 
+	 Cost shown in the Quote Costs dialog.</p>
+	<p class="Numbered-Indent"><span class="Bold">Markup %</span> - Specifies 
+	 your price markup as a percentage of Total Cost plus GSA%.</p>
+	<p class="Numbered-Indent"><span class="Bold">Markup #</span> - Specifies 
+	 an additional fixed markup dollar (or other currency) amount.</p>
+	<p class="Numbered-Indent">All markups are initially filled in from 
+	 the defaults stored in the Estimating section of Preferences Maintenance. 
+	 You can recall the default markups to the current line item at any 
+	 time by clicking on the <span class="Bold">Get Default Markups</span> 
+	 button. If you want to save the current markups as the new defaults, 
+	 click the <span class="Bold">Save Markups as Default</span> button.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Modify the markups as 
+		 appropriate. Do this for each line item.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you want to take 
+		 quantity breaks into account, make sure Use qty breaks on purchases 
+		 during recalc is selected.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This option is active by default when you 
+	 open the Quote Price dialog box.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">To calculate unit prices, 
+		 click the <span class="Bold">Recalc</span> button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Quoted Unit Price is the price that 
+	 will actually appear on the quote to the prospect or customer. Any 
+	 time that Quoted Unit Price is zero, VISUAL fills it in automatically 
+	 after Recalc from Calculated Unit Price.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Select the Replace Quoted 
+		 Unit Price During Recalc check box to replace the Quoted Unit 
+		 Price with the newly calculated price automatically.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You are not restricted to the calculated 
+	 unit price; you can change Quoted Unit Price for each line item to 
+	 any value desired.</p>
+	<p class="Numbered-Indent">If quoting an inventory part to a current 
+	 customer, you may use Lookup Price to get any specially defined price 
+	 for this quantity and customer from Unit Prices by Customer.</p>
+	<table cellspacing="0" width="366" class="hcp1">
+		<tr class="hcp2">
+			<td width="60" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp3"><p>If no price is defined 
+			 for the customer/quantity/part combination, Lookup Price resets 
+			 the Quoted Unit Price to 0.</p></td>
+		</tr>
+	</table>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Specify the Trade Discount 
+		 % for each line item.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL uses this value to set the discount 
+	 percent for a generated customer order. This discount is NOT immediately 
+	 applied to the Quoted Unit Price.</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Specify the unit of 
+		 measure by clicking in the U/M column and selecting one from the 
+		 drop down box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Set In Proforma for 
+		 each line item by clicking on the In Proforma check box.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This indicates whether this quantity is 
+	 included if this quotation is part of a Proforma Report. You should 
+	 do this with care. In many cases, only one quantity will be ordered 
+	 — you should select the In Proforma option for the most likely order 
+	 quantity. Leave the remaining line items unchecked. Failure to do 
+	 this could result in overestimates of revenue.</p>
+	<ol start="11">
+		<li class="p-Numbered"><p class="Numbered">If appropriate, click 
+		 the <span class="Bold">Determine Best Qtys</span> button to automatically 
+		 insert quoted quantities into the table.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL determines best quantities by taking 
+	 the union of all available purchase price breaks for quoted materials.</p>
+	<ol start="12">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button to save the Markups, Quoted Unit Price, Trade Discount, 
+		 Unit of Measure, In Proforma fields.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Estimating_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="Entering_New_Quoted_Quantities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Entering New Quoted Quantities</p>
+</body>
+</html>

@@ -1,0 +1,473 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>SQL Commands</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-size:10pt; }
+p.hcp2 { font-weight:bold; }
+span.hcp3 { font-family:Arial, sans-serif;
+font-size:10pt; }
+p.hcp4 { font-family:Arial, sans-serif; }
+p.hcp5 { font-weight:bold;
+font-family:Arial, sans-serif; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>SQL Commands</h1>
+	</div>
+	<p class="First">This table lists the SQL Commands available from the 
+	 drop-down list and some basic usage guidelines:</p>
+	<table class="BlueHeaderRow" style="height: 430px; left: 0px; top: 410px; 
+			 margin-left: 12px;" cellspacing="0px" width="90%">
+		<col style="width: 30.675%;">
+		<col style="width: 69.325%;">
+		<tr class="t1st">
+			<td><p style="margin-bottom: 6pt; line-height: 200%; margin-top: 2pt; 
+					 margin-left: 0px;"><span style="color: #ffffff;">SQL 
+			 Command</span></p></td>
+			<td><p style="margin-bottom: 6pt; line-height: 200%; margin-top: 2pt; 
+					 color: #ffffff;">Description</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">BETWEEN</span></td>
+			<td><p>Use this operator in a WHERE clause to filter a result 
+			 set that meets a specified range of values.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name</p>
+			<p>WHERE column_name</p>
+			<p>BETWEEN value1 AND value2</p>
+			<p>&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM customer_order</p>
+			<p>WHERE order_date BETWEEN '01/01/2015' AND '12/31/2015'</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>The query returns all customer order records with order 
+			 dates between 01/01/2015 and 12/31/2015.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">EXISTS</span></td>
+			<td><p class="hcp4">Use this condition 
+			 with a subquery within a SELECT statement to test for the 
+			 existence of rows in a table.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">WHERE EXISTS (subquery)</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT *</p>
+			<p class="hcp4">FROM part</p>
+			<p class="hcp4">WHERE EXISTS</p>
+			<p class="hcp4">&#160;&#160;&#160;&#160;&#160;(SELECT 
+			 * FROM purc_order_line WHERE part.id=purc_order_line.part_id)</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">The query returns 
+			 data from the part table for all Part IDs used on purchase 
+			 order lines.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">FROM</span></td>
+			<td><p>Use this clause in a SELECT statement to create a result 
+			 set from a table.</p>
+			<p>&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name &#160;&#160;</p>
+			<p>&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM account_balance</p>
+			<p>&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>This query returns all records in the account_balance table.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">GROUP 
+			 BY</span></td>
+			<td><p class="hcp4">Use this clause 
+			 to specify how to group the results of a SELECT statement, 
+			 particularly when you use an aggregate function such as SUM 
+			 or COUNT. The columns you specify in the select statement 
+			 must be included in the GROUP BY clause.</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name, 
+			 aggregate function</p>
+			<p class="hcp4">FROM table_name</p>
+			<p class="hcp4">GROUP BY table_name.column_name</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT part_id, 
+			 count(*)</p>
+			<p class="hcp4">FROM cust_order_line</p>
+			<p class="hcp4">GROUP BY part_id</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 the number of times each part is used on customer order lines. 
+			 The results are sorted by Part ID.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">IN</span></td>
+			<td><p>Use this operator to specify multiple values in a WHERE 
+			 clause.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name</p>
+			<p>WHERE column_name</p>
+			<p>IN (value1,value2,…)</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM customer</p>
+			<p>WHERE country</p>
+			<p>IN ('USA', 'UK', 'Italy', 'India')</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>This query returns all records in the customer table where 
+			 the country column is equal to USA, UK, Italy, or India.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">INNER 
+			 JOIN</span></td>
+			<td><p class="hcp4">Use this clause 
+			 to combine rows from two or more tables where a match exists 
+			 between columns.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s)</p>
+			<p class="hcp4">FROM table_name1</p>
+			<p class="hcp4">INNER JOIN table_name2</p>
+			<p class="hcp4">ON table_name1.column_name=table_name2.column_name</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT part.id, 
+			 part.qty_on_hand, purc_order_line.purc_order_id, PURC_ORDER_LINE.USER_ORDER_QTY</p>
+			<p class="hcp4">FROM part</p>
+			<p class="hcp4">INNER JOIN purc_order_line</p>
+			<p class="hcp4">ON part.id=purc_order_line.part_id</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 a list of parts used on purchase order lines. The results 
+			 include the tenant-level quantity on hand from the part table 
+			 and the quantity ordered from the purchase order line.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">LEFT JOIN</span></td>
+			<td><p>See LEFT OUTER JOIN.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM (table_name1</p>
+			<p>LEFT JOIN table_name2</p>
+			<p>ON table_name1.column_name=table2.column_name)</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM (part LEFT JOIN part_location ON part.id = part_location.part_id)</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>See LEFT OUTER JOIN.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">LEFT 
+			 OUTER JOIN</span></td>
+			<td><p class="hcp4">Use this clause 
+			 to create a result set that combines rows from two or more 
+			 tables based on a common field. This clause returns all rows 
+			 from the left table, or table_name1, with the matching rows 
+			 from the right table, or table_name2. When there is no match, 
+			 the returned result is a NULL on the right side.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s)</p>
+			<p class="hcp4">FROM table_name1</p>
+			<p class="hcp4">LEFT OUTER JOIN 
+			 table_name2</p>
+			<p class="hcp4">ON table_name1.column_name 
+			 = table_name2.column_name</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT *</p>
+			<p class="hcp4">FROM part</p>
+			<p class="hcp4">LEFT OUTER JOIN 
+			 part_location</p>
+			<p class="hcp4">ON part.id = part_location.part_id</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 a list of all parts and part locations. All columns from the 
+			 part table are on the left side of the results. All columns 
+			 from the part_location table are on the right side of the 
+			 results. The two tables are joined on the Part ID. If a part 
+			 is not assigned to a part location, then the right side of 
+			 the results is null.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">LIKE</span></td>
+			<td><p>Use this operator in a WHERE clause to filter a result 
+			 set based on a pattern in a column. You can use wildcards 
+			 in your pattern. Use % to indicate any number of missing characters. 
+			 Use _ to indicate one missing character.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name</p>
+			<p>WHERE column_name LIKE pattern</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM payable WHERE terms_id LIKE '5%60'</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>This query returns records from the payable table where 
+			 the Terms ID begins with 5, followed by any number of characters, 
+			 and ends with 60. For example, all rows containing terms IDs 
+			 such as 510N60, 530N60, and 5%30N60 are returned.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">OUTER 
+			 JOIN</span></td>
+			<td><p class="hcp4">Use FULL, LEFT, 
+			 or RIGHT in conjunction with this clause to combine rows from 
+			 two or more tables or views based on a common field. All rows 
+			 from both tables are returned in a FULL OUTER JOIN. See LEFT 
+			 OUTER JOIN and RIGHT OUTER JOIN for details about those clauses.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s)</p>
+			<p class="hcp4">FROM table_name1</p>
+			<p class="hcp4">[FULL|LEFT|RIGHT] 
+			 OUTER JOIN table_name2</p>
+			<p class="hcp4">ON table_name1.column_name=table_name2.column_name</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT *</p>
+			<p class="hcp4">FROM part_site</p>
+			<p class="hcp4">FULL OUTER JOIN 
+			 vendor</p>
+			<p class="hcp4">ON part_site.pref_vendor_id 
+			 = vendor.id</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 all rows in the part_site table. If a part has a preferred 
+			 vendor, then the row for the vendor ID is matched to the part_site 
+			 row. All rows from the vendor table for vendor IDs that are 
+			 not used as preferred vendors are listed at the end of the 
+			 query.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">ORDER BY</span></td>
+			<td><p>Use this clause to sort the result set by keyword in 
+			 either an ascending (ASC) or descending (DESC) order.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name</p>
+			<p>ORDER BY column_name [AS|DESC]</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT purc_order_id, received_date</p>
+			<p>FROM receiver</p>
+			<p>ORDER BY received_date DESC</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>This query returns a list of purchase order IDs and received 
+			 dates from the receiver table sorted in descending order by 
+			 received date.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">RIGHT 
+			 JOIN</span></td>
+			<td><p class="hcp4">See RIGHT OUTER 
+			 JOIN.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s)</p>
+			<p class="hcp4">FROM (table_name1</p>
+			<p class="hcp4">RIGHT JOIN table_name2</p>
+			<p class="hcp4">ON table_name1.column_name=table_name2.column_name)</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT shipment_dist.cust_order_id, 
+			 shipment_dist.posting_date</p>
+			<p class="hcp4">FROM (shipment_dist</p>
+			<p class="hcp4">RIGHT JOIN shipper 
+			 ON shipment_dist.cust_order_id = shipper.cust_order_id)</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">See RIGHT OUTER 
+			 JOIN.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">RIGHT OUTER JOIN</span></td>
+			<td><p>Use this clause to create a result set that combines 
+			 rows from two or more tables based on a common field. This 
+			 clause returns all rows from the right table, or table_name2, 
+			 with the matching rows from the left table, or table_name1. 
+			 When there is no match, the returned result is a NULL on the 
+			 left side.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name1</p>
+			<p>RIGHT OUTER JOIN table_name2</p>
+			<p>ON table_name1.column_name = table_name2.column_name</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT shipment_dist.cust_order_id, shipment_dist.posting_date, 
+			 shipper.cust_order_id</p>
+			<p>FROM shipment_dist</p>
+			<p>RIGHT OUTER JOIN shipper</p>
+			<p>ON shipment_dist.cust_order_id = shipper.cust_order_id</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>The query returns a list of Customer Order IDs and the dates 
+			 the distributions for the orders were posted. If a Customer 
+			 ID has no posted distributions, then no data is displayed 
+			 in the shipment_dist.cust_order_id and shipment_dist.posting_date 
+			 query result columns.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">SELECT</span></td>
+			<td><p class="hcp4">Use this statement 
+			 to retrieve information from one or more tables in the database.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s)</p>
+			<p class="hcp4">FROM table_name</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT invoice_id, 
+			 packlist_id, status, actual_del_date</p>
+			<p class="hcp4">FROM shipper</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 all data in the invoice_id, packlist_id, status, and actual_del_date 
+			 columns of the shipper table.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">SELECT *</span></td>
+			<td><p>Use this statement and parameter to retrieve all information 
+			 from one or more tables in the database.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT *</p>
+			<p>FROM table_name</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT *</p>
+			<p>FROM wo_sch_priority</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>This query returns all rows in the wo_sch_priority table.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">SELECT 
+			 DISTINCT</span></td>
+			<td><p class="hcp4">Use this to 
+			 retrieve a single instance of each value from the table.</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT DISTINCT 
+			 column_name(s)</p>
+			<p class="hcp4">FROM table_name</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT DISTINCT 
+			 city, state</p>
+			<p class="hcp4">FROM vendor</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">This query returns 
+			 each unique city and state combination from the vendor table. 
+			 If you have multiple vendors located in Boston, MA, the Boston 
+			 and MA combination is returned only once.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">UNION</span></td>
+			<td><p>Use this operator to combine the results of two or more 
+			 SELECT statements. A result set from a UNION operator is the 
+			 same as UNION ALL except that duplicate rows are eliminated.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s) FROM table_name1</p>
+			<p>UNION</p>
+			<p>SELECT column_name(s) FROM table_name2</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT department_id FROM labor_ticket</p>
+			<p>UNION</p>
+			<p>SELECT department_id &#160;FROM employee</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>The query results show Department IDs used in both labor 
+			 tickets and employee records. Duplicate values are removed.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><span class="hcp3">UNION 
+			 ALL</span></td>
+			<td><p class="hcp4">Use this operator 
+			 to combine the results of two or more SELECT statements that 
+			 use similar data types and where the result sets have the 
+			 same number of fields.</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Syntax:</p>
+			<p class="hcp4">SELECT column_name(s) 
+			 FROM table_name1</p>
+			<p class="hcp4">UNION ALL</p>
+			<p class="hcp4">SELECT column_name(s) 
+			 FROM table_name2</p>
+			<p class="hcp5">&#160;</p>
+			<p class="hcp5">Example:</p>
+			<p class="hcp4">SELECT department_id 
+			 FROM labor_ticket</p>
+			<p class="hcp4">UNION ALL</p>
+			<p class="hcp4">SELECT department_id 
+			 &#160;FROM employee</p>
+			<p class="hcp4">&#160;</p>
+			<p class="hcp5">Result:</p>
+			<p class="hcp4">The query results 
+			 show Department IDs used in both labor tickets and employee 
+			 records. Duplicate values are retained.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><span class="hcp1">WHERE</span></td>
+			<td><p>Use this clause to filter the results in a SELECT statement.</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Syntax:</p>
+			<p>SELECT column_name(s)</p>
+			<p>FROM table_name</p>
+			<p>WHERE column_name operator value</p>
+			<p class="hcp2">&#160;</p>
+			<p class="hcp2">Example:</p>
+			<p>SELECT site_id, id, order_date</p>
+			<p>FROM customer_order</p>
+			<p>WHERE site_id = 'MMC' AND customer_id = 'ABLMAN'</p>
+			<p>&#160;</p>
+			<p class="hcp2">Result:</p>
+			<p>The query results show a list of Customer Order IDs and 
+			 order dates for orders placed for ABLMAN in the MMC site.</p></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

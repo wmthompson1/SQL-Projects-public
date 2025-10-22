@@ -1,0 +1,348 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Database Cost Setup</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+li.hcp2 { list-style:none;
+display:inline; }
+p.hcp3 { margin-left:40px; }
+p.hcp4 { margin-left:80px; }
+ol.hcp5 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Database Cost Setup</h1>
+	</div>
+	<table style="margin-right: -144px; left: 0px; top: 18px; height: 108px;" 
+			 cellspacing="0" width="488">
+		<tr style="vertical-align: top;">
+			<td width="56" class="hcp1"><p class="First" style="margin-right: -26px;"><img src="IMPORTNT.gif" alt="IMPORTNT.gif" title="IMPORTNT.gif" width="25" height="25" border="0"></p></td>
+			<td width="432" class="hcp1"><p class="First">This 
+			 database setup instruction is for the administrator of your 
+			 company for the purpose of implementation. Administration 
+			 must determine the global parameters for the costing method 
+			 (Standard or Actual Costing) of the database before you begin. 
+			 You must make this choice before implementing VISUAL. Your 
+			 costing choice is set up using VISUAL Application Global Maintenance.</p></td>
+		</tr>
+	</table>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Call up the Application 
+		 Global Maintenance window from the Infor VISUAL Admin menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Application Global Maintenance window 
+	 appears.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Select the <span class="Bold">Costing</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the costing method 
+		 you want to implement; by clicking on the <span class="Bold">Standard</span> 
+		 or <span class="Bold">Actual</span> option button.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Standard Costs</span></p>
+	<ol>
+		<li class="hcp2"><ul>
+			<li class="p-Bullet"><p class="Bullet">Purchase Material at 
+			 Standard with PPV (Purchase Price Variances)</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Manufacturing Variances 
+			 Upon Receipt from Work Order</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Labor &amp; Burden Cost 
+			 Charged to the Work Order at Resource Standard</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Service Costs at Standard</p></li>
+		</ul></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Actual Costs</span></p>
+	<ol>
+		<li class="hcp2"><ul>
+			<li class="p-Bullet"><p class="Bullet">Raw Materials Valued 
+			 at PO or A/P Invoice</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Inventory Valued at 
+			 FIFO or Purchased to a Job</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Labor Charged at Actual 
+			 Employee Rate</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Burden Basis Options:</p></li>
+		</ul></li>
+	</ol>
+	<p class="Normal-Indent" style="margin-left: 78px;">Resource Rates 
+	 = causes VISUAL to use the rates in the reported shop resource to 
+	 compute actual burden.</p>
+	<p class="Normal-Indent" style="margin-left: 78px;">Operation Rates 
+	 = causes VISUAL to use the burden rates in the work order operation 
+	 to compute actual burden.</p>
+	<ol>
+		<li class="hcp2"><ul>
+			<li class="p-Bullet"><p class="Bullet">Service Costs at Actual 
+			 Invoice Value</p></li>
+		</ul></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Average Costs</span></p>
+	<ol>
+		<li class="hcp2"><ul>
+			<li class="p-Bullet"><p class="Bullet">Raw Materials Valued 
+			 at PO or A/P Invoice</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">The Perpetual Average 
+			 of the Inventory = Total value by total quantity.</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Labor Charged at Actual 
+			 Employee Rate</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Burden Basis Options:</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Resource Rates = causes 
+			 VISUAL to use the rates in the reported shop resource to compute 
+			 actual burden.</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Operation Rates = causes 
+			 VISUAL to use the burden rates in the work order operation 
+			 to compute actual burden.</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">Service Costs at Actual 
+			 PO or Invoice Value</p></li>
+		</ul></li>
+	</ol>
+	<p class="hcp3">If you are using Actual or Average Costing, 
+	 select the <span class="Bold">Work in Process Costing</span> (method 
+	 for valuing partial receipts) you are using; Projected or Actual.</p>
+	<p class="hcp4"><span class="Bold">IF Database is set 
+	 to Actual Cost, determine WIP Costing (Receipts) either Actual or 
+	 Projected</span></p>
+	<ol>
+		<li class="hcp2"><ol>
+			<li class="hcp2"><ol>
+				<li class="hcp2"><ul>
+					<li class="p-Bullet"><p class="Bullet">Valuation Method 
+					 for <span class="Bold">Partial Receipts</span></p></li>
+				</ul></li>
+			</ol></li>
+		</ol></li>
+	</ol>
+	<p class="Normal-Indent" style="margin-left: 158px;">Actual – Uses 
+	 Total Cost to Date</p>
+	<p class="Normal-Indent" style="margin-left: 158px;">Projected – Calculated 
+	 Value, Can Not Exceed Actual to Date per Cost Component</p>
+	<p class="Normal-Indent" style="margin-left: 158px;">Final Valuation 
+	 at Completion of Work Order</p>
+	<ol>
+		<li class="hcp2"><ol>
+			<li class="hcp2"><ol>
+				<li class="hcp2"><ul>
+					<li class="p-Bullet"><p class="Bullet">A &quot;Projected&quot; 
+					 Cost to Value Partial Receipts is calculated.</p></li>
+				</ul></li>
+			</ol></li>
+		</ol></li>
+	</ol>
+	<p class="Normal-Indent" style="margin-left: 158px;">Basis is Actual 
+	 Costs to Date and Remaining Cost to Complete</p>
+	<p class="Normal-Indent" style="margin-left: 158px;">&quot;Remaining 
+	 Cost&quot;</p>
+	<p class="Normal-Indent" style="margin-left: 158px;">Operations and 
+	 Material Requirements to be Completed Valued at Work Order Estimate</p>
+	<ol>
+		<li class="hcp2"><ol>
+			<li class="hcp2"><ol>
+				<li class="hcp2"><ul>
+					<li class="p-Bullet"><p class="Bullet">Need to Enter 
+					 Quantity Complete on Labor Tickets</p></li>
+				</ul></li>
+			</ol></li>
+		</ol></li>
+	</ol>
+	<p class="hcp3">If not – VISUAL uses 100% of Operation 
+	 Value</p>
+	<p class="hcp4"><span class="Bold">Projected Cost Calculation 
+	 - Partial Receipts</span></p>
+	<p style="margin-left: 120px;">VISUAL uses Component Level Costing; 
+	 Material, Labor, Burden or Service, assuming that with partial receipts, 
+	 NO component will be driven negative.</p>
+	<ol>
+		<li class="hcp2"><ol>
+			<li class="hcp2"><ol>
+				<li class="hcp2"><ul>
+					<li class="p-Bullet"><p class="Bullet">Component Projected 
+					 Cost / Work Order Qty = Unit Component Projected Cost</p></li>
+				</ul>
+				<ul>
+					<li class="p-Bullet"><p class="Bullet">Unit Component 
+					 Projected Cost X Qty Received = Total Component</p></li>
+				</ul>
+				<ul>
+					<li class="p-Bullet"><p class="Bullet">Projected Value 
+					 of Receipt</p></li>
+				</ul>
+				<ul>
+					<li class="p-Bullet"><p class="Bullet">Total Component 
+					 Projected Value &lt; Component Actual Costs to Date, 
+					 Use Component Projected Value</p></li>
+				</ul>
+				<ul>
+					<li class="p-Bullet"><p class="Bullet">If &gt; Component 
+					 Actual Costs, Use Component Actual Costs</p></li>
+				</ul></li>
+			</ol></li>
+		</ol></li>
+	</ol>
+	<p class="Numbered-Indent">Database set to Standard Cost</p>
+	<ol>
+		<li class="hcp2"><ul>
+			<li class="p-Bullet"><p class="Bullet">Valuation Method for 
+			 Partial Receipts</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">If the Standard Cost 
+			 of the Receipt is less than the Actuals charged to the W/O 
+			 Qty is received at Standard and no Variance is calculated.</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet"><p class="Bullet">If the Standard Cost 
+			 of the Receipt is greater than the Actual Cost charged to 
+			 the W/O Qty is received at Standard and a Variance is calculated 
+			 for the difference between the actual and standard cost of 
+			 partial receipt.</p></li>
+		</ul></li>
+	</ol>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Select the FIFO Method, 
+		 by part or by part location.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This option will allow First In First Out 
+	 cost distribution By Part Locations. The prior method only offered 
+	 by Part ID, which ignored the locations and distributed costs using 
+	 FIFO layers created for each part in total.</p>
+	<ol start="5" class="hcp5">
+		<li class="p-Numbered"><p class="Numbered">Select the Source of 
+		 Raw Material Cost, by purchase orders or by A/P invoices.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This option only applies when using Actual 
+	 costing, and controls the source of costs assigned to raw material 
+	 inventory using either Purchase Orders <span style="letter-spacing: -0.75pt;">or</span> 
+	 A/P Invoices.</p>
+	<p class="Numbered-Indent">If you choose Purchase Orders, then costs 
+	 will be taken from the purchase order at the time of material receipt. 
+	 This method will create a Purchase Price Variance. This option is 
+	 only preferable if you are <span style="font-weight: bold;"><span 
+	 class="Bold">not</span></span> using Infor VISUAL Financials.</p>
+	<p class="Numbered-Indent">If you choose A/P Invoices, then costs will 
+	 be taken first from the purchase order, as an estimate, then updated 
+	 from the invoice for the purchase, when it is received. If you are 
+	 using Infor VISUAL Financials, you should select this option, as it 
+	 will be accessing the more accurate costs.</p>
+	<ol start="6" class="hcp5">
+		<li class="p-Numbered"><p class="Numbered">Select the Purchase 
+		 Quote Type; Qty-break tables or Up-to-qty tables.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Part Maintenance application allows 
+	 you to specify vendor price quotes for a part by different quantity 
+	 levels. There are two ways these items can be interpreted:</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Break Tables:</span> 
+	 If you select this option, the quantity levels are referred to as 
+	 &quot;Quantity Breaks&quot; and the default price is used up to Quantity 
+	 Break 1. Other Quantity Breaks will specify the prices used through 
+	 the final Quantity Break, which will be applied against any larger 
+	 quantities.</p>
+	<p class="Numbered-Indent"><span class="Bold">Up-to-Quantity Tables:</span> 
+	 If you select this option, the quantity levels are referred to as 
+	 &quot;Up-to-Quantities&quot;. Quantities are applied from the lowest 
+	 level with prices. The default price is applied against any larger 
+	 quantities.</p>
+	<ol start="7" class="hcp5">
+		<li class="p-Numbered"><p class="Numbered">Select the Labor Cost 
+		 Basis; Determined by hours worked or Determined by quantity completed.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This option only applies when using Standard 
+	 costing, and controls how labor costs are calculated.</p>
+	<p class="Numbered-Indent">If you choose Hours Worked, labor is calculated 
+	 by multiplying the hours reported on a labor ticket by the standard 
+	 cost of the operation.</p>
+	<p class="Numbered-Indent">If you choose Quantity Produced, labor is 
+	 calculated by multiplying quantity completed for an operation by the 
+	 standard cost per unit for the operation. You can add cost to the 
+	 Hours field. When set to quantity produced the standard hours estimated 
+	 will be multiplied by the standard rates when the quantity is completed.</p>
+	<ol start="8" class="hcp5">
+		<li class="p-Numbered"><p class="Numbered">Select the Costing Between 
+		 Levels; either Fold to material cost or Keep separate costs. This 
+		 option allows you to keep the cost categories separate between 
+		 levels.</p></li>
+	</ol>
+	<p class="Numbered-Indent">There are four cost categories in VISUAL: 
+	 Material, Labor, Burden, and Service. Purchased materials only affect 
+	 the Material category, while internally fabricated parts may incur 
+	 costs in all four categories. This option controls how costs are passed 
+	 between levels when one fabricated part is used as a material requirement 
+	 in another. There are two options:</p>
+	<p class="Numbered-Indent"><span class="Bold">Fold to Material Cost:</span> 
+	 If you choose this option, the Material, Labor, Burden and Service 
+	 cost of an internally manufactured intermediate are all summed into 
+	 the material cost when it is required in another fabricated part. 
+	 From a cost point of view, this makes a part you manufacture look 
+	 like a purchased part – when it is required in another product, the 
+	 cost is all counted as material cost.</p>
+	<p class="Numbered-Indent"><span class="Bold">Keep Separate Costs:</span> 
+	 If you choose this option, the Material, Labor, Burden and Service 
+	 cost of an internally manufactured intermediate part contribute to 
+	 those individual categories in parent assemblies. From a cost point 
+	 of view, this counts labor and burden associated with fabricating 
+	 the intermediate part of the labor and burden costs for the entire 
+	 product.</p>
+	<ol start="9" class="hcp5">
+		<li class="p-Numbered"><p class="Numbered">Select the Burden Basis: 
+		 Determined by resource burden or Determined by operation burden.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This option only applies when using Actual 
+	 costing, and is best described as the overhead calculation used to 
+	 control the source of Burden to be applied to work orders.</p>
+	<p class="Numbered-Indent">The <span class="Bold">Resources</span> 
+	 setting causes VISUAL to use the burden rates setup in shop resource 
+	 maintenance.</p>
+	<p class="Numbered-Indent">The <span class="Bold">Operations</span> 
+	 setting causes VISUAL to use the burden rates in the work order operation 
+	 to compute actual burden.</p>
+	<ol start="10">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 to save your settings.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

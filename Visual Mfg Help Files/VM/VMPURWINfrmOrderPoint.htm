@@ -1,0 +1,83 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using the Order Point Tool</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:51px; }
+table.hcp2 { margin-left:12px; }
+tr.hcp3 { vertical-align:top; }
+td.hcp4 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using the Vendor History Tool</h1>
+	</div>
+	<p class="First">Use the Order Point tool to view non-consigned part 
+	 inventory information for which you have specified order point information.</p>
+	<p>The Order Point tool has two levels of information: Part and Warehouse.</p>
+	<p>To use the Order Point tool, select the Order Point option from 
+	 the Tool menu.</p>
+	<p>Viewing Warehouse Order Point Information</p>
+	<p>To view warehouse order point information, double-click Order Point 
+	 and select the part in which you are interested.</p>
+	<p>A list of all of the warehouses for the part appears below the part 
+	 name in the explorer panel.</p>
+	<p>Generating Purchase Orders</p>
+	<p>There are three methods you can use to create purchase orders in 
+	 the Order Point child window:</p>
+	<p><span class="Bold">Using the Auto Generate Button</span> – If you 
+	 have specified Order Point and Order Up To quantities for your parts, 
+	 you can create purchase orders from the Order Point child window. 
+	 For example, if you have the following condition:</p>
+	<p class="hcp1">Quantity On Hand = 9</p>
+	<p class="hcp1">Quantity On Order = 123</p>
+	<p class="hcp1">Quantity In Demand = 0</p>
+	<p class="hcp1">Order Point = 120</p>
+	<p class="hcp1">Order Up To = 240</p>
+	<p>Even though you do not have a demand, you have specified an order 
+	 point. VISUAL calculates the quantity to be purchased as:</p>
+	<p>Order Up To — Qty on Hand — Qty On Order = Calculated Quantity to 
+	 Order</p>
+	<table cellspacing="0" width="342" class="hcp2">
+		<tr class="hcp3">
+			<td width="72" class="hcp4"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp4"><p>If you have not defined 
+			 the Order Up To Quantity or have defined it as zero, VISUAL 
+			 uses the Order Point Quantity as the Calculated Quantity to 
+			 Order.</p></td>
+		</tr>
+	</table>
+	<p>To generate purchase orders, select the Part in the explorer pane, 
+	 the warehouse in the table pane, and click the <span class="Bold">Auto 
+	 Generate</span> button.</p>
+	<table cellspacing="0" width="342" class="hcp2">
+		<tr class="hcp3">
+			<td width="72" class="hcp4"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp4"><p>VISUAL only creates 
+			 a new Purchase Order with a status of Firmed: you must release 
+			 the order using the Purchase Order Entry child window or the 
+			 Session P/O History window.</p></td>
+		</tr>
+	</table>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Purchase_Management_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,146 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Report Format File Overrides</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Report Format File Overrides</h1>
+	</div>
+	<p>To customize reports using report format file overrides:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Application Global Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Report Format File Overrides</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Standard QRP filename</span> 
+	 – Double-click the browse button and select the standard QRP file 
+	 to override. To determine the standard QRP file name, run the report 
+	 using the View output option. The file name of the QRP is displayed 
+	 in the title bar.</p>
+	<p class="Numbered-Indent"><span class="Bold">Context</span> – Specify 
+	 when the override should be used. Click one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">User</span> – If the override 
+	 is specific to a single user, click this option. When you click this 
+	 option, the User ID field is displayed. Specify the User ID in the 
+	 field. After you save the override row, User ID: plus the name of 
+	 the user you specified in inserted in the Context column.</p>
+	<p class="DoubleIndent">When you specify a user override for a particular 
+	 report file, the override is always used for the user, even if you 
+	 have also specified an override with any other context.</p>
+	<p class="DoubleIndent"><span class="Bold">Site</span> – If you are 
+	 licensed to use multiple sites, click this option if the override 
+	 applies to a particular site. When you click this option, the Site 
+	 ID field is displayed. Specify the Site ID in the Site field. After 
+	 you save the override row, Site: plus the name of the Site you specified 
+	 is inserted in the Context column.</p>
+	<p class="DoubleIndent">When you specify a site override for a particular 
+	 report file, the override applies when the site is used, unless you 
+	 have defined a user-specific override for the same file.</p>
+	<p class="DoubleIndent"><span class="Bold">Entity</span> – If you are 
+	 licensed to use multiple entities, click this option if the override 
+	 applies to a particular accounting entity. When you click this option, 
+	 the Entity ID field is displayed. Specify the Accounting Entity in 
+	 the Entity field. After you save the override row, Entity: plus the 
+	 name of the Accounting Entity you specified is inserted in the Context 
+	 column.</p>
+	<p class="DoubleIndent">When you specify an entity override for a particular 
+	 report file, the override applies when the accounting entity is used, 
+	 unless you have defined a user-specific or site-specific override 
+	 for the same file.</p>
+	<p class="DoubleIndent"><span class="Bold">Always</span> – If you click 
+	 the Always context, the override you specify is always used, unless 
+	 you have specified a user override, site override, or entity override 
+	 for the same report file.</p>
+	<p class="Numbered-Indent"><span class="Bold">Overriding QRP Filename</span> 
+	 – Double-click the browse button and navigate to the override file.</p>
+	<p class="Numbered-Indent">If the file you specify does not exist, 
+	 you are prompted to create the new file by copying the standard file. 
+	 It is recommended that you always customize a report template by copying 
+	 the original and then modifying it. The original report file contains 
+	 the definition of all the inputs and report sections. Recreating this 
+	 information can be tedious.</p>
+	<p class="Numbered-Indent">You can store your override files in the 
+	 same directory as your VISUAL executables, but you may find it easier 
+	 to manage your override files if they are stored in a separate directory.</p>
+	<p class="Numbered-Indent">While the standard file is only referenced 
+	 by name, you must specify the full directory path to the override 
+	 file, including the .qrp extension.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description of the override.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<h2>Adding an Extended Query</h2>
+	<p>You can use extended queries to add information from the database 
+	 to your customized reports.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select the report in 
+		 the table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Add 
+		 Extended</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter a SQL statement 
+		 in the multi-line text field.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You need to create a SQL statement to retrieve 
+	 the data. For example, the following SQL statement will select the 
+	 information stored in the column BACKFLUSH_WHS_ID in the Part table:</p>
+	<p class="Numbered-Indent">SELECT BACKFLUSH_WHS_ID FROM PART WHERE 
+	 PART.ID=:PART ID</p>
+	<p class="Numbered-Indent">Notice the period (.) between PART and ID 
+	 and the colon (:) after the equal sign (=). Syntax is important when 
+	 entering SQL statements; be careful when entering them.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Destination variables 
+		 section, specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Name</span> – Specify 
+	 the name of the variable.</p>
+	<p class="Numbered-Indent"><span class="Bold">Type</span> – Click the 
+	 Type drop-down box and select the type of data. You can select String, 
+	 Date/Time, or Number.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Add 
+		 to List</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<h2>Comparing a Customized Report to a Standard Report</h2>
+	<p>You can compare a customized report to a standard report to view 
+	 changes made to the report inputs.</p>
+	<p>To compare reports:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select the report row 
+		 in the table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Compare</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The dialog box shows the differences between 
+	 the inputs for the standard report and the customized report. To restore 
+	 all customized data input to the standard, click Match to Standard.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Close</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

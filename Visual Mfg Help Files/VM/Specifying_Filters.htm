@@ -1,0 +1,306 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Filters</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { padding-left:2.00pt;
+padding-top:2.00pt;
+padding-right:2.00pt;
+padding-bottom:2.00pt;
+margin-left:54.00pt; }
+th.hcp2 { border-top:solid 1px #808080;
+vertical-align:top;
+padding-left:6.00pt;
+padding-top:3.00pt;
+padding-right:6.00pt;
+padding-bottom:3.00pt; }
+td.hcp3 { border-bottom:solid 1px #808080;
+vertical-align:top;
+padding-left:6.00pt;
+padding-top:3.00pt;
+padding-right:6.00pt;
+padding-bottom:3.00pt; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Filters</h1>
+	</div>
+	<p>You can provide filters that users can apply to a metric when they 
+	 add it to their dashboards. For example, you can allow users to filter 
+	 metrics by date, by a range of IDs, or by a list of predefined values.</p>
+	<p>The types of filters that can be applied to column depend upon the 
+	 data type. </p>
+	<p>To add filters to the metric:</p>
+	<ol start="1" dir="ltr">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Dashboard</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Edit Data Source</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Data Source ID 
+		 field, select the data source.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Filter Type field, 
+		 specify the filter to use. This table shows the filter types that 
+		 are available for each data type:</p>
+		
+		<table dir="ltr" cellspacing="0" width="576" class="hcp1">
+			<tr style="height: 17.00pt;" bgcolor="#E6E6E6">
+				<th width="288" bgcolor="#E6E6E6" class="hcp2"><p>Data 
+				 type</p></th>
+				<th width="288" bgcolor="#E6E6E6" class="hcp2"><p>Filter 
+				 type</p></th>
+			</tr>
+			<tr style="height: 167.00pt;">
+				<td width="288" class="hcp3"><p class="FM_CellBody">Number</p></td>
+				<td width="288" class="hcp3"><p class="FM_CellBody"><span 
+				 class="FM_BoldCellText">Value</span>&#160;– The user can 
+				 filter the metric to include data for one specific value.</p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Value 
+				 (&lt;=) </span>– The user can filter the metric to include 
+				 data for a specific value and all values less than the 
+				 specified value.</p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Value 
+				 (&gt;=) </span>– The user can filter the metric to include 
+				 data for a specific value and all values greater than 
+				 the specified value.</p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Value 
+				 (&lt;=,&gt;=) </span>– The user can filter the metric 
+				 to include data for a specific range of values. The values 
+				 that the user specifies are included. </p></td>
+			</tr>
+			<tr style="height: 244.00pt;">
+				<td width="288" class="hcp3"><p class="FM_CellBody">String</p></td>
+				<td width="288" class="hcp3"><p class="FM_CellBody"><span 
+				 class="FM_BoldCellText">Browse</span>&#160;– The user 
+				 can filter the metric to include data for a specific value. 
+				 If you specify this filter type, a field with a browse 
+				 button is available for the user to select a single value. 
+				 </p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Browse 
+				 Range</span>&#160;– The user can filter the metric to 
+				 include data for a range of values. If you specify this 
+				 filter type, two fields with browse buttons are available 
+				 for the user to select a range of values. </p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Drop 
+				 List </span>– The user can select a single value on which 
+				 to filter from a list. If you specify this filter type, 
+				 a drop-down field is available to the user.</p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">List</span>&#160;– 
+				 The user can select multiple values on which to filter 
+				 from a list. If you specify this filter type, a multi-select 
+				 field is available to the user. </p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Range</span>&#160;– 
+				 The user can filter the metric to include data for a range 
+				 of values. If you specify this filter type, two fields 
+				 are available for the user to select the range of values. 
+				 Browse buttons are not provided. </p>
+				<p class="FM_CellBody"><span class="FM_BoldCellText">Value</span>&#160;– 
+				 The user can filter the metric to include data for a specific 
+				 value. If you specify this filter type, a field is available 
+				 for the user to specify the value. A browse button is 
+				 not provided. </p></td>
+			</tr>
+			<tr style="height: 46.00pt;">
+				<td width="288" class="hcp3"><p class="FM_CellBody">Date 
+				 Time</p></td>
+				<td width="288" class="hcp3"><p class="FM_CellBody"><span 
+				 class="FM_BoldCellText">Range</span>&#160;– The user can 
+				 filter the metric to include data for a range of dates. 
+				 If you specify this filter type, two fields are available 
+				 for the user to specify the start and end dates. Browse 
+				 buttons are not provided. </p>
+				<p class="FM_CellBody">If you use more than one Date Time 
+				 column in your data source, then you can apply the Range 
+				 filter type to only one of the Date Time columns.</p></td>
+			</tr>
+		</table>
+		
+		<p class="FM_Numbered">&#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you selected Drop 
+		 List or List as the filter type, specify how to build the filter 
+		 list. This table shows the source types, a description of the 
+		 filter source type, and the filter text to specify: </p>
+		
+		<table dir="ltr" cellspacing="0" width="600" class="hcp1">
+			<tr style="height: 17.00pt;" bgcolor="#E6E6E6">
+				<th width="144" bgcolor="#E6E6E6" class="hcp2"><p 
+					 class="FM_CellHeading">Filter Source Type</p></th>
+				<th width="228" bgcolor="#E6E6E6" class="hcp2"><p 
+					 class="FM_CellHeading">Description</p></th>
+				<th width="228" bgcolor="#E6E6E6" class="hcp2"><p 
+					 class="FM_CellHeading">Filter Text</p></th>
+			</tr>
+			<tr style="height: 79.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Configuration</p>
+				<p class="FM_CellBody">&#160;</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to specify the browse dialog to use. The browse 
+				 configuration determines the dialog that is opened when 
+				 the user clicks the browse button for the filter. </p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Click 
+				 the <span class="FM_BoldCellText">Edit Filter Text</span>&#160;button 
+				 to select the browse dialog to use. The configuration 
+				 that you select should match the data in the database 
+				 column. For example, if you specified CUSTOMER_ID as the 
+				 Column Name, then select Customer as the filter text. 
+				 </p></td>
+			</tr>
+			<tr style="height: 132.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Enum 
+				 Codes</p>
+				<p class="FM_CellBody">&#160;</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to use common status codes, such as work order 
+				 status and customer order line status. These codes are 
+				 read from the ENUM_CODES database table. When the user 
+				 adds the metric, the translated value of each code is 
+				 displayed. For example, if you add customer status codes, 
+				 the user sees Closed, Firmed, Hold, Released, and Cancelled 
+				 instead of C, F, H, R and X. </p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">To 
+				 select the codes to use as the filter:</p>
+				<p class="FM_CellNumbered1" style="text-indent: -18.000pt; 
+					 font-size: 9.0pt;">1.<span class="FMAutoNumber_1" 
+												 style="padding-left: 20pt;"></span>Click 
+				 the <span class="FM_BoldCellText">Edit Filter Text</span> 
+				 button.</p>
+				<p class="FM_CellNumbered">2.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>In 
+				 the Table field, select the table that contains the codes 
+				 to use. For example, if you are providing filters for 
+				 customer credit status, select Customer. </p>
+				<p class="FM_CellNumbered">3.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>In 
+				 the Column field, select the code type. </p>
+				<p class="FM_CellNumbered">4.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>Click 
+				 <span class="FM_BoldCellText">Ok</span>. </p></td>
+			</tr>
+			<tr style="height: 181.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Enum 
+				 List</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to manually create a list of translated values 
+				 for the user. You can use this option to limit the choice 
+				 of codes found in the ENUM_CODES database. For example, 
+				 use the Enum List option to limit a customer order status 
+				 filter to only Released and Firmed. You can also use this 
+				 option if you included a particular ID in your data source 
+				 but not the description. For example, if carrier IDs are 
+				 in your data source but not carrier descriptions, you 
+				 could this option to present the descriptions instead 
+				 of the IDs.</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Specify 
+				 valid selections in pairs. The User Value is the text 
+				 that is displayed to the end user. The Data Value is the 
+				 code used in the system. For example, to allow users to 
+				 select Firmed as a filter for customer orders, specify 
+				 Firmed as the User Value and F as the Data Value. </p>
+				<p class="FM_CellNumbered1" style="text-indent: -18.000pt; 
+					 font-size: 9.0pt;">1.<span class="FMAutoNumber_1" 
+												 style="padding-left: 20pt;"></span>Click 
+				 the <span class="FM_BoldCellText">Edit Filter Text</span> 
+				 button.</p>
+				<p class="FM_CellNumbered">2.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>Click 
+				 <span class="FM_BoldCellText">Insert</span>.</p>
+				<p class="FM_CellNumbered">3.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>In 
+				 the User Value column, specify the text to display to 
+				 the end user. </p>
+				<p class="FM_CellNumbered">4.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>In 
+				 the Data Value, specify the code that is used in the system. 
+				 </p>
+				<p class="FM_CellNumbered">5.<span class="FMAutoNumber_1" 
+													 style="padding-left: 11pt;"></span>Click 
+				 <span class="FM_BoldCellText">Ok</span>. </p></td>
+			</tr>
+			<tr style="height: 46.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">List</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to create a list of options for the user. 
+				 The option that the user selects is the value used in 
+				 the SQL query. </p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Specify 
+				 valid selections separated by commas. Do not use spaces 
+				 before or after the commas. </p></td>
+			</tr>
+			<tr style="height: 123.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Query</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to create a list based on a SQL query. The 
+				 query you specify must be for a single column. This option 
+				 is useful if you want to present users with a list of 
+				 distinct values instead of all values from a particular 
+				 database column. For example, you could specify this statement:</p>
+				<p class="FM_CellBody">select distinct rel_type from v_task</p>
+				<p class="FM_CellBody">If you used this query, users could 
+				 select from a list of Related To types. Related To types 
+				 are used with Activities.</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Specify 
+				 a query that references one table. </p></td>
+			</tr>
+			<tr style="height: 110.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Table</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Select 
+				 this option to create a list of all values in a database 
+				 column. </p>
+				<p class="FM_CellBody">&#160;</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">To 
+				 select the database column to use as the filter:</p>
+				<ol>
+					<li class="p-Numbered" style="font-size: 9.0pt;"><p 
+						 class="Numbered">Click the <span class="Bold">Edit 
+					 Filter Text</span> button.</p></li>
+					<li class="p-Numbered"><p class="Numbered">In the Table 
+					 field, select the table that contains the database 
+					 column. </p></li>
+					<li class="p-Numbered"><p class="Numbered">In the Column 
+					 field, select the column.</p></li>
+					<li class="p-Numbered"><p class="Numbered">Click <span 
+					 class="Bold">Ok</span>.</p></li>
+				</ol></td>
+			</tr>
+			<tr style="height: 46.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Viewable 
+				 Sites</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Apply 
+				 this filter source type to a data source column for Site 
+				 ID. Select this option to present a list of the user’s 
+				 viewable sites. </p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">n/a</p></td>
+			</tr>
+			<tr style="height: 46.00pt;">
+				<td width="144" class="hcp3"><p class="FM_CellBody">Viewable 
+				 Warehouses</p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">Apply 
+				 this filter source type to a data source column for warehouse 
+				 ID. Select this option to present a list of the user’s 
+				 viewable warehouses. </p></td>
+				<td width="228" class="hcp3"><p class="FM_CellBody">n/a</p></td>
+			</tr>
+		</table>
+		
+		</li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Custom_Metrics.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Custom Metrics</p>
+<p class="SeeAlsoNext"><a href="Creating_Data_Sources.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Creating Data Sources</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

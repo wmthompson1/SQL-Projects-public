@@ -1,0 +1,182 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Placing an Internal Purchase Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Placing an Internal Purchase Order</h1>
+	</div>
+	<p>Create a purchase order to begin the process of transferring inventory 
+	 between two sites in different entities.</p>
+	<p>When you save the purchase order, a corresponding customer order 
+	 is created in the site that is shipping the inventory. You cannot 
+	 directly create an internal customer order, or edit the customer order 
+	 after it has been created. You must use the purchase order to manage 
+	 the process.</p>
+	<p>The parent entities of the sites you use in the internal purchase 
+	 order must share at least one currency. If the parent entities do 
+	 not share a currency, you cannot save the order.</p>
+	<p>You cannot place an internal consolidated purchase order. If you 
+	 place a consolidated purchase order, you must use an external vendor.</p>
+	<p>To create the purchase order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Purchasing</span>, 
+		 <span class="Bold">Purchase Order Entr</span>y.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Site ID field, 
+		 select the site that is purchasing the materials.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Vendor ID field, 
+		 select the ID of the internal vendor you created for the site 
+		 shipping the materials.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When you select an internal vendor, the 
+	 Internal Order check box is selected.</p>
+	<ol start="4" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Specify these dates:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Desired Recv Date</span> 
+	 – Specify the date you want to receive the materials. If this date 
+	 is the same for all items in the order, specify the date on the header. 
+	 To specify a different date for each item in the order, enter the 
+	 date on the purchase order line.</p>
+	<p class="Numbered-Indent">This date is inserted in the Desired Ship 
+	 Date on the customer order only if you do not specify a Promise Ship 
+	 Date on the purchase order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Delivery Date</span> 
+	 – Specify the date the vendor promises to deliver the order. If this 
+	 date is the same for all items in the order, specify the date on the 
+	 header. To specify a different date for each item in the order, enter 
+	 the date on the purchase order line.</p>
+	<p class="Numbered-Indent">When the customer order is created, this 
+	 date is inserted in the Promise Delivery Date field on the customer 
+	 order. If you do not specify a date, then the Promise Delivery Date 
+	 field is left blank on the customer order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Ship Date</span> 
+	 – Enter the date the vendor promises to ship the order. If this date 
+	 is the same for all items in the order, specify the date on the header. 
+	 To specify a different date for each item in the order, enter the 
+	 date on the purchase order line.</p>
+	<p class="Numbered-Indent">When the customer order is created, this 
+	 date is inserted in the Desired Ship Date field and Promise Ship Date 
+	 field on the customer order. If you do not specify a Promise Ship 
+	 Date on the purchase order, then the Desired Recv Date on the purchase 
+	 order is used for the Desired Ship Date on the customer order. The 
+	 Promise Delivery Date on the customer order is left blank.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">In the FOB field, select 
+		 the FOB code. You should select a code that specifies who owns 
+		 the material while the material is in transit.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the browse button 
+		 and select the internal customer ID you defined for the site that 
+		 is purchasing the materials. This is the site you specified in 
+		 the Site ID field. If you defined a default customer ID in Site 
+		 Maintenance, then the default value is inserted.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This field is displayed only if the Internal 
+	 Order check box is selected.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">If applicable, specify 
+		 the VAT code to apply to the customer order. </p></li>
+	</ol>
+	<p class="Numbered-Indent">To use the VAT code that is specified on 
+	 the internal vendor record, clear the <span class="Bold">Use Cust 
+	 VAT/Tax</span> check box. To use the internal customer’s tax information, 
+	 select the <span class="Bold">Use Cust VAT/Tax</span> check box. </p>
+	<p class="Numbered-Indent">To use the tax information on the main customer 
+	 record, leave the SO VAT/Tax Shipto ID field blank. To use tax information 
+	 that is associated with a customer address, specify the ID of the 
+	 address in the SO VAT/Tax Shipto ID field. </p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Complete the purchase 
+		 order. If you set up a product code to use with internal order, 
+		 specify the product code ID on the line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Optionally, create delivery 
+		 schedules for each line. All information you specify for the delivery 
+		 schedule is copied to the linked sales order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+	<p>When you save the purchase order, the corresponding customer order 
+	 is created in the site that is shipping the materials.</p>
+	<h2>Working with ship to addresses</h2>
+	<p>When you create an internal purchase order, the address you specify 
+	 for the ship to address on the purchase order is also used on the 
+	 customer order. Since the purchase order ship to address information 
+	 resides in different database table than the customer order ship to 
+	 address information, a comparison between the ship to address table 
+	 (SHIPTO_ADDRESS) and the customer shipping address table (CUST_ADDRESS) 
+	 is made. The ship to Name, Address Line 1, Address Line 2, Address 
+	 Line 3, City, State, Zip code, and Country in the purchase order are 
+	 compared to the shipping addresses Name, Address Line 1, Address Line 
+	 2, Address Line 3, City, State, Zip code, and Country specified for 
+	 the customer ID in the Internal Customer ID field. If all fields match 
+	 exactly, then the matching customer shipping address ID is used on 
+	 the customer order.</p>
+	<p>If the ship to address information in the purchase order does not 
+	 exactly match a shipping address for the internal customer, then the 
+	 address specified on the purchase order is created in the customer 
+	 shipping address table.</p>
+	<p>The same comparisons and processes are made for ship to addresses 
+	 specified on the purchase order header, on the purchase order line, 
+	 and on the purchase order delivery schedule.</p>
+	<h2>Choosing a Supply Warehouse for the Internal Customer Order</h2>
+	<p>After the internal customer order is created, you can select the 
+	 warehouse that ships the materials using the Supply Links dialog in 
+	 Customer Order Entry.</p>
+	<p>If your internal purchase order included a delivery schedule, use 
+	 the Supply Links dialog available from the Customer Order Delivery 
+	 Schedule dialog.</p>
+	<p>To assign a supply warehouse for an internal customer order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In Customer Order Entry, 
+		 open the internal order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the line for 
+		 which you want to specify a warehouse.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Perform one of these 
+		 steps:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If the line 
+		 is linked to a delivery schedule, select Edit, Delivery Schedule.... 
+		 Select a line, and then click Supply....</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If the line 
+		 is not linked to a delivery schedule, select Edit, Assign Supply 
+		 to Customer Order Line....</p></li>
+	</ol>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">To ship all quantities 
+		 on the selected line from a particular warehouse, click the Warehouse 
+		 ID browse button and select the warehouse.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click Ok. If you accessed 
+		 the Supply Links dialog from the Edit Delivery Schedule dialog, 
+		 click Ok in the dialog to return to the Customer Order Entry window. 
+		 For customer order lines that do not have delivery schedules, 
+		 the ID of the warehouse you specified is inserted in the Warehouse 
+		 ID column.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Exit the Customer Order 
+		 entry window.</p></li>
+	</ol>
+	<p><span class="Bold">NOTE:</span> If you click Save before you exit 
+	 the Customer Order Entry window, a message is displayed warning you 
+	 that internal orders cannot be saved. You can ignore this message. 
+	 The warehouse IDs you selected are properly saved.</p>
+	<h2>Completing the transactions</h2>
+	<p>To complete the internal buy/sell transactions:</p>
+	<p>In Purchase Order Entry, set the status of the order to Released. 
+	 This updates the sales order status to released.</p>
+	<p>After the sales order is released, ship the materials. In Shipping 
+	 Entry, specify the site ID that is displayed as the Site ID on the 
+	 customer order.</p>
+	<p>After the materials are shipped, you can receive the materials. 
+	 In Purchase Receipt Entry, specify the site that is displayed as the 
+	 Site ID on the purchase order.</p>
+</div>
+</body>
+</html>

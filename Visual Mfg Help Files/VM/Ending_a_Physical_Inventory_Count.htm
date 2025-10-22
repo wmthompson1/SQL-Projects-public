@@ -1,0 +1,122 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Ending a Physical Inventory Count</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Ending a Physical Inventory Count</h1>
+	</div>
+	<p class="First">When a physical inventory count is completed and entered, 
+	 you need to signal the end of the count, and make adjustments if necessary.</p>
+	<ol class="p-Numbered">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site where you conducted the count. If you are licensed to use 
+		 a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the table, select 
+		 the physical inventory count.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">End 
+		 Physical Count</span> from the File menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The End Physical Count dialog box appears.</p>
+	<p class="Numbered-Indent">If you used any blank tags, it is possible 
+	 that more than one count was entered for a single Part ID/Location 
+	 ID combination. If this has occurred, you are warned when this dialog 
+	 box first opens. When you proceed, you can examine the Duplicates 
+	 field as explained below to see how many duplicates exist. You can 
+	 use Review All Counts to void unwanted tags, and adjust others.</p>
+	<p class="Numbered-Indent">The dialog box shows the Count ID, Description 
+	 and Count Date of the current count. The dialog box also displays 
+	 the following read-only information about the count:</p>
+	<p class="Numbered-Indent"><span class="Bold">Starting Tag Number/Ending 
+	 Tag Number</span> - The starting and ending tag numbers originally 
+	 assigned.</p>
+	<p class="Numbered-Indent"><span class="Bold">Counted Tags</span> - 
+	 The number of active tags that have had a quantity entered through 
+	 Enter Counts or Review All Counts.</p>
+	<p class="Numbered-Indent"><span class="Bold">Uncounted Tags</span> 
+	 - The number of active tags that have not had a Quantity entered.</p>
+	<p class="Numbered-Indent"><span class="Bold">Voided Tags</span> - 
+	 The number of tags with status Void.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total Tags</span> - Total 
+	 number of created tags. Equal to Counted Tags + Uncounted Tags + Voided 
+	 Tags.</p>
+	<p class="Numbered-Indent"><span class="Bold">Duplicates</span> - If 
+	 you used blank tags, the potential exists to have more than one count 
+	 entered for the same Part ID and location. This field shows how many 
+	 of these duplicates exist. If this field is not zero, a warning message 
+	 is shown when you start up this window. See above.</p>
+	<p class="Numbered-Indent"><span class="Bold">Recounted Tags</span> 
+	 - The total number of tags that have had Quantity entered through 
+	 Enter Recounts, or re-entered in Review All Counts.</p>
+	<ol class="p-Numbered" start="4">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 ending actions.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You have the decisions to make when ending 
+	 the physical count:</p>
+	<p class="Numbered-Indent"><span class="Bold">Updating Part Balances</span> 
+	 - In the normal physical inventory count, you probably want to allow 
+	 VISUAL to take the results of the counts and adjust part balances 
+	 accordingly. This executes Inventory Transaction Entry Adjust/In and 
+	 Adjust/Out transactions as necessary.</p>
+	<p class="Numbered-Indent">If you do not choose to do this, you have 
+	 to make any adjustments one by one. You may prefer to do this. For 
+	 example, you may need lower level control over the adjustment account 
+	 used. Choosing not to update is also useful when learning how Physical 
+	 Inventory Count works; you can start a count, enter some quantities, 
+	 and end it. If you do not keep the history (see below), the net effect 
+	 on the system will be zero.</p>
+	<p class="Numbered-Indent">Select whether to update by choosing the 
+	 appropriate radio button in the Ending Action section.</p>
+	<p class="Numbered-Indent"><span class="Bold">Keeping History</span> 
+	 - You have the option of permanently retaining the counted tags, or 
+	 deleting them when the count is ended. The default is to discard them 
+	 -check the Keep History box if you want to keep the tags. You can 
+	 print tags and tag lists, review all counts, and run comparison reports 
+	 on these tags, but you cannot use Enter Counts or Enter Recounts, 
+	 and you cannot restart the count.</p>
+	<p class="Numbered-Indent"><span class="Bold">Zero part locations without 
+	 tags</span> - This removes inventory for which you did not print tags. 
+	 It also removes inventory for which you did not specify a count quantity 
+	 on a tag.</p>
+	<p class="Numbered-Indent"><span class="Bold">Unlock Inventory for 
+	 all tags</span> - Select this option if you want to unlock locked 
+	 locations and part inventory. You may have locked them when you initialized 
+	 the physical count in order to prevent transactions from occurring 
+	 against the parts currently under evaluation by physical inventory.</p>
+	<p class="Numbered-Indent"><span class="Bold">Zero Uncounted Tags (Write-off)</span> 
+	 - When this check box is selected, the inventory is removed for every 
+	 part on an uncounted tag.</p>
+	<ol class="p-Numbered" start="5">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to end the count, or <span class="Bold">Cancel</span> to cancel 
+		 the operation and return to the Physical Inventory Entry window.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you selected Update Part Balances, the 
+	 adjustments are done now; this may take some time, depending on the 
+	 number of tags that need adjustments, and the speed of your system. 
+	 If you did not elect to retain the tags, they are deleted.</p>
+	<p class="Numbered-Indent">You are warned to have all users signed-off 
+	 the database. This is because many part records may be changing. Because 
+	 concurrent inventory transactions may not be possible, it is easiest 
+	 to perform this procedure at a low-use time.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Physical_Inventory_Count.htm"><img alt="btn_mini.gif" src="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

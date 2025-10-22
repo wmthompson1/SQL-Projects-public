@@ -1,0 +1,305 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Entering Purchase Requisitions Line Items</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { margin-left:48px; }
+tr.hcp2 { vertical-align:top; }
+td.hcp3 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Entering Purchase Requisitions Line Items</h1>
+	</div>
+	<p class="First">After entering general information in the header section 
+	 and tabs, begin adding line items to the purchase requisition.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert 
+		 Row</span> button on the table toolbar to add a new line to the 
+		 requisition.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL adds a new row to the table and assigns 
+	 it a line number.</p>
+	<p class="Numbered-Indent">The first column you select and the tab 
+	 movement between columns depends on your configuration of the line 
+	 item table. The procedures described below apply to columns in standard 
+	 order. In many cases, order of entry is not important.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">If you are requisitioning 
+		 an inventory part, double-click the <span class="Bold">Part ID</span> 
+		 column header.</p></li>
+	</ol>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>Purchase Requisition 
+			 Entry allows you to enter parts that are currently in the 
+			 PART table of the database. If you enter an unrecognized part, 
+			 VISUAL displays a warning message (Part id does not exist) 
+			 and does not allow you to continue.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent">A Part Browse dialog box appears.</p>
+	<p class="Numbered-Indent">You have the following browse options:&#160;</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> - Select 
+	 this option button to view a list of all parts in the database by 
+	 ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Description</span> 
+	 - Select this option button to view a list of all parts in the database 
+	 by description</p>
+	<p class="Numbered-Indent"><span class="Bold">Parts supplied by current 
+	 vendor</span> - Select this option button to display all parts the 
+	 selected vendor carries. This selection is not available until you 
+	 enter a vendor. The same Part ID can be listed multiple times in the 
+	 browse table. A Part ID is listed more than once if multiple Vendor 
+	 Part IDs are associated with the same part, or if you have approved 
+	 multiple vendor RFQs for the same Part ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendors supplying Current 
+	 Part</span> - Select this option button to view a list of vendors 
+	 that carry the part. You cannot use this selection until you specify 
+	 a Part ID.</p>
+	<p class="Numbered-Indent">The Vendors Supplying Current Part option 
+	 does not select a new Part ID, but instead selects a vendor from among 
+	 those that supply the part. When you use this option, the Vendor ID 
+	 and all PO vendor information can change. If this happens, VISUAL 
+	 requests confirmation. The Vendor Part ID, U/M, and Unit Price on 
+	 the line item all set or reset to the new vendor’s values.</p>
+	<p class="Numbered-Indent" style="mso-fareast-font-family: +mn-ea;"><span 
+	 style="mso-bidi-font-family: +mn-cs; mso-ascii-theme-font: minor-latin; 
+	 mso-fareast-theme-font: minor-fareast; mso-bidi-theme-font: minor-bidi; 
+	 mso-color-index: 13; language: en-US; mso-text-raise: 0%; mso-style-textfill-type: solid; 
+	 mso-style-textfill-fill-themecolor: dark1; mso-style-textfill-fill-color: black; 
+	 mso-style-textfill-fill-alpha: 100.0%;">If you enter a Part ID for 
+	 a part that has a preferred vendor, and you have not previously entered 
+	 a Vendor ID for the purchase order, the Vendor ID and information 
+	 for the preferred vendor is automatically used.</span></p>
+	<p class="Numbered-Indent">The same vendor can be listed multiple times 
+	 in the browse table. A vendor is listed more than once if multiple 
+	 Vendor Part IDs are associated with the part or if you have approved 
+	 multiple vendor RFQs for the part.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Where applicable, enter 
+		 information in the following columns.</p></li>
+	</ol>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>Due to different 
+			 line item table configurations, the order or availability 
+			 of columns may be different in your window. You are not required 
+			 to supply a value for each column.</p>
+			<p>Also, this table shares many field with the Purchase Order 
+			 Entry window. Because the successful outcome of a requisition 
+			 is a purchase order, VISUAL allows you to supply information 
+			 based on the eventuality of the requisition becoming a actual 
+			 purchase order.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> - The 
+	 quantity of the material or service you are requisitioning.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Service ID&gt;</span> 
+	 - The ID of the service you are requisitioning. Double-click the &lt;Service 
+	 ID&gt; column header to choose from a list of contracted services.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total PO Quantity</span> 
+	 -</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Vendor ID&gt;</span> 
+	 - Double-click the <span class="Bold">&lt;Vendor ID&gt;</span> column 
+	 header to select the vendor from whom you are ordering the material 
+	 or service. You can specify a vendor at the header level and a vendor 
+	 per line, even though you might want to enforce a limit of one master 
+	 Vendor ID per requisition.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor Part ID</span> 
+	 - If the vendor maintains a different ID for the part, enter it into 
+	 the Vendor Part ID field. VISUAL auto-fills this field if the vendor 
+	 specified in the header is the preferred vendor of the part. VISUAL 
+	 obtains this information from the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Warehouse ID&gt;</span> 
+	 - By default, VISUAL auto-fills each line with the Warehouse ID specified 
+	 in the header. To change warehouses, double-click the <span class="Bold">&lt;Warehouse 
+	 ID&gt;</span> column header.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;WBS Code&gt;</span> 
+	 - WBS codes refer to projects, the equivalent of work orders if you’re 
+	 using the Infor VISUAL Project-Based Edition.</p>
+	<p class="Numbered-Indent"><span class="Bold">Proj Ref Sub ID</span> 
+	 – See note below.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Proj Ref Seq No&gt;</span> 
+	 - See note below.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Dept ID&gt;</span> 
+	 - See note below.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Cost Category ID&gt;</span> 
+	 - See note below.</p>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>The above four fields 
+			 apply to the Infor VISUAL Project-Based Edition.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Part GL Account&gt;</span> 
+	 - For costing purposes, double-click the <span class="Bold">&lt;Part 
+	 GL Account&gt;</span> column header to select a general ledger account 
+	 to assign to the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Mfg Name</span> - Like 
+	 Vendor Part ID, if the preferred vendor is specified in the header, 
+	 VISUAL auto-fills this field with the part manufacturer’s name for 
+	 the part. Edit the name if necessary.</p>
+	<p class="Numbered-Indent"><span class="Bold">Mfg Part ID</span> - 
+	 Like Vendor Part ID, if the preferred vendor is specified in the header, 
+	 VISUAL auto-fills this field with the part manufacturer’s ID for the 
+	 part. Edit the name if necessary.</p>
+	<p class="Numbered-Indent"><span class="Bold">U/M</span> - This column 
+	 is auto-filled with the default unit of measure from the part master. 
+	 Modifying the U/M may result in an error, as a suitable conversion 
+	 must exist between the default u/m and any other u/m you may want 
+	 to specify. Set up conversion factors in Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Receive Date</span> - 
+	 If you know the date on which you expect to receive the purchase order, 
+	 enter it into the Receive Date field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Unit Price</span> - If 
+	 the vendor supplying the part has a price break quantity plan in effect, 
+	 VISUAL auto-fills this field with the unit price according to the 
+	 quantity of the line. Absent a preferred vendor unit price, VISUAL 
+	 uses the price from the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">Note</span>: Unit price 
+	 modifications may result in the total value of the requisition changing. 
+	 If the Preparer is bound by a dollar maximum (for example, $1,000), 
+	 VISUAL may disallow the save.</p>
+	<p class="Numbered-Indent"><span class="Bold">Discount %</span> - If 
+	 applicable, enter a discount percent for the part quantity. Discounts 
+	 apply per line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Extension</span> - The 
+	 actual value of the line is calculated by multiplying the unit price 
+	 by the quantity, plus any fixed/base charge, minus any applied discount 
+	 (see above).</p>
+	<p class="Numbered-Indent"><span class="Bold">Freight</span> - If applicable, 
+	 enter a freight charge for the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fixed/Base Charge</span> 
+	 - If applicable, enter a fixed/base charge for the line. When you 
+	 choose an outside service, VISUAL obtains the default fixed/base charge 
+	 from the service record and auto-fills this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minimum Charge</span> 
+	 - If the requisition line is for a service linked to a work order, 
+	 enter a minimum charge. All outside services have default per unit, 
+	 base charge, and minimum charge values. When you choose an outside 
+	 service, VISUAL obtains the minimum charge from the service record 
+	 and auto-fills this field.</p>
+	<p class="Numbered-Indent"><span class="Bold"># Pieces</span> - If 
+	 the part on the line is a piece-tracked part, enter the appropriate 
+	 number of pieces.</p>
+	<p class="Numbered-Indent"><span class="Bold">Length</span> - For dimensional 
+	 inventory, enter the length of the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Width</span> - For dimensional 
+	 inventory enter the width of the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Height</span> - For dimensional 
+	 inventory, enter the height of the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dim UM</span> - For dimensional 
+	 inventory; select a dimensional unit of measure. If the part is a 
+	 piece-tracked part, VISUAL obtains the default Dim UM from the part 
+	 master and auto-fills this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Line Status</span> - 
+	 VISUAL allows you to specify a status per line in addition to a header 
+	 status. After all tasks for a requisition are completed and the requisition 
+	 is cleared to become a purchase order, the status of lines are adjusted 
+	 accordingly. After a requisition is approved (status &quot;Approved&quot;), 
+	 VISUAL prevents further status changes, on both the header and line 
+	 level.</p>
+	<p class="Numbered-Indent"><span class="Bold">Material Code</span> 
+	 - If the part is an order-management part and a material code is specified 
+	 for it, VISUAL displays the material code from the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;HTS Code&gt;</span> 
+	 - If the part is an order-management part and an HTS code is specified 
+	 for it, VISUAL displays the HTS code from the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Country of Origin&gt;</span> 
+	 - If the part is an order-management part and a country or origin 
+	 code is specified for it, VISUAL displays the country of origin code 
+	 from the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">Duty %</span> - If the 
+	 part is an order-management part and a duty % (duty percents are part 
+	 of HTS codes) is specified for it, VISUAL displays the duty % from 
+	 the part master.</p>
+	<p class="Numbered-Indent"><span class="Bold">Duty Amount</span> - 
+	 If a duty percent applies, VISUAL calculates the duty amount.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;GL Expense Acct ID&gt;</span> 
+	 - If appropriate, select a G/L Account ID for the line. You cannot, 
+	 however, expense an inventory part, unless the part is designated 
+	 a consumable.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Base ID&gt;</span> 
+	 - If you want to link the material or service to a work order or project, 
+	 double-click the <span class="Bold">&lt;Base ID&gt;</span> column 
+	 header to choose a work order or project.</p>
+	<p class="Numbered-Indent"><span class="Bold">Lot ID</span> - After 
+	 choosing a work order or project Base ID, VISUAL auto-fills the work 
+	 order/project Lot ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Split ID</span> - After 
+	 choosing a work order or project Base ID, VISUAL auto-fills the work 
+	 order/project Split ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sub ID</span> - After 
+	 choosing a work order or project Base ID, VISUAL auto-fills the work 
+	 order/project Sub ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Seq #&gt;</span> 
+	 - If the line is for a service, double-click the &lt;Seq #&gt; column 
+	 header to choose a sequence in the work order or project.</p>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>The work order/project 
+			 service operation you choose must be the same as the Service 
+			 ID specified earlier.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Piece #&gt;</span> 
+	 -</p>
+	<p class="Numbered-Indent"><span class="Bold">Link Part ID</span> - 
+	 If the part is linked via an allocation to demand of any kind, the 
+	 link ID of the part appears here.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock U/M Order Quantity</span> 
+	 - If the default stock u/m, differs from the u/m specified for the 
+	 line, VISUAL calculates the stock quantity based on the conversion 
+	 established between the two.</p>
+	<p class="Numbered-Indent"><span class="Bold">Specs</span> - If the 
+	 part on the line has an attached specification, this check box is 
+	 selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">Has Del Sched</span> 
+	 - If the line contains a delivery schedule, this check box is selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Ship from ID&gt;</span> 
+	 - If applicable, double-click the <span class="Bold">&lt;Ship from 
+	 ID&gt;</span> column header and select a ship from address. Ship from 
+	 IDs can be specified per line and at the header level. Left blank, 
+	 all lines inherit the Ship from ID specified in the header.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;Ship to ID&gt;</span> 
+	 - If applicable, double-click the <span class="Bold">&lt;Ship to ID&gt;</span> 
+	 column header and select a ship to address. Ship to IDs can be specified 
+	 per line and at the header level. Left blank, all lines inherit the 
+	 Ship to ID specified in the header.</p>
+	<p class="Numbered-Indent"><span class="Bold">&lt;VAT Category&gt;</span> 
+	 - If VAT is activated, double-click the <span class="Bold">&lt;VAT 
+	 Category&gt;</span> column header to choose an appropriate VAT category 
+	 for the line.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 on the main toolbar to commit the requisition to the database.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Purchase_Requisition_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

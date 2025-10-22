@@ -1,0 +1,222 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating Maintenance Schedules</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p><a name="rbJobs" id="rbJobs"></a><a name="rbSortResource" id="rbSortResource"></a><a 
+	 name="rbSortCustomer" id="rbSortCustomer"></a><a name="rbSortEquipment" 
+														 id="rbSortEquipment"></a><a 
+	 name="rbSortDate" id="rbSortDate"></a><a name="rbSortWO" id="rbSortWO"></a><a 
+	 name="rbSortSite" id="rbSortSite"></a></p>
+<div id="content">
+	<div id="banner">
+		<h1>Creating Maintenance Schedules</h1>
+	</div>
+	<p class="First">After you have entered equipment and equipment profiles 
+	 into your database, you can generate a maintenance schedule that reflects 
+	 current equipment/profile relationships.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">From the File Menu, 
+		 select <span class="Bold">Create Schedule</span> or click the 
+		 <span class="Bold">Create Schedule</span> toolbar button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Create Planned Maintenance Schedule 
+	 dialog box appears.</p>
+	<p class="Numbered-Indent">Scheduled lines appear in the table. Click 
+	 the <span class="Bold">Clear Sched</span> button if you want to clear 
+	 the display. Use the features in the top part of the window as a filter 
+	 to control what you want to include in the schedule.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Normal-Indent"><span class="Bold">Date From/To</span> - Click 
+	 the Calendar buttons to select a date range.</p>
+	<p class="Normal-Indent"><span class="Bold">Profile ID</span> - Click 
+	 the Profile ID arrow to select the maintenance profile ID of the equipment. 
+	 The profile instructs VISUAL when to schedule the equipment for service. 
+	 Profiles dictate to VISUAL the number of days it should allow to lapse 
+	 between servicing, as part of a daily, weekly, monthly, or yearly 
+	 schedule. Without profiles, VISUAL cannot schedule maintenance for 
+	 a piece of equipment.</p>
+	<p class="Numbered-Indent"><span class="Bold">Equipment</span> - Click 
+	 the Equipment browse button to select the ID of the piece of equipment. 
+	 You specify this during new equipment entry. </p>
+	<p class="Normal-Indent"><span class="Bold">Type</span> - Click the 
+	 Type browse button to select the type of Equipment ID. You specify 
+	 this during new equipment entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Model</span> - Click 
+	 the Model browse button to select the model of the Equipment ID. You 
+	 specify this during new equipment entry.</p>
+	<p class="Normal-Indent"><span class="Bold">Resource</span> - Click 
+	 the browse button to select a shop resource to use.</p>
+	<p class="Normal-Indent"><span class="Bold"><span class="Bold">S</span>ite 
+	 -</span> Click the Site ID browse button and select a site to use.</p>
+	<p class="Normal-Indent"><span class="Bold">Customer</span> - Click 
+	 the Customer browse button to select the ID of the customer for whom 
+	 you are performing the equipment maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Area</span> - Click the 
+	 Area browse button to select an equipment area</p>
+	<p class="Numbered-Indent"><span class="Bold">Branch</span> - Click 
+	 the Branch browse button to select a branch for the equipment.</p>
+	<p class="Numbered-Indent"><span class="Bold">Eng ID</span> - Click 
+	 the Eng ID browse button to select the engineer ID for the equipment. 
+	 You specify this during new equipment entry. </p>
+	<p class="Normal-Indent">Select one of these options:</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal</span> - Select 
+	 Internal if a maintenance job is internal. You specify job location 
+	 during new equipment entry. </p>
+	<p class="Numbered-Indent"><span class="Bold">External</span> - Select 
+	 External if a maintenance job is external.</p>
+	<p class="Numbered-Indent"><span class="Bold">Both</span> - Select 
+	 Both is the maintenance job is both internal and external.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">To exclude from the 
+		 schedule with information displaying in the data fields, select 
+		 the <span class="Bold">Exclude</span> check boxes to the right. 
+		 This feature is useful if you want to run different scheduling 
+		 scenarios without deleting and modifying filter preferences. The 
+		 check boxes, however, are only available if the corresponding 
+		 data fields are active as well.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Schedule</span> 
+		 button to begin the scheduling process.&#160;</p></li>
+	</ol>
+	<p class="Numbered-Indent">A dialog box appears in which you can see 
+	 the progress of the scheduling run.</p>
+	<p class="Numbered-Indent">After VISUAL completes the scheduling run, 
+	 another dialog box appears summarizing the number of new job records 
+	 created and the range for the jobs.</p>
+	<p class="Numbered-Indent">Scheduling results appear in the <a name="tblSCHEDULE" 
+	 id="tblSCHEDULE"></a>line item table, one line per job.</p>
+	<p class="Numbered-Indent">The line item table contains the following 
+	 columns:</p>
+	<p class="Normal-Indent"><span class="Bold">Site -</span> The site 
+	 selected for the scheduled maintenance job.</p>
+	<p class="Numbered-Indent"><span class="Bold"><span class="Bold">J</span>ob 
+	 Date</span> - The date on which the maintenance job is scheduled to 
+	 occur. For a piece of equipment with a profile for which you have 
+	 set a daily frequency preference, using an occurrence rate of every 
+	 six days, with a coverage range of 3/3/2004 - 5/31/2004, VISUAL schedules 
+	 a series like this:</p>
+	<p class="Numbered-Indent">3/9/2004, 3/15/2004, 3/21/2004, 3/27/2004, 
+	 4/2/2004, 4/8/2004, 4/14/2004, 4/20/2004, 4/26/2004, 5/2/2004, 5/8/2004, 
+	 5/14/2004, 5/20/2004, 5/26/2004.</p>
+	<p class="Numbered-Indent">Job ID - The Job ID of the maintenance job.</p>
+	<p class="Numbered-Indent"><span class="Bold">Customer</span>- The 
+	 ID of the customer for whom you are performing the equipment maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Equipment</span> - The 
+	 ID of the piece of equipment. You specify this during new equipment 
+	 entry. </p>
+	<p class="Numbered-Indent"><span class="Bold">Model</span> - The model, 
+	 if any, of the Equipment ID. You specify this during new equipment 
+	 entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Type</span> - The type, 
+	 if any, of the Equipment ID. You specify this during new equipment 
+	 entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Service Area -</span> 
+	 The service area, if any, of the Equipment ID. You specify this during 
+	 new equipment entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Branch -</span> The branch, 
+	 if any, of the Equipment ID. You specify this during new equipment 
+	 entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Engineer</span> - The 
+	 Engineer ID for the equipment. You specify this during new equipment 
+	 entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">WO Base ID</span> - The 
+	 Base ID of the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Eng ID</span> - The equipment 
+	 Maintenance Engineering ID. You specify this during new equipment 
+	 entry.</p>
+	<p class="Numbered-Indent"><span class="Bold">Def Status -</span> The 
+	 status of the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold"><span class="Bold">W</span>O 
+	 Create Date</span> - The date on which VISUAL created the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal</span> - Either 
+	 a Y or an N displays in the column. If a maintenance job is internal, 
+	 a Y appears; if it is external, an N appears. You specify job location 
+	 during new equipment entry. </p>
+	<p class="Numbered-Indent"><span class="Bold">Sales Order -</span> 
+	 If a sales order was created in conjunction with this maintenance 
+	 record, the ID of the sales order is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Line No -</span> The 
+	 line number of the sales order for this maintenance record.</p>
+	<p class="Numbered-Indent"><span class="Bold">Last Invoice -</span> 
+	 The date of the last invoice for this maintenance record.</p>
+	<p class="Numbered-Indent"><span class="Bold">Invoice Flag</span> -</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">You can change what 
+		 appears in the line item table by selecting the option buttons 
+		 in the Planned Maintenance Status section.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The following option buttons allow you to 
+	 include and exclude certain kinds of maintenance jobs.</p>
+	<p class="Numbered-Indent"><a name="rbSTATUS_PLANNED" id="rbSTATUS_PLANNED"></a><span 
+	 class="Bold">Planned</span> - Select the <span class="Bold">Planned</span> 
+	 option button to view planned orders.</p>
+	<p class="Numbered-Indent"><span class="Bold"><a name="rbSTATUS_WO_CREATED" 
+													 id="rbSTATUS_WO_CREATED"></a>WO 
+	 Created</span> - Select the <span class="Bold">WO Created</span> option 
+	 button to view new work orders.</p>
+	<p class="Numbered-Indent"><a name="rbSTATUS_WO_CLOSED" id="rbSTATUS_WO_CLOSED"></a><span 
+	 class="Bold">WO Closed</span> - Select the <span class="Bold">WO Closed</span> 
+	 option button to view closed work orders.</p>
+	<p class="Numbered-Indent"><a name="rbSTATUS_CO_CREATED" id="rbSTATUS_CO_CREATED"></a><span 
+	 class="Bold">CO Created</span> - Select the <span class="Bold">CO 
+	 Created</span> option button to view new customer orders.</p>
+	<p class="Numbered-Indent"><a name="rbSTATUS_BILLED" id="rbSTATUS_BILLED"></a><span 
+	 class="Bold">Billed</span> - Select the <span class="Bold">Billed</span> 
+	 option button to view billed customer orders.</p>
+	<p class="Numbered-Indent"><a name="rbSTATUS_ALL" id="rbSTATUS_ALL"></a><span 
+	 class="Bold">All</span> - Select the <span class="Bold">All</span> 
+	 option button to view all orders.</p>
+	<p class="Numbered-Indent"><a name="rbINTERNAL_SORT" id="rbINTERNAL_SORT"></a><span 
+	 class="Bold">Internal</span> - Select the <span class="Bold">Internal</span> 
+	 option button to view only internal jobs.</p>
+	<p class="Numbered-Indent"><a name="rbEXTERNAL_SORT" id="rbEXTERNAL_SORT"></a><span 
+	 class="Bold">External</span> - Select the <span class="Bold">External</span> 
+	 option button to view only external jobs.</p>
+	<p class="Numbered-Indent"><a name="rbBOTH_3" id="rbBOTH_3"></a><span 
+	 class="Bold">Both</span> - Select the <span class="Bold">Both</span> 
+	 option button to view both Internal and External jobs. This is the 
+	 default.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you want the information 
+		 in the table to appear in reverse order, select the <a name="cbDESCENDING" 
+		 id="cbDESCENDING"></a><span class="Bold">Descending</span> check 
+		 box.</p></li>
+	</ol>
+	<table style="margin-left: 48px;" cellspacing="0" width="372">
+		<tr style="vertical-align: top;">
+			<td width="66" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp2"><p><a name="cbSEARCHING" 
+														 id="cbSEARCHING"></a>Depending 
+			 on Status object you select, the Search Set check box indicates 
+			 if you are searching within a set.</p></td>
+		</tr>
+	</table>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Planned_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

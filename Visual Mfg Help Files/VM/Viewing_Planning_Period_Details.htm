@@ -1,0 +1,224 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Planning Period Details</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%; }
+td.hcp2 { vertical-align:top;
+border:solid #000000 1.0pt;
+border-top:none;
+mso-border-left-alt:solid black .25pt;
+mso-border-bottom-alt:solid black .25pt;
+mso-border-right-alt:solid black .25pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+td.hcp3 { vertical-align:top;
+border-top:none;
+border-left:none;
+border-bottom:solid #000000 1.0pt;
+border-right:solid #000000 1.0pt;
+mso-border-left-alt:solid black .25pt;
+mso-border-bottom-alt:solid black .25pt;
+mso-border-right-alt:solid black .25pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Planning Period Details</h1>
+	</div>
+	<p>To view a daily breakdown of supply and demand for a planning period, 
+	 open the Planning Period Details dialog. </p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If the standard mode 
+		 is displayed, select <span class="Bold">View</span>, <span class="Bold">Show 
+		 Advanced Mode</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To start the Advanced 
+		 Material Planning window, select <span class="Bold">Material Planning</span> 
+		 from the Inventory menu.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site to use. If you are licensed to use a single site, this field 
+		 is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the Part ID browse 
+		 button and select the part to view.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To view part information 
+		 for a particular warehouse, click the Warehouse ID arrow and select 
+		 the warehouse to view. If the Warehouse ID field is not displayed, 
+		 select View, View by Warehouse to display the field. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Open the Planning Period 
+		 Details dialog. You can open the dialog in these ways:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Double-clicking 
+		 a column header in the Advanced Material Planning table</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Select a planning 
+		 period column, then select Info, Show Planning Period Details</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Select a planning 
+		 period column, then click the Planning Period Details toolbar 
+		 button</p></li>
+	</ol>
+	<p>The header shows summary information for the planning period. If 
+	 you have enabled the Calculate Suggested MPS feature, then the Suggested 
+	 MPS and Proposed Inventory for the period are also displayed.</p>
+	<p>To navigate to a different planning period, use the arrows next 
+	 to the Planning Period field. You can also select a different period 
+	 in the main Advance Material Planning window. </p>
+	<p>The type of demand is displayed above the table. The type of demand 
+	 determines how the gross demand is calculated. These types are used:</p>
+	<p><span class="Bold">Real</span> – The gross demand is calculated 
+	 by adding customer and dependent demand. </p>
+	<p><span class="Bold">Mixed</span> – The gross demand is the greater 
+	 of real demand and forecasted demand.</p>
+	<p><span class="Bold">Forecast</span> – The gross demand is the forecasted 
+	 demand.</p>
+	<p>To add demand information from active forecasts for the part, select 
+	 the <span class="Bold">Show Active Forecasts</span> check box.</p>
+	<p>The daily table shows information about each day’s supply, demand, 
+	 and projected inventory. This information is displayed: </p>
+	<p><span class="Bold">Beginning Inventory</span> – The quantity on 
+	 hand at the beginning of the day. For the first day in the planning 
+	 period, the beginning inventory value is the same as the beginning 
+	 inventory value in the header. For subsequent days, the beginning 
+	 inventory equals the projected inventory from the previous day.</p>
+	<p><span class="Bold">MRP Planned Orders</span> – The quantity of all 
+	 planned orders for the day.</p>
+	<p><span class="Bold">Suggested MRP Release</span> – The quantity of 
+	 all planned orders whose suggested release date is equal to the date 
+	 in the column header.</p>
+	<p><span class="Bold">Current Firmed Orders</span> – The quantity of 
+	 all supply orders with a due date that is equal to the date in the 
+	 column header.</p>
+	<p><span class="Bold">Gross Supply</span> – The total of the beginning 
+	 inventory, MRP planned orders, and current firmed orders. </p>
+	<p><span class="Bold">Active Forecasts</span> – If you selected the 
+	 Show Active Forecasts check box, then all currently active forecasts 
+	 for the part are displayed. These forecasts are informational only. 
+	 The quantities are not used to calculate demand.</p>
+	<p><span class="Bold">Remaining Forecast</span> – The quantity of all 
+	 active forecasts that has not yet been consumed by demand is displayed. 
+	 These calculations are used:</p>
+	<p class="Normal-Indent"><span class="Bold">Real</span> – If the period 
+	 type is Real, then the Remaining Forecast is zero. Forecasts do not 
+	 affect demand in Real planning periods.</p>
+	<p class="Normal-Indent"><span class="Bold">Mixed</span> – If the period 
+	 type is Mixed, then a series of calculations are made to determine 
+	 the Remaining Forecast figure.</p>
+	<p class="Normal-Indent">First, the total real demand for the entire 
+	 planning period and the total forecast demand for the entire planning 
+	 period are determined. The total real demand is determined by adding 
+	 each day’s customer demand and dependent demand. The total forecast 
+	 demand is determined by adding each day’s demand for all active forecasts.</p>
+	<p class="Normal-Indent">The total real demand and total forecast demand 
+	 are then compared to determine the Remaining Forecast for each day. 
+	 This table shows the calculations:</p>
+	<table class="MsoNormalTable" style="margin-left: 53.85pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt;" 
+			 cellspacing="0">
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td style="border: solid #000000 1.0pt; mso-border-alt: solid black .25pt; 
+				 mso-border-bottom-alt: solid black .5pt; mso-shading: windowtext; 
+				 mso-pattern: solid #E6E6E6; padding: 4.0pt 2.0pt 4.0pt 2.0pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;" height="23" width="288" bgcolor="#E6E6E6"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp1">Condition</span></b></p></td>
+			<td style="border: solid #000000 1.0pt; border-left: none; 
+				 mso-border-left-alt: solid black .25pt; mso-border-alt: solid black .25pt; 
+				 mso-border-bottom-alt: solid black .5pt; mso-shading: windowtext; 
+				 mso-pattern: solid #E6E6E6; padding: 4.0pt 2.0pt 4.0pt 2.0pt; 
+				 padding-left: 0px; padding-top: 0px; padding-right: 0px; 
+				 padding-bottom: 0px;" height="23" width="288" bgcolor="#E6E6E6"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp1">Remaining 
+			 Forecast Calculation</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 24.0pt;">
+			<td height="32" width="288" class="hcp2"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">Total 
+			 real demand is greater than total forecast demand</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp1">Remaining 
+			 Forecast for each day= 0</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 24.0pt;">
+			<td height="32" width="288" class="hcp2"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">Total 
+			 real demand = 0</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp1">Remaining 
+			 Forecast for each day = Total daily quantity for all forecasts.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; mso-yfti-lastrow: yes; height: 156.0pt;">
+			<td height="208" width="288" class="hcp2"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">Total 
+			 real demand does not equal zero and is less than total forecast 
+			 demand</span></p></td>
+			<td height="208" width="288" class="hcp3"><p class="CellBody" 
+				 style="line-height: 11.0pt;"><span class="hcp1">The 
+			 Total real demand is subtracted from the forecast entry with 
+			 the earliest date within the planning period.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">If 
+			 the result is greater than zero, then the result is inserted 
+			 into the Remaining Forecast column for that date.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;">&#160;</p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">If 
+			 the result is zero or less, then a zero is inserted into the 
+			 Remaining Forecast column for that date, and the Total real 
+			 demand is reduced by the forecast entry quantity to show that 
+			 some of the demand has been applied to a forecast.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;">&#160;</p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp1">Repeat 
+			 these steps for all remaining forecast entries, or until all 
+			 real demand has been applied.</span></p></td>
+		</tr>
+	</table>
+	<p class="Normal-Indent">&#160;</p>
+	<p class="Normal-Indent"><span class="Bold">Forecast</span> – If the 
+	 period type is Forecast, then the Remaining Forecast equals the total 
+	 forecasted demand for the date. Real demand is not considered in the 
+	 calculation. </p>
+	<p><span class="Bold">Customer Demand</span> – The total quantity of 
+	 all customer orders for the part with a want date equal to the date 
+	 in the column header. </p>
+	<p><span class="Bold">Dependent Demand</span> – The total quantity 
+	 required by work orders or interbranch transfers with a want date 
+	 equal to the date in the column header. </p>
+	<p><span class="Bold">Gross Demand</span> – The total demand quantity 
+	 for the date. These calculations are used:</p>
+	<p class="Normal-Indent"><span class="Bold">Real</span> – If the period 
+	 type is Real, then Gross Demand = Customer Demand + Dependent Demand.</p>
+	<p class="Normal-Indent"><span class="Bold">Mixed</span> – If the period 
+	 type is Mixed, then Gross Demand = Remaining Forecast + Customer Demand 
+	 + Dependent Demand.</p>
+	<p class="Normal-Indent"><span class="Bold">Forecast</span> – If the 
+	 period type is Forecast, then Gross Demand = Remaining Forecast. </p>
+	<p><span class="Bold">Projected Inventory</span> – The quantity projected 
+	 to remain in your inventory. This calculation is used: Gross Supply 
+	 - Gross Demand.</p>
+	<p><span class="Bold">Current MPS</span> – For master scheduled parts, 
+	 the scheduled production for the date. </p>
+	<h2>Viewing Demand and Supply Orders in the Planning Period Details 
+	 Dialog</h2>
+	<p>When you first open the Planning Period Details dialog, all demand 
+	 and supply orders for the period are displayed. To filter the information, 
+	 select one or more columns Click a column to view the demand and supply 
+	 orders for the day. Press CTRL and click two columns to select a date 
+	 range. All orders that fall between the two dates that you select 
+	 are displayed. </p>
+</div>
+</body>
+</html>

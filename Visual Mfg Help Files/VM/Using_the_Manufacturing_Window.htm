@@ -1,0 +1,131 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using the Manufacturing Window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using the Manufacturing Window</h1>
+	</div>
+	<p class="First">To use the Manufacturing Window to maintain engineering 
+	 information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 line item from the Estimating Window line item table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Engineering</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Manufacturing window opens. If there 
+	 is an Engineering Master associated with the line item, it automatically 
+	 appears in the window.</p>
+	<p class="Numbered-Indent">Remember, if you use the Engineering option 
+	 to edit an engineering master for an inventory part, you are editing 
+	 the standard master for the part. Any changes you make here affect 
+	 all work orders subsequently created for this part.</p>
+	<p class="Numbered-Indent">If you are using a Quote Master, it automatically 
+	 appears in the window. If this is a new quote master, a single header 
+	 appears. If you are licensed to use multiple sites, specify the site 
+	 in which you are preparing the quote.</p>
+	<p class="Numbered-Indent">There are two ways you can proceed:</p>
+	<ul>
+		<li class="p-BulletIndent"><p class="BulletIndent">Manually add 
+		 new operations and material requirements.</p></li>
+		<li class="p-BulletIndent"><p class="BulletIndent">Use Copy From 
+		 to copy an existing engineering master, quote master, or work 
+		 order master. This is useful if there is an existing master that 
+		 is similar to the quote master you wish to create.</p></li>
+	</ul>
+	<p class="Normal-Indent">You do not have to specify all information 
+	 in a quote master. However, the following information is essential 
+	 to computing an accurate estimate of your costs:</p>
+	<ul>
+		<li class="p-BulletIndent"><p class="BulletIndent">Operations</p></li>
+	</ul>
+	<p class="Numbered-Indent">You should add all planned operations to 
+	 the quote master. For each operation, you should specify the following 
+	 information as accurately as possible:</p>
+	<p class="Numbered-Indent">Resource ID</p>
+	<p class="Numbered-Indent">Service ID (for a subcontractor resource)</p>
+	<p class="Numbered-Indent"><span class="Bold">Setup &amp; Run Time 
+	 Information</span></p>
+	<p class="Numbered-Indent">Setup Hours</p>
+	<p class="Numbered-Indent">Run Time, Run Type, Load Size</p>
+	<p class="Numbered-Indent"><span class="Bold">Cost Information</span></p>
+	<p class="Numbered-Indent">Setup Cost/Hour, Run Cost/Hour, Run Cost/Unit, 
+	 Setup Burden/Hour, Run Burden/Hour, Run Burden/Unit, Setup Burden 
+	 Percent, Run Burden Percent, Fixed Burden.</p>
+	<p class="Numbered-Indent">When you enter a Resource ID, cost information 
+	 automatically appears from the defaults specified in Shop Resource 
+	 Maintenance for the Resource ID. You can override any of these fields 
+	 in the Operations dialog box.</p>
+	<p class="Numbered-Indent">Use the Operation Type capability of Shop 
+	 Resource Maintenance for quickly building quote masters. It allows 
+	 you to specify ALL of this information once and then given a reference 
+	 ID, which is the Resource ID. This allows you to build a library of 
+	 standard operations that you can reference when building a quote master 
+	 (you can also use operation types in engineering masters and work 
+	 orders).</p>
+	<ul>
+		<li class="p-BulletIndent"><p class="BulletIndent">Material Requirements</p></li>
+	</ul>
+	<p class="Normal-Indent">Add all planned material requirements to the 
+	 appropriate operations. For each, the following information should 
+	 be specified as accurately as possible:</p>
+	<p class="Normal-Indent">Part ID</p>
+	<p class="Normal-Indent"><span class="Bold">Quantity Information</span></p>
+	<p class="Normal-Indent">Qty Per</p>
+	<p class="Normal-Indent">Fixed Quantity</p>
+	<p class="Normal-Indent">Scrap %</p>
+	<p class="Normal-Indent">Dimensions&#160;(if appropriate)</p>
+	<p class="Normal-Indent">Usage U/M&#160;(if appropriate)</p>
+	<p class="Normal-Indent"><span class="Bold">Cost Information</span></p>
+	<p class="Normal-Indent">Material Unit Cost</p>
+	<p class="Normal-Indent">Fixed Cost</p>
+	<p class="Normal-Indent">Labor Unit Cost</p>
+	<p class="Normal-Indent">Burden Unit Cost</p>
+	<p class="Normal-Indent">Service Unit Cost</p>
+	<p class="Normal-Indent">Burden per Unit</p>
+	<p class="Normal-Indent">Burden Percent</p>
+	<p class="Normal-Indent"><span class="Bold">Vendor Information</span></p>
+	<p class="Normal-Indent">Vendor ID</p>
+	<p class="Normal-Indent">Vendor Part ID</p>
+	<p class="Numbered-Indent">If the requirement is for an inventory part, 
+	 you must specify a Part ID. All costs default from those specified 
+	 in Part Maintenance. VISUAL uses the preferred vendor specified in 
+	 Part Maintenance when looking up price breaks. If you wish to explicitly 
+	 specify a different vendor, use the Vendor ID field.</p>
+	<p class="Numbered-Indent">Infor VISUAL allows material requirements 
+	 for parts that do not have an item master in your parts table. This 
+	 is important when defining quote masters; because you are building 
+	 a quote master, you may be specifying parts that are special to the 
+	 order, and are not in your part table. To do this, leave the Part 
+	 ID blank. Enter a description in the Specification area. You must 
+	 fill in all cost information manually.</p>
+	<p class="Numbered-Indent">When defining a non-inventory material requirement 
+	 in a quote master, you may specify quantity breaks by using the Quantity 
+	 Break Costs option located in the Quotes tab area of the Material 
+	 window. This uses the up-to-quantity method to assign not only unit 
+	 costs, but a fixed cost and minimum cost, as well. If vendor quotes 
+	 are available for the part, you can specify them here. The Estimating 
+	 Window uses the quantity break information when computing costs for 
+	 different lot sizes.</p>
+	<p class="Numbered-Indent">You may also specify the Vendor ID and Vendor 
+	 Part ID, if known.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Estimating_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

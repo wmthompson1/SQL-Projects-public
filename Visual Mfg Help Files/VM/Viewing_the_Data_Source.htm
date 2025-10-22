@@ -1,0 +1,115 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing the Data Source</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { margin-left:24px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing the Data Source</h1>
+	</div>
+	<p class="First"><span class="Bold">NOTE:</span> To use this feature, 
+	 you must have system administration privileges. </p>
+	<p>You can use the Display Data Source toolbar button to display the 
+	 database table and column that store the information shown in the 
+	 interface:</p>
+	<table style="left: 0px; top: 88px; height: 49px; margin-left: 12px;" 
+			 cellspacing="0" width="534">
+		<col style="width: 9.178%;">
+		<col style="width: 90.822%;">
+		<tr>
+			<td><p class="hcp1"><img src="Graphics/btn_datasource.png" alt="" style="border: none;" border="0"></p></td>
+			<td><p class="hcp1">Display Data Source toolbar 
+			 button</p></td>
+		</tr>
+	</table>
+	<p>You can use this feature on the main window. You cannot use the 
+	 feature in the dialogs that you open from the main window, such as 
+	 the Delivery Schedule dialog in Customer Order Entry. </p>
+	<p>The data source function is available in these windows: &#160;</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Accounting Window</p></li>
+		<li class="p-Bullet"><p class="Bullet">A/P Invoice Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">A/P Payment Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">A/R Cash Application</p></li>
+		<li class="p-Bullet"><p class="Bullet">A/R Invoice Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer Order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Estimating Window</p></li>
+		<li class="p-Bullet"><p class="Bullet">IBT Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Manufacturing Window (header, 
+		 material, and operation cards only)</p></li>
+		<li class="p-Bullet"><p class="Bullet">Material Trace History</p></li>
+		<li class="p-Bullet"><p class="Bullet">Outside Service Dispatch 
+		 Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Outside Service Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Part Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Part Trace Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Management Window</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Receipt Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Requisition Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Receiving Inspection</p></li>
+		<li class="p-Bullet"><p class="Bullet">RMA Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Shipping Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Shop Resource Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Task Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vendor Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vendor RFQ Entry</p></li>
+	</ul>
+	<p>To display the data source of an interface object: </p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Open a window where 
+		 the Database Source option is supported.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Display 
+		 Data Source</span> button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the interface 
+		 object whose source you want to view. For fields, click the field. 
+		 For check boxes and option buttons, you can click the label or 
+		 the object. This information is displayed in the Status Bar at 
+		 the bottom of the window:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a single 
+		 database table and column supplies data to the object, then the 
+		 table and column are displayed.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If data in 
+		 the field could be stored in more than one database table and 
+		 column, then all database tables and columns that store the data 
+		 are displayed. For example, if you view the data source for the 
+		 Fabricated check box in Part Maintenance, both PART_SITE.FABRICATED 
+		 and PART.FABRICATED are displayed.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If data in 
+		 the field is a calculation of multiple database tables and columns, 
+		 such as the Grand Total field in Customer Order Entry, then Calculated 
+		 is displayed. </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If the data 
+		 in the field is derived from a single source, then Derived is 
+		 displayed. For example, the Specs column in the line table in 
+		 Customer Order Entry is a derived field. Its value is determined 
+		 by the existence of a specification for the part on the line. 
+		 </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If the data 
+		 in the field is derived from multiple fields, then Derived from 
+		 multiple fields is displayed. For example, the Supply Status column 
+		 in the line table in Customer Order Entry is derived from multiple 
+		 fields in the database. </p></li>
+	</ol>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">To view the source for 
+		 another object, click the <span class="Bold">Display Data Source</span> 
+		 button again and then click the second object. </p></li>
+	</ol>
+</div>
+</body>
+</html>

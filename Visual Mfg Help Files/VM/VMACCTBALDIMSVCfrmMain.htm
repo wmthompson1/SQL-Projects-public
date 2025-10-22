@@ -1,0 +1,137 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Working with the Account Balance Dimensions Service</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Working with the Account Balance Dimensions Service</h1>
+	</div>
+	<h2><a name="Install"></a>Installing the Service</h2>
+	<p>To install the service:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Navigate to the directory 
+		 where you store the VISUAL executables.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Right-click VMACCTBALDIMSVC.EXE 
+		 and select <span class="Bold">Run as Administrator</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Sign in to the database 
+		 where you want to run the service. You can use any valid VISUAL 
+		 user ID and password. This is the user ID that the service will 
+		 use when accessing the database. The user ID that you specify 
+		 can still be used to access the VISUAL executables. The service 
+		 does not need its own user ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Site ID</span> – Specify 
+	 the site where you want to run the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Log File Directory</span> 
+	 – Specify where to store the log file for the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Polling Interval</span> 
+	 – &#160;Specify in seconds how frequently the service should check 
+	 for updates to the ACCT_BAL_DIM_BATCH table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Log Level</span> – Specify 
+	 the level of information to write to the log file. Click one of these 
+	 options:</p>
+	<p class="DoubleIndent"><span class="Bold">None</span> – To write the 
+	 time that the service started, click this option. This option is recommended 
+	 for normal production environments.</p>
+	<p class="DoubleIndent"><span class="Bold">Error</span> – To write 
+	 the time that the service started and any error messages, click this 
+	 option.</p>
+	<p class="DoubleIndent"><span class="Bold">Info</span> – To write the 
+	 time that the service started, error messages, and additional information 
+	 about the service, click this option. The use of this option is recommended 
+	 only if you are troubleshooting issues with the service. When you 
+	 use this option, the size of the log file grows quickly.</p>
+	<p class="Numbered-Indent">The log file’s name is the name of the service 
+	 executable combined with the name of your site. For example, if you 
+	 installed the service on site MMC, the name of the log file is VMACCTBALDIMSVC_MMC.log. 
+	 The size of the log file is limited to 1 MB. When the log file approaches 
+	 1 MB, the log is renamed by appending the current date and time. A 
+	 new log file is created.</p>
+	<p class="Numbered-Indent"><span class="Bold">Max # of Retries</span> 
+	 – Specify the number of times that the service will attempt to process 
+	 a batch. The service might not be able to process a batch due to a 
+	 SQL error or connection issues with the database. If the service has 
+	 not processed the batch after the maximum number of retries, the batch 
+	 is ignored. If you select Error or Info as the log level, then information 
+	 about failures is written to the log file.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="ButtonTab">Install 
+		 Service</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To start the service 
+		 now, click <span class="ButtonTab">Yes</span>. To start the service 
+		 later, click <span class="ButtonTab">No</span>. You can start 
+		 the service from the Services section of Administrative Tools 
+		 in the Windows Control panel.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To install the service 
+		 in another site, repeat steps 1 through 6.</p></li>
+	</ol>
+	<h2><a name="SSOinstall"></a>Installing the Service in a Single Sign-on 
+	 Environment</h2>
+	<p>If you use single sign-on, you must install the service from a command 
+	 line prompt with the System Administrator parameter.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="ButtonTab">Start</span>, 
+		 <span class="ButtonTab">All Programs</span>, <span class="ButtonTab">Accessories</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Right-click Command 
+		 Prompt and select <span class="ButtonTab">Run as administrator</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Command Prompt 
+		 line, specify &lt;Service path&gt;/VMACCTBALDIMSVC.EXE -SYSADM</p></li>
+	</ol>
+	<p class="Numbered-Indent">Replace &lt;Service path&gt; with the path 
+	 where the service executable is installed.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Proceed with steps 3 
+		 through 6 of the Installing the Service procedure.</p></li>
+	</ol>
+	<h2><a name="Uninstall"></a>Uninstalling the Service</h2>
+	<p>Uninstall the service by site. If you installed the service for 
+	 more than one site, you must repeat this procedure for each site to 
+	 completely remove the service. To uninstall an instance of the service:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Launch the service executable:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you do 
+		 not use single sign-on, navigate to the directory where you store 
+		 the VISUAL executables. Right-click VMACCTBALDIMSVC.EXE and select 
+		 <span class="Bold">Run as Administrator</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you do 
+		 use single sign-on, launch the service executable as described 
+		 in &quot;Installing the Service in a Single Sign-on Environment.&quot;</p></li>
+	</ol>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">User ID</span> – Specify 
+	 the user ID that the service uses to sign in to VISUAL.</p>
+	<p class="Numbered-Indent"><span class="Bold">Password</span> – Specify 
+	 the password associated with the ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Database</span> – Specify 
+	 the database on which you are running the service.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Sign 
+		 In</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Site ID field, 
+		 specify the site where you no longer want to run the service.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Remove 
+		 Service</span>.</p></li>
+	</ol>
+</div>
+<p class="RelatedTopicHeader">Related Topics</p>
+<p><a href="VMACCTBALDIMSVCWhat.htm">About the Account Balance Dimensions 
+ Service</a></p>
+</body>
+</html>

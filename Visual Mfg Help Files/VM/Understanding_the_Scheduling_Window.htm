@@ -1,0 +1,88 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Understanding the Scheduling Window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Understanding the Scheduling Window</h1>
+	</div>
+	<p class="First">The Scheduling Window uses a graph style display to 
+	 provide you with a lot of useful information on one screen. On the 
+	 vertical axis, resources are listed as defined in the Presentation 
+	 Sequence window of Shop Resource Maintenance. If you have not set 
+	 a presentation sequence, they appear in the order they were created. 
+	 Using the navigational arrows, you can advance on the date axis and 
+	 on the resource axis.</p>
+	<table cellspacing="0" width="306">
+		<tr style="vertical-align: top;">
+			<td width="36" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp1"><p>When you change Presentation 
+			 Sequence, changes do not take effect until the next scheduling 
+			 run.</p></td>
+		</tr>
+	</table>
+	<p>When you start the Scheduling Window, each tick-mark on the horizontal 
+	 axis represents a day of the month. The month and year are shown at 
+	 the first of each month. When you zoom-in to the point where a day 
+	 takes up most of the screen, individual hour marks appear as well. 
+	 The red numbered hours are AM, and the black numbers are PM.</p>
+	<p>A schedule appears only starting with the first shift of the current 
+	 date. The Loading Horizon parameter from the Edit menu controls how 
+	 many days of schedule are displayed from today. If operations that 
+	 should be scheduled farther out seem to be missing, you may need to 
+	 make this parameter larger.</p>
+	<p>The Shift Capacity boxes are the black outlined boxes to the right 
+	 of the resource. Each box indicates one unit of capacity for the specific 
+	 resource for each shift. One capacity unit is equivalent to the duration 
+	 of the shift. Therefore, if you have two machines available for the 
+	 1st shift, which is 8 hours long, the Scheduling Window displays 2 
+	 boxes stacked vertically under the 1 (first shift) heading. This equals 
+	 16 hours of capacity for the first shift.</p>
+	<p>The 1, 2, and 3 markings at the top of the column represent the 
+	 three shifts of the day. A capacity box in the 1 column, for example, 
+	 means the resource is available during the first shift. Note that 
+	 the exact hours available depends upon the setting in Shop Resource 
+	 Maintenance, or possibly in a calendar exception.</p>
+	<p>In the example below, there are two 5-ton presses available during 
+	 the first shift and one 5-ton press available during the second shift.</p>
+	<p><img src="sched.gif" alt="sched.gif" title="sched.gif" width="335" height="216" border="0"></p>
+	<h2>Conventions</h2>
+	<p>When operations appear in the Scheduling Window, a standard abbreviation 
+	 format is used to indicate the work order Base ID, Lot ID, Split ID, 
+	 Sub ID and operation sequence of the operation. The format is:</p>
+	<p class="Normal-Indent"><span class="Bold">Work Order Base ID-Sub 
+	 ID/Lot ID.Split ID (Operation Sequence Number)</span></p>
+	<p>So Operation 40 of Sub ID 3 of Work Order 40009 Lot 2 Split 1 would 
+	 appear abbreviated as:</p>
+	<p class="Normal-Indent"><span class="Bold">40009-3/2.1 (40)</span></p>
+	<p>When Sub ID and Split ID are zero, they are omitted from the abbreviation. 
+	 So Operation 40 of Sub ID 0 of Work Order 40009 Lot 2 Split 0 would 
+	 appear abbreviated as:</p>
+	<p class="Normal-Indent"><span class="Bold">40009/2 (40)</span></p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Scheduling_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

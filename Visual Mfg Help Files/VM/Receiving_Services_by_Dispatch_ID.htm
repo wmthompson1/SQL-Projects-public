@@ -1,0 +1,105 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Receiving Services by Dispatch ID</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Receiving Services by Dispatch ID</h1>
+	</div>
+	<p class="First">You can receive parts that have been sent to a vendor 
+	 for service by dispatch ID instead of by purchase order ID. If you 
+	 sent multiple dispatches for a particular purchase order line, use 
+	 the receipt by dispatch ID feature to specifically associate a purchase 
+	 receipt with a dispatch.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Purchasing</span>, 
+		 <span class="Bold">Purchase Receipt Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site in which you sent the dispatch. If you 
+		 are licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Service 
+		 Dispatch ID</span> browse button and select the dispatch that 
+		 you are receiving. After you select a service dispatch ID, this 
+		 information about the dispatch is displayed in the table:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Reference</span> – The 
+	 ID and description of the vendor service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Ordered</span> 
+	 – The total quantity ordered on the purchase order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total Qty Dispatched</span> 
+	 – The total quantity of part dispatched to the vendor for the purchase 
+	 order line. This is the total of all dispatches made for the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dispatch Qty Dispatched</span> 
+	 – The quantity of part dispatched in the service dispatch that you 
+	 specified in the Service Dispatch ID field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dispatch Qty Received</span> 
+	 – The quantity of part that has already been received for the service 
+	 dispatch that you specified in the Service Dispatch ID field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total Qty Recv</span> 
+	 – The total quantity of part that you have received from the vendor 
+	 for the purchase order line. </p>
+	<p class="Numbered-Indent"><span class="Bold">Dispatch Addr</span> 
+	 – The ID of the address to which you sent the parts for service. </p>
+	<p class="Numbered-Indent"><span class="Bold">Dispatch Line No</span> 
+	 – The dispatch line number associated with the service. This column 
+	 is not displayed by default. Select Options, Configure Line Item Table 
+	 to add the column.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Quantity Received 
+		 field, specify the quantity that you received from the vendor.</p></li>
+	</ol>
+	<p class="Numbered-Indent">We recommend that you do not use the Receive 
+	 All button when receiving by dispatch ID. If you click Receive All, 
+	 the total quantity remaining to be received on the purchase order 
+	 line is inserted in the Quantity Received field. This quantity is 
+	 likely more than the total in the dispatch. </p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 </p></li>
+	</ol>
+	<p class="Numbered-Indent">If you received less than the total amount 
+	 that you ordered, a dialog is displayed. Click one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">Leave order open (partial 
+	 receipt, backorder balance)</span> – This leaves the order open awaiting 
+	 the remainder of the shipment. The purchase order does not close.</p>
+	<p class="DoubleIndent"><span class="Bold">Copy remaining unreceived 
+	 lines to separate backorder</span> – This copies the remaining quantities 
+	 to a new purchase order. The same Order ID is used, with the addition 
+	 of a suffix consisting of a dash and a digit. For example, if the 
+	 purchase order ID is 4001, the new Order IDs are 4001-1, 4001-2, etc. 
+	 These are referred to as back orders, and they are created so that 
+	 the original order can be closed. This is common when some line items 
+	 are completely received, and others are backordered by the vendor.</p>
+	<p class="DoubleIndent">It is recognized that orders numbered in this 
+	 way are back orders, and they are retrieved. If possible, you should 
+	 avoid using a dash in your PO numbering scheme.</p>
+	<p class="DoubleIndent"><span class="Bold">Close order (partial receipt, 
+	 no backorder)</span> – This is useful when the original order quantity 
+	 has been changed, or is not received for some reason. For example, 
+	 consider a case where a vendor ships you a partial shipment on an 
+	 order. The backordered quantity may not be available in a time to 
+	 suit your needs, and you may purchase from another vendor. This option 
+	 allows you to arrange with the vendor to cancel the remainder of the 
+	 shipment, and close the order short.</p>
+	<p class="Numbered-Indent">You can set up a preference to also close 
+	 the operation linked to the outside service when you close the order. 
+	 See <a href="VMRCVENT_APLfrmReceiving.htm#Closing_a_Service_Line_Short">Closing 
+	 a Service Line Short</a>.</p>
+</div>
+</body>
+</html>

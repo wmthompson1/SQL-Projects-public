@@ -1,0 +1,125 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Maintaining SOA Information</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Maintaining SOA Information</h1>
+	</div>
+	<p>If you use business object documents (BODs) to integrate VISUAL 
+	 to another product, use SOA Maintenance to set the default information 
+	 that must appear on each BOD. For more information on a particular 
+	 integration, refer to the appropriate integration guide.</p>
+	<p>Note: You must be signed in as the SYSADM user to access SOA Maintenance.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Application Global Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">SOA Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter information in 
+		 the following fields:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">VISUAL Instance ID</span> 
+	 – Enter the value you specified as the third part of the logical ID 
+	 when you configured Infor10 ION. For example, if the logical ID you 
+	 used during Infor10 ION configuration is infor.visual.vmfg654, then 
+	 specify vmfg654 in this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Tenant ID</span> – Contact 
+	 your Infor representative for this information. Every application 
+	 in the integration must have the same tenant ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">BOD Location</span> – 
+	 Specify a specific, physical site location. For example, if your company 
+	 is located in New York, you could enter NewYork for this value. When 
+	 BODs are generated, the value you enter for the location attribute 
+	 helps to identify the information.</p>
+	<p class="Numbered-Indent"><span class="Bold">Calendar Name</span> 
+	 – Specify the name of your accounting calendar. Calendar Name is used 
+	 in BODs such as AccountingChart.</p>
+	<p class="Numbered-Indent"><span class="Bold">Language ID</span> – 
+	 Specify the ID for the language you use. The format for the language 
+	 ID is the ISO two character code for the language in lower case followed 
+	 by a dash, then the ISO two character code for the country in upper 
+	 case. For example, the code for US English is en-US.</p>
+	<p class="Numbered-Indent"><span class="Bold">Version</span> – Click 
+	 the drop-down button to select the version of the technology stack 
+	 to which you are integrating.</p>
+	<p class="Numbered-Indent"><span class="Bold">Default UM</span> – Specify 
+	 the default unit of measure to use if an incoming IQM ItemMaster BOD 
+	 does not have a stock unit of measure. VISUAL cannot consume an ItemMaster 
+	 BOD sent by IQM if it does not have a stock unit of measure.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">The Noun Settings table 
+		 lists each VISUAL application that can currently export BOD information,and 
+		 the ID of the BOD that sends the information. Specify the following 
+		 settings for each Name:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Granularity</span> – 
+	 Granularity identifies the level that data is sent in the BOD. There 
+	 are three levels of granularity: tenant, accounting entity, and location. 
+	 Tenant is the broadest category; BODs are sent with the tenant identifier 
+	 only. BODs with the accounting entity granularity setting are sent 
+	 with both the tenant identifier and the accounting entity identifier. 
+	 BODs with the location granularity setting are sent with the tenant 
+	 identifier, the accounting entity identifier, and the location identifier. 
+	 Most of these settings are default values that you cannot change.</p>
+	<p class="Numbered-Indent"><span class="Bold">SOR</span> – Select the 
+	 SOR check box if VISUAL is the system of record for the BOD ID. Clear 
+	 the check box if VISUAL is not the SOR for the BOD ID. The SOR owns 
+	 a particular set of data and publishes it to other components.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sync</span> – You can 
+	 only send a Sync BOD if VISUAL is the SOR for the BOD. If VISUAL is 
+	 the SOR, click the Sync drop-down button and select Out to publish 
+	 the BOD. Select Disabled if VISUAL is the SOR but you do not want 
+	 to publish the BOD.</p>
+	<p class="Numbered-Indent"><span class="Bold">Process</span> – If VISUAL 
+	 is the SOR, click the Process drop-down button and select In if you 
+	 would like VISUAL to receive BODs from other components. If VISUAL 
+	 is not the SOR, click the drop-down button and select Out to generate 
+	 a Process BOD. If you do not want VISUAL to send the BOD, click the 
+	 drop-down button and select Disable.</p>
+	<p class="Numbered-Indent"><span class="Bold">Type</span> – This field 
+	 is read-only. This field indicates whether the data sent is Transactional 
+	 (such as a purchase order or customer order) or Master Data (such 
+	 as customer IDs or account IDs).</p>
+	<p class="Numbered-Indent"><span class="Bold">Use Service</span> – 
+	 This check box is read-only. If the system selects the check box, 
+	 then the BOD generation service is installed. If the system clears 
+	 the check box, then the BOD generation is not in use. Although using 
+	 the BOD generation service is optional, it can improve your system’s 
+	 performance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Filter</span> – If the 
+	 Allow Filter check box is selected, you can filter the information 
+	 you send in a BOD. Depending on the noun, you can filter information 
+	 by ID or Date. Click the Filter button and enter a starting value 
+	 and an ending value. Records created or modified between the two dates 
+	 you specify, or between the two IDs you specify, are sent.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 to save your settings. &#160;</p></li>
+	</ol>
+	<p>After you generate BODs, the system deactivates the Visual Instance 
+	 ID, Tenant ID, SOA Location, and Calendar Name fields. You cannot 
+	 edit the information in these fields after BODs are generated.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

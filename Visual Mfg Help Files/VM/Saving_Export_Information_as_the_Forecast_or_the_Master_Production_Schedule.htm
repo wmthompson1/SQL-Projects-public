@@ -1,0 +1,78 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Saving Export Information as the Forecast or the Master Production Schedule</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Saving Export Information as the Forecast or the Master Production 
+		 Schedule</h1>
+	</div>
+	<p>After you build the export information, you can save the information 
+	 as a forecast, as the master production schedule, or both. To save 
+	 the information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Build the <a href="Exporting_Forecasts_to_Excel_adv.htm">export 
+		 information</a>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Import</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Forecast ID</span> – 
+	 Specify an ID for this forecast. If you specify an ID that is already 
+	 in use, the information you specify in the table overwrites the existing 
+	 information.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 To import the information as a forecast for a particular independently 
+	 planned warehouse, specify the warehouse ID. To import the information 
+	 to your universally planned warehouses, specify Universal.</p>
+	<p class="Numbered-Indent"><span class="Bold">Import To</span> – Specify 
+	 where to import the information. Click one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">Import to forecast table</span> 
+	 – Click this option to import the information as a forecast into the 
+	 Planning Forecast dialog box and the Master Production Schedule dialog 
+	 box. If you specified a new forecast ID, the ID is inserted as a line 
+	 in both dialog boxes. The information is imported into the PLANNING_FORECAST 
+	 table in your database.</p>
+	<p class="DoubleIndent"><span class="Bold">Import to master schedule 
+	 table</span> – Click this option to import the information into the 
+	 master production schedule. When you select this option, the Current 
+	 MPS line in the Master Production Schedule table is overwritten with 
+	 the imported information. The information is imported into the MASTER_SCHEDULE 
+	 table in your database.</p>
+	<p class="DoubleIndent"><span class="Bold">Import to both</span> – 
+	 Click this option to import the information as a forecast and as the 
+	 master production schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Purge Prior Data</span> 
+	 – To remove all existing data from the tables you selected, select 
+	 this check box. To retain existing information, clear this check box. 
+	 If you clear this check box, existing forecast information will be 
+	 overwritten if the imported information uses the same dates as the 
+	 existing information. For example, if the Master Production Schedule 
+	 contains data for October 15 for a particular part, and the data you 
+	 import into the master schedule table also contains data for October 
+	 15, then the data you import overwrites the existing data.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">To edit the forecast, 
+		 clear the <span class="Bold">Transposed</span> check box. Then, 
+		 edit the Required/Want Date and Quantity fields. You can edit 
+		 this information on either the Export or the Import tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button. The information is imported into the locations you specified.</p></li>
+	</ol>
+	<p>When you view imported information in either the Master Production 
+	 Schedule or Planning Forecast dialog box, your current planning calendar 
+	 is used for the planning periods. The quantities you import are combined 
+	 if necessary and placed in the planning calendar periods.</p>
+</div>
+</body>
+</html>

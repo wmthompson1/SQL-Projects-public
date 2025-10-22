@@ -1,0 +1,71 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Joining Tables</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Joining Tables</h1>
+	</div>
+	<p class="First">If you require additional tables, you can add them 
+	 to the end of the item list in the appropriate tab. Any user-defined 
+	 or custom tables should have primary keys defined so that the join 
+	 process can find the primary key automatically.</p>
+	<p>VISUAL sets up joins automatically for mandatory tables, but does 
+	 not permit access to the join for a mandatory table. You must define 
+	 the joins for any non-mandatory tables that you add.</p>
+	<p>To join tables:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">First select the tab 
+		 to which you want to add the tables. From the table selection 
+		 drop down box, select the table you want to add, then click the 
+		 <span class="Bold">Add</span> button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Join Clause dialog box appears.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Data</span> 
+		 button, select the key fields (and any others you require) of 
+		 the table you just added, and click <span class="Bold">OK</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the table you 
+		 want to join and click the <span class="Bold">Join</span> button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select one of the primary 
+		 key columns on the right table, then select the corresponding 
+		 data element on the left column.</p></li>
+	</ol>
+	<p class="Numbered-Indent">For example, if the Part table is on the 
+	 right, and its Primary Key, ID, is selected, you should find a column 
+	 (choose ‘1’ if ‘1’ is not taken, else choose ‘2’, and so on), containing 
+	 the Part ID on the left, such as CUST_ORDER_LINE.PART_ID.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Click the appropriate 
+		 number button to number the column, then click the <span class="Bold">Set</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The join clause must include all the fields 
+	 that make up the primary key.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The table is now joined.</p>
+	<p class="Numbered-Indent">The user-defined table is an advanced feature 
+	 of VMDI. In most cases, you will not need this feature.</p>
+	<p class="Numbered-Indent">Take care when selecting the join keys—an 
+	 incorrect join can cause data inconsistencies in your .VDI files.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Interchange.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

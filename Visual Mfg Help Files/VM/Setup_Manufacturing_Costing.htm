@@ -1,0 +1,145 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setup Manufacturing Costing</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { border-left:Solid 1px #000000;
+border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+td.hcp3 { border-right:Solid 1px #000000;
+border-bottom:Solid 1px #000000;
+padding-right:10px;
+padding-left:10px; }
+p.hcp4 { font-weight:bold; }
+p.hcp5 { font-size:10pt;
+font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setup Manufacturing Costing</h1>
+	</div>
+	<p class="First">To make it easier to follow, the calculations presented 
+	 in the following examples are for a work order that consists of two 
+	 labor operations and two material requirements.</p>
+	<p>The resources used for this work order are setup with exactly the 
+	 same labor rates as the two employees from the employee table used. 
+	 FIFO layers for the materials have been established with a unit cost 
+	 equal to the parts table unit cost. By using the same rates in the 
+	 shop resource and the same cost for materials, cost calculations are 
+	 only affected by hours worked and the amount of material issued. In 
+	 actuality, the cost calculations would be affected not only by the 
+	 hours worked, but also by any differences between shop resource labor 
+	 rates used in the estimate and the actual labor rates of the employee 
+	 doing the work. The material cost would be affected not only by the 
+	 amount of material issued, but also by the individual FIFO layers 
+	 which are used as the material is issued vs the &quot;standard&quot; 
+	 from the parts table used in the estimate.</p>
+	<p>The work order parameters are as follows:</p>
+	<p><span class="Bold">Part ID</span> - MMC-FM0001 for a qty of 10</p>
+	<p><span class="Bold">Op#10</span> - Process#1 - requires 2hrs/piece 
+	 - $13/hr &amp; 150% burden rate</p>
+	<p><span class="Bold">Op#20</span> - Process#2 - requires 3hrs/piece 
+	 - $20/hr &amp; 125% burden rate</p>
+	<p><span class="Bold">1RM1</span> - Raw Matl #1 - requires 2/unit - 
+	 $10 each</p>
+	<p><span class="Bold">1RM2</span> - Raw Matl #2 - requires 1/unit - 
+	 $8 each</p>
+	<p>Using the above, the estimated cost for the work order is:</p>
+	<table style="vertical-align: top; margin-top: 10px; margin-left: 15px;" 
+			 cellspacing="0" width="25.038%">
+		<col style="width: 62.499%;">
+		<col style="width: 37.501%;">
+		<tr class="hcp1">
+			<td style="border: Solid 1px #000000; width: 62.499%; padding-right: 10px; 
+				 padding-left: 10px;"><p>Op#10</p></td>
+			<td style="border-top: Solid 1px #000000; border-right: Solid 1px #000000; 
+				 border-bottom: Solid 1px #000000; width: 37.501%; padding-right: 10px; 
+				 padding-left: 10px;"><p>$650.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p>Op#20</p></td>
+			<td style="width:37.501%;" class="hcp3"><p>$1350.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p class="hcp4">Total 
+			 Labor &amp; Burden</p></td>
+			<td style="width:37.501%;" class="hcp3"><p class="hcp4">$2000.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p>1RM1&#160;</p></td>
+			<td style="width:37.501%;" class="hcp3"><p>$200.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p>1RM2</p></td>
+			<td style="width:37.501%;" class="hcp3"><p>$80.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p class="hcp4">Total 
+			 Matl&#160;</p></td>
+			<td style="width:37.501%;" class="hcp3"><p class="hcp4">$280.00</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td style="width:62.499%;" class="hcp2"><p class="hcp5">Total 
+			 Work order Est.</p></td>
+			<td style="width:37.501%;" class="hcp3"><p class="hcp5">$2280.00</p></td>
+		</tr>
+	</table>
+	<p>The Administrator Setup command in Labor Ticket Entry has an option 
+	 to automatically compute quantity complete.</p>
+	<p>The first series of examples were run with this option turned off. 
+	 In addition, no overtime calculation was used.</p>
+	<h2>Example #1</h2>
+	<p>The activity processed against this work order is as follows:</p>
+	<p>All Material Requirements are issued - Total Inventory Cost = $280.00</p>
+	<p>Input Labor Tickets for exactly half of the required labor hours. 
+	 For shop resource Process #1, 10 hours of labor was entered and the 
+	 quantity complete field was left blank.</p>
+	<p>For shop resource Process #2, 15 hours of labor was entered and 
+	 the quantity complete field was left blank. No overtime was calculated. 
+	 Total labor and burden cost for these two operations = $1000.00.</p>
+	<p>A review of the Work Order Cost report shows these values in the 
+	 Actual cost column. Notice for the material requirements that estimate 
+	 = actual = projected. This is because all of the materials, as required, 
+	 have been issued to the work order. For the labor requirements however, 
+	 the projected cost shows a value of $3000. This is due to the fact 
+	 that we have not told the system that any units have been completed. 
+	 In calculating remaining cost, even though enough hours have been 
+	 entered to complete half the work order (5 units), the system thinks 
+	 that there are 10 units remaining to be completed, hence the value 
+	 of $3000 Projected labor cost. ($1000 Act + $2000 Est. Remaining)</p>
+	<p>Total Projected cost of this work order is $3280.00. The other 5 
+	 units are then received into stock and they are valued at $1280, which 
+	 is the actual cost charged to the work order.</p>
+	<p>The system used actual cost, not projected, based on the following 
+	 calculation:</p>
+	<p>Total Projected cost / Desired Qty: $3280/10 = $328 / unit projected 
+	 cost</p>
+	<p>Unit Projected * Received Qty: $328 * 5 = $1640 received projected 
+	 cost</p>
+	<p>Because the projected cost of $1640 is greater than the $1280 of 
+	 actual cost charged to the work order, the value of the 5 units received 
+	 is equal to the actual cost.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Costing_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

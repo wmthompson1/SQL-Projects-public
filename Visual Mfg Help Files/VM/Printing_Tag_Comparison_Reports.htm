@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Printing Tag Comparison Reports</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Printing Tag Comparison Reports</h1>
+	</div>
+	<p class="First">The Print Tag Comparison report allows a tag-by-tag 
+	 comparison of on-hand quantities with counted quantities, and the 
+	 resulting difference between current value and the value of the counted 
+	 parts.</p>
+	<p>To use this report, follow these steps:</p>
+	<ol class="p-Numbered">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site where you conducted the count. If you are licensed to use 
+		 a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the table, select 
+		 the physical inventory count.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Print 
+		 Tag Comparison</span> from the <span class="Bold">File</span> 
+		 menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Print Count Comparison Report dialog 
+	 box appears.</p>
+	<ol class="p-Numbered" start="4">
+		<li class="p-Numbered"><p class="Numbered">Enter the Physical Count 
+		 ID.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can use this report with any existing 
+	 physical count. If a count is in progress, Physical Count ID defaults 
+	 to the current count. If you want to compare a different count, enter 
+	 the Count ID.</p>
+	<ol class="p-Numbered" start="5">
+		<li class="p-Numbered"><p class="Numbered">Select the Count Type.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Although you can generate this report for 
+	 all tags by selecting the All Counted Tags radio button, it is most 
+	 valuable when used with its threshold feature. This allows you to 
+	 focus only on differences in quantity or value above a defined level.</p>
+	<p class="Numbered-Indent">To use this feature, select the Tags Where 
+	 radio button, and enter the following information:&#160;</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Change</span> 
+	 - You can filter out all tags where the difference between On-Hand 
+	 Quantity and Counted Quantity is less than or greater than a certain 
+	 amount. You can specify these thresholds independently, and as percentage 
+	 or unit amounts.</p>
+	<p class="Numbered-Indent">First, select whether you want to specify 
+	 quantity differences in units or as a percentage of the on-hand amount 
+	 by selecting the Units or Percent radio button.</p>
+	<p class="Numbered-Indent">Next, select the minimum overage that you 
+	 want, and enter the units or percent in the Plus field.</p>
+	<p class="Numbered-Indent">Finally, select the minimum underage that 
+	 you want to examine, and enter the unit or percent in the Minus column.</p>
+	<p class="Numbered-Indent">For example, you may only be interested 
+	 in tags where the counted quantity is lower than the on-hand balance 
+	 by more than five percent, or where the counted quantity is greater 
+	 by more than 20 percent. Select the Percent radio button, and enter 
+	 20 in the Plus field, and 5 in the Minus field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value Change</span> <span 
+	 class="Bold">-</span> You can filter out all tags where the difference 
+	 between the value of the on-hand quantity and counted quantity is 
+	 less than or greater than a certain amount. As with quantities, you 
+	 can specify these thresholds independently either as a percentage 
+	 of dollar amount or specific dollar amount range.</p>
+	<p class="Numbered-Indent">Value thresholds are set identically to 
+	 quantity thresholds as described previously.</p>
+	<p class="Numbered-Indent">For example, you may only be interested 
+	 in tags where the counted value is lower than the on-hand balance 
+	 by more than one thousand dollars, or where the counted quantity is 
+	 greater by more than five thousand dollars. Select the Dollars radio 
+	 button, and enter 5000 in the Plus field, and 1000 in the Minus field.</p>
+	<p class="Numbered-Indent">You can use the Value Change and Quantity 
+	 Change thresholds together. VISUAL prints a tag if either set of criteria 
+	 are met.</p>
+	<p class="Numbered-Indent"><span class="Bold">Uncounted Tags - </span>If 
+	 you choose to include uncounted tags, those tags will print with zero 
+	 dollar value. But you can also choose to apply the current dollar 
+	 value of inventory on the uncounted tags. An ‘N’ will be printed to 
+	 the right of the value indicating when this value is an uncounted 
+	 value.</p>
+	<ol class="p-Numbered" start="6">
+		<li class="p-Numbered"><p class="Numbered">Select the Print Sequence.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can print this report in order of Tag 
+	 Numbers, Part IDs, or Location IDs by selecting the corresponding 
+	 radio button in the Sequence box.</p>
+	<ol class="p-Numbered" start="7">
+		<li class="p-Numbered"><p class="Numbered">Select the output.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Select <span class="Bold">Print</span>, 
+	 <span class="Bold">View</span>, or <span class="Bold">File</span>.</p>
+	<ol class="p-Numbered" start="8">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok.</span></p></li>
+		<li class="p-Numbered"><p class="Numbered">A standard Windows Print 
+		 dialog box appears.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the appropriate 
+		 information and click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">For each tag listed, the following data 
+	 appears: Tag Number, Part ID, Location ID, On-Hand Quantity for the 
+	 Location, Previous Value (value based on the Location Quantity), Count, 
+	 and New Value (value based on the Count). If sequencing by Part ID, 
+	 the unit of measure for the part also appears. VISUAL totals Previous 
+	 Value and New Value.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Physical_Inventory_Count.htm"><img alt="btn_mini.gif" src="btn_mini.gif" title="btn_mini.gif" gif="" "="="" " 
+	 width="="" 14"="" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

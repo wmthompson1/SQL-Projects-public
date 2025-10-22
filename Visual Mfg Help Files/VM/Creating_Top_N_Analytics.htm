@@ -1,0 +1,143 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating Top N Analytics</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating Top N Analytics</h1>
+	</div>
+	<p>Use Top N analytics to analyze the top results in your data source. 
+	 For example, you can use this analytic type to find customers with 
+	 the highest amount ordered values or users with the most activities 
+	 assigned to them. </p>
+	<p>When users add the analytic to their dashboards, they decide the 
+	 number of results to display in the analytic. </p>
+	<p>You can measure these values:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet"><span class="Bold">Count</span>. 
+		 You can count the number of times each ID is used in a database 
+		 column. To specify the column to analyze, use the Category Column 
+		 field. For example, if you select CATEGORY_ID in the Category 
+		 Column field, then an analytic that shows how many times each 
+		 category occurs in your data source is displayed. If users specified 
+		 5 as the Top N value, then the five most common categories in 
+		 the data source are displayed. </p></li>
+		<li class="p-Bullet"><p class="Bullet"><span class="Bold">Individual 
+		 values</span>. You can identify the top individual values in a 
+		 database column. To examine individual values, specify <span class="Bold">None</span>&#160;in 
+		 the Value Aggregation field. To specify the column to analyze, 
+		 use the Value Column field. For example, if you select AMOUNT_ORDERED 
+		 in the Value Column, an analytic that shows the highest values 
+		 in the AMOUNT_ORDERED column is displayed. If you selected CUSTOMER_ID 
+		 in the Category Column field, the analytic would show the customers 
+		 that placed the highest value order lines. </p></li>
+		<li class="p-Bullet"><p class="Bullet"><span class="Bold">Aggregate 
+		 values.</span>&#160;You can identify the top sums in a database 
+		 column. To examine sums, specify Sum in the Value Aggregation 
+		 field. To specify the information to analyze, use the Value Column 
+		 and Category Column field. For example, if you select AMOUNT_ORDERED 
+		 in the Value Column field and CUSTOMER_ID in the Category Column 
+		 field, the top customers by total amount ordered for all orders 
+		 are displayed. </p></li>
+	</ul>
+	<p>You cannot add a Series Column to a top N analytic. </p>
+	<p>To create a top N analytic:</p>
+	<ol start="1" dir="ltr">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Dashboard</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Edit Analytic</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Configuration ID</span>&#160;– 
+	 Specify a name for the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span>&#160;– 
+	 Specify a description of the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Data Source ID</span> 
+	 – Specify the data source to use as the basis of this analytic.</p>
+	<p class="Numbered-Indent"><span class="Bold">Analytic Type </span>– 
+	 Specify <span class="Bold">Top N</span>. </p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify the type of 
+		 chart. For Top N analytics, you can use bar and column charts. 
+		 Although you can select Line as the chart type, using a Line chart 
+		 for a top N analytic does not result in a meaningful chart. Generally, 
+		 you should use Line charts with period based charts.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You cannot use a pie or doughnut chart. 
+	 </p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Specify the data to 
+		 measure: </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To count the 
+		 instances of IDs in a database column, specify this information:</p></li>
+	</ol>
+	<p class="bullet-detail"><span class="Bold">Value Aggregation</span>&#160;– 
+	 Specify <span class="Bold">Count</span>.</p>
+	<p class="bullet-detail"><span class="Bold">Category Column</span>&#160;– 
+	 Click the down arrow and select the data to count. The analytic shows 
+	 the number of times each ID is used in the column. For example, if 
+	 you select SALES_REP in this field, then the analytic shows the total 
+	 number of times each sales rep ID appears in your data set. If you 
+	 selected a bar-type chart or a column-type chart, one bar or column 
+	 for each ID in the column that you selected is displayed. </p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To measure 
+		 the top individual values in a column, specify this information:</p></li>
+	</ul>
+	<p class="bullet-detail"><span class="Bold">Value Aggregation</span>&#160;– 
+	 Specify <span class="Bold">None</span>. </p>
+	<p class="bullet-detail"><span class="Bold">Value Column</span>&#160;– 
+	 Specify the column to use to provide values to the chart. Only columns 
+	 that have a data type of Number are displayed in the list. For example, 
+	 if you select AMOUNT_ORDERED in the Value Column field, the analytic 
+	 identifies the top individual values in the amount ordered. </p>
+	<p class="bullet-detail"><span class="Bold">Category Column</span>&#160;– 
+	 Use this field to break the grand total of the value column into subtotals. 
+	 For example, if you select AMOUNT_ORDERED in the Value Column field 
+	 and ORDER_ID in the Category Column field, a chart that shows the 
+	 orders associated with the largest individual AMOUNT_ORDERED values 
+	 is displayed. </p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To measure 
+		 the aggregated values in a column, specify this information:</p></li>
+	</ul>
+	<p class="bullet-detail"><span class="Bold">Value Aggregation</span>&#160;– 
+	 Specify Sum. </p>
+	<p class="bullet-detail"><span class="Bold">Value Column</span>&#160;– 
+	 Specify the column to use to provide values to the chart. Only columns 
+	 that have a data type of Number are displayed in the list. </p>
+	<p class="bullet-detail"><span class="Bold">Category Column</span> 
+	 – Use this field to specify how the column that you selected in the 
+	 Value Column field is added. For example, if you select CUSTOMER_ID 
+	 in the Category Column field and AMOUNT_ORDERED in the Value Column 
+	 field, the total amount ordered for each customer in your data source 
+	 is calculated.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 </p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Custom_Metrics.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Custom Metrics</p>
+<p class="SeeAlsoNext"><a href="Creating_Data_Sources.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Building Analytics</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

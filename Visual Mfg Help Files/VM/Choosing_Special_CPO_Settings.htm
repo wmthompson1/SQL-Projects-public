@@ -1,0 +1,62 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Choosing Special CPO Settings</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Choosing Special CPO Settings</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With a CPO key specified 
+		 in the VMDI Generate window, select <span class="Bold">Special 
+		 Settings</span> from the Options menu or click the <span class="Bold">Special 
+		 Settings</span> button on the main toolbar</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Special Settings dialog box appears. 
+	 The CPO tab has the default position. You cannot select the other 
+	 two tabs.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 options:</p></li>
+	</ol>
+	<p class="Numbered-Indent">Select the <span class="Bold">Auto Generate 
+	 CO ID</span> check box if you want VISUAL to generate the Customer 
+	 Order ID for you. After selecting this checkbox, you must enter a 
+	 Prefix Token for use in your VDI file.</p>
+	<p class="Numbered-Indent">During the exchange of EDI data, VISUAL 
+	 replaces the token with the actual generated Customer Order ID.</p>
+	<p class="Numbered-Indent">With the Autogenerate CO ID check box selected, 
+	 VISUAL generates unique Customer Order IDs for incoming EDI customer 
+	 orders. You cannot, however, use this feature if order details may 
+	 change, because VISUAL has no way of matching the original order with 
+	 the incoming changes to the order. Use this feature for unique, discrete 
+	 customer orders that you are sure will not change.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Enter a prefix token 
+		 in the Prefix Token field.</p></li>
+	</ol>
+	<p class="Numbered-Indent">During the exchange of EDI data, VISUAL 
+	 looks for this token in the 4th column on each header, line, and subline 
+	 in your VDI import file.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Ok</span> 
+		 button to commit the special settings.</p></li>
+	</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Recalculating Replenishment Levels Based on Demand and Average Daily Usage</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+span.hcp2 { word-spacing:normal;
+font:6.0pt 'Times New Roman'; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Recalculating Replenishment Levels Based on Demand and Average 
+		 Daily Usage</h1>
+	</div>
+	<p>Use the Demand-driven Buffer Analysis dialog to recalculate replenishment 
+	 levels based on demand for the part. You can generate new replenishment 
+	 levels based on actual usage of the part, or manually specify new 
+	 data to use to calculate replenishment levels.</p>
+	<p>Demand-driven stocked part analysis examines actual usage of a part 
+	 during the average daily usage horizon. Any part issued in conjunction 
+	 with a customer order or a work order is identified as demand. The 
+	 total demand is divided by the average daily usage horizon to determine 
+	 the average daily usage. The average daily usage is then used to calculate 
+	 a new replenishment level and new emergency stock and yellow stock 
+	 percentages.</p>
+	<p>You can override the system-calculated average daily usage and replenishment 
+	 level (top of green). If you specify your own values for these fields, 
+	 the emergency stock and yellow stock percentages are calculated for 
+	 you.</p>
+	<p>To calculate replenishment levels and buffer zones:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Part Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site that contains the parts to use in the replenishment analysis 
+		 and recalculation. If you are licensed to use a single site, this 
+		 field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Demand-driven Stocked Part Analysis</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To determine the information 
+		 displayed in the table, specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span>&#160;– 
+	 If you are planning by independent warehouse, specify the warehouse 
+	 to use in the analysis. To analyze your universally planned warehouses, 
+	 specify Universal.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Current Replenishment 
+	 Levels</span>&#160;– To show the current replenishment levels for 
+	 the parts as specified on the DBR tab, select this check box. If you 
+	 do not want to view replenishment levels from the DBR tab, clear this 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Changes Only</span>&#160;– 
+	 This check box is a available if you have edited any of the lines 
+	 and have not yet saved your changes. To display only the lines you 
+	 have edited, select this check box. To display all lines, clear this 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">End Date</span>&#160;– 
+	 Specify the end date to use when identifying demand. The end date 
+	 is used in conjunction with the Average Daily Usage Horizon to calculate 
+	 the range of days to use to find demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Exception Processing</span> 
+	 – Specify the settings to use for exception processing. Select from 
+	 these options:</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Replenishment 
+	 On-hand Alerts</span>&#160;– To display parts that currently have 
+	 on-hand replenishment alerts, select this check box. To display parts 
+	 both with and without alerts, clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Projected Replenishment 
+	 On-hand Alerts</span>&#160;– To display parts that are projected to 
+	 have replenishment alerts, select this check box. To display parts 
+	 both with and without projected alerts, clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">New Replenishment Oh-hand 
+	 Alerts</span>&#160;– This check box is available only if you have 
+	 edited any of the lines in the table and have not yet saved your changes. 
+	 To display parts that would currently have on-hand replenishment alerts 
+	 based on your new replenishment settings, select this check box. To 
+	 display part both with and without alerts, clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">New Projected Replenishment 
+	 On-hand Alerts</span>&#160;– This check box is available only if you 
+	 have edited any of the lines in the table and have not yet saved your 
+	 changes. To display parts that are projected to have on-hand alerts 
+	 based on the new replenishment levels, select this check box. To display 
+	 parts both with and without projected alerts, clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fabricated/Purchased/All</span>&#160;– 
+	 Under the table, select the type of part to display in the table. 
+	 Click Fabricated to view fabricated parts only. Click Purchased to 
+	 view purchased parts only. Click All to view both fabricated and purchased 
+	 parts.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">This information is 
+		 displayed in the table:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> – The 
+	 ID of the part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 The description of the part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Commodity Code</span> 
+	 – The commodity code specified for the part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Product Code</span> – 
+	 The product code specified for this part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fab</span> – If the part 
+	 is a fabricated part, this check box is selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">Pur</span> – If the part 
+	 is a purchased part, this check box is selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">ADU Horizon (in Days)</span> 
+	 – The average daily usage horizon specified for the part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Start Date</span>&#160;– 
+	 The first date used to find demand is inserted. The start date is 
+	 calculated by subtracting the ADU Horizon from the end date. The ADU 
+	 Horizon is expressed in working days. When the start date is calculated, 
+	 any non-work days, such as weekends that have no shifts scheduled, 
+	 are ignored.</p>
+	<p class="Numbered-Indent"><span class="Bold">Lead Time Buffer (in 
+	 days)</span> – The lead time buffer you specified for the part in 
+	 Part Maintenance is divided by 24 to determine the lead time buffer 
+	 in days.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Replenishment 
+	 Level = Top of Green</span>&#160;– The current replenishment level 
+	 specified for the part is displayed. This value is equal to the top 
+	 of green value. The top of green should equal the sum of the green 
+	 zone, the yellow zone, and the red zone.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total Usage Since Start 
+	 Date</span>&#160;– The total number of parts issued since the start 
+	 date is displayed. Parts can be issued to work orders or in conjunction 
+	 with customer orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Average Daily Usage</span>&#160;– 
+	 To calculate this value, the total usage is divided by the ADU Horizon 
+	 value.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minimum Order Qty</span> 
+	 – The minimum quantity you can order for this part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Buffer Profile ID</span>&#160;– 
+	 The buffer profile ID specified for this part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">MOQ Green</span>&#160;– 
+	 If this check box is selected, then the significant minimum order 
+	 quantity specified for the part in the Buffer Profile is used to calculate 
+	 the green zone quantity. If this check box is cleared, then no minimum 
+	 order quantities affect the green zone. If the part is not assigned 
+	 to a buffer profile, then this check box is selected.</p>
+	<p class="Numbered-Indent"><span class="Bold">Green Impact %</span>&#160;– 
+	 The green impact percentage specified in the buffer profile is displayed. 
+	 If this part is not assigned to a buffer profile, then a value of 
+	 50 is entered. This value is used to calculate the green zone. The 
+	 green impact percentage is multiplied by the size of the yellow zone 
+	 to calculate the green zone.</p>
+	<p class="Numbered-Indent"><span class="Bold">Red Impact %</span>&#160;– 
+	 The red impact percentage specified in the buffer profile is displayed. 
+	 If this part is not assigned to a buffer profile, then a value of 
+	 50 is entered. This value is used to calculate the red zone base. 
+	 The red impact percentage is multiplied by the size of the yellow 
+	 zone to calculate the red zone base.</p>
+	<p class="Numbered-Indent"><span class="Bold">Var. Red Safety %</span>&#160;– 
+	 The variability red safety percentage specified in the buffer profile 
+	 is displayed. If this part is not assigned to a buffer profile, then 
+	 a value of 50 is entered. This value is used to calculate the red 
+	 safety sub-zone. The red impact percentage is multiplied by the size 
+	 of the red zone base to calculate the red safety sub-zone.</p>
+	<p class="Numbered-Indent"><span class="Bold">Curr. Green Zone Size</span> 
+	 – The current green zone is displayed. The current green zone is calculate 
+	 by multiplying the green impact percentage by the current yellow zone.</p>
+	<p class="Numbered-Indent"><span class="Bold">Curr. Top of Red = Red 
+	 Zone Size</span>&#160;– The current top of red, which is the same 
+	 as the red zone size, is displayed. This formula is used to calculate 
+	 the top of red size: current replenishment level - (current replenishment 
+	 level * (100 – emergency stock percent)/100).</p>
+	<p class="Numbered-Indent"><span class="Bold">Curr Size of Red Zone 
+	 Base</span>&#160;– The current red zone base is displayed. This value 
+	 is calculated by multiplying the red impact percentage by the current 
+	 yellow zone.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Size of Red Safety</span>&#160;– 
+	 The current red safety size is displayed. This formula is used to 
+	 calculate the current size of red safety: current top of red / (1 
+	 + (100 / variability red safety percent)).</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Top of Yellow</span>&#160;– 
+	 The current top of yellow is displayed. This formula is used to calculate 
+	 the current top of yellow: current replenishment level – (current 
+	 replenishment level * (100 – yellow stock percent) / 100).</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Yellow Zone Size</span>&#160;– 
+	 The current yellow zone size is displayed. This formula is used to 
+	 calculate the current yellow zone size: top of yellow – top of red.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current On-hand Buffer 
+	 Status</span>&#160;– The current on-hand buffer status is displayed. 
+	 This formula is used to calculate the current on-hand buffer status: 
+	 ((Replenishment level – on-hand quantity) / Replenishment level) * 
+	 100.</p>
+	<p class="Numbered-Indent"><span class="Bold">Demand Horizon (in Days)</span> 
+	 – The demand horizon specified for this part is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity On Hand</span> 
+	 – The number of units currently in stock is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity In Demand Over 
+	 Leadtime</span>&#160;– The number of units of this part in demand 
+	 during the demand horizon.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity On Order Over 
+	 Leadtime</span>&#160;– The number of units of this part on order during 
+	 the demand horizon.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Avail. Buffer 
+	 Status</span>&#160;– The current available buffer status is displayed. 
+	 This formula is used to calculate the current available buffer status: 
+	 (replenishment level - (qty on-hand + qty on-order - qty in-demand)) 
+	 / replenishment level * 100.</p>
+	<p class="Numbered-Indent"><span class="Bold">Demand Horizon End Date</span>&#160;– 
+	 The end date of the range used to examine demand is displayed. This 
+	 date is determined by adding the demand horizon to the date specified 
+	 in the End Date field in Usage Selection Options section. Unlike the 
+	 average daily usage horizon, the demand horizon does not consider 
+	 the work schedule. For example, if the end date in the Usage Selection 
+	 field is 6/15/2013 and the demand horizon is 10, then the Demand Horizon 
+	 End Date is 6/24/2013, or 10 days from 6/15/2013, inclusive.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Low Red Status</span>&#160;– 
+	 The lowest buffer status value that is in the red zone is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Low Yellow Status</span> 
+	 – The lowest buffer status value that is in the yellow zone is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Low Alert Status</span>&#160;– 
+	 The lowest buffer status value that triggers an alert is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Emergency Stock 
+	 %</span>&#160;– The current emergency stock percentage specified on 
+	 the part record is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Current Yellow Stock 
+	 %</span>&#160;– The current yellow stock percentage specified on the 
+	 part record is displayed.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Calculate the new replenishment 
+		 level and buffers. To calculate the new level, perform one of 
+		 these steps:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To calculate 
+		 the new replenishment level and buffers based on actual demand, 
+		 select the part lines and click <span class="Bold">Recalc Selected 
+		 Parts</span>. The new replenishment level and associated buffers 
+		 are calculated. To indicated that the new replenishment level 
+		 and buffers are based on actual demand, Issue History is displayed 
+		 in the New Replenishment Level Based On column.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To manually 
+		 specify a new replenishment level, specify the new level in the 
+		 New Level = Top of Green field. To indicate that the new replenishment 
+		 level and buffers are based on a manually specified replenishment 
+		 level, Manual Replenish is displayed in the New Replenishment 
+		 Level Based On column.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">To calculate 
+		 a new replenishment level based on a manually specified average 
+		 daily usage, specify the new average daily usage in the New Daily 
+		 Usage field. To indicate that the new replenishment level and 
+		 buffers are based on a manually specified average daily usage, 
+		 Manual Daily USage is displayed in the new Replenishment Based 
+		 On column.</p></li>
+	</ol>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">After the new replenishment 
+		 level is calculated or manually specified, new buffer information 
+		 is calculated for the part. The formulas used for the new buffers 
+		 are the same as the formulas used for the existing buffers, except 
+		 that the new replenishment level is used in the calculations instead. 
+		 These information is calculated:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Replenishment 
+		 Level = Top of Green (If you generated the replenishment level 
+		 based on actual demand or based on a manually specified average 
+		 daily usage, the new replenishment level is inserted.)</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Daily 
+		 Usage (If you generated the replenishment level based on actual 
+		 demand or based on a manually specified replenishment level, the 
+		 new replenishment level is inserted.)</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Green 
+		 Zone Size</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Top of 
+		 Red = Red Zone</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Size of 
+		 Red Zone Base</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Size of 
+		 Red Safety</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Top of 
+		 Yellow</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Yellow 
+		 Zone Size</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New On-hand 
+		 Buffer Status</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Avail. 
+		 Buffer Status</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Low Red 
+		 Status</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="FM_Dingbats"><span class="hcp2">&#160;</span></span>New 
+		 Low Yellow Status</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Low Alert 
+		 Status</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="FM_Dingbats"><span class="hcp2">&#160;</span></span>New 
+		 Emergency Stock %</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">New Yellow 
+		 Stock %.</p></li>
+	</ol>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">To use the new replenishment 
+		 level and buffer zones, click the <span class="Bold">Save</span>&#160;button. 
+		 On the DBR tab for the parts you updated, the new Replenishment 
+		 Level, Emergency Stock %, Yellow Stock %, and On-hand Emergency 
+		 % are inserted. To retain your current replenishment level and 
+		 buffer settings, close the dialog without clicking Save.</p></li>
+	</ol>
+</div>
+</body>
+</html>

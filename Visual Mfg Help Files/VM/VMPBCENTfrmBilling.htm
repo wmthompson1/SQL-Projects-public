@@ -1,0 +1,100 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up Progress Billing Events</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p><a name="dfdtORDER_DATE" id="dfdtORDER_DATE"></a><a name="dfdtDESIRED_SHIP_DATE" 
+														 id="dfdtDESIRED_SHIP_DATE"></a><a 
+	 name="dfdtPROMISE_DATE" id="dfdtPROMISE_DATE"></a><a name="lbCUSTOMER_ADDRS" 
+															 id="lbCUSTOMER_ADDRS"></a><a 
+	 name="dfsFREE_ON_BOARD" id="dfsFREE_ON_BOARD"></a><a name="dfsSHIP_VIA" 
+															 id="dfsSHIP_VIA"></a><a 
+	 name="dfsSALESREP_ID" id="dfsSALESREP_ID"></a><a name="dfsSTATUS_MSG" 
+														 id="dfsSTATUS_MSG"></a><a 
+	 name="dfsENTITY_ID" id="dfsENTITY_ID"></a><a name="dfnAMOUNT_BILLED_TO_DATE" 
+													 id="dfnAMOUNT_BILLED_TO_DATE"></a><a 
+	 name="dfnAMOUNT_PENDING" id="dfnAMOUNT_PENDING"></a><a name="dfnORDER_TOTAL" 
+															 id="dfnORDER_TOTAL"></a><a 
+	 name="dfsCURRENCY_ID" id="dfsCURRENCY_ID"></a><a name="dfsCURRENCY_NAME" 
+														 id="dfsCURRENCY_NAME"></a><a 
+	 name="dfsSTATUS" id="dfsSTATUS"></a><a name="dfnSHIP_TO_ADDR_NO" id="dfnSHIP_TO_ADDR_NO"></a><a 
+	 name="dflsLONG_DESCRIPTION" id="dflsLONG_DESCRIPTION"></a></p>
+<div id="content">
+	<div id="banner">
+		<h1>Setting Up Progress Billing Events</h1>
+	</div>
+	<p class="First">Use Progress Billing Entry to specify how and when 
+	 VISUAL generates invoices for a specific customer.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Sales</span>, 
+		 <span class="Bold">Progress Billing Entry.</span></p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site in which you created the customer order. 
+		 If you are licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the <a name="dfsORDER_ID" 
+															 id="dfsORDER_ID"></a>Order 
+		 ID field, click the browse button and select the order to progress 
+		 bill. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the customer 
+		 order line to associate with an event, then select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Billing Events</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify information 
+		 in these fields:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description for the event in the Description field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Billing</span> – Specify 
+	 the amount to bill the customer when the event happens. This is the 
+	 amount that is billed to the customer when the event happens. You 
+	 can specify the billing value as a dollar amount or a percentage of 
+	 the entire customer order by selecting the appropriate radio button.</p>
+	<p class="Numbered-Indent"><span class="Bold">Revenue</span> – Specify 
+	 the amount of revenue to recognize when the event happens. This is 
+	 the amount of the billing value that is realized revenue for your 
+	 company. You can specify the revenue value as a dollar amount or a 
+	 percentage of the billing value by selecting the appropriate radio 
+	 button.</p>
+	<p class="Numbered-Indent">If you do not specify a value in the Revenue 
+	 field, it is assumed that the entire billing amount for the event 
+	 is unrealized revenue.</p>
+	<p class="Numbered-Indent"><span class="Bold">Account ID</span> – Specify 
+	 an account for unrealized revenue. </p>
+	<p class="Numbered-Indent">If you do not specify an account in this 
+	 field, the account defaults to the G/L Interface table.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify a date in the 
+		 Event Date field OR a Milestone ID in the Milestone ID field.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can trigger the progress billing by 
+	 either event date or milestone, but you CANNOT have both in one event.</p>
+	<p class="Numbered-Indent">See <a href="Creating_Milestones.htm">Creating 
+	 Milestones</a>.</p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Progress_Billing_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,99 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Linking Existing Customers and Accounts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { background-color:Transparent; }
+ol.hcp2 { list-style:decimal; }
+span.hcp3 { font-style:italic; }
+a.hcp4 { background-color:Transparent; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content" style="height: 53.241%;">
+	<div id="banner">
+		<h1>Linking Existing Customers and Accounts</h1>
+	</div>
+	<p class="First" style="background-color: Transparent;"><strong><span 
+	 class="Bold">Caution:</span></strong> The Synchronize Customer/Account 
+	 Utility permanently changes the information in your database. Backup 
+	 your database first.</p>
+	<p class="hcp1">Use the Sync Existing feature 
+	 of the Synchronize Customer/Account Utility to create a link between 
+	 an existing VISUAL customer and an existing CRM account.</p>
+	<p class="hcp1">&#160;</p>
+	<p class="hcp1">To create a link between 
+	 a VISUAL customer and a CRM account:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Navigate to the Infor 
+		 VISUAL installation directory and double-click VMCRMSNC.EXE. If 
+		 the default VISUAL installation directory is used, the Synchronize 
+		 Customer/Account Utility launches from C:\Infor\VISUAL\VISUAL 
+		 MFG.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Mode section, 
+		 click <a name="rbLINK_EXISTING" id="rbLINK_EXISTING"></a><span 
+		 class="Bold">Sync Existing</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Customer/Account 
+		 table, select the CRM account and VISUAL customer to link together. 
+		 Both the CRM account and VISUAL customer must be unlinked. To 
+		 select the two records to link, select the first row, press the 
+		 CTRL key, and select the second row.</p></li>
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">To 
+		 add the rows in the processing table, click <span class="Bold">Sync 
+		 Existing</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">In 
+		 the Cust/Accts to Process table, specify which record is the master 
+		 record. Select one of these check boxes:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Match to VE</span> - 
+	 Select this check box to update the CRM account with the VISUAL customer 
+	 attributes.</p>
+	<p class="Numbered-Indent"><span class="Bold">Match to CRM</span> - 
+	 Select this check box to update the VISUAL customer with the CRM account 
+	 attributes.</p>
+	<ol start="6" class="hcp2">
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">Click 
+		 the Log File tab and specify the log file information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">File Path</span> - Specify 
+	 the file path directory for the Synchronize Customer/Account Utility 
+	 log file. To search for a directory location, click the&#160;File 
+	 Path browse button. You can also manually specify the file path. The 
+	 file path is saved to the local preference file VMCRMSNC.INI with 
+	 a variable name of <span class="hcp3">Log File Directory</span>&#160;in 
+	 the frmCustomerSnc section.</p>
+	<p class="Numbered-Indent"><span class="Bold">File Name</span> - Specify 
+	 the name of the synchronize customer/account utility log file where 
+	 all customer and account processing entries are to be logged. The 
+	 file name is saved to the local preference file VMCRMSNC.INI key with 
+	 a variable name of <span class="hcp3">Log File Name</span>&#160;in 
+	 the frmCustomerSnc section.</p>
+	<ol start="7" class="hcp2">
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">Click 
+		 the <span class="Bold">Start</span> toolbar button to create links 
+		 between the customers and accounts in the Cust/Accts to Process 
+		 table. Actions taken to process customer and account are written 
+		 to the log file.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><span><span 
+	 style="background-color: Transparent;"><span><span><span><span><a href="VMCRMSNCWhat.htm" id="a111" class="hcp4"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a></span></span></span></span> What is 
+ the Synchronize Customer/Account Utility?</span></span></p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCfrmCustomerSnc.htm" class="hcp4"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Adding Missing Customers and Accounts</p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCInterfaceOvrvw.htm" id="a11" class="hcp4"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Navigating in the Synchronize Customer/Account Utility</p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCResyncLinkedAccountandCustomerAssociations.htm" class="hcp4"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Re-synchronizing Linked Account and Customer Associations</p>
+</body>
+</html>

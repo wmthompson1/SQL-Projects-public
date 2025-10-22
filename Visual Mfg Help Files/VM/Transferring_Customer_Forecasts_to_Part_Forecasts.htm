@@ -1,0 +1,110 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Transferring Customer Forecasts to Part Forecasts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Transferring Customer Forecasts to Part Forecasts</h1>
+	</div>
+	<p class="First">If a certain group of customers requires the same 
+	 part, you can transfer individual customer production schedule forecasts 
+	 to an overall part forecast. By doing this, your production staff 
+	 need only concern itself with producing quantities of the part according 
+	 to one forecast.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site to use. If you are licensed to use a single site, this field 
+		 is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the File menu, 
+		 select <span class="Bold">Master Production Schedule</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Master Production Schedule dialog box 
+	 appears.</p>
+	<p class="Numbered-Indent">If you have a part loaded in the main Material 
+	 Planning window display with an order policy that is not Master Schedule, 
+	 VISUAL warns you that the part is not Master Scheduled. Click Ok to 
+	 continue.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Customer 
+		 Forecasts</span> button located on the bottom right of the dialog 
+		 box.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Transfer Customer Forecasts to Part 
+	 Forecasts dialog box appears.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify the following 
+		 Customer Forecast information:</p></li>
+	</ol>
+	<p class="Numbered-Indent">Click the <span class="Bold">Schd ID</span> 
+	 button to select a schedule. You may have schedules for single customers 
+	 or a schedule in which all of this customer’s work orders appear.</p>
+	<p class="Numbered-Indent">Click the <span class="Bold">From Part ID</span> 
+	 button to select the part with which you want to begin the transferring 
+	 a forecast.</p>
+	<p class="Numbered-Indent">Click the <span class="Bold">To Part ID</span> 
+	 button to select the part with which you want to end the transfer.</p>
+	<p class="Numbered-Indent">If applicable, from the Product Code list 
+	 box, select a Product Code. If you leave this blank, VISUAL transfers 
+	 all product codes.</p>
+	<p class="Numbered-Indent">Modify the Start and End date if necessary. 
+	 The default time period is one year.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify the actions 
+		 you want VISUAL to take for the transfer:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Import to Forecast Table</span> 
+	 - Select this option button if you want VISUAL to import the customer 
+	 forecast to the Forecast (DEMAND_FORECAST) table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Import to Master Schedule 
+	 Table</span> - Select this option button if you want VISUAL to import 
+	 the customer forecast to the Master Schedule table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Import to Both</span> 
+	 - Select this option button if you want VISUAL to import the forecast 
+	 to both tables.</p>
+	<p class="Numbered-Indent"><span class="Bold">Purge Prior Data</span> 
+	 - If you select this check box, VISUAL deletes existing forecast data 
+	 entirely before importing new data. This only for the parts being 
+	 you selected for processing. If you leave this check box cleared, 
+	 VISUAL adds or replaces existing forecast entries.</p>
+	<p class="Numbered-Indent"><span class="Bold">Bucketless Import</span> 
+	 - VISUAL stores forecast data using a bucketless method in which the 
+	 quantity and date are explicitly stored. When the forecast is displayed 
+	 it must be &quot;reoriented.&quot; This causes the date-quantities 
+	 to be loaded into buckets, a virtual series of numbers. The bucket 
+	 that a given date-quantity is loaded into is determined by comparing 
+	 the date of the forecast to the date of the bucket.</p>
+	<p class="Numbered-Indent"><span class="Bold">Period Size Days</span> 
+	 - The size, in calendar days, of the planning period. Enter a number 
+	 between 4 and 365.</p>
+	<p class="Numbered-Indent"><span class="Bold">Forecast ID</span> - 
+	 A unique ID for this forecast.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Begin</span> 
+		 to commence the forecast transfer.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Material_Planning_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,279 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Maintaining Default Reference Types</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+p.hcp1 { font-weight:bold; }
+td.hcp2 { border-left:Solid 1px #808080;
+border-right:Solid 1px #808080;
+border-bottom:Solid 1px #808080; }
+td.hcp3 { border-right:Solid 1px #808080;
+border-bottom:Solid 1px #808080; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Maintaining Default Reference Types</h1>
+	</div>
+	<p class="First">Use default reference types to define how your documents 
+	 are stored.</p>
+	<p>When a user drags-and-drops a new document onto a program’s main 
+	 window or a Document Reference dialog, these settings determine the 
+	 default reference type. For example, if you specify Customer as the 
+	 default reference type for Customer Order documents, then new documents 
+	 that are drag-and-dropped onto the Customer Order Entry window have 
+	 a Customer reference type. You can change the reference for new dragged-and-dropped 
+	 documents in the Document Reference dialog or in the New Document 
+	 dialog. The General reference type is used when no default reference 
+	 type exists.</p>
+	<p>To maintain default reference types:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In the Document Maintenance 
+		 window, select <span class="Bold">Maintain</span>, <span class="Bold">Default 
+		 Reference Types</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Site ID field, 
+		 specify the site where you are setting up default reference types. 
+		 Select <span class="Bold">** Tenant **</span> to set up default 
+		 references for tenant-level documents. If you are licensed to 
+		 use a single-site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert 
+		 Row</span> toolbar button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Document 
+		 Type column of the new row and select the <span class="Bold">Document 
+		 Type</span> from the drop-down list.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Default 
+		 Reference Type column of the new row and select the <span class="Bold">Default 
+		 Reference Type</span> from the drop-down list.</p></li>
+	</ol>
+	<p>This table lists the Reference types that are available based on 
+	 the selected Document Type:</p>
+	<table style="border: Solid 1px #808080; margin-left: 14px;" cellspacing="0" 
+			 width="90%">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr>
+			<td style="border: Solid 1px #808080;"><p class="hcp1">Document 
+			 Type </p></td>
+			<td style="border-top: Solid 1px #808080; border-right: Solid 1px #808080; 
+				 border-bottom: Solid 1px #808080;"><p class="hcp1">Default 
+			 Reference Type</p></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>AP Invoice</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">AP 
+				 Invoice</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Vendor</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>AR Invoice</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">AR 
+				 Invoice</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Cash Application 
+			 </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">AR 
+				 Invoice</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Customer </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Customer Order</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer 
+				 Order</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Engineering Change 
+			 Notice </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Engineering 
+				 Change Notice</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Equipment</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Equipment</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Estimating</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Estimating</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>General Journal 
+			 </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General 
+				 Journal</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Operation</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Operation</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shop 
+				 Resource</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Work 
+				 Order</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Part </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Part</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Project (Only available 
+			 when you are licensed for a project database.)</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Project</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Purchase Contract</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Purchase 
+				 Contract</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Purchase Order</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Purchase 
+				 Order</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Vendor</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Receiver (Used when 
+			 adding documents in Purchase Receipt Entry and Receiving Inspection)</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Purchase 
+				 Order</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Receiver</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Vendor</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Requisition</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Requisition</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Vendor</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>RFQ </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">RFQ</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>RMA</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">RMA</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Service</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Service</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Shipper</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Customer</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shipper</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Shop Resource </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shop 
+				 Resource</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Trace </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Trace</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Vendor </p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Vendor</p></li>
+			</ul></td>
+		</tr>
+		<tr>
+			<td class="hcp2"><p>Work Order</p></td>
+			<td class="hcp3"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">General</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Part</p></li>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Work 
+				 Order</p></li>
+			</ul></td>
+		</tr>
+	</table>
+	<p class="First">6. Click <span class="Bold">Save</span>.</p>
+</div>
+<p class="SeeAlsoNext"><a href="VMDOCMNTWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ What is Document Maintenance?</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Document_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p>&#160;</p>
+</body>
+</html>

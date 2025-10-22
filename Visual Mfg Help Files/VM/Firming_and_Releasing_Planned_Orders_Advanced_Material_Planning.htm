@@ -1,0 +1,219 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Firming and Releasing Planned Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-weight:bold; }
+span.hcp2 { font-weight:bold;
+color:#000080; }
+ol.hcp3 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Firming and Releasing Planned Orders Advanced Material Planning</h1>
+	</div>
+	<p class="First">Use the Firm Orders dialog box to consolidate multiple 
+	 planned orders on a single purchase order or work order depending 
+	 on part type. When you create purchase orders, you can specify whether 
+	 you want to consolidate orders by vendor or only allow a single part 
+	 per order. You can also specify if you want to create delivery schedules 
+	 or separate line items for each planned order.</p>
+	<p>Also use the Firm Orders window to firm or release planned orders. 
+	 To place an actual work order or purchase order for a planned order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select a planning period 
+		 date column.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="hcp1">Note</span>: 
+	 To load a different planning period, click the column header in the 
+	 main <span class="hcp2">Advance Material 
+	 Planning</span> window, or hold down the control key while clicking 
+	 on each column heading to load multiple consecutive columns.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Firm/Release 
+		 Planned Order</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL defaults to the part currently in 
+	 the window.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Select the <span class="hcp2">Populate on initial open</span> check box if 
+		 you want the data to populate in the <span class="hcp2">Firm 
+		 Orders</span> window when it is initially accessed.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The data in the <span class="hcp2">Firm 
+	 Orders</span> window can be populated based on the selected filters 
+	 and configured options. See, <span class="hcp1"><a href="Configuring_Options.htm">Configuring 
+	 Options</a></span>.</p>
+	<ol start="4" class="hcp3">
+		<li class="p-Numbered"><p class="Numbered">Enter the starting and 
+		 ending Part IDs in the Starting and Ending Part ID fields.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL defaults to the part currently in 
+	 the window.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Select a product code 
+		 from the Product Code drop down box. &quot;All&quot; is the default. 
+		 Enter product codes in Part Maintenance. </p></li>
+	</ol>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Select a commodity code 
+		 from the Commodity Code list box. &quot;All&quot; is the default. 
+		 Enter commodity codes in Part Maintenance. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 option button. This selection dictates what parts VISUAL displays.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you select <span class="Bold">Fabricated</span>, 
+	 VISUAL displays only parts in that planning period that are fabricated 
+	 and makes unavailable the Purchase Order Number Generation, Purchase 
+	 Order Rules, and the Purchase Order Line Item Rules sections below. 
+	 These two sections apply only to parts that you purchase through purchase 
+	 orders.</p>
+	<p class="Numbered-Indent">If you select <span class="Bold">Purchased</span>, 
+	 VISUAL displays only parts in that planning period that are purchased 
+	 and makes unavailable the Work Order Number Generation and Work Order 
+	 Rules sections below. These two sections apply only to parts that 
+	 you fabricate through work orders.</p>
+	<p class="Numbered-Indent">If you select <span class="Bold">Both</span>, 
+	 VISUAL displays parts that are both fabricated and purchased for that 
+	 planning period. All options are available below as well.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">To sort the table by 
+		 Vendor ID or Order ID, use the buttons at the bottom of the window. 
+		 To sort the table by Part ID, Release Date, Want Date, Status, 
+		 Qty On Hand, Projected Availability, or Available Quantity, double-click 
+		 the column header.</p></li>
+	</ol>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Select the row that 
+		 contains the part you want to order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the part is fabricated, 
+		 select the appropriate Work Order Number Generation option button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">An engineering master must exist for fabricated 
+	 parts.</p>
+	<p class="Numbered-Indent">If you want the Work Order number to be 
+	 the next number in the Work Order number sequence, select the Use 
+	 the <span class="Bold">Next Number in Sequence</span> option button.</p>
+	<p class="Numbered-Indent">If you want the Work Order number to be 
+	 the work order's want date and the work order's first operation Resource 
+	 ID, select the <span class="Bold">Use the want date w/ the first operation 
+	 Resource ID</span> check box.</p>
+	<p class="Numbered-Indent">For example, 10TON - 01012000 is the Order 
+	 ID for a work order with a first operation Resource ID of 10TON and 
+	 a want date of January 1, 200.</p>
+	<p class="Numbered-Indent">If you want the Work Order number to be 
+	 the work order's want date and Part ID, select the <span class="Bold">Use 
+	 the want date w/ the Part ID</span> check box.</p>
+	<p class="Numbered-Indent"><span class="hcp1">Note</span>: 
+	 After the <span class="hcp2">firm/release 
+	 planned orders</span> form is open, changing the part ID in the main 
+	 <span class="hcp2">Advanced Material 
+	 Planning</span> window does not change the part filter in the <span class="hcp2">firm/release planned orders</span> 
+	 form.</p>
+	<ol start="11" class="hcp3">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 Work Order Rules option button:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Consolidate work order 
+	 quantity</span> - If you select this option button, VISUAL uses the 
+	 sum of the total quantity for all planned orders with the same Part 
+	 ID as the quantity for the work order. VISUAL creates only one work 
+	 order. This is the default.</p>
+	<p class="Numbered-Indent"><span class="Bold">Make separate work orders</span> 
+	 - If you select this option button, VISUAL creates a separate work 
+	 order for each planned order.</p>
+	<ol start="12">
+		<li class="p-Numbered"><p class="Numbered">If you want to forward 
+		 schedule the order from the release date, select the <span class="Bold">Forward 
+		 Sched From Release Date</span> check box.</p></li>
+	</ol>
+	<ol start="13">
+		<li class="p-Numbered"><p class="Numbered">If you want VISUAL to 
+		 copy all of the document references from the part's engineering 
+		 master to the new work order, select the <span class="Bold">Copy 
+		 All Document references</span> check box.&#160;&#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the part is purchased, 
+		 select a Purchase Order Number Generation.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you want the Purchase Order number to 
+	 be the next number in the Purchase Order number sequence, select the 
+	 <span class="Bold">Use the Next Number in the Sequence</span> radio 
+	 button.</p>
+	<p class="Numbered-Indent">If you want the Purchase Order number to 
+	 be the Want Date and the Part ID, select the <span class="Bold">Use 
+	 the Want Date w/the Part ID</span> radio button.</p>
+	<p class="Numbered-Indent">Select the appropriate Purchase Order Rules 
+	 option button:</p>
+	<p class="Numbered-Indent"><span class="Bold">Consolidate orders by 
+	 vendor</span> - If you select this radio button, VISUAL adds multiple 
+	 Part IDs for the same preferred vendor on the purchase order. This 
+	 is the default.</p>
+	<p class="Numbered-Indent"><span class="Bold">Single part per order</span> 
+	 - If you select this radio button, VISUAL creates a separate purchase 
+	 order for each Part ID for each selected part.</p>
+	<p class="Numbered-Indent">Select the appropriate Purchase Order Line 
+	 Item Rules option button:</p>
+	<p class="DoubleIndent"><span class="Bold">Make delivery schedules</span> 
+	 - If you select this radio button, when multiple planned orders exist 
+	 for the same Part ID, VISUAL creates a separate delivery schedule 
+	 for each planned order. There is only one line item per Part ID. This 
+	 is the default.</p>
+	<p class="DoubleIndent"><span class="Bold">Make line items</span> - 
+	 If you select this radio button, VISUAL adds each planned order as 
+	 a separate line on the purchase order and creates no delivery schedules.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor ID</span> – In 
+	 the table, specify the ID of the vendor from whom you are purchasing 
+	 this material. To create an internal purchase order, specify the ID 
+	 of an internal vendor. Use internal purchase orders if you are licensed 
+	 to use multiple sites and you want one of your entities to supply 
+	 another entity. Set up internal vendors in Vendor Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal Order</span> 
+	 – If you specified an internal vendor, this check box is selected. 
+	 Select this check box to create an internal purchase order. When you 
+	 create an internal purchase order, a corresponding internal sales 
+	 order is created automatically. Specify the ID of the internal customer 
+	 in the Internal Customer field. If you want to use an internal vendor 
+	 for this order, but you do not want to automatically create a corresponding 
+	 sales order, clear the check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal Customer</span> 
+	 – If you selected the Internal Order check box, specify the ID of 
+	 the internal customer that is purchasing the goods.</p>
+	<ol start="15" class="hcp3">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Order</span> 
+		 button to create the order.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If VISUAL creates a purchase order, the 
+	 line remains in the line item table; if it creates a work order, after 
+	 you click Ok at the prompt the line disappears.</p>
+	<p class="Numbered-Indent">VISUAL converts the planned supply order 
+	 to an actual order. If there are associated planned requirements for 
+	 the order, they are replaced by the actual requirements associated 
+	 with the new order.</p>
+	<p class="Numbered-Indent">Remember that you must schedule any new 
+	 work orders using the Global Scheduler or the Schedule Current Work 
+	 Order command in the Manufacturing Window.</p>
+	<p class="Numbered-Indent"><span class="hcp1">Note</span>: 
+	 When you double-click a row header, the value in the part ID field 
+	 on the <span class="hcp2">Parent Material 
+	 Planning</span> window is updated with the line item part ID.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Material_Planning_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

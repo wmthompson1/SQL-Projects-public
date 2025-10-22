@@ -1,0 +1,146 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Information on the Scheduling Tab</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Information on the Scheduling Tab</h1>
+	</div>
+	<p class="First">Use the Scheduling tab to define the default shop 
+	 calendar for the site. The weekly shop calendar defines standard workday 
+	 and shift information for your plant. The Global Scheduler uses this 
+	 information when producing a shop schedule. You can define calendars 
+	 specific to a particular schedule or individual shop resource. Where 
+	 neither of these are defined, the calendar specified here is used. 
+	 This calendar should therefore define the default work week. Exceptions 
+	 for holidays and different work center schedules are handled elsewhere.</p>
+	<p>If you are licensed to use a single site, set up scheduling information 
+	 in Application Global Maintenance. See <a href="Specifying_Scheduling_Information_Tenant.htm">Specifying 
+	 Scheduling Information</a> in Application Global Maintenance.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Scheduling</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Production Schedule 
+		 section, click <span class="Bold">Define Production Schedule</span> 
+		 and specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">ID</span> – Specify an 
+	 ID for the production schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description for the production schedule.</p>
+	<p class="Numbered-Indent">You can also specify a default production 
+	 schedule ID for the site when you access the Global Scheduler. If 
+	 you have not yet defined the default production schedule ID for a 
+	 site, when you access the Global Scheduler you will be prompted to 
+	 define the ID and description for each site that does not have a default 
+	 production schedule ID.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the table, specify 
+		 this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">1st Shift Start</span> 
+	 – Enter the starting time for the first shift for each day of the 
+	 week. By default, the first shift starts in the morning (AM).</p>
+	<p class="Numbered-Indent"><span class="Bold">Shift 1, Shift 2, Shift 
+	 3</span> – For each day that has at least one shift, specify the length 
+	 in hours of each shift. If a shift is not worked, enter a 0.</p>
+	<p class="Numbered-Indent">The totals of the three shifts cannot exceed 
+	 24 hours.</p>
+	<p class="Numbered-Indent">First Shift is the period of hours starting 
+	 at the 1st Shift Start time and ending after the specified number 
+	 of hours in the shift. Second shift follows immediately after the 
+	 first shift and ends after the specified number of hours. Third shift 
+	 is immediately after the second shift; it ends after the specified 
+	 number of hours.</p>
+	<p class="Numbered-Indent">For example, if you specify a shift start 
+	 of 7:00:00 AM, a first shift length of 8 hours, a second shift length 
+	 of 8 hours, and a third shift length of 4 hours, first shift is 7:00 
+	 AM to 3:00 PM, second shift is 3:00 PM to 11:00 PM, and third shift 
+	 begins at 11:00 PM and runs until 3:00 AM.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Use the check boxes 
+		 to define scheduling parameters. The selections you make apply 
+		 to all schedules for the site. Select one or more of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Treat All Release Dates 
+	 as Hard in All Schedules</span> – To schedule all work orders based 
+	 on their hard release dates, select this check box. If you select 
+	 this check box, the Concurrent Scheduler schedules no activity on 
+	 any work orders in any schedule before the work order’s hard release 
+	 date, which you specify when you create the work order. If you select 
+	 this check box, the Treat release date as hard check box on individual 
+	 work orders is not available.</p>
+	<p class="Numbered-Indent">To decide whether to treat the release date 
+	 as hard on a work order by work order basis, clear this check box. 
+	 When you clear this check box, the Treat release date as hard check 
+	 box becomes available on individual work orders. If you clear the 
+	 Treat release date as hard check box on an individual work order, 
+	 the release date is disregarded, and the work order is scheduled as 
+	 time and materials allow.</p>
+	<p class="Numbered-Indent"><span class="Bold">Use All Supply Before 
+	 Applying Lead-time in Material Checks</span> – To consider material 
+	 supply beyond work orders’ required dates, select this check box. 
+	 When you select this check box, the scheduler ignores a work order’s 
+	 required date when locating material supply. When sufficient supply 
+	 is located, the work order is scheduled. If sufficient supply cannot 
+	 be located, then the material’s lead time is used to determine when 
+	 the work order can be scheduled.</p>
+	<p class="Numbered-Indent">If you select this check box, then all parts 
+	 in the site will use all supply before applying lead time. You cannot 
+	 override the setting on the part record.</p>
+	<p class="Numbered-Indent">To consider material supply only up to the 
+	 work order’s required date, clear this check box. When you clear this 
+	 check box, the scheduler does not look beyond the required date for 
+	 supply when there is insufficient supply at the required date. In 
+	 this case, it applies the part’s or requirement’s lead time to determine 
+	 if sufficient supply can be obtained by the required date, or to determine 
+	 when it can obtain sufficient supply.</p>
+	<p class="Numbered-Indent">If you clear the check box in Site Maintenance, 
+	 you can specify on a part-by-part basis which setting to use. In Part 
+	 Maintenance, use the Supply Before Leadtime check box specify whether 
+	 or not to use the work order’s required date when assessing supply.</p>
+	<p class="Numbered-Indent">The Concurrent Scheduler considers purchase 
+	 orders, purchase order delivery schedules, Coproducts, work orders, 
+	 and, if netting planned orders, planned orders, as supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Use Global Calendar and 
+	 Exceptions for Fabricated Parts</span> – To take calendar exceptions 
+	 into account when calculating availability dates for your fabricated 
+	 parts, select this check box. By using this setting you can specify 
+	 the dates you do not want to use in calculations. Clear the check 
+	 box to ignore calendar exceptions.</p>
+	<p class="Numbered-Indent"><span class="Bold">Use Global Calendar and 
+	 Exceptions for Release Dates</span> – To take calendar exceptions 
+	 into account when calculating release dates, select this check box. 
+	 By using this setting you can specify the dates you do not want to 
+	 use in calculations. Clear the check box to ignore calendar exceptions.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Scheduling Notch 
+		 size section, specify the notch size for the schedule. To set 
+		 the notch size to one second, select the One second check box. 
+		 When you select this option, the In Minutes field is unavailable. 
+		 To set the notch size in minutes, clear the One second check box, 
+		 then specify a notch size in the In minutes field. You can specify 
+		 any whole number from 1 to 6; for example, specify 2 for a notch 
+		 size of two minutes. You can also specify 10 for a notch size 
+		 of 10 minutes.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User Defined Help</p>
+</body>
+</html>

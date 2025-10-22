@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting After Forward Pass Options</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting After Forward Pass Options</h1>
+	</div>
+	<p class="First">Use the After Forward Pass tab to select what you 
+	 want the Scheduler to do after a forward scheduling pass.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">After 
+		 Forward Pass</span> tab.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The After Forward Pass options appear.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 schedule forward options.</p></li>
+	</ol>
+	<table style="margin-left: 40px;" cellspacing="0" width="366">
+		<tr style="vertical-align: top;">
+			<td width="60" class="hcp1"><p><img src="TIP.gif" alt="TIP.gif" title="TIP.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp1"><p>The following three 
+			 options apply only to forward-scheduled work orders. Forward-scheduled&#160;&#160;work 
+			 orders are work orders for which you have set the Forward 
+			 Schedule from Release Date option in the Manufacturing Window.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent"><span class="Bold">Backward Schedule</span> 
+	 - Select this option button if you want the VISUAL Concurrent Scheduler 
+	 to attempt the backward scheduling of work orders for which you have 
+	 set the Forward Schedule from Release Date option, after attempting 
+	 to schedule using a forward pass.</p>
+	<p class="Numbered-Indent"><span class="Bold">Backward Schedule if 
+	 On Time</span> - Select this option if you want the VISUAL Concurrent 
+	 Scheduler to attempt to schedule work orders for which you have set 
+	 the Forward Schedule from Release Date option in a backward direction 
+	 if they are on time after a forward pass. This option allows the VISUAL 
+	 Concurrent Scheduler to adjust the position of these work orders in 
+	 a schedule. For example, by backward scheduling already on-time work 
+	 orders, the VISUAL Concurrent Scheduler may be able to move the release 
+	 date of a work order closer to its want date and thereby free up resource 
+	 capacity and eliminate lag time that may exist if a forward-scheduled 
+	 work order completes without delay and there are still a considerable 
+	 number of days until the want date arrives.</p>
+	<p class="Numbered-Indent"><span class="Bold">Do Not Backward Schedule</span> 
+	 - Select this option button if you do not want the VISUAL Concurrent 
+	 Scheduler to backward schedule work orders for which you have set 
+	 the Forward Schedule From Release date preference. The work order’s 
+	 release date as you set it in the Manufacturing window determines 
+	 its position in the schedule.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">If you want to preserve 
+		 the determinant path, select the <span class="Bold">Preserve Determinant 
+		 Path</span> check box.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The determinant path is the set of operations 
+	 in a work order that controls the duration of the work order. This 
+	 is measured AFTER the Scheduler takes resource constraints into account. 
+	 You can call the path that the Scheduler measures before considering 
+	 these constraints a “critical path.”</p>
+	<p class="Numbered-Indent">The determinant path operations appear in 
+	 the Scheduling Window as green bars. Late determinant path operations 
+	 appear as olive bars.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Choose what to do with 
+		 work orders that you have not set to be forward scheduled from 
+		 their release date. The same three options apply.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Backward Schedule</span> 
+	 – Select this option if you want the Concurrent Scheduler to attempt 
+	 the backward schedule of work orders after a forwards pass. If the 
+	 Concurrent Scheduler has already scheduled a work order in a backwards 
+	 direction, the work order stays where it is in the schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Backward Schedule if 
+	 On Time</span> – Select this option if you want the Concurrent Scheduler 
+	 to attempt the backward schedule of work orders after a forward pass 
+	 if the work order is on time at that point. If the Concurrent Scheduler 
+	 has already scheduled a work order in a backward direction, the work 
+	 order stays where it is in the schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Do Not Backward Schedule</span> 
+	 – Select this option if you do not want the Concurrent Scheduler to 
+	 attempt a backward scheduling pass of work orders after a forward 
+	 pass.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">If you want to preserve 
+		 the determinant path, select the <span class="Bold">Preserve Determinant 
+		 Path</span> check box.</p></li>
+	</ol>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">If you are finished 
+		 making changes to your scheduling preferences, press click the 
+		 <span class="Bold">OK</span> button.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Concurrent_Scheduler.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="Setting_Concurrent_Scheduler_Preferences.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Setting Concurrent Scheduler Preferences</p>
+<p class="SeeAlsoNext"><a href="Setting_Allocation_Options.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Setting Allocation Options</p>
+<p class="SeeAlsoNext"><a href="Setting_Material_Options.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Setting Material Options</p>
+</body>
+</html>

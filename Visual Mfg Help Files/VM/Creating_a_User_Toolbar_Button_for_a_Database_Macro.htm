@@ -1,0 +1,66 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating a User Toolbar Button for a Database Macro</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating a User Toolbar Button for a Database Macro</h1>
+	</div>
+	<p class="First">If you use User Toolbars, you can add a button that 
+	 launches a macro stored in your database. You can add toolbar buttons 
+	 only for macros you manually run. You cannot add a toolbar button 
+	 for macros that are run automatically based on an event. See <a href="Types_of_Macros.htm">Types 
+	 of Macros</a>.</p>
+	<p>To add a user toolbar button for a database macro:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Toolbar Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Program Name</span> – 
+	 Specify the name of the program where the macro is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Toolbar ID</span> – Specify 
+	 the ID of the toolbar where you are adding the macro button.</p>
+	<p class="Numbered-Indent"><span class="Bold">Position</span> – Specify 
+	 where on the toolbar to place the macro button. You can specify a 
+	 value from 1 to 20.</p>
+	<p class="Numbered-Indent"><span class="Bold">Bitmap</span> – Specify 
+	 the bitmap to use as the toolbar button.</p>
+	<p class="Numbered-Indent"><span class="Bold">Tool Tip</span> – Specify 
+	 the text that is displayed when you place your mouse over the toolbar 
+	 button.</p>
+	<p class="Numbered-Indent"><span class="Bold">Execute Command</span> 
+	 – Leave this field blank.</p>
+	<p class="Numbered-Indent"><span class="Bold">Execute Macro in DB</span> 
+	 – Double-click the browse button and select the macro to associate 
+	 with the toolbar. Only macros that can be run in the program specified 
+	 in the Program Name field are displayed. Select a manual macro. If 
+	 you select a macro that is automatically run based on an event, this 
+	 message is displayed when you save the toolbar: Standard macros are 
+	 not allowed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Use Key in Cmd Line</span> 
+	 – Clear this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Add Entry to Toolbar</span> 
+	 – This check box is displayed for the SYSADM user only. To share this 
+	 toolbar button with all users, select this check box. To retain this 
+	 toolbar button for the SYSADM's use only, clear this check box. If 
+	 you specified a shared macro in the Execute Macro in DB field, then 
+	 you may also want to share the toolbar button for the macro.</p>
+	<ol start="4" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

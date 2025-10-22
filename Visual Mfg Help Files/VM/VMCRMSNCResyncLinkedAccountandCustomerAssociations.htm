@@ -1,0 +1,139 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+ 
+<title>Re-synchronizing linked account and customer associations</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { background-color:Transparent; }
+ol.hcp2 { list-style:decimal; }
+a.hcp3 { background-color:Transparent; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content" style="height: 53.241%;">
+	<div id="banner">
+		<h1>Re-synchronizing linked account and customer associations</h1>
+	</div>
+	<p class="First" style="background-color: Transparent;"><strong><span 
+	 class="Bold">Caution:</span></strong> Re-synchronizing associations 
+	 of linked Accounts/Customers by using this sub-utility permanently 
+	 changes the information in your database. Backup your database first.</p>
+	<p style="background-color: Transparent; font-style: normal;">Use this 
+	 sub-utility to re-synchronize all information associated with linked 
+	 VISUAL customers and linked VISUAL CRM accounts. All values for each 
+	 linked CRM account and each linked VISUAL customer are compared and 
+	 any discrepancies are displayed. These values include entities, sites, 
+	 addresses, and contact associations among others.</p>
+	<p>When you re-synchronize information, these actions are taken:</p>
+	<ul style="color: #000000;">
+		<li class="p-Bullet" style="color: #000000;"><p class="Bullet">If 
+		 information is missing from VISUAL but present in CRM, then the 
+		 information from CRM is added to VISUAL.</p></li>
+		<li class="p-Bullet" style="color: #000000;"><p class="Bullet">If 
+		 information is missing from CRM but present in VISUAL, then the 
+		 information from VISUAL is added to CRM.</p></li>
+		<li class="p-Bullet" style="color: #000000;"><p class="Bullet">If 
+		 information for CRM is different from information for VISUAL, 
+		 then the CRM information is overwritten with the information from 
+		 VISUAL as VISUAL is the system of record.</p></li>
+	</ul>
+	<p style="background-color: Transparent;">To re-synchronize data between 
+	 VISUAL customers and the linked VISUAL CRM accounts:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Navigate to the Infor 
+		 VISUAL installation directory and double-click VMCRMSNC.EXE. If 
+		 the default VISUAL installation directory is used, the Synchronize 
+		 Customer/Account Utility launches from C:\Infor\VISUAL\VISUAL 
+		 MFG.</p></li>
+		<li class="p-Numbered"><p class="Numbered"><span class="hcp1">Select</span> 
+		 <span class="Bold">Maintain</span><span class="hcp1">,</span> 
+		 <span class="Bold" style="background-color: Transparent;">Associations 
+		 of linked Acct/Cust</span><span class="hcp1">.</span></p></li>
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">Click 
+		 the Log File tab and specify the log file information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">File Path</span> - Specify 
+	 the file path directory for the Re-sync associations of linked Accounts/Customers 
+	 log file. To search for a directory location, click the&#160;File 
+	 Path browse button. You can also manually specify the file path.</p>
+	<p class="Numbered-Indent"><span class="Bold">File Name</span> - Specify 
+	 the name of the Re-sync associations of linked Accounts/Customers 
+	 sub-utility log file where all customer and account re-synchronization 
+	 processing entries are to be logged.</p>
+	<ol start="4" class="hcp2">
+		<li class="p-Numbered" style="color: #000000; font-family: Arial, sans-serif; 
+			 font-size: 10pt;"><p class="Numbered" style="font-family: Arial, sans-serif;">Use 
+		 the tabs to review the discrepancies found between CRM account 
+		 information and VISUAL customer information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Cust/Acct tab</span> 
+	 – Use this tab to review differences between the CUSTOMER table and 
+	 the V_ACCOUNT table. The CUSTOMER table is used to store tenant-level 
+	 customer information in VISUAL, such as Customer Maintenance header 
+	 information, General tab information, and Primary Contact tab information. 
+	 The V_ACCOUNT table is used to store tenant-level account information 
+	 in CRM Account Maintenance General Tab information and Contact tab 
+	 information. The name of the database column where the information 
+	 is stored is displayed in the Column Name column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Entities tab</span> – 
+	 Use this tab to review differences between the CUSTOMER_ENTITY table 
+	 and the V_ACCT_ENTITY table. The CUSTOMER_ENTITY table is used to 
+	 store entity-level credit information specified in the Entity Credit 
+	 Limit tab in VISUAL Customer Maintenance. The V_ACCT_ENTITY table 
+	 is used to store entity-level credit information in the Accounting 
+	 tab in CRM Account Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Site tab</span> – Use 
+	 this tab to review differences between the CUSTOMER_SITE table and 
+	 the V_ACCT_SITE table. The CUSTOMER_SITE table is used to store site-level 
+	 order management information specified in the Order Mgt tab in VISUAL 
+	 Customer Maintenance. The V_ACCT_SITE table is used to store site-level 
+	 credit information in the Order Mgt tab in CRM Account Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Address tab</span> – 
+	 Use this tab to review differences between the CUST_ADDRESS table 
+	 and the V_ADDRESS table. The CUST_ADDRESS table is used to store alternate 
+	 shipping addresses for customers in VISUAL. Shipping addresses are 
+	 specified in the Shipping Address dialog in Customer Maintenance. 
+	 The V_ADDRESS table is used to store alternate addresses for accounts 
+	 specified in Address Maintenance in CRM.</p>
+	<p class="Numbered-Indent"><span class="Bold">Contact Assoc</span> 
+	 <span style="mso-fareast-font-family: SimSun; mso-fareast-theme-font: minor-fareast; 
+			 mso-bidi-font-family: 'Times New Roman'; mso-ansi-language: EN-US; 
+			 mso-fareast-language: ZH-CN; mso-bidi-language: AR-SA;">– 
+	 Use this tab to review differences between the CUSTOMER_CONTACT table 
+	 and the V_ACCT_CONTACT table. The CUST_CONTACT table is used to store 
+	 alternate contacts for customers in VISUAL. Contacts can be associated 
+	 with customers in the Alternate Contacts dialog in Customer Maintenance 
+	 and with the Customer tab in Contact Maintenance. The V_ACCT_CONTACT 
+	 table is used to store alternate contacts for accounts in CRM. Contacts 
+	 can be associated with accounts in Account Maintenance and Contacts 
+	 Maintenance.</span></p>
+	<ol start="5" class="hcp2">
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">To 
+		 insert missing data or to update linked data, click <span class="Bold">Go</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered" style="background-color: Transparent;">Click 
+		 <span class="Bold">View Log File</span> to review the linked account 
+		 and customer associations that were re-synchronized.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><span><span class="hcp1"><span><span><span><span><span><a href="VMCRMSNCWhat.htm" id="a111" class="hcp3"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a></span></span></span></span></span> What 
+ is the Synchronize Customer/Account Utility?</span></span></p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCfrmCustomerSnc.htm" class="hcp3"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Adding Missing Customers and Accounts</p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><span><span><span class="hcp1"><a href="VMCRMSNCLinkingExistingCustomersandAccounts.htm" class="hcp3"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Linking Existing Customers and Accounts</span></span></span></p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCInterfaceOvrvw.htm" id="a11" class="hcp3"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Navigating in the Synchronize Customer/Account Utility</p>
+<p class="SeeAlsoNext" style="background-color: Transparent;"><a href="VMCRMSNCCustomerAccountTableSort.htm" id="a21" class="hcp3"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Sorting the Customer/Account table in the Synchronize Customer/Account 
+ Utility</p>
+</body>
+</html>
