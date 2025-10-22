@@ -1,2 +1,1 @@
-
-# Help Files - Visual Manufacturing
+## VM - Visual Manufacturing Help Files
