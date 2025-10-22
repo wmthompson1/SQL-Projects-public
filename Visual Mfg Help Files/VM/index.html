@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Visual Mfg Help Files — VM — Index</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial; padding: 20px; line-height:1.5; }
+    h1 { margin-bottom: 0.25rem; }
+    .controls { margin: 0.5rem 0 1.5rem; }
+    input, select { margin-right: 0.5rem; }
+    ul { columns: 2; -webkit-columns:2; -moz-columns:2; list-style:none; padding:0; }
+    li { margin: 0.25rem 0; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .meta { color: #666; font-size: 0.9rem; margin-bottom: 1rem; }
+    @media (max-width:700px) { ul { columns:1; } }
+  </style>
+</head>
+<body>
+  <h1>Clickable index — Visual Mfg Help Files / VM</h1>
+  <div class="meta">
+    This page enumerates files in "Visual Mfg Help Files/VM" in the Skills-Inc-Org/IT_TeamProject repository and provides links.
+  </div>
+
+  <div class="controls">
+    <label>Show: 
+      <select id="filter">
+        <option value="all">All files</option>
+        <option value="htm">.htm / .html</option>
+        <option value="gif">.gif / images</option>
+      </select>
+    </label>
+    <label>
+      Link target:
+      <select id="linkMode">
+        <option value="raw">Raw (render as HTML)</option>
+        <option value="github">GitHub file view (source)</option>
+      </select>
+    </label>
+    <button id="refresh">Refresh list</button>
+  </div>
+
+  <div id="status">Loading file list...</div>
+  <ul id="files"></ul>
+
+  <script>
+    // Config: repository and path
+    const owner = 'Skills-Inc-Org';
+    const repo = 'IT_TeamProject';
+    const path = 'Visual Mfg Help Files/VM';
+    const branch = 'main';
+
+    const apiUrl = `https://api.github.com/repos/${owner}/${repo}/contents/${encodeURIComponent(path)}?ref=${branch}`;
+    const rawBase = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${encodeURIComponent(path)}/`;
+
+    const filesEl = document.getElementById('files');
+    const statusEl = document.getElementById('status');
+    const filterEl = document.getElementById('filter');
+    const linkModeEl = document.getElementById('linkMode');
+    const refreshBtn = document.getElementById('refresh');
+
+    async function fetchList() {
+      statusEl.textContent = 'Fetching directory listing from GitHub API...';
+      filesEl.innerHTML = '';
+      try {
+        const res = await fetch(apiUrl, { headers: { Accept: 'application/vnd.github.v3+json' }});
+        if (!res.ok) throw new Error(`GitHub API returned ${res.status} ${res.statusText}`);
+        const items = await res.json();
+        // items is array of objects: {name, path, type, download_url, html_url}
+        render(items);
+      } catch (err) {
+        statusEl.textContent = 'Error: ' + err.message + '. If you are opening this file locally (file://) enable GitHub Pages to avoid CORS issues.';
+      }
+    }
+
+    function render(items) {
+      if (!Array.isArray(items) || items.length === 0) {
+        statusEl.textContent = 'No files found in the directory.';
+        return;
+      }
+      // Filter by selected type
+      const filter = filterEl.value;
+      const filtered = items.filter(it => {
+        if (filter === 'all') return true;
+        const name = it.name.toLowerCase();
+        if (filter === 'htm') return name.endsWith('.htm') || name.endsWith('.html');
+        if (filter === 'gif') return /\.(gif|png|jpg|jpeg|svg)$/i.test(name);
+        return true;
+      }).sort((a,b) => a.name.localeCompare(b.name));
+
+      statusEl.textContent = `Found ${filtered.length} file(s). Click a file to open.`;
+      filesEl.innerHTML = '';
+      const useRaw = linkModeEl.value === 'raw';
+
+      filtered.forEach(it => {
+        const li = document.createElement('li');
+        // Build URL depending on mode
+        let href, rel;
+        if (useRaw && it.type === 'file') {
+          // raw.githubusercontent link (this will render HTML in browser)
+          href = `https://raw.githubusercontent.com/${owner}/${repo}/${branch}/${path}/${it.name}`;
+        } else {
+          // GitHub file view
+          href = it.html_url || `https://github.com/${owner}/${repo}/blob/${branch}/${encodeURIComponent(path)}/${it.name}`;
+        }
+        // ensure spaces are encoded
+        href = href.replace(/ /g, '%20');
+
+        const a = document.createElement('a');
+        a.href = href;
+        a.target = '_blank';
+        a.textContent = it.name;
+        li.appendChild(a);
+
+        // small metadata links
+        const meta = document.createElement('span');
+        meta.style.marginLeft = '0.5rem';
+        meta.style.color = '#666';
+        meta.innerHTML = `[${it.type}]`;
+        li.appendChild(meta);
+
+        filesEl.appendChild(li);
+      });
+    }
+
+    refreshBtn.addEventListener('click', fetchList);
+    filterEl.addEventListener('change', () => fetchList());
+    linkModeEl.addEventListener('change', () => fetchList());
+
+    // initial fetch
+    fetchList();
+  </script>
+</body>
+</html>
