@@ -1,0 +1,160 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assigning Interbranch Transfer Supply to a Customer Order Line Item</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assigning Interbranch Transfer Supply to a Customer Order Line 
+		 Item</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Highlight the customer 
+		 order line item to which you want to assign interbranch transfer 
+		 supply and select <span class="Bold">Assign Supply to Customer 
+		 Order Line</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Supply Links dialog box appears.</p>
+	<p class="Numbered-Indent">The following information appears in the 
+	 header section of the Supply Links dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order ID/Line #</span> 
+	 - The Order ID of the current customer order; the line number, as 
+	 it appears in the Customer Order ID, of the customer order line to 
+	 which you are assigning supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order Qty</span> - The 
+	 order quantity of the customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipped Qty</span> - 
+	 The quantity of the customer order line that you have shipped. Unless 
+	 you have performed a partial shipment for this line and chosen to 
+	 keep the order open with a balance pending possible future shipments, 
+	 this value is zero for new customer orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Qty</span> 
+	 - The portion of the Order Qty to which you have allocated supply. 
+	 Before you establish any links of supply, this value is zero.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Qty</span> 
+	 - The allocated quantity that has been fulfilled by the supplying 
+	 source.</p>
+	<p class="Numbered-Indent"><span class="Bold">Remaining Qty</span> 
+	 - The quantity to which you have yet to assign supply. Before you 
+	 establish any links of supply, this quantity is equal to the Order 
+	 Quantity of the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> - The 
+	 ID of the part on the customer order line. This is the part for which 
+	 you are attempting to obtain supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Description</span> 
+	 - A description of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock U/M</span> - The 
+	 stock unit of measure of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Selling U/M</span> - 
+	 The selling unit of measure of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> - 
+	 The Warehouse ID of the customer order line. Without Warehouse IDs, 
+	 you cannot assign supply to customer order lines. Unless you specify 
+	 otherwise, this is the customer’s default primary warehouse. Specify 
+	 a warehouse other than the customer’s default primary warehouse during 
+	 the entry of the order by double-clicking the <span class="Bold">&lt;Warehouse 
+	 ID&gt;</span> column header for each customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Desired Ship Date</span> 
+	 - The order’s desired ship date, or the date on which shipment to 
+	 the customer is most ideal. Enter a Desired Ship Date during the entry 
+	 of the customer order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Date</span> - 
+	 The date by which you promise the customer you will have fulfilled 
+	 the order and prepared it for shipping. Enter a Promise Date during 
+	 the entry of the customer order.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button to begin establishing demand links to the current customer 
+		 order line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the Type list box, 
+		 select <span class="Bold">WH</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click <span class="Bold">&lt;Supply 
+		 Base ID&gt;</span> or <span class="Bold">&lt;Seq #/Line #&gt;</span> 
+		 to search for qualifying incoming interbranch transfer lines.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The same dialog box appears regardless of 
+	 which column heading you double-click.</p>
+	<p class="Numbered-Indent">The Interbranch Transfer Supply dialog box 
+	 appears</p>
+	<p class="Numbered-Indent">Only interbranch transfers with the same 
+	 Part ID appear in the line item table.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Using the search options 
+		 in the header section, configure a search for interbranch transfer 
+		 lines and click the <span class="Bold">Apply</span> button. You 
+		 may want to view all interbranch transfers - ones with different 
+		 Part IDs than the current customer order delivery schedule - or 
+		 transfers with unallocated supply only.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If any exist in your database, the interbranch 
+	 transfer lines that meet your search criteria appear.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 interbranch transfer line and click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The interbranch transfer line information 
+	 appears in the Supply Links dialog box line item table.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">In the Assign Quantity 
+		 column, enter the quantity that you want to allocate from interbranch 
+		 transfer line to the customer order line.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The quantity that you enter here cannot 
+	 be greater than the Supply Unallocated Quantity of the IBT line or 
+	 the Remaining Qty to Assign of the customer order line.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button to commit the allocation of supply from the interbranch 
+		 transfer line to the customer order line.</p></li>
+	</ol>
+	<h2>Viewing Interbranch Transfer Line Supply Allocation Information 
+	 for a Customer Order Line Item</h2>
+	<p class="First">After you have either fully or partially allocated 
+	 supply to a customer order line item using the preceding procedures, 
+	 you can view allocation information on the customer order line.</p>
+	<p>For each customer order line item that has inventory supply allocated 
+	 to it, the following appears:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there is only one link of interbranch transfer line supply, 
+		 WH appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there are multiple links of interbranch transfer supply, nothing 
+		 appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is only one link of interbranch transfer 
+		 supply, the appropriate IBT ID appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is more than one link of interbranch transfer 
+		 supply, Multiple Links appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Total Qty Allocated 
+		 column, the total quantity of parts that you have allocated to 
+		 the customer order line item appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Job Qty Unallocated 
+		 column, if there is only one supplying interbranch transfer link, 
+		 the amount that is still available on that IBT line for allocation 
+		 appears. The Supply Quantity is subtracted from the Supply Unallocated 
+		 Quantity to arrive at this value.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Job Qty Unallocated 
+		 column, if there is more than one supplying interbranch transfer 
+		 link, the column is empty.</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" height:="" border-style:="" title="btn_mini.gif" style="width: ;" height="14" border="0"></a> 
+ User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Understanding Price Book Concepts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Understanding Price Book Concepts</h1>
+	</div>
+	<p class="First">Price Book integrates seamlessly with VISUAL and other 
+	 Infor Global Solutions products, as well as third party ERP software 
+	 solutions. The integration between Price Book and your ERP software 
+	 takes place through an open COM interface. You use formulas and various 
+	 matrices to determine the actual price within VPB.</p>
+	<h2>Estimates and Orders</h2>
+	<p>Different contexts require product pricing. Often, you price parts 
+	 individually, such as in a catalog. In most cases, however, a <span 
+	 style="font-style: italic;">document</span>, such as an estimate, 
+	 order, or shopping cart provides the context for pricing. Price Book 
+	 uses documents extensively when determining combination pricing.</p>
+	<p>Price Book receives price requests from the documents throughout 
+	 the document creation process, allowing order entry personnel to be 
+	 notified immediately if there is a special price or promotion in order 
+	 to reach the maximum opportunity to up-sell select items.</p>
+	<h2>Pricing and Commission Inputs</h2>
+	<p>Price Book receives, from the document being produced, various factors 
+	 or inputs that influence pricing. These factors include</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Part ID</p></li>
+		<li class="p-Bullet"><p class="Bullet">Product Code</p></li>
+		<li class="p-Bullet"><p class="Bullet">Commodity Code</p></li>
+		<li class="p-Bullet"><p class="Bullet">Market</p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer Type</p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer</p></li>
+		<li class="p-Bullet"><p class="Bullet">Ship-to</p></li>
+		<li class="p-Bullet"><p class="Bullet">Quantity</p></li>
+		<li class="p-Bullet"><p class="Bullet">Order Date</p></li>
+		<li class="p-Bullet"><p class="Bullet">Accumulated sales</p></li>
+		<li class="p-Bullet"><p class="Bullet">Sales Representative</p></li>
+	</ul>
+	<h2>Pricing and Commission Outputs</h2>
+	<p>Based on the input factors, Price Book generates the following output 
+	 values for each document:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Unit price</p></li>
+		<li class="p-Numbered"><p class="Numbered">Trade discount percent</p></li>
+		<li class="p-Numbered"><p class="Numbered">Commission percent</p></li>
+	</ol>
+	<p>Unit price, trade discount percent, and commission percent values 
+	 apply to each part and line.</p>
+	<h2>Formulas</h2>
+	<p>Price Book derives pricing from various pricing formulas, regardless 
+	 of how simple or complex the pricing model. Formulas implement the 
+	 business logic of pricing and are responsible for converting price 
+	 inputs to price output values.</p>
+	<p>Price Book uses the Microsoft Active Script Object or Visual Basic 
+	 Script for formula input, facilitating the integration with VE or 
+	 any other COM-based applications. You cannot only view the formula-defined 
+	 variables or document inputs, but you have access to the application 
+	 into which you are integrating VPB.</p>
+	<p>Often, more than one price formula applies to a single document. 
+	 VPB allows you to set up rules that would determine the best price 
+	 rule for the document. You can also rank the formulas into priorities.</p>
+	<h2>Matrices</h2>
+	<p>There are two types of matrices in Price Book: Price/Discount, and 
+	 Commissions.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Price Matrix stores prices 
+		 and discounts, and is used for Markups and Costs.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Commissions Matrix indicates 
+		 the percentages used for sales commissions. It is held separately 
+		 in the database from the Price/Discount values.</p></li>
+	</ul>
+	<p>Price Book stores actual prices and discounts in a series of matrices, 
+	 including:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Unit Price</p></li>
+		<li class="p-Numbered"><p class="Numbered">Unit Cost</p></li>
+		<li class="p-Numbered"><p class="Numbered">Discount</p></li>
+		<li class="p-Numbered"><p class="Numbered">Markup</p></li>
+		<li class="p-Numbered"><p class="Numbered">Markdown</p></li>
+	</ol>
+	<h2>Effectivity</h2>
+	<p>Price Book supports effectivity for pricing, terms, and commissions. 
+	 Effectivity determines the dates between which the price, terms, or 
+	 commissions may be applied. Formulas also support effectivity dates.</p>
+	<h2>Pricing Alerts</h2>
+	<p>Often, during order entry, it is important to know of pricing opportunities, 
+	 such as increased discounts, promotional prices, etc. Price Book alerts 
+	 you to these pricing opportunities through a series of messages.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Price_Book.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

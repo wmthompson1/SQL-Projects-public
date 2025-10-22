@@ -1,0 +1,140 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Calculating Standard Unit Costs</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Calculating Standard Unit Costs</h1>
+	</div>
+	<p class="First">You can use Implode Costs to automatically calculate 
+	 the standard unit costs (those listed in the Costs section of Part 
+	 Maintenance) for a fabricated part. This is done by referencing the 
+	 engineering master for the part, and summing costs for all required 
+	 materials, labor, and outside services.</p>
+	<p>The Costing Between Levels section of Application Global Maintenance 
+	 controls how costs are &quot;rolled up&quot; when there are multiple 
+	 levels of fabricated parts. This is only relevant when an engineering 
+	 master has another fabricated part as a material requirement. If you 
+	 select Fold to Material Cost, then the material, labor, burden, and 
+	 service costs for the required part are added together, and that value 
+	 contributes only to the material cost for the parent part. If you 
+	 select Keep Separate Costs, each of the four cost categories individually 
+	 contributes to those categories for the parent part.</p>
+	<p>A top-level part is a fabricated part that is not used as a required 
+	 material of any other fabricated part. Often, these are the parts 
+	 that are sold as products.</p>
+	<p>The Multi Level option controls how Implode Costs follow chains 
+	 of fabricated parts. If selected, implode costs is performed recursively 
+	 for each fabricated part required in the engineering master, until 
+	 only purchased parts are found. During this process, the estimated 
+	 unit costs in the material requirements for these fabricated parts 
+	 are also updated. If not selected, then the costs associated with 
+	 the material requirements are used directly, as is. The Permanently 
+	 Save option controls if the recursive implosion is permanently saved 
+	 in each part master.</p>
+	<p>If you are licensed to use multiple sites, Implode Costs can only 
+	 be used at the site level.</p>
+	<table cellspacing="0" width="342">
+		<tr class="hcp1">
+			<td width="36" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp2"><p>Carefully consider 
+			 any changes to standard costs when using a standard cost system. 
+			 Most standard cost accounting systems operate under a principle 
+			 where standards for existing parts are set and frozen for 
+			 a given period, often an entire fiscal year. Implode Costs 
+			 has the capability of changing the standards for ALL parts 
+			 in the system.</p></td>
+		</tr>
+	</table>
+	<p>To automatically calculate standard costs:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered"><span style="font-size: 11.0pt; 
+														 font-family: Calibri; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-fareast-font-family: +mn-ea; 
+														 mso-bidi-font-family: +mn-cs; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-fareast-theme-font: minor-fareast; 
+														 mso-bidi-theme-font: minor-bidi; 
+														 mso-color-index: 13; 
+														 language: en-US; 
+														 mso-text-raise: 0%; 
+														 mso-style-textfill-type: solid; 
+														 mso-style-textfill-fill-themecolor: dark1; 
+														 mso-style-textfill-fill-color: black; 
+														 mso-style-textfill-fill-alpha: 100.0%;">S</span>elect 
+		 <span class="Bold">Inventory</span>, <span class="Bold">Part Maintenance</span><span 
+		 class="Bold" style="color: #000000; font-weight: normal;">.</span></p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site. If you are licensed to use a single 
+		 site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To calculate standard 
+		 costs for a particular part, specify the part in the Part ID field. 
+		 If you are calculating costs for all parts in the site, you can 
+		 leave the Part ID field blank.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Implode Costs</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the parts to 
+		 implode. Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Current Part only</span> 
+	 - Click this option to implode costs only for the part in the Part 
+	 Maintenance window.</p>
+	<p class="Numbered-Indent"><span class="Bold">Selected Parts</span> 
+	 – When you click this option, the Selected Parts browse button becomes 
+	 active. Click this button to select fabricated parts from a table. 
+	 You can select a single part or multiple parts. If you are licensed 
+	 to use multiple sites, only the parts found in the site you selected 
+	 in the Part Maintenance window are displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">All top-level parts</span> 
+	 - Click this option to implode costs for all top-level parts.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">To save the results 
+		 of the implosion at each part level, select the <span class="Bold">Permanently 
+		 Save All Levels</span> check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To implode costs through 
+		 multi-levels from the selected part down, select the <span class="Bold">Multi 
+		 Level</span> check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p>
+		<table style="margin-left: 13.50pt;" cellspacing="0" width="366">
+			<tr class="hcp1">
+				<td width="60" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+				<td width="306" class="hcp2"><p>If you do not 
+				 select Permanently Save All Levels, the implosion results 
+				 appear only in the Costing section of the current screen. 
+				 Permanently Save All Levels is automatically turned on 
+				 and cannot be changed when you choose All Top Level Parts.</p></td>
+			</tr>
+		</table></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Implode_Costs_from_Engineering_Master_back_to_the_Part.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Implode Costs from Engineering Master 
+ back to the Part</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Part_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

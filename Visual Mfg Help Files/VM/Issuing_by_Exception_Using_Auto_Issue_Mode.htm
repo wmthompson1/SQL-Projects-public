@@ -1,0 +1,152 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Issuing by Exception Using Auto Issue Mode</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Issuing by Exception Using Auto Issue Mode</h1>
+	</div>
+	<p class="First">You can issue material requirement quantities from 
+	 warehouse locations to released work orders using auto issue mode. 
+	 Depending on the <a href="Specifying_Information_on_the_General_Tab_site.htm">Issue 
+	 Negative settings specified in Site Maintenance</a>, you can issue 
+	 materials even though the specified warehouse location might not contain 
+	 sufficient quantities. The ability to issue materials beyond the current 
+	 “on hand” level allows you to immediately issue materials that may 
+	 have just arrived to the appropriate work order. You can continue 
+	 production and formally enter the receipt and issue transactions later.</p>
+	<p>If the work order requires piece-tracked parts or traced parts, 
+	 then you cannot use Auto Issue mode. You can use the Work Order Materials 
+	 Issue table or the Inventory Transaction window to issue traced parts. 
+	 You must use the Inventory Transaction window to issue piece-tracked 
+	 parts. </p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Inventory Transaction Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site for the transaction. If you are licensed to use a single 
+		 site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Issue or Return by Exception</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Work 
+		 Order ID</span> browse button and select the work order to which 
+		 to issue materials.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the work order has 
+		 legs, you can issue material requirements to a particular leg. 
+		 Click the <span class="Bold">Sub ID</span> arrow and select the 
+		 ID of the leg. To issue materials to all legs, select <span class="Bold">All</span>. 
+		 </p></li>
+		<li class="p-Numbered"><p class="Numbered">To issue materials to 
+		 a particular resource, click the <span class="Bold">Resource ID</span> 
+		 arrow and select the ID of the resource.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Issue 
+		 All</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To review the transactions 
+		 before performing them, select the <span class="Bold">Preview 
+		 transactions before Saving</span> check box. If you clear this 
+		 check box, the transactions are saved when you click Ok.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select one of these 
+		 options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Issue up to inventory 
+	 balance of part</span> – To issue materials up to the quantity on 
+	 hand, click this option. The warehouses used in the transaction depend 
+	 upon the information defined for the material requirement and on the 
+	 part master.</p>
+	<p class="Numbered-Indent">If a warehouse and location is defined on 
+	 the material requirement card, then that location is used first when 
+	 issuing materials to the requirement. If the warehouse location cannot 
+	 fully supply the requirement, then your other warehouses are examined 
+	 for inventory beginning with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">If no warehouse is defined on the material 
+	 requirement card, but the part has a primary warehouse and location, 
+	 then the primary warehouse location is used first when issuing materials 
+	 to the requirement. If the warehouse location cannot fully supply 
+	 the requirement, then your other warehouses are examined for inventory 
+	 beginning with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">If warehouse information is not defined 
+	 on the material requirement card and the part has no primary warehouse 
+	 and location, then your warehouses are examined for inventory beginning 
+	 with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">When you click this option, you can issue 
+	 up to the quantity of part you have on hand. You cannot create negative 
+	 inventory transactions.</p>
+	<p class="Numbered-Indent"><span class="Bold">Ignore inventory balance 
+	 of part</span> – This option is available only if the Warehouse check 
+	 box is selected in the Issue Negative section of Site Maintenance.</p>
+	<p class="Numbered-Indent">To issue materials regardless of the quantity 
+	 on hand, click this option. Clicking this option could result in negative 
+	 inventory balances.</p>
+	<p class="Numbered-Indent">If a warehouse and location is defined on 
+	 the material requirement card, then that location is used first when 
+	 issuing materials to the requirement. If the warehouse location cannot 
+	 fully supply the requirement, then your other warehouses are examined 
+	 for inventory beginning with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">If no warehouse is defined on the material 
+	 requirement card, but the part has a primary warehouse and location, 
+	 then the primary warehouse location is used first when issuing materials 
+	 to the requirement. If the warehouse location cannot fully supply 
+	 the requirement, then your other warehouses are examined for inventory 
+	 beginning with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">If warehouse information is not defined 
+	 on the material requirement card and the part has no primary warehouse 
+	 and location, then your warehouses are examined for inventory beginning 
+	 with the first warehouse alphanumerically.</p>
+	<p class="Numbered-Indent">If you have insufficient quantities on hand, 
+	 then inventory in warehouse locations is driven negative. If a location 
+	 is specified on a material requirement, then that location is driven 
+	 negative. If a location is not specified on a material requirement, 
+	 then the primary location is driven negative. If a location is not 
+	 defined on the material requirement and no primary location has been 
+	 specified for the part, then the first alphanumeric location is driven 
+	 negative.</p>
+	<p class="Numbered-Indent"><span class="Bold">Prompt with inventory 
+	 locations</span> – To specify from which locations you are issuing 
+	 quantities, click this option. When you click <span class="Bold">Ok</span>, 
+	 a dialog is displayed. The ID of the part you are issuing is displayed 
+	 in the dialog title bar. A list of the warehouse locations that store 
+	 the part are displayed. Specify the quantity to issue from each location, 
+	 then click Ok. If you are issuing more than one part ID, then the 
+	 dialog box is displayed again for the next part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Issue up to primary location 
+	 quantity</span> – To issue up to the quantity of part stored in the 
+	 primary warehouse location, click this option.</p>
+	<p class="Numbered-Indent"><span class="Bold">Issue from primary location 
+	 - ignore quantity</span> – This option is available only if the Warehouse 
+	 check box is selected in the Issue Negative section of Site Maintenance.</p>
+	<p class="Numbered-Indent">To issue all required quantities from the 
+	 primary warehouse location, click this option. This may result in 
+	 a negative inventory balance in the primary location.</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">After clicking the appropriate 
+		 option, click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you selected the 
+		 <span class="Bold">Preview transactions before Saving</span> check 
+		 box, a list of the quantities to be from each warehouse is displayed. 
+		 Click <span class="Bold">Save</span> to issue the quantities. 
+		 Click <span class="Bold">Cancel</span> if you do not want to issue 
+		 the quantities.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you cleared the <span class="Bold">Preview 
+	 transactions before Saving</span> check box, then the inventory transactions 
+	 are generated when you click <span class="Bold">Ok</span>.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Inventory_Transaction_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

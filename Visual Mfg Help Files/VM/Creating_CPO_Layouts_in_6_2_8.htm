@@ -1,0 +1,199 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating CPO Layouts in 6.2.8</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating CPO Layouts in 6.2.8</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">From the Key/Version 
+		 list box, select <span class="Bold">CPO</span> and then enter 
+		 a version for the layout in the adjacent field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Description field, 
+		 enter a description for the layout key. Click the <span class="Bold">Description</span> 
+		 button to choose a predefined layout key description.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the File Type section, 
+		 select a File Type: <span class="Bold">Single</span> or <span 
+		 class="Bold">Multiple</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Single file</span> - 
+	 This single file type writes all records to one file. Available record 
+	 types for CPO are HDR, LIN, and SUB. VISUAL imports CPO documents 
+	 from Single files only; there is no Multiple file option available.</p>
+	<p class="Numbered-Indent"><span class="Bold">Multiple file</span> 
+	 - This option is not available for CPO layouts.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">From the File Style 
+		 section, select the appropriate file style.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The file style refers to the format of the 
+	 data contained in the .VDI file. You can select:</p>
+	<p class="Numbered-Indent"><span class="Bold">Fixed</span> - Choose 
+	 this option if you want the data in the .VDI files to always occupy 
+	 the same &quot;fixed&quot; space for each field and record.</p>
+	<p class="Numbered-Indent"><span class="Bold">Delimited</span> - Choose 
+	 this option if the data in the .VDI file varies in size.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 delimiter for the end of each record, and a character to separate 
+		 each field in the record. Please see the detailed description 
+		 of Delimited styles in the previous section.</p></li>
+	</ol>
+	<p class="Numbered-Indent">For Record, select from <span class="Bold">Blank</span>, 
+	 <span class="Bold">Newline</span> and <span class="Bold">Null</span> 
+	 (Fixed Length).</p>
+	<p class="Numbered-Indent">For Field, select from <span class="Bold">Blank</span>, 
+	 <span class="Bold">Asterisk</span>, <span class="Bold">Comma</span>, 
+	 <span class="Bold">Tab</span>, or <span class="Bold">Null</span> (Fixed 
+	 Length) as a delimiter.</p>
+	<p class="Numbered-Indent">Note: <span class="hcp1">If 
+	 you are creating a Null (fixed length) layout (i.e. with each record 
+	 contained on its own line), choose the following settings:</span></p>
+	<p class="Numbered-Indent">File Style: Fixed</p>
+	<p class="Numbered-Indent">Record: Newline</p>
+	<p class="Numbered-Indent">Field: Null (Fixed Length)</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Header</span> 
+		 tab and choose the appropriate Inbound Duplicates Rule for headers, 
+		 line items, and delivery schedules.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Note: <span class="hcp1">The 
+	 Update check box must be selected in the Header Inbound Rule section 
+	 to use Line Item Duplicate and Delivery Schedule Duplicate features.</span></p>
+	<p class="Numbered-Indent">During the import of data, VMDI checks the 
+	 import file records to see if duplicate data exists. Duplicate data 
+	 has the same primary key in the targeted VISUAL table.</p>
+	<p class="Numbered-Indent">For CPO imports, a duplicate customer order 
+	 has the same Customer Order ID as an order that already exists in 
+	 the VISUAL database.</p>
+	<p class="Numbered-Indent"><span class="Bold">Update Duplicate</span> 
+	 – Select the Update Duplicate option button if you want the data in 
+	 the .VDI file to replaces the existing data in VISUAL. The replacement 
+	 of data includes default and null data. For example, replacing a duplicate 
+	 customer order line with one that has a different Part ID may also 
+	 replace the unit price if the new Part ID has a different price than 
+	 the old one.</p>
+	<p class="Numbered-Indent"><span class="Bold">Reject Duplicate</span> 
+	 – Select the Reject Duplicate option button if you want the data VMDI 
+	 to ignore data in the .VDI file that has the same primary keys as 
+	 data in the targeted VISUAL table. For CPO imports, VISUAL rejects 
+	 all duplicate customer orders and writes details to a log file.</p>
+	<p class="Numbered-Indent">If you choose Reject Duplicate, VISUAL disables 
+	 the Line Item and Delivery Schedule options.</p>
+	<p class="Numbered-Indent"><span class="Bold">Replace Duplicate</span> 
+	 – This function is unavailable for CPO imports.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Choose a method of calculating 
+		 quantity:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Cumulative</span> - Select 
+	 the Cumulative option button if you want VISUAL</p>
+	<p class="Numbered-Indent"><span class="Bold">Discrete</span> - Select 
+	 the Discrete option button if you want VISUAL to import the actual 
+	 delivery schedule quantities included in the SUB (delivery schedule) 
+	 records of the CPO VDI file. VISUAL performs no calculations or computations.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Choose a Cumulative 
+		 Base:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Shipped Quantity</span> 
+	 - Select the Shipped Quantity option button if you want VISUAL to 
+	 use the actual ship quantity plus any adjustment as the starting point.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fab Build</span> - Select 
+	 the Fab Build option button if you want VISUAL to compare delivery 
+	 schedule quantities during imports.</p>
+	<p class="Numbered-Indent">If a quantity exists in the SUB record, 
+	 VISUAL compares the quantity of the first delivery schedule to it, 
+	 and then updates it with the quantity with the difference between 
+	 the two. If the first delivery schedule is less than the fab build 
+	 qty, VISUAL reduces the first delivery schedule qty to 0. If there 
+	 is no fab build qty at the time of import, VISUAL imports the first 
+	 delivery schedule qty in the VDI file (as if you had chosen to import 
+	 as discrete).</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Line 
+		 Item</span> tab and select the Delete Unshipped Lines checkbox 
+		 if you want VISUAL to delete any unshipped lines on an order before 
+		 updating with updated data from a new .VDI file. This feature 
+		 is useful for customers whose trading partners insist that they 
+		 delete any customer order line items not shipped on an order prior 
+		 to receiving updates for that order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Sub 
+		 Line Item</span> tab and select the Delete Unshipped Schedules 
+		 checkbox if you want VISUAL to delete any unshipped delivery schedules 
+		 on an order before updating with updated data from a new .VDI 
+		 file. This feature is useful for customers whose trading partner 
+		 insists that they delete any customer order delivery schedule 
+		 lines not shipped on an order prior to receiving in updates for 
+		 that order.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Line 
+		 Item</span> tab and begin to establish Match Fields.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you have chosen Update (see step 6) as 
+	 your inbound rule, you can choose how VISUAL determines line item 
+	 matches for your CPO layout. If you do not choose any line item match 
+	 fields, VISUAL updates line items based on a match of the Part ID. 
+	 If you have multiple line items on an order for the same Part ID, 
+	 it will only update the first occurrence of the part. You may need 
+	 to choose additional match fields to avoid that problem.</p>
+	<p class="Numbered-Indent">It is possible to use the line item number 
+	 as a match field, but many EDI trading partners don’t use the line 
+	 item number in the incoming data. You may need to use other fields 
+	 to determine the correct line item for update.</p>
+	<p class="Numbered-Indent">To solve the problem of matching on the 
+	 line item number, choose other fields for VISUAL to send in the line 
+	 item. You can choose a combination of fields that allow you to create 
+	 a unique line item in the order. If the combination you have selected 
+	 does not determine unique line items, you will need to add more fields 
+	 to your match criteria until you find the right combination. For example, 
+	 Part ID and EDI Release Number may determine a unique line item for 
+	 your order. If that’s not unique, try adding the Shipto ID field.</p>
+	<p class="Numbered-Indent">If you use the line item number field as 
+	 part of your match criteria, VISUAL ignores all other match fields 
+	 and the line item number determines the match.</p>
+	<p class="Numbered-Indent">Also, if you have delivery schedules on 
+	 your line items, do <span class="hcp1">not</span> use 
+	 the Desired Ship Date field as part of your match criteria. VISUAL 
+	 uses the Desired Ship Dates in all of the delivery schedules for the 
+	 line item and finds the earliest date, and then updates the Desired 
+	 Ship Date field on the line item with that date. If you use delivery 
+	 schedules, make an effort to avoid using the Desired Ship Date field 
+	 as part of your match criteria.</p>
+	<p class="Numbered-Indent">If you are not using delivery schedules, 
+	 the Desired Ship Date is fine to use as part of your match criteria.</p>
+	<p class="Numbered-Indent">In the Available Match Fields data field, 
+	 highlight the field you want to add.</p>
+	<p class="Numbered-Indent">Click the <span class="Bold">Right Arrow</span> 
+	 to move the field into the Selected Match Fields box date field.</p>
+	<p class="Numbered-Indent">Repeat this procedure for each line you 
+	 want to add.</p>
+	<ol start="12">
+		<li class="p-Numbered"><p class="Numbered">Choose <a href="Choosing_Special_CPO_Settings.htm">CPO 
+		 special settings</a> and begin to define a record layout. See 
+		 Defining Record Layouts more information.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Interchange.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

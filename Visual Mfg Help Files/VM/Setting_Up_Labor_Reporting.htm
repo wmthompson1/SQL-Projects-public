@@ -1,0 +1,224 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up Labor Reporting</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { mso-yfti-irow:0;
+mso-yfti-firstrow:yes; }
+td.hcp2 { border-top:solid #808080 1.0pt;
+border-left:none;
+border-bottom:solid #808080 1.0pt;
+border-right:none;
+mso-border-top-alt:solid gray .5pt;
+mso-border-bottom-alt:solid gray .5pt;
+mso-shading:windowtext;
+mso-pattern:solid #F2F2F2;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+tr.hcp3 { mso-yfti-irow:1; }
+td.hcp4 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid black .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+tr.hcp5 { mso-yfti-irow:2; }
+td.hcp6 { vertical-align:top;
+border:none;
+border-bottom:solid #808080 1.0pt;
+mso-border-bottom-alt:solid gray .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Up Labor Reporting</h1>
+	</div>
+	<p>You can set up labor reporting preferences in Labor Ticket Entry, 
+	 Site Maintenance, and the Manufacturing Window. </p>
+	<p>Use the settings available in the Administrator Setup dialog in 
+	 Labor Ticket Entry to set up personal preferences. The preferences 
+	 that you specify are applied to your user ID only and are also stored 
+	 in Preferences Maintenance. This table shows the settings that you 
+	 can specify in the Administrator Setup dialog:</p>
+	<table class="MsoNormalTable" style="border-collapse: collapse; mso-table-layout-alt: fixed; 
+			 mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; margin-left: 12px;" 
+			 cellspacing="0">
+		<col>
+		<col width="418">
+		<tr style="height:17.0pt;" class="hcp1">
+			<td height="23" width="312" bgcolor="#F2F2F2" class="hcp2"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Setting</b></p></td>
+			<td height="23" bgcolor="#F2F2F2" class="hcp2"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Description</b></p></td>
+		</tr>
+		<tr style="height:3.0in;" class="hcp3">
+			<td height="288" width="312" class="hcp4"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;">Automatically 
+			 compute qty complete</p></td>
+			<td height="288" class="hcp4"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 this check box to automatically calculate the quantity complete 
+			 by dividing the elapsed hours of the labor ticket by the run 
+			 time of the operation. The calculation can result in fractional 
+			 quantities.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">When 
+			 the total elapsed hours for all labor tickets for the operation 
+			 exceed the estimated time for the operation, the Run Complete 
+			 check box is selected and the operation is closed.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">If 
+			 the Quantity Complete by Hours check box has been selected 
+			 on the operation to which you are reporting labor, then the 
+			 Automatically Compute qty complete setting is ignored. The 
+			 Quantity Complete by Hours check box can be selected on the 
+			 operation itself, on the work order header, or in Site Maintenance. 
+			 </p></td>
+		</tr>
+		<tr style="height:121.0pt;" class="hcp5">
+			<td height="161" width="312" class="hcp6"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;">Use Decimal 
+			 time format</p></td>
+			<td height="161" class="hcp6"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 this check box to use the last two digits of a four digit 
+			 number as a percentage of an hour. For example, if you type 
+			 1250 into the Clock Out field, 12:30 is entered into the field. 
+			 The 50 is interpreted as 50% of an hour.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">If 
+			 you clear the check box, then the last two digits are read 
+			 as minutes. If you type 1250 into the Clock Out field, then 
+			 12:50 is entered into the field.</p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 66.0pt;">
+			<td height="88" width="312" class="hcp4"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;">Edit qty 
+			 complete vs. standard</p></td>
+			<td height="88" class="hcp4"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 this check box to specify a quantity complete that is greater 
+			 than the quantity specified for the operation. Use the Allowable 
+			 percentage over standard field to specify the amount over 
+			 the operation quantity that you can enter.</p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; mso-yfti-lastrow: yes; height: 79.0pt;">
+			<td height="105" width="312" class="hcp6"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;">Allow 
+			 reporting to obsolete resource</p></td>
+			<td height="105" class="hcp6"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 this check box to create labor tickets for obsolete resources. 
+			 A message is displayed if you attempt to create a labor ticket 
+			 for an obsolete resource, but you can save the labor ticket. 
+			 If you clear this check box, you cannot create a labor ticket 
+			 for an obsolete resource. </p></td>
+		</tr>
+	</table>
+	<p>Use the settings available in Site Maintenance and the Manufacturing 
+	 Window to set up these labor reporting functions:</p>
+	<table class="MsoNormalTable" style="border-collapse: collapse; mso-table-layout-alt: fixed; 
+			 mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; margin-left: 12px;" 
+			 cellspacing="0">
+		<col>
+		<col width="415">
+		<tr style="height:17.0pt;" class="hcp1">
+			<td height="23" width="312" bgcolor="#F2F2F2" class="hcp2"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Function</b></p></td>
+			<td height="23" bgcolor="#F2F2F2" class="hcp2"><p 
+				 class="CellHeading" style="margin-top: 6.0pt; margin-right: 10.0pt; 
+				 margin-bottom: 3.0pt; margin-left: 0in; text-align: left; 
+				 line-height: 13.0pt;"><b>Set up</b></p></td>
+		</tr>
+		<tr style="height:69.0pt;" class="hcp3">
+			<td height="92" width="312" class="hcp4"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;"><b>Report 
+			 labor by percentage complete instead of quantity complete.</b></p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">Replace 
+			 the Qty Remaining and Qty Completed fields with Percent Remaining 
+			 and Percent Completed fields. </p></td>
+			<td height="92" class="hcp4"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 the <b>Percent Complete</b> check box</p></td>
+		</tr>
+		<tr style="height:112.0pt;" class="hcp5">
+			<td height="149" width="312" class="hcp6"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;"><b>Enable 
+			 automatic calculation of quantity complete based on hours.</b></p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">Automatically 
+			 calculate quantity or percentage complete based on the number 
+			 of hours reported on the labor ticket.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">This 
+			 feature functions in the same way as the quantity complete 
+			 function available in the administrator set up of Labor Ticket 
+			 Entry,.</p></td>
+			<td height="149" class="hcp6"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 the <b>Quantity Complete by Hours</b> check box.</p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; mso-yfti-lastrow: yes; height: 206.0pt;">
+			<td height="275" width="312" class="hcp6"><p class="CellBody" 
+				 style="margin-top: 3.0pt; line-height: 12.0pt;"><b>Deactivate 
+			 automatic closing of operations.</b></p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">Automatically 
+			 stop calculating the quantity or percentage at a threshold 
+			 that you specify.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">This 
+			 feature is useful if you engineer to order and actual time 
+			 spent on operations frequently exceeds the estimates. When 
+			 you specify a threshold, the automatic calculation stops when 
+			 the threshold is reached. The operation remains open, and 
+			 the remaining time remains on your schedule.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">To 
+			 close the operation, the user must select the Run Complete 
+			 check box on the labor ticket or manually update the completed 
+			 quantity to 100%. You can also change the status of the Operation 
+			 to closed in the Manufacturing Window. </p></td>
+			<td height="275" class="hcp6"><p class="CellBody" 
+														 style="margin-top: 3.0pt; 
+														 line-height: 12.0pt;">Select 
+			 the <b>Quantity Complete by Hours</b> check box.</p>
+			<p class="CellBody" style="margin-top: 3.0pt; line-height: 12.0pt;">Specify 
+			 a value in the Max Percent Completed field. </p></td>
+		</tr>
+	</table>
+	<p>The settings that you specify at the site level are used for all 
+	 masters and operations in the site. If you do not specify settings 
+	 at the site level, then you can specify settings on the header card 
+	 on masters. Settings that you specify on the header card are applied 
+	 to all operations in the master, including operations in legs. If 
+	 you do not specify settings at the site level or header card level, 
+	 you can specify settings on individual operations.</p>
+</div>
+</body>
+</html>

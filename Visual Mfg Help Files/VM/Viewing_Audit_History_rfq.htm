@@ -1,0 +1,120 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Audit History</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Audit History</h1>
+	</div>
+	<p class="First">If you are auditing information in database tables 
+	 related to RFQs, you can view a history of the changes made to audited 
+	 table columns for an RFQ record in the Audit History dialog. </p>
+	<p>A system administrator must grant you permission to view this dialog. 
+	 </p>
+	<p>Use Audit Maintenance to set up the audit. See <a href="VMAUDMNTfrmAuditConfiguration.htm">Audit 
+	 Maintenance</a>.</p>
+	<p>Information is written to this dialog if you are auditing columns 
+	 in these database tables:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">REQUEST_FOR_QUOTE</p></li>
+		<li class="p-Bullet"><p class="Bullet">RFQ_LINE</p></li>
+		<li class="p-Bullet"><p class="Bullet">RFQ_VENDOR</p></li>
+		<li class="p-Bullet"><p class="Bullet">RFQ_VENDOR_QUOTE</p></li>
+	</ul>
+	<p>To view audit history information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Purchasing</span>, 
+		 <span class="Bold">Vendor RFQ Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open an RFQ record.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Info</span>, 
+		 <span class="Bold">Audit History</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">This information is 
+		 displayed:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">ID</span> – The primary 
+	 key of the database record that was changed.</p>
+	<p class="Numbered-Indent"><span class="Bold">User ID</span> – The 
+	 ID of the user who made the change.</p>
+	<p class="Numbered-Indent"><span class="Bold">Date</span> – The date 
+	 that the change was made.</p>
+	<p class="Numbered-Indent"><span class="Bold">Field</span> – The database 
+	 table and column that was changed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Old Value</span> – The 
+	 original value.</p>
+	<p class="Numbered-Indent"><span class="Bold">New Value</span> – The 
+	 new value.</p>
+	<p class="Numbered-Indent"><span class="Bold">Action</span> – The action 
+	 that occurred to update the date. These actions are used:</p>
+	<p class="DoubleIndent"><span class="Bold">Insert</span> – A new value 
+	 was created.</p>
+	<p class="DoubleIndent"><span class="Bold">Update</span> – An existing 
+	 value was changed.</p>
+	<p class="DoubleIndent"><span class="Bold">Delete</span> – A value 
+	 was deleted. </p>
+	<h2>Exporting Audit Information</h2>
+	<p>You can export Audit Information to Microsoft Excel or to an XML 
+	 file. </p>
+	<h3>Exporting Audit Information to Microsoft Excel</h3>
+	<p>To export the information to Microsoft Excel:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Purchasing</span>, 
+		 <span class="Bold">Vendor RFQ Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open an RFQ record.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Info</span>, 
+		 <span class="Bold">Audit History</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the table, select 
+		 the rows to export.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Right-click the table 
+		 and select <span class="Bold">Send to Microsoft Excel</span>. 
+		 Microsoft Excel is opened, and the rows you selected are inserted 
+		 in the spreadsheet.</p></li>
+	</ol>
+	<h3>Exporting Audit Information to XML</h3>
+	<p>To export audit information to XML:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Purchasing</span>, 
+		 <span class="Bold">Vendor RFQ Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open an RFQ record.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Info</span>, 
+		 <span class="Bold">Audit History</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the table, select 
+		 the rows to export.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Right-click the table 
+		 and select <span class="Bold">Send to XML</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">File Name</span> – Specify 
+	 the name to use for the XML file.</p>
+	<p class="Numbered-Indent"><span class="Bold">XML to Write</span> – 
+	 Specify the content to include in the file. Click one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">Schema</span> – Click this 
+	 option to export the schema only. The XML structure is exported, but 
+	 no information from the table is exported.</p>
+	<p class="DoubleIndent"><span class="Bold">Document</span> – Click 
+	 this option to export the rows that you selected in the Audit History 
+	 table in XML format. </p>
+	<p class="DoubleIndent"><span class="Bold">Both</span> – Click this 
+	 option to export both a schema file and a document file.</p>
+	<p class="Numbered-Indent"><span class="Bold">Tags</span> – Specify 
+	 the information to use for the XML tags. Click one of these options:</p>
+	<p class="DoubleIndent"><span class="Bold">Use column name</span> – 
+	 Click this option to use the database column names for the tags.</p>
+	<p class="DoubleIndent"><span class="Bold">Use item nam</span>e – Click 
+	 this option to use the column names as displayed in the Audit History 
+	 table for the tags.</p>
+	<ol start="7" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Export</span>. 
+		 </p></li>
+	</ol>
+</div>
+</body>
+</html>

@@ -1,0 +1,166 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Allocating Supply to Work Order Material Requirement Demand</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Allocating Supply to Work Order Material Requirement Demand 
+		 in Inventory Transaction Entry</h1>
+	</div>
+	<p class="First">You can allocate these sources of supply to work order 
+	 material requirements:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Existing stock in inventory</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase order lines</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase order delivery 
+		 schedule lines</p></li>
+		<li class="p-Bullet"><p class="Bullet">Coproduct supply</p></li>
+		<li class="p-Bullet"><p class="Bullet">Interbranch transfers</p></li>
+		<li class="p-Bullet"><p class="Bullet">Other work orders</p></li>
+	</ul>
+	<p>To allocate supply to work order demand:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Inventory Transaction Entry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site that contains the work order. If you 
+		 are licensed to use a single site, this field is not available.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Issue</span> 
+		 option.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Work 
+		 Order ID</span> browse button and select the work order to assign 
+		 to supply.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Piece 
+		 No</span> browse button and select the material requirement to 
+		 assign to supply.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If necessary, click 
+		 the Location browse button and change the warehouse and location 
+		 from which to assign supply.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Allocate Supply to this Material</span>. This 
+		 information is displayed in the Supply Links dialog box header:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Required</span> 
+	 – The quantity of the material required by the demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Issued</span> 
+	 – The quantity of the material requirement that you have issued to 
+	 the work order from inventory. If this quantity is equal to the Quantity 
+	 Required, further supply is unnecessary: you have met all of the demand’s 
+	 requirements.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Allocated</span> 
+	 – The quantity that you have allocated from the supplying sources 
+	 towards meeting this material requirement. If this quantity is equal 
+	 to the Quantity Required, further supply is unnecessary.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Fulfilled</span> 
+	 – The quantity of the material requirement that has been fulfilled 
+	 by supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity Unallocated</span> 
+	 – The quantity of this material requirement to which you have yet 
+	 to allocate supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> – The 
+	 Part ID of this material requirement.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Description</span> 
+	 – The description of the material requirement Part ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock U/M</span> – The 
+	 stock unit of measure of the part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 The Warehouse ID of the material requirement; also the point from 
+	 which you are issuing it.</p>
+	<p class="Numbered-Indent"><span class="Bold">Required Date</span> 
+	 – The date by which you require this material requirement.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the arrow in the 
+		 Type column and select the source of supply. You can select:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">CP</span> 
+		 – &#160;Coproducts</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">I</span> 
+		 – Inventory</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">PD</span> 
+		 – Purchase Delivery Schedule Lines</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">PO</span> 
+		 – Purchase Orders</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">WH</span> 
+		 – Interbranch Transfers</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">WO</span> 
+		 – Work Orders</p></li>
+	</ol>
+	<ol start="10">
+		<li class="p-Numbered"><p class="Numbered">Perform one of these 
+		 steps:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you selected 
+		 CP, double-click the Supply Base ID browse button to view a list 
+		 of work orders that generate the part ID as a co-product. You 
+		 can view work orders with unallocated supply only or view all 
+		 work orders that produce the part ID as a co product. Use the 
+		 date fields to filter the work orders based on want date. Use 
+		 the Sort by options to sort the table by work order ID, desired 
+		 want date, or part ID. Select the work order to use as the supply, 
+		 and then click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you selected 
+		 I, double-click the Supply Base ID browse button to view a list 
+		 of warehouse locations that store the part. Select the location, 
+		 and then click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you selected 
+		 PD, double-click the Piece # browse button to view a list of purchase 
+		 order delivery schedules that supply the part. You can view purchase 
+		 order delivery schedule lines with unallocated supply only or 
+		 view all purchase order delivery schedule lines that supply the 
+		 part ID. Use the date fields to filter the purchase order delivery 
+		 schedule lines based on desired receive date. Use the Sort by 
+		 options to sort the table by purchase order ID, desired receive 
+		 date, or part ID. Select the purchase order delivery schedule 
+		 to use as the supply, and then click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you selected 
+		 PO, double-click the Seq #/Line # browse button to view a list 
+		 of purchase orders that supply the part ID. You can view purchase 
+		 order lines with unallocated supply only or view all purchase 
+		 order lines that supply the part ID. Use the date fields to filter 
+		 the purchase order lines based on desired receive date. Use the 
+		 Sort by options to sort the table by purchase order ID and line 
+		 number, desired receive date, or part ID. Select the purchase 
+		 order line to use as the supply, and then click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you selected 
+		 WH, double-click the Seq #/Line # browse button to view a list 
+		 of interbranch transfers that supply the part ID. You can interbranch 
+		 transfers with unallocated supply only or view all purchase order 
+		 lines that supply the part ID. Use the date fields to filter the 
+		 interbranch transfers based on desired receive date. Use the Sort 
+		 by options to sort the table by IBT ID and line number, desired 
+		 receive date, or part ID. Select the interbranch transfer line 
+		 to use as the supply, and then click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you select 
+		 WO, double-click the Supply Base ID browse button to view a list 
+		 of work order. Select the work order to use as the supply, and 
+		 then click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<ol start="11">
+		<li class="p-Numbered"><p class="Numbered">In the Allocate Quantity 
+		 column, enter the quantity of the supply to allocate to the demand. 
+		 The quantity you enter cannot be greater than the available demand 
+		 quantity.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>If you linked a purchase order to demand, you can view the purchase 
+	 order. Select the line containing the purchase order, and then click 
+	 <span class="Bold">Purchase Order</span>.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Inventory_Transaction_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

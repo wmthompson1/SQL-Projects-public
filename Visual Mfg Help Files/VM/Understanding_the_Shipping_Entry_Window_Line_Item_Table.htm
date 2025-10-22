@@ -1,0 +1,233 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Understanding the Shipping Entry Window Line Item Table</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Understanding the Shipping Entry Window Line Item Table</h1>
+	</div>
+	<p class="First">The following is a list of the column names in the 
+	 Shipping Entry window line item table followed by a brief description.</p>
+	<p><span class="Bold">Supply Type</span> - The type of supply used 
+	 to fulfill the order line’s Order Quantity. If there are no links 
+	 of supply to the customer order line, nothing appears in this column. 
+	 If you have attached links of supply to this order line from one of 
+	 the six possible sources of supply, the appropriate two character 
+	 Type ID appears here. These include:</p>
+	<p class="Normal-Indent"><span class="Bold">CP (Coproducts)</span></p>
+	<p class="Normal-Indent"><span class="Bold">I (Inventory)</span></p>
+	<p class="Normal-Indent"><span class="Bold">PD (Purchase Order Delivery 
+	 Schedule)</span></p>
+	<p class="Normal-Indent"><span class="Bold">PO (Purchase Order)</span></p>
+	<p class="Normal-Indent"><span class="Bold">WH (Interbranch Transfer)</span></p>
+	<p class="Normal-Indent"><span class="Bold">WO (Work Order)</span></p>
+	<p><span class="Bold">Reference</span> - If there is a link of supply 
+	 attached to this customer order line, the Supply Base ID of the supplying 
+	 order, the line number of the supplying line as it appears in the 
+	 order, and a description of the part appear in this column. For example:</p>
+	<p><span class="Bold">Trace</span> - VISUAL selects this check box 
+	 if a Part Trace Profile exists for the part on this order line.</p>
+	<p><span class="Bold">Ship Date</span> - The date on which you ship 
+	 the order. This is the date of shipment you entered in Customer Order 
+	 Entry during the entry of the order.</p>
+	<p><span class="Bold">Promise Date</span> - The date on which you promise 
+	 to ship the order. This is the promise date you entered in Customer 
+	 Order Entry during the entry of the order.</p>
+	<p><span class="Bold">Quantity Ordered</span> - The order quantity 
+	 of the customer order line.</p>
+	<p><span class="Bold">C.O. Pieces</span> – If the part is a piece tracked 
+	 part, the number of pieces ordered in Customer Order Entry.</p>
+	<p><span class="Bold">C.O. Length</span> – If the part is a piece tracked 
+	 part, the length specified in Customer Order Entry.</p>
+	<p><span class="Bold">C.O. Width</span> – If the part is a piece tracked 
+	 part, the width specified in Customer Order Entry.</p>
+	<p><span class="Bold">C.O Height</span> – If the part is a piece tracked 
+	 part, the height specified in Customer Order Entry.</p>
+	<p><span class="Bold">C.O. Dim UM</span> – If the part is a piece tracked 
+	 part, the dimension unit of measure specified in Customer Order Entry.</p>
+	<p><span class="Bold">Quantity Shipped</span> - The portion of the 
+	 Quantity Ordered that you have shipped. If this is a new shipment, 
+	 no value appears here. If this is a back order or a line that you 
+	 shipped partial quantities from before but kept open, a value appears 
+	 here.</p>
+	<p><span class="Bold">Line Closed Short</span> - If you ship a partial 
+	 quantity of a customer order line and then opt to close the order 
+	 with an outstanding backorder balance, VISUAL selects this check box.</p>
+	<p><span class="Bold">Ship Quantity</span> - The quantity that you 
+	 want to ship. The default value is the Order Quantity, however you 
+	 can enter greater or lesser values than the Order Quantity. If you 
+	 enter greater or lesser values, you must decide what to do with either 
+	 the overshipment quantity or the remaining balance. See Shipping Customer 
+	 Orders for more information.</p>
+	<p><span class="Bold">Ship Pieces</span> – For a piece tracked part, 
+	 the number of pieces to ship to the customer. You can enter greater 
+	 or lesser values than the C.O Pieces quantity. If you enter greater 
+	 or lesser values, you must decide what to do with either the overshipment 
+	 quantity or the remaining balance.</p>
+	<p><span class="Bold">Ship Status</span> – The system indicates whether 
+	 you have sufficient materials on hand to ship the order. The system 
+	 inserts one of the following statuses:</p>
+	<p class="Normal-Indent"><span class="Bold">In Stock</span> - The system 
+	 inserts In Stock if you have sufficient quantity of the part on hand 
+	 to fulfill the order.</p>
+	<p class="Normal-Indent"><span class="Bold">Expected</span> - The system 
+	 inserts Expected if the quantity of the part you have on hand plus 
+	 the quantity of the part you have on order and due to arrive in inventory 
+	 before the Desired Ship Date equals or exceeds the amount required 
+	 to fulfill the order. Amount on order includes both parts you are 
+	 in the process of purchasing and parts scheduled to be made on a unreleased, 
+	 firmed, or released work order. If the work order is not scheduled, 
+	 the system uses the work order want date to evaluate supply. If the 
+	 work order is scheduled, the system uses the schedule date to evaluate 
+	 supply. The system uses the Desired Ship Date on the customer order 
+	 line to evaluate if parts on order will arrive in inventory on time. 
+	 If the Desired Ship Date on the order line is blank, then the system 
+	 uses the Desired Ship Date on the customer order header instead.</p>
+	<p class="Normal-Indent"><span class="Bold">No Supply</span> - The 
+	 system inserts No Supply if the quantity of the part you have on hand 
+	 plus the quantity of the part you have on order and due to arrive 
+	 before the Desired Ship Date does not equal or exceed the amount required 
+	 to fulfill the order. The system uses the Desired Ship Date on the 
+	 order line to evaluate if parts on order will arrive on time. If the 
+	 Desired Ship Date on the order line is blank, then the system uses 
+	 the Desired Ship Date on the customer order header instead. If you 
+	 change the Desired Ship Date, the system reevaluates the Supply Status 
+	 when you save the order.</p>
+	<p><span class="Bold">Quantity Allocated</span> - The quantity that 
+	 you have allocated to the C/O line. If VISUAL finds sufficient supply 
+	 in the customer’s primary warehouse, the value that appears here is 
+	 equal to the quantity of the C/O line, meaning that VISUAL has allocated 
+	 full supply to the line from inventory. However, it is possible to 
+	 have a value in this field that is less than the required quantity 
+	 of a C/O line.</p>
+	<p><span class="Bold">Quantity Fulfilled</span> - The quantity that 
+	 VISUAL has fulfilled from the supplying source.</p>
+	<p><span class="Bold">Length, Width, and Height</span> – If the part 
+	 is a piece tracked part, specify the dimensions of the part you are 
+	 shipping. You can specify different dimensions from the dimensions 
+	 on the customer order.</p>
+	<p><span class="Bold">Dim UM</span> – If the part is a piece tracked 
+	 part, the dimension unit of measure is inserted in this field.</p>
+	<p><span class="Bold">Link Quantity Allocated</span> - The quantity 
+	 you have allocated to this customer order line from one of the six 
+	 sources of supply. These include: CP (Coproducts), I (Inventory), 
+	 PD (Purchase Order Delivery Schedule), PO (Purchase Order), WH (Interbranch 
+	 Transfer), and WO (Work Order).</p>
+	<p><span class="Bold">Stock U/M</span> - The stock unit of measure 
+	 for the part.</p>
+	<p><span class="Bold">U/M</span> - The unit of measure with which you 
+	 measure the part. Enter units of measure in Unit of Measure Maintenance.</p>
+	<p><span class="Bold">Location ID</span> - The ID of the location in 
+	 the warehouse from which you are shipping the parts. Either accept 
+	 this default from the original order or select a new Location ID.</p>
+	<p><span class="Bold">Warehouse ID</span> - The warehouse you entered 
+	 in Customer Order Entry for this customer order.. If the customer 
+	 has a primary warehouse, the primary warehouse is the default.</p>
+	<p><span class="Bold">Location Quantity</span> - The quantity of part 
+	 on the customer order line in the selected warehouse location. See 
+	 above.</p>
+	<p><span class="Bold">Customer Part ID</span> - If applicable, the 
+	 Customer’s ID of the part.</p>
+	<p><span class="Bold">Cartons</span> - If applicable, the number of 
+	 cartons used to ship the part.</p>
+	<p><span class="Bold">Shipping Weight</span> - The shipping weight 
+	 of the part.</p>
+	<p><span class="Bold">Weight U/M</span> - The weight U/M of the part. 
+	 Select the appropriate weight u/m from the list box.</p>
+	<p><span class="Bold">NMFC Code</span> - If applicable, the National 
+	 Motor Freight Code for the customer line shipment. Enter NMFCs in 
+	 Application Global Maintenance.</p>
+	<p><span class="Bold">Package Type</span> - If applicable, The type 
+	 of packaging used in the shipment. Enter Packaging Types in Application 
+	 Global Maintenance.</p>
+	<p><span class="Bold">Transaction ID</span> - The Transaction ID VISUAL 
+	 assigns to this shipment. See Inventory Transaction Entry for more 
+	 information on viewing inventory transactions.</p>
+	<p><span class="Bold">Transaction Description</span> - If the shipment 
+	 has been returned, the description that was specified when the return 
+	 was processed.</p>
+	<p><span class="Bold">Unit Price</span> - The price per unit of the 
+	 part.</p>
+	<p><span class="Bold">Shipping U/M</span> - A valid VISUAL U/M appears 
+	 in this column only if you have attached a service charge to the packlist 
+	 using the Edit Packlist function. You must enter Shipping U/Ms in 
+	 the Edit Packlist dialog box.</p>
+	<p><span class="Bold">Discount %</span> - The discount percentage of 
+	 the customer’s discount code. For example, if the customer’s default 
+	 discount code is &quot;Retail,&quot; and you maintain a 12% discount 
+	 for that code, then 12% appears in this field. However, you do not 
+	 have to accept this default; you can override this value on each line. 
+	 Enter discount codes and maintain customer discount code information 
+	 in Customer Maintenance.</p>
+	<p><span class="Bold">Commission %</span> - The commission percentage 
+	 of the customer’s sales representative. VISUAL fills this column with 
+	 the default sales reps’s commission percentage. Enter a sales rep’s 
+	 Default Commission Percentage in Customer Maintenance in the Sales 
+	 Reps dialog box.</p>
+	<p><span class="Bold">VAT Code</span> - VISUAL fills this field with 
+	 the default from Part Maintenance. This only applies if the customer 
+	 is Intrastat/VAT enabled.</p>
+	<p><span class="Bold">G/L Revenue Account ID</span> - The general ledger 
+	 account for the part. Enter G/L accounts in the Accounting Window.</p>
+	<p><span class="Bold">Packlist Long Description</span> - A description 
+	 of the packlist. Enter descriptions using the Edit Packlist function. 
+	 See <a href="Working_With_Existing_Packlists.htm">Working With Existing 
+	 Packlists</a>.</p>
+	<p><span class="Bold">Ship Dimensions</span> - Shipping dimensions 
+	 for the order. Enter ship dimensions using the Edit Packlist function. 
+	 See <a href="Working_With_Existing_Packlists.htm">Working With Existing 
+	 Packlists</a>.</p>
+	<p><span class="Bold">User Defined 1-10</span> - User defined field 
+	 labels for this customer order line. </p>
+	<p><span class="Bold">Country of Origin</span> - The country of origin 
+	 of this customer order. Enter Countries of Origin in Application Global 
+	 Maintenance using the HTS Codes Maintenance dialog box. </p>
+	<p><span class="Bold">Excise Price</span> - If applicable, the amount 
+	 of internal tax levied on the customer for this order. </p>
+	<p><span class="Bold">Tariff Code</span> - If an international customer, 
+	 the Intrastat Tariff Code associated with the order line. </p>
+	<p><span class="Bold">Region ID</span> - If an international customer, 
+	 the Intrastat Region ID associated with the order line. </p>
+	<p><span class="Bold">From Country ID</span> - If an international 
+	 customer, the From Country ID associated with the order line. </p>
+	<p><span class="Bold">Material Code</span> - The material code of the 
+	 part on the order line. Enter material codes for parts in Part Maintenance 
+	 from the Order Management tab.</p>
+	<p><span class="Bold">ShipTo ID</span> - The ID associated with the 
+	 customer’s ShipTo address. If you did not specify a ShipTo ID in Customer 
+	 Order Entry, you can do so now.</p>
+	<p><span class="Bold">HTS Code (Harmonized Tariff Schedule Code)</span>- 
+	 If an international order, a tariff by duty percent placed on the 
+	 customer order. Enter HTS Codes in Application Global Maintenance 
+	 under the Order Management tab. Set default HTS Codes for parts in 
+	 Part Maintenance from the Order Management tab. </p>
+	<p><span class="Bold">Country of Origin</span> - The country of origin 
+	 for the part on the order line. You can either accept the part’s default 
+	 Country of Origin or double-click the column header to select a different 
+	 one. You can also enter unique Country of Origin IDs. VISUAL reminds 
+	 you that the country you entered is not in the address tables but 
+	 lets you continue. Enter Countries of Origin in Application Global 
+	 Maintenance.</p>
+	<p><span class="Bold">Has Delivery Schedule</span> - VISUAL selects 
+	 this check box if the customer order line is a customer order delivery 
+	 schedule line.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shipping_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

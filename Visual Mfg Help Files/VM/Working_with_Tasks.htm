@@ -1,0 +1,147 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Working with Tasks</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Working with Tasks</h1>
+	</div>
+	<p class="First">The Task List Notification dialog box allows you to 
+	 identify a group of users responsible for approving the activity before 
+	 the workflow proceeds to the next step.</p>
+	<p>For each member of the Task List Notification, Workflow generates 
+	 a task notification in the VISUAL Task Maintenance window, Outlook, 
+	 or both. For more information, refer to the <a href="VMWRKFLOPrefsProp.htm">Setting 
+	 Workflow Preferences</a> section.</p>
+	<table style="margin-left: 13.50pt;" cellspacing="0" width="366">
+		<tr class="hcp1">
+			<td width="60" class="hcp2"><p><img src="Graphics/IMPORTNT.gif" alt="IMPORTNT.gif" title="IMPORTNT.gif" border="0"></p></td>
+			<td width="306" class="hcp2"><p>To use VISUAL Task 
+			 Maintenance in a workflow, you must add a user to the Assign 
+			 To field in Workflow Properties dialog box.</p></td>
+		</tr>
+	</table>
+	<p>To set up a task list:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In the Rule Properties 
+		 dialog box, click the <span class="Bold">Tasks</span> button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Task List Notification dialog box appears.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The User/Group ID arrow appears.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Click the arrow and 
+		 select a user or User Group.</p>
+		<table cellspacing="0" width="366">
+			<tr class="hcp1">
+				<td width="60" class="hcp2"><p><img src="Graphics/IMPORTNT.gif" alt="IMPORTNT.gif" title="IMPORTNT.gif" border="0"></p></td>
+				<td width="306" class="hcp2"><p>When you select 
+				 a group, all members of that group appear on separate 
+				 lines in the Task List Notification dialog box.</p></td>
+			</tr>
+		</table></li>
+	</ol>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">For each user you want 
+		 to allow sign off privileges, select the <span class="Bold">Signoff</span> 
+		 check box. You can select as many users as you want to have signoff 
+		 privileges.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When you select the Signoff check box, VISUAL 
+	 creates a task for each user.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">For the user you want 
+		 to be leader, select the <span class="Bold">Leader</span> check 
+		 box.</p>
+		<table cellspacing="0" width="366">
+			<tr class="hcp1">
+				<td width="60" class="hcp2"><p><img src="Graphics/IMPORTNT.gif" alt="IMPORTNT.gif" title="IMPORTNT.gif" border="0"></p></td>
+				<td width="306" class="hcp2"><p>You can only 
+				 have one leader within your user list: if you change the 
+				 leader, VISUAL Workflow automatically clears the original 
+				 leader’s check box.</p></td>
+			</tr>
+		</table></li>
+	</ol>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">In the Task Specification 
+		 field, enter a description of the task you want this step to represent.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The description you enter in this field 
+	 also appears in the Specification column in Task Maintenance.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">When you have finished 
+		 adding users to this step’s task list, click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+	<h2>Deleting Users from Task Lists</h2>
+	<p class="First">To remove users from a task list:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">From the Rule dialog 
+		 box, click the <span class="Bold">Approvals</span> button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the row header 
+		 for the user you want to remove.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The row appears highlighted.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Delete</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL clears the name from the User Task 
+	 list.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+	<h2>Workflow and Outlook Tasks</h2>
+	<p>To receive workflow tasks from another user, you must grant that 
+	 user permission to write to your Outlook Tasks folder.</p>
+	<p>To grant permission:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In Microsoft Outlook, 
+		 display Tasks.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Right-click the Tasks 
+		 folder and select <span class="Bold">Properties</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Permissions</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Add...</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the user who 
+		 should have write-access to your Tasks folder.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Write section, 
+		 select the <span class="Bold">Create Items</span> and <span class="Bold">Edit 
+		 Own</span> check boxes. See the Outlook online help for information 
+		 about other permission levels.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Workflow.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

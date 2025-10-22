@@ -1,0 +1,202 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Allocation Options</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+li.hcp1 { list-style:none;
+display:inline; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Allocation Options</h1>
+	</div>
+	<p>A “front-end” scheduling scheme is supported by scheduling supplying 
+	 work orders ahead of consuming work orders. A list of work orders 
+	 is first constructed with either want date or priority taking precedence, 
+	 depending upon your choice.</p>
+	<p>Allocation is determined in this sequence:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If the Allocate fabricated 
+		 materials check box is selected, then the system will pass supplying 
+		 work orders to the scheduler before consuming work orders. This 
+		 is done by constructing a new list that re-sequences the work 
+		 orders in the original list. Each work order in the original list 
+		 is processed in sequence as follows:</p></li>
+	</ol>
+	<ol start="1">
+		<li class="p" style="list-style: lower-alpha;"><p class="Numbered-Indent">The 
+		 work order is searched for any requirement that has a named part, 
+		 is not linked to a P/O and is not a leg header.</p></li>
+		<li class="p" style="list-style: lower-alpha;"><p class="Numbered-Indent">For 
+		 each such requirement:</p></li>
+	</ol>
+	<ol>
+		<li class="hcp1"><ul>
+			<li class="p-Bullet-Indent"><p class="Bullet-Indent">If customer 
+			 demand for the requirement’s part ID has not previously determined, 
+			 then demand for that part from any customer orders that meet 
+			 the conditions setup in item 1 is determined. This is done 
+			 once for each encountered part ID.</p></li>
+			<li class="p-Bullet-Indent"><p class="Bullet-Indent">If supply 
+			 for customer order demand for the part has not previously 
+			 been allocated, then an attempt is made to allocate supply 
+			 to the demand from qualifying customer orders as follows:</p></li>
+			<li class="hcp1"><ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">First, 
+				 any available supply is taken from inventory and allocated 
+				 to the qualifying customer orders.</p></li>
+			</ul>
+			<ul>
+				<li class="p-Bullet-Indent"><p class="Bullet-Indent">Then, 
+				 if there is insufficient supply in inventory for the customer 
+				 order demand, supply is taken from any work orders in 
+				 the list to be scheduled. This is done by searching the 
+				 list for enough supplying work orders to cover the customer 
+				 order demand. Each supplying work order that is found 
+				 is processed by going through the steps outlined here 
+				 in a) through c).</p></li>
+			</ul></li>
+			<li class="p-Bullet-Indent"><p class="Bullet-Indent">Next, 
+			 supply is sought for demand from the requirement.</p></li>
+			<li class="p-Bullet-Indent"><p class="Bullet-Indent">As with 
+			 customer orders, supply is sought first from available inventory.</p></li>
+		</ul>
+		<ul>
+			<li class="p-Bullet-Indent"><p class="Bullet-Indent">If there 
+			 is insufficient supply in inventory, then supply is taken 
+			 from work orders in the list to be scheduled. The list is 
+			 searched for enough supplying work orders to cover the demand 
+			 (if there are enough). Each supplying work order that is found 
+			 is processed by going through the steps outlined here in a) 
+			 through c).</p></li>
+		</ul></li>
+	</ol>
+	<ol start="3">
+		<li class="p" style="list-style: lower-alpha;"><p class="Numbered-Indent">The 
+		 work order is added to the list containing the new scheduling 
+		 sequence of work orders.</p></li>
+		<li class="p" style="list-style: lower-alpha;"><p class="Numbered-Indent">The 
+		 work order is marked as processed. This prevents supplying work 
+		 orders which have been selected as a source of supply from being 
+		 reprocessed if they were selected from the original list.</p></li>
+	</ol>
+	<p class="Numbered-Indent" style="margin-left: 80px;">This results 
+	 in a new scheduling sequence of work orders where the lower level 
+	 supplying work orders are selected for scheduling before consuming 
+	 work orders.</p>
+	<ol start="2" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">The parts, availability 
+		 and customer demand are optionally logged to the scheduling log 
+		 file.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Supplying work orders 
+		 which have been given a higher scheduling priority are optionally 
+		 logged in the scheduling log file.</p></li>
+	</ol>
+	<p>To select Allocations settings:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Allocations</span> 
+		 tab.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Allocations options appear.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">If you want VISUAL to 
+		 schedule supplying work orders before consuming work orders, select 
+		 the <span class="Bold">Allocate fabricated materials</span> check 
+		 box.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When you select this box, VISUAL resequences 
+	 the order of all work orders. Use the part lead-time and additional 
+	 days fields to set a time period so that materials are available for 
+	 customers whose desired ship date is within that period.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">In the Add to scheduling 
+		 log section, select what you want VISUAL to include in the scheduling 
+		 log:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Part allocation information</span> 
+	 – If you want to log parts, availability and customer demand to the 
+	 scheduling log file, select this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Work order allocation 
+	 information</span> – If you want to log supplying work orders with 
+	 higher scheduling priorities in the scheduling file, select this check 
+	 box if you want to log supplying work orders with higher scheduling 
+	 priorities in the scheduling file.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">In the During scheduling, 
+		 allocate supply section, select how you want VISUAL to allocate 
+		 supply when netting parts:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Non-Work Orders first</span> 
+	 – Select this option button if you want VISUAL to first allocate supply 
+	 to all non-work order demand (essentially customer orders). This reserves 
+	 supply for customer orders that is not available for any work order 
+	 requirements being scheduled: VISUAL fulfills customer orders from 
+	 the available supply pool before any work order requirements can draw 
+	 supply from it.</p>
+	<p class="Numbered-Indent"><span class="Bold">Work Order Requirements 
+	 First</span> – Select this option button if you want VISUAL to not 
+	 allocate supply to non-work order demand—customer orders. This leaves 
+	 all supply available to fulfill work order requirement demand during 
+	 scheduling.</p>
+	<p class="Numbered-Indent"><span class="Bold">Based on Date Sequence</span> 
+	 – Select this option button if you want VISUAL to allocate supply 
+	 according to demand date priority. When scheduling work order requirements, 
+	 VISUAL allocates supply based on the demand’s required date. However, 
+	 once VISUAL allocates supply to a work order requirement, it is <span 
+	 class="Bold">NOT</span> re-allocated to another work order requirement 
+	 scheduled at a later time in the scheduling sequence, even if it has 
+	 an earlier demand date. Essentially, when VISUAL schedules a work 
+	 order requirement, customer orders with an earlier demand date draw 
+	 supply from the available supply pool and any remaining supply is 
+	 available to satisfy the work order requirement. After VISUAL allocates 
+	 the supply to the work order requirement, no other work order requirement 
+	 can draw from that allocated supply, even if it has an earlier demand 
+	 date.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">In the Create Material 
+		 Supply Links for Supply Within section, select for what you want 
+		 VISUAL to create supply links:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Project Warehouses</span> 
+	 – If you want VISUAL to create links to supply within project type 
+	 warehouses, select the <span class="Bold">Project Warehouses</span> 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Universal Warehouses</span> 
+	 – If you want VISUAL to create links to supply within universal type 
+	 warehouses, select the <span class="Bold">Universal Warehouses</span> 
+	 check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocate supply even 
+	 if insufficient to meet demand</span> – If you want VISUAL to allocate 
+	 supply even if there isn’t enough supply to meet the demand, select 
+	 the <span class="Bold">Allocate supply even if insufficient to meet 
+	 demand</span> check box.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">If you are finished 
+		 making changes to your scheduling preferences, press click the 
+		 <span class="Bold">OK</span> button.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Concurrent_Scheduler.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="Setting_Concurrent_Scheduler_Preferences.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Setting Concurrent Scheduler Preferences</p>
+<p class="SeeAlsoNext"><a href="Setting_After_Forward_Pass_Options.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Setting After Forward Pass Options</p>
+<p class="SeeAlsoNext"><a href="Setting_Material_Options.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Setting Material Options</p>
+</body>
+</html>

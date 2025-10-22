@@ -1,0 +1,75 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+ 
+<title>What is the BTS Import Utility?</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>What is the BTS Import Utility?</h1>
+	</div>
+	<p class="First">This BTS import utility allows you to import data 
+	 from an existing legacy system or your own design for a batch system.</p>
+	<p>You can import the data in one of two formats: Comma Separated Values 
+	 (*.csv) and eXtensible Markup Language (*.xml). The two formats differ 
+	 greatly; here are definitions of each:</p>
+	<h2>Comma Separated Values (*.csv)</h2>
+	<p>This file format has the first record (or row) that contains the 
+	 field names from the AMTS PENDING TRANS table, followed by records 
+	 (or rows) of the data to be inserted into their respective columns.</p>
+	<p>Here is an example of a Clock In/Clock Out sequence of transactions:</p>
+	<p>PENDING_ID, TRANS_TYPE, USER_ID, PENDING_FLAG, TRANSACTION_DATE, 
+	 TRANS_DATETIME, INDIRECT_ID</p>
+	<p>18276,'C','DAVE','P', 25-DEC-2000, 25-DEC-2000 10:40:00, 'BREAK'</p>
+	<p>18276,'O','DAVE','P', 25-DEC-2000, 25-DEC-2000 11:50:00, ''</p>
+	<h2>eXtensible Markup Language (*.xml)</h2>
+	<p>This file format features data located between tags, which are the 
+	 actual field names from the AMTS Pending TRANS table.</p>
+	<p>Here is an example of a Clock In/Clock Out sequence of transactions:</p>
+	<p>&lt;AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;PENDING_ID&gt;18276&lt;/PENDING_ID&gt;</p>
+	<p>&lt;TRANS_TYPE&gt;C&lt;/TRANS_TYPE&gt;</p>
+	<p>&lt;USER_ID&gt;DAVE&lt;/USER_ID&gt;</p>
+	<p>&lt;PENDING_FLAG&gt;P&lt;/PENDING_FLAG&gt;</p>
+	<p>&lt;TRANSACTION_DATE&gt;25-DEC-2000&lt;/TRANSACTION_DATE&gt;</p>
+	<p>&lt;TRANS_DATETIME&gt;25-DEC-2000 10:40:00&lt;/TRANS_DATETIME&gt;</p>
+	<p>&lt;INDIRECT_ID&gt;BREAK&lt;/INDIRECT_ID&gt;</p>
+	<p>&lt;/AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;PENDING_ID&gt;18276&lt;/PENDING_ID&gt;</p>
+	<p>&lt;TRANS_TYPE&gt;O&lt;/TRANS_TYPE&gt;</p>
+	<p>&lt;USER_ID&gt;DAVE&lt;/USER_ID&gt;</p>
+	<p>&lt;PENDING_FLAG&gt;P&lt;/PENDING_FLAG&gt;</p>
+	<p>&lt;TRANSACTION_DATE&gt;25-DEC-2000&lt;/TRANSACTION_DATE&gt;</p>
+	<p>&lt;TRANS_DATETIME&gt;25-DEC-2000 10:40:00&lt;/TRANS_DATETIME&gt;</p>
+	<p>&lt;/AMTS_PENDING_TRANS&gt;</p>
+	<p><span style="font-style: italic;">or it can be imported like this:</span></p>
+	<p>&lt;AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;PENDING_ID&gt;18276&lt;/PENDING_ID&gt;&lt;TRANS_TYPE&gt;C&lt;/TRANS_TYPE&gt;&lt;USER_ID&gt;DAVE&lt;/USER_ID&gt;&lt;PENDING_FLAG&gt;P&lt;/PENDING_FLAG&gt;&lt;TRANSACTION_DATE&gt;25-DEC-2000&lt;/TRANSACTION_DATE&gt;&lt;TRANS_DATETIME&gt;25-DEC-2000 
+	 10:40:00&lt;/TRANS_DATETIME&gt;&lt;INDIRECT_ID&gt;BREAK&lt;/INDIRECT_ID&gt;</p>
+	<p>&lt;/AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;AMTS_PENDING_TRANS&gt;</p>
+	<p>&lt;PENDING_ID&gt;18276&lt;/PENDING_ID&gt;&lt;TRANS_TYPE&gt;O&lt;/TRANS_TYPE&gt;&lt;USER_ID&gt;DAVE&lt;/USER_ID&gt;&lt;PENDING_FLAG&gt;P&lt;/PENDING_FLAG&gt;&lt;TRANSACTION_DATE&gt;25-DEC-2000&lt;/TRANSACTION_DATE&gt;&lt;TRANS_DATETIME&gt;25-DEC-2000 
+	 10:40:00&lt;/TRANS_DATETIME&gt;</p>
+	<p>&lt;/AMTS_PENDING_TRANS&gt;</p>
+	<h2>Transactional Data</h2>
+	<p>The data for each transaction varies and can change depending on 
+	 many factors, such as linked orders.</p>
+</div>
+<p class="SeeAlsoNext"><a href="Running_the_BTS_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Running the BTS Import Utility</p>
+</body>
+</html>

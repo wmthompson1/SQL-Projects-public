@@ -1,0 +1,55 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Language QRP Forms</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Language QRP Forms</h1>
+	</div>
+	<p class="First">You will need to create QRPs for each language variation 
+	 for each form you require. QRPs are identified using the Language 
+	 ID as a 2-character suffix. If you denote the Language ID by a xx, 
+	 you need to create the following QRPs:</p>
+	<p><span class="Bold">Standard</span>&#160;&#160;&#160;<span class="Bold">Language 
+	 Variant</span></p>
+	<p>Vmordfrm.qrp&#160;&#160;&#160;ordfrmxx.qrp</p>
+	<p>Vmordvat.qrp&#160;&#160;&#160;ordvatxx.qrp</p>
+	<p>Vmshpfrm.qrp&#160;&#160;&#160;shpfrmxx.qrp</p>
+	<p class="header">Vminvfrm.qrp&#160;&#160;&#160;invfrmxx.qrp</p>
+	<p>Vminvvat.qrp&#160;&#160;&#160;invvatxx.qrp</p>
+	<p>Vfinvfrm.qrp&#160;&#160;&#160;vfifrmxx.qrp</p>
+	<p>Vfinvvat.qrp&#160;&#160;&#160;vfivatxx.qrp</p>
+	<p class="header">Vfstmfrm.qrp&#160;&#160;&#160;stmfrmxx.qrp</p>
+	<p>When producing packlists for a particular language, VISUAL needs 
+	 to detect all shipments where the specified language is associated 
+	 with the ShipTo address (if one is specified).VISUAL automatically 
+	 uses the language QRP and looks up the transalted part description.</p>
+	<p>Similarly, when producing acknowledgements for a particular language, 
+	 VISUAL detects orders for customers with that language. When producing 
+	 invoices, VISUAL checks the Bill To language and main Language IDs.</p>
+	<p>The following programs have been modified to support Language IDs:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Vmcusmnt&#160;Vminvgen</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vmprtmnt&#160;Vfarient</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vmordent</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vmshpent</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

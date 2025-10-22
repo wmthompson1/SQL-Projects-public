@@ -1,0 +1,69 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Requiring the Use of Customer-specific Pricing at Shipment</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Requiring the Use of Customer-specific Pricing at Shipment</h1>
+	</div>
+	<p class="First">Use the Effectivity Date Price for Shipments field 
+	 on the Costing tab to specify whether customer-specific pricing must 
+	 be set up before you ship a part to a customer.</p>
+	<p>If you are licensed to use multiple sites, you can specify this 
+	 information at either the tenant level of the site level. Information 
+	 you specify at the site level overrides the information you specify 
+	 at the tenant level.</p>
+	<p>To specify this setting:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Inventory</span>, 
+		 <span class="Bold">Part Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To specify the setting 
+		 for a site, specify the ID of the site in the Site ID field. To 
+		 specify the setting at the tenant level, specify **Tenant** in 
+		 the Site ID field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Part ID field, 
+		 specify the part.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Costing</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Effectivity Date 
+		 Price for Shipments field, specify the action to take if a customer-specific 
+		 price cannot be found for this part when a customer order is shipped. 
+		 This field overrides the default setting specified in Application 
+		 Global Maintenance. Specify one of these options.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Yes</span> – To prevent 
+	 the shipment of this part if a valid unit price cannot be found in 
+	 the Customer Pricing table for the date of shipment, specify Yes. 
+	 If you select this option, you must specify Shipments or Both in the 
+	 By Order/Ship Date column when you set up customer-specific pricing.</p>
+	<p class="Numbered-Indent"><span class="Bold">No</span> – To use the 
+	 unit price specified on the customer order line if no price exists 
+	 in the Customer Price table for the date of shipment, specify No. 
+	 Select this option to allow the customer order to be shipped even 
+	 if a customer price has not been defined.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warn</span> – To display 
+	 a warning message if a valid price cannot be found in the Customer 
+	 Price table, specify Warn. You can use the Unit Price from the Customer 
+	 Order line to complete the shipment.</p>
+	<ol start="6" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Part_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assigning Work Order Supply to a Customer Order Line</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assigning Work Order Supply to a Customer Order Line</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Highlight the customer 
+		 order line item to which you want to assign work order supply 
+		 and select <span class="Bold">Assign Supply to Customer Order 
+		 Line</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Supply Links dialog box appears.</p>
+	<p class="Numbered-Indent">The following information appears in the 
+	 header section of the Supply Links dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order ID/Line #</span> 
+	 - The Order ID of the current customer order; the line number, as 
+	 it appears in the Customer Order ID, of the customer order line to 
+	 which you are assigning supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order Qty</span> - The 
+	 order quantity of the customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipped Qty</span> - 
+	 The quantity of the customer order line that you have shipped. Unless 
+	 you have performed a partial shipment for this line and chosen to 
+	 keep the order open with a balance pending possible future shipments, 
+	 this value is zero for new customer orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Qty</span> 
+	 - The portion of the Order Qty to which you have allocated supply. 
+	 Before you establish any links of supply, this value is zero.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Qty</span> 
+	 - The allocated quantity that has been fulfilled by the supplying 
+	 source.</p>
+	<p class="Numbered-Indent"><span class="Bold">Remaining Qty</span> 
+	 - The quantity to which you have yet to assign supply. Before you 
+	 establish any links of supply, this quantity is equal to the Order 
+	 Quantity of the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> - The 
+	 ID of the part on the customer order line. This is the part for which 
+	 you are attempting to obtain supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Description</span> 
+	 - A description of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock U/M</span> - The 
+	 stock unit of measure of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Selling U/M</span> - 
+	 The selling unit of measure of the part. The default from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> - 
+	 The Warehouse ID of the customer order line. Without Warehouse IDs, 
+	 you cannot assign supply to customer order lines. Unless you specify 
+	 otherwise, this is the customer’s default primary warehouse. Specify 
+	 a warehouse other than the customer’s default primary warehouse during 
+	 the entry of the order by double-clicking the <span class="Bold">&lt;Warehouse 
+	 ID&gt;</span> column header for each customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Desired Ship Date</span> 
+	 - The order’s desired ship date, or the date on which shipment to 
+	 the customer is most ideal. Enter a Desired Ship Date during the entry 
+	 of the customer order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Date</span> - 
+	 The date by which you promise the customer you will have fulfilled 
+	 the order and prepared it for shipping. Enter a Promise Date during 
+	 the entry of the customer order.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the Insert button 
+		 to begin establishing demand links to the current customer order 
+		 line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the Type list box, 
+		 select <span class="Bold">WO</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click &lt;Supply 
+		 Base ID&gt; to view a list of all the work orders currently in 
+		 your database.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select a work order 
+		 with the matching Part ID and click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The work order appears in the Supply Links 
+	 dialog box line item table.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">In the Assign Quantity 
+		 column, enter the quantity that you want to allocate from the 
+		 work order to the customer order line. The quantity that you enter 
+		 here cannot be greater than the Supply Unallocated Quantity of 
+		 the work order or the Remaining Qty to Assign of the customer 
+		 order line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to commit the allocation of supply from the selected work order 
+		 to the customer order line.</p></li>
+	</ol>
+	<h2>Viewing Work Order Supply Allocation Information for a Customer 
+	 Order Line Item</h2>
+	<p>After you have either fully or partially allocated supply to a customer 
+	 order line item using the preceding procedures, you can view allocation 
+	 information on the customer order line.</p>
+	<p class="SeeAlsoNext">For each customer order line item to which you 
+	 have allocated work order supply, the following appears:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there is only one link of purchase order line supply, WO appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there are multiple links of inventory supply, nothing appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is only one link of work order supply, 
+		 the Work appropriate Order ID appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is more than one link of work order supply, 
+		 Multiple Links appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Lot ID/Line # column, 
+		 if there is only link of supply from a work order, the Lot ID/Line 
+		 # of the work order appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Lot ID/Line # column, 
+		 if there is allocated supply from a more than one work order, 
+		 nothing appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Split ID column, 
+		 if there is only link of supply from a work order, the Split ID 
+		 of the appropriate work order appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Split ID column, 
+		 if there is allocated supply from a more than one work order, 
+		 nothing appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Total Qty Allocated 
+		 column, the total quantity of parts that you have allocated to 
+		 the customer order line item appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Job Qty Unallocated 
+		 column, if there is only one supplying work order link, the amount 
+		 that is still available from that work order for allocation appears. 
+		 The Supply Quantity is subtracted from the Supply Unallocated 
+		 Quantity to arrive at this value.</p></li>
+	</ul>
+	<p>In the Job Qty Unallocated column, if there is more than one supplying 
+	 work order link, nothing appears.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,147 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Burden Information for &quot;Move&quot; Transactions</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Burden Information for &quot;Move&quot; Transactions</h1>
+	</div>
+	<p>Certain transactions use a single burden category to report burden 
+	 costs. These transactions are called “move” transactions. These move 
+	 transactions report burden in a single category:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Transfer from commercial 
+		 inventory to project inventory</p></li>
+		<li class="p-Bullet"><p class="Bullet">Transfer from project inventory 
+		 to different project inventory</p></li>
+		<li class="p-Bullet"><p class="Bullet">Transfer from project inventory 
+		 to commercial inventory</p></li>
+		<li class="p-Bullet"><p class="Bullet">Adjust out of project inventory 
+		 for purchase parts</p></li>
+		<li class="p-Bullet"><p class="Bullet">Adjust out project inventory 
+		 for fabricated parts</p></li>
+		<li class="p-Bullet"><p class="Bullet">WIP issue commercial inventory 
+		 to project work orders</p></li>
+		<li class="p-Bullet"><p class="Bullet">WIP issue project inventory 
+		 to different project work order</p></li>
+		<li class="p-Bullet"><p class="Bullet">WIP issue project inventory 
+		 to different WBS in the same project (WBS transfers flagged)</p></li>
+		<li class="p-Bullet"><p class="Bullet">WIP issue returns transferred 
+		 to another project.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Finished goods receipts 
+		 transferred to another project.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase receipt returns 
+		 for project inventory</p></li>
+		<li class="p-Bullet"><p class="Bullet">Any cost updates for these 
+		 transaction that may have taken place in a previous period</p></li>
+	</ul>
+	<p>Additional transactions can be classified as move transactions, 
+	 but these other transactions do not create burden.</p>
+	<p>When you view burden information for move transactions, the Burden 
+	 Details dialog shows the actual burden transactions posted to your 
+	 general ledger. Where possible, the individual burden amounts that 
+	 made up the actual amounts are also listed. These individual burden 
+	 amounts are identified as SUPPLY transactions in the table. To identify 
+	 the supply burden transactions, the INV_TRANS_DIST and BURDEN_DIST_DETAIL 
+	 tables are examined to find the cost layers linked to the actual burden 
+	 amounts.</p>
+	<p>Depending on the move transaction, the total of the supply transactions 
+	 may not match the burden amount actually posted. In certain cases, 
+	 such as transfers of finished goods and WIP issue returns, cost layers 
+	 of the supply burden transactions do not generate a burden transaction. 
+	 For these move layers, the ID of the work order that produced the 
+	 goods is provided for your further analysis.</p>
+	<p>To analyze the transactions:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In the Print G/L Transactions 
+		 dialog box, specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Mode</span> – Specify 
+	 Inquiry Only.</p>
+	<p class="Numbered-Indent"><span class="Bold">Transaction Type</span> 
+	 – Specify Project Transfers to view only project transfer and WIP 
+	 issue transactions. Specify Move Transactions to view project transfers, 
+	 WIP issues, adjust out transactions, and purchase receipt returns.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sequence</span> – Specify 
+	 the sequence for the inquiry. To ease the identification of burden 
+	 line items, select either Proj, WBS, Seq, Dept, Burden Category, G/L 
+	 Account ID or Proj, WBS, Seq, Dept, G/L Account ID, Burden Category.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Complete the remaining 
+		 header information as necessary.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">You can view burden 
+		 details for an individual burden transaction row or for a summary 
+		 row. To view details, double-click the row. To view details for 
+		 a summary row, you must first expand the row to display all child 
+		 transactions. Otherwise, double-clicking on the header row expands 
+		 the child transactions instead of opening the burden summary information.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The header of the Burden Distributions dialog 
+	 box shows the type of information you are viewing. If you are viewing 
+	 information for a summary row, then Summary is inserted in the header. 
+	 If you are viewing information for a detail row, then Detail is inserted.</p>
+	<p class="Numbered-Indent">The Burden Distributions dialog box shows 
+	 the same information as the standard <a href="Viewing_Burden_Information.htm">Burden 
+	 Detail</a> dialog box. This information is also shown:</p>
+	<p class="Numbered-Indent"><span class="Bold">Inv Tx Qty</span> – The 
+	 total quantity of materials for the supplying inventory transaction 
+	 is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sup Debit Amount</span> 
+	 – The total burden debit amount for the supplying inventory transaction.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sup Credit Amount</span> 
+	 – The total burden credit amount for the supplying inventory transaction.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dist Debit Amount</span> 
+	 – The moved burden debit amount reported in the BURDEN_DIST_DETAIL 
+	 table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dist Credit Amount</span> 
+	 – The moved credit amount reported in the BURDEN_DIST_DETAIL table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dist Qty</span> – The 
+	 move quantity for the supply layer for the actual transaction.</p>
+	<p class="Numbered-Indent"><span class="Bold">Dist-In Trans ID</span> 
+	 – The ID of the transaction that supplies the quantity for the actual 
+	 transaction.</p>
+	<p class="Numbered-Indent"><span class="Bold">Work Order ID</span> 
+	 – For finished goods and WIP Issue return transfers, the ID of the 
+	 work order for the supply layer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Row Type</span> – For 
+	 the transactions that were formally posted to your general ledger, 
+	 ACTUAL is displayed. For the transactions that fed into the total 
+	 actual burden amounts, SUPPLY is displayed.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">To filter the information 
+		 in the table, specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Burden Category ID</span> 
+	 – To view transactions for a particular burden category ID, specify 
+	 the ID in this field.</p>
+	<p class="Numbered-Indent"><span class="Bold">Row Type</span> – To 
+	 view the actual burden postings only, specify ACTUAL. To view the 
+	 cost layers that supplied the values for the actual burden postings, 
+	 specify SUPPLY. To view all transaction, specify ** All **.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">To change the currency 
+		 of the amounts in the table, specify the currency to use in the 
+		 Currency ID field. If you are viewing transactions for a single 
+		 site, you can use any currency assigned to the site’s parent entity. 
+		 If you are viewing transactions for multiple sites, you can select 
+		 only currencies common to each site’s parent entity.</p></li>
+	</ol>
+</div>
+</body>
+</html>

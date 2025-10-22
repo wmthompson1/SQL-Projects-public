@@ -1,0 +1,224 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>EDI Chart</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+p.hcp3 { margin-bottom:0.00pt; }
+font.hcp4 { font-family:Arial; }
+span.hcp5 { font-size:11pt;
+font-weight:bold;
+text-decoration:underline; }
+span.hcp6 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>EDI Chart</h1>
+	</div>
+	<p style="margin-top: 0; margin-bottom: 0;">&#160;</p>
+	<table cellspacing="0" width="699">
+		<tr class="hcp1">
+			<td colspan="2" height="31" width="461" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span 
+			 style="font-size: 13pt; font-weight: bold;"><font color="#000080"><font face="Arial" class="hcp4">Line Accumulators: 
+			 Changes to the way VISUAL calculates values in 6.2.8</font></font></span></p></td>
+			<td height="31" width="237" bgcolor="#99CCFF" class="hcp2"><p 
+				 style="margin-bottom: 0.00pt; text-align: right;">&#160;</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="19" width="161" bgcolor="#C0C0C0" class="hcp2"><p class="hcp3"><span class="hcp5"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Field</font></font></span></p></td>
+			<td height="19" width="300" bgcolor="#C0C0C0" class="hcp2"><p class="hcp3"><span class="hcp5"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Previous 
+			 Standard Calculation</font></font></span></p></td>
+			<td height="19" width="237" bgcolor="#C0C0C0" class="hcp2"><p class="hcp3"><span class="hcp5"><font 
+			 color="#000000"><font face="Arial" class="hcp4">New 
+			 6.2.8 Calculation</font></font></span></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="39" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Theirs 
+			 Accum Date</font></font></span></p></td>
+			<td height="39" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">The 
+			 most current EDI shipment date (CUST_ORDER_LINE.EDI_LAST_SHIPDATE).</font></font></p></td>
+			<td height="39" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="41" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Theirs 
+			 Accum Qty</font></font></span></p></td>
+			<td height="41" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Sum 
+			 of the current Accum period’s shipped qty. (CUST_ORDER_LINE.EDI_ACCUM_SHIP_QTY)</font></font></p></td>
+			<td height="41" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="68" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Theirs 
+			 Discrepancy</font></font></span></p></td>
+			<td height="68" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Calculated 
+			 as the difference between the EDI Accum Qty less the VISUAL 
+			 Total Shipments. (CUST_ORDER_LINE.EDI_ACCUM_SHIP_QTY less 
+			 CUST_ORDER_LINE.TOTAL_USR_SHIP_QTY).</font></font></p></td>
+			<td height="68" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="60" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Theirs 
+			 Intransit Qty</font></font></span></p></td>
+			<td height="60" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Any 
+			 shipped quantities whose SHIPPER.SHIPPED_DATE is greater than 
+			 CUST_ORDER_LINE.EDI_LAST_SHIPDATE.</font></font></p></td>
+			<td height="60" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="94" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Last Ship Date</font></font></span></p></td>
+			<td height="94" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">The 
+			 most current date in which this customer order line item has 
+			 been shipped. Max(SHIPPER.SHIPPED_DATE)</font></font></p></td>
+			<td height="94" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">This 
+			 field will function as standard with the following exception. 
+			 If the most current ship date is less than the value within 
+			 CUSTOMER_ORDER.EDI_ACCUM_CLR_DATE and the value within Theirs 
+			 Intransit Qty equals zero, then this field will show nothing.</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="75" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Accum Shipments</font></font></span></p></td>
+			<td height="75" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Sum 
+			 of the quantity shipped by VISUAL Sum(SHIPPER_LINE.SHIPPED_QTY).</font></font></p></td>
+			<td height="75" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Sum 
+			 of the quantity shipped by VISUAL whose ship date is greater 
+			 than the value within CUSTOMER_ORDER.EDI_ACCUM_CLR_DATE. Sum(SHIPPER_LINE.SHIPPED_QTY).</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="34" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Shipment Adjust.</font></font></span></p></td>
+			<td height="34" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">User 
+			 entered EDI adjustment to shipment (CUST_ORDER_LINE.EDI_ACCUM_SHIP_ADJ).</font></font></p></td>
+			<td height="34" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="16" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Total Shipments</font></font></span></p></td>
+			<td height="16" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Accum Shipments plus Ours Shipment Adjust</font></font></p></td>
+			<td height="16" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="109" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Ours 
+			 Packlist ID</font></font></span></p></td>
+			<td height="109" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+			<td height="109" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">The 
+			 most current Packlist ID that has been shipped against this 
+			 customer order line. If the most current ship date is less 
+			 than the value within CUSTOMER_ORDER.EDI_ACCUM_CLR_DATE and 
+			 the value within Theirs Intransit Qty equals zero, then this 
+			 field will</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="16" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Current 
+			 Fab(Build)</font></font></span></p></td>
+			<td height="16" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">CUST_ORDER_LINE.EDI_FAB_QTY.</font></font></p></td>
+			<td height="16" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="16" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Current 
+			 Raw (Buy)</font></font></span></p></td>
+			<td height="16" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">CUST_ORDER_LINE.EDI_ACCUM_FAB_QTY</font></font></p></td>
+			<td height="16" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="83" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">High 
+			 Qty Fab (Build)</font></font></span></p></td>
+			<td height="83" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Max(CUST_BOOK_LINE.EDI_ACCUM_FAB_QTY)</font></font></p></td>
+			<td height="83" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Max(CUST_BOOK_LINE.EDI_ACCUM_FAB_QTY) 
+			 whose CUST_BOOK_LINE.EDI_LAST_SHIPDATE is greater than CUST_ORDER_LINE.EDI_ACCUM_CLR_DATE.</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="80" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">High 
+			 Qty Raw (Buy)</font></font></span></p></td>
+			<td height="80" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Max(CUST_BOOK_LINE.EDI_ACCUM_RAW_QTY).</font></font></p></td>
+			<td height="80" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">Max(CUST_BOOK_LINE.EDI_ACCUM_RAW_QTY) 
+			 whose CUST_BOOK_LINE.EDI_LAST_SHIPDATE is greater than CUST_ORDER_LINE.EDI_ACCUM_CLR_DATE.</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="28" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">High 
+			 Date Fab (build)</font></font></span></p></td>
+			<td height="28" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">CUST_BOOK_LINE.EDI_LAST_SHIPDATE 
+			 for the corresponding High Qty Fab (Build).</font></font></p></td>
+			<td height="28" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td height="28" width="161" bgcolor="#99CCFF" class="hcp2"><p class="hcp3"><span class="hcp6"><font 
+			 color="#000000"><font face="Arial" class="hcp4">High 
+			 Date Raw (Buy)</font></font></span></p></td>
+			<td height="28" width="300" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">CUST_BOOK_LINE.EDI_LAST_SHIPDATE 
+			 for the corresponding High Qty Raw (Buy).</font></font></p></td>
+			<td height="28" width="237" class="hcp2"><p class="hcp3"><font 
+			 color="#000000"><font face="Arial" class="hcp4">N/A</font></font></p></td>
+		</tr>
+	</table>
+</div>
+</body>
+</html>

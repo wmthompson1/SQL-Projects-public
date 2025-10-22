@@ -1,0 +1,104 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assigning Service Purchase Order Quantities to Work Order Material Operations Demand</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assigning Service Purchase Order Quantities</h1>
+	</div>
+	<p class="First">You can allocate service purchase order line quantities 
+	 to work order material operations demand using the Assign to Demand 
+	 option available from the Edit menu in the Purchase Order Entry window.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With the purchase order 
+		 open that contains the service purchase order line from which 
+		 you want to allocate to work order material operations demand, 
+		 select the appropriate service purchase order line and select 
+		 <span class="Bold">Assign to Demand</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Assign to Demand dialog box appears.</p>
+	<p class="Numbered-Indent">The Header section contains the following 
+	 read-only fields:</p>
+	<p class="Numbered-Indent"><span class="Bold">Order ID, Line #</span> 
+	 - The current Purchase Order ID; the number of this line as it appears 
+	 in the Purchase Order Entry window line item table.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order Quantity</span> 
+	 - The order quantity of the current purchase order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Received Quantity</span> 
+	 - The quantity of this purchase order line that you have received.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Quantity</span> 
+	 - The portion of the purchase order quantity that you have allocated 
+	 to demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Quantity</span> 
+	 - The portion of the quantity that you allocate to demand successfully 
+	 used in order fulfillment.</p>
+	<p class="Numbered-Indent"><span class="Bold">Available Quantity</span> 
+	 - The quantity available to you for allocation purposes. Before you 
+	 establish any demand links, this value is equal to the Order Quantity.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span></p></li>
+		<li class="p-Numbered"><p class="Numbered">From the Type list box, 
+		 select <span class="Bold">OP</span>. This is the only possible 
+		 selection.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click <span class="Bold">&lt;Demand 
+		 Base ID&gt;</span> to view a list of work orders.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select a work order 
+		 and click the <span class="Bold">Select/Close</span> button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click <span class="Bold">&lt;Seq 
+		 #/Line #&gt;</span> to view the selected work order's operation 
+		 line items. There may or may not be lines to which you can establish 
+		 demand links from the present purchase order receipt line in this 
+		 work order.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Work Order Material Operations Demand 
+	 dialog box appears.</p>
+	<p class="Numbered-Indent">The service to which you are assigning supply 
+	 from the current service purchase order line appears in the Service 
+	 ID field at the top of the header section.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Configure a search using 
+		 the options in the header section and then click the <span class="Bold">Apply</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If any operations in the work order for 
+	 the specified material exist, the lines of the selected work order 
+	 that meet your search criteria appear.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 line and click the <span class="Bold">Ok</span> button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The selected work order line information 
+	 appears in the Assign to Demand dialog box line item table.</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">In the <span class="Bold">Assign 
+		 Quantity</span> column, enter what quantity of the received purchase 
+		 order line's <span class="Bold">Remaining Quantity to Assign</span> 
+		 you want to allocate to this work order's material operation demand.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This quantity cannot be greater than the 
+	 of the purchase order receipt line or the <span class="Bold">Unallocated 
+	 Requirement Quantity</span> of the work order line.</p>
+	<ol start="10">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Ok</span> 
+		 to commit the allocation of supply from purchase order line work 
+		 order's material operation demand line.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Purchase_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

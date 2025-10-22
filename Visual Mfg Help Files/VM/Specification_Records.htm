@@ -1,0 +1,54 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specification Records</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specification Records</h1>
+	</div>
+	<p class="First">You can add specifications to MASTER, PART, OPERATION, 
+	 MATERIAL, and ASSEMBLY records. VDIU uses any records that it finds 
+	 after the BEGIN-SPEC and before the END-SPEC as the specification 
+	 to the previous Master, Part, Operation, Material, or Assembly record. 
+	 BEGIN-SPEC and END-SPEC must be separate records; the text that comprises 
+	 the actual specifications must be also be a separate records. Therefore, 
+	 the minimum number of records that VDIU needs to create a record is 
+	 3 - one for the BEGIN-SPEC, one for the END-SPEC, and at least one 
+	 for the actual specification.</p>
+	<table cellspacing="0" width="372">
+		<tr style="vertical-align: top;">
+			<td width="36" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="336" class="hcp1"><p>If you do not specify 
+			 a specification for a MATERIAL or ASSEMBLY record but do specify 
+			 a valid Part ID for that MATERIAL or ASSEMBLY record, VDIU 
+			 copies the specification from part Maintenance to the material 
+			 requirement or leg specifications.</p></td>
+		</tr>
+	</table>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

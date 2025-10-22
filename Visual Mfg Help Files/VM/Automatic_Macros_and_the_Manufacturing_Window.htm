@@ -1,0 +1,62 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Automatic Macros and the Manufacturing Window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Automatic Macros and the Manufacturing Window</h1>
+	</div>
+	<p>These conditions apply when you use automatic macros in the Manufacturing 
+	 Window:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">You cannot use the OnDelete 
+		 or OnAfterDelete macros. Because of the way items are deleted 
+		 in the Manufacturing Window, these macros do not function on operation 
+		 cards, material cards, and header cards.</p></li>
+		<li class="p-Bullet"><p class="Bullet">To use the On Save, OnAfterSave, 
+		 OnLoad, and OnNew macros, you must specify the type of card where 
+		 the macro is used. Use a suffix on the macro name to indicate 
+		 where the macro is used. For automatic macros used in the header 
+		 card, use these names:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnSaveWO</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnAfterSaveWO</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnLoadWO</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnNewWO</p></li>
+	</ul>
+	<p class="Numbered-Indent">For automatic macros used on leg header 
+	 cards, use these names:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnSaveLEG</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnAfterSaveLEG</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnLoadLEG</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnNewLEG</p></li>
+	</ul>
+	<p class="Numbered-Indent">For automatic macros used on operation cards, 
+	 use these names:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnSaveOP</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnAfterSaveOP</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnLoadOP</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnNewOP</p></li>
+	</ul>
+	<p class="Numbered-Indent">For automatic macros used on material cards, 
+	 use these names:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnSaveOP</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnAfterSaveMAT</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnLoadMAT</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">OnNewMAT</p></li>
+	</ul>
+</div>
+</body>
+</html>

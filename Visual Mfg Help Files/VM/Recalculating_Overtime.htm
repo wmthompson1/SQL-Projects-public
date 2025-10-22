@@ -1,0 +1,100 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Recalculating Overtime</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Recalculating Overtime</h1>
+	</div>
+	<p class="First">You can account for overtime in Labor Ticket Entry 
+	 by using the Multiplier override field for tickets known to require 
+	 overtime pay. You can do this if you enter tickets for an employee 
+	 sequentially, and if you monitor the Session Total.</p>
+	<p>VISUAL can also automatically calculate overtime by examining all 
+	 tickets for a given employee and setting multipliers based on accumulated 
+	 hours.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Recalc 
+		 Overtime</span> from the <span class="Bold">Edit</span> menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Recalculate Overtime dialog box appears.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Enter the last date 
+		 of the week for which you want to recalculate overtime.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The default is the Sunday of the previous 
+	 week. You can also use the <span class="Bold">&lt;</span> and <span 
+	 class="Bold">&gt;</span> buttons to the right of the date field to 
+	 decrease and advance the date by one day, and the <span class="Bold">&lt;&lt;</span> 
+	 and <span class="Bold">&gt;&gt;</span> buttons to decrease and advance 
+	 the date by a week.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Enter multiplier and 
+		 over values for Premium 1.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Premium 1 calculates overtime on anything 
+	 OVER a specified number of hours per week. VISUAL uses the multiplier 
+	 you enter here to perform the overtime calculation. The default multiplier 
+	 is 1.5 for time over 40 hours.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Enter a multiplier for 
+		 Premium 2 and select the appropriate days of the week.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Use Premium 2 to indicate that hours reported 
+	 on certain days of the week are multiplied by a constant multiplier 
+	 to arrive at the overtime value.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to recalculate the overtime.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL processes all time tickets for the 
+	 specific week and determines new overtime multipliers. Jobs worked 
+	 at the end of the week receive the overtime. If a time ticket crosses 
+	 the overtime hour limit, it is broken into two tickets so that overtime 
+	 only applies to the time over the specified limit.</p>
+	<p>VISUAL recalculates overtime in the following way:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">For each employee, VISUAL 
+		 considers all direct labor tickets for the specified week. Additionally, 
+		 it also considers indirect tickets with an indirect code of Miscellaneous.</p></li>
+		<li class="p-Numbered"><p class="Numbered">VISUAL calculates overtime 
+		 based on tickets with the value of the multiplier. Therefore, 
+		 all tickets with a value of greater than 1 are reset to 1. If 
+		 a ticket has a multiplier of less than 1, it is prorated. Recalculation 
+		 of overtime is done by multiplying hours worked by the multiplier, 
+		 and resetting the elapsed time accordingly.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Evaluation of this type of labor ticket 
+	 in overtime calculations is questionable, because the elapsed time 
+	 does not represent real clock time. These tickets keep a multiplier 
+	 of 1, regardless of whether they fall in overtime or not.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">VISUAL totals the hours 
+		 for all tickets. If one ticket overlaps the overtime boundary, 
+		 VISUAL splits it into two tickets, with clock in and clock out 
+		 time adjusted accordingly. Quantities completed and deviated are 
+		 prorated between the tickets.</p></li>
+		<li class="p-Numbered"><p class="Numbered">VISUAL applies Premium 
+		 1 to all tickets over the Over hours you specify. If the day matches 
+		 one of the weekdays specified for Premium 2, VISUAL uses Premium 
+		 2 instead.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Labor_Ticket_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

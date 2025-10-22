@@ -1,0 +1,139 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Defining Record Layouts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Defining Record Layouts</h1>
+	</div>
+	<p class="First">On the bottom half of the Generate VMDI Layouts window 
+	 there are five tabs: Header Tables, Header Special Details, Line Item 
+	 Tables, Sub Line Item Tables, and Adt Line Item Tables.</p>
+	<p>Each tab represents a record type in the layout. Not all tabs are 
+	 used in each layout. If a tab or record type is not relevant to a 
+	 key type, no tables appear when you select the tab.</p>
+	<p>Each tab also displays a list of default tables that contain the 
+	 most appropriate fields for the selected key. Usually, all of the 
+	 fields you want to access are available by default. If not, you can 
+	 &quot;join&quot; additional tables to the ones displayed.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select a tab to start 
+		 defining a record layout.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Data</span> 
+		 button to select data elements for the record type you are defining. 
+		 (There is a Data button below each list of tables.)</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Select Data Elements dialog box appears.</p>
+	<p class="Numbered-Indent">The dialog box shows all of the available 
+	 columns of the tables for that record type. The table displays the 
+	 table name (or view), the column or field name, the data type, the 
+	 position in the .VDI file record, the length of the field, the scale 
+	 (number of decimal places) and whether the inbound data may be null 
+	 for this column.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Print</span>, 
+		 <span class="Bold">View</span>, <span class="Bold">File</span>, 
+		 or <span class="Bold">E-mail</span> and click the <span class="Bold">Print</span> 
+		 button if you want to print, view, or send the data elements you 
+		 have selected thus far.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Because this information is taken directly 
+	 from the database catalog, the data fields must already be defined 
+	 in the schema. If you intend to import user-defined columns and/or 
+	 tables, these columns and tables must be added to the database prior 
+	 to using the Generate VMDI Layouts window.</p>
+	<p class="Numbered-Indent">See <a href="Joining_Tables.htm">Joining 
+	 Tables</a> for more information</p>
+	<p class="Numbered-Indent">When you first define a new layout, the 
+	 default tables appear. These tables are mandatory. You can remove 
+	 the columns from a layout, but the table itself is not removable.</p>
+	<p class="Numbered-Indent">If one or more data elements that you require 
+	 is not displayed in the default tables, you can add the tables that 
+	 store those fields to the end of an existing table list. Any user-defined 
+	 or custom tables should have primary keys defined so that the join 
+	 process can find the primary key automatically.</p>
+	<p class="Numbered-Indent">If you join additional tables to a tab, 
+	 the mandatory tables appear first in the table lists, followed by 
+	 each table you added.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">To include a column 
+		 as part of the .VDI layout, highlight the appropriate column and 
+		 click the <span class="Bold">Select</span> button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The x in the row header disappears and the 
+	 position of the data element in the record appears in the Pos column. 
+	 This position is only accurate if the File Style of the layout is 
+	 Fixed; VISUAL updates the position any time you select or deselect 
+	 an element.</p>
+	<p class="Numbered-Indent">The sequence in which the columns appear 
+	 in the table window is the same sequence they will appear in the .VDI 
+	 file layouts for each record. This sequence is critical because the 
+	 .VDI files will be created or read by an external application, most 
+	 likely an EDI mapping tool. The use of an external application needs 
+	 to be designed around the .VDI layout.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Once you define the 
+		 record layouts for each tab you want to use, click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You return to the Generate VMDI Layouts 
+	 window.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VMDI import and export data is placed in 
+	 files having predefined names. The only user-defined portion of the 
+	 file-naming is the directory in which they reside. Thus, when importing 
+	 or exporting is done, the program always looks for or creates the 
+	 same files in a user-defined place.</p>
+	<p class="Numbered-Indent">If you want to keep multiple versions of 
+	 the files (i.e., archive each imported or exported file) then you&#160;&#160;must 
+	 do this outside of the VMDI mechanism.</p>
+	<p class="Numbered-Indent">.VDI files are named for their layout key 
+	 target and layout version.</p>
+	<p class="Numbered-Indent">For multiple files format, there may be 
+	 up to five files, for each tab used in the Generate Layout window. 
+	 Each file has a suffix indicating its contents:</p>
+	<p class="Numbered-Indent">ASN9999<span class="Bold">H</span>.VDI&#160;Header 
+	 (HDR) records</p>
+	<p class="Numbered-Indent">ASN9999<span class="Bold">D</span>.VDI&#160;Header 
+	 Special Detail (SDL) records</p>
+	<p class="Numbered-Indent">ASN9999<span class="Bold">L</span>.VDI&#160;Line 
+	 Item (LIN) records</p>
+	<p class="Numbered-Indent">ASN9999<span class="Bold">S</span>.VDI&#160;Subline 
+	 records (SUB) records</p>
+	<p class="Numbered-Indent">ASN9999<span class="Bold">A</span>.VDI&#160;Additional 
+	 Line Item records (ASL) records</p>
+	<p class="Numbered-Indent"><span class="Bold">Note</span>: Where 9999 
+	 is the layout version.</p>
+	<p class="Numbered-Indent">Single file formats:</p>
+	<p class="Numbered-Indent">XXX9999.VDI&#160;Contains HDR and LIN records</p>
+	<p class="Numbered-Indent"><span class="Bold">Note:</span> Where XXX 
+	 is the layout key and 9999 is the layout version.</p>
+	<p class="Numbered-Indent">See <a href="Including_Trace_IDs_when_exporting_ASN_data.htm">Including 
+	 Trace IDs when exporting ASN data</a> for more information about exporting 
+	 Trace.</p>
+	<p class="Numbered-Indent">All tables where XXX is the layout key (CPO, 
+	 CSH, ACK, ASN, PLN, INV, RCA, VPO), and 9999 is the layout version. 
+	 H indicates the file contains header records, L indicates it contains 
+	 line item records, S indicates it contains subline item records, no 
+	 trailing letter indicates it contains all types. .VDI is the file 
+	 type.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Interchange.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

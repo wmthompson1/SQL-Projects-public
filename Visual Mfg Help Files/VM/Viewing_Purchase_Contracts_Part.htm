@@ -1,0 +1,163 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Purchase Contracts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Purchase Contracts</h1>
+	</div>
+	<p>Use the Purchase Contracts dialog box to view contracts created 
+	 in Part Maintenance. You can also view the contracts created in Outside 
+	 Service Maintenance or Vendor RFQ Entry. Most of the information in 
+	 the window is read-only; you can edit the description, status, and 
+	 status reason fields.</p>
+	<p>You can also print a Purchase Contracts List and a Purchase Contract 
+	 Usage report from the Purchase Contract dialog box.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Purchase Contract</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Contract 
+		 ID</span> button to select the contract to view.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The system displays the following information 
+	 in the header area:</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description for the contract.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor ID</span> – The 
+	 system displays the ID of the vendor with whom you are entering the 
+	 contract.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor Contract ID</span> 
+	 – The system displays the supplier contract ID you specified on the 
+	 Vendor RFQ header or the Quote Entry window. If you did not specify 
+	 a contract ID, the system creates one.</p>
+	<p class="Numbered-Indent"><span class="Bold">Status</span> – Click 
+	 the arrow and specify the contract’s status. You can select from Open, 
+	 Closed, or Cancelled/Void.</p>
+	<p class="Numbered-Indent"><span class="Bold">Status Reason</span> 
+	 – Click the browse button and select a reason for the status. Set 
+	 up reason codes in Application Global Maintenance.</p>
+	<p class="Numbered-Indent">The system displays the following information 
+	 in the line item table:</p>
+	<p class="Numbered-Indent"><span class="Bold">Ln #</span> – The system 
+	 displays a number for the contract line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor CLIN</span> – 
+	 The system displays the supplier contract line item number you specified 
+	 in the Enter Vendor Quote dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> – If the 
+	 quote is for a part, the system displays the part ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Service ID</span> – If 
+	 the quote is for a service, the system displays the service ID</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 The system displays the description of the part or service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Effective Date</span> 
+	 – The system displays the effective date you specified in the Enter 
+	 Vendor Quote dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Expiration Date</span> 
+	 – The system displays the expiration date that you specified in the 
+	 Enter Vendor Quote dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor Part ID</span> 
+	 – The system displays the vendor’s part ID for the part on the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor Service ID</span> 
+	 – The system displays the vendor’s service ID for the service on the 
+	 line.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p>The system uses the pricing you specified in the Enter Vendor Quote 
+	 dialog box as the pricing in the contract.</p>
+	<h2>Printing a Purchase Contracts List</h2>
+	<p>Print a Purchase Contracts List report to view the contracts you 
+	 have made with vendors.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Print Purchase Contracts List</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the following 
+		 parameters for the report:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Starting Date and Ending 
+	 Date fields</span> – To view contracts created during a certain time 
+	 frame, specify a starting date and ending date in the starting date 
+	 and ending date fields.</p>
+	<p class="Numbered-Indent"><span class="Bold">Start Vendor ID and End 
+	 Vendor ID fields</span> – If you would like to view contracts for 
+	 certain vendors, select the Vendor ID option in the Sequence section, 
+	 then specify a Start Vendor ID and an End Vendor ID. The system will 
+	 export contracts for the vendor IDs specified in the Start Vendor 
+	 ID and End Vendor ID fields, along with all vendor IDs that occur 
+	 alphabetically between the start vendor ID and end vendor ID.</p>
+	<p class="Numbered-Indent">You can use the Date fields and Vendor ID 
+	 fields in conjunction with each other to view contracts made with 
+	 certain vendors over a particular period of time.</p>
+	<p class="Numbered-Indent"><span class="Bold">Orders</span> – If you 
+	 want to view the currently selected contract only, select the Current 
+	 Contract option. If you select this option, the system deactivates 
+	 the Vendor ID fields and the Status fields. Select All Contracts to 
+	 view any contract that fits the parameters you specify.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sequence</span> – Select 
+	 the sort order for the report. Select Contract ID to sort the report 
+	 by contract ID. Select Vendor ID to sort the report by vendor.</p>
+	<p class="Numbered-Indent"><span class="Bold">Status</span> – Select 
+	 the status of the contracts to view in the report. Choose one or more 
+	 of the following statuses: Open, Closed, Cancelled. If you selected 
+	 the Current Contract option in the Orders section, the system deactivates 
+	 the Status selections.</p>
+	<p class="Numbered-Indent"><span class="Bold">Type</span> – Select 
+	 the type of report to export. Select Standard to view the Contract 
+	 ID, Vendor Contract ID, Description, Vendor ID, Vendor Name, Status, 
+	 and Create Date in the report. Select Detail to view all of the information 
+	 in the Standard report, plus the RFQ line number, part or service 
+	 ID, item description, contract effective date, contract expiration 
+	 date, vendor CLIN, vendor part ID, vendor service ID, purchase UOM, 
+	 currency ID, and the quantity and pricing breakdown.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Select the output options 
+		 for the report.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<h2>Printing the Purchase Contract Usage Report</h2>
+	<p>Print the Purchase Contract Usage Report to view the purchase orders 
+	 that reference vendor contracts. To run the report:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Print Purchase Contract Usage Report</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the following 
+		 information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Starting and Ending Contract 
+	 ID</span> – Select the range of contracts to view in the report. To 
+	 view only one contract, specify the same contract ID in the Starting 
+	 Contract ID and Ending Contract ID fields.</p>
+	<p class="Numbered-Indent"><span class="Bold">Sequence</span> – Select 
+	 the sort order for the report. You can select By Vendor ID, By Part 
+	 ID, or By Contract ID.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Specify the output for 
+		 the report.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p>The report lists the vendor ID, vendor name, order ID, order date, 
+	 buyer, currency ID, line #, service or part ID, description, vendor 
+	 part ID, contract ID, contract line #, vendor contract ID, vendor 
+	 CLIN, quantity, unit of measure, unit price, min charge, fixed charge, 
+	 and received date.</p>
+</div>
+</body>
+</html>

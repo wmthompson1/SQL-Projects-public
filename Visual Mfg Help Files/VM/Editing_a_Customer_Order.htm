@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Editing a Customer Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Editing a Customer Order</h1>
+	</div>
+	<p class="First">You can modify customer orders, except for those with 
+	 a Closed or Cancelled status. Unlike purchase orders, you can change 
+	 customer orders that have been shipped. You are NOT allowed to delete 
+	 lines for orders that have been shipped.</p>
+	<p>This complete level of modification provides maximum flexibility 
+	 in allowing you to correct customer orders. You should be very cautious 
+	 about changing a line item that has been shipped against. In most 
+	 cases, previously generated shippers and invoices are NOT updated 
+	 by changing the original order. You may need to work backwards to 
+	 make a correction.</p>
+	<p>For example, if you put the wrong Part ID on a line item, then ship 
+	 and invoice for it (but you ship the correct part physically) you 
+	 may need to delete the invoice and shipper, modify the order, and 
+	 recreate the shipper and invoice.</p>
+	<p>When you modify a released customer order, you may want to use the 
+	 Order Notes feature to provide an audit trail for the change.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site from which the customer is buying items. 
+		 If you are licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Call the customer order 
+		 you want to edit into the Customer Order window.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Make any changes to 
+		 the customer order.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can change most items in the header 
+	 and line items. For changes to line items that have been fully or 
+	 partially shipped, VISUAL warns you that you are changing a shipped 
+	 order.</p>
+	<p>The following notes apply to the modification of customer order 
+	 fields:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Changing the ship date in 
+		 the header or on a line item does not automatically update the 
+		 work order want date. You must do this manually, using the Manufacturing 
+		 Window.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Changing the Sales Rep does 
+		 not replace commission percentages on line items. Changing Sales 
+		 Tax does not replace sales tax percentages on line items. These 
+		 lines may have existing overrides, and must be manually updated, 
+		 if necessary.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Changing Customer ID or 
+		 Discount Code does not update line item prices based on different 
+		 unit prices or currencies that may exist between customers and 
+		 discount codes. Use Re-price Lines Items in the <span class="Bold">Edit</span> 
+		 menu for these situations.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Changing line item Quantity 
+		 is only advised to adjust an unshipped quantity. For example, 
+		 a customer may wish to add 50 more units to an existing line item 
+		 with outstanding shipments, rather than create a new order. You 
+		 may also change quantity to correct a data entry error, where 
+		 the quantity shown is different than what was actually ordered. 
+		 Changing to a quantity lower than that already shipped does NOT 
+		 adjust inventory transactions or packing slips.</p></li>
+		<li class="p-Bullet"><p class="Bullet">You can change the Job ID. 
+		 Changing to an nonexistence or blank Job ID allows you to create 
+		 a new order for the line, or to change the link to a different 
+		 work order.</p></li>
+	</ul>
+	<table style="margin-left: 13.50pt;" cellspacing="0" width="360">
+		<tr style="vertical-align: top;">
+			<td width="60" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="300" class="hcp1"><p class="footnote-text"><span>Previously 
+			 created orders still exist in the system, although they are 
+			 no longer linked to this customer.</span></p></td>
+		</tr>
+	</table>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">You can change the Part 
+		 ID. You should never do this for a shipped line unless you are 
+		 correcting a data entry error, where a different part was actually 
+		 shipped.</p></li>
+		<li class="p-Bullet"><p class="Bullet">You can change Unit Price, 
+		 Disc %, Comm %, Tax Group ID, Product Code, and Revenue Acct ID 
+		 before you generate an invoice for the line item. Changing items 
+		 that affect price and G/L accounts after invoice generation does 
+		 not update any existing invoices.</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="Deleting_Line_Items.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Deleting Line Items</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

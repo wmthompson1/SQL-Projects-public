@@ -1,0 +1,167 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Operation Resource Record Layout</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+mso-shading:windowtext;
+mso-pattern:gray-30 gray;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp2 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%;
+mso-ansi-language:EN-US; }
+td.hcp3 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-top-alt:solid windowtext .5pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp4 { font-size:10.5pt;
+font-family:Arial, sans-serif;
+mso-font-width:99%;
+mso-ansi-language:EN-US; }
+td.hcp5 { vertical-align:top;
+border:none;
+mso-border-top-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Operation Resource Record Layout</h1>
+	</div>
+	<p class="First">Operation resource records add concurrent resource 
+	 to an operation. If used, these records must follow the OPERATION 
+	 record for which the concurrent resources are required.</p>
+	<p class="First">This table shows the layout of the file. It shows 
+	 the data that is expected in each token, the length and type of the 
+	 data, and whether you are required to include the data in your import 
+	 file. For NumberString data types, the first value indicates the number 
+	 of digits that can be included to the left of the decimal point. The 
+	 second value indicates the number of digits that can be included to 
+	 the right of the decimal point.</p>
+	<table class="MsoNormalTable" style="margin-left: 26.75pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; 
+			 mso-border-insideh: .5pt solid windowtext;" cellspacing="0">
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td height="23" width="52" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Token #</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Name</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Data type</span></b></p></td>
+			<td height="23" width="57" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Required</span></b></p></td>
+			<td height="23" width="288" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Notes</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">0</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Record Type Indicator</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPER_RES</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">You must specify OPER_RES.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">1</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Resource ID</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Resource ID of the operation. 
+			 This must be a valid Resource ID.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 83.0pt;">
+			<td height="111" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">2</span></p></td>
+			<td height="111" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Type</span></p></td>
+			<td height="111" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="111" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="111" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The type of operation resource.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">B</span></b> 
+			 <span class="hcp2">- 
+			 Specifies that concurrent resources apply to both setup and 
+			 run. This the default value.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">S</span></b> 
+			 <span class="hcp2">- 
+			 Specifies that concurrent resources apply only to setups.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">R</span></b> 
+			 <span class="hcp2">- 
+			 Specifies that concurrent resources apply only to runs.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">3</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Percent Duration</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The percent of the operation that 
+			 the resource is concurrent. The default value is 100</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 5; height: 60.0pt;">
+			<td height="80" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">4</span></p></td>
+			<td height="80" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Justification</span></p></td>
+			<td height="80" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="80" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="80" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Where the overlap between operations 
+			 begins:</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">S</span></b> 
+			 <span class="hcp2">- 
+			 The concurrent resource applies overlaps the start of the 
+			 operation. This is the default.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">E</span></b> 
+			 <span class="hcp2">- 
+			 The concurrent resource overlaps the end of the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 6; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">5</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Schedule Type</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number(2)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Specify 0 for continuous scheduling. 
+			 Specify 1 for discontinuous scheduling.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 7; mso-yfti-lastrow: yes; height: 35.0pt;">
+			<td height="47" width="52" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">6</span></p></td>
+			<td height="47" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Minimum Segment Size</span></p></td>
+			<td height="47" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.2)</span></p></td>
+			<td height="47" width="57" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">If the schedule is discontinuous, 
+			 the minimum run duration on one resource unit before a second 
+			 unit can be scheduled.</span> </p></td>
+		</tr>
+	</table>
+	<p class="First">&#160;</p>
+	<p class="Bullet">&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

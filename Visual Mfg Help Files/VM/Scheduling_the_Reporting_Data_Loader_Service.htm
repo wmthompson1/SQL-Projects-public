@@ -1,0 +1,99 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Scheduling the Reporting Data Loader Service</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=4"></a><a name="642b3b9347ca42c9b00b820c00c373fa=3"></a><a name="642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Scheduling the Reporting Data Loader Service</h1>
+	</div>
+	<p>Only the SYSADM user can perform this procedure.</p>
+	<p>To update the reporting tables based on the schedule you specify, 
+	 you must also install the Reporting Data Loader Service. See <a href="VRDTASVCfrmMain.htm">Installing 
+	 the Visual Reporting Data Loader Service</a>.</p>
+	<p>To schedule the service:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Application Global Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Visual Reporting Data...</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Update Type section, 
+		 click <span class="Bold">Service</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Use the Service Schedule 
+		 section to specify when the service is active. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Start Date</span> – Specify 
+	 the date that the service should start checking for updates. Leave 
+	 this field blank or specify today’s date if you do not want to delay 
+	 the start of the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">End Date</span> – Specify 
+	 the last date that the service should check for updates. Leave this 
+	 field blank if you do not want to set up an expiration date for the 
+	 service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Enabled</span> – To use 
+	 the service, select this check box. To stop using the service, clear 
+	 this check box.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Run Type section, 
+		 specify whether the service continually checks for updates on 
+		 the days you specify or checks for updates only at specified times. 
+		 Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Immediate</span> – To 
+	 indicate that the service should continually check for updates on 
+	 the days you specify, click this option. When you click this option, 
+	 the polling interval specified when the service was installed is used 
+	 to determine how frequently the service checks for updates. For example, 
+	 if 600 was specified as the polling interval, then the service checks 
+	 for updates every 600 seconds (10 minutes).</p>
+	<p class="Numbered-Indent"><span class="Bold">Weekly</span> – To indicate 
+	 that the service should check for updates only on the days and times 
+	 you specify, click this option. When you click this option, the Run 
+	 At fields become active.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">In the Days of Week 
+		 section, specify the days of the week to run the service.</p></li>
+		<li class="p-Numbered"><p class="Numbered">The Run At section is 
+		 available only if you clicked Weekly in the Run Type section. 
+		 Use the Run At section to specify the times of day that the service 
+		 should check for updates. The times you specify apply to all days 
+		 that you run the service. You can run the service up to 6 times 
+		 a day.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Depending on the polling interval that was 
+	 specified when the service was installed, the Reporting Data Loader 
+	 might not be run exactly at the time you specify. At the times that 
+	 you specified, the Reporting Data Loader is flagged as needing to 
+	 be run. The Reporting Data Loader is started when the Reporting Data 
+	 Loader Service polls the database and finds that the Reporting Data 
+	 Loader needs to be run. When you specify a time, the Reporting Data 
+	 Loader could be run at any time between the time that you specify 
+	 and the time that you specify plus the polling interval. For example, 
+	 if you specify 7:00:00 as the start time and the polling interval 
+	 is 600 seconds, then the Reporting Data Loader is started sometime 
+	 between 7:00:00 and 7:10:00.</p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="VRDTASVCWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ What is the Visual Reporting Data Loader Service?</p>
+<p class="SeeAlsoNext"><a href="VMDBOARDWhat.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ What is the Dashboard?</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

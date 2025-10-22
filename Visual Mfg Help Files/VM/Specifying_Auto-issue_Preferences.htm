@@ -1,0 +1,75 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Auto-issue Preferences</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content" style="width: 99.894%;">
+	<div id="banner">
+		<h1>Specifying Auto-issue Preferences</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>,<span 
+		 class="Bold"> Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Section Filter 
+		 field, select <span class="Bold">LaborEntry</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert 
+		 Row</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the LaborEntry section, 
+		 specify these preferences:</p></li>
+	</ol>
+	<table class="InforTable" style="margin-left: 48px; left: 0px; top: 165px;" 
+			 width="617" cellspacing="0" border="1">
+		<col style="width: 43.436%;">
+		<col style="width: 56.564%;">
+		<tr class="t1st">
+			<td>Entry</td>
+			<td>Description</td>
+		</tr>
+		<tr class="t2Row">
+			<td><p>AutoIssueFixedScrap</p></td>
+			<td><p>Specify <span class="Bold">Y</span> to also auto-issue 
+			 the fixed scrap that is specified for the material requirement. 
+			 If you specify Y, the fixed scrap is issued in the first auto-issue 
+			 transaction that is made for the operation. </p>
+			<p>Specify <span class="Bold">N</span> if you do not want to 
+			 auto-issue fixed scrap. If you specify N, fixed scrap quantities 
+			 must be issued manually. </p>
+			<p>If you do not specify a setting, then fixed scrap is auto-issued.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p>AutoIssueMaterialReq</p></td>
+			<td><p>Specify <span class="Bold">Y</span> to auto-issue material 
+			 requirements to cover deviated quantities. For example, if 
+			 the Qty Per for the material requirement is 1, and you complete 
+			 5 acceptable units and 2 deviated units, then a total of 7 
+			 units of the material requirement is issued to the operation. 
+			 If you also auto-issue fixed scrap, then the fixed scrap quantity 
+			 is also issued. </p>
+			<p>If you use the Based on the Full Requirement Qty on First 
+			 Labor Ticket auto-issue method, then deviated quantities that 
+			 are reported on the first labor ticket are included in the 
+			 total amount of material auto-issued to the operation. Deviated 
+			 quantities that are specified on subsequent labor tickets 
+			 are not included in the auto-issue calculation. </p>
+			<p>Specify <span class="Bold">N</span> if you do not want to 
+			 issue material for deviated quantities.</p>
+			<p>If you do not specify a setting, then requirements are not 
+			 auto-issued for deviated quantities. </p></td>
+		</tr>
+	</table>
+	<ol start="5" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Auto-issue_Parts.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Auto-issue Parts</p>
+</body>
+</html>

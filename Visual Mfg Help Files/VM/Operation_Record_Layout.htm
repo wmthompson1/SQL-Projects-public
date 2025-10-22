@@ -1,0 +1,492 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Operation Record Layout</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+mso-shading:windowtext;
+mso-pattern:gray-30 gray;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp2 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%;
+mso-ansi-language:EN-US; }
+td.hcp3 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-top-alt:solid windowtext .5pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+tr.hcp4 { mso-yfti-irow:18; }
+td.hcp5 { vertical-align:top;
+border:none;
+mso-border-top-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Operation Record Layout</h1>
+	</div>
+	<p class="First">Operation records add operations to the previous MASTER 
+	 record.</p>
+	<p class="First">This table shows the layout of the file. It shows 
+	 the data that is expected in each token, the length and type of the 
+	 data, and whether you are required to include the data in your import 
+	 file. For NumberString data types, the first value indicates the number 
+	 of digits that can be included to the left of the decimal point. The 
+	 second value indicates the number of digits that can be included to 
+	 the right of the decimal point.</p>
+	<table class="MsoNormalTable" style="margin-left: 26.75pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; 
+			 mso-border-insideh: .5pt solid windowtext;" cellspacing="0">
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td height="23" width="52" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Token #</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Name</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Data type</span></b></p></td>
+			<td height="23" width="57" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Required</span></b></p></td>
+			<td height="23" width="288" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Notes</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">0</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Record Type Indicator</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">OPERATION</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">You must specify OPERATION.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">1</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Parent Assembly #</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The level of parent assembly record. 
+			 The default value is 0, which is also the top level.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">2</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Sequence Number</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(5)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The sequence number of the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">3</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Resource ID</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Resource ID of the operation. 
+			 The resource must exist in your database.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 5; height: 57.0pt;">
+			<td height="76" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">4</span></p></td>
+			<td height="76" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Run</span></p></td>
+			<td height="76" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="76" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="76" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The run speed of the operation. 
+			 The Data Import Utility creates operations with a run default 
+			 of 0. This is not a required field. The Data Import Utility 
+			 uses this value along with run type and load size to calculate 
+			 run time.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 6; height: 104.0pt;">
+			<td height="139" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">5</span></p></td>
+			<td height="139" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Run Type</span></p></td>
+			<td height="139" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="139" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="139" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Run type code:</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">H 
+			 = Hours/Piece. This is the default value.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">P 
+			 = Pieces/Hour</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">M 
+			 = Minutes/Piece</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N 
+			 = Pieces/Minute</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">L 
+			 = Loads/Hour</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">D 
+			 = Hours/Load</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 7; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">6</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing ID</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Drawing ID of the associated 
+			 with the operation.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 8; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">7</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing Rev Number</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(8)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The revision number of the drawing.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 9; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">8</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Setup</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(5.3)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Setup time. Default is 0.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 10; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">9</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Load Size Qty</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The load size quantity of the operation. 
+			 Default is 0.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 11; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">10</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Move Hours</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(3.3)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The move hours of the operation. 
+			 The default is 0.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 12; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">11</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Minimum Move Quantity</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The minimum move quantity of the 
+			 operation. The default is 0.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 13; height: 45.0pt;">
+			<td height="60" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">12</span></p></td>
+			<td height="60" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Scrap/Yield Type</span></p></td>
+			<td height="60" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="60" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="60" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The scrap/yield type code of the 
+			 operation:</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">S 
+			 = Scrap</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y 
+			 = Yield</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 14; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">13</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Scrap/Yield Percentage</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(3.2)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Percentage of scrap/yield.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 15; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">14</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Fixed scrap units</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The fixed scrap units of the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 16; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">15</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing File</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(100)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The full file path to and name 
+			 of the drawing file.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 17; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">16</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Transit Days</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(3.3)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This field applies to services. 
+			 The amount of time it takes for the material to travel to 
+			 the service vendor. The default is 0.</span></p></td>
+		</tr>
+		<tr style="height:24.0pt;" class="hcp4">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">17</p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">Service 
+			 ID</p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">String(15)</p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">N</p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">The 
+			 ID of the outside service provided by the vendor. </p></td>
+		</tr>
+		<tr style="height:24.0pt;" class="hcp4">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">18</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Run Cost Per Unit</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(14.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This field applies to services. 
+			 The cost per unit to perform the service. The default is 0.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 19; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">19</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Service Base Charge</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(15.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This field applies to services. 
+			 The base amount charged by the vendor. The default is 0.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 20; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">20</p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Service Min Charge</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(15.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This field applies to services. 
+			 the minimum amount that the vendor charges. The default is 
+			 0.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 21; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">21</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Begin Traceability</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This indicates if traceability 
+			 begins starting at an operation. Y indicates that traceability 
+			 takes effect starting at this operation. The default is N.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 22; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">22</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Start Qty</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Use this quantity if you want to 
+			 enable the override quantities feature. See the note in the 
+			 Qty Complete description.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 23; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">23</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">End Qty</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="47" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Use this quantity if you want to 
+			 enable the override quantities feature. See the note in the 
+			 Qty Complete description</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 24; height: 80.0pt;">
+			<td height="107" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">24</span></p></td>
+			<td height="107" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Qty Complete</span></p></td>
+			<td height="107" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(12.8)</span></p></td>
+			<td height="107" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="107" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The cumulative quantity completed 
+			 for this operation. The default is 0.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;">&#160;</p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span style="font-size: 10.5pt; 
+			 font-family: Arial, sans-serif; mso-font-width: 99%; mso-ansi-language: EN-US;">Note:</span></b> 
+			 <span class="hcp2">If 
+			 the quantity completed meets or exceeds the end quantity (either 
+			 specified or calculated) of the operation, this operation 
+			 is considered complete. Be careful when using the Qty Complete 
+			 field.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 25; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">25</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 1</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 1</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 26; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">26</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 2</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 2</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 27; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">27</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF3</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 3</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 28; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">28</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 4</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 4</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 29; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">29</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 5</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 5</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 30; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">30</p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 6</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 6</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 31; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">31</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 7</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 7</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 32; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">32</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 8</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 8</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 33; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">33</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 9</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 9</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 34; height: 14.0pt;">
+			<td height="19" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">34</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF 10</span></p></td>
+			<td height="19" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="19" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="19" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 10</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 35; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">35</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation UDF Layout ID</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The ID of the UDF Layout</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 36; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">36</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Capacity Usage Max</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(5)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The maximum capacity usage for 
+			 the resource in the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 37; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">37</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Capacity Usage Min</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(5)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The minimum capacity usage for 
+			 the resource in the operation.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 38; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">38</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Setup Cost Per Hr</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(14.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The per hour cost to set up the 
+			 resource in the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 39; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">39</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Run Cost Per Hr</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(14.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The per hour cost to run the operation. 
+			 This is not a required field.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 40; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;">40</p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Burden Per Hr Setup</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String(14.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The burden per hour applied to 
+			 setup of the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 41; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">41</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Burden Per Hr Run</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String (14.8)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The burden per hour applied to 
+			 setup of the operation.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 42; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">42</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Burden Per Unit Run</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String (14.8)</span></p></td>
+			<td height="17" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="17" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The burden per unit produced.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 43; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">43</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Fixed Burden</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String (15.8)</span></p></td>
+			<td height="17" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="17" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The fixed burden for the operation.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 44; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">44</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Burden Percent Setup</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String (3.3)</span></p></td>
+			<td height="32" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The burden rate for setting up 
+			 the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 45; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">45</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Burden Percent Run</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Number String (3.3)</span></p></td>
+			<td height="17" width="57" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="17" width="288" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The burden rate for running up 
+			 the operation.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 46; mso-yfti-lastrow: yes; height: 13.0pt;">
+			<td height="17" width="52" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">46</span></p></td>
+			<td height="17" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Operation Type</span></p></td>
+			<td height="17" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String (15)</span></p></td>
+			<td height="17" width="57" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="288" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The operation type.</span> </p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

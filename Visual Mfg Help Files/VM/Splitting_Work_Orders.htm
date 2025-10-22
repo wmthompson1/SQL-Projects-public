@@ -1,0 +1,113 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Splitting Work Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Splitting Work Orders</h1>
+	</div>
+	<p class="First">You can split work orders if you want to speed the 
+	 production of a specific quantity of an order for delivery. You should 
+	 think of the original work order as the parent work order and the 
+	 split work order as the child. A parent work order may have many child 
+	 work orders.</p>
+	<p>When you split a work order, VISUAL prorates Operation, Material 
+	 and Service costs for operations sequentially numbered before the 
+	 split according to the ratio of the Split Quantity to the original 
+	 Desired Quantity. It is important to remember that with ending quantity 
+	 VISUAL takes into consideration scrap through all of the operations. 
+	 When you split a work order, the split amount must also reflect the 
+	 same assumed scrap quantities.</p>
+	<p>For example, you may have a desired quantity of 1000 for a work 
+	 order. Because each of the three operations generates 10% scrap, VISUAL 
+	 plans for a quantity of 1372.</p>
+	<p>Costs that you incur for sequentially numbered operations after 
+	 the split reside solely on the parent work order or child work order 
+	 respectively. You must pay special attention to materials and services 
+	 that are linked to Purchase Orders. Parent and Child work orders share 
+	 costs by assigning portions of the Purchase Order to the splits.</p>
+	<p>If you are licensed to use multiple sites, you can split work orders 
+	 within the same site only. The “child” split work orders are created 
+	 in the same site as the “parent” work order.</p>
+	<p>Split Work Order numbering conventions:</p>
+	<p>A Split Order can be identified by the decimal point in the Lot 
+	 ID.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">40001 / 1 is Work Order 
+		 ID 40001 - Lot ID = 1 Split ID = 0 = A Parent Work Order</p></li>
+		<li class="p-Bullet"><p class="Bullet">4001 / 1. is Work Order 
+		 ID 40001 - Lot ID =1 Split ID = 1 =A Child Work Order</p></li>
+	</ul>
+	<p><span style="text-decoration: underline; ">Base ID - Sub ID / Lot 
+	 ID . Split ID</span></p>
+	<p>(Operation Sequence Number)</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Operation 40 of Sub ID 3 
+		 of Work Order 40009 Lot 2 Split 1 appears abbreviated as: 40009-3 
+		 / 2.1 (40)</p></li>
+		<li class="p-Bullet"><p class="Bullet">When Sub ID and Split ID 
+		 are zero, they are omitted from the abbreviation, therefore Operation 
+		 40 of Sub ID of Work Order 40009 Lot 2 Split 0 appears abbreviated 
+		 as: 4009 / 2 (40)</p></li>
+	</ul>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">To access the Split 
+		 Work Order dialog box, select <span class="Bold">Split Work Order</span> 
+		 from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The point in the work order (the Split ID 
+	 and Sub ID) at which you want to split the work order appears in the 
+	 read-only fields at the top of the dialog box.</p>
+	<ol start="2" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Enter a new Split ID 
+		 into the New Split ID field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the split quantity 
+		 for the order in the Split quantity for order field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the split quantity 
+		 for the operation in the Split quantity for operation field.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The split quantity for the order must be 
+	 greater than zero and less than the order quantity.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Select a Release Date 
+		 and Want Date. Use the calendar button or manually enter a date.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the items to 
+		 copy to the split work order:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Copy All Document References</span> 
+	 – Select this option to copy all document references from the original 
+	 work order to the split work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy All Reference Designators</span> 
+	 – Select this option to copy reference designators from the material 
+	 cards.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy Alternate Parts</span> 
+	 – Select this option to copy the alternate parts from the material 
+	 cards.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to split the work order.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

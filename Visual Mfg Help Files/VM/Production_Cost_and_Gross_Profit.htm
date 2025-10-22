@@ -1,0 +1,179 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Production Cost and Gross Profit View Panel Chart</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { vertical-align:top; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Production Cost &amp; Gross Profit View Panel Chart</h1>
+	</div>
+	<p>The Production Cost &amp; Gross Profit Panel chart shows information 
+	 about costs and anticipated profit for the order. Costs and profit 
+	 are shown at the site level. All values are shown in the functional 
+	 currency of the site’s parent accounting entity.</p>
+	<p>The chart has two lines and three bars. These two lines are shown:</p>
+	<p><span class="Bold">Sell Price</span> – The extended price of the 
+	 customer order is displayed. The extended price is calculated by multiplying 
+	 the unit price by the number of units ordered and then applying any 
+	 pertinent discounts for all lines in the order. </p>
+	<p><span class="Bold">Profit</span> – The profit is calculated by subtracting 
+	 the projected costs from the sell price. If the projected costs are 
+	 higher than the sell price, then no profit line is shown. If no costs 
+	 have been specified for the part, then the Profit line is equal to 
+	 the Sell Price line. In this case, the Sell Price line is superimposed 
+	 on the Profit line. </p>
+	<p>This table shows information about the bars in the chart:</p>
+	<table style="border-collapse: separate; border-collapse: separate;" 
+			 cellspacing="0" width="92.573%" border="1">
+		<col style="width: 25.088%;">
+		<col style="width: 74.912%;">
+		<tr>
+			<td><p><span class="Bold">Bar</span></p></td>
+			<td><p><span class="Bold">This bar shows...</span></p></td>
+		</tr>
+		<tr>
+			<td class="hcp1"><p>Estimated Costs</p></td>
+			<td class="hcp1"><p>The estimated costs to 
+			 produce the quantity in the order. </p>
+			<p>For lines that are linked to a work orders, the work order 
+			 is used to calculate estimated costs. The costs are prorated 
+			 if the linked quantity from the customer order is less than 
+			 the total quantity produced by the work order. If a part in 
+			 the order is not linked to a work order, then the standard 
+			 costs specified on the part record are used. If a customer 
+			 order line is partially allocated to a work order, the allocated 
+			 quantity uses the work order costs and the unallocated quantity 
+			 uses the part standard costs for the site on the order. </p></td>
+		</tr>
+		<tr>
+			<td><p>Actual Costs</p></td>
+			<td><p>The actual costs incurred for any shipped quantities. 
+			 </p>
+			<p>For quantities linked to a work order, the actual costs 
+			 from the work order are used to calculate this bar. For quantities 
+			 not linked to a work order, the actual cost layers for shipped 
+			 quantities are used to calculate this bar.</p></td>
+		</tr>
+		<tr>
+			<td><p>Projected Costs</p></td>
+			<td><p>The projected total costs to produce the order. </p>
+			<p>Projected costs are calculated by adding the actual costs 
+			 for any shipped quantities to the estimated costs for any 
+			 unshipped quantities. For quantities allocated to a work order, 
+			 the work order is used to calculate the actual and estimated 
+			 costs. For quantities not allocated to a work order, the actual 
+			 cost layer for the shipment is used for the actual costs, 
+			 and any remaining quantity is calculated using the part standard 
+			 for the site specified on the order.</p></td>
+		</tr>
+	</table>
+	<p>Click any bar to view this information:</p>
+	<p><span class="Bold">Ln#</span> – The line number of the order.</p>
+	<p><span class="Bold">Line Status</span> – The status of the order 
+	 line.</p>
+	<p><span class="Bold">Supply ID</span> – If any portion of the customer 
+	 order line is allocated to a work order, then the ID of the work order 
+	 is displayed. Click the ID to open the work order. If any portion 
+	 of the customer order line is not allocated to a work order, then 
+	 Other is displayed.</p>
+	<p><span class="Bold">Supply Qty</span> – If any portion of the customer 
+	 order line is allocated to a work order, then the allocated quantity 
+	 is displayed. If no quantities have been received on the work order 
+	 by the want date, then this value is displayed in red. If any portion 
+	 of the customer order line is not allocated to a work order, then 
+	 the quantity of the customer order line that derives costs from the 
+	 part standard is displayed.</p>
+	<p><span class="Bold">Shipped Qty</span> – The quantity of the line 
+	 that has shipped is displayed.</p>
+	<p><span class="Bold">Want Date</span> – For quantities linked to a 
+	 work order, the want date of the work order is displayed. If the quantity 
+	 is not linked to a work order, then no information is displayed.</p>
+	<p><span class="Bold">Supply Status</span> – For quantities linked 
+	 to a work order, the status of the work order is displayed. If the 
+	 quantity is not linked to a work order, then no information is displayed.</p>
+	<p><span class="Bold">Estimated</span> – For quantities linked to a 
+	 work order, the total of the estimated costs from the work order is 
+	 displayed. The costs are calculated by adding the costs specified 
+	 on the Costs tab of all Material cards and Operation cards for the 
+	 quantity linked to the customer order. For quantities not linked to 
+	 a work order, the total costs from the part standard for the site 
+	 on the order are multiplied by the quantity in the Qty column.</p>
+	<p><span class="Bold">Actual</span> – For quantities linked to a work 
+	 order, the actual costs from finished goods receipts for the work 
+	 order is displayed. For quantities not linked to a work order, the 
+	 total of actual cost layers for shipped quantities is displayed.</p>
+	<p><span class="Bold">Projected</span> – For quantities linked to a 
+	 work order, the estimated costs for any quantities that have not shipped 
+	 are added to the actual costs for quantities that have shipped. For 
+	 quantities not linked to a work order, any unshipped quantities are 
+	 multiplied by the part standard costs for the site and added to the 
+	 actual costs for quantities that have shipped.</p>
+	<p><span class="Bold">Sell Price</span> – The extended price of the 
+	 customer order line is displayed. The extended price is calculated 
+	 by multiplying the unit price by the number of units ordered and then 
+	 applying any pertinent discounts.</p>
+	<p><span class="Bold">Est. Gross Profit</span> – This value is calculated 
+	 by subtracting the estimated costs from the sell price.</p>
+	<p><span class="Bold">Proj. Gross Profit</span> – This value is calculated 
+	 by subtracting the projected costs from the sell price.</p>
+	<p><span class="Bold">Gross Profit Diff.</span> – The estimated gross 
+	 profit is subtracted from the projected gross profit. If the value 
+	 is negative, then the number is displayed in red.</p>
+	<p><span class="Bold">Currency ID</span> – The functional currency 
+	 of the site’s parent accounting entity is displayed.</p>
+	<p><span class="Bold">U/M</span> – The unit of measure specified for 
+	 the part on the customer order line.</p>
+	<p><span class="Bold">Sched Start Date</span> – For quantities linked 
+	 to a work order, the scheduled start date of the work order is displayed.</p>
+	<p><span class="Bold">Sched Finish Date</span> – For quantities linked 
+	 to a work order, the scheduled finish date of the work order is displayed.</p>
+	<h2>Order Line View Panel Chart and the Standard Costing Method</h2>
+	<p>If you use the Standard costing method, then these conditions apply 
+	 to the calculations made for order quantities not allocated to work 
+	 orders:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Estimated costs are based 
+		 on the current part standard. If the standard costs are changed 
+		 for a part, then the graph is updated accordingly. Original Estimated 
+		 costs are not saved.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Actual costs are based on 
+		 the standard cost at the time of shipment. This calculation is 
+		 made for both the Actual bar in the graph, and the actual cost 
+		 portion of the Projected bar. Actual costs are not recalculated 
+		 if the part standard is changed.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Projected costs are based 
+		 on the current part standard for unshipped quantities plus the 
+		 part standard at the time of shipment for shipped quantities.</p></li>
+	</ul>
+	<p>For order quantities allocated to work orders, these conditions 
+	 apply:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Estimated costs are based 
+		 on the part standards in place at the time the work order is generated. 
+		 If the part standards are changed, the estimated costs are not 
+		 updated unless you update the costs on the work order.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Projected costs initially 
+		 match estimated costs. When cost variances occur in the work order, 
+		 the projected costs will be updated to include the variance and 
+		 will no longer match the part standard. The variance is considered 
+		 when calculating the projected gross profit. When the work order 
+		 costs are posted to the ledger, the variance is posted to the 
+		 variance accounts and not to the cost of goods sold accounts.</p></li>
+	</ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using the Workflow Rule Table</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using the Workflow Rule Table</h1>
+	</div>
+	<p class="First">In a typical workflow, you create statements for tables 
+	 within a VISUAL application (for example, PURCHASE_ORDER for the Purchase 
+	 Order application). However, some workflows require that you create 
+	 a statement for the condition of a specific rule or step. To allow 
+	 the creation of rule and step statements, Workflow provides non-database 
+	 tables, such as Workflow Rule and Workflow Step. These tables allow 
+	 you to create statements for status and time conditions. For example, 
+	 you can set a time condition for a step that must be completed by 
+	 a specific date.</p>
+	<h2>Creating a Workflow Rule Label Statement</h2>
+	<p class="First">A statement containing a Label value affects the current 
+	 rule. The trigger for the Label value is the name of the current rule 
+	 in the Label field.</p>
+	<p>To create a Workflow Rule Label statement:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If necessary open a 
+		 Rule Properties dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.&#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Table column, 
+		 click the arrow and select <span class="Bold">Workflow Rule</span>. 
+		 &#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Column 
+		 column, click the arrow; then select <span class="Bold">Label</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the statement requires 
+		 a value in the &lt;Operator&gt; Value or &lt;Comparison&gt; Value 
+		 column, enter the label name of the current rule.</p></li>
+	</ol>
+	<h2>Creating a Workflow Rule Status Statement</h2>
+	<p class="First">A statement containing a Status value affects the 
+	 current rule. The trigger for Status is the value in the Status field. 
+	 The Status field is read-only and displays &quot;Complete&quot; when 
+	 VISUAL has completed the current rule or &quot;InProcess&quot; when 
+	 VISUAL has started, but not completed, the current rule.</p>
+	<p>To create a Workflow Rule Status statement:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If necessary open a 
+		 Rule Properties dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Table column, 
+		 click the arrow and select <span class="Bold">Workflow Rule</span>. 
+		 &#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Column 
+		 column, click the arrow; then select <span class="Bold">Status</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the statement requires 
+		 a value in the &lt;Operator&gt; Value or &lt;Comparison&gt; Value 
+		 column, type one of the following values:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">InProcess</span> - The 
+	 statement requires that the status of the current rule is in process. 
+	 The <span class="Bold">InProcess</span> value is case and space sensitive.</p>
+	<p class="Numbered-Indent"><span class="Bold">Complete</span> - The 
+	 statement requires that the status of the current rule is complete. 
+	 The <span class="Bold">Complete</span> value is case sensitive.&#160;</p>
+	<h2>Creating a Workflow Rule Time Complete Statement</h2>
+	<p class="First">A statement containing a Time Complete value affects 
+	 the current rule. The trigger for the Time Complete value is the date 
+	 in the Date/Time field of the current rule.</p>
+	<p>To create a Workflow Rule Time Complete statement:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If necessary open a 
+		 Rule Properties dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Table column, 
+		 click the arrow and select <span class="Bold">Workflow Rule</span>. 
+		 &#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Column 
+		 column, click the arrow and select <span class="Bold">Time Complete</span>.&#160;</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the statement requires 
+		 a value in the &lt;Operator&gt; Value or &lt;Comparison&gt; Value 
+		 column, double-click the column’s header.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The calendar dialog box appears.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">In the Offset box, select 
+		 the time for your operator value; then click the <span class="Bold">OK</span> 
+		 button.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Working_with_Statements.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Working with Statements</p>
+</body>
+</html>

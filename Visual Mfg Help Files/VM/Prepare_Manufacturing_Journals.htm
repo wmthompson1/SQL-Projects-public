@@ -1,0 +1,110 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Prepare Manufacturing Journals</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Prepare Manufacturing Journals</h1>
+	</div>
+	<p class="First">Manufacturing Journals are prepared by the Costing 
+	 Utility application. Each journal is the result of an analysis of 
+	 inventory transactions, and if applicable, labor tickets. These procedures 
+	 create summary journal transactions called distributions, which are 
+	 then ready for posting to the General Ledger. Each journal is a subsidiary 
+	 journal similar in nature to the Accounts Payable or Accounts Receivable 
+	 journals. The journals must be posted using the Post Manufacturing 
+	 Journals function.</p>
+	<p>If you are licensed to use multiple sites, prepare manufacturing 
+	 journals on a site-by-site basis.</p>
+	<p>The Costing Utility may create several distributions for each order. 
+	 If an order is open for more than one period, it typically has multiple 
+	 distributions. If you run the Costing Utilities more than once during 
+	 the period and post the results, multiple distributions are created. 
+	 The Costing Utilities remove any unposted transactions for the period 
+	 being processed and replace them with up to date transactions. This 
+	 simplifies the resulting distributions allowing a summary to occur 
+	 across all available transactions. If you run the Costing Utilities 
+	 and do not post the results, the unposted transactions are picked 
+	 up in a subsequent batch the next time you run the Costing Utilities. 
+	 However, you do not lose the distributions created by the previous 
+	 Costing Utility run. They are added to the current distribution.</p>
+	<p>Any difference between what you are posting on the Work In Process 
+	 (WIP) journal and Indirect Labor journal and the labor expense that 
+	 results from your payroll transactions can usually be accounted for 
+	 as one of these possible situations:</p>
+	<p>You are not entering all transactions in VISUAL. Sometimes indirect 
+	 labor is not entered as a labor ticket in VISUAL.</p>
+	<p>Your payroll system’s employee rate information is different from 
+	 the employee rate used by VISUAL.</p>
+	<p>Your office or salaried employee expense is mixed with the direct/indirect 
+	 labor posting being made from your payroll system.</p>
+	<p>Labor tickets are costed immediately when created. Therefore, there 
+	 is no delay in obtaining this information. Also, burden is calculated 
+	 at labor ticket creation.</p>
+	<p>Material burden is applied only when a material is issued to a work 
+	 order. It is not intended to capture inventory storage costs, nor 
+	 does it affect the value of inventory as it waits for use. The act 
+	 of issuing the material to a work order causes the work order to be 
+	 burdened for the material. This cost appears in the Burden column 
+	 of a work order. Each part received from the work order contains a 
+	 share of the burden applied as a result of this process. This material 
+	 burden can be in addition to the burden applied from the shop resource. 
+	 </p>
+	<p>When a material issue to a work order drives the on-hand quantity 
+	 for a part into negative numbers, this occurs in an Actual cost database:</p>
+	<p><span class="Bold">Material Cost</span> – Only the quantity that 
+	 was actually on hand is costed to the work order. The additional quantity 
+	 issued that drove the on-hand quantity into negative numbers is issued 
+	 at the standard costs defined in Part Maintenance. If you are licensed 
+	 to use multiple sites, these costs are defined on a site-by-site basis.</p>
+	<p><span class="Bold">Issue Burden</span> – Issue Burdens are handled 
+	 as:</p>
+	<p class="Normal-Indent"><span class="Bold">Unit Burden</span> – Because 
+	 this figure is based on the number of pieces issued, the unit burden 
+	 for the total quantity issued is costed.</p>
+	<p class="Normal-Indent"><span class="Bold">Percent Burden</span> – 
+	 This figure is based on a percentage of the material cost.</p>
+	<p>There are six Manufacturing Sub-Ledger Journals.</p>
+	<p><a href="Purchase_Journals.htm">Purchase Receipts Journal (PUR)</a> 
+	 – Order Based</p>
+	<p><a href="Work_In_Process_WIP_Journals.htm">Work Order Journal (WIP)</a> 
+	 – Order Based</p>
+	<p><a href="Finished_Goods_Journals.htm">Finished Goods Receipt Journal 
+	 (FG)</a> – Order Based</p>
+	<p><a href="Shipments_Journals.htm">Shipments Journal (SLS)</a> – Order 
+	 Based</p>
+	<p><a href="Adjustment_Journals.htm">Inventory Adjustment Journal (ADJ)</a> 
+	 – Transaction Based</p>
+	<p><a href="Indirect_Labor_Journals.htm">Indirect Labor Journal (IND)</a> 
+	 – Transaction Based</p>
+	<h2>Preparing Manufacturing Journals</h2>
+	<p>Select the check boxes for the appropriate journals.</p>
+	<p>When the Costing Utilities window opens, none of the check boxes 
+	 for the journals are marked.</p>
+	<p>This function only prepares the journals.</p>
+	<h2>Posting to the General Ledger</h2>
+	<p>Select <span class="Bold">Ledger</span> from the <span class="Bold">File</span> 
+	 menu, then Post Manufacturing Journals from the pop out menu.</p>
+	<p>The Post Manufacturing Journals dialog box appears.</p>
+	<p>If you prepare the journals but don’t post them, the next time you 
+	 prepare journals, the previous journals are deleted and their distributions 
+	 are included in the new journals.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Costing_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

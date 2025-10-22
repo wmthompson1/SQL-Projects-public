@@ -1,0 +1,91 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Manufacturing Window Concepts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Manufacturing Window Concepts</h1>
+	</div>
+	<p class="First">The Manufacturing Window and the objects it maintains 
+	 are designed to achieve the following goals:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Manufacture standard parts 
+		 and custom products using the same flexible tool set. The Manufacturing 
+		 Window provides a number of options for specifying fabrication 
+		 masters for different levels that you can combine to meet your 
+		 unique needs.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Allow free modification 
+		 of all aspects of a work order routing and bill of material as 
+		 needed, even when it is for a standard part. You can modify VISUAL 
+		 work orders locally without affecting the master, if one exists. 
+		 VISUAL provides full security control for this feature.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Allow the use of purchased 
+		 parts that are special to an order without maintenance of a part 
+		 master or assignment to a warehouse. You can specify one time 
+		 material requirements for engineering masters or work orders, 
+		 and purchase directly to the job.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Support concurrent engineering 
+		 and manufacturing. Work order release and status is by individual 
+		 operation and material requirement, to maximize your ability to 
+		 begin manufacturing on some components before engineering is complete 
+		 for others.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Allow &quot;Just In Time&quot; 
+		 material planning, as well as other planning policies. VISUAL 
+		 specifies material requirements at the operation where they are 
+		 needed, rather than on a common bill of materials.</p></li>
+		<li class="p-Bullet"><p class="Bullet">To meet these goals, the 
+		 Manufacturing Window maintains three types of objects, all very 
+		 similar to one another:</p></li>
+	</ul>
+	<h2>Engineering Masters</h2>
+	<p>Engineering Masters define a process for use in the production of 
+	 a manufactured product. This includes the individual operations to 
+	 be performed, the materials they require, the effort required, and 
+	 the estimated cost of production.</p>
+	<p>Engineering masters are a combined bill of material and routing. 
+	 You develop engineering masters as the basis for work orders that 
+	 are released to build the parts in question. Each fabricated part 
+	 has a current engineering master, which you specify in Part Maintenance, 
+	 and a series of alternate engineering masters, which the system may 
+	 use when needed.</p>
+	<h2>Quote Masters</h2>
+	<p>Quote Masters are identical to Engineering Masters, but are specifically 
+	 attached to quotation line items, and are primarily used to generate 
+	 estimated costs for quotations.</p>
+	<h2>Work Orders</h2>
+	<p>Work orders define a manufacturing process that will actually occur, 
+	 or is occuring, to produce a given quantity of a product. Work orders 
+	 have all the features of masters, but also have additional attributes 
+	 to control and track the actual execution of a process. You can produce 
+	 work orders by copying an engineering master for a standard part, 
+	 by copying a quote master, or by creating a custom work order from 
+	 the ground up. The method you use depends on whether you are making 
+	 to stock, making to order, or engineering to order.</p>
+	<p>Work orders cause demand for shop resources that are planned by 
+	 the Global Scheduler. They also, along with customer orders, cause 
+	 demand for materials that are planned by the Material Planning Window.</p>
+	<p>The remainder of this section describes the structure of engineering 
+	 masters, quote masters, and work orders, and how they are used. The 
+	 structure of masters and work orders is covered from the top down, 
+	 moving from header information, to subassemblies, to individual operations 
+	 and material requirements.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

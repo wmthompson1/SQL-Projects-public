@@ -1,0 +1,72 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>What is the Contact Merge Utility?</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { vertical-align:top; }
+tr.hcp2 { vertical-align:top; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<table cellspacing="0" width="100.316%" bgcolor="#FFFFFF" class="hcp1">
+	<col style="width: 100%;">
+	<tr class="hcp2">
+		<td style="border: Solid 1px #062989; padding-right: 10px; padding-left: 10px;"><table cellspacing="0" width="100%" class="hcp1">
+			<col style="width: 100%;">
+			<tr class="hcp2">
+				<td style="padding-right: 10px; padding-left: 10px;"><h1>What 
+				 is the Contact Merge Utility?</h1></td>
+			</tr>
+		</table></td>
+	</tr>
+	<tr class="hcp2">
+		<td style="border-left: Solid 1px #062989; border-right: Solid 1px #062989; 
+			 border-bottom: Solid 1px #062989; padding-right: 10px; padding-left: 10px;"><p><strong><span 
+		 class="Bold">Caution:</span></strong> Using this utility permanently 
+		 changes the contact information in your database. Make a backup 
+		 of your database before using this utility.</p>
+		<p>Business object documents (BODs) require a Contact ID. To comply 
+		 with this standard, the CONTACT_ID field was added to the 7.1.0 
+		 and higher database schema. When you upgraded your database to 
+		 7.1.0 or higher, Contact IDs were created for all contacts with 
+		 associated transactions. If contact entries were not identical 
+		 a new contact entry was created. This resulted in multiple Contact 
+		 IDs for the same contact with minor variations.</p>
+		<p>Use the Contact Merge Utility to consolidate duplicate contact 
+		 records, by specifying the Parent Contact ID to replace the duplicate 
+		 Contact IDs on transactions. After the duplicate contact information 
+		 is replaced by the parent contact information in transactions, 
+		 the duplicate contact is removed from the database. Depending 
+		 on the options you choose in the utility, you can also update 
+		 transactions with the parent contact’s name, position, and phone 
+		 number.</p>
+		<h2>Requirements</h2>
+		<p>You must have system administrator privileges to use this utility. 
+		 You can only use the utility with Infor VISUAL 7.1.2 and higher 
+		 and Infor VISUAL CRM 7.12 and higher. Consult with your VISUAL 
+		 ICS staff for recommendations on updating VISUAL and VISUAL CRM.</p>
+		<p><strong><span class="Bold">Note:</span></strong> If CRM is not 
+		 installed then the Contact Merge Utility ignores all variables, 
+		 validations and functions associated with CRM.</p></td>
+	</tr>
+</table>
+<p class="SeeAlsoNext"><a href="VMMRGCONfrmContactMrg.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Merging Contacts</p>
+<p class="SeeAlsoNext"><a href="VMMRGCONInterfaceOvrvw.htm" id="a1"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Navigating in the Contact Merge Utility</p>
+<p class="SeeAlsoNext"><a href="VMMRGCONContactTableSort.htm" id="a2"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Sorting the contact table in the Contact 
+ Merge Utility</p>
+</body>
+</html>

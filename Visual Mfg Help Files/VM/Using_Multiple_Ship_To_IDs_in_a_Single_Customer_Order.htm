@@ -1,0 +1,68 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using Multiple Ship To IDs in a Single Customer Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using Multiple Ship To IDs in a Single Customer Order</h1>
+	</div>
+	<p class="First">You can ship varying quantities on different dates 
+	 and specify various ShipTo IDs within the same order by using alphanumeric 
+	 ShipTo IDs as alternate indexes to the shipping address tables. This 
+	 alphanumeric ID makes EDI translations much easier by eliminating 
+	 the need for two external cross reference tables in EDI maps, one 
+	 for inbound orders and one for outbound ASN transactions. Unique alphanumeric 
+	 IDs also make it easier for VISUAL users who sell to companies that 
+	 have over a thousand stores and warehouses by allowing you to assign 
+	 a different alpha-numeric ID to each location.</p>
+	<p>The use of ShipTo IDs is optional.</p>
+	<h2>Entering Multiple Ship-To IDs in a Single Customer Order</h2>
+	<p>If you specify a Ship-To ID in the order header or order line, it 
+	 does not appear anywhere in the shipping window. Ship-To IDs are for 
+	 your information only.</p>
+	<h2>Entering Ship-To IDs for line items:</h2>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Scroll through the Shipping 
+		 Entry line item table until you reach the Ship-To ID column.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double click the column 
+		 header.</p></li>
+	</ol>
+	<p class="Numbered-Indent">A Shipping Addresses dialog box appears.</p>
+	<p class="Numbered-Indent">This table is for viewing and selecting 
+	 Ship-To IDs only. You must make new entries in Customer Order Entry. 
+	 See Customer Order Entry for more information.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Select the appropriate 
+		 Ship-To ID from the list and click <span class="Bold">OK</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The alpha-numeric ID appears in the Ship-To 
+	 ID column.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If the order you want to ship has more than 
+	 one Ship-To ID, VISUAL asks you if you want to ship the order by creating 
+	 multiple packlists.</p>
+	<p class="Numbered-Indent">If you select <span class="Bold">Yes</span>, 
+	 VISUAL creates the number of packlists necessary to fulfill your shipping 
+	 requirements. In the Packlist field, you can see the newly-created 
+	 Packlist IDs appear as VISUAL ships them.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shipping_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

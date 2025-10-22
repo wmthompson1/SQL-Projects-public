@@ -1,0 +1,158 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>What is Consigned Inventory?</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>What is Consigned Inventory?</h1>
+	</div>
+	<p class="First">Consigned inventory is inventory—parts and material—kept 
+	 in a location but owned by the supplying company. For example, you 
+	 have a vendor supplying you with PART A. You purchase the part one 
+	 hundred at a time but your vendor ships them one thousand at a time. 
+	 Your vendor may ship you one thousand of which you purchase one hundred 
+	 and stock nine hundred on consignment: you own one hundred and the 
+	 vendor owns nine hundred even though you are stocking the nine hundred. 
+	 The next time you purchase one hundred, you take ownership of that 
+	 one hundred and the vendor continues to own the remaining eight hundred.</p>
+	<table style="margin-left: 12px;" cellspacing="0" width="372">
+		<tr style="vertical-align: top;">
+			<td width="72" class="hcp1"><p class="First"><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="300" class="hcp1"><p class="First">VISUAL 
+			 does not support Dimensional Inventory for Consignments.</p></td>
+		</tr>
+	</table>
+	<h2>How Does Consignment Work?</h2>
+	<p>Using VISUAL’s consigned inventory functionality, you can manage 
+	 the four types of consigned inventory:</p>
+	<p><span class="Bold">At Customer</span> – Inventory owned by you but 
+	 stored at your customer’s location. When the customer consumes the 
+	 inventory, they notify you and take ownership.</p>
+	<p>Initially this material resides in your warehouse until you ship 
+	 it to your customer.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Create a consignment 
+		 warehouse and assign it to your customer. You are creating a warehouse 
+		 located at your customer’s site where the parts are physically 
+		 located: a consignment warehouse assigned to your customer.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Use the Inter Branch 
+		 Transfer windows to perform the shipping and receipt transactions 
+		 necessary to move the material from your standard warehouse to 
+		 the consignment warehouse (assigned to the customer). This will 
+		 allow you to set up addresses for the warehouse assigned to the 
+		 customer.</p></li>
+		<li class="p-Numbered"><p class="Numbered">When your customer consumes 
+		 the material, create a customer order and shipment to transfer 
+		 ownership of the consumed material to the customer.</p></li>
+	</ol>
+	<p><span class="Bold">From Customer</span> – Inventory owned by your 
+	 customer but stored at your location. When you consume the inventory, 
+	 you notify the customer but there is no transfer of ownership and 
+	 no cost to you because you never own it. You use the material to build 
+	 a product for the same customer.</p>
+	<p>Typically these would be unique Part ID's in your system. To help 
+	 ensure the separation of materials, store these materials in warehouse 
+	 locations assigned to those customers until you issue them to jobs 
+	 to build the customer's finished product.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Create an inventory 
+		 location assigned to the customer.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Use the Consignment 
+		 Receiving window to receive consignment parts into inventory.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Issue the parts to your 
+		 jobs as normal.</p></li>
+	</ol>
+	<p><span class="Bold">At Vendor</span> – Inventory owned by you but 
+	 sent to your vendor to be used to complete a service. When the vendor 
+	 consumes the inventory, they notify you so you can issue it to the 
+	 job.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Create a consignment 
+		 warehouse assigned to the vendor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Use the Inter Branch 
+		 Transfer windows to perform the shipping and receipt transactions 
+		 necessary to move the material from the standard warehouse to 
+		 the consignment warehouse (assigned to the vendor). This will 
+		 allow you to set up addresses for the warehouse assigned to the 
+		 vendor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">When the vendor consumes 
+		 the material and notifies you, issue the material to the job as 
+		 normal.</p></li>
+	</ol>
+	<p><span class="Bold">From Vendor</span> – Inventory owned by your 
+	 vendor but stored at your location. When you consume the inventory, 
+	 you notify the vendor and take ownership.</p>
+	<p>To accomplish this:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Create an inventory 
+		 location assigned to the vendor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Create a consignment 
+		 purchase order with the consigned location selected.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Use the Consignment 
+		 Receiving window to receive consignment parts into inventory.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Parts and material in 
+		 consignment locations have no value because they are owned by 
+		 the vendor.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Assume ownership by 
+		 Creating a Purchase Order Receiver for the consigned material.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL moves the material from the consigned 
+	 location into a standard location and assigns a value to the material—you 
+	 now own that material.</p>
+	<p><span class="Bold">Consignment and Costing Method</span></p>
+	<p>If you use Standard Costing methods, you can use By Part or By Part 
+	 Location for your FIFO Method / Inventory Grouping.</p>
+	<p>If you use Actual or Average Costing methods, you must use By Part 
+	 Location as your FIFO Method / Inventory Grouping. If you use Actual 
+	 or Average Costing methods with FIFO By Part, VISUAL removes the From 
+	 Vendor and From Customer location types from Warehouse Maintenance. 
+	 VISUAL also displays an error message if you attempt to access Consignment 
+	 Receiving.</p>
+	<p><span class="Bold">Maintaining Zero Costs for Customer Inventory 
+	 Consigned to You</span></p>
+	<p>For inventory that the customer consigns to you, you must maintain 
+	 unique Part IDs for each customer. Maintaining unique Part IDs for 
+	 each customer allows for easier traceability through the system.</p>
+	<h2>Working With Consignment Related Information</h2>
+	<p>Create consignment inventory locations for your customers from which 
+	 you will accept consignments.</p>
+	<p>Assign parts and materials you will accept on consignment to consignment 
+	 locations.</p>
+	<p>What you need to have is a consignment location for the part for 
+	 the customer/vendor.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Warehouse Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Part Maintenance (Warehouse 
+		 Locations for Parts)</p></li>
+		<li class="p-Bullet"><p class="Bullet">Inter Branch Transfer</p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Shipping Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Consignment Receiving</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Receipt Entry</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="User-defined_Help_Files_-_Consignment_Receiving.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

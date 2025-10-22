@@ -1,0 +1,129 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating New Work Orders From Engineering Masters</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating New Work Orders From Engineering Masters</h1>
+	</div>
+	<p class="First">You can create a new work order by copying an engineering 
+	 master, a quote master, or another work order. The New Work Order 
+	 from Eng Master command is one of the standard ways to create a work 
+	 order for an inventory part.</p>
+	<p class="First">If you are licensed to use multiple sites, you can 
+	 create a work order for one site from an engineering master, quote 
+	 master, or work order created in another site, provided that the materials 
+	 and resources exist in both sites.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, open a work order in the site where you 
+		 want to create a new work order. You have to open an existing 
+		 work order to indicate in which site the new work order should 
+		 be created. If you are creating a work order in your default site, 
+		 you do not need to perform this step.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you are licensed to use a single site, 
+	 you do not need to perform this step. You can create a new work order 
+	 from a blank Manufacturing Window.</p>
+	<ol start="2" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File, 
+		 New Work Order</span>, then select from Eng Master from the pop 
+		 out menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Generate New Work Order from Eng Master 
+	 dialog is displayed.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">From Site 
+		 ID</span> arrow and select the site that contains the master to 
+		 copy. If you are licensed to use a single site, this field is 
+		 unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Part 
+		 ID</span> button to select the Part ID and Engineering ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter identification 
+		 of new work order. You can enter the Base ID, Lot ID, and Split 
+		 ID, or allow auto numbering to assign them for you.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the want date 
+		 and the release date. By default, the current date is inserted 
+		 in the want date field. The release date is calculated by subtracting 
+		 the part's lead time from the current date. You can specify different 
+		 dates. </p></li>
+		<table style="left: 0px; top: 0px; height: 69px;" cellspacing="0" 
+				 width="715">
+			<tr style="vertical-align: top;">
+				<td width="77" class="hcp2"><p class="First"><img src="POSTIT.gif" alt="" style="border: none;" border="0"></p></td>
+				<td width="638" class="hcp2"><p class="First">If 
+				 you specify a new want date, the release date is not automatically 
+				 calculated. You must manually specify a new release date. 
+				 The release date is automatically calculated only when 
+				 you first specify a Part ID. </p></td>
+			</tr>
+		</table>
+		<p class="Numbered">&#160;</p>
+		<li class="p-Numbered"><p class="Numbered">Specify the quantity 
+		 to manufacture. </p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this scheduling 
+		 information: </p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Forward Schedule from 
+	 Release Date</span> – Select this option if you want VISUAL to forward 
+	 schedule the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Treat release date as 
+	 hard</span> – Select this option to prevent the VISUAL Concurrent 
+	 Scheduler from scheduling the work order until its release date arrives. 
+	 This can be a global setting for all work orders in all schedules, 
+	 for a particular schedule, or per work order, as in this case.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify the information 
+		 to copy to the work order:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Copy All Document References</span> 
+	 – Select this option to copy an document references attached to the 
+	 master to the new work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy Reference Designators</span> 
+	 – Select this option to copy all reference designators for materials 
+	 to the new work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy Alternate Parts</span> 
+	 – Select this option to copy any alternate parts associated with materials 
+	 to the new work order.</p>
+	<ol start="10" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 to create the new work order.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The work order is created with an Unreleased 
+	 status.</p>
+	<p class="Numbered-Indent">If your created work order references documents 
+	 that cannot be copied because they are not part of the target site, 
+	 a message dialog displays allowing you to continue or cancel the procedure.</p>
+	<p class="Numbered-Indent"><span style="font-weight: bold;">Note:</span> 
+	 If you create a work order from a master that uses obsolete resources, 
+	 the system sets the status of the operation that uses the obsolete 
+	 resource to cancelled.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Manufacturing_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

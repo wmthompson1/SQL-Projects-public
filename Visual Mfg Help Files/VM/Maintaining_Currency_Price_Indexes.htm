@@ -1,0 +1,81 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Maintaining Currency Price Indexes</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Maintaining Currency Price Indexes</h1>
+	</div>
+	<p class="First">Use the Currency Price Index feature to establish 
+	 stable conversion rates for currencies experiencing large exchange 
+	 rate fluctuations and stabilize greatly varying part prices over short 
+	 periods of time.</p>
+	<p>A part price list index is a list of user-defined conversion rates 
+	 that remain relatively fixed. This method of currency conversion allows 
+	 part prices to remain more stable over time.</p>
+	<p>If a customer order has a different currency than the currency of 
+	 the price, VISUAL uses the CURR_PRICE_INDEX table. If the user has 
+	 entered an exchange rate for the two currencies involved, VISUAL completes 
+	 the necessary conversion. If no data is found, the system will use 
+	 the most recent rate from the CURRENCY_EXCHANGE table in calculating 
+	 the proper currency value for the order.</p>
+	<p>To add indexes:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered"><span style="font-size: 11.0pt; 
+														 font-family: Calibri; 
+														 mso-ascii-font-family: Calibri; 
+														 mso-fareast-font-family: +mn-ea; 
+														 mso-bidi-font-family: +mn-cs; 
+														 mso-ascii-theme-font: minor-latin; 
+														 mso-fareast-theme-font: minor-fareast; 
+														 mso-bidi-theme-font: minor-bidi; 
+														 mso-color-index: 13; 
+														 language: en-US; 
+														 mso-text-raise: 0%; 
+														 mso-style-textfill-type: solid; 
+														 mso-style-textfill-fill-themecolor: dark1; 
+														 mso-style-textfill-fill-color: black; 
+														 mso-style-textfill-fill-alpha: 100.0%;">S</span>elect 
+		 <span class="Bold">Inventory</span>, <span class="Bold">Part Maintenance</span><span 
+		 class="Bold" style="color: #000000; font-weight: normal;">.</span></p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site. If you are licensed to use a single 
+		 site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Part ID field, 
+		 click the browse button and select the Part ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Maintain</span>, 
+		 <span class="Bold">Currency Price Index</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">From Currency ID</span> 
+	 - The currency you are converting. Double-click the column header 
+	 to view a table of valid VISUAL currencies.</p>
+	<p class="Numbered-Indent"><span class="Bold">To Currency ID</span> 
+	 - The currency to which you are converting the above &quot;from currency.&quot; 
+	 Double-click the column header to view a table of valid VISUAL currencies.</p>
+	<p class="Numbered-Indent"><span class="Bold">Exchange Rate</span> 
+	 - User-defined conversion rate VISUAL uses to convert part prices.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Part_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

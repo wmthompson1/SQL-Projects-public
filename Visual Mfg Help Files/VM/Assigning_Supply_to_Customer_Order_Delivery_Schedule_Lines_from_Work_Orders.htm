@@ -1,0 +1,95 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assigning Supply to Customer Order Delivery Schedule Lines from Work Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assigning Supply to Customer Order Delivery Schedule Lines 
+		 from Work Orders</h1>
+	</div>
+	<p class="First">If you are unsure about which lines customer order 
+	 lines are delivery schedule lines, scroll down the Customer Order 
+	 Entry window line item table until you find the Del Sched column. 
+	 If a check appears in the column, the line is a delivery schedule; 
+	 if not, there are no delivery schedule lines for this customer order 
+	 line.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With the customer order 
+		 that contains the delivery schedule to which you want to assign 
+		 supply displaying in the Customer Order Entry window, highlight 
+		 the appropriate customer order line and click the Del Sched tab. 
+		 The Edit Delivery Schedule Dialog box appears with all delivery 
+		 schedule line items for the customer order line displaying in 
+		 the line item table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the line to which 
+		 you want to allocate supply and click the<span class="Bold">Supply</span> 
+		 button. The Supply Links dialog box appears.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">The following information 
+	 appears in the header section of the dialog box:</span></p>
+	<p class="Numbered-Indent"><span class="Bold">Order ID/Line #/Del Sched 
+	 Line #</span> - The Order ID of the current customer order; the line 
+	 number of the customer order delivery schedule line in the customer 
+	 order; the line number of the delivery schedule line in the delivery 
+	 schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order Qty</span> - The 
+	 order quantity of the customer order delivery schedule line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Total Shipped Qty</span> 
+	 - The quantity of the customer order delivery schedule line that you 
+	 have shipped. Unless you have performed a partial shipment for this 
+	 line and chosen to keep the order open with a balance pending possible 
+	 future shipments, this value is zero for new customer order delivery 
+	 schedules.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Qty</span> 
+	 - The portion of the Order Qty to which you have allocated supply. 
+	 Before you establish any links of supply, this value is zero.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Qty</span> 
+	 - The quantity that has been fulfilled from the supplying source.</p>
+	<p class="Numbered-Indent"><span class="Bold">Remaining Qty</span> 
+	 - The quantity to which you have yet to assign supply. Before you 
+	 establish any links of supply, this quantity is equal to the Order 
+	 Quantity of the line.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the <span class="Bold">Type</span> 
+		 list box, select <span class="Bold">WO</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click &lt;Supply 
+		 Base ID&gt; to view a list of all the work orders currently in 
+		 your database. Select only those work orders with the same Part 
+		 ID and Warehouse ID as the customer order delivery schedule. You 
+		 may want to edit the column configuration of the work orders browse 
+		 dialog box to include the Warehouse ID column.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the work order 
+		 with the matching Part ID and Warehouse ID and click <span class="Bold">Ok</span>. 
+		 The work order appears in the Supply Links dialog box line item 
+		 table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Assign Quantity 
+		 column, enter the quantity that you want to allocate from the 
+		 work order to the customer order delivery schedule line. The quantity 
+		 that you enter here cannot be greater than the Supply Unallocated 
+		 Quantity of the work order or the Remaining Qty to Assign of the 
+		 customer order delivery schedule line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to commit the allocation of supply from the selected work order 
+		 to customer order delivery schedule line.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

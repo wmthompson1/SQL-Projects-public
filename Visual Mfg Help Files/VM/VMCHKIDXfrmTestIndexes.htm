@@ -1,0 +1,95 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>About the Examine Indexes Window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>About the Examine Indexes Window</h1>
+	</div>
+	<p class="First">Use the Examine Index tool to identify differences 
+	 between the indexes found in your database and a master list of valid 
+	 indexes for a VISUAL database. The tool lists indexes that are missing 
+	 from your database, indexes that are found in your database but not 
+	 in the master list, and indexes that are incorrect. An index is incorrect 
+	 if keys in the index are missing or are in the incorrect order.</p>
+	<p>If you use Oracle as your database engine, then valid indexes could 
+	 have a different name than the anticipated name. If an index is not 
+	 named when the index is created, then Oracle generates a name for 
+	 the index. When indexes are examined, any additional indexes that 
+	 have been identified are compared to missing indexes. If the structure 
+	 of an additional index matches the structure of a missing index, both 
+	 the additional index and missing index are removed from the lists. 
+	 </p>
+	<p>After you analyze indexes, you can use the Repair tool to add missing 
+	 indexes and repair incorrect indexes. </p>
+	<h2 class="First">Starting the Examine Indexes Window</h2>
+	<p>Select <span class="Bold">Admin</span>, <span class="Bold">Examine 
+	 Indexes</span>. </p>
+	<h2>Tasks</h2>
+	<p>This table shows the tasks that you can complete in the Examine 
+	 Indexes window:</p>
+	<table class="InforTable" style="left: 0px; top: 130px; margin-left: 12px; 
+			 border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+			 border="1">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr class="t1st">
+			<td><p class="TableTitle">Task</p></td>
+			<td><p class="TableTitle">Description</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td ><p><a href="Analyzing_Indexes.htm">Analyzing Indexes</a></p></td>
+			<td ><p>Use this procedure to identify inconsistences between 
+			 the indexes in your database and a master list of indexes.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><a href="Repairing_Indexes.htm">Repairing Indexes</a></p></td>
+			<td><p>Use this procedure to attempt to repair incorrect indexes. 
+			 Ensure that the SYSADM user is the only user signed in to 
+			 VISUAL when you complete this procedure. </p></td>
+		</tr>
+	</table>
+	<h2>Fields</h2>
+	<p><span class="Bold"><a name="dfsVERSION"></a>System Version</span></p>
+	<p>The current version of VISUAL.</p>
+	<p><span class="Bold"><a name="dfsPATCH_LEVEL"></a>Database Brand and 
+	 Patch Level</span></p>
+	<p>The database engine that you use and the current patch level.</p>
+	<p><span class="Bold"><a name="dfsDATABASE"></a>Database Version</span></p>
+	<p>The version of the database</p>
+	<p><span class="Bold"><a name="dfnTOTAL_INDEXES_EXPECTED1"></a>Total 
+	 Indexes Expected</span></p>
+	<p>The total number of valid indexes.</p>
+	<p><span class="Bold"><a name="dfnTOTAL_INDEXES_FOUND1"></a>Total Indexes 
+	 Found</span></p>
+	<p>The total number of indexes in your database.</p>
+	<p><span class="Bold"><a name="mlsINDEXES1"></a>Missing Indexes</span></p>
+	<p>Valid indexes that were not found in your database. </p>
+	<p><span class="Bold"><a name="dfnTOTAL_INDEXES_MISSING1"></a>Total 
+	 Missing Indexes</span></p>
+	<p>&#160;The number of missing indexes. </p>
+	<p><span class="Bold"><a name="mlsINDEXES_FOUND1"></a>Additional Indexes</span></p>
+	<p>Indexes that were found in your database but are not in the list 
+	 of valid indexes.</p>
+	<p><span class="Bold"><a name="dfnTOTAL_ADDITIONAL_INDEXES1"></a>Total 
+	 Additional Indexes</span></p>
+	<p>The number of additional indexes.</p>
+	<p><span class="Bold"><a name="mlsINDEXES_INCORRECT1"></a>Incorrect 
+	 Indexes</span></p>
+	<p>Indexes that were not correctly created.</p>
+	<p><span class="Bold"><a name="dfnTOTAL_INDEXES_INCORRECT1"></a>Total 
+	 Incorrect Indexes</span></p>
+	<p>The number of incorrect indexes.</p>
+</div>
+<p class="SeeAlsoNext">&#160;</p>
+</body>
+</html>

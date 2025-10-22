@@ -1,0 +1,52 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Running the VISUAL Data Import Utility in Background or Command Line Mode</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<script language="JavaScriptTITLE=&quot;BSSC" special="" type="text/javascript"></script>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Running the VISUAL Data Import Utility in Background or Command 
+		 Line Mode</h1>
+	</div>
+	<p class="First">You can run VDIU interactively or from a command line. 
+	 When you run VDIU from a command line, you can call it from another 
+	 program. If you include the proper command line options, VDIU runs 
+	 minimized and closes automatically upon completion.</p>
+	<h2>Command Line options:</h2>
+	<p><span class="Bold">-D</span> - VISUAL Database name.</p>
+	<p><span class="Bold">-U</span> - VISUAL Database user name.</p>
+	<p><span class="Bold">-P</span> - VISUAL Database user password.</p>
+	<p><span class="Bold">ENG_ID &lt;filename&gt;</span> - This option, 
+	 followed by the fully qualified tab-delimited filename, tells VDIU 
+	 to create an Engineering/Quote Masters and/or Work Orders in VISUAL. 
+	 This also creates parts for PART records.</p>
+	<p><span class="Bold">CREATE_PART &lt;filename&gt;</span> - This option, 
+	 followed by the fully qualified tab-delimited filename, tells VDIU 
+	 to create PART Masters in VISUAL. The input file should contain only 
+	 PART lines; VDIU ignores all other line types.</p>
+	<p><span class="Bold">SITE_ID &lt;site ID&gt;</span> – Use this option 
+	 to specify the site where you are creating the record. </p>
+	<p><span class="Bold">LOG_PATH &lt;filepath&gt;</span> – Use this option 
+	 to specify the location of the log file. Specify the path only; do 
+	 not include the file name. </p>
+	<p><span class="Bold">For example:</span></p>
+	<p>Run c:\Infor\visual\vmdlsync.exe –D VMFG – U USERNAME – P PASSWORD 
+	 ENG_ID c:\Infor\temp\file.txt SITE_ID MMC LOG_PATH c:\Infor\logs</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_VISUAL_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

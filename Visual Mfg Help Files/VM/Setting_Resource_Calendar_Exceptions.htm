@@ -1,0 +1,135 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Resource Calendar Exceptions</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Resource Calendar Exceptions</h1>
+	</div>
+	<p class="First">In some instances a resource may not be available 
+	 as defined by the weekly calendar. In these cases, you can define 
+	 an exception for the resource. For example, if a resource is not available 
+	 for use during a plant shut down or on holidays, use the exception 
+	 table to define these dates. Resource calendar exceptions allows specification 
+	 of alternate availability AND capacity by date.</p>
+	<p>You can express any dimension of capacity for a resource through 
+	 the <span class="Bold">Resource Calendar Exceptions</span> selection 
+	 from the <span class="Bold">Edit</span> menu. It is similar to the 
+	 <span class="Bold">Calendar Exceptions</span> selection under the 
+	 <span class="Bold">Maintain</span> menu of Application Global Maintenance. 
+	 The difference is that entries here can apply to one or all schedules 
+	 and one or all resources. Changing the calendar exceptions that apply 
+	 to **All** Resources and **All** Schedules is, in fact, changing the 
+	 schedule exceptions from Calendar Exceptions from Application Global 
+	 Maintenance.</p>
+	<p>When VISUAL needs to know the capacity in a schedule for a given 
+	 date at a given resource, it first looks for a calendar exception 
+	 specifically referencing that Resource ID and that Schedule ID. If 
+	 it does not find such an exception, it looks for a calendar exception 
+	 specifically referencing **All** resources and that specific Schedule 
+	 ID.</p>
+	<p>If it does not find such an exception, it looks for a calendar exception 
+	 specifically referencing **All** schedules and that specific Resource 
+	 ID.</p>
+	<p>If it does not find such an exception, it looks for a calendar exception 
+	 specifically referencing **All** schedules and **All** resources.</p>
+	<p>If it does not find such an exception, VISUAL looks for a calendar 
+	 which specifically references that Schedule ID and that Resource ID.</p>
+	<p>If VISUAL does not find such a calendar, it looks for a calendar 
+	 that specifically references that Schedule ID and **All** Resources.</p>
+	<p>If it does not find such a calendar, VISUAL looks for a calendar 
+	 that specifically references that Resource ID and **All** Schedules.</p>
+	<p>If VISUAL does not find such a calendar, it looks for at the Global 
+	 Calendar.</p>
+	<h2>The order of precedence is:</h2>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Exception for Specific 
+		 Schedule, Specific Resource</p></li>
+		<li class="p-Numbered"><p class="Numbered">Exception for Specific 
+		 Schedule, **All** Resources</p></li>
+		<li class="p-Numbered"><p class="Numbered">Exception for **All** 
+		 Schedules, Specific Resource</p></li>
+		<li class="p-Numbered"><p class="Numbered">Exception for **All** 
+		 Schedules, **All** Resource</p></li>
+		<li class="p-Numbered"><p class="Numbered">Calendar for Specific 
+		 Schedule, Specific Resource</p></li>
+		<li class="p-Numbered"><p class="Numbered">Calendar for Specific 
+		 Schedule, **All** Resources</p></li>
+		<li class="p-Numbered"><p class="Numbered">Calendar for **All** 
+		 Schedules, Specific Resource</p></li>
+		<li class="p-Numbered"><p class="Numbered">Calendar for **All** 
+		 Schedules, **All** Resource</p></li>
+	</ol>
+	<h2>To set resource calendar exceptions:</h2>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Choose the resource 
+		 to set the exception for and select <span class="Bold">Resource 
+		 Calendar Exceptions</span> from the <span class="Bold">Edit</span> 
+		 menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Calendar Exception dialog box appears.</p>
+	<p class="Numbered-Indent">By default, **All** appears in the Schedule 
+	 ID field, indicating that all schedules are affected.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site that contains the schedule to which to apply exceptions. 
+		 If you select **All** the default calendar exceptions defined 
+		 in Application Global Maintenance are displayed. You cannot change 
+		 the default calendar exceptions in this dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use a single site, this field is not available.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the exception is 
+		 to affect only one schedule, pull down the Schedule ID menu and 
+		 select the appropriate Schedule ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">A blank line appears at the end of the current 
+	 exceptions.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Enter the start date 
+		 and end date for the exception. For example if the resource will 
+		 not be available on the 25th of December 2001, enter 12/25/2001 
+		 for the start and end date.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the 1st shift 
+		 start time and the shift duration for the exception.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If the resource is not to be operated during 
+	 the shift, enter zero (0) for the duration. You must enter a start 
+	 time for the exception, whether all shifts are zero or not. The Scheduler 
+	 uses the information you enter here to adjust the normal weekly calendar 
+	 setting for the date of the exception, thereby giving an accurate 
+	 estimation of resource availability.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Enter the duration (time) 
+		 and capacity (number of simultaneous operations) for each shift. 
+		 The capacity columns are disabled when editing for **All** resources.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button to save the changes.</p></li>
+	</ol>
+	<p class="Numbered-Indent">Your changes will take effect the next time 
+	 you run the <a href="VMGLBSCHWhat.htm">Concurrent Scheduler</a>.</p>
+	<ol start="10" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Close</span> 
+		 button to return to the Shop Resource Maintenance window.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shop_Resource_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,144 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using Price Testing</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1 class="Numbered-Indent">Using Price Testing</h1>
+	</div>
+	<p class="First">Price Testing within VISUAL Price Book allows you 
+	 to test and/or debug any formulas before creating an order in the 
+	 Order Management Window in Infor VISUAL. This allows you to verify 
+	 the prices of specific parts and quantities.</p>
+	<table style="margin-left: 13.50pt;" cellspacing="0" width="366">
+		<tr style="vertical-align: top;">
+			<td width="60" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp1"><p>Any formula you want 
+			 to test on the Price Testing window must have associated matrices 
+			 set up throughout VISUAL Price Book. Calculations cannot be 
+			 made without a formula.</p></td>
+		</tr>
+	</table>
+	<p class="First">To verify VISUAL Price Book Prices through Price Testing:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With VISUAL Price Book 
+		 open, double click the <span class="Bold">Price Testing</span> 
+		 icon in the navigation pane. The Price Testing window appears.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter or select the 
+		 identification code for the Customer for whom you want to verify 
+		 prices and formulas. You can enter the Customer ID manually or 
+		 select it from the Customer table by clicking the Browse button. 
+		 VISUAL populates any additional fields associated with the Customer 
+		 ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">You can override the 
+		 default Ship-to, Currency, Market, Customer Type, and Sales Rep 
+		 IDs associated with the Customer ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter or select the 
+		 date on which you place the order. By default, VISUAL uses the 
+		 current system date. You can override the date by manually typing 
+		 in a new date in Windows system format, or clicking the <span 
+		 class="Bold">Calendar</span> button and selecting the date from 
+		 the calendar that appears.</p></li>
+	</ol>
+	<h2>Adding Information to the Price Test Table</h2>
+	<p class="First">After you select the Customer ID and set the additional 
+	 information on the header portion of the Price Test window, you can 
+	 populate the information on the table. &#160;If you test a price formula 
+	 for customers/prices that do not have formulas and price matrices 
+	 assigned to them, VISUAL Price Book returns the default Unit Price 
+	 from VISUAL Manufacturing. &#160;See your VISUAL Manufacturing Part 
+	 Maintenance documentation for additional information.</p>
+	<p>To test VISUAL Price Book Prices:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">On the VISUAL Price 
+		 Book main toolbar, click the <span class="Bold">Insert Row</span> 
+		 button. &#160;VISUAL activates the next row on the table.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter or select a Part 
+		 ID for which you want to test the Price calculation formula. You 
+		 can enter the Part ID manually or select it from the table by 
+		 double-clicking the column header.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Press Tab. &#160;VISUAL 
+		 inserts the Product Code and Commodity Code values, if applicable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click in the Qty column 
+		 and enter the Quantity for which you want to test the formula 
+		 calculation.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Press the TAB key. VISUAL 
+		 calculates the unit price, based on the formula entered in the 
+		 Formulas function of VISUAL Price Book and enters it in the Unit 
+		 Price column. If there are additional variables assigned within 
+		 the formula for the current Part ID, VISUAL populates any associated 
+		 column, if applicable. The additional fields include:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Trade Discount</span> 
+	 - This is a percentage discount based on values entered in the Discount 
+	 matrix and the percentage off the unit price. VISUAL makes this calculation 
+	 based on a formula that calls the appropriate Discount Matrix.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Group ID</span> 
+	 - If the current part is a component of a Part Group, as defined in 
+	 Part Group Maintenance, VISUAL inserts the identification code for 
+	 the Part Group.</p>
+	<p class="Numbered-Indent"><span class="Bold">Price Group ID</span> 
+	 – If the current part is assigned to a price group, the ID is in the 
+	 Price Group ID column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Amount</span> - VISUAL 
+	 calculates the total cost for the Quantity and Unit Price, applying 
+	 any discounts specified in the Formula.</p>
+	<p class="Numbered-Indent"><span class="Bold">Commission</span> - VISUAL 
+	 populates the Commission column through calculations of a formula 
+	 that calls the appropriate Commissions Matrix.</p>
+	<p class="Numbered-Indent"><span class="Bold">Price Formula</span> 
+	 - VISUAL inserts the identification code for the Price Formula associated 
+	 with the current Part. &#160;This allows you to easily go to the Formulas 
+	 window and make any changes to the specified formula. &#160;</p>
+	<p class="Numbered-Indent"><span class="Bold">Price Notes</span> - 
+	 If there are any notes associated to the Price, as specified in the 
+	 Formulas function, VISUAL populates the Price Notes column with the 
+	 appropriate information.</p>
+	<p class="Numbered-Indent"><span class="Bold">Discount Formula ID</span> 
+	 - VISUAL inserts the identification code for the Discount Formula 
+	 associated with the current part.</p>
+	<p class="Numbered-Indent"><span class="Bold">Discount Notes</span> 
+	 - If there are any notes associated with the Discount, as specified 
+	 in the Formulas function, VISUAL inserts the information in the Discount 
+	 Notes column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Commission Formula ID</span> 
+	 - VISUAL inserts the identification code for the Commission Formula 
+	 associated with the current part. &#160;</p>
+	<p class="Numbered-Indent"><span class="Bold">Commission Notes</span> 
+	 - If there are any notes associated with the Commission, as specified 
+	 in the Formulas function, VISUAL populates the Commission Notes column 
+	 with the information.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Tip</span> - If 
+	 you specified any Part tips in the Formulas function, VISUAL inserts 
+	 the Tip in the Part Tip column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Price Tip</span> - If 
+	 you specified any Price tips in the Formulas function, VISUAL inserts 
+	 the Tip in the Price Tip column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Discount Tip</span> - 
+	 If you specified any Discount tips in the Formulas function, VISUAL 
+	 inserts the Tip in the Discount Tip column.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Price_Book.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

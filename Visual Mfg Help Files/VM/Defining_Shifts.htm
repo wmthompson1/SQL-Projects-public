@@ -1,0 +1,139 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Defining Shifts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Defining Shifts</h1>
+	</div>
+	<p class="First">Before you can assign shifts to employees, you must 
+	 first define the Shift IDs. Shift IDs define the break, lunch, and 
+	 grace periods for a given shift.</p>
+	<p>You can break down Shift schedules by activities that occur during 
+	 the shift. These activities include allowed clock-in and clock-out 
+	 grace periods, between-job lag times, and break times.</p>
+	<p>To define shifts:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit,</span> 
+		 <span class="Bold">Shift Definition</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Shift ID</span> - Specify 
+	 an identifier for this shift.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> - 
+	 Specify a description for the shift.</p>
+	<ol start="3" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">In the Allowed Clock 
+		 In/Out Grace Periods section, specify the grace periods to use 
+		 with the shift. Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Minutes before start 
+	 of shift -</span> Specify the grace period before the start of the 
+	 shift. If employees clock in during the grace period, their clock 
+	 in time is adjusted to the start time of the shift.</p>
+	<p class="Numbered-Indent">If the start of the shift is 7:00 AM and 
+	 the grace period is 5 minutes, employees clocking in between 6:55 
+	 and 7:00 will have a clock in time of 7:00. If they clock in at 6:54 
+	 or earlier, the actual clock in time is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minutes after start of 
+	 shift -</span> Specify the grace period after the start of the shift. 
+	 If employees clock in during the grace period, their clock in time 
+	 is adjusted to the start time of the shift.</p>
+	<p class="Numbered-Indent">If the start of the shift is 7:00 AM and 
+	 the grace period is 5 minutes, employees clocking in between 7:00 
+	 and 7:05 will have a clock in time of 7:00. If they clock in at 7:06 
+	 or later, the actual clock in time is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minutes before end of 
+	 shift</span> - Specify the grace period before the end of the shift. 
+	 If employees clock out during the grace period, their clock out time 
+	 is adjusted to the end time of the shift.</p>
+	<p class="Numbered-Indent">If the end of the shift is 4:00 p.m. and 
+	 the grace period is 5 minutes, employees clocking out between 3:55 
+	 and 4:00 will have a clock out time of 4:00. If they clock out at 
+	 4:54 or earlier, then the actual clock out time is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minutes after end of 
+	 shift -</span> Specify the grace period after the end of the shift. 
+	 If employees clock out during the grace period, their clock out time 
+	 is adjusted to the end time of the shift.</p>
+	<p class="Numbered-Indent">If the end of the shift is 4:00 p.m. and 
+	 the grace period is 5 minutes, employees clocking out between 4:00 
+	 and 4:05 will have a clock out time of 4:00. If they clock out at 
+	 4:06 or later, then the actual clock out time is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Between Job Lag Time 
+	 -</span> Specify the amount of time allowed between jobs. If employees 
+	 exceed the amount of lag time between jobs, the time is charged to 
+	 an indirect ID.</p>
+	<p class="Numbered-Indent">For example, presume you specify 5 in this 
+	 field. If an employee clocks out of the first job at 2:00, then clocks 
+	 into the next job at 2:04, then no lag time is charged to an indirect 
+	 ID. The four minutes are posted to the second job. If the employee 
+	 clocks in to the next job at 2:06, then six minutes are charged to 
+	 an indirect ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">Minutes Before/After 
+	 Breaks -</span> Specify the grace period before and after breaks. 
+	 If employees clock in during the grace period before a break, their 
+	 time is adjusted to the start of the break. If employees clock out 
+	 during the grace period after a break, their time is adjusted to the 
+	 end of the break.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">In the Break/Meal Indirect 
+		 ID field, specify the indirect labor ID to use when a break or 
+		 lunch period is deducted from time posted to the job.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To define the duration 
+		 of the shift, break times, and meal times, click <span class="Bold">Edit 
+		 Shift Codes...</span>. The ID of the shift is inserted in the 
+		 Shift ID field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Day</span> – Click the 
+	 arrow and select the day of the week for which you are defining the 
+	 shift times. If every day has the same shift schedule, select Every 
+	 Day.</p>
+	<p class="Numbered-Indent">If each day has a different schedule, you 
+	 must define the shift for each day. You can also use Mon thru Fri 
+	 to define the shifts for Monday through Friday, and Sat, Sun to define 
+	 the code for the weekend.</p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span> – 
+	 Specify a description of the shift schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shift</span> – Use the 
+	 Start and End fields to specify the duration of the shift.</p>
+	<p class="Numbered-Indent"><span class="Bold">Meal and Breaks fields</span> 
+	 – Use the Start and End fields to specify when the break starts and 
+	 when the break ends. If employees are paid during the break, select 
+	 the <span class="Bold">Paid</span> check box. If employees are not 
+	 paid during the break, clear the <span class="Bold">Paid</span> check 
+	 box. If employees must manually clock in and out for the break, select 
+	 the <span class="Bold">Manual Clock In/Out</span> check box. If employees 
+	 are clocked in and out of breaks automatically, clear the <span class="Bold">Manual 
+	 Clock In/Out</span> check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Paid breaks Charged to 
+	 Indirect</span> – To charge paid breaks to an indirect ID, select 
+	 the Paid Breaks Charged to Indirect check box. Specify the indirect 
+	 ID in the Shift Definition dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Periods Per Hour</span> 
+	 – The system inserts 60. You cannot change this value. The system 
+	 rounds clock in and clock out times to the nearest minute.</p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Employee_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

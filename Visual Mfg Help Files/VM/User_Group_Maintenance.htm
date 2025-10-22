@@ -1,0 +1,122 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>User Group Maintenance</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=3"></a><a name="642b3b9347ca42c9b00b820c00c373fa=2"></a><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating Approval Groups</h1>
+	</div>
+	<p>You use approval groups in Purchase Requisition Entry, ECN Maintenance, 
+	 and Workflow. For Purchase Requisition Entry, you can specify up to 
+	 four approval groups to evaluate and approve requisitions. For ECN 
+	 Maintenance, you can set up authorization, implementation, approval, 
+	 and distribution teams. For Workflows, you can set up groups that 
+	 must approve steps in a workflow.</p>
+	<p>If you have more than one site, approval groups are defined by site. 
+	 When you select a site from the Site ID drop-down menu, the User ID 
+	 browse table is filtered by the site you select.</p>
+	<p>To create a group:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Security</span>, 
+		 <span class="Bold">Profile/User/Group Security</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Security by section, 
+		 select <span class="Bold">Group</span>. When you select the Group 
+		 option, the system displays the Group tab and deactivates the 
+		 other tabs.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Group ID field, 
+		 specify a user ID. In the field to the right of the Profile ID 
+		 field, specify a description of the group.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Language 
+		 ID</span> arrow and select the language that the group uses.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site to use. If you are licensed to use a 
+		 single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If the group is a requisition 
+		 approval group, select the appropriate <span class="Bold">Approval</span> 
+		 check box. You can set up the names for the requisition approval 
+		 groups in Application Global Maintenance. You can override the 
+		 default and select a different team in Purchase Requisition Entry. 
+		 You can select more than one Approval check box for the group.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you would like to 
+		 use the group as a default ECN team, select the appropriate check 
+		 box. If you select one of these boxes, then the system inserts 
+		 the team in ECN Maintenance. You can override the default and 
+		 select a different team in ECN Maintenance. You can select more 
+		 than one check box for the group.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you would like to 
+		 use the group as the default Workflow approval team, select the 
+		 <span class="Bold">WorkFlow Default Group</span> check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the <span class="Bold">Group 
+		 Signoff</span> check box if any one member of the group can sign 
+		 off for the entire group. When you generate tasks for the group, 
+		 each member of the group receives the task. When one member completes 
+		 the task, the system marks the task for all group members complete.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you select the Group Signoff check box, 
+	 only one member of the group has to complete the task assigned to 
+	 the group. &#160;For example, say ECN123 is assigned to the ECN Implementation 
+	 Team, which is made up of User1, User2, User3, and User4. When you 
+	 select the Group Signoff checkbox, only one of the users in the group 
+	 needs to complete the task related to ECN123. When one user in the 
+	 group marks the task Complete, the system marks the task complete 
+	 for the other users.</p>
+	<p class="Numbered-Indent">Clear the check box if each member of the 
+	 group has to complete assigned tasks, or if you want to enable the 
+	 Sigoff function for only certain group members. When you clear the 
+	 check box, the system activates the User Signoff check box.</p>
+	<ol start="10" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Add members to the group. 
+		 Click the <span class="Bold">Insert Row</span> button, then double-click 
+		 the User ID browse button. Select a user from the browse table, 
+		 then click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you are licensed to use multiple sites, 
+	 only users assigned to the site in the Site ID field are shown in 
+	 the browse table.</p>
+	<ol start="11" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Specify this information 
+		 for the users:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Leader</span> – If the 
+	 user is a the group’s leader, select the Leader check box. Each group 
+	 can have only one leader. The leader can view the team members’ tasks 
+	 in Tasks Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">User Signoff</span> – 
+	 If you have cleared the Group Signoff check box, the system activates 
+	 the User Signoff check box. When you select the User Signoff check 
+	 box for more than one user, one of the selected users can complete 
+	 the assigned task on behalf of the other selected users. For example, 
+	 say ECN123 is assigned to the ECN Implementation Team, which is made 
+	 up of User1, User2, User3, and User4. You have selected User Signoff 
+	 for User 1, User2, and User3. If User2 completes the task, the system 
+	 marks User1’s and User3’s task complete. User4’s task, however, remains 
+	 open until User4 marks the task complete. The group does not complete 
+	 the task until User4 and one of User1, User2, and User3 marks the 
+	 task as complete.</p>
+	<ol start="12" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User-defined_Help_Files_-_Security.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

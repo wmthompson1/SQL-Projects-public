@@ -1,0 +1,82 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Analyzing Planned Load Information</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Analyzing Planned Load Information</h1>
+	</div>
+	<p>Because the object of using Drum-Buffer-Rope is to create a schedule 
+	 based on your capacity-constrained resources, it is important that 
+	 you declare as CCRs ONLY those resources that are true constraints.</p>
+	<p>It is up to your management team to declare the resources that should 
+	 be treated as CCRs. In order to help your management team arrive at 
+	 that decision, DBR has a utility that shows planned load for each 
+	 resource.</p>
+	<p>You can use the information in the Planned Load dialog box to identify 
+	 the CCR. A resource that has the most total hours of planned load 
+	 per unit in the future is a CCR candidate. A resource that has the 
+	 highest percentage of its load ready to be worked on right now is 
+	 another CCR candidate, as it reflects the fact that a lot of work 
+	 is currently “stuck” in front of that resource.</p>
+	<p>The Planned Load information provided can show planned load as a 
+	 single total per resource over the entire demand horizon or can be 
+	 broken down into subtotals based on a time period you choose. When 
+	 you break the demand horizon down into subtotals, you can pinpoint 
+	 when a resource may become a CCR in the future.</p>
+	<p>The Resource Planned Load table contains the following ten columns:</p>
+	<p><span class="Bold">Resource ID</span> – The Resource ID column contains 
+	 the names of your resources.</p>
+	<p><span class="Bold">Horizon</span>&#160;– The Horizon column contains 
+	 the number of days horizon for the planned load you generated.</p>
+	<p><span class="Bold">Load per Unit</span>&#160;– The Load per Unit 
+	 column contains the planned load in hours per unit figures that the 
+	 program calculates based on the current state of your work orders 
+	 at your resources.</p>
+	<p><span class="Bold">Load with Material per Unit</span>&#160;– The 
+	 Load Available per Unit column contains the amount of the load in 
+	 hours that has all of its material available on which you can work. 
+	 For example, the full quantity needed to be done at that operation 
+	 is available for you to work on now.</p>
+	<p><span class="Bold">% Load with Material per Unit</span>&#160;– The 
+	 % Load Available per Unit column contains the amount of the load (in 
+	 percentage) per unit that is available for you to schedule.</p>
+	<p><span class="Bold"># of Resource Units</span>&#160;– The quantity 
+	 of each of your resource units appears in the # of Resource Units 
+	 column.</p>
+	<p><span class="Bold">Planned Load</span> – The Planned Load column 
+	 contains the hours of planned load for the resource.</p>
+	<p><span class="Bold">Planned Load with Material</span>&#160;– The 
+	 Planned Load Available column contains the total number of hour with 
+	 material available.</p>
+	<p><span class="Bold">Hour of Capacity</span> – The total number of 
+	 hours of capacity available for this resource.</p>
+	<p><span class="Bold">% Load per Capacity</span> – What percent of 
+	 resource capacity consumed by the load.</p>
+	<p><span class="Bold">% Load with Material per Capacity</span>&#160;– 
+	 The percentage of the load available because the material has been 
+	 reported complete at the previous operation.</p>
+	<p><span class="Bold">Could Finish</span>&#160;– The date on which 
+	 the specified resource could finish the entire planned load appears 
+	 in the Could Finish column. This calculation assumes that all necessary 
+	 materials are available.</p>
+	<p><span class="Bold">Available Could Finish</span>&#160;– The Available 
+	 Could Finish date is the date on which the planned load could be scheduled 
+	 to finish on the specified resource. For the available could finish 
+	 date, the only constraints the scheduler takes into account are those 
+	 of the shop calendar.</p>
+</div>
+</body>
+</html>

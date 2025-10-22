@@ -1,0 +1,85 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Finished Goods Journals</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Finished Goods Journals</h1>
+	</div>
+	<p class="First">The Finish Goods Journal contains a listing of the 
+	 summary transactions created by the Costing Utilities as a result 
+	 of processing inventory transactions of work orders. These are receipts 
+	 (or returns) of manufactured parts from the floor to finished goods 
+	 inventory. This journal is work order based and not transactional.</p>
+	<h2>Finished Goods Journals in Actual WIP Costing</h2>
+	<p>If you selected Actual as your WIP costing method, the system values 
+	 that transaction at the total accumulated cost on the work order at 
+	 that time when a partial quantity is moved from WIP to finished goods. 
+	 If another partial quantity moves to stock, the system values that 
+	 transaction with the costs accumulated between the previous transaction 
+	 and this one. This continues until the work order is completed and 
+	 closed. When the work order is closed, the Costing Utilities evaluate 
+	 the total cost of the work order versus completed transactions and 
+	 creates adjustment distributions for any differences.</p>
+	<h2>Finished Goods Journals in Projected WIP Costing</h2>
+	<p>If you selected Projected as your WIP costing method, the system 
+	 values that transaction at the estimated unit cost based on the work 
+	 order at that time when a partial quantity is moved from WIP to finished 
+	 goods.</p>
+	<h2>Costing Considerations for Finished Goods Returns</h2>
+	<p>If you use FIFO by Part Location as the FIFO method, review the 
+	 following information to ensure that work order receipts and returns 
+	 are processed as anticipated.</p>
+	<p>FIFO locations are not maintained for finished goods returns. To 
+	 make sure that FIFO layers are matched for finished goods return transactions, 
+	 it is highly recommended that you use one warehouse location per work 
+	 order for work order receipts and potential finished goods returns. 
+	 You do not need to use one warehouse location for all of your work 
+	 orders. You should just make sure that for any given work order, you 
+	 use the same location for work order receipts as you do for &#160;finished 
+	 goods returns.</p>
+	<p>If business needs dictate that you need to use a different warehouse 
+	 location for receipts and returns, you should review and physically 
+	 adjust locations after you create &#160;finished goods returns. If 
+	 you receive a quantity from a work order to one location, transfer 
+	 the quantity to a second location, then return the quantity to the 
+	 work order, the relationship between the adjust out &#160;FIFO layers 
+	 will be lost. The distribution for the transfer to the second location 
+	 and the original receipt will be separated. The receipt return is 
+	 directly distributed to the original receipt.</p>
+	<p>If you do need to use different warehouse locations for work order 
+	 receipts and returns, you can use the following reports to analyze 
+	 the transactions:</p>
+	<p><span class="Bold">Inventory Transaction Report</span> – Use this 
+	 report to view when work order returns have been made. Sort the report 
+	 by Work Order and Type of Receipt to identify receipts. Negative amounts 
+	 indicate returns.</p>
+	<p>You can also use this report, sorted by Warehouse/Location/Part, 
+	 to analyze part location quantity. The layer costs are expressed as 
+	 current value, not as the value as of a particular point in time.</p>
+	<p><span class="Bold">Costing Tools</span> – You can use the Cost Distribution 
+	 Analysis tool and FIFO/Average Costing Analysis tool to view distributions.</p>
+	<p><span class="Bold">Inventory Balance Report</span> – Use this report 
+	 to view costed values of transactions as of a period end. The total 
+	 of this report will reconcile, but if you use separate locations for 
+	 work order receipts and returns, the amounts reported by location 
+	 will not reconcile.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_DBR_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

@@ -1,0 +1,43 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Sample Macro: Set Order ID Equal to Today's Date</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Sample Macro: Set Order ID Equal to Today's Date</h1>
+	</div>
+	<p>In this sample macro, an order ID is created by combining the year, 
+	 month, day, hour, and minute when you create a new order. This sample 
+	 uses the OnNew macro type. &#160;</p>
+	<p>To create this macro:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In Customer Order Entry 
+		 or Purchase Order Entry, select Macros, Edit.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Macro Name field, 
+		 specify <span class="Bold">OnNew</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the following 
+		 code:</p></li>
+	</ol>
+	<p class="Code">Dim n</p>
+	<p class="Code">n = Now</p>
+	<p class="Code">ORDER_ID = Year(n) &amp; Month(n) &amp; Day(n) &amp; 
+	 Hour(n) &amp; Minute(n)</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Save the code and close 
+		 the dialog.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Create a new order. 
+		 The ID is constructed for you.</p></li>
+	</ol>
+</div>
+</body>
+</html>

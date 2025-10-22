@@ -1,0 +1,148 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Creating Period-based Analytics</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Creating Period-based Analytics</h1>
+	</div>
+	<p>Use period-based analytics to analyze how values in your data source 
+	 changed over time. </p>
+	<p>To create a period-based analytic, your data source must contain 
+	 columns that can be used as time periods. You can use the columns 
+	 in the VR_CAL_DATE table, or you can use other columns that show a 
+	 date, such as an INVOICE_DATE column. </p>
+	<p>The VR_CAL_DATE table contains columns that translate dates into 
+	 days, weeks, months, quarters, and years. You can join the VR_CAL_DATE 
+	 table to your data source. When you create the analytic, you can map 
+	 the columns in the VR_CAL_DATE table to the periods shown on the Period 
+	 tab.</p>
+	<p>To use a date column from other tables in your data source, you 
+	 must apply a SQL statement to the column to extract the period information. 
+	 For example, if you want to use the INVOICE_DATE column as the source 
+	 for the period month bucket, you would write a SQL statement that 
+	 extracts the month and year from the INVOICE_DATE. </p>
+	<p>When you create the analytic, the column that you select for the 
+	 Category Column must match one of the columns that you specified on 
+	 the Period tab. </p>
+	<p>You can measure these values:</p>
+	<p class="Bullet&quot;"><span class="Bold">Count</span>. You can count 
+	 the number of times each time period occurs in your data source. For 
+	 example, if you specified CAL_YEAR in the Category Column field, then 
+	 an analytic that shows how many times each year occurs in your data 
+	 source is displayed. </p>
+	<p class="Bullet&quot;"><span class="Bold">Value Column</span>. You 
+	 can select a data source column that has the Number data type. To 
+	 specify the column to analyze, use the Value Column field. For example, 
+	 if you select AMOUNT_ORDERED in the Value Column field and CAL_YEAR 
+	 in the Category Column field, an analytic that shows the total amount 
+	 ordered for each year in your data source is displayed. </p>
+	<p>To add a sub-category to the analytic, use the Series Column field. 
+	 For example, you can specify PART_ID in the Series Column field to 
+	 view the total amount ordered of each part in each year. You can add 
+	 sub-categories to count and value column analytics. </p>
+	<p>To create a period-based analytic:</p>
+	<ol start="1" dir="ltr">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Dashboard</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Edit Analytic</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Configuration ID</span>&#160;– 
+	 Specify a name for the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Description</span>&#160;– 
+	 Specify a description of the analytic. </p>
+	<p class="Numbered-Indent"><span class="Bold">Data Source ID</span> 
+	 – Specify the data source to use as the basis of this analytic.</p>
+	<p class="Numbered-Indent"><span class="Bold">Analytic Type </span>– 
+	 Specify <span class="Bold">Period Based</span>. </p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Specify the type of 
+		 chart. For period-based analytics, you can use bar charts, column 
+		 charts, or line charts. You cannot use pie or doughnut charts.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Period</span> 
+		 tab.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Period Calendar 
+		 Type field, select Reporting if you are using the VR_CAL_DATE 
+		 table as the source of the period buckets. Select Derived if you 
+		 are using other pieces of data in your data source as the source 
+		 of the period buckets.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Period Column 
+		 fields, specify the column that corresponds to the period type. 
+		 For example, if you are using the VR_CAL_DATE table, you would 
+		 select CAL_MONTH in the Period Month Column.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the data to 
+		 measure: </p></li>
+	</ol>
+	<p class="Numbered-Indent">To count the instances of periods in a database 
+	 column, specify this information:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Value 
+		 Aggregation</span>&#160;– Specify <span class="Bold">Count</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Category 
+		 Column</span>&#160;– Click the down arrow and select the period 
+		 to count. You can select any of the columns that you defined on 
+		 the Period tab. For example, if you selected CAL_MONTH in this 
+		 field, the analytic would show the number of times each Month/Year 
+		 combination occurs in your data source. </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Series 
+		 Column</span>&#160;– Optionally, specify a sub-category. For example, 
+		 if you selected CUSTOMER_ID in this field, the analytic shows 
+		 the number of records in your data set contain both a particular 
+		 Month/Year combination and a particular customer ID. Depending 
+		 on the chart type you select, your chart would contain a bucket 
+		 for each month. In each month bucket, a bar or column is displayed 
+		 for each customer ID. </p></li>
+	</ul>
+	<p class="Numbered-Indent">To use a value column, specify this information:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Value 
+		 Aggregation</span>&#160;– The recommended value is Sum. If you 
+		 specify None, the performance of the metric will be slower than 
+		 if you specify Sum. </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Value 
+		 Column</span>&#160;– Specify the column to use to provide values 
+		 to the chart. Only columns that have a data type of Number are 
+		 displayed in the list. All values in the column that you select 
+		 are added. For example, if you select AMOUNT_ORDERED in the Value 
+		 Column field, the total of all values in the AMOUNT_ORDERED column 
+		 is displayed. </p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Category 
+		 Column</span>&#160;– Use this field to break the grand total of 
+		 the value column into subtotals by period. For example, if you 
+		 select AMOUNT_ORDERED in the Value Column field and CAL_WEEK in 
+		 the Category Column field, a chart that shows the total amount 
+		 that each customer ordered each week is displayed. &#160;</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent"><span class="Bold">Series 
+		 Column </span>– Use this field to break the category subtotals 
+		 into smaller subtotals. For example, if you select AMOUNT_ORDERED 
+		 in the Value Column field, CAL_WEEK in the Category Column field, 
+		 and PART_ID in the Series Column field, a chart that shows one 
+		 bucket for each week is created. In each bucket, a bar or column 
+		 for each part ID is created. Each bar shows the total amount that 
+		 each customer ordered of each part. </p></li>
+	</ul>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>. 
+		 </p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="Custom_Metrics.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Custom Metrics</p>
+<p class="SeeAlsoNext"><a href="Creating_Data_Sources.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Building Analytics</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

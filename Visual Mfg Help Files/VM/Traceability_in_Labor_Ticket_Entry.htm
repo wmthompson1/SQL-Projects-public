@@ -1,0 +1,116 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Traceability in Labor Ticket Entry</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Traceability in Labor Ticket Entry</h1>
+	</div>
+	<p class="First">Use Traceability in Labor Ticket Entry to record traceability 
+	 information associated with the reporting of completed parts for an 
+	 operation. This shifts the start of traceability to the point where 
+	 pieces are completed, rather than when they are received into finished 
+	 goods inventory.</p>
+	<p>Each Engineering Master for a traceable fabricated part has one 
+	 operation that is specially marked Begin Traceability At This Operation. 
+	 When completed pieces are reported for this operation, traceability 
+	 information is required. When this option is used, this is usually 
+	 the starting point of traceability, and preassigned lot numbers are 
+	 often used.</p>
+	<p>The following context triggers traceability in Labor Ticket Entry:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Reporting against a work 
+		 order for a fabricated part that is traceable.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Reporting labor for the 
+		 work order operation that is marked Begin Traceability At This 
+		 Operation.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Reporting Run labor (not 
+		 setup).</p></li>
+		<li class="p-Bullet"><p class="Bullet">Reporting a Quantity Completed.</p></li>
+	</ul>
+	<p>If all these criteria are true, then the <span class="Bold">Traceability</span> 
+	 button at the lower right of the Labor Ticket Entry window becomes 
+	 active. For manual Labor Ticket Entry, enter Traceability normally.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Traceability</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Traceability dialog box appears.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Create and/or Enter 
+		 Lot Numbers.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The trace record for each existing lot number 
+	 that has an unreported quantity appears. Unreported quantities have 
+	 yet to be reported through the process being described here. These 
+	 lot numbers are usually numbers that were preassigned using Part Trace 
+	 Maintenance.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Set the quantities.</p></li>
+	</ol>
+	<p class="Numbered-Indent">VISUAL automatically fills in the Quantity 
+	 fields of the existing lines, whether they are new lot numbers or 
+	 existing ones to distribute the reported quantity completed across 
+	 the available lot numbers.</p>
+	<p class="Numbered-Indent">If you are assigning numbers now, click 
+	 the <span class="Bold">Insert</span> button to insert a new line, 
+	 and enter the lot number or allow it to be auto-assigned. This depends 
+	 upon the setting in the trace profile for the part.</p>
+	<p class="Numbered-Indent">You can keep track of how much of the total 
+	 Unreported Quantity you have accounted for by watching the Numbered 
+	 Quantity field at the upper right.</p>
+	<p class="Numbered-Indent">This field is the total of all entries in 
+	 the Quantity column. You usually want this to equal Total Quantity.</p>
+	<p class="Numbered-Indent">Numbered Quantity can be greater than or 
+	 less than Total Quantity. When you click the <span class="Bold">Close</span> 
+	 button, VISUAL warns you and gives you the option of canceling or 
+	 accepting the override. If you choose to override, VISUAL automatically 
+	 adjusts Quantity Completed to the Numbered Quantity.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Enter Properties and 
+		 Comments.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When you create a new lot number, you must 
+	 enter all properties at that point; afterwards, you can only change 
+	 them using Part Trace Maintenance. If a property is marked as Required 
+	 in the traceability profile for the part, you cannot complete the 
+	 transaction until you enter a value for the property. Additionally, 
+	 you may enter any comments at this point.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Modify the Expiration 
+		 Date, if necessary.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If the part you are reporting has a finite 
+	 shelf life, the expiration date is set when the lot number is created 
+	 by adding the shelf life to the creation date of the trace record. 
+	 If necessary, you can override this date at any point.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Close</span> 
+		 button to exit the Traceability dialog box.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If Numbered Quantity doesn’t equal Total 
+	 Quantity, VISUAL gives you the option of aborting the close or overriding 
+	 the quantity. If you override, VISUAL resets the Quantity Complete 
+	 for the line to the current Numbered Quantity.</p>
+	<p class="Numbered-Indent">If you are using Labor Ticket Entry, click 
+	 the <span class="Bold">Save</span> button to complete the transaction.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Part_Trace_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

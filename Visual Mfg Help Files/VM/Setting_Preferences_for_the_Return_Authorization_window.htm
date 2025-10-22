@@ -1,0 +1,107 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Preferences for the Return Authorization window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Preferences for the Return Authorization window</h1>
+	</div>
+	<p>You can set some of the defaults and the processing behavior of 
+	 the Return Authorization window. See <a href="VMPRFMNTfrmPreferenceMaintenance.htm">Using 
+	 Preference Maintenance</a>.</p>
+	<p>This table lists the entries in the RMA section of Preferences Maintenance 
+	 and possible values:</p>
+	<table cellspacing="0" width="90%">
+		<col style="width: 33.333%;">
+		<col style="width: 33.333%;">
+		<col style="width: 33.333%;">
+		<tr>
+			<td><p><span class="Bold">Entry</span></p></td>
+			<td><p><span class="Bold">Value</span></p></td>
+			<td><p><span class="Bold">Notes</span></p></td>
+		</tr>
+		<tr>
+			<td><p>DefaultType</p></td>
+			<td><p>“C” = Credit RMA Type</p>
+			<p>“F” = Repair RMA Type</p>
+			<p>“R” = Replace RMA Type</p>
+			<p>“E” = Evaluation RMA Type</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>DefaultReturnReasonCode</p></td>
+			<td><p>A valid code from the RMA Reason table in Application 
+			 Global Maintenance, which can be a string of up to 15 characters.</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>ClearNewOrderPORef</p></td>
+			<td><p>“Y” = Clear the purchase order reference when creating 
+			 a new order.</p>
+			<p>“N” = Keep the purchase order reference when creating a 
+			 new order.</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>NewOrderStatus</p></td>
+			<td><p>“C” = Closed</p>
+			<p>“F” = Firmed</p>
+			<p>“H” = Hold</p>
+			<p>“R” = Released</p>
+			<p>“X” = Canceled</p></td>
+			<td><p>This entry is used when converting an evaluation RMA 
+			 to a repair RMA and you have opted to create a new customer 
+			 order to ship the repaired parts.</p>
+			<p>The status is used on the order header.</p></td>
+		</tr>
+		<tr>
+			<td><p>UseNewLineNumbers</p></td>
+			<td><p>“Y” = Uses new line numbers for RMA lines instead of 
+			 the order line numbers.</p>
+			<p>“N” = Uses the order lines numbers.</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>CreateEvaluationQuotes</p></td>
+			<td><p>“Y” = Creates quotes by default for evaluation RMAs.</p>
+			<p>“N” = No quote is created for an evaluation RMA.</p>
+			<p>“P” = Prompts you to create or not create a quote for an 
+			 evaluation RMA.</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>CreateEvaluationWorkorders</p></td>
+			<td><p>“Y” = Creates work orders by default for evaluation 
+			 RMAs.</p>
+			<p>“N” = Does not create a work order for an evaluation RMA.</p>
+			<p>“C” = Copies the evaluation RMA as a work order.</p>
+			<p>“R” = Reuses the evaluation RMA as a work order.</p>
+			<p>“P” = Prompts for the evaluation RMA to be used as a work 
+			 order.</p></td>
+			<td><p>&#160;</p></td>
+		</tr>
+		<tr>
+			<td><p>CreateRepairWorkorders</p></td>
+			<td><p>“Y” = Creates work orders by default for repair RMAs.</p>
+			<p>“N” = Does not create a work order for an repair RMA.</p>
+			<p>“P” = Prompts for the repair RMA to be used as a work order.</p></td>
+			<td><p>This entry is used when you change an evaluation RMA 
+			 to a repair RMA. This is where the C and R preferences should 
+			 be.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered">&#160;</p>
+</div>
+<p>&#160;</p>
+</body>
+</html>

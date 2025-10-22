@@ -1,0 +1,150 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Viewing Buffer Information</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Viewing Buffer Information</h1>
+	</div>
+	<p>To view buffer information:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Scheduling</span>, 
+		 <span class="Bold">DBR Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID button and select the 
+		 site to view. If you are licensed to use a single site, this field 
+		 is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">The table at the top 
+		 displays the free work order buffer and the resources for which 
+		 you have set up buffer information. To view your active CCRs only, 
+		 select the Show active CCRs only check box. To view active and 
+		 inactive CCRs, clear the check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify the information 
+		 to view in the table at the bottom. Specify these settings:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Show Buffers For</span>&#160;– 
+	 Specify the documents and parts to display in the table. Select one 
+	 or more of these check boxes: Work Orders, Eng. Masters, Stocked Parts, 
+	 and Purchase orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Show Time Buffers of 
+	 Type</span>&#160;– Specify the buffers to display in the table. Select 
+	 one or more of these check boxes: Shipping, CCR, Assembly, Rods, Replenishment, 
+	 User Def.</p>
+	<ol start="5" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Refresh</span>. 
+		 The buffers you selected are displayed in the table. For each 
+		 buffer, this information is displayed:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Work Order ID</span>&#160;– 
+	 The ID of the document or part is displayed. The types of documents 
+	 displayed are work order, engineering masters, and purchase orders. 
+	 For engineering masters, the letter M is displayed before the engineering 
+	 master ID. For purchase orders, the letter P is displayed before the 
+	 purchase order ID. A part ID is displayed if the line is for a stocked 
+	 part buffer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Seq No</span>&#160;– 
+	 For work orders and engineering masters, the sequence number of the 
+	 operation is displayed. For purchase orders, the line number is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Piece No</span>&#160;– 
+	 For work orders and engineering masters, the piece number of the material 
+	 is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">CCR ID</span>&#160;– 
+	 If the buffer shown in the line is related to the CCR, the ID of the 
+	 CCR is displayed. Otherwise, the category of the buffer shown in the 
+	 line is displayed. These buffer categories are used:</p>
+	<p class="Numbered-Indent"><span class="Bold">PURC_ORDER</span> – This 
+	 is displayed if the line shows the leadtime buffer for a purchase 
+	 order.</p>
+	<p class="Numbered-Indent"><span class="Bold">STOCKED_PART</span> – 
+	 This is displayed if the line shows the replenishment level for a 
+	 stocked part.</p>
+	<p class="Numbered-Indent"><span class="Bold">USER_DEFINED</span> – 
+	 This is displayed if the line shows a user-defined buffer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Free W/O</span> – This 
+	 is displayed if the line shows the free work order shipping buffer.</p>
+	<p class="Numbered-Indent"><span class="Bold">Type</span> – The type 
+	 of buffer shown in the line is displayed. These types are used:</p>
+	<p class="DoubleIndent"><span class="Bold">Shipping</span> – This is 
+	 displayed if the line shows the shipping buffer for the CCR or Free 
+	 W/O.</p>
+	<p class="DoubleIndent"><span class="Bold">CCR</span>&#160;– This is 
+	 displayed if the line shows the CCR buffer.</p>
+	<p class="DoubleIndent"><span class="Bold">Assembly</span> – This is 
+	 displayed if the line shows the assembly buffer.</p>
+	<p class="DoubleIndent"><span class="Bold">Rod</span> – This is displayed 
+	 if the line shows the rod buffer.</p>
+	<p class="DoubleIndent"><span class="Bold">Replenish</span> – This 
+	 is displayed if the line shows a replenishment work order.</p>
+	<p class="DoubleIndent"><span class="Bold">Assy+Ship</span>&#160;– 
+	 This is displayed if the line shows an assembly buffer added to the 
+	 shipment buffer.</p>
+	<p class="DoubleIndent"><span class="Bold">Stocked Part</span> – This 
+	 is displayed if the line shows the replenishment buffer for a stocked 
+	 part.</p>
+	<p class="DoubleIndent"><span class="Bold">Repl. P/O</span>&#160;– 
+	 This is displayed if the line shows a purchase order placed to replenish 
+	 a stocked part.</p>
+	<p class="DoubleIndent"><span class="Bold">P/O</span> – This is displayed 
+	 if the line shows a purchase order.</p>
+	<p class="Numbered-Indent"><span class="Bold">State</span>&#160;– The 
+	 state of the buffer is displayed. A buffer can be either active or 
+	 closed. If the buffers displayed are for an engineering master, then 
+	 Engineering Master is inserted in this column.</p>
+	<p class="Numbered-Indent"><span class="Bold">Factor</span> – See Adjusting 
+	 Buffer Sizes.</p>
+	<p class="Numbered-Indent"><span class="Bold">Service Time</span>&#160;– 
+	 If an outside service precedes this operation, the amount of time 
+	 required for the service is displayed. The service time is calculated 
+	 by adding the service buffer specified for the resource in Shop Resource 
+	 Maintenance to the amount of time for the set up and run specified 
+	 for the service.</p>
+	<p class="Numbered-Indent"><span class="Bold">Size</span>&#160;– The 
+	 size of the buffer is displayed. For time buffers, the amount of buffer 
+	 time in hours is displayed. For the replenishment buffer, the replenishment 
+	 level for the part as specified in Part Maintenance is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">W/O DBR Type</span>&#160;– 
+	 For work orders, the type of work order is displayed. These types 
+	 are used:</p>
+	<p class="DoubleIndent"><span class="Bold">S</span> – The work order 
+	 is a made-to-stock work order.</p>
+	<p class="DoubleIndent"><span class="Bold">O</span> – The work order 
+	 is a made-to-order work order.</p>
+	<p class="DoubleIndent"><span class="Bold">R</span> – The work order 
+	 is a replenishment work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">W/O DBR Priority</span>&#160;– 
+	 For work order, the priority of the work order is displayed. These 
+	 types are used:</p>
+	<p class="DoubleIndent"><span class="Bold">Emergency (E)</span>&#160;– 
+	 If your stock level falls below the emergency stock percentage level, 
+	 DBR assigns a priority of Emergency.</p>
+	<p class="DoubleIndent"><span class="Bold">On-time (O)</span>&#160;– 
+	 This work order must be made on time. This work order should not be 
+	 rescheduled on a later date to satisfy material availability.</p>
+	<p class="DoubleIndent"><span class="Bold">Normal (N)</span> – This 
+	 work order can be scheduled and manufactured normally.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> – The 
+	 part ID related to the order is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span>&#160;– 
+	 The warehouse ID related to the part is displayed. If you plan by 
+	 independently planned warehouses and you are viewing replenishment 
+	 buffers, the warehouse-specific replenishment buffer for the part 
+	 is displayed. If you are planning by independently planned warehouses 
+	 and no warehouse ID is displayed, then the replenishment level displayed 
+	 is for your universally planned warehouses.</p>
+	<p class="Numbered-Indent">Warehouse IDs are also displayed for work 
+	 orders. This is the warehouse where the finished goods will be stored.</p>
+</div>
+</body>
+</html>

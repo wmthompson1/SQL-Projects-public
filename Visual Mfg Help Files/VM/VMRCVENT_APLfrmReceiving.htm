@@ -1,0 +1,260 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Receiving Items on a Purchase Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+table.hcp1 { margin-left:48px; }
+tr.hcp2 { vertical-align:top; }
+td.hcp3 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+ol.hcp4 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<p><a name="lbVENDOR_ADDR" id="lbVENDOR_ADDR"></a><a name="dfdtDESIRED_RECV_DATE" 
+													 id="dfdtDESIRED_RECV_DATE"></a><a 
+	 name="dfdtPROMISE_DATE" id="dfdtPROMISE_DATE"></a><a name="dfsBOL_ID" 
+															 id="dfsBOL_ID"></a><a 
+	 name="dfsBUYER" id="dfsBUYER"></a><a name="cmbFREE_ON_BOARD" id="cmbFREE_ON_BOARD"></a><a 
+	 name="cmbSHIP_VIA" id="cmbSHIP_VIA"></a><a name="cmbCARRIER_ID" id="cmbCARRIER_ID"></a><a 
+	 name="tblRcvLineItem" id="tblRcvLineItem"></a><a name="dfsPOSTING_CANDIDATE" 
+														 id="dfsPOSTING_CANDIDATE"></a><a 
+	 name="dfnSELL_RATE" id="dfnSELL_RATE"></a><a name="dfsSTATUS_MESSAGE" 
+													 id="dfsSTATUS_MESSAGE"></a><a 
+	 name="dfsVENDOR_ID" id="dfsVENDOR_ID"></a><a name="dfsSTATUS" id="dfsSTATUS"></a><a 
+	 name="dfsCONTACT_HONORIFIC" id="dfsCONTACT_HONORIFIC"></a><a name="dfsCONTACT_FIRST_NAME" 
+	 id="dfsCONTACT_FIRST_NAME"></a><a name="dfsCONTACT_INITIAL" id="dfsCONTACT_INITIAL"></a><a 
+	 name="dfsCONTACT_LAST_NAME" id="dfsCONTACT_LAST_NAME"></a><a name="dfsCONTACT_PHONE" 
+	 id="dfsCONTACT_PHONE"></a><a name="dfsCONTACT_FAX" id="dfsCONTACT_FAX"></a><a 
+	 name="dfsCURRENCY_NAME" id="dfsCURRENCY_NAME"></a><a name="dfsCURRENCY_ID" 
+															 id="dfsCURRENCY_ID"></a><a 
+	 name="dfsLONG_DESCRIPTION" id="dfsLONG_DESCRIPTION"></a><a name="dfnLOCATION_QTY" 
+	 id="dfnLOCATION_QTY"></a><a name="dfnSHIPTO_ADDR_NO" id="dfnSHIPTO_ADDR_NO"></a><a 
+	 name="dfsPO_UDF_LAYOUT_ID" id="dfsPO_UDF_LAYOUT_ID"></a><a name="dfsPO_USER_1" 
+	 id="dfsPO_USER_1"></a><a name="dfsPO_USER_2" id="dfsPO_USER_2"></a><a 
+	 name="dfsPO_USER_3" id="dfsPO_USER_3"></a><a name="dfsPO_USER_4" id="dfsPO_USER_4"></a><a 
+	 name="dfsPO_USER_5" id="dfsPO_USER_5"></a><a name="dfsPO_USER_6" id="dfsPO_USER_6"></a><a 
+	 name="dfsPO_USER_7" id="dfsPO_USER_7"></a><a name="dfsPO_USER_8" id="dfsPO_USER_8"></a><a 
+	 name="dfsPO_USER_9" id="dfsPO_USER_9"></a><a name="dfsPO_USER_10" 
+													 id="dfsPO_USER_10"></a><a 
+	 name="dfsPART_ID" id="dfsPART_ID"></a><a name="picTabs" id="picTabs"></a><a 
+	 name="ccMSTabCtrl" id="ccMSTabCtrl"></a></p>
+<div id="content">
+	<div id="banner">
+		<h1>Receiving Items on a Purchase Order</h1>
+	</div>
+	<p class="First">Use this procedure when receiving a complete purchase 
+	 order.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site in which you created the purchase order. If you are licensed 
+		 to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Enter the <a name="dfsORDER_ID" 
+		 id="dfsORDER_ID"></a>Order ID for the purchase order.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Purchase Order must have a status of 
+	 Released.</p>
+	<p class="Numbered-Indent">If the <span class="Bold">Auto Backorder 
+	 Selection Mode</span> option from the <span class="Bold">Options</span> 
+	 menu is active, VISUAL intelligently selects backorders based on the 
+	 PO Order ID. If you enter an Order ID for a closed order that has 
+	 backorders, VISUAL automatically selects the first open backorder 
+	 PO associated with that order.</p>
+	<p class="Numbered-Indent">For example, if PO 4001 was partially received, 
+	 and the backorder option is active, then VISUAL closes 4001 and creates 
+	 and releases 4001-1. If Auto Backorder Selection Mode is active and 
+	 you enter 4001 for the Order ID, VISUAL automatically calls up 4001-1.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Enter the <a name="dfsRECEIVER_ID" 
+		 id="dfsRECEIVER_ID"></a>Receiver ID for the transaction to receive 
+		 these items.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you are using Auto Numbering, you can 
+	 leave this field blank.</p>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>If you are receiving 
+			 a consignment order, the Consignment Tracking check box appears 
+			 selected.</p></td>
+		</tr>
+	</table>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Alter the FOB field, 
+		 if necessary.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Set Actual <a name="dfdtRECEIVED_DATE" 
+		 id="dfdtRECEIVED_DATE"></a>Recv Date to the appropriate date.</p></li>
+	</ol>
+	<p class="Numbered-Indent">On startup, this field defaults to the current 
+	 date. After this, it defaults to the last Actual Recv Date used in 
+	 the session, regardless of the PO or Receiver that is currently called 
+	 up.</p>
+	<ol start="6" class="hcp4">
+		<li class="p-Numbered"><p class="Numbered">You may want to examine 
+		 the Warehouse ID and Location ID for each inventory item to make 
+		 sure they are correct.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can change the Warehouse and Location 
+	 ID by selecting the line item and double-clicking on the Location 
+	 ID column header, then selecting from a table of valid locations for 
+	 the part.</p>
+	<table cellspacing="0" width="342" class="hcp1">
+		<tr class="hcp2">
+			<td width="72" class="hcp3"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="270" class="hcp3"><p>When receiving consignment 
+			 purchase orders, you must specify the correct consignment 
+			 location into which you want to receive the part.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent">If no Location ID appears, there are no 
+	 locations defined for the part. A part must have at least one location 
+	 defined to be received. You can do this through Part Maintenance, 
+	 or allow the Purchase Receipt Entry application to do it for you. 
+	 As noted above, you do not need to specify a warehouse and location 
+	 for a non-inventory part or for a service. These items are received 
+	 directly to work orders.</p>
+	<p class="Numbered-Indent">If you want to receive into a Warehouse/Location 
+	 that is defined in Warehouse Maintenance, but isn’t currently assigned 
+	 to the Part ID, you can enter the Warehouse ID and Location ID into 
+	 the line item fields.</p>
+	<p class="Numbered-Indent">If you want to create a new warehouse location, 
+	 follow the same procedure. The system will create the new location, 
+	 assign it to the part, and receive the material into the new location.</p>
+	<ol start="7" class="hcp4">
+		<li class="p-Numbered"><p class="Numbered">To receive all materials 
+		 on the purchase order, click the <span class="Bold">Receive All</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This receives all of the items on the purchase 
+	 order by setting the Quantity Received for each line to Quantity Ordered 
+	 minus Total Qty Received. This receives all of the outstanding items 
+	 on the purchase order.</p>
+	<p class="Numbered-Indent">If the receipt is successful, the purchase 
+	 order will automatically be closed.</p>
+	<p class="Numbered-Indent">To make a partial receipt of materials on 
+	 this purchase order, enter the appropriate Quantity Received, if any, 
+	 on each line, then click the <span class="Bold">Save</span> button.</p>
+	<p class="Numbered-Indent">The system prompts you to confirm the operation.</p>
+	<p class="Numbered-Indent">Select from the following options:</p>
+	<p class="Numbered-Indent"><span class="Bold">Leave order open (partial 
+	 receipt, backorder balance)</span> - This leaves the order open awaiting 
+	 the remainder of the shipment. The purchase order does not close.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy remaining unreceived 
+	 lines to separate backorder</span> - This copies the remaining quantities 
+	 to a new purchase order. The same Order ID is used, with the addition 
+	 of a suffix consisting of a dash and a digit. For example, if the 
+	 purchase order ID is 4001, the new Order IDs will be 4001-1, 4001-2, 
+	 etc. These are referred to as backorders, and are created to allow 
+	 the original order to be closed. This is common when some line items 
+	 are completely received, and others are back-ordered by the vendor.</p>
+	<p class="Numbered-Indent">The system understands that orders numbered 
+	 in this way are backorders, and is able to intelligently retrieve 
+	 them. If possible, you should avoid using a dash in your PO numbering 
+	 scheme.</p>
+	<p class="Numbered-Indent"><span class="Bold">Close order (partial 
+	 receipt, no backorder)</span> - This is useful when the original order 
+	 quantity has been changed, or is not received for some reason. For 
+	 example, consider a case where a vendor ships you a partial shipment 
+	 on an order. The back-ordered quantity may not be available in a time 
+	 to suit your needs, and you may purchase from another vendor. This 
+	 option allows you to arrange with the vendor to cancel the remainder 
+	 of the shipment, and close the order short.</p>
+	<p class="Numbered-Indent">If the receipt operation is successful, 
+	 VISUAL creates a new receiver. The Receiver ID of the new receiver 
+	 appears in the Receiver ID field.</p>
+	<p class="Numbered-Indent">The Purchase Receipt Entry window immediately 
+	 returns to a condition where it is ready to create the next receiver. 
+	 VISUAL updates the Total Qty Recv to reflect the receipt, Last Recv 
+	 Date remains set to the last date used, and Quantity Received resets 
+	 to 0. Warehouse ID and Location ID always default back to the primary 
+	 location, or, if there is no primary location defined, the first location 
+	 on the list.</p>
+	<p class="Numbered-Indent">Because of this, the Purchase Receipt Entry 
+	 window does NOT show a complete record of the receipt just made. Do 
+	 not use the Purchase Receipt Entry window as a viewer for previous 
+	 receipts, but only to enter new ones.</p>
+	<h2><a name="Closing_a_Service_Line_Short"></a>Closing a Service Line 
+	 Short</h2>
+	<p>When you close a line for an outside service short, you can also 
+	 have the option of also closing the linked operation on the work order.</p>
+	<p>To receive the prompt to close the operation, you must specify your 
+	 preference in Preferences Maintenance. To specify this setting:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify these settings:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Section</span> – Specify 
+	 Receiving.</p>
+	<p class="Numbered-Indent"><span class="Bold">Entry</span> – Specify 
+	 CloseLinkedOperationShort.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – Specify 
+	 Y.</p>
+	<ol start="4" class="hcp4">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+	<p>When you receive the service short in Purchase Receipt Maintenance, 
+	 select the Close order (partial receipt, no backorder) option, and 
+	 then click Ok. You are then prompted to close the work order operation 
+	 linked to the service receiver line. Click Yes to close the operation. 
+	 Click No to leave the operation open.</p>
+	<h2>Closing a Purchase Receipt Line without Receiving a Quantity</h2>
+	<p>You can close a purchase receipt line without receiving any quantity. 
+	 Select the <span class="Bold">Close Ln Short</span> check box, then 
+	 enter 0 in the Quantity Received field. Click <span class="Bold">Save</span>. 
+	 The system asks if you intended to close the line without receiving 
+	 a quantity. Click <span class="Bold">Yes</span> to confirm.</p>
+	<h2>Using the Auto-fill Receipt Quantity Preference</h2>
+	<p>By default, the remaining quantity to be received is inserted in 
+	 the Quantity Received column when you select the row in the Purchase 
+	 Receipt Entry table or the delivery schedule table. Use Preferences 
+	 Maintenance to remove this functionality and require users to specify 
+	 the quantity received on the line. </p>
+	<p>This preference does not apply to the Receive All function. Regardless 
+	 of the preference setting you choose, quantities are automatically 
+	 populated if a user clicks the Receive All button or select File, 
+	 Receive All.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify these settings:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Section</span> – Specify 
+	 Receiving.</p>
+	<p class="Numbered-Indent"><span class="Bold">Entry</span> – Specify 
+	 AutoFillReceiveQty.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – Specify 
+	 N to require users to manually specify the quantity that is being 
+	 received. Leave the value blank or specify Y to automatically populate 
+	 the Quantity Received column when users select the row. </p>
+	<ol start="4" class="hcp4">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Purchase_Receipt_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

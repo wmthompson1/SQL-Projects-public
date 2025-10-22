@@ -1,0 +1,125 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Enabling Warehouse/Location Requirements for Allocations</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Enabling Warehouse/Location Requirements for Allocations</h1>
+	</div>
+	<table cellspacing="0" width="276">
+		<tr class="hcp1">
+			<td width="36" class="hcp2"><p class="First"><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="240" class="hcp2"><p class="First">Before 
+			 using allocations, decide if you want to enforce warehouse 
+			 sameness. You have two choices:</p></td>
+		</tr>
+	</table>
+	<p>To allow allocations to be established regardless of Warehouse ID</p>
+	<p>Or-</p>
+	<p>To only allow allocations between the supply source and the demand 
+	 source if they have the same Warehouse ID</p>
+	<p>Infor VISUAL supports allocations anywhere quantities, either incoming 
+	 (supply) or outgoing (demand) can be specified and earmarked for a 
+	 specific purpose.</p>
+	<p>An allocation consists of two records, that, when linked, quantitatively 
+	 satisfy a source of demand.</p>
+	<p>For example, you can establish an allocation between an incoming 
+	 purchase order and an outgoing customer order. Even before that purchase 
+	 order arrives and is accepted into inventory, you can allocate it 
+	 to a customer order.</p>
+	<p>Read the following example to see how allocations can work for you.</p>
+	<p class="Bold">A customer calls to place an order. Your customer sales 
+	 representative discusses the customer's requirements and enters an 
+	 order for the following assorted parts:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">100 1/4Plates</p></li>
+		<li class="p-Bullet"><p class="Bullet">500 Diodes</p></li>
+		<li class="p-Bullet"><p class="Bullet">300 Assembly sets</p></li>
+	</ul>
+	<p>Your customer service representative, entering the order using Customer 
+	 Order Entry, informs the customer that the 100 1/4plates and the 500 
+	 diodes are in stock, but the 300 assembly sets are not.</p>
+	<p>Checking the available inventory in warehouse MAIN, the warehouse 
+	 from which your company does most of its shipping, the customer service 
+	 rep sees a quantity of 100 assembly sets.</p>
+	<p>At this point, the rep informs the customer of the insufficient 
+	 stock and asks if they can accept a partial delivery, with the remainder 
+	 of the assemble sets to arrive two days later, when a purchase order 
+	 containing 10,000 assembly sets is due to arrive at Warehouse MAIN.</p>
+	<p>The customer, not in any great rush for the entire quantity, agrees 
+	 to accept a shipment of 100 1/4Plates, 500 diodes, and 100 assemble 
+	 sets, with the remaining 200 assembly sets to follow in a later shipment.</p>
+	<p>The customer service rep thanks the customer for their order, completes 
+	 the order's details, and gives a delivery date for the order.</p>
+	<p>Off the phone with the customer, the rep must now create an allocation 
+	 from the inbound purchase order to the customer order.</p>
+	<p>Using the Edit menu option, <span class="Bold">Assign Supply to 
+	 Customer Order Line</span>, the rep chooses a type of supply, in this 
+	 case PO for purchase order, locates the incoming line (we’ll call 
+	 this PO 40003-25), enters an allocate quantity (the quantity from 
+	 the purchase order you want to earmark for the customer order) and 
+	 saves the link.</p>
+	<table cellspacing="0" width="366">
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p class="Normal-Indent"><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="318" class="hcp2"><p>What happens at this 
+			 point depends on your Global Allocation setting, which is 
+			 set in Accounting Entity Maintenance, from the Order Management 
+			 tab.</p></td>
+		</tr>
+	</table>
+	<p><span class="Bold">Status</span>: Warehouse IDs required for Allocations. 
+	 This setting is useful if you want to enforce logistically realistic 
+	 allocations. That is, this setting forces both the incoming and outgoing 
+	 to have a warehouse in common. If a purchase order is due to arrive 
+	 at warehouse MAIN, the customer order to which it is linked must be 
+	 shipped from Warehouse MAIN. If you allow allocations irrespective 
+	 of Warehouse IDs (the check box cleared, as seen below) you could 
+	 theoretically link an outgoing customer order leaving from a warehouse 
+	 in the US to a purchase order arriving at a warehouse in another country.</p>
+	<p>VISUAL enforces this requirement by forcing you to supply a Warehouse 
+	 ID before it will even save an order.</p>
+	<p><span class="Bold">Status</span>: Warehouse IDs not required for 
+	 Allocations. As long as the two orders you want to link contain the 
+	 same Part ID, you can create a link regardless of Warehouse ID.</p>
+	<p>A few days pass. The first part of the order is shipped without 
+	 incident and the customer is pleased. The day after the first part 
+	 of the order ships, the purchase order for the assemble sets arrives. 
+	 While receiving it, a member of the Shipping/Receiving team notices 
+	 an allocation exists between a quantity from PO 40003-25 and a customer 
+	 order. He sets those aside and ships them immediately.</p>
+	<p>Calling upstairs to the customer service rep, the shipping/receiving 
+	 employee lets the customer service rep know that he has seen the allocation 
+	 record and taken the appropriate action to ship it, thereby fulfilling 
+	 the promise of supply.</p>
+	<p>Several days later, the Customer Service rep places a followup call 
+	 to see if everything arrived on time and in good condition.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Order_Management_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

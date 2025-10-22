@@ -1,0 +1,108 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Importing Forecasts with the MLT Format</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Importing Forecasts with the MLT Format</h1>
+	</div>
+	<p>To import a forecast using the MLT format:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site to use for importing or exporting forecasts. 
+		 If you are licensed to use a single site, this field is unavailable. 
+		 Perform this step in the Material Planning Window, before you 
+		 access the Import/Export part forecast dialog box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Open the Import/Export 
+		 Forecast dialog box. Perform one of these steps:</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Select <span 
+		 class="Bold">File</span>, <span class="Bold">Import/Export Forecast</span>.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">From the Master 
+		 Production Schedule dialog box, click the <span class="Bold">Import/Export 
+		 Forecast</span> button.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">From the Planning 
+		 Forecast dialog box, click the <span class="Bold">Import/Export 
+		 Forecast</span> button.</p></li>
+	</ol>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">In the Action section, 
+		 click <span class="Bold">Import</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Path</span> 
+		 button and select the file to import.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Forecast ID</span> – 
+	 Specify a name for the forecast. You cannot import a forecast without 
+	 specifying a name. If you specify an existing ID, the existing information 
+	 is overwritten with the imported information.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 If the forecast applies to a particular independently planned warehouse, 
+	 specify the warehouse ID. If the forecast applies to all universally 
+	 planned warehouses, specify Universal.</p>
+	<p class="Numbered-Indent"><span class="Bold">Import Destination</span> 
+	 – Select where to add the imported information. Click one of these 
+	 options:</p>
+	<p class="DoubleIndent"><span class="Bold">Import to forecast table</span> 
+	 – Click this option to import the information as a forecast into the 
+	 Planning Forecast dialog box and the Master Production Schedule dialog 
+	 box. If you specified a new forecast ID, the ID is inserted as a line 
+	 in both dialog boxes. The information is imported into the PLANNING_FORECAST 
+	 table in your database.</p>
+	<p class="DoubleIndent"><span class="Bold">Import to master schedule 
+	 table</span> – Click this option to import the information into the 
+	 master production schedule. When you select this option, the Current 
+	 MPS line in the Master Production Schedule table is overwritten with 
+	 the imported information. The information is imported into the MASTER_SCHEDULE 
+	 table in your database.</p>
+	<p class="DoubleIndent"><span class="Bold">Import to both</span> – 
+	 Click this option to import the information as a forecast and as the 
+	 master production schedule.</p>
+	<p class="Numbered-Indent"><span class="Bold">Purge Prior Data</span> 
+	 – To remove all existing data from the tables you selected, select 
+	 this check box. To retain existing information, clear this check box. 
+	 If you clear this check box, existing information will be overwritten 
+	 if the imported information uses the same dates as the existing information. 
+	 For example, if you are importing data into the Master Production 
+	 Schedule dialog box that includes information for October 15, and 
+	 the Master Production Schedule dialog box already contains information 
+	 for October 15, then the data you import overwrites the existing data.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click the appropriate 
+		 period option:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Beginning of Period</span> 
+	 – If you are importing a forecast in the middle of a period, click 
+	 this option to roll back to the beginning of the period. For example, 
+	 for monthly imports, if you are importing a file on the 5th of the 
+	 month, click this option to use the 1st of the month as the beginning 
+	 of the period.</p>
+	<p class="Numbered-Indent"><span class="Bold">End of Period</span> 
+	 – If you are importing a forecast in the middle of a period, click 
+	 this option to use the end of the period when importing dates. For 
+	 example, for monthly imports, if you are importing a file on the 15th 
+	 of the month, click this option to use the 31st of the previous month 
+	 as the end of the period.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Begin</span> 
+		 button.</p></li>
+	</ol>
+	<p>VISUAL imports the forecast information to the appropriate tables.</p>
+</div>
+</body>
+</html>

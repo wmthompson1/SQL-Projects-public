@@ -1,0 +1,175 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>About the Audit Maintenance Window</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>About the Audit Maintenance Window</h1>
+	</div>
+	<p class="First">Use Audit Maintenance to track changes that have been 
+	 made to the database.</p>
+	<h2 class="First">Starting the Audit Maintenance Window</h2>
+	<p>Select <span class="Bold">Admin</span>, <span class="Bold">Audit 
+	 Maintenance</span>. </p>
+	<h2>Tasks</h2>
+	<p>This table shows the tasks that you can complete in the Audit Maintenance 
+	 window:</p>
+	<table class="InforTable" style="left: 0px; top: 130px; margin-left: 12px; 
+			 border-collapse: separate; border-collapse: separate;" cellspacing="0" 
+			 border="1">
+		<col style="width: 50%;">
+		<col style="width: 50%;">
+		<tr class="t1st">
+			<td><p class="TableTitle">Task</p></td>
+			<td><p class="TableTitle">Description</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><a href="Configuring_Audit_Files.htm">Configuring Audit 
+			 Files</a></p></td>
+			<td><p>Use this procedure to set up audits of database columns.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><a href="Auditing_Report_Times.htm">Auditing Report 
+			 Times</a></p></td>
+			<td><p>Use this procedure to set up audits of reports.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><a href="Viewing_Audit_Results.htm">Viewing Audit Results</a></p></td>
+			<td><p>Use this procedure to view the results of audits.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><a href="Filtering_Audit_Results.htm">Filtering Audit 
+			 Results</a></p></td>
+			<td><p>Use this procedure to filter audit results.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><a href="Printing_the_Audit_History_Report.htm">Printing 
+			 the Audit History Report</a></p></td>
+			<td><p>Use this procedure to print audit results.</p></td>
+		</tr>
+		<tr class="t1Row">
+			<td><p><a href="Exporting_Audit_History_Information_to_Excel_or_XML.htm">Exporting 
+			 Audit History Information to Excel or XML</a></p></td>
+			<td><p>Use this procedure to export the contents of the Audit 
+			 Maintenance results table to Excel or XML.</p></td>
+		</tr>
+		<tr class="t2Row">
+			<td><p><a href="Printing_the_Report_Times_Report.htm">Printing 
+			 the Report Times Report</a></p></td>
+			<td><p>If you track report duration, use this procedure to 
+			 print the results of report audits. </p></td>
+		</tr>
+	</table>
+	<h2>Fields</h2>
+	<p><a name="cmbPrintOutput" id="cmbPrintOutput"></a><span class="Bold">Reporting 
+	 Options field</span></p>
+	<p>Specify how to export the audit report.</p>
+	<p><a name="cbPDFFormat" id="cbPDFFormat"></a><span class="Bold">PDF 
+	 Format check box</span></p>
+	<p>If you select E-Mail in the Reporting Options field, select this 
+	 check box to attach a PDF version of the report instead of an RTF 
+	 file.</p>
+	<p><a name="dfsUserID" id="dfsUserID"></a><span class="Bold">User</span></p>
+	<p>Lists the IDs of the users that you selected in the Users table. 
+	 The results are filtered to show records that were changed by the 
+	 selected users.</p>
+	<p><a name="dfsTableID" id="dfsTableID"></a><span class="Bold">Table</span></p>
+	<p>Lists the tables that you selected in the Tables table. The results 
+	 are filtered to show records for the selected tables.</p>
+	<p><a name="dfsWhereColID" id="dfsWhereColID"></a><span class="Bold">Column</span></p>
+	<p>Use this field to filter the results by column name. Specify a column 
+	 name, or click a column name in the results table.</p>
+	<p><a name="dfsWherePKey" id="dfsWherePKey"></a><span class="Bold">Primary 
+	 Key</span></p>
+	<p>Use this field to filter the results by primary key value. Specify 
+	 a primary key value, or click a Primary key value in the results table.</p>
+	<p><a name="dfdtStart" id="dfdtStart"></a><span class="Bold">Start</span></p>
+	<p>Use this field to filter the results by date. Results that are on 
+	 or after the selected date are displayed. Use this field in conjunction 
+	 with the End date field or the Horizon field.</p>
+	<p><a name="dfdtEnd" id="dfdtEnd"></a><span class="Bold">End</span></p>
+	<p>Use this field to filter the results by date. Results that are on 
+	 or before the selected date are displayed. Use this field in conjunction 
+	 with the End date field or the Horizon field.</p>
+	<p><a name="dfnHORIZON_DAYS" id="dfnHORIZON_DAYS"></a><span class="Bold">Horizon</span></p>
+	<p>If you do not specify a fixed (Start and End) date range, enter 
+	 the total number of days prior to the current system date for which 
+	 you want to view changes. If you specify a Start date, the Horizon 
+	 indicates the number of days following the Start date for which you 
+	 want to view the audit trail. If you enter an End date, the Horizon 
+	 indicates the total number of days prior to the End date for which 
+	 you want to show audit information.</p>
+	<p><a name="cbUseTableDates"></a><span class="Bold">Use Dates from 
+	 Table check box</span></p>
+	<p>To replace the Start and End fields with the date of the earliest 
+	 record and date of the latest record in the table, select this check 
+	 box and then click the <span class="Bold">Refresh</span> button. </p>
+	<p><a name="cbInsert" id="cbInsert"></a><span class="Bold">Insert check 
+	 box</span></p>
+	<p>Select this check box to view the new records that were created 
+	 </p>
+	<p><a name="cbUpdate" id="cbUpdate"></a><span class="Bold">Update check 
+	 box</span></p>
+	<p>Select this check box to view modifications to existing information.</p>
+	<p><a name="cbDelete" id="cbDelete"></a><span class="Bold">Delete check 
+	 box</span></p>
+	<p>Select this check box to view the records that were deleted.</p>
+	<p><a name="cbReports" id="cbReports"></a><span class="Bold">Report 
+	 Audit check box</span></p>
+	<p>If you are auditing report times, select this check box to show 
+	 report times in the results table.</p>
+	<p><a name="tblUsers" id="tblUsers"></a><span class="Bold">Users table</span></p>
+	<p>This table lists the users who have performed the actions that you 
+	 are auditing. </p>
+	<p><a name="tblTables" id="tblTables"></a><span class="Bold">Tables 
+	 table</span></p>
+	<p>The Tables list indicates the database Table names for which you 
+	 have defined audit tracking. This information is displayed: &#160;</p>
+	<p class="Normal-Indent"><span class="Bold">Tables</span> – The database 
+	 Table name for which you defined tracking. </p>
+	<p class="Normal-Indent"><span class="Bold">Audits</span> – The total 
+	 number of audit records that have occurred for the table. This value 
+	 is system-maintained.</p>
+	<p><a name="tblAuditData" id="tblAuditData"></a><span class="Bold">Results 
+	 table</span></p>
+	<p>The audit records that match the selected Filters in the header 
+	 of the window. This information is displayed:</p>
+	<p class="Normal-Indent"><span class="Bold">Change Date</span> – The 
+	 date and time when the change to the database table occurred.</p>
+	<p class="Normal-Indent"><span class="Bold">Column</span> – The database 
+	 table column where the change occurred.</p>
+	<p class="Normal-Indent"><span class="Bold">Data Type</span> – The 
+	 table column value is a String (text), Number, or Date.</p>
+	<p class="Normal-Indent"><span class="Bold">Action</span> – The audit 
+	 change type that occurred. The values are Update, Insert, or Delete 
+	 action.</p>
+	<p class="Normal-Indent"><span class="Bold">Primary Key</span> – The 
+	 primary key for the record on the database table for which the change 
+	 occurred.</p>
+	<p class="Normal-Indent"><span class="Bold">Old Value</span> – The 
+	 value of the table column prior to the change that occurred. If the 
+	 row refers to a report and you have selected the Audit Report Times 
+	 and Report Audit check boxes, the start time of the report.</p>
+	<p class="Normal-Indent"><span class="Bold">New Value</span> – The 
+	 modified value following the specified change on the table line. If 
+	 the row refers to a report and you have selected the Audit Report 
+	 Times and Report Audit check boxes, the system inserts the end time 
+	 of the report.</p>
+	<p>&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User-defined_Help_Files_-_Audit_Maintenance.htm"><img src="btn_mini.gif" alt="" style="border: none;" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

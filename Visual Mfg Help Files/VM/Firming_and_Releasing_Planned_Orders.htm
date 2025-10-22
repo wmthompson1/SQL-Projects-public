@@ -1,0 +1,214 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Firming and Releasing Planned Orders</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Firming and Releasing Planned Orders</h1>
+	</div>
+	<p>Planned requirements and planned orders for a part are numbered 
+	 sequentially as they are created. They appear in the Material Planning 
+	 Window preceded by the letters PL, then the Part ID/Order Number. 
+	 For example, if MRP generates 3 planned orders for part B1241, they 
+	 appear as PL B1241/1, PL B1241/2, and PL B1241/3.</p>
+	<p>When you convert a planned order to a purchase order or work order, 
+	 the auto-numbering scheme you set up for the order is used to identify 
+	 the order.</p>
+	<p>If you are licensed to use multiple sites, firm or release planned 
+	 orders on a site-by-site basis. If you are licensed to use a single 
+	 site, firm or release planned orders on an enterprise-wide basis.</p>
+	<h2>Firming and Releasing Planned Work Orders</h2>
+	<p>To firm or release a planned work order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site ID to use. If you are licensed to use as single site, this 
+		 field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Part 
+		 ID</span> browse button and select the part that has planned orders.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select a line containing 
+		 the planned supply work order. Planned supply order IDs are prefixed 
+		 with PL and have a status of P.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Firm/Release Planned Order</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Part is... section, 
+		 select the Fabricated check box if the part is fabricated. Select 
+		 the Purchased check box if the part is purchased. The Fabricated 
+		 and Purchased settings from the header in the Material Planning 
+		 Window are inserted.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Work Order section, 
+		 specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Copy Engineering ID</span> 
+	 – The default engineering ID for the part is inserted. If you have 
+	 defined multiple engineering IDs for the part, click the arrow to 
+	 select a different ID.</p>
+	<p class="Numbered-Indent"><span class="Bold">New Base ID/New Lot/New 
+	 Split ID</span> – To specify your own work order ID, specify the Base 
+	 ID, Lot ID, and Split ID. If you leave these fields blank, then the 
+	 auto-numbering scheme you set up for work orders is used.</p>
+	<p class="Numbered-Indent"><span class="Bold">Forward Schedule from 
+	 Release Date</span> – Select this check box to schedule the new order 
+	 in this way.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy All document References</span> 
+	 – To copy all of the document references from the engineering master, 
+	 select this check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy All Reference Designators</span> 
+	 – To copy the reference designators from the engineering master, select 
+	 this check box. If you do not want to copy reference designators, 
+	 clear this check box. Reference designators are used to specify the 
+	 location where the material in the requirement should be placed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Copy All Alternate Parts</span> 
+	 – To copy the alternate parts from the engineering master, select 
+	 this check box. If you do not want to copy reference designators, 
+	 clear this check box. Alternate parts are parts that can be used in 
+	 place of the part specified on the material card.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Status section, 
+		 specify the status of the work order you are creating. Select 
+		 Unreleased, Firm, or Released.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 Specify the ID of the warehouse where the part will be received. By 
+	 default, the primary warehouse for the part is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> – Specify 
+	 the quantity to make in the work order. By default, the quantity generated 
+	 for the planned order by MRP is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Rls Date</span> – Specify 
+	 the date to release the work order. This is the earliest date that 
+	 work on the order can begin.</p>
+	<p class="Numbered-Indent"><span class="Bold">Want Date</span> – Specify 
+	 the date that the work order should be complete. This is the date 
+	 that the parts produced in this work order should be available for 
+	 use.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Order</span>.</p></li>
+	</ol>
+	<p>The planned supply order is converted to an actual order. Any material 
+	 requirements for the planned order are replaced by the actual requirements 
+	 associated with the new order.</p>
+	<p>Remember that you must schedule any new work orders using the Concurrent 
+	 Scheduler or the Schedule Current Work Order command in the Manufacturing 
+	 Window.</p>
+	<h2>Firming and Releasing a Planned Purchase Order</h2>
+	<p>If you are licensed to use multiple sites, you can create an internal 
+	 purchase order from the planned purchase order. You can also create 
+	 a standard, external purchase order.</p>
+	<p>To firm or release a planned purchase order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site ID to use. If you are licensed to use as single site, this 
+		 field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Part 
+		 ID</span> browse button and select the part that has planned orders.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select a line containing 
+		 the planned supply purchase order. Planned supply order IDs are 
+		 prefixed with PL and have a status of P.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Firm/Release Planned Order</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Part is... section, 
+		 select the Fabricated check box if the part is fabricated. Select 
+		 the Purchased check box if the part is purchased. The Fabricated 
+		 and Purchased settings from the header in the Material Planning 
+		 Window is inserted.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Purchase Order 
+		 section, specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Order ID</span> – Specify 
+	 the ID of the purchase order. To use your number generation scheme 
+	 for purchase orders, leave this field blank.</p>
+	<p class="Numbered-Indent"><span class="Bold">Vendor ID</span> – Specify 
+	 the ID of the vendor from whom you are purchasing this material. To 
+	 create an internal purchase order, specify the ID of an internal vendor. 
+	 Use internal purchase orders if you are licensed to use multiple sites 
+	 and you want one of your entities to supply another entity.</p>
+	<p class="Numbered-Indent"><span class="Bold">Mfg Name</span> – Specify 
+	 the name of the manufacturer of the part you are ordering. This information 
+	 is optional.</p>
+	<p class="Numbered-Indent"><span class="Bold">Mfg Part ID</span> – 
+	 Specify the ID that the manufacturer uses for this part. This information 
+	 is optional.</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal Order</span> 
+	 – If you specified an internal vendor, this check box is selected. 
+	 Select this check box to create an internal purchase order. When you 
+	 create an internal purchase order, a corresponding internal sales 
+	 order is created automatically. Specify the ID of the internal customer 
+	 in the Internal Customer field. If you want to use an internal vendor 
+	 for this order, but you do not want to automatically create a corresponding 
+	 sales order, clear the check box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Internal Customer</span> 
+	 – If you selected the Internal Order check box, you must specify the 
+	 ID of the internal customer that is purchasing the goods. If a default 
+	 internal customer ID is defined for the site in Site Maintenance, 
+	 then that customer ID is inserted. You can specify a different internal 
+	 customer ID.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Status section, 
+		 specify the status of the purchase order you are creating. Select 
+		 Firm or Released.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 Specify the ID of the warehouse where the part will be received. By 
+	 default, the primary warehouse for the part is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Quantity</span> – Specify 
+	 the quantity to order. By default, the quantity generated for the 
+	 planned order by MRP is inserted.</p>
+	<p class="Numbered-Indent"><span class="Bold">Rls Date</span> – Specify 
+	 the date that the purchase order is released. The date you specify 
+	 is inserted in the Order Date field when the purchase order is created.</p>
+	<p class="Numbered-Indent"><span class="Bold">Want Date</span> – Specify 
+	 the date that the purchase order should be received. This date is 
+	 inserted in the Desired Recv Date when the purchase order is created.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Order</span>. 
+		 If the part that you are ordering is not a piece tracked part, 
+		 then the Firm/Release Planned Order dialog is closed. If the part 
+		 that you are ordering is a piece tracked part, then the Dimensional 
+		 Pieces dialog is opened. This information is displayed:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Pieces</span> – The number 
+	 of whole pieces needed to fulfill the demand is displayed. This is 
+	 the number of pieces that will be ordered.</p>
+	<p class="Numbered-Indent"><span class="Bold">Length, Width, and Height</span> 
+	 – The dimensions of the piece is displayed. You can change the dimensions. 
+	 If you change the dimensions, the values in the Pieces and Piece Qty 
+	 field are adjusted so that you order enough pieces to meet the demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Req’d Qty</span> – The 
+	 amount required to meet the demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Piece Qty</span> – The 
+	 quantity in the order is displayed. This quantity is the number of 
+	 pieces multiplied by the dimensions and converted from the usage unit 
+	 of measure to the stock unit of measure.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>.</p></li>
+	</ol>
+	<p>If you create an internal purchase order, the corresponding sales 
+	 order is also created.</p>
+</div>
+<p class="SeeAlsoNext"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"> User 
+ Defined Information</p>
+</body>
+</html>

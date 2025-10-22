@@ -1,0 +1,402 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Master Record Layout</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+mso-shading:windowtext;
+mso-pattern:gray-30 gray;
+padding:4.0pt 2.0pt 4.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp2 { font-size:9.0pt;
+font-family:Arial, sans-serif;
+mso-font-width:100%;
+mso-ansi-language:EN-US; }
+td.hcp3 { vertical-align:top;
+border:none;
+border-bottom:solid #000000 1.0pt;
+mso-border-top-alt:solid windowtext .5pt;
+mso-border-bottom-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+span.hcp4 { font-size:10.5pt;
+font-family:Arial, sans-serif;
+mso-font-width:99%;
+mso-ansi-language:EN-US; }
+td.hcp5 { vertical-align:top;
+border:none;
+mso-border-top-alt:solid windowtext .5pt;
+padding:2.0pt 2.0pt 2.0pt 2.0pt;
+padding-left:0px;
+padding-top:0px;
+padding-right:0px;
+padding-bottom:0px; }
+-->
+</style>
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Master Record Layout</h1>
+	</div>
+	<p class="First">This is the header record for a bill of material. 
+	 The VISUAL Data Import Utility examines the lines and tokens (these 
+	 begin with value 0) of information in the text file before it begins 
+	 the importation process to create the work order, engineering master, 
+	 or quote master.</p>
+	<p class="First">This table shows the layout of the file. It shows 
+	 the data that is expected in each token, the length and type of the 
+	 data, and whether you are required to include the data in your import 
+	 file. For NumberString data types, the first value indicates the number 
+	 of digits that can be included to the left of the decimal point. The 
+	 second value indicates the number of digits that can be included to 
+	 the right of the decimal point. </p>
+	<table class="MsoNormalTable" style="margin-left: 26.75pt; border-collapse: collapse; 
+			 mso-table-layout-alt: fixed; mso-padding-alt: 2.0pt 2.0pt 2.0pt 2.0pt; 
+			 mso-border-insideh: .5pt solid windowtext;" cellspacing="0" 
+			 width="637">
+		<tr style="mso-yfti-irow: 0; mso-yfti-firstrow: yes; height: 17.0pt;">
+			<td height="23" width="52" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Token #</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Name</span></b></p></td>
+			<td height="23" width="120" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Data type</span></b></p></td>
+			<td height="23" width="62" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Required</span></b></p></td>
+			<td height="23" width="283" bgcolor="#D8D8D8" class="hcp1"><p 
+				 class="CellHeading" style="text-align: left; line-height: 11.0pt;"><b><span class="hcp2">Notes</span></b></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 1; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">0</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Record Type Indicator</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">MASTER</span></p></td>
+			<td height="32" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="32" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">You must specify MASTER.</span> 
+			 </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 2; height: 61.0pt;">
+			<td height="81" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">1</span></p></td>
+			<td height="81" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Type</span></p></td>
+			<td height="81" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="81" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Y</span></p></td>
+			<td height="81" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The type of data that you are importing. 
+			 Specify one of these values:</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">M</span></b> 
+			 <span class="hcp2">( 
+			 Engineering Master)</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">W</span></b> 
+			 <span class="hcp2">(Work 
+			 Order)</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><b><span class="hcp4">Q</span></b> 
+			 <span class="hcp2">(Quote 
+			 Master)</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 3; height: 1.0in;">
+			<td height="96" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">2</span></p></td>
+			<td height="96" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Base ID</span></p></td>
+			<td height="96" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="96" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="96" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Base ID of the master you are 
+			 importing.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 type</span> <b><span class="hcp4">M</span></b><span class="hcp2">, you do not have to supply an 
+			 ID.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 type</span> <b><span class="hcp4">W</span></b><span class="hcp2">, you must specify a Work Order 
+			 ID or leave this field blank for the next seq#.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 Type</span> <b><span class="hcp4">Q</span></b><span class="hcp2">, you must specify a Quote ID or 
+			 leave this field blank for the next seq#.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 4; height: 61.0pt;">
+			<td height="81" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">3</span></p></td>
+			<td height="81" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Lot ID</span></p></td>
+			<td height="81" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="81" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="81" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Lot ID of the master you are 
+			 importing.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 type</span> <b><span class="hcp4">M</span></b><span class="hcp2">, specify an Engineering ID. The 
+			 default is the next Engineering ID.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 type</span> <b><span class="hcp4">W</span></b><span class="hcp2">, specify a Lot ID. The default 
+			 value is 1.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">For 
+			 type</span> <b><span class="hcp4">Q</span></b><span class="hcp2">, specify a Lot ID. The default 
+			 value is 1.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 5; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">4</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Part ID</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="47" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The Part ID for the Master. This 
+			 must be a valid Part ID or the next import record must be 
+			 a part record that adds this part.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 6; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">5</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Desired Qty</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">NumberString(12.8)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">If you do not specify a value, 
+			 then 1 is used.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 7; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">6</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing ID</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(30)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The ID of the drawing of the part.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 8; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">7</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing Rev Number</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(8)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The revision level of the drawing.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 9; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">8</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Product Code</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">If specified, the code must exist 
+			 in the database.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 10; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">9</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Commodity Code</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">If specified, the code must exist 
+			 in the database.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 11; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">10</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Engineered By</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(40)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The individual who configured the 
+			 product.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 12; height: 35.0pt;">
+			<td height="47" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">11</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Engineered Date</span></p></td>
+			<td height="47" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(10)</span></p></td>
+			<td height="47" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="47" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The day, month, and year of engineering. 
+			 This defaults to the current date if you do not enter a date. 
+			 Use MM/DD/YYYY format.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 13; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">12</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Desired Want Date</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(10)</span></p></td>
+			<td height="32" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The date that production on the 
+			 master should be complete. Use MM/DD/YYYY format.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 14; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">13</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Desired Release Date</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(10)</span></p></td>
+			<td height="32" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The date that you plan to release 
+			 the master to production. Use MM/DD/YYYY format.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 15; height: 123.0pt;">
+			<td height="164" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">14</span></p></td>
+			<td height="164" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Status</span></p></td>
+			<td height="164" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="164" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="164" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Specify one of these values:</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">U 
+			 (Unreleased)</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">F 
+			 (Firmed), also the default</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">R 
+			 (Released)</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The 
+			 user must have permission to set the status code. If the user 
+			 does not have permission to set a status of Firmed, the Data 
+			 Import Utility creates the master with a Unreleased status. 
+			 The Data Import Utility generates an error message or log 
+			 entry when a user with insufficient privileges has tried unsuccessfully 
+			 to change a master status.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 16; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">15</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Drawing File</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(100)</span></p></td>
+			<td height="32" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The full path name to the Drawing 
+			 File and name of the Drawing File.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 17; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">16</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Forward Schedule</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Specify Y or N. The default is 
+			 N.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 18; height: 1.25in;">
+			<td height="120" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">17</span></p></td>
+			<td height="120" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Copy Routing</span></p></td>
+			<td height="120" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="120" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="120" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Specify Y or N. This setting is 
+			 used when importing work orders or quotes. If you specify 
+			 Y, then the operations from the part’s engineering master 
+			 are copied. If you specify Y, you must specify a part ID in 
+			 field 4.</span></p>
+			<p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">This 
+			 function is designed to be used primarily with the APS Import 
+			 Utility, and as such only copies the operation (not material 
+			 requirement) for the main assembly - Sub ID 0.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 19; height: 57.0pt;">
+			<td height="76" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">18</span></p></td>
+			<td height="76" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Copy Materials</span></p></td>
+			<td height="76" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(1)</span></p></td>
+			<td height="76" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="76" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Specify Y or N. This setting is 
+			 used when importing work orders or quotes. If you specify 
+			 Y, then the materials from the part’s engineering master are 
+			 copied. If you specify Y, you must specify a part ID in field 
+			 4.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 20; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">19</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 1</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 1</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 21; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">20</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 2</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 2</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 22; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">21</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 3</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 3</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 23; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">22</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 4</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 4</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 24; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">23</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 5</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 5</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 25; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">24</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 6</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 6</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 26; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">25</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 7</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 7</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 27; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">26</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 8</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 8</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 28; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">27</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 9</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 9</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 29; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">28</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF 10</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(80)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The value for User Defined Field 
+			 10</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 30; height: 24.0pt;">
+			<td height="32" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">29</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Master UDF Layout ID</span></p></td>
+			<td height="32" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The ID of the user-defined field 
+			 layout.</span></p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 31; height: 13.0pt;">
+			<td height="17" width="52" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">30</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Split ID</span></p></td>
+			<td height="17" width="120" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(3)</span></p></td>
+			<td height="17" width="62" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="17" width="283" class="hcp3"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">If the work order has been split, 
+			 the ID of the split.</span> </p></td>
+		</tr>
+		<tr style="mso-yfti-irow: 32; mso-yfti-lastrow: yes; height: 24.0pt;">
+			<td height="32" width="52" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">31</span></p></td>
+			<td height="32" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">Warehouse ID</span></p></td>
+			<td height="32" width="120" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">String(15)</span></p></td>
+			<td height="32" width="62" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">N</span></p></td>
+			<td height="32" width="283" class="hcp5"><p class="CellBody" style="line-height: 11.0pt;"><span class="hcp2">The warehouse where the manufactured 
+			 product is stored.</span> </p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

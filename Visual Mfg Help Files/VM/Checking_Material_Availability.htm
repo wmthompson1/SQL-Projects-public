@@ -1,0 +1,218 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Checking Material Availability</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Checking Material Availability</h1>
+	</div>
+	<p>Use the Material Availability dialog to check the inventory levels 
+	 of the parts specified on the customer order. This function does not 
+	 assess material availability for material requirements of linked work 
+	 orders.</p>
+	<p>The quantities shown in the Material Availability dialog box depend 
+	 upon these criteria:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Whether a warehouse is specified 
+		 on the line</p></li>
+		<li class="p-Bullet"><p class="Bullet">Whether the warehouse is 
+		 an independently planned warehouse or a universal warehouse</p></li>
+		<li class="p-Bullet"><p class="Bullet">The setting you specify 
+		 in Preferences Maintenance for the UseUniversalForMaterialAvailability 
+		 entry</p></li>
+	</ul>
+	<p>If you specify an independently planned warehouse for the line, 
+	 then the Material Availability dialog box displays the quantities 
+	 of the part stored in the independently planned warehouse.</p>
+	<p>If you specify a universally planned warehouse for the order, then 
+	 the setting you specify in Preferences Maintenance determines the 
+	 quantities displayed in the dialog. If you specify Y for the UseUniversalForMaterialAvailability 
+	 setting, then the quantities displayed are for all universally planned 
+	 warehouses in the site specified on the header. If you specify N for 
+	 the UseUniversalForMaterialAvailability setting, then the dialog displays 
+	 only the quantities stored in the &#160;warehouse specified on the 
+	 line.</p>
+	<p>If you do not specify a warehouse for the line, then the quantities 
+	 available in all universally planned warehouses in the site specified 
+	 on the order header are displayed.</p>
+	<h2>Setting the UseUniversalForMaterialAvailability Preference</h2>
+	<p>Use Preferences Maintenance to specify how to calculate quantities 
+	 in the Material Availability dialog when a universally planned warehouses 
+	 is specified as the supplying warehouse.</p>
+	<p>To set the preference:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Admin</span>, 
+		 <span class="Bold">Preferences Maintenance</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Specify this information:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Section</span> – Specify 
+	 Visual Mfg.</p>
+	<p class="Numbered-Indent"><span class="Bold">Entry</span> – Specify 
+	 UseUniversalForMaterialAvailability.</p>
+	<p class="Numbered-Indent"><span class="Bold">Value</span> – To display 
+	 the quantities for all universally planned warehouses when a universally 
+	 planned warehouse is specified as the supply, specify <span class="Bold">Y</span>. 
+	 To display the quantities in the specified universally planned warehouse 
+	 only, specify <span class="Bold">N</span>.</p>
+	<ol start="4" style="list-style: decimal;">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Save</span> 
+		 button.</p></li>
+	</ol>
+	<h2>Viewing Material Quantities</h2>
+	<p>To view material quantities:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site that contains the order. If you are 
+		 licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Our 
+		 Order ID</span> arrow and select the order to use.</p></li>
+		<li class="p-Numbered"><p class="Numbered">To view material availability 
+		 for a specific line, select the line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Check Material Availability</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">If you set up a delivery schedule for the 
+	 line, then a separate line for each line in the delivery schedule 
+	 is displayed.</p>
+	<p class="Numbered-Indent">This information is displayed for each line 
+	 item:</p>
+	<p class="Numbered-Indent"><span class="Bold">Detail</span> – The customer 
+	 order line number, the part ID, and the part description are displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Qty Ordered</span> – 
+	 The quantity of part ordered on the order line or delivery schedule 
+	 line is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Qty Shipped</span> – 
+	 The total quantity of parts shipped for the line to date or delivery 
+	 schedule line is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Ship Date</span> – The 
+	 date that the customer wants the order line to be shipped is displayed. 
+	 If you specified a date on the order line, then the date from the 
+	 line is displayed. If you specified a date on the order header only, 
+	 then the date from the header is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Ship Date</span> 
+	 – The date on which you promise to ship the order is displayed. If 
+	 you specified a date on the order line, then the date from the line 
+	 is displayed. If you specified a date on the order header only, then 
+	 the date from the header is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Del Date</span> 
+	 – The date on which you promise the order will be delivered is displayed. 
+	 If you specified a date on the order line, then the date from the 
+	 line is displayed. If you specified a date on the order header only, 
+	 then the date from the header is displayed.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> – 
+	 The warehouse ID specified on the order line is displayed. If no warehouse 
+	 is specified, then this field is blank.</p>
+	<p class="Numbered-Indent"><span class="Bold">Projected Available (After 
+	 Ship)</span> – This column displays the total quantity remaining in 
+	 warehouse locations with a status of Available after all customer 
+	 orders ship. Customer order lines with a status of Released, Firmed, 
+	 and On hold are considered. Customer order lines with a status of 
+	 Inherit are also considered if the header status is Released, Firmed, 
+	 or On Hold. </p>
+	<p class="Numbered-Indent">The supply calculation depends upon whether 
+	 a warehouse ID is displayed in the Warehouse ID column and the value 
+	 specified for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the quantity remaining in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the total quantity remaining in all universal 
+		 warehouse locations with a status of Available. If you are using 
+		 multiple sites, the quantity shown is for the site specified in 
+		 the order header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the quantity stored in available locations 
+		 for the specified warehouse.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 total quantity remaining in all universal warehouse locations 
+		 with a status of Available. If you are using multiple sites, the 
+		 quantity shown is for the site specified in the order header only.</p></li>
+	</ul>
+	<p class="Numbered-Indent"><span class="Bold">On Hand</span> – This 
+	 column shows the quantity currently stored in warehouse locations 
+	 with any status.</p>
+	<p class="Numbered-Indent">The calculation depends upon whether a warehouse 
+	 ID is displayed in the Warehouse ID column and the value specified 
+	 for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the current quantity in all locations in the 
+		 specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all universal warehouse 
+		 locations. If you are using multiple sites, the quantity shown 
+		 is for the site specified in the order header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all locations in 
+		 the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 current quantity in all universal warehouse locations. If you 
+		 are using multiple sites, the quantity shown is for the site specified 
+		 in the order header only.</p></li>
+	</ul>
+	<p class="Numbered-Indent"><span class="Bold">Available</span> – This 
+	 column shows the quantity currently stored in warehouse locations 
+	 with the Available status.</p>
+	<p class="Numbered-Indent">The calculation depends upon whether a warehouse 
+	 ID is displayed in the Warehouse ID column and the value specified 
+	 for the UseUniversalForMaterialAvailability preference:</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If an independently 
+		 planned warehouse is displayed in the Warehouse ID field, then 
+		 this column shows the current quantity in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified Y for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in all universal warehouse 
+		 locations with the status of Available. If you are using multiple 
+		 sites, the quantity shown is for the site specified in the order 
+		 header only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If a universally 
+		 planned warehouse is displayed in the Warehouse ID field and you 
+		 specified N for the UseUniversalForMaterialAvailability preference, 
+		 then this column shows the current quantity in available locations 
+		 in the specified warehouse only.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">If you did 
+		 not specify a warehouse on the line, then this column shows the 
+		 current quantity in all universal warehouse locations with the 
+		 status of Available. If you are using multiple sites, the quantity 
+		 shown is for the site specified in the order header only.</p></li>
+	</ul>
+	<p>To view material netting information for a part in the Material 
+	 Planning Window, double-click the line containing the part to view.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

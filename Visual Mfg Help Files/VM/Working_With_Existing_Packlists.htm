@@ -1,0 +1,83 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Working With Existing Packlists</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Working With Existing Packlists</h1>
+	</div>
+	<p class="First">Packlists show most of the important information for 
+	 a customer order/shipment, including Customer Name and Address, Order/Invoice/Shipping 
+	 Method and Terms, Order and Line Specs, Line Item Parts, Descriptions, 
+	 Quantities, Freight, and Taxes. User-defined fields for the customer, 
+	 set up in Customer Maintenance, are also passed to this report.</p>
+	<h2>Viewing an Existing Packlist</h2>
+	<p>If you are licensed to use multiple sites, click the Site ID drop-down 
+	 arrow and select the site in which you placed the order. If you use 
+	 a single site, this field is unavailable.</p>
+	<p>Click the Order ID browse button and select the appropriate customer 
+	 order. enter the Packlist ID, or click the <span class="Bold">Packlist 
+	 ID</span> button and select a packlist from the Packlists table.</p>
+	<p>If the <span class="Bold">Auto Backorder Selection Mode</span> option 
+	 from the Options menu is currently selected, VISUAL selects backorders 
+	 based on the customer Order ID. If you enter an Order ID for a closed 
+	 order that has backorders, VISUAL selects the first open backorder 
+	 associated with that order.</p>
+	<p>For example, if order 2005 was partially shipped, and the backorder 
+	 option was selected (see below), then VISUAL closes 2005 and creates 
+	 and releases 2005-1. If Auto Backorder Selection Mode is enabled, 
+	 entering 2005 for the Order ID automatically calls up 2005-1.</p>
+	<p>If you selected <span class="Bold">Show Backlog Only</span> in the 
+	 <span class="Bold">Options</span> menu, shipped lines do not appear 
+	 in the line item table. For each line that does show in the table, 
+	 Qty Shipped shows the total amount shipped, Ship Qty is 0, and Warehouse/Location 
+	 defaults as described in &quot;Shipping Items for a Customer Order.&quot; 
+	 The table does NOT show the quantities shipped or warehouse/locations 
+	 shipped from for the Packlist ID. This means you cannot use this window 
+	 as a viewer for the selected packlist. Use the Print Packlist command 
+	 to do this.</p>
+	<p>There are several reasons you may wish to call up an existing packlist:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">To print, view or file the 
+		 packlist.</p></li>
+	</ul>
+	<p class="Normal-Indent">The Print Current Packlist option from the 
+	 Print Packlist dialog box allows you to print and view the currently 
+	 selected packlist and to store in the text format.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">As an alternate method of 
+		 specifying the Customer Order ID.</p></li>
+	</ul>
+	<p class="Normal-Indent">By specifying Packlist ID, or selecting from 
+	 the Packlists table, VISUAL automatically fills in the Order ID. This 
+	 is convenient if you know a previous ship date, because you can search 
+	 the Packlists table by date.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">To delete a packlist.</p></li>
+	</ul>
+	<p class="Normal-Indent">You can delete a bad packlist by calling it 
+	 up and clicking on the <span class="Bold">Delete</span> button.</p>
+</div>
+<p class="SeeAlsoNext"><a href="Editing_Packlists.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Editing Packlists</p>
+<p class="SeeAlsoNext"><a href="Deleting_Packlists.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Deleting Packlists</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shipping_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

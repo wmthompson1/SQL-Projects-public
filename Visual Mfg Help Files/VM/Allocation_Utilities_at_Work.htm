@@ -1,0 +1,92 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Allocation Utilities at Work</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Allocation Utilities at Work</h1>
+	</div>
+	<p class="First">The following example illustrates how the Allocation 
+	 Utility allocates supply to a customer order for which there is insufficient 
+	 stock of on-hand inventory to satisfy demand. The customer order in 
+	 this case is for 1,000 parts with an ID of MMC_FM0001_HW, a fabricated 
+	 and purchased part. The Warehouse ID for this customer order is MMC-MAIN.</p>
+	<p>If you are licensed to use multiple sites, allocations are done 
+	 on a site-by-site basis.</p>
+	<p>Part information for this example:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">There is, at the time of 
+		 order, a quantity of 383 in Warehouse MMC-MAIN.</p></li>
+		<li class="p-Bullet"><p class="Bullet">There is a purchase order 
+		 for 300 of the same parts due in on 1/10/2001.</p></li>
+		<li class="p-Bullet"><p class="Bullet">There is an unreleased work 
+		 order for 5,000 due to be released on 1/11/2001.</p></li>
+		<li class="p-Bullet"><p class="Bullet">No quantity of this part 
+		 is on hold or unavailable in warehouse MMC-MAIN.</p></li>
+	</ul>
+	<p>To begin allocating supply to this customer order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With the Allocation 
+		 utility window open, enter the Part ID in the Starting Part ID 
+		 field.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Ending Part ID 
+		 field, enter the same Part ID to constrain the scope of the Allocation 
+		 Utility’s search.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Starting Warehouse 
+		 ID field, enter the Warehouse ID of the customer order. In this 
+		 case, <span class="Bold">MMC-MAIN</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Ending Warehouse 
+		 ID field, enter the same Warehouse ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Because no quantity 
+		 of this Part ID is on hold or unavailable, leave the <span class="Bold">Inventory 
+		 Allocation</span> check boxes cleared.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the <span class="Bold">Allocate 
+		 Future Supply Orders</span> check box. Because some of this customer 
+		 order’s supply may potentially come from a purchase order that 
+		 you have not yet received into Warehouse MMC-MAIN, select this 
+		 check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Because you fabricate 
+		 this part as well as purchase it and know that there is at least 
+		 one work order for this part with an unreleased or firmed status, 
+		 select the next two check boxes.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the File menu, 
+		 select <span class="Bold">Start</span>.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Allocation Utility begins the allocation 
+	 session.</p>
+	<p class="Numbered-Indent">On the first pass, the Allocation Utility 
+	 allocates the 383 parts in inventory in MMC-MAIN to the customer order 
+	 according to the customer’s priority and the due date of the order. 
+	 Because this is the only order for this part, all 383 parts are allocated 
+	 to this order. The customer’s priority and fill rate mean nothing.</p>
+	<p class="Numbered-Indent">On the second pass, nothing occurs because 
+	 this is the only customer order for this part.</p>
+	<p class="Numbered-Indent">On the third pass, the Allocation utility 
+	 checks future supply for quantities to allocate to the customer order. 
+	 It looks for the earliest date - in the case of unreleased or firmed 
+	 work orders, the release date, or in the case of purchase orders, 
+	 the receive date.</p>
+	<p class="Numbered-Indent">Finding the purchase order with a release 
+	 date of 1/10/2004, it allocates the purchase order quantity of 300 
+	 to the customer order. Continuing to look, it finds the unreleased 
+	 work order with a release date of 1/11/2004 and an order quantity 
+	 of 5,000, and allocates the remainder to the customer order.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Allocation_Utilities.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

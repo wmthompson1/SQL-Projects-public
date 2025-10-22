@@ -1,0 +1,59 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+ 
+<title>Using Toolbar Buttons to Pass Information to Custom Applications</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using Toolbar Buttons to Pass Information to Custom Applications</h1>
+	</div>
+	<p>Any information you enter into an external application launched 
+	 from your User Toolbar is not in any way attached to or saved with 
+	 the record you are viewing. </p>
+	<p>You can pass primary key information from these windows to a third-party 
+	 external program: </p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Customer Maintenance </p></li>
+		<li class="p-Bullet"><p class="Bullet">Customer Order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Order Management Window</p></li>
+		<li class="p-Bullet"><p class="Bullet">Manufacturing Window </p></li>
+		<li class="p-Bullet"><p class="Bullet">Part Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Order Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Management Window</p></li>
+		<li class="p-Bullet"><p class="Bullet">Purchase Requisition Entry</p></li>
+		<li class="p-Bullet"><p class="Bullet">Shop Resource Maintenance</p></li>
+		<li class="p-Bullet"><p class="Bullet">Vendor Maintenance</p></li>
+	</ul>
+	<p>For example, if you are working in Customer Maintenance, you can 
+	 set up a button on the user toolbar that opens your custom program 
+	 and sends it the Customer ID from the current customer record. The 
+	 information is sent by attaching comma-delimited keys to the command 
+	 line that launches your application. In this example, this is attached 
+	 to the command line: </p>
+	<p>VM800,SYSADM,@@@@@,FLEET,,,,,,,,,</p>
+	<p>VM800 in the database name, SYSADM is the user name, the @@@@@ is 
+	 the user’s encrypted password, and FLEET is the customer ID.</p>
+	<p>The entire command line is enclosed in single quotes.</p>
+	<p>You can set up your custom application to parse the information 
+	 in the command line and extract additional information from the database.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_Toolbars.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ User Toolbars</p>
+<p class="SeeAlsoNext"><a href="Displaying_User_Toolbars.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Activating the User Toolbar Function</p>
+<p class="SeeAlsoNext"><a href="Setting_Up_User_Toolbars.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Setting Up User Toolbars</p>
+<p class="SeeAlsoNext"><a href="Setting_Up_Toolbar_Bitmaps.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Setting Up Toolbar Bitmaps</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Concepts_Common_Features.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

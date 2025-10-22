@@ -1,0 +1,83 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Enforcing Referential Integrity</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Enforcing Referential Integrity</h1>
+	</div>
+	<p class="First">VISUAL enforces referential integrity using four major 
+	 methods:</p>
+	<h2>Completion of Required Fields</h2>
+	<p class="First">Because VISUAL uses the following fields for Costing 
+	 and Burdening, they are &quot;Required&quot; fields.</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Project ID</p></li>
+		<li class="p-Bullet"><p class="Bullet">WBS Code</p></li>
+		<li class="p-Bullet"><p class="Bullet">Sub ID Ref</p></li>
+		<li class="p-Bullet"><p class="Bullet">Seq No Ref</p></li>
+		<li class="p-Bullet"><p class="Bullet">Department ID</p></li>
+	</ul>
+	<p class="First">In the following list of programs, if the user leaves 
+	 any of these fields blank, VISUAL populates the blank fields using 
+	 the default information from the project.</p>
+	<p><span class="Bold">VFAPIENT</span> - Accounts Payable Invoice Entry</p>
+	<p><span class="Bold">VFGLAWIN</span> -General Ledger Accounts Window</p>
+	<p><span class="Bold">VFGLTENT</span> - General Ledger Journal Entry</p>
+	<p><span class="Bold">VMIBTRCV</span> - Inter Branch Transfer Receipt 
+	 Entry</p>
+	<p><span class="Bold">VMINVENT</span> - Inventory Transaction Entry</p>
+	<p><span class="Bold">VMLABENT</span> - Labor Ticket Entry</p>
+	<p><span class="Bold">VMMFGWIN</span> - Manufacturing 
+	 Window</p>
+	<p><span class="Bold">VMORDENT</span> - Order Entry</p>
+	<p><span class="Bold">VMORDWIN</span> - Order Management Window</p>
+	<p><span class="Bold">VMPHYINV</span> - Physical Inventory Count</p>
+	<p><span class="Bold">VMPLNWIN</span> - Material Planning Window</p>
+	<p><span class="Bold">VMPRJJRN</span> - Project Journal Entry</p>
+	<p><span class="Bold">VMPRJMNT</span> - Project Maintenance</p>
+	<p><span class="Bold">VMPURENT</span> - Purchase Entry</p>
+	<p><span class="Bold">VMREQENT</span> - Requisition Entry</p>
+	<p><span class="Bold">VMREVREC</span> - Project Revenue Recognition</p>
+	<p><span class="Bold">VMWBSMNT</span> - WBS Maintenance</p>
+	<p><span class="Bold">VMWIPMNT</span> - Work In Process Maintenance</p>
+	<h2>Disallowing the User to Save Records</h2>
+	<p class="First">In the above programs, VISUAL does not allow you to 
+	 save a record unless an appropriate G/L Burden Map exists. This ensures 
+	 that there is always a logical data path VISUAL can use to track the 
+	 entry.</p>
+	<h2>Disallowing the User to Save Project Masters Without at Least One 
+	 WBS Code Set Up for the Project</h2>
+	<p class="First">VISUAL does not allow you to save a project without 
+	 first having set up at least one WBS code and specified it within 
+	 that project. This ensures that projects always have at least one 
+	 WBS code that VISUAL can use to track costs.</p>
+	<h2>Disallowing the Released and Firmed Statuses for Project Masters 
+	 Where the User Has Not Set Up the Appropriate Project Warehouse</h2>
+	<p>VISUAL does not allow you to save a Project Master without the appropriate 
+	 Warehouse ID. Project warehouses must have the same name as the project—if 
+	 the project warehouse does not exist when you save the project master, 
+	 VISUAL prompts you to create one.</p>
+	<p>For more information on creating project warehouses, refer to <a 
+	 href="VMPRJMNTfrmProject.htm">Entering Project Information</a>.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Application_Global_Maintenance.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="Creating_New_Projects.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Creating New Projects</p>
+<p class="SeeAlsoNext"><a href="VMPRJMNTfrmProject.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Entering Project Information</p>
+</body>
+</html>

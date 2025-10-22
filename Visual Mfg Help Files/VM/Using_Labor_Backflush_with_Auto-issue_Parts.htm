@@ -1,0 +1,46 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using Labor Backflush with Auto-issue Parts</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using Labor Backflush with Auto-issue Parts</h1>
+	</div>
+	<p class="First">Keep these behaviors in mind when you use backflush 
+	 and auto-issue parts on the same work order:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">Materials are issued to 
+		 requirements with auto-issue parts even if you do not generate 
+		 labor tickets during backflush.</p></li>
+		<li class="p-Bullet"><p class="Bullet">Labor is backflushed based 
+		 on the quantity that is specified in the transaction that generates 
+		 the backflush. For example, if a user enters a labor ticket for 
+		 a quantity of 2 on the last operation of a work order, a quantity 
+		 of 2 is backflushed. Materials are auto-issued based on the Auto 
+		 Issue Method that is specified in Site Maintenance.</p></li>
+		<li class="p-Bullet"><p class="Bullet">If you auto-generate labor 
+		 during receipt transactions and close a customer order short, 
+		 then the quantities of material requirement that are issued depend 
+		 upon the Auto Issue Method that you use. If you use the Based 
+		 on Full Remaining Req Qty on Run Complete method or the Based 
+		 on full Requirement Qty on First Labor Ticket method, then the 
+		 full quantity of material requirement is issued. If you use the 
+		 Based on Operation Qty Complete method, then a prorated quantity 
+		 is issued. </p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="Backflushing_Labor_Tickets.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Working with Backflushing</p>
+<p class="SeeAlsoNext"><a href="Auto-issue_Parts.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Auto-issue Parts</p>
+</body>
+</html>

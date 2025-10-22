@@ -1,0 +1,248 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Forecasting</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+p.hcp3 { margin-top:0;
+margin-bottom:0; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Forecasting</h1>
+	</div>
+	<p class="First">VISUAL presents each part forecast as an array (or 
+	 list) of quantities and dates.</p>
+	<table cellspacing="0" width="390">
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p><span class="Bold">Part</span></p></td>
+			<td width="42" class="hcp2"><p><span class="Bold">Fcst 
+			 ID</span></p></td>
+			<td width="30" class="hcp2"><p><span class="Bold">Jan6</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Jan13</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Jan20</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Jan27</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Feb3</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Feb10</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Feb17</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Feb24</span></p></td>
+			<td width="36" class="hcp2"><p><span class="Bold">Mar3</span></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p>A</p></td>
+			<td width="42" class="hcp2"><p>1</p></td>
+			<td width="30" class="hcp2"><p>100</p></td>
+			<td width="36" class="hcp2"><p>112</p></td>
+			<td width="36" class="hcp2"><p>131</p></td>
+			<td width="36" class="hcp2"><p>102</p></td>
+			<td width="36" class="hcp2"><p>102</p></td>
+			<td width="36" class="hcp2"><p>105</p></td>
+			<td width="36" class="hcp2"><p>150</p></td>
+			<td width="36" class="hcp2"><p>180</p></td>
+			<td width="36" class="hcp2"><p>200</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p>A</p></td>
+			<td width="42" class="hcp2"><p>2</p></td>
+			<td width="30" class="hcp2"><p>100</p></td>
+			<td width="36" class="hcp2"><p>110</p></td>
+			<td width="36" class="hcp2"><p>120</p></td>
+			<td width="36" class="hcp2"><p>130</p></td>
+			<td width="36" class="hcp2"><p>140</p></td>
+			<td width="36" class="hcp2"><p>150</p></td>
+			<td width="36" class="hcp2"><p>160</p></td>
+			<td width="36" class="hcp2"><p>170</p></td>
+			<td width="36" class="hcp2"><p>180</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p>A</p></td>
+			<td width="42" class="hcp2"><p>3</p></td>
+			<td width="30" class="hcp2"><p>150</p></td>
+			<td width="36" class="hcp2"><p>140</p></td>
+			<td width="36" class="hcp2"><p>130</p></td>
+			<td width="36" class="hcp2"><p>100</p></td>
+			<td width="36" class="hcp2"><p>120</p></td>
+			<td width="36" class="hcp2"><p>100</p></td>
+			<td width="36" class="hcp2"><p>150</p></td>
+			<td width="36" class="hcp2"><p>200</p></td>
+			<td width="36" class="hcp2"><p>100</p></td>
+		</tr>
+	</table>
+	<p>VISUAL calculates the dates by applying the PLANNING_CALENDAR information. 
+	 VISUAL supports multiple calendars. You determine the calendar in 
+	 use. VISUAL defaults to the first one entered.</p>
+	<p>VISUAL stores forecast data using a bucketless method in which the 
+	 quantity and date are stored explicitly. When the forecast appears 
+	 it must be &quot;reoriented.&quot; This causes the date-quantities 
+	 to be loaded into buckets, a virtual series of numbers. The bucket 
+	 that a given date-quantity is loaded into is determined by comparing 
+	 the date of the forecast to the date of the bucket (calculated using 
+	 the code above).</p>
+	<p>Forecasting interfaces with Forecast Pro®. Since this is an outside 
+	 package, information coming from it is subject to rules VISUAL cannot 
+	 impose. For example, the origin of the forecast you are importing 
+	 may not be the same day of the week, or the period sizes may differ. 
+	 It is primarily because of the ability to import (and export) forecasts 
+	 that we have devised a bucketless data storage method. Viewing the 
+	 data in a grid is preferable to showing it in a list, we have devised 
+	 the use of an origin and a constant period size. Anytime the bucketless 
+	 data is loaded into the grid view the dates are forced into the bucketed 
+	 framework.</p>
+	<h2>As an extreme case, consider the following array of forecast entries:</h2>
+	<table cellspacing="0" width="264">
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p><span class="Bold">Part 
+			 ID</span></p></td>
+			<td width="78" class="hcp2"><p><span class="Bold">Forecast 
+			 ID</span></p></td>
+			<td width="72" class="hcp2"><p><span class="Bold">Quantity</span></p></td>
+			<td width="66" class="hcp2"><p><span class="Bold">Date</span></p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>100</p></td>
+			<td width="66" class="hcp2"><p>1/1/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>110</p></td>
+			<td width="66" class="hcp2"><p>1/4/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p class="header">A</p></td>
+			<td width="78" class="hcp2"><p class="header">1</p></td>
+			<td width="72" class="hcp2"><p class="header">105</p></td>
+			<td width="66" class="hcp2"><p class="header">1/7/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>97</p></td>
+			<td width="66" class="hcp2"><p>1/10/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>89</p></td>
+			<td width="66" class="hcp2"><p>1/13/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>105</p></td>
+			<td width="66" class="hcp2"><p>1/16/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>115</p></td>
+			<td width="66" class="hcp2"><p>1/19/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>151</p></td>
+			<td width="66" class="hcp2"><p>1/22/04</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="48" class="hcp2"><p>A</p></td>
+			<td width="78" class="hcp2"><p>1</p></td>
+			<td width="72" class="hcp2"><p>146</p></td>
+			<td width="66" class="hcp2"><p>1/24/04</p></td>
+		</tr>
+	</table>
+	<p>In the above case, the user has imported a forecast that has a period 
+	 size of 3 days. If Infor VISUAL is setup to have a planning origin 
+	 date of January 1, 2003, period sizes as follows:</p>
+	<table cellspacing="0" width="492">
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="42" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="42" class="hcp2"><p>7</p></td>
+			<td width="48" class="hcp2"><p>7</p></td>
+			<td width="48" class="hcp2"><p>30</p></td>
+			<td width="48" class="hcp2"><p>30</p></td>
+			<td width="48" class="hcp2"><p>30</p></td>
+			<td width="48" class="hcp2"><p>30</p></td>
+			<td width="48" class="hcp2"><p>30</p></td>
+			<td width="42" class="hcp2"><p>30</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p>Part</p></td>
+			<td width="42" class="hcp2"><p>fcst ID</p></td>
+			<td width="42" class="hcp2"><p>Jan6 1997</p></td>
+			<td width="48" class="hcp2"><p>Jan13 1997</p></td>
+			<td width="48" class="hcp2"><p>Feb12 1997</p></td>
+			<td width="48" class="hcp2"><p>Mar14 1997</p></td>
+			<td width="48" class="hcp2"><p>Apr13 1997</p></td>
+			<td width="48" class="hcp2"><p>May13 1997</p></td>
+			<td width="48" class="hcp2"><p>Jun12 1997</p></td>
+			<td width="42" class="hcp2"><p>Jul12 1997</p></td>
+			<td width="48" class="hcp2"><p>Aug11 1997</p></td>
+		</tr>
+		<tr class="hcp1">
+			<td width="30" class="hcp2"><p>A</p></td>
+			<td width="42" class="hcp2"><p>1</p></td>
+			<td width="42" class="hcp2"><p>210</p></td>
+			<td width="48" class="hcp2"><p>291</p></td>
+			<td width="48" class="hcp2"><p>517</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="42" class="hcp2"><p class="hcp3">&#160;</p></td>
+			<td width="48" class="hcp2"><p class="hcp3">&#160;</p></td>
+		</tr>
+	</table>
+	<p>The presentation logic routes the misalignment in the data to the 
+	 appropriate buckets. The origin is first extended to the current date 
+	 and then subsequent dates are calculated for column headings.</p>
+	<p>This horizontal presentation allows you to view more information 
+	 at one time, and gives you the ability to compare forecasts coming 
+	 from more than one forecast ID of the part and forecasts for more 
+	 than one part at a time.</p>
+	<p>As an alternate display technique, VISUAL allows you to show the 
+	 grid using the bucketless date information, thereby ignoring the origin 
+	 and period size information normally used. The top most entry in the 
+	 grid determines the dates used in the headings. If additional forecasts 
+	 appear at the same time, they are forced to conform with the date 
+	 headings already imposed by the controlling part and forecast (i.e., 
+	 the top line).</p>
+	<p>The grid above is a standard Centura table window. The first two 
+	 columns are fixed and not scrollable. The other columns are scrollable. 
+	 The first column visible is a function of the current date. If forecast 
+	 information exists prior to the current date, it is loaded and can 
+	 be scrolled to if desired. A limit of 12 periods is imposed for data 
+	 occurring before the current date. A limit of 256 periods is imposed 
+	 for the entire grid. Centura Builder does not impose such limits. 
+	 Tests indicate that many more columns can be created dynamically, 
+	 so this limit may be increased.</p>
+</div>
+<p class="SeeAlsoNext"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"> User 
+ Defined Information</p>
+</body>
+</html>

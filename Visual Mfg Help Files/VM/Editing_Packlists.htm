@@ -1,0 +1,152 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Editing Packlists</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Editing Packlists</h1>
+	</div>
+	<p class="First">In order edit a pack-list, it must contain a copy 
+	 of every editable data item, even though the pack-list does not inherit 
+	 all items on the customer order. For example, you cannot edit the 
+	 purchase order number at the pack-list level, so it is not copied 
+	 to the purchase order when a shipment occurs. If you enter new Ship 
+	 Qty values when an existing pack-list appears, a message such as &quot;Packlist 
+	 2005 has already been shipped. Edit existing Pack-list?&quot; appears. 
+	 Answering yes allows you to edit the pack-list. Answering no prompts 
+	 VISUAL to ask you if you want to create a new pack-list. You can edit 
+	 any existing pack-list that you have not already invoiced. After you 
+	 invoice a pack-list, its status is read-only. The following rules 
+	 apply to pack-list editing:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">You can create a new 
+		 pack-list header by allowing all service charge invoices. You 
+		 must link (related) pack-lists that you add in this way to an 
+		 existing customer order. You can edit other additional data items 
+		 for this type of pack-list. You can change:</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Ship to address</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shipped date</p></li>
+	</ul>
+	<p class="Numbered-Indent">VISUAL detects if you can change the above 
+	 information by looking for lines having actual shipped parts on them 
+	 (non-null transaction IDs). If no lines are for shipped parts, you 
+	 can modify the above two items at any time before invoicing.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">You can edit the following 
+		 fields of header information in existing pack-lists:</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Ship time</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Delivery date 
+		 and time</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Additional 
+		 header specifications</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Free on board 
+		 (FOB)</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Ship via</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Sales tax 
+		 group ID</p></li>
+	</ul>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">New line items that 
+		 you add to a packlist header can be for service charges only, 
+		 and you cannot add additional shipments to a packlist.</p></li>
+		<li class="p-Numbered"><p class="Numbered">You can edit the following 
+		 fields for existing line terms for parts (transacted shipments):</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Unit price</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Discount percent</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Actual freight</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shipping weight</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Weight unit 
+		 of measure</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Carton count 
+		 and pallet count if no pallet details exist.</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">NMFC ID</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Package type</p></li>
+		<li class="p-Normal-Indent"><p class="Normal-Indent" style="margin-left: 6.00pt;">Commission 
+		 percent</p></li>
+		<li class="p-Normal-Indent"><p class="Normal-Indent" style="margin-left: 6.00pt;">Sales 
+		 tax Group ID</p></li>
+		<li class="p-Normal-Indent"><p class="Normal-Indent" style="margin-left: 6.00pt;">G/L 
+		 revenue Account ID</p></li>
+		<li class="p-Normal-Indent"><p class="Normal-Indent" style="margin-left: 6.00pt;">Additional 
+		 specifications</p></li>
+	</ul>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">You can edit the following 
+		 fields for existing lines for service charges (non-transacted 
+		 shipments):</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Quantity</p></li>
+	</ul>
+	<p class="Numbered-Indent">Note that the user has access to USER_SHIPPED_QTY 
+	 but not SHIPPED_QTY.</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Shipping U/M</p></li>
+	</ul>
+	<p class="Numbered-Indent">Note that no attempt is made to convert 
+	 USER_SHIPPED_QTY using this unit of measure since no stock unit of 
+	 measure can exist for the line (i.e., no part is specified).</p>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">Service charge 
+		 ID</p></li>
+	</ul>
+	<p class="Numbered-Indent">Service charge miscellaneous reference</p>
+	<h2>Packlist Status</h2>
+	<p>The Status field controls when the packlist can be invoiced.</p>
+	<p><span class="Bold">S</span></p>
+	<p>VISUAL creates a new packlist that has not yet been approved for 
+	 invoicing.</p>
+	<p><span class="Bold">1, 2, 3</span> - Review levels.</p>
+	<p>These values have a user-defined meaning. By specifying who can 
+	 set various statuses using Application Global Maintenance security 
+	 features, you can create an approval workflow procedure.</p>
+	<p><span class="Bold">A</span> - Approved for invoicing.</p>
+	<p>When VISUAL detects a packlist with this status, the invoice forms 
+	 program can generate an invoice for the packlist. Invoice generation 
+	 ignores packlists with other statuses other than A.</p>
+	<p>There is no status for Closed or Canceled. VISUAL does not support 
+	 canceled packlists. You may delete a packlist, which causes VISUAL 
+	 to remove all transactions that are part of that packlist. VISUAL 
+	 only allows you to delete packlists that you have not already invoiced.</p>
+	<p>When you create a new packlist, VISUAL sets a default status that 
+	 the system administrator determines in Application Global Maintenance. 
+	 To institute a reviewing procedure, the administrator should set the 
+	 default status to S, 1, 2, or 3 (any value but A) and assign specific 
+	 permissions to users that have authority to set statuses. To disable 
+	 reviewing and prevent the need to approve invoices manually, the administrator 
+	 can set the default status to A. Note that when statuses are changed 
+	 manually, the User ID making the change is recorded in STATUS_USER_ID 
+	 in the packlist header.</p>
+	<p>When an existing invoice is voided or deleted, VISUAL resets the 
+	 invoice ID, invoice date, and status of any related packlists. The 
+	 status is reset to the default value.</p>
+	<h2>User Defined Fields</h2>
+	<p>The user-defined fields related to the part on each line item are 
+	 in read-only mode during editing. Even though the default mode of 
+	 display is hidden, you can reconfigure the line item table to show 
+	 any of the user-defined fields.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Shipping_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

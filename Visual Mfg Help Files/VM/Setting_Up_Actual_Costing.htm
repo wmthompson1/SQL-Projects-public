@@ -1,0 +1,165 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Setting Up Actual Costing</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+ol.hcp1 { list-style:decimal; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Setting Up Actual Costing</h1>
+	</div>
+	<p>To set up actual costing:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In the Costing Method 
+		 section, click the Actual option.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the WIP Costing section, 
+		 click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Actual</span> – Actual 
+	 WIP values any receipts from Work In Process at the full value of 
+	 the Work Order.</p>
+	<p class="Numbered-Indent">For example, you are making 100 parts and 
+	 each part requires $1.00 of material. On the first day you issue $100 
+	 of material to the Work Order. If you finish 1 part on the first day 
+	 it will be valued at $100 – the full value of the Work Order. On the 
+	 second day, when you receive the other 99 parts, the costing utility 
+	 will re-value the receipt from previous day to $1 and share the other 
+	 $99 with the other receipts. The value of an Actual WIP costed Work 
+	 Order without any receipts is always zero.</p>
+	<p class="Numbered-Indent"><span class="Bold">Projected</span> – Projected 
+	 WIP values any receipts at the estimated unit cost based on the quantity 
+	 received and the remaining quantity to complete. For example, you 
+	 are making 100 parts and each part requires $1.00 of material. On 
+	 the first day, you issue $100 of material to the Work Order. If you 
+	 finish one part on the first day, the work order would produce a cost 
+	 of $1 for 1 part on the first day and then $1 each for the remaining 
+	 99 parts the next day. Projected WIP receipt values will never exceed 
+	 the actual cost in the job.</p>
+	<ol start="3" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the FIFO Method/Inventory 
+		 Grouping section, select how to determine first in-first out costs. 
+		 Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">By Part</span> – Click 
+	 this option to calculate costs based on the order in which you received 
+	 the part &#160;regardless of the location.</p>
+	<p class="Numbered-Indent">For example, you receive the same parts, 
+	 four times, at four prices, into these locations:</p>
+	<p class="Numbered-Indent">Day 1 Location 1 10@$1</p>
+	<p class="Numbered-Indent">Day 2 Location 2 10@$2</p>
+	<p class="Numbered-Indent">Day 3 Location 1 10@$3</p>
+	<p class="Numbered-Indent">Day 4 Location 2 10@$4</p>
+	<p class="Numbered-Indent">You then issue 15 of those parts from location 
+	 1. If you select By Part, costs are calculated as:</p>
+	<p class="Numbered-Indent">10@$1 plus 5@$2 totaling $20</p>
+	<p class="Numbered-Indent">Because you received the part at $1 first 
+	 then $2, these prices are used for By Part calculations.</p>
+	<p class="Numbered-Indent"><span class="Bold">By Part Location</span> 
+	 – Costs are calculated based on the order in which you received the 
+	 part into the location.</p>
+	<p class="Numbered-Indent">For example, you receive the same parts, 
+	 four times, at four prices, into these locations:</p>
+	<p class="Numbered-Indent">Day 1 Location 1 10@$1</p>
+	<p class="Numbered-Indent">Day 2 Location 2 10@$2</p>
+	<p class="Numbered-Indent">Day 3 Location 1 10@$3</p>
+	<p class="Numbered-Indent">Day 4 Location 2 10@$4</p>
+	<p class="Numbered-Indent">You then issue 15 of those parts from location 
+	 1. If you select By Part Location, costs are calculated as:</p>
+	<p class="Numbered-Indent">10@$1 plus 5@$3 totaling $25</p>
+	<p class="Numbered-Indent">Because FIFO is by part location, only those 
+	 parts in location 1 are used.</p>
+	<ol start="4" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use VISUAL DCMS and part trace, you can use trace IDs in your 
+		 FIFO calculations. Select the <span class="Bold">Actual Costing 
+		 by Trace ID</span> check box to issue parts based on trace ID. 
+		 For example, presume you received four Part X at $10 on trace 
+		 ID 100, then receive four more at $20 on trace ID 110. If you 
+		 issued three based on trace ID 110, the parts would be valued 
+		 at $20 each.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This check box is only active if you have 
+	 VISUAL DCMS.</p>
+	<ol start="5" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Source of Raw 
+		 Material Cost section, specify the transaction to use as the source 
+		 of costs for purchased materials. Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Purchase Orders</span> 
+	 – Select this option to use the price specified on the purchase order 
+	 as the source of raw material cost. The cost is taken from the purchase 
+	 order when you receive the part into your inventory. This option is 
+	 only preferable if you are not using VISUAL Financials.</p>
+	<p class="Numbered-Indent"><span class="Bold">A/P Invoices</span> – 
+	 Select this option to use the price paid on the A/P invoice as the 
+	 final cost for the part. When you select this option, costs are first 
+	 taken from the purchase order as an estimate, then updated from the 
+	 invoice for the purchase. This option provides a more accurate assessment 
+	 of costs. If you use VISUAL Financials, you should select this option.</p>
+	<ol start="6" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Costing Between 
+		 Levels section, specify how you want to process costs when one 
+		 fabricated part is a material requirement in another fabricated 
+		 part.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When you fabricate a part, costs are incurred 
+	 in all four cost categories: material, labor, burden, and service. 
+	 When you use a fabricated part as a material requirement, you can 
+	 combine the four cost categories and use the total as the material 
+	 cost of the requirement, or you can keep each cost category separate.</p>
+	<p class="Numbered-Indent">Choose one of these options:</p>
+	<p class="Numbered-Indent"><span class="Bold">Fold to Material Cost</span> 
+	 – If you select this option, the Material, Labor, Burden, and Service 
+	 cost of an internally fabricated part are summed into the material 
+	 cost when it is required in another fabricated part. The entire cost 
+	 is of the requirement is counted as material cost.</p>
+	<p class="Numbered-Indent"><span class="Bold">Keep Separate Costs</span> 
+	 – If you select this option, the Material, Labor, Burden, and Service 
+	 costs of an internally manufactured material requirement contribute 
+	 to those individual categories in parent assemblies.</p>
+	<ol start="7" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Burden Basis 
+		 section, select the basis you want to use when calculating burden 
+		 rates. Click one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Determined By Resource 
+	 Burden</span> – Click this option to calculate burdens based on the 
+	 rates you enter for the resource. You cannot override these rates 
+	 on the work order’s operation card.</p>
+	<p class="Numbered-Indent"><span class="Bold">Determined By Operational 
+	 Burden</span> – Click this option to calculate burdens based on the 
+	 rates you enter on the work order’s operation card. This can be useful 
+	 if you want to periodically update your burden costs at the resource 
+	 level without affecting current work orders.</p>
+	<ol start="8" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">In the Receipt Exchange 
+		 Rate section, specify the date to use to determine the exchange 
+		 rate applied to purchased goods. Select one of these options:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Use Receiver Date</span> 
+	 – Select this option to apply the exchange rate as of the date the 
+	 purchased goods are received.</p>
+	<p class="Numbered-Indent"><span class="Bold">Use Invoice Date</span> 
+	 – Select this option to apply the exchange rate as of the date of 
+	 the invoice. The invoice date is either the date specified on the 
+	 transaction or the current date, depending on your setting in the 
+	 Effective Exchange Rate date section on the General tab.</p>
+	<ol start="9" class="hcp1">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+	</ol>
+</div>
+</body>
+</html>

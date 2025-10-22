@@ -1,0 +1,230 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Importing CSH (Cash Receipts) Transactions</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+span.hcp1 { font-style:italic; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Importing CSH (Cash Receipts) Transactions</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">In Cash, Bank Account 
+		 Maintenance, create a bank account record and be sure to assign 
+		 the Account No. and Routing No. fields that you will be importing.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In Ledger, Currency 
+		 Exchange Rate Maintenance, Edit, Currency Maintenance, enter an 
+		 ISO Code for your Currency ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In Ledger, Currency 
+		 Exchange Rate Maintenance, Edit, Currency Maintenance, enter a 
+		 Rounding account for your Currency ID.</p></li>
+		<li class="p-Numbered"><p class="Numbered">As a verification step 
+		 (optional), you can go into Receivables&gt;Cash Application and 
+		 select your customer via the Customer ID button - you should see 
+		 your invoices listed with the correct invoice amounts.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Now it is time to create 
+		 the VMDI Layout. You will have to do this once per database for 
+		 each customer (or customers). If you have more than one customer 
+		 sending you a layout containing the exact same fields, then you 
+		 may use the same layout for those customers. However, if a customer 
+		 is using one different field, then we recommend that you create 
+		 a separate layout for that customer.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Your EDI Trading Partner 
+		 (i.e. the company that will be sending you 820 Remittance Advice 
+		 Cash Receipts via EDI) should have provided your EDI Mapper with 
+		 a list of fields that they will be transmitting to you. The Mapper 
+		 would then have gone into VMDI Generate and created a VMDI layout. 
+		 The field locations listed in the layout would have been used 
+		 by the Mapper to create an EDI translation map that will be used 
+		 to translate the inbound 820 EDI data into a file that can be 
+		 imported into VISUAL.</p></li>
+	</ol>
+	<p class="Numbered-Indent">A sample 820 EDI document looks something 
+	 like this:</p>
+	<p class="Numbered-Indent"><span class="hcp1">ISA~00~EDS33-EFT 
+	 ~00~EDS33-EFT ~ZZ~EDS33-EFT ~ZZ~189999806 ~000317~0134~U~00200~000000129~0~P~@*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">GS~RA~EDS33-EFT~189999806~000317~013446~129~X~003030*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">ST~820~000000001*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">BPR~I~970~C~ZZZ~~~~~~9GM-DELUSD~~01~099000261~~1554754~000317*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">TRN~1~ACS030314787*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">CUR~PR~USD*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">REF~IT~00189999806*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">N1~PE~DOWTY 
+	 ORINGS NORTH AMERIC*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">N2~ATTN: 
+	 ACCOUNTS RECEIVABLE*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">N3~AKA 
+	 DOWTY POLYMERS INC~ 4275 ARCO LN*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">N4~NORTH 
+	 CHARLESTON~SC~29418*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">N1~PR~DELPHI 
+	 AUTOMOTIVE SYSTEMS*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">ENT~1*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">RMR~BM~P04277~~970~970*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">REF~OI~P04277I38992371*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">REF~PO~~P04277 
+	 SAG90I1564*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">REF~PE~K9~DELPHI 
+	 SAGINAW HQTRS*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">DTM~003~000105*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">IT1~00000000001~50000~PC~.0194~~PU~26001594 
+	 001*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">SE~18~000000001*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">GE~1~129*</span></p>
+	<p class="Numbered-Indent"><span class="hcp1">IEA~1~000000129*</span></p>
+	<p class="Numbered-Indent">An example VMDI CSH layout contains the 
+	 following (Note: Please read the sections in the VMDI Users Manual 
+	 concerning the VMDI Generate and Exchange programs prior to first 
+	 use):</p>
+	<p class="Numbered-Indent">Key: CSH</p>
+	<p class="Numbered-Indent">Version: 0001</p>
+	<p class="Numbered-Indent">Description: CSH Test</p>
+	<p class="Numbered-Indent">File Type: Single</p>
+	<p class="Numbered-Indent">File Style: Fixed</p>
+	<p class="Numbered-Indent">Direction: Inbound</p>
+	<p class="Numbered-Indent">Header fields:</p>
+	<p class="Numbered-Indent">RECTYPE, CUSTOMER_ID, CHECK_ID, ACCOUNT_NO, 
+	 ROUTING_NO, CHECK_DATE, ISO_CURRENCY_CD, ENTITY_ID, AMOUNT</p>
+	<p class="Numbered-Indent">Line Item fields:</p>
+	<p class="Numbered-Indent">RECTYPE, CUSTOMER_ID, CHECK_ID, LINE_NO, 
+	 INVOICE_ID, AMOUNT</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Create Customer Orders 
+		 in Customer Order Entry, ship them via Shipping Entry, and then 
+		 invoice them via Receivables&gt;Invoice Forms</p></li>
+		<li class="p-Numbered"><p class="Numbered">Create your VMDI layout 
+		 by launching EDI&gt; VMDI Generate and creating the layout per 
+		 the fields provided to you by your EDI Mapper</p></li>
+	</ol>
+	<p class="Numbered-Indent">Now you are ready to use VMDI. First, you 
+	 will need to receive 820 EDI transactions into your EDI Mapping Translation 
+	 software and translate the data into a CSH0001.VDI file (in our example 
+	 here). Make note of the directory to which the map is writing the 
+	 file – you will need that knowledge when running VMDI Exchange.</p>
+	<ol start="9">
+		<li class="p-Numbered"><p class="Numbered">Once you have you CSH0001.VDI 
+		 file (a text file), and have created your VMDI layout in VMDI 
+		 Generate as in the example layout above, you are ready to run 
+		 the file through the VMDI Exchange program.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Launch EDI&gt;VMDI Exchange, 
+		 select your key and version, type in the Directory where the CSH0001.VDI 
+		 file (in our example) is stored, and click the Exchange button.</p></li>
+		<li class="p-Numbered"><p class="Numbered">The Exchange performed 
+		 in step 10 should have produced a Result Dialog at the end telling 
+		 you how many headers and records were inserted or updated and 
+		 if any errors were encountered. Logs are produced in the directory 
+		 where your VDI file is stored with the same name as your file, 
+		 for instance:</p></li>
+	</ol>
+	<p class="Numbered-Indent">CSH0001.XML is your error log and CSH0001G.XML 
+	 lists the details of all records inserted, updated, or rejected</p>
+	<ol start="12">
+		<li class="p-Numbered"><p class="Numbered">When running VMDI Exchange 
+		 for a CSH import, the program does not actually update the VISUAL 
+		 database directly but instead writes to the temporary database 
+		 tables: VMDI_CSH_HDR and VMDI_CSH_LINE. The transactions are written 
+		 to these tables with a Pending flag set to &quot;P&quot; – indicating 
+		 that the transactions have not yet been imported into VISUAL. 
+		 To import them into VISUAL, you will need to run the VMDI Cash 
+		 Applications Processor. Note: Prior to your VMDI Exchange import, 
+		 you have the ability to go into VMDI Exchange&gt;Options&gt;Flush 
+		 Temporary Cash Tables to wipe clean those two tables of previously 
+		 imported transactions. After each transaction is processed into 
+		 VISUAL, the pending flag is changed and the program will not import 
+		 it again. As such older transactions in the tables should not 
+		 interfere with future imports. However, since some users will 
+		 be processing large volumes of transactions, users may want flush 
+		 out these two tables on a regular basis.</p></li>
+		<li class="p-Numbered"><p class="Numbered">The VMDI Cash Applications 
+		 Processor (Processor) is accessed from the EDI menu. The processor 
+		 allows the user to either process all transactions in the VMDI_CSH_HDR 
+		 and VMDI_CSH_LINE tables based on a timer setting, or individually. 
+		 Timer options are set via Timer Options&gt;Set Timer Period. You 
+		 are able to enter a process interval, select to have the program 
+		 started automatically with the timer on, or have the program create 
+		 logs (Recommended). The program will create one log per pending 
+		 record (i.e. per Header record from your VDI file). With the Timer 
+		 Off, you can process individual records from the menu by highlighting 
+		 the header (and its associated line items) and selecting File&gt;Process 
+		 Selected Row.</p></li>
+		<li class="p-Numbered"><p class="Numbered">The VMDI Cash Applications 
+		 Processor will launch the VISUAL Cash Application program for 
+		 each record processed. The processed records are viewable from 
+		 the Completed Transactions tab of the Processor. You are now able 
+		 to launch Receivables&gt;Cash Application, select your Payment 
+		 ID and you should see that the payments were applied to your invoices.</p></li>
+		<li class="p-Numbered"><p class="Numbered">As long as you have 
+		 chosen to have the program create logs (recommended), then in 
+		 the event that the Processor encounters an error, it will write 
+		 that information to an error log to let user know what it did 
+		 – the log is named VFCSHERROR.LOG and is stored in the directory 
+		 where your ini files are located. You should make it part of your 
+		 normal procedures to Always look at that error log after each 
+		 import run with the Processor. The Processor will also create 
+		 one log per pending record (Header record from your VDI file), 
+		 so you may also want to monitor the size of these files and take 
+		 appropriate action (i.e. copy them to backup tape, and delete 
+		 them from here).</p></li>
+	</ol>
+	<p>Example from the VFCSHERROR.LOG are listed below:</p>
+	<p>CSH Transaction Error Record generated on 6/11/01-4.28.18 PM</p>
+	<p>Database=SS862, User ID=SYSADM, Application ID=VFDICSH, Version=6.2.5.016, 
+	 DB: MS SQLSERVER</p>
+	<p>Pending ID= 1</p>
+	<p>Header Amount not equal to Sum of Line Amounts, for Customer: FINMAN, 
+	 Check ID: 507654350 with Amount: 800.00</p>
+	<p>&#160;</p>
+	<p>CSH Transaction Error Record generated on 6/14/01-3.25.35 PM</p>
+	<p>Database=SS862, User ID=SYSADM, Application ID=VFDICSH, Version=6.2.5.016, 
+	 DB: MS SQLSERVER</p>
+	<p>Pending ID= 3</p>
+	<p><span style="font-size: 9pt;">Customer ID: FINMAN; Invoice ID: IV-06509AR; 
+	 Available Invoice Amount: 254.36; Payment Amount: 300.00; Reason Code: 
+	 Unallocated for Overpayment condition.</span></p>
+	<p>&#160;</p>
+	<table style="margin-left: 18.00pt;" cellspacing="0" width="392">
+		<tr style="vertical-align: top;">
+			<td width="72" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="320" class="hcp2"><p>If the Amount listed 
+			 in the HDR record of your CSH VDI file does not match the 
+			 sum of the amounts in the LIN records associated with that 
+			 HDR, then that transaction is not processed into VISUAL. The 
+			 user needs to diagnose the reason for the discrepancy.</p>
+			<p>If the LIN amount in the VDI file is greater than the payment 
+			 balance of the invoice amount in VISUAL , then the transaction 
+			 the Amount from the LIN is created as an unapplied credit 
+			 memo for the customer. The user needs to diagnose the reason 
+			 for the discrepancy and manually apply as necessary.</p>
+			<p>All processed transactions will appear in the Cash Application 
+			 program with a payment method of &quot;Export&quot; but will 
+			 be otherwise indistinguishable from manually entered transactions.</p></td>
+		</tr>
+	</table>
+	<p>&#160;</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Interchange.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

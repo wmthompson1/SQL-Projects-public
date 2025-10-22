@@ -1,0 +1,68 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Analyzing Data before Importation</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Analyzing Data before Importation</h1>
+	</div>
+	<p class="First">The Analyze Data function helps debug import files. 
+	 When you use this function, VDIU reads the tab-delimited import file 
+	 and parses the data in each record and assigns a token (placeholder 
+	 or array value) to each piece of data. VDIU aligns each piece of data 
+	 with the associated field and displays the length of each data item. 
+	 Tokens that show a 0 (zero) length indicate that VDIU found no data 
+	 even though the record does contain a &lt;tab&gt; as a place holder 
+	 to intentionally skip the field. Tokens that show a NULL value indicate 
+	 that the record was not complete. This is an acceptable condition 
+	 as long as all required fields are found. When VDIU analyzes data 
+	 it does NOT import it; VDIU only interprets the data.</p>
+	<table cellspacing="0" width="372">
+		<tr style="vertical-align: top;">
+			<td width="36" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="336" class="hcp1"><p>The analyze function 
+			 does not validate data or populate default information.</p></td>
+		</tr>
+	</table>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">From the File menu of 
+		 the VISUAL Data Import Utility, select <span class="Bold">Analyze 
+		 Input Data</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Using the search dialog 
+		 box that appears, locate the text file that contains the information 
+		 you are importing. After you have located and opened it, the text 
+		 file appears for your review.</p></li>
+	</ol>
+	<p class="Numbered-Indent">You can pint analysis information by clicking 
+	 the <span class="Bold">Print</span> button.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Ok</span> 
+		 button when you are finished viewing the input data.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Data_Import_Utility.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

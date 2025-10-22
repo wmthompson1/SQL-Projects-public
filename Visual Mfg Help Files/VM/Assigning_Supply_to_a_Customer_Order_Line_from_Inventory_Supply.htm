@@ -1,0 +1,162 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Assigning Supply to a Customer Order Line from Inventory Supply</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Assigning Supply to a Customer Order Line from Inventory Supply</h1>
+	</div>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">With the appropriate 
+		 order open, highlight the customer order line to which you want 
+		 to assign inventory supply and select <span class="Bold">Assign 
+		 Supply to Customer Order Line</span> from the Edit menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Supply Links dialog box appears.</p>
+	<p class="Numbered-Indent">The following information appears in the 
+	 header section of the Supply Links dialog box.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order ID/Line #</span> 
+	 - The Order ID of the current customer order; the line number, as 
+	 it appears in the Customer Order ID, of the customer order line to 
+	 which you are assigning supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Order Qty</span> - The 
+	 order quantity of the customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Shipped Qty</span> - 
+	 The quantity of the customer order line that you have shipped. Unless 
+	 you have performed a partial shipment for this line and chosen to 
+	 keep the order open with a balance pending possible future shipments, 
+	 this value is zero for new customer orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Allocated Qty</span> 
+	 - The portion of the Order Qty to which you have allocated supply. 
+	 Before you establish any links of supply, this value is zero.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fulfilled Qty</span> 
+	 - The allocated quantity that has been fulfilled by the supplying 
+	 source.</p>
+	<p class="Numbered-Indent"><span class="Bold">Remaining Qty</span> 
+	 - The quantity to which you have yet to assign supply. Before you 
+	 establish any links of supply, this quantity is equal to the Order 
+	 Quantity of the line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part ID</span> - The 
+	 ID of the part on the customer order line. This is the part for which 
+	 you are attempting to obtain supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Part Description</span> 
+	 - A description of the part from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Stock U/M</span> - The 
+	 stock unit of measure of the part from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Selling U/M</span> - 
+	 The selling unit of measure of the part from Part Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Warehouse ID</span> - 
+	 The Warehouse ID of the customer order line. Without Warehouse IDs, 
+	 you cannot assign supply to customer order lines. Unless you specify 
+	 otherwise, this is the customer’s default primary warehouse. Specify 
+	 a warehouse other than the customer’s default primary warehouse during 
+	 the entry of the order by double-clicking the <span class="Bold">&lt;Warehouse 
+	 ID&gt;</span> column header for each customer order line.</p>
+	<p class="Numbered-Indent"><span class="Bold">Desired Ship Date</span> 
+	 - The order’s desired ship date, or the date on which shipment to 
+	 the customer is most ideal. Enter a Desired Ship Date during the entry 
+	 of the customer order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Promise Date</span> - 
+	 The date by which you promise the customer you will have fulfilled 
+	 the order and prepared it for shipping. Enter a Promise Date during 
+	 the entry of the customer order.</p>
+	<ol start="2">
+		<li class="p-Numbered"><p class="Numbered">Click the <span class="Bold">Insert</span> 
+		 button to begin establishing demand links to the current customer 
+		 order line.</p></li>
+		<li class="p-Numbered"><p class="Numbered">From the Type list box, 
+		 select <span class="Bold">I</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Double-click <span class="Bold">&lt;Supply 
+		 Base ID&gt;</span> to search for qualifying inventory supply.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Warehouses dialog box appears.</p>
+	<p class="Numbered-Indent">The line item table contains the following 
+	 columns:</p>
+	<p class="Numbered-Indent"><span class="Bold">Available Quantity</span> 
+	 - Quantity of the selected part that is currently available at the 
+	 warehouse. Allocation to orders from inventory decreases this quantity, 
+	 acknowledgment of a receipt increases this quantity, and adjustments 
+	 to stock may either increase or decrease this value.</p>
+	<p class="Numbered-Indent"><span class="Bold">Committed Quantity</span> 
+	 - Quantities of parts that you have committed through allocation. 
+	 As this value increases, the Available Quantity decreases. Though 
+	 these parts may still be in the warehouse, they are &quot;committed&quot; 
+	 as supply.</p>
+	<p class="Numbered-Indent"><span class="Bold">Expected Quantity</span> 
+	 - Quantities of parts that you expect to receive from purchase orders, 
+	 purchase order delivery schedules, interbranch transfers, and work 
+	 orders.</p>
+	<p class="Numbered-Indent"><span class="Bold">Expected Committed Quantity</span> 
+	 - Quantities of parts that you expect to receive from purchase orders, 
+	 purchase order delivery schedules, interbranch transfers, and work 
+	 orders that you have already committed through allocation.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Select the warehouse 
+		 from which you want to draw supply and click the <span class="Bold">Ok</span> 
+		 button.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The Warehouse’s Available Quantity appears 
+	 in the Supply Unallocated Column of the Supply Links dialog box line 
+	 item table.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">In the Assign Quantity 
+		 column, enter the quantity that you want to allocate from the 
+		 available inventory supply to the customer order line.</p></li>
+	</ol>
+	<p class="Numbered-Indent">This quantity cannot be greater than the 
+	 Supply Unallocated Quantity of the warehouse, or the Remaining Quantity 
+	 to Assign of the customer order line.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 to commit the allocation of supply from inventory to the customer 
+		 order line.</p></li>
+	</ol>
+	<h2>Viewing Inventory Allocation Information for a Customer Order Line 
+	 Item</h2>
+	<p class="First">After you have either fully or partially allocated 
+	 supply to a customer order line item using the preceding procedures, 
+	 you can view allocation information on the customer order line.</p>
+	<p class="SeeAlsoNext">For each customer order line item that has inventory 
+	 supply allocated to it, the following appears:</p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there is only one link of inventory supply, I appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Supply Type column, 
+		 if there are multiple links of inventory supply, nothing appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is only one link of inventory supply, 
+		 the appropriate supplying Warehouse ID appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the &lt;Job ID&gt;/&lt;Order 
+		 ID&gt; column, if there is more than one link of inventory supply, 
+		 Multiple Links appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Total Qty Allocated 
+		 column, the total quantity of parts that you have allocated to 
+		 the customer order line appears.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Job Qty Unallocated 
+		 column, if there is only one supplying inventory link, the amount 
+		 that is still available in that warehouse for allocation appears. 
+		 The Supply Quantity is subtracted from the Supply Unallocated 
+		 Quantity in the warehouse to arrive at this value.</p></li>
+		<li class="p-Bullet"><p class="Bullet">In the Job Qty Unallocated 
+		 column, if there is more than one supplying inventory link, nothing 
+		 appears.</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Customer_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

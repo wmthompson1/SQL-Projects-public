@@ -1,0 +1,126 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Netting By Required Date</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+
+<style title="hcp" type="text/css">
+<!--
+td.hcp1 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Netting By Required Date</h1>
+	</div>
+	<p class="First">Select <span class="Bold">Net By Required Date</span> 
+	 from the <span class="Bold">View</span> menu to sequence demand and 
+	 supply orders together by Date Required and Due Date. They are only 
+	 aligned if they fall on the same date.</p>
+	<p>Netting by required date produces a picture of available quantity 
+	 on each consecutive date. Exceptions indicate if a stockout or overstock 
+	 condition exists on a given date, and suggest dates to release new 
+	 supply orders.</p>
+	<p>You may find netting by required date easier to work with for materials 
+	 that you maintain as inventory and issue as needed, because the focus 
+	 is on each day’s total projected on-hand quantity versus demand.</p>
+	<h2>Projected Quantity for Netting by Required Date</h2>
+	<p>This is the projected on-hand quantity at the &quot;end of the day,&quot; 
+	 after all supplies have been received and demands have been met.</p>
+	<h2>Exceptions for Netting by Required Date</h2>
+	<p>When multiple supply and demand orders fall on the same date, you 
+	 need only pay attention to the last exception for that date, since 
+	 it applies to the final projected quantity for that date.</p>
+	<p><span class="Bold">Overstock</span> - Projected Quantity for the 
+	 date is greater than or equal to the total Required Quantities of 
+	 all demand orders, if any, for the same date. The day will end with 
+	 a surplus of stock.</p>
+	<p><span class="Bold">Stockout</span> - Projected Quantity for the 
+	 date is less than the total Required Quantities of all demand orders 
+	 for the same date. Or, there are no demand orders and the Projected 
+	 Quantity is zero or negative.</p>
+	<p><span class="Bold">Rel. Upcoming / Rel. Now / Rel. Past Due</span> 
+	 - VISUAL is suggesting a release date for a new supply order due on 
+	 this date, because the projected balance for the current date isn’t 
+	 sufficient to meet the demand order for the date. These messages indicate 
+	 that the suggested release date is close at hand, or already passed.</p>
+	<p>Rel. Past Due indicates that the suggested release date has already 
+	 passed. Rel. Now indicates that the suggested release date is the 
+	 current date. Rel. Upcoming indicates the suggested release date is 
+	 within 3 days from the current date.</p>
+	<p>If suggested release date is more than 3 days away, the Stockout 
+	 exception message is used.</p>
+	<p><span class="Bold">Order Late</span> - The Due Date of the supply 
+	 order is earlier than the current date. The order is late. This exception 
+	 only appears for supply orders with no aligned demand orders. This 
+	 overrides any other exception that might be shown for the order.</p>
+	<h2>Suggested Release Date</h2>
+	<p>When there is a demand on this line that the planned supply cannot 
+	 meet, VISUAL presents a suggested release date of a supply order to 
+	 meet the demand. This is done by subtracting the Lead Time for the 
+	 part (purchased or fabricated) from the required date for the demand.</p>
+	<p>For a purchase order, this is the date you should place the order 
+	 for the part. For a work order, this is the date the order should 
+	 be released.</p>
+	<p>Suggested Release Date uses the part lead time to back off a release 
+	 date for a work order. You should consider this when setting the lead 
+	 time for a fabricated part. The Global Schedule is not examined to 
+	 determine whether the lead time can be met with the currently planned 
+	 shop load. If you choose to place a work order based on this date, 
+	 you should then use Check Availability in the Manufacturing Window 
+	 to assess whether this produces a finish date that will meet the demand 
+	 requirement date. You should then use Schedule Current Work Order, 
+	 or run the Global Scheduler, to add the new work order into the schedule.</p>
+	<table cellspacing="0" width="342">
+		<tr style="vertical-align: top;">
+			<td width="36" class="hcp1"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="306" class="hcp1"><p>This field applies 
+			 to both types of netting, MRP and by-date.</p></td>
+		</tr>
+	</table>
+	<h2>Modifying Supply Orders</h2>
+	<p>You can change three fields for supply orders. This makes it easy 
+	 to adjust orders without having to open Purchase Order Entry or the 
+	 Manufacturing Window<span style="letter-spacing: -0.75pt;">.</span> 
+	 Keep in mind that these actually change the purchase order or work 
+	 order.</p>
+	<p><span class="Bold">Due Date</span> - This modifies the Desired Recv 
+	 Date of the purchase order line item, or the Want Date of the Work 
+	 Order.</p>
+	<p><span class="Bold">Release Date</span> - This modifies the Order 
+	 Date of the purchase order, or the Release Date of the Work Order.</p>
+	<p><span class="Bold">Status</span> - This modifies the status of either 
+	 order. Valid status values are:</p>
+	<p>&#160;U&#160;Unreleased (Work Orders Only)</p>
+	<p>&#160;F&#160;Firm</p>
+	<p class="header">&#160;R&#160;Released</p>
+	<p class="header">&#160;C&#160;Closed</p>
+	<p>&#160;X&#160;Canceled</p>
+	<p>To modify the fields, make the changes as necessary, then click 
+	 <span class="Bold">Save</span>. The screen automatically refreshes 
+	 to show the results of the change.</p>
+	<p>You can not modify these fields for a planned order generated by 
+	 MRP. You must make it into an actual order first, using the <span 
+	 class="Bold">Firm/Release Planned Order</span> command from the <span 
+	 class="Bold">Edit</span> menu.</p>
+</div>
+<p class="SeeAlsoNext"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"> User 
+ Defined Information</p>
+</body>
+</html>

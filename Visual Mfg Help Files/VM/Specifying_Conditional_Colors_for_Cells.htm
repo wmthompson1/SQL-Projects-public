@@ -1,0 +1,99 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Conditional Colors for Cells</title>
+<link rel="stylesheet" href="vm.css" type="text/css">
+</head>
+
+<body><a name="642b3b9347ca42c9b00b820c00c373fa=1"></a>
+<script type="text/javascript" src="ehlpdhtm.js"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Specifying Conditional Colors for Cells</h1>
+	</div>
+	<p>To set up conditional colors, you must first create hidden column 
+	 SQL statements that contain the conditions that must be met. Then, 
+	 you associate the hidden column with a visible column in your data 
+	 source.</p>
+	<ol start="1">
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">File</span>, 
+		 <span class="Bold">Dashboard</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Edit</span>, 
+		 <span class="Bold">Edit Data Source</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Data Source ID 
+		 field, select the data source.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Create column SQL Statements 
+		 that contain the conditions. If you want to specify a color for 
+		 both the cell background and the cell text, you must create two 
+		 column SQL statements. </p></li>
+		<ol start="1">
+			<li class="p-Numbered" style="list-style: lower-alpha;"><p 
+				 class="Numbered">Click <span class="Bold">Insert</span>.</p></li>
+			<li class="p-Numbered" style="list-style: lower-alpha;"><p 
+				 class="Numbered">Specify this information:</p></li>
+		</ol>
+		<p class="DoubleIndent"><span class="Bold">Column Name</span>&#160;– 
+		 Specify a name to use for the column. The name that you specify 
+		 is replaced with the SQL statement when the query is constructed.</p>
+		<p class="DoubleIndent"><span class="Bold">Visible</span>&#160;– 
+		 Clear the visible check box. </p>
+		<p class="DoubleIndent"><span class="Bold">Data Type</span> – Specify 
+		 String</p>
+		<ol start="3">
+			<li class="p-Numbered" style="list-style: lower-alpha;"><p 
+				 class="Numbered">In the Column SQL field, specify the 
+			 SQL statement to use in place of the column name. Specify 
+			 the condition that must be met and the RGB value of the color 
+			 to use. For example, if your data source contains the vr.ORDER_QTY 
+			 column, you could write this statement to show orders with 
+			 a quantity greater than 100 in a different color:</p></li>
+		</ol>
+	</ol>
+	<p class="DoubleIndent">(case when vr.ORDER_QTY &gt; 100 then ‘255,0,0’ 
+	 else ‘’ end)</p>
+	<ol>
+		<ol start="4">
+			<li class="p-Numbered" style="list-style: lower-alpha;"><p 
+				 class="Numbered">Click <span class="Bold">Save</span>.</p></li>
+		</ol>
+	</ol>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Select the row that 
+		 contains the column where you want to apply the conditional color. 
+		 For example, if you created the SQL statement in step 4C, you 
+		 would select the row that contains the vr.ORDER_QTY column.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Edit 
+		 Colors</span>.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Background section, 
+		 click <span class="Bold">Column</span>, and then select the column 
+		 that contains the SQL statement that you wrote for the background 
+		 column color.</p></li>
+		<li class="p-Numbered"><p class="Numbered">In the Text section, 
+		 click <span class="Bold">Column</span>, and then select the column 
+		 that contains the SQL statement that you wrote for the text color.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span>. 
+		 </p></li>
+	</ol>
+	<p><span class="Bold">Next steps: </span></p>
+	<ul>
+		<li class="p-Bullet"><p class="Bullet">To add a filter that is 
+		 always applied to the data source, see <a href="Filtering_the_Data_Source.htm">Filtering 
+		 the Data Source</a>.</p></li>
+		<li class="p-Bullet"><p class="Bullet">If you are finished building 
+		 the data source, see <a href="Viewing_the_Query.htm">Viewing the 
+		 Query</a>.</p></li>
+	</ul>
+</div>
+<p class="SeeAlsoNext"><a href="Custom_Metrics.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Custom Metrics</p>
+<p class="SeeAlsoNext"><a href="Creating_Data_Sources.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ Creating Data Sources</p>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_File_Menu.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+</body>
+</html>

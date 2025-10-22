@@ -1,0 +1,217 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Editing a Purchase Order</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+<style title="hcp" type="text/css">
+<!--
+tr.hcp1 { vertical-align:top; }
+td.hcp2 { padding-left:1px;
+padding-top:1px;
+padding-right:1px;
+padding-bottom:1px; }
+ol.hcp3 { list-style:decimal; }
+span.hcp4 { font-weight:bold; }
+-->
+</style>
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+
+<div id="content">
+	<div id="banner">
+		<h1>Editing a Purchase Order</h1>
+	</div>
+	<p class="First">If no receipts have been made for a purchase order, 
+	 you can edit any field on the order, including adding and deleting 
+	 purchase order lines. If an order is closed, you may be prompted to 
+	 reopen the order before saving changes.</p>
+	<p>If receipts have been made for a purchase order, then your ability 
+	 to edit the order depends upon whether the Prevent edit of PO after 
+	 receipt check box is selected for the vendor in Vendor Maintenance. 
+	 <a href="VMVNDMNTfrmVendor.htm">See Adding Vendors</a>.</p>
+	<p>If the Prevent edit of PO after receipt check box is selected for 
+	 the vendor, then you cannot edit any information on the purchase order 
+	 after a receipt has been made. Even if all receipts for the order 
+	 have been returned, you cannot edit the order if the Prevent edit 
+	 of PO receipt check box has been selected for the vendor.</p>
+	<p>If the Prevent edit of PO after receipt check box is cleared for 
+	 the vendor, then you can edit certain information on the order. You 
+	 can edit this information:</p>
+	<p>To edit a purchase order:</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the <span class="Bold">Site ID</span> 
+		 arrow and select the site from which the customer is buying items. 
+		 If you are licensed to use a single site, this field is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Call the Purchase Order 
+		 you want to edit into the Purchase Order Entry window.</p></li>
+	</ol>
+	<table style="margin-left: 36px;" cellspacing="0" width="372">
+		<tr class="hcp1">
+			<td width="60" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="312" class="hcp2"><p>Purchase Order Entry 
+			 can detect if receipts have been made against this PO. If 
+			 no receipts have been made, you can edit all information except 
+			 the Our Order ID. This field is the unique specifier for the 
+			 PO; changing it creates a new purchase order.</p>
+			<p>You can use Purchase Receipt Entry to see if receipts exist 
+			 for a purchase order. You can use the Receiver ID table to 
+			 search for receivers against the purchase order ID in question. 
+			 In general, you can tell whether receivers exist by using 
+			 Purchase Order Entry.</p></td>
+		</tr>
+	</table>
+	<ol start="3" class="hcp3">
+		<li class="p-Numbered"><p class="Numbered">Make changes.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="hcp4">Header</span> 
+	 – You can change all fields in the purchase order header.</p>
+	<p class="Numbered-Indent" style="margin-left: 80px;">If you change 
+	 the Vendor ID after receipt (to correct a wrongly specified vendor), 
+	 the receiving paperwork is changed to show the receipt from the new 
+	 vendor. If you return the material and then purchase it from a different 
+	 vendor, you should use the Return feature of Purchase Receipt Entry.</p>
+	<p class="Numbered-Indent" style="margin-left: 80px;">If you change 
+	 the Vendor ID to a vendor that does not allow purchase orders to be 
+	 edited after receipts are made, then you cannot edit any other information 
+	 on the order.</p>
+	<table style="margin-left: 76px;" cellspacing="0" width="372">
+		<tr class="hcp1">
+			<td width="60" class="hcp2"><p><img src="POSTIT.gif" alt="POSTIT.gif" title="POSTIT.gif" width="25" height="25" border="0"></p></td>
+			<td width="312" class="hcp2"><p class="Numbered-Indent">Change 
+			 the Vendor ID only after receipt to correct a wrongly specified 
+			 vendor. If you receive material from one vendor and then change 
+			 the Vendor ID, the receiving paperwork shows the receipt from 
+			 the new vendor. If you return the material and then purchase 
+			 it from a different vendor, you should use the Return feature 
+			 of Purchase Receipt Entry.</p></td>
+		</tr>
+	</table>
+	<p class="Numbered-Indent"><span class="hcp4">PO lines</span> 
+	 – You can edit this information:</p>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a1">Quantity</a></p>
+	<div class="droptext" id="POPUP628137163" style="display: none;">
+		<p>This allows you to make adjustments after you receive a material: 
+		 you may want to increase the order quantity without creating a 
+		 new purchase order. You cannot enter a quantity less than the 
+		 amount you received.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a2">Vendor 
+	 Part ID</a></p>
+	<div class="droptext" id="POPUP628227855" style="display: none;">
+		<p>Unit Price and U/M are automatically updated if a cross-reference 
+		 exists for the current Part ID and Vendor ID.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a3">Unit 
+	 of Measure</a></p>
+	<div class="droptext" id="POPUP628279853" style="display: none;">
+		<p>You should only modify Unit of Measure if it does not match 
+		 the true unit of measure of the material you received. For example, 
+		 if you purchase and receive 10 Pounds, but the PO specifies 10 
+		 Feet, you can correct the U/M on the PO at this point.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a4" style="font-weight: bold;">Receive Date</a></p>
+	<div class="droptext" id="POPUP628384347" style="display: none;">
+		<p>For material planning and scheduling to work properly, this 
+		 field should be as accurate as possible. You can modify Recv Date 
+		 based on any updated estimates when your vendor notifies you of 
+		 changes.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px;"><a class="dropspot" href="javascript:TextPopup(this)" id="a5" style="font-weight: bold;">Prices and Discounts</a></p>
+	<div class="droptext" id="POPUP628563490" style="display: none;">
+		<p>Actual Costing automatically handles purchase price variances 
+		 between PO and Invoice. You do not have to manually update these 
+		 fields to reflect this difference. If you enter updated values 
+		 before you receive an invoice, you can estimate actual cost more 
+		 accurately.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a6" style="font-weight: bold;">G/L Expense Account</a></p>
+	<div class="droptext" id="POPUP628757237" style="display: none;">
+		<p>This field is not used until you assign the PO to an invoice.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a7" style="font-weight: bold;">Links</a></p>
+	<div class="droptext" id="POPUP628625885" style="display: none;">
+		<p>You can modify links to work orders after you receive materials. 
+		 You can also add new work order links to a lines and delete existing 
+		 links. By keeping this information up to date, material planning 
+		 and availability checking can make more accurate calculations.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a8" style="font-weight: bold;">Part ID</a></p>
+	<div class="droptext" id="POPUP628786119" style="display: none;">
+		<p>You cannot change the Part ID of a line after you have received 
+		 parts against the line.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a9" style="font-weight: bold;">Service ID</a></p>
+	<div class="droptext" id="POPUP628835040" style="display: none;">
+		<p>You cannot change the Service ID on a line after you have received 
+		 parts against the line.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a10" style="font-weight: bold;">Linking a Work Order</a></p>
+	<div class="droptext" id="POPUP628889898" style="display: none;">
+		<p>You can create a demand link to any unreceived parts or service 
+		 on a partially received line. You can do this by using Assign 
+		 to Work Order to add the necessary links.</p>
+ </div>
+	<p class="Numbered-Indent" style="margin-left: 80px; font-weight: bold;"><a class="dropspot" href="javascript:TextPopup(this)" id="a11" style="font-weight: bold;">Adding New Lines</a></p>
+	<div class="droptext" id="POPUP628962166" style="display: none;">
+		<p>If the purchase order is open, you can add new lines to it. 
+		 To add new lines to a closed purchase order, change its status 
+		 to released and add the lines.</p>
+ </div>
+	<p class="Numbered-Indent">&#160;</p>
+	<p class="Numbered-Indent">The following situations may exist:</p>
+	<p class="Numbered-Indent"><span class="Bold">Link a work order to 
+	 a line for a partially received material</span> - If a line has been 
+	 partially received, you may want to add or modify work orders linked 
+	 to the balance of the material. You can do this by using Assign to 
+	 Work Order to add the necessary links. Purchase Receipt Entry automatically 
+	 issues the material to the work order when it is received.</p>
+	<p class="Numbered-Indent"><span class="Bold">Link a work order to 
+	 a line for a material you have already received</span> - Use Assign 
+	 to Work Order to add the link. You must use Inventory Transaction 
+	 Entry to manually issue the material from inventory to the work order.</p>
+	<p class="Numbered-Indent"><span class="Bold">Remove a work order link 
+	 for a material you have already received</span> - Use Assign to Work 
+	 Order to delete the link. You must use Inventory Transaction Entry 
+	 to return the material to inventory.</p>
+	<p class="Numbered-Indent"><span class="Bold">Reassign materials you 
+	 have already received from one work order to another</span></p>
+	<p class="Numbered-Indent">Add new line items using the method described 
+	 in <a href="VMPURENTfrmPurchaseOrder.htm">Creating a Purchase Order</a>. 
+	 - You must re-release a closed PO to add new line items.</p>
+	<p class="Numbered-Indent">Delete any un-received lines, as necessary.</p>
+	<ol start="4" class="hcp3">
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Save</span> 
+		 to save the changes.</p></li>
+	</ol>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Purchase_Order_Entry.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+
+
+<script type="text/javascript" language="JavaScript1.2">//<![CDATA[
+	if( typeof( TextPopupInit ) != 'function' ) TextPopupInit = new Function();
+	TextPopupInit('a1','POPUP628137163');
+	TextPopupInit('a2','POPUP628227855');
+	TextPopupInit('a3','POPUP628279853');
+	TextPopupInit('a4','POPUP628384347');
+	TextPopupInit('a5','POPUP628563490');
+	TextPopupInit('a6','POPUP628757237');
+	TextPopupInit('a7','POPUP628625885');
+	TextPopupInit('a8','POPUP628786119');
+	TextPopupInit('a9','POPUP628835040');
+	TextPopupInit('a10','POPUP628889898');
+	TextPopupInit('a11','POPUP628962166');
+//]]></script>
+</body>
+</html>

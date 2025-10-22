@@ -1,0 +1,176 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+
+
+
+
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Using Material Requirements Planning</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+	<div id="banner">
+		<h1>Using Material Requirements Planning</h1>
+	</div>
+	<p class="First">Material Requirements Planning is an optional module 
+	 that generates planned demand and supply orders for a part based on 
+	 the part's Order Policy, demand, and master production schedule (for 
+	 a master scheduled part). These orders appear in material netting 
+	 in the same way as actual orders. You can then firm and release the 
+	 planned orders into real supply orders.</p>
+	<ol>
+		<li class="p-Numbered"><p class="Numbered">If you are licensed 
+		 to use multiple sites, click the Site ID arrow and select the 
+		 site to use. If you are licensed to use a single site, this field 
+		 is unavailable.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Material 
+		 Requirements Planning</span> from the <span class="Bold">File</span> 
+		 menu.</p></li>
+	</ol>
+	<p class="Numbered-Indent">The MRP dialog box appears.</p>
+	<ol start="3">
+		<li class="p-Numbered"><p class="Numbered">In the warehouse section, 
+		 click the Warehouse arrow and select the warehouses you want VISUAL 
+		 to include in the MRP run. You can select:</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Universal</span> – When 
+	 you select Universal, MRP nets all supply and demand for each part 
+	 that is not identified by a warehouse, or associated with a warehouse 
+	 that is not Independently Planned. MRP also generates planned orders 
+	 using the Universal Planning parameters entered for each part in Part 
+	 Maintenance.</p>
+	<p class="Numbered-Indent"><span class="Bold">Independent</span> – 
+	 When you select the independent option, you can select individual, 
+	 independently-planned warehouses from the list. MRP nets the supply 
+	 and demand for each part specified for the warehouses you select. 
+	 MRP generates planned orders using the specified warehouse's planning 
+	 parameters entered in Part Maintenance. If you have not set planning 
+	 parameters for a given part/warehouse combination, MRP uses the planning 
+	 parameters for the Universal warehouse.</p>
+	<p class="Numbered-Indent"><span class="Bold">All Warehouses</span> 
+	 – When you select All Warehouses, MRP nets and plans orders for the 
+	 Universal warehouse and each independently-planned warehouse separately, 
+	 using the rules described above. If there are 10 Independently-Planned 
+	 warehouses along with a number of Universally-Planned warehouses for 
+	 a given part, MRP performs 11 separate nettings. This is the default 
+	 option.</p>
+	<p class="Numbered-Indent">If you are a Projects/A&amp;D user, you 
+	 can also select a Program Manager whose warehouses you would like 
+	 to view. Please refer to your Projects user guide for more information.</p>
+	<ol start="4">
+		<li class="p-Numbered"><p class="Numbered">Select the scope of 
+		 processing.</p></li>
+	</ol>
+	<p class="Numbered-Indent">As transactions are performed in the system, 
+	 VISUAL marks parts as requiring MRP. Events that trigger this marking 
+	 include creation and modification of purchase orders, customer order, 
+	 and work orders for the part, as well as inventory transactions involving 
+	 the part. This is done so you can process only those parts that might 
+	 require changes, rather than all parts. The number of parts marked 
+	 in this way is shown as Parts Requiring MRP Processing.</p>
+	<p class="Numbered-Indent">There are two choices for the scope of MRP 
+	 processing:</p>
+	<p class="Numbered-Indent"><span class="Bold">Process All Top Level 
+	 Parts (Regeneration)</span> - A top-level part is one that is not 
+	 required in any material requirement for a work order. Demand orders 
+	 for top-level parts are only customer orders.</p>
+	<p class="Numbered-Indent">If you select this option, VISUAL processes 
+	 top level parts on the first MRP pass whether they are marked for 
+	 MRP or not. VISUAL processes non-top-level parts if they are marked 
+	 for MRP.</p>
+	<p class="Numbered-Indent"><span class="Bold">Process Parts Changed 
+	 Since Last Run (Net Change)</span> - VISUAL processes only parts marked 
+	 for MRP.</p>
+	<ol start="5">
+		<li class="p-Numbered"><p class="Numbered">Select Single or Multiple 
+		 Level Processing.</p></li>
+	</ol>
+	<p class="Numbered-Indent">When MRP processes a set of parts, it generates 
+	 two kinds of orders. Planned supply orders are created to meet existing 
+	 demand for each part. Planned demand orders are also created to account 
+	 for the material requirements of the newly planned orders.</p>
+	<p class="Numbered-Indent">If you select the Single Pass check box, 
+	 the process stops after the first pass. If you do not select the Single 
+	 Pass check box, MRP makes a second pass, now considering the new demand 
+	 orders caused by the newly planned supply orders. Passes continue 
+	 until no new demand orders are created.</p>
+	<ol start="6">
+		<li class="p-Numbered"><p class="Numbered">Set Exception Marking 
+		 Limits.</p></li>
+	</ol>
+	<p class="Numbered-Indent">During processing, MRP marks parts as having 
+	 exceptions if a planned order is created, or if one of the normal 
+	 netting exceptions (ex: Stockout) occurs for the part. You can use 
+	 this marking as part of the query in the Search option. This allows 
+	 you to focus on parts that may need your attention.</p>
+	<p class="Numbered-Indent">You have three options to control how this 
+	 marking is done with regard to horizon:</p>
+	<p class="Numbered-Indent"><span class="Bold">No Horizon</span> - Any 
+	 exceptions appearing for the part mark the part as having MRP exceptions, 
+	 regardless of how far out they are.</p>
+	<p class="Numbered-Indent"><span class="Bold">Fixed Horizon</span> 
+	 - This specifies a number of days to look forward from the current 
+	 date for exceptions. MRP only marks the part as having exceptions 
+	 if any occur within this time frame. Specify Horizon in days.</p>
+	<p class="Numbered-Indent"><span class="Bold">Plus Part Leadtime</span> 
+	 - The exception time frame is extended to the horizon plus the leadtime 
+	 specified for the part. This produces a horizon that varies for each 
+	 part. For a given horizon, parts that take longer to get are more 
+	 likely to appear as MRP exceptions. This option is strongly recommended 
+	 over the Fixed Horizon option.</p>
+	<ol start="7">
+		<li class="p-Numbered"><p class="Numbered">Specify how to determine 
+		 supply order quantities for master scheduled parts.</p></li>
+	</ol>
+	<p class="Numbered-Indent"><span class="Bold">Net on-hand quantities 
+	 for master scheduled parts</span> – This check box is available only 
+	 if you have not activated the Suggested MPS feature in the Advanced 
+	 Material Planning window. Select this check box to subtract nettable, 
+	 on-hand balances from the total demand.</p>
+	<p class="Numbered-Indent"><span class="Bold">Apply Min/Max/Multiple 
+	 to Master Scheduled Parts</span> – Select this check box to adjust 
+	 the quantities ordered to take into account the minimum, maximum, 
+	 and multiple quantity ordering requirements for the part. </p>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">To exclude on-hold customer 
+		 order lines from the demand calculation, select the <span class="Bold">Exclude 
+		 On-hold Customer Orders</span> check box. A customer order line 
+		 is on hold if one of these conditions is met:</p></li>
+	</ol>
+	<ul>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">The order 
+		 line has a status of On Hold</p></li>
+		<li class="p-Bullet-Indent"><p class="Bullet-Indent">The order 
+		 line has a status of Inherit and the order header status is On 
+		 Hold </p></li>
+	</ul>
+	<ol start="8">
+		<li class="p-Numbered"><p class="Numbered">To exclude unreleased 
+		 work orders from supply and demand calculations, select the <span 
+		 class="Bold">Exclude Unreleased Work Orders</span> check box.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Select the Log MRP check 
+		 box if you want VISUAL to generate a log file for the MRP session. 
+		 The log file appears in the directory where your executables are 
+		 installed as Vmplnwin.log.</p></li>
+		<li class="p-Numbered"><p class="Numbered">Click <span class="Bold">Ok</span> 
+		 to start processing.</p></li>
+	</ol>
+	<p class="Numbered-Indent">MRP may take a few minutes to run, depending 
+	 on the number of parts that require processing, the number of demand 
+	 orders, the speed of your machine, and other factors.</p>
+</div>
+<p class="SeeAlsoNext"><a href="User_defined_Help_Files_Material_Planning_Window.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> User-defined Help</p>
+<p class="SeeAlsoNext"><a href="MRP_Processing.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> 
+ MRP Processing</p>
+<p class="SeeAlsoNext"><a href="Firming_and_Releasing_Planned_Orders.htm"><img src="btn_mini.gif" alt="btn_mini.gif" title="btn_mini.gif" width="14" height="14" border="0"></a> Firming and Releasing Planned Orders</p>
+<p class="numbered-indent">&#160;</p>
+</body>
+</html>

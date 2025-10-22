@@ -1,0 +1,94 @@
+
+<!doctype HTML public "-//W3C//DTD HTML 4.0 Frameset//EN">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+ <meta name="generator" content="Adobe RoboHelp Classic 2019">
+<title>Specifying Log File Settings for the Concurrent Scheduler</title>
+<link rel="StyleSheet" href="vm.css" type="text/css">
+</head>
+
+<body>
+<script type="text/javascript" src="ehlpdhtm.js" language="JavaScript1.2"></script>
+
+<div id="content">
+<div id="banner">
+<h1>Specifying Log File Settings for the Concurrent Scheduler</h1>
+</div>
+<p>Use the Log Settings tab to select the information to write to log files 
+ during the scheduling process. Log files are stored in the same directory 
+ as the VISUAL executables. After you run the scheduler, the log files 
+ are generated when you close the Concurrent Scheduler window. </p>
+<ol>
+	<li class="p-Numbered"><p class="Numbered">Select <span class="Bold">Scheduling</span>, 
+	 <span class="Bold">Global Scheduler</span>.</p></li>
+	<li class="p-Numbered"><p class="Numbered">Perform one of these steps:</p></li>
+	<li class="p-Bullet-Indent"><p class="Bullet-Indent">To specify tenant-level 
+	 preferences, do not select a schedule. Select <span class="Bold">Options</span>, 
+	 <span class="Bold">Preferences...</span>. In the Title bar, Preferences 
+	 - **Tenant** is displayed.</p></li>
+	<li class="p-Bullet-Indent"><p class="Bullet-Indent">To specify site-level 
+	 preferences, select a schedule for the site. Select <span class="Bold">Options, 
+	 Preferences...</span>. In the Title bar, Preferences - plus the name 
+	 of the site you selected is displayed.</p></li>
+	<li class="p-Bullet-Indent"><p class="Bullet-Indent">To specify schedule-level 
+	 preferences, select the schedule. Select <span class="Bold">Options</span>, 
+	 <span class="Bold">Schedule Preferences...</span>. In the Title bar, 
+	 Preferences - plus the ID of the site and the schedule are displayed.</p></li>
+</ol>
+<ol start="3">
+	<li class="p-Numbered"><p class="Numbered">To log information, select 
+	 check boxes. This table shows the check boxes that you can select, 
+	 the log file that is generated when you select the check box, and 
+	 a description of the log file:</p></li>
+</ol>
+<table class="InforTable" style="left: 0px; top: 290px; margin-left: 48px;" 
+		 width="695" cellspacing="0" border="1">
+	<col style="width: 19.459%;">
+	<col style="width: 14.443%;">
+	<col style="width: 66.097%;">
+	<tr class="t1st">
+		<td>Check box</td>
+		<td>Log file</td>
+		<td>Description</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Standard Logging</td>
+		<td>vmglbsch.log</td>
+		<td>Shows details of the scheduling process, including the duration 
+		 of each step in the process, the number of schedules that were 
+		 processed, and the number of operations and work orders that were 
+		 scheduled. </td>
+	</tr>
+	<tr class="t1Row">
+		<td>Schedule Configuration</td>
+		<td>vmglbcfg.log</td>
+		<td>Shows the configuration settings that were used during scheduling. 
+		 </td>
+	</tr>
+	<tr class="t2Row">
+		<td>Part Netting</td>
+		<td>mnetting.log</td>
+		<td>Shows netting information for each part/warehouse combination. 
+		 The netting information includes the available quantity, quantity 
+		 allocated to demand orders, expected supply, and expected supply 
+		 that has been committed to demand orders.</td>
+	</tr>
+	<tr class="t1Row">
+		<td>Database Statistics</td>
+		<td>SqlStats.log</td>
+		<td>Shows the SQL statements that were executed during the scheduling 
+		 process.</td>
+	</tr>
+	<tr class="t2Row">
+		<td>Debug Traces</td>
+		<td>SchTrace.log</td>
+		<td>Shows the number of forward and backward passes that were made 
+		 to schedule each work order. </td>
+	</tr>
+</table>
+<p class="Numbered-Indent">&#160;</p>
+<p>&#160;</p>
+</div>
+</body>
+</html>
