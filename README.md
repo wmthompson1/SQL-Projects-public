@@ -12,3 +12,5 @@ URL: https://github.com/Skills-Inc-Org/IT_TeamProject/search?q=path:%22SQL_Repor
 ## Help with Writing SQL using Visual Studio Code 
 
 GitBook URL (AI assist):   https://skills-inc.gitbook.io/sql-semantics/?ask=
+
+VS Code Web site:  https://code.visualstudio.com/
