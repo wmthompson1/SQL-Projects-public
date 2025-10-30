@@ -25,6 +25,8 @@ Tester:
 
  --declare @VOUCHER_ID nvarchar(15) = '100005'
 
+DECLARE @VOUCHER_ID nvarchar(15) = '184293'
+
 SELECT
    PL.VOUCHER_ID,
    PL.LINE_NO,
@@ -132,3 +134,11 @@ ORDER BY
    PL.VOUCHER_ID,
    PL.LINE_NO
 
+-- select top 10 *
+-- from PAYABLE_LINE PL (nolock)
+-- inner join PAYABLE P (nolock)
+-- on PL.VOUCHER_ID = P.VOUCHER_ID
+-- where 1=1
+-- and P.INVOICE_DATE >= DATEADD(WEEK, -3, GETDATE())
+-- -- PL.VOUCHER_ID = @VOUCHER_ID
+-- order by pl.LINE_NO

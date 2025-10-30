@@ -1,0 +1,1146 @@
+-- =============================================
+-- Author:		Vivian M Elia
+-- Create date:	1/22/2020
+-- Description:	Data set for the Work Order Traveller.
+
+IF OBJECT_ID('tempdb..#CTE_WORKORDERS') IS NOT NULL DROP TABLE #CTE_WORKORDERS
+IF OBJECT_ID('tempdb..#CTE_COPRODUCTS') IS NOT NULL DROP TABLE #CTE_COPRODUCTS  
+IF OBJECT_ID('tempdb..#CTE_OPERATIONS') IS NOT NULL DROP TABLE #CTE_OPERATIONS
+IF OBJECT_ID('tempdb..#CTE_FAI') IS NOT NULL DROP TABLE #CTE_FAI
+IF OBJECT_ID('tempdb..#CTE_WOLINK') IS NOT NULL DROP TABLE #CTE_WOLINK
+IF OBJECT_ID('tempdb..#CTE_HIDE_ETCH_BARCODE') IS NOT NULL DROP TABLE #CTE_HIDE_ETCH_BARCODE
+
+IF OBJECT_ID('tempdb..#CTE_CHEM_PAINT_OP') IS NOT NULL DROP TABLE #CTE_CHEM_PAINT_OP 
+IF OBJECT_ID('tempdb..#CTE_FIRST_PAINT_OPS') IS NOT NULL DROP TABLE #CTE_FIRST_PAINT_OPS
+IF OBJECT_ID('tempdb..#CTE_TL_SEQS') IS NOT NULL DROP TABLE #CTE_TL_SEQS
+IF OBJECT_ID('tempdb..#CTE_ISLIMITBETWEEN') IS NOT NULL DROP TABLE #CTE_ISLIMITBETWEEN
+
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_OP') IS NOT NULL DROP TABLE #CTE_SOLGEL_OP 
+IF OBJECT_ID('tempdb..#CTE_FIRST_CLEAN_OPS') IS NOT NULL DROP TABLE #CTE_FIRST_CLEAN_OPS
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_TL_SEQS') IS NOT NULL DROP TABLE #CTE_SOLGEL_TL_SEQS
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_ISLIMITBETWEEN') IS NOT NULL DROP TABLE #CTE_SOLGEL_ISLIMITBETWEEN
+IF OBJECT_ID('tempdb..#CTE_TIME_LIMIT') IS NOT NULL DROP TABLE #CTE_TIME_LIMIT
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+ DECLARE  @ReportSettings TABLE(
+    [Resource] [nvarchar](15) NOT NULL,
+    [barcode_etch] [int] NULL,
+    [barcode_pre_etch] [int] NULL,
+    [barcode_review] [int] NULL,
+    [Chem_to_Prime_hrs] [int] NULL,
+    [Clean_to_Solgel_hrs] [int] NULL,
+    [FAI_NET_STAMP] [int] NULL,
+    [FAI_STAMP] [int] NULL,
+    [heightchange] [int] NULL,
+    [printuser] [int] NULL,
+    [QTY_IN] [int] NULL,
+    [QTY_NOSHOW] [int] NULL,
+    [QTY_OUT] [int] NULL,
+    [SHIP_VIA] [int] NULL,
+    [STAMP] [int] NULL,
+    [Start_Op_to_SOLGEL] [int] NULL
+    ) 
+ 
+     INSERT INTO @ReportSettings
+
+   SELECT Resource, [barcode_etch],[barcode_pre_etch],[barcode_review],[Chem_to_Prime_hrs],[Clean_to_Solgel_hrs]
+    ,[FAI_NET_STAMP],[FAI_STAMP],[heightchange],[printuser],[QTY_IN],[QTY_NOSHOW],[QTY_OUT],[SHIP_VIA],[STAMP],[Start_Op_to_SOLGEL] 
+FROM
+        (
+            SELECT Resource
+                , CAST(Include AS INT)Include
+                , Report_Section
+            FROM (    SELECT [Resource_ID] AS Resource, [Report_Name], [Report_Section], [Reasoning], [Notes], [Include]
+                    FROM [SQL-BI-1].LIVESupplemental.dbo.[ResourceID_ReportSettings] 
+                ) a
+            WHERE a.Report_Name = 'traveller'
+        ) x
+        pivot
+        (  MAX(Include)
+            for Report_Section in ([barcode_etch],[barcode_pre_etch],[barcode_review],[Chem_to_Prime_hrs],[Clean_to_Solgel_hrs],[FAI_NET_STAMP],[FAI_STAMP],[heightchange],[printuser],[QTY_IN],[QTY_NOSHOW],[QTY_OUT],[SHIP_VIA],[STAMP],[Start_Op_to_SOLGEL])
+        )p 
+
+ --SELECT * FROM @ReportSettings
+
+--DECLARE @BASE_ID NVARCHAR(30) = '1612066'-- '1584829'--'1584826' --1562491
+--DECLARE @LOT_ID NVARCHAR(3) = '1'
+--DECLARE @SPLIT_ID NVARCHAR(3)= '0'
+--DECLARE @SUB_ID NVARCHAR(3) = '0'
+                                         
+DECLARE @PART_ID NVARCHAR(30) -- = '411T3484-66B'
+SELECT @PART_ID = PART_ID 
+FROM WORK_ORDER wo
+WHERE wo.BASE_ID = @BASE_ID
+    AND wo.LOT_ID = @LOT_ID
+    AND wo.SUB_ID = '0'
+    AND wo.SPLIT_ID = @SPLIT_ID
+    AND wo.TYPE = 'W'
+
+    
+/********************************
+temp TABLES for primary part of traveller
+*/
+
+IF OBJECT_ID('tempdb..#CTE_WORKORDERS') IS NOT NULL DROP TABLE #CTE_WORKORDERS 
+IF OBJECT_ID('tempdb..#CTE_OPERATIONS') IS NOT NULL DROP TABLE #CTE_OPERATIONS
+
+
+	SELECT w.* 
+		, CONVERT(NVARCHAR(MAX),CONVERT(VARBINARY(MAX),wb.BITS)) AS WO_SPECS
+		, p.DESCRIPTION
+		, SA.SURFACE_AREA
+		, SA.Alloy
+		, SA.Material_Type
+		, SA.material_type + ' ' 
+		+ SA.alloy + ' '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),SA.Thickness_val)) + ' x '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),sa.width_val)) + ' x '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),sa.length_val)) 
+	       AS sa_description2
+		--, w.TYPE + N'~'+w.BASE_ID + N'~' + w.LOT_ID + N'~' + w.SPLIT_ID + '~' + w.SUB_ID AS DOCUMENT_ID
+INTO #CTE_WORKORDERS
+	FROM WORK_ORDER w
+		LEFT OUTER JOIN WORKORDER_BINARY AS WB
+			ON WB.WORKORDER_TYPE         = W.TYPE
+				AND WB.WORKORDER_BASE_ID      = W.BASE_ID
+				AND WB.WORKORDER_LOT_ID       = W.LOT_ID
+				AND WB.WORKORDER_SPLIT_ID     = W.SPLIT_ID
+				AND WB.WORKORDER_SUB_ID       = W.SUB_ID
+		INNER JOIN PART p
+			ON p.ID = w.PART_ID
+          LEFT OUTER JOIN DBO.SKILLS_WO_INC_LEG_SURFACE_AREA AS SA
+		    ON W.BASE_ID                 = SA.BASE_ID
+	         AND W.LOT_ID                 = SA.LOT_ID
+	        AND W.SPLIT_ID                = SA.SPLIT_ID
+		   AND W.PART_ID                 = SA.PART_ID
+		--AND W.SUB_ID                   = SA.SUB_ID
+	WHERE W.BASE_ID = @BASE_ID
+		AND W.LOT_ID = @LOT_ID
+		AND W.SPLIT_ID = @SPLIT_ID
+		--AND W.SUB_ID IN (@SUB_ID)
+		AND W.TYPE = 'W'
+
+-- CO-PRODUCTS
+SELECT   CP.WORKORDER_TYPE
+      ,  CP.WORKORDER_BASE_ID
+	  , CP.WORKORDER_LOT_ID
+	  , CP.WORKORDER_SPLIT_ID
+	  , CP.WORKORDER_SUB_ID
+	  , CP.PART_ID
+	  , CP.DESIRED_QTY
+	  , CP.RECEIVED_QTY
+	  , P.DESCRIPTION
+	  , SA.SURFACE_AREA
+		, SA.Alloy
+		, SA.Material_Type
+		, SA.material_type + ' ' 
+		+ SA.alloy + ' '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),SA.Thickness_val)) + ' x '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),sa.width_val)) + ' x '
+		+ convert(varchar(15),CONVERT(DECIMAL(5,2),sa.length_val)) 
+	     AS sa_description2 
+INTO #CTE_COPRODUCTS
+  FROM CO_PRODUCT cp 
+ INNER JOIN #CTE_WORKORDERS wo
+    ON CP.WORKORDER_TYPE = WO.TYPE
+   AND CP.WORKORDER_BASE_ID = WO.BASE_ID
+   AND CP.WORKORDER_LOT_ID = WO.LOT_ID
+   AND CP.WORKORDER_SPLIT_ID = WO.SPLIT_ID
+   AND CP.WORKORDER_SUB_ID = WO.SUB_ID
+ INNER JOIN PART P
+    ON P.ID = CP.PART_ID 
+  LEFT OUTER JOIN DBO.SKILLS_WO_INC_LEG_SURFACE_AREA AS SA
+    ON CP.WORKORDER_BASE_ID             = SA.BASE_ID
+   AND CP.WORKORDER_LOT_ID              = SA.LOT_ID
+   AND CP.WORKORDER_SPLIT_ID           = SA.SPLIT_ID
+   AND CP.WORKORDER_SUB_ID              = SA.SUB_ID
+ 
+ --SELECT * FROM  #CTE_COPRODUCTS
+--SELECT * FROM #CTE_WORKORDERS
+
+	SELECT o.*
+		 , CASE WHEN EXISTS(SELECT 1 FROM @ReportSettings RS
+		                     WHERE RS.FAI_NET_STAMP = 1 
+		 				AND O.RESOURCE_ID = RS.Resource) 
+						AND O.OPERATION_TYPE IN ('FAI-NI', 'QP-NI','SFI-NI')
+		        		  THEN 'FIRST ARTICLE INSPECTION REQUIRED NET INSPECT' 
+			   ELSE NULL
+		    END AS FAI_NET_STAMP
+		  , CASE WHEN EXISTS(SELECT 1 FROM @ReportSettings RS
+		                     WHERE RS.FAI_STAMP = 1 
+						 AND O.RESOURCE_ID = RS.Resource)
+			                AND O.OPERATION_TYPE NOT IN ('FAI-NI', 'QP-NI','SFI-NI')
+		        THEN 'FIRST ARTICLE INSPECTION REQUIRED' 
+			   ELSE NULL
+		    END AS FAI_STAMP
+		    , CASE WHEN EXISTS(SELECT 1 FROM @ReportSettings RS
+		                     WHERE RS.FAI_NET_STAMP = 1 
+		 				AND O.RESOURCE_ID = RS.Resource) 
+						AND O.OPERATION_TYPE IN ('FAI-NI', 'QP-NI','SFI-NI')
+		        		  THEN 'FIRST ARTICLE INSPECTION REQUIRED NET INSPECT' 
+		           WHEN EXISTS(SELECT 1 FROM @ReportSettings RS
+		                     WHERE RS.FAI_STAMP = 1 
+						 AND O.RESOURCE_ID = RS.Resource)
+			                AND O.OPERATION_TYPE NOT IN ('FAI-NI', 'QP-NI','SFI-NI')
+		           THEN 'FIRST ARTICLE INSPECTION REQUIRED' 
+			   ELSE NULL
+		    END AS FAI_STAMP2
+		  , CASE WHEN o.OPERATION_TYPE IN ('CMPFL-REVIEW', 'MFG-REVIEW') 
+		  --, 'AREVIEW2' REMOVED PER SHANNEN HELLE 1/22/2020
+	              THEN 1 --NEW PART
+		         ELSE NULL 
+		    END AS NEWPART_STAMP
+		, r.PIECE_NO
+		, r.PART_ID AS RQ_PART_ID                              
+		, rb.BITS AS RQ_BITS
+		, ob.BITS AS O_BITS
+		, RP.DESCRIPTION AS RQ_PART_DESCRIPTION
+		, r.REQUIRED_DATE AS RQ_REQD_DATE
+		, RP.STOCK_UM AS RQ_PART_STOCK_UM
+		, R.CALC_QTY AS RQ_CALC_QTY
+		, O.WORKORDER_TYPE +'~'+ O.WORKORDER_BASE_ID +'~'+ O.WORKORDER_SPLIT_ID  +'~'+ O.WORKORDER_LOT_ID +'~'+ O.WORKORDER_SUB_ID+'~'+ CONVERT(VARCHAR(3),O.SEQUENCE_NO) AS O_UDFJOIN
+		, R.SUBORD_WO_SUB_ID
+		, NULL AS MIN_HOURS
+INTO #CTE_OPERATIONS                                
+	FROM OPERATION O
+		LEFT OUTER JOIN REQUIREMENT r
+			ON o.WORKORDER_BASE_ID = r.WORKORDER_BASE_ID
+				AND o.WORKORDER_LOT_ID = r.WORKORDER_LOT_ID
+				AND o.WORKORDER_SPLIT_ID = r.WORKORDER_SPLIT_ID
+				AND o.WORKORDER_SUB_ID = r.WORKORDER_SUB_ID
+				AND o.WORKORDER_TYPE = r.WORKORDER_TYPE
+				AND o.SEQUENCE_NO = r.OPERATION_SEQ_NO
+		LEFT OUTER JOIN PART RP
+			ON r.PART_ID = RP.ID
+		LEFT OUTER JOIN REQUIREMENT_BINARY rb
+			ON r.WORKORDER_BASE_ID = rb.WORKORDER_BASE_ID
+				AND r.WORKORDER_LOT_ID = rb.WORKORDER_LOT_ID
+				AND r.WORKORDER_SPLIT_ID = rb.WORKORDER_SPLIT_ID
+				AND r.WORKORDER_SUB_ID = rb.WORKORDER_SUB_ID
+				AND r.WORKORDER_TYPE = rb.WORKORDER_TYPE
+				AND r.OPERATION_SEQ_NO = rb.OPERATION_SEQ_NO
+				AND r.PIECE_NO = rb.PIECE_NO
+		LEFT OUTER JOIN OPERATION_BINARY ob
+			ON O.WORKORDER_BASE_ID = ob.WORKORDER_BASE_ID
+				AND o.WORKORDER_LOT_ID = ob.WORKORDER_LOT_ID
+				AND o.WORKORDER_SPLIT_ID = ob.WORKORDER_SPLIT_ID
+				AND o.WORKORDER_SUB_ID = ob.WORKORDER_SUB_ID
+				AND o.WORKORDER_TYPE = ob.WORKORDER_TYPE
+				AND o.SEQUENCE_NO = ob.SEQUENCE_NO
+		 LEFT OUTER JOIN SHOP_RESOURCE_SITE SRS
+		    ON O.RESOURCE_ID = SRS.RESOURCE_ID
+
+	WHERE O.WORKORDER_BASE_ID = @BASE_ID
+		AND O.WORKORDER_LOT_ID = @LOT_ID
+		AND O.WORKORDER_SPLIT_ID = @SPLIT_ID
+		AND O.WORKORDER_TYPE = 'W'
+--SELECT * FROM #cte_operations
+
+--*****************************************************************************************
+/*  This section obtains the timelimit of the chemical op and all the operations up to the
+first paint operation.  Special Verbiage is to print on the operation to notify the user of 
+the time limits
+*/
+/********************************
+temp TABLES to obtain hours between chem operation and first paint operation
+*/
+
+IF OBJECT_ID('tempdb..#CTE_CHEM_PAINT_OP') IS NOT NULL DROP TABLE #CTE_CHEM_PAINT_OP 
+IF OBJECT_ID('tempdb..#CTE_FIRST_PAINT_OPS') IS NOT NULL DROP TABLE #CTE_FIRST_PAINT_OPS
+IF OBJECT_ID('tempdb..#CTE_TL_SEQS') IS NOT NULL DROP TABLE #CTE_TL_SEQS
+IF OBJECT_ID('tempdb..#CTE_ISLIMITBETWEEN') IS NOT NULL DROP TABLE #CTE_ISLIMITBETWEEN
+
+-- GET HOURS
+SELECT  ROW_NUMBER () OVER (	ORDER BY  o.workorder_base_id,
+                                    o.WORKORDER_LOT_ID,
+                                     o.WORKORDER_SPLIT_ID,
+							  O.WORKORDER_SUB_ID,
+                                     O.SEQUENCE_NO
+                                      ) AS ROW_NUM_HRS,
+        O.WORKORDER_TYPE
+       ,O.WORKORDER_BASE_ID
+	  ,O.WORKORDER_LOT_ID
+	  ,O.WORKORDER_SPLIT_ID
+	  ,O.WORKORDER_SUB_ID
+	  ,O.SEQUENCE_NO
+	  ,O.RESOURCE_ID
+	  , CASE WHEN 
+	         (SELECT CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+		 				  FROM USER_DEF_FIELDS UDF
+						  WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+					   AND UDF.ID = 'UDF-0000089'             
+					   AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO)) IS NOT NULL 
+ AND (SELECT CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+				                FROM USER_DEF_FIELDS UDF
+				               WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				                 AND UDF.ID = 'UDF-0000089'             
+				                 AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO)) <> 0
+					   THEN 1 
+					   ELSE 0 
+		END AS IS_LIMIT_STARTER
+	   , CASE WHEN (SELECT CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+				  FROM USER_DEF_FIELDS UDF
+				  WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				   AND UDF.ID = 'UDF-0000089'             
+				   AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO)) IS NOT NULL 
+ AND (SELECT CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+				                FROM USER_DEF_FIELDS UDF
+				               WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				                 AND UDF.ID = 'UDF-0000089'             
+				                 AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO)) <> 0
+ 		    THEN (SELECT 'TIME LIMIT ' + CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+		 		  FROM USER_DEF_FIELDS UDF
+				 WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				   AND UDF.ID = 'UDF-0000089'             
+				   AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO))
+					    + ' HOURS'
+		   ELSE NULL
+	    END AS MIN_HOURS
+	  , CASE WHEN EXISTS ( SELECT 1 
+	                         FROM @ReportSettings RS
+		                   WHERE RS.Chem_to_Prime_hrs = 1 
+		 			  	 AND O.RESOURCE_ID = RS.Resource)
+		    THEN 1 
+		    ELSE 0 
+	    END AS IS_LIMIT_ENDER
+	   INTO #CTE_CHEM_PAINT_OP 
+ FROM #CTE_OPERATIONS O
+WHERE 
+  O.WORKORDER_BASE_ID = @BASE_ID
+  AND O.WORKORDER_LOT_ID = @LOT_ID
+  AND O.WORKORDER_SPLIT_ID = @SPLIT_ID
+   AND NOT EXISTS ( SELECT 1 
+	                         FROM @ReportSettings RS
+		                   WHERE RS.Clean_to_Solgel_hrs = 1 
+		 			  	 AND O.RESOURCE_ID = RS.Resource)
+ --SELECT * FROM #CTE_CHEM_PAINT_OP 
+ 
+--,cte_first_paint_ops as
+ (
+  SELECT 
+        ROW_NUMBER () OVER (PARTITION BY   o.workorder_base_id,
+                                    o.WORKORDER_LOT_ID,
+                                     o.WORKORDER_SPLIT_ID,
+							  O.WORKORDER_SUB_ID					 
+							 ORDER BY  
+                                     SEQUENCE_NO
+                                      ) AS ROWNUMPNT,
+		          O.WORKORDER_TYPE,
+				O.WORKORDER_BASE_ID,
+				O.WORKORDER_LOT_ID,
+				O.WORKORDER_SPLIT_ID,
+				O.WORKORDER_SUB_ID,
+				O.SEQUENCE_NO,
+				O.RESOURCE_ID
+	  INTO #CTE_FIRST_PAINT_OPS
+	  FROM #CTE_CHEM_PAINT_OP AS O
+	--WHERE o.RESOURCE_ID IN ('P1F1-PNT-PRIME','P1F1-PNT-TC','P1F2-PNT-PRIME')  
+	 WHERE EXISTS ( SELECT 1 
+	                         FROM @ReportSettings RS
+		                   WHERE RS.Chem_to_Prime_hrs = 1 
+		 			  	 AND O.RESOURCE_ID = RS.Resource)
+)
+--SELECT * FROM #cte_first_paint_ops
+
+SELECT STARTROW_NUM_HRS = A.ROW_NUM_HRS, 
+	  ENDROW_NUM_HRS = LEAD(A.ROW_NUM_HRS) OVER(PARTITION BY WORKORDER_LOT_ID, 
+											 WORKORDER_SPLIT_ID, 
+											 WORKORDER_SUB_ID
+	  ORDER BY A.ROW_NUM_HRS), 
+	  A.STARTSEQ, 
+	  ENDSEQ = LEAD(A.ENDSEQ) OVER(PARTITION BY A.WORKORDER_LOT_ID, 
+									    A.WORKORDER_SPLIT_ID, 
+									    A.WORKORDER_SUB_ID
+	  ORDER BY ROW_NUM_HRS),
+	  MIN_HOURS, 
+	  WORKORDER_TYPE, 
+	  WORKORDER_BASE_ID, 
+	  WORKORDER_LOT_ID, 
+	  WORKORDER_SPLIT_ID, 
+	  WORKORDER_SUB_ID
+	  INTO #CTE_TL_SEQS
+FROM
+(
+    SELECT H.ROW_NUM_HRS, 
+		 H.IS_LIMIT_STARTER,
+		 H.MIN_HOURS,
+		 CASE WHEN H.SEQUENCE_NO = O.SEQUENCE_NO
+			 THEN 1
+			 ELSE 0
+		  END AS IS_LIMIT_ENDER, 
+          ( SELECT H.SEQUENCE_NO WHERE H.IS_LIMIT_STARTER = 1) AS STARTSEQ, 
+          ( SELECT O.SEQUENCE_NO WHERE H.SEQUENCE_NO = O.SEQUENCE_NO ) AS ENDSEQ, 
+		 H.WORKORDER_TYPE, 
+		 H.WORKORDER_BASE_ID, 
+		 H.WORKORDER_LOT_ID, 
+		 H.WORKORDER_SPLIT_ID, 
+		 H.WORKORDER_SUB_ID, 
+		 H.SEQUENCE_NO, 
+		 H.RESOURCE_ID
+    FROM #CTE_CHEM_PAINT_OP H
+	    LEFT OUTER JOIN #CTE_FIRST_PAINT_OPS O
+		  ON H.WORKORDER_TYPE = O.WORKORDER_TYPE
+			AND H.WORKORDER_BASE_ID = O.WORKORDER_BASE_ID
+			AND H.WORKORDER_LOT_ID = O.WORKORDER_LOT_ID
+			AND H.WORKORDER_SPLIT_ID = O.WORKORDER_SPLIT_ID
+			AND H.WORKORDER_SUB_ID = O.WORKORDER_SUB_ID
+			AND H.SEQUENCE_NO = O.SEQUENCE_NO
+			AND O.ROWNUMPNT = 1
+    WHERE
+    (
+	   SELECT H.SEQUENCE_NO
+	   WHERE IS_LIMIT_STARTER = 1
+    ) IS NOT NULL
+    OR
+    (
+	   SELECT O.SEQUENCE_NO
+	   WHERE H.SEQUENCE_NO = O.SEQUENCE_NO
+    ) IS NOT NULL
+) AS A
+
+
+--select * from  #CTE_TL_SEQS
+
+SELECT H.ROW_NUM_HRS, 
+	  H.IS_LIMIT_STARTER, 
+	  H.WORKORDER_TYPE, 
+	  H.WORKORDER_BASE_ID, 
+	  H.WORKORDER_LOT_ID, 
+	  H.WORKORDER_SPLIT_ID, 
+	  H.WORKORDER_SUB_ID, 
+	  H.SEQUENCE_NO, 
+	  H.RESOURCE_ID,
+	  CASE
+		 WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			 AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		 THEN T.MIN_HOURS
+	  END AS MIN_HOURS,
+	  CASE
+		 WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			 AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		 THEN 1
+	  END AS ISLIMITBETWEEN
+	  INTO #CTE_ISLIMITBETWEEN
+FROM #CTE_CHEM_PAINT_OP H
+	LEFT OUTER JOIN #CTE_TL_SEQS T
+	   ON H.WORKORDER_TYPE = T.WORKORDER_TYPE
+		 AND H.WORKORDER_BASE_ID = T.WORKORDER_BASE_ID
+		 AND H.WORKORDER_LOT_ID = T.WORKORDER_LOT_ID
+		 AND H.WORKORDER_SPLIT_ID = T.WORKORDER_SPLIT_ID
+		 AND H.WORKORDER_SUB_ID = T.WORKORDER_SUB_ID
+WHERE CASE
+		WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		THEN 1
+	 END IS NOT NULL
+GROUP BY H.ROW_NUM_HRS, 
+	    H.MIN_HOURS,
+	    H.IS_LIMIT_STARTER, 
+	    H.WORKORDER_TYPE, 
+	    H.WORKORDER_BASE_ID, 
+	    H.WORKORDER_LOT_ID, 
+	    H.WORKORDER_SPLIT_ID, 
+	    H.WORKORDER_SUB_ID, 
+	    H.SEQUENCE_NO, 
+	    H.RESOURCE_ID,
+	     CASE
+		 WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			 AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		 THEN T.MIN_HOURS
+	  END,
+	    CASE
+		   WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			   AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		   THEN 1
+	    END
+
+
+-- SELECT * FROM #CTE_CHEM_PAINT_OP 
+-- SELECT * FROM #CTE_FIRST_PAINT_OPS
+-- SELECT * FROM #CTE_TL_SEQS
+-- SELECT * FROM #CTE_ISLIMITBETWEEN
+/***************************************************************************************/
+
+
+--*****************************************************************************************
+/*  This section obtains the timelimit of the solgel operations and all the operations 
+backward to the etch (clean) operation.  Special Verbiage is to print on the operation to 
+notify the user of the time limits
+*/
+
+/********************************
+temp TABLES to obtain hours between solgel operation and etch operation
+*/
+
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_OP') IS NOT NULL DROP TABLE #CTE_SOLGEL_OP 
+IF OBJECT_ID('tempdb..#CTE_FIRST_CLEAN_OPS') IS NOT NULL DROP TABLE #CTE_FIRST_CLEAN_OPS
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_TL_SEQS') IS NOT NULL DROP TABLE #CTE_SOLGEL_TL_SEQS
+IF OBJECT_ID('tempdb..#CTE_SOLGEL_ISLIMITBETWEEN') IS NOT NULL DROP TABLE #CTE_SOLGEL_ISLIMITBETWEEN
+
+
+
+-- GET HOURS
+SELECT  ROW_NUMBER () OVER (	ORDER BY  o.workorder_base_id,
+                                        o.WORKORDER_LOT_ID,
+                                        o.WORKORDER_SPLIT_ID,
+							     O.WORKORDER_SUB_ID,
+                                        O.SEQUENCE_NO
+                                      ) AS ROW_NUM_HRS
+       , O.WORKORDER_TYPE
+       , O.WORKORDER_BASE_ID
+	  , O.WORKORDER_LOT_ID
+	  , O.WORKORDER_SPLIT_ID
+	  , O.WORKORDER_SUB_ID
+	  , O.SEQUENCE_NO
+	  , O.RESOURCE_ID
+	 , CASE WHEN EXISTS ( SELECT 1 
+	                         FROM @ReportSettings RS
+		                   WHERE RS.Start_Op_to_SOLGEL = 1 
+		 			  	 AND O.RESOURCE_ID = RS.Resource)
+		    THEN 1 
+		    ELSE 0 
+	    END AS IS_LIMIT_STARTER
+	   , CASE WHEN (SELECT CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+				   FROM USER_DEF_FIELDS UDF
+				  WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				    AND UDF.ID = 'UDF-0000089'             
+				    AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO)) IS NOT NULL 
+ 		     THEN (SELECT 'TIME LIMIT ' + CONVERT(VARCHAR(12),CONVERT(smallint,NUMBER_VAL))
+		  		   FROM USER_DEF_FIELDS UDF
+		  		  WHERE UDF.PROGRAM_ID ='VMMFGWIN_OP'
+				    AND UDF.ID = 'UDF-0000089'             
+				    AND UDF.DOCUMENT_ID = 'W~'+o.WORKORDER_BASE_ID + '~'+ o.WORKORDER_SUB_ID + '~' + o.WORKORDER_LOT_ID +'~'+ o.WORKORDER_SPLIT_ID +'~'+CONVERT(NVARCHAR(3),O.SEQUENCE_NO))
+				     + ' HOURS'
+			ELSE NULL 
+	    END AS MIN_HOURS
+	  , CASE WHEN EXISTS ( SELECT 1 
+	                         FROM @ReportSettings RS
+		                   WHERE RS.Clean_to_Solgel_hrs = 1 
+		 			  	 AND O.RESOURCE_ID = RS.Resource)
+		    THEN 1 
+		    ELSE 0 
+	    END AS IS_LIMIT_ENDER
+	   INTO #CTE_SOLGEL_OP 
+ FROM #CTE_OPERATIONS O
+ --WHERE EXISTS ( SELECT 1 
+	--                         FROM @ReportSettings RS
+	--	                   WHERE RS.Clean_to_Solgel_hrs = 1 
+	--	 			  	 AND O.RESOURCE_ID = RS.Resource)
+--AND 
+--WHERE 
+--O.WORKORDER_BASE_ID = @BASE_ID
+-- AND O.WORKORDER_LOT_ID = @LOT_ID
+--  AND O.WORKORDER_SPLIT_ID = @SPLIT_ID
+ --SELECT * FROM #CTE_SOLGEL_OP 
+ 
+
+ 
+   SELECT 
+        ROW_NUMBER () OVER (PARTITION BY O.workorder_base_id,
+                                         O.WORKORDER_LOT_ID,
+                                         O.WORKORDER_SPLIT_ID,
+							      O.WORKORDER_SUB_ID					 
+					  ORDER BY      O.SEQUENCE_NO
+                                      ) AS ROWNUMPNT
+		          , O.WORKORDER_TYPE
+				, O.WORKORDER_BASE_ID
+				, O.WORKORDER_LOT_ID
+				, O.WORKORDER_SPLIT_ID
+				, O.WORKORDER_SUB_ID
+				, O.SEQUENCE_NO
+				, O.RESOURCE_ID
+				, O.MIN_HOURS
+       INTO #CTE_FIRST_CLEAN_OPS
+	  FROM #CTE_SOLGEL_OP AS O
+	   where EXISTS(SELECT 1 FROM @ReportSettings RS
+		                     WHERE RS.Clean_to_Solgel_hrs = 1 
+		 				AND O.RESOURCE_ID = RS.Resource)
+--SELECT * FROM #CTE_SOLGEL_TL_SEQS
+
+SELECT   STARTROW_NUM_HRS = A.ROW_NUM_HRS
+	  , ENDROW_NUM_HRS = LEAD(A.ROW_NUM_HRS) OVER(PARTITION BY A.WORKORDER_LOT_ID, 
+											         A.WORKORDER_SPLIT_ID, 
+											         A.WORKORDER_SUB_ID
+	                                                  ORDER BY A.ROW_NUM_HRS)
+	  , STARTSEQ
+	  , ENDSEQ = LEAD(A.ENDSEQ) OVER(PARTITION BY A.WORKORDER_LOT_ID,
+									      A.WORKORDER_SPLIT_ID, 
+									      A.WORKORDER_SUB_ID
+	                                 ORDER BY     A.ROW_NUM_HRS)
+	  , MIN_HOURS = LEAD(A.MIN_HOURS) OVER(PARTITION BY A.WORKORDER_LOT_ID, 
+											         A.WORKORDER_SPLIT_ID, 
+											         A.WORKORDER_SUB_ID
+	                                                  ORDER BY A.ROW_NUM_HRS)
+	  , A.WORKORDER_TYPE
+	  , A.WORKORDER_BASE_ID
+	  , A.WORKORDER_LOT_ID
+	  , A.WORKORDER_SPLIT_ID
+	  , A.WORKORDER_SUB_ID
+  INTO #CTE_SOLGEL_TL_SEQS
+  FROM
+      ( SELECT   H.ROW_NUM_HRS
+	 	     , H.IS_LIMIT_STARTER
+		     , H.MIN_HOURS
+		     , CASE WHEN H.SEQUENCE_NO = O.SEQUENCE_NO
+			       THEN 1
+			       ELSE 0
+		       END AS IS_LIMIT_ENDER
+               , ( SELECT H.SEQUENCE_NO WHERE H.IS_LIMIT_STARTER = 1) AS STARTSEQ
+               , ( SELECT O.SEQUENCE_NO WHERE H.SEQUENCE_NO = O.SEQUENCE_NO ) AS ENDSEQ
+		     , H.WORKORDER_TYPE
+		     , H.WORKORDER_BASE_ID
+		     , H.WORKORDER_LOT_ID
+		     , H.WORKORDER_SPLIT_ID
+		     , H.WORKORDER_SUB_ID
+		     , H.SEQUENCE_NO
+		     , H.RESOURCE_ID
+          FROM #CTE_SOLGEL_OP H
+          LEFT OUTER JOIN #CTE_FIRST_CLEAN_OPS O
+	       ON H.WORKORDER_TYPE = O.WORKORDER_TYPE
+		 AND H.WORKORDER_BASE_ID = O.WORKORDER_BASE_ID
+		 AND H.WORKORDER_LOT_ID = O.WORKORDER_LOT_ID
+		 AND H.WORKORDER_SPLIT_ID = O.WORKORDER_SPLIT_ID
+		 AND H.WORKORDER_SUB_ID = O.WORKORDER_SUB_ID
+		 AND H.SEQUENCE_NO = O.SEQUENCE_NO
+		 AND O.ROWNUMPNT = 1
+         WHERE
+              (
+	          SELECT H.SEQUENCE_NO
+	           WHERE H.IS_LIMIT_STARTER = 1
+               ) IS NOT NULL
+             OR
+               (
+	            SELECT O.SEQUENCE_NO
+	             WHERE H.SEQUENCE_NO = O.SEQUENCE_NO
+                ) IS NOT NULL
+      ) AS A
+
+SELECT   H.ROW_NUM_HRS
+	  , H.IS_LIMIT_STARTER
+	  , H.WORKORDER_TYPE
+	  , H.WORKORDER_BASE_ID
+	  , H.WORKORDER_LOT_ID 
+	  , H.WORKORDER_SPLIT_ID
+	  , H.WORKORDER_SUB_ID
+	  , H.SEQUENCE_NO
+	  , H.RESOURCE_ID
+       
+	  , CASE WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		    THEN T.MIN_HOURS
+	    END AS MIN_HOURS
+	  , CASE WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		    THEN 1
+	    END AS IS_LIMIT_BETWEEN
+	  INTO #CTE_SOLGEL_ISLIMITBETWEEN
+  FROM #CTE_SOLGEL_OP H
+  LEFT OUTER JOIN #CTE_SOLGEL_TL_SEQS T
+    ON H.WORKORDER_TYPE = T.WORKORDER_TYPE
+   AND H.WORKORDER_BASE_ID = T.WORKORDER_BASE_ID
+   AND H.WORKORDER_LOT_ID = T.WORKORDER_LOT_ID
+   AND H.WORKORDER_SPLIT_ID = T.WORKORDER_SPLIT_ID
+   AND H.WORKORDER_SUB_ID = T.WORKORDER_SUB_ID
+ WHERE CASE WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+		   AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		  THEN 1
+	  END IS NOT NULL
+ GROUP BY H.ROW_NUM_HRS
+ 	    , T.MIN_HOURS
+	    , H.IS_LIMIT_STARTER
+	    , H.WORKORDER_TYPE
+	    , H.WORKORDER_BASE_ID
+	    , H.WORKORDER_LOT_ID 
+	    , H.WORKORDER_SPLIT_ID
+	    , H.WORKORDER_SUB_ID
+	    , H.SEQUENCE_NO
+	    , H.RESOURCE_ID
+	    , CASE WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			  AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		      THEN T.MIN_HOURS
+	      END
+	    , CASE WHEN H.ROW_NUM_HRS >= T.STARTROW_NUM_HRS
+			  AND H.ROW_NUM_HRS <= T.ENDROW_NUM_HRS
+		      THEN 1
+	      END
+
+--SELECT * FROM #CTE_SOLGEL_OP 
+--SELECT * FROM #CTE_FIRST_CLEAN_OPS
+--SELECT * FROM #CTE_SOLGEL_TL_SEQS
+--SELECT * FROM #CTE_SOLGEL_ISLIMITBETWEEN
+/***************************************************************************************/
+
+
+-- Get documents from Master
+;with cte_docs AS
+(
+	SELECT DRW.* 
+		, d.REVISION_ID, d.ECN_REVISION
+		, U1.STRING_VAL AS ADCN
+		, U2.STRING_VAL AS LOC
+		, d.ID AS PART_ID
+
+	FROM DOCUMENT_REF_WO DRW
+		JOIN DOCUMENT d
+			ON DRW.DOCUMENT_ID = d.ID
+		LEFT OUTER JOIN USER_DEF_FIELDS U1
+			ON DRW.DOCUMENT_ID = U1.DOCUMENT_ID
+				AND U1.PROGRAM_ID = N'VMDOCMNT'
+				AND U1.ID = N'UDF-0000032'
+				AND U1.LABEL IS NULL
+		LEFT OUTER JOIN USER_DEF_FIELDS U2
+			ON DRW.DOCUMENT_ID = U2.DOCUMENT_ID
+				AND U2.PROGRAM_ID = N'VMDOCMNT'
+				AND U2.ID = N'UDF-0000031'
+				AND U2.LABEL IS NULL
+	WHERE EXISTS (
+			SELECT 1 FROM #CTE_WORKORDERS w
+			WHERE w.PART_ID = DRW.WORKORDER_BASE_ID -- links to Master
+				AND w.SUB_ID = N'0'  -- links to Master
+		) 
+)
+--SELECT * FROM cte_docs
+
+	SELECT DISTINCT dd.WORKORDER_BASE_ID, N'0' AS WORKORDER_SUB_ID,
+		(SELECT ISNULL(d.DOCUMENT_ID,N'') + N' / REV: ' + ISNULL(d.REVISION_ID, N'') + N' / ADCN: ' + ISNULL(d.ADCN, N'') + N' / LOC: ' + ISNULL(d.LOC, N'') + CHAR(10)
+			FROM cte_docs d
+			FOR XML PATH('')
+		) as VALS
+    INTO #CTE_WOLINK
+	FROM cte_docs dd
+                
+	UNION ALL 
+
+	SELECT DISTINCT dd.WORKORDER_BASE_ID, dd.WORKORDER_SUB_ID,
+		--STUFF(
+		(
+			SELECT ISNULL(d.DOCUMENT_ID,N'') + N' / REV: ' + ISNULL(d.REVISION_ID, N'') + N' / ADCN: ' + ISNULL(d.ADCN, N'') + N' / LOC: ' + ISNULL(d.LOC, N'') + CHAR(10)
+			FROM cte_docs d
+			WHERE (d.WORKORDER_BASE_ID= dd.WORKORDER_BASE_ID 
+							AND d.WORKORDER_SUB_ID = dd.WORKORDER_SUB_ID)                                              
+			FOR XML PATH('')
+		) AS VALS
+	FROM cte_docs dd
+	WHERE dd.WORKORDER_SUB_ID <> N'0'
+	GROUP BY dd.WORKORDER_BASE_ID, dd.WORKORDER_SUB_ID
+
+--SELECT * FROM #CTE_WOLINK
+-- Get FAI information from Masters
+	SELECT 
+		  CASE WHEN U1.BOOL_VAL = 1 
+		  THEN 'YES'
+		  ELSE 'NO'
+		  END AS FAI_COMPLETE 
+		, SUBSTRING(U2.STRING_VAL, CHARINDEX('-',U2.STRING_VAL)+1,3)  AS FAI_INITIALS
+		, U3.DATE_VAL AS FAI_DATE_SIGNED
+		, M.PART_ID
+		INTO #CTE_FAI
+	FROM work_order m
+		LEFT OUTER JOIN USER_DEF_FIELDS U1
+			ON   U1.DOCUMENT_ID = 'M~'+m.BASE_ID + '~'+ m.SUB_ID + '~' + m.LOT_ID +'~'+ m.SPLIT_ID  
+				AND U1.PROGRAM_ID = N'VMMFGWIN_WO'
+				AND U1.ID = N'UDF-0000086'
+				AND U1.LABEL IS NULL
+		LEFT OUTER JOIN USER_DEF_FIELDS U2
+			ON U2.DOCUMENT_ID = 'M~'+m.BASE_ID + '~'+ m.SUB_ID + '~' + m.LOT_ID +'~'+ m.SPLIT_ID  
+				AND U2.PROGRAM_ID = N'VMMFGWIN_WO'
+				AND U2.ID = N'UDF-0000087'
+				AND U2.LABEL IS NULL
+		LEFT OUTER JOIN USER_DEF_FIELDS U3
+			ON U3.DOCUMENT_ID = 'M~'+m.BASE_ID + '~'+ m.SUB_ID + '~' + m.LOT_ID +'~'+ m.SPLIT_ID  
+				AND U3.PROGRAM_ID = N'VMMFGWIN_WO'
+				AND U3.ID = N'UDF-0000088'
+				AND U3.LABEL IS NULL
+	WHERE EXISTS (
+			SELECT 1 FROM #CTE_WORKORDERS w
+			WHERE w.PART_ID = M.BASE_ID
+				AND w.SUB_ID = N'0'
+		)
+--SELECT * FROM #cte_FAI
+
+--beginning added 8/31/2018 VME needs optimizing
+-- CTE_HIDE_ETCH_BARCODE
+SELECT A.*,
+			 CASE
+				WHEN RS.REPORT_SECTION IS NOT NULL
+					AND RS2.REPORT_SECTION IS NOT NULL
+				THEN 1
+				ELSE 0
+			 END AS HIDE_ETCH_BARCODE
+INTO #CTE_HIDE_ETCH_BARCODE
+	    FROM
+	    (
+		   SELECT O.WORKORDER_TYPE,
+				O.WORKORDER_BASE_ID,
+				O.WORKORDER_LOT_ID,
+				O.WORKORDER_SPLIT_ID,
+				O.WORKORDER_SUB_ID,
+				O.SEQUENCE_NO,
+				O.RESOURCE_ID,
+				lead(O.SEQUENCE_NO) OVER(PARTITION BY O.WORKORDER_BASE_ID ORDER BY O.WORKORDER_BASE_ID,
+		   														       O.WORKORDER_LOT_ID, 
+		   															  O.WORKORDER_SPLIT_ID, 
+		   															  O.WORKORDER_SUB_ID, 
+		   															  O.SEQUENCE_NO) AS nextseq,
+		         lead(O.RESOURCE_ID) OVER(PARTITION BY O.WORKORDER_BASE_ID ORDER BY O.WORKORDER_BASE_ID,
+		   														   O.WORKORDER_LOT_ID, 
+		   														   O.WORKORDER_SPLIT_ID, 
+		   														   O.WORKORDER_SUB_ID, 
+		   														   O.SEQUENCE_NO) AS nextresource
+		    FROM OPERATION AS O
+		   WHERE O.WORKORDER_BASE_ID = @BASE_ID
+			AND O.WORKORDER_LOT_ID = @LOT_ID
+			AND O.WORKORDER_SPLIT_ID = @SPLIT_ID
+	    ) AS A
+		   INNER JOIN LIVESUPPLEMENTAL.DBO.ResourceID_ReportSettings rs
+			 ON A.RESOURCE_ID = rs.resource_id
+			AND rs.Report_Name = 'traveller'
+		   INNER JOIN LIVESUPPLEMENTAL.DBO.ResourceID_ReportSettings rs2
+			 ON A.nextresource = rs2.resource_id
+		     AND rs2.Report_Name = 'traveller'
+		   WHERE A.WORKORDER_BASE_ID = @BASE_ID
+			AND A.WORKORDER_LOT_ID = @LOT_ID
+			AND A.WORKORDER_SPLIT_ID = @SPLIT_ID
+			AND A.WORKORDER_TYPE = 'W'
+			AND rs.report_section in ('barcode_etch')
+			AND rs2.report_section in ('barcode_pre_etch')
+-- End added needs optimizing
+--SELECT MIN_HOURS, SEQUENCE_NO FROM #CTE_OPERATIONS OP
+--SELECT MIN_HOURS, SEQUENCE_NO FROM #CTE_SOLGEL_MIN_HRS A
+--SELECT MIN_HOURS, SEQUENCE_NO FROM #CTE_ISLIMITBETWEEN B
+
+--SELECT * FROM  #CTE_WORKORDERS 
+--SELECT * FROM  #CTE_OPERATIONS
+--SELECT * FROM  #CTE_FAI
+--SELECT * FROM  #CTE_WOLINK
+--SELECT * FROM  #CTE_HIDE_ETCH_BARCODE
+--SELECT * FROM  #CTE_CHEM_PAINT_OP 
+--SELECT * FROM  #CTE_FIRST_PAINT_OPS
+--SELECT * FROM  #CTE_TL_SEQS
+--SELECT * FROM  #CTE_ISLIMITBETWEEN
+--SELECT * FROM  #CTE_SOLGEL_TL_SEQS
+--SELECT * FROM  #CTE_SOLGEL_ISLIMITBETWEEN
+--SELECT * FROM  #CTE_TIME_LIMIT
+
+SELECT     COALESCE(CONVERT(NVARCHAR(25),A.MIN_HOURS),
+	                   CONVERT(NVARCHAR(25),B.MIN_HOURS),
+				    CONVERT(NVARCHAR(25),OP.MIN_HOURS)) AS MIN_HOURS
+			  , OP.SEQUENCE_NO
+			, OP.WORKORDER_TYPE
+	, OP.WORKORDER_BASE_ID
+	, OP.WORKORDER_LOT_ID
+	, OP.WORKORDER_SPLIT_ID
+	, OP.WORKORDER_SUB_ID
+	, OP.RESOURCE_ID
+	, OP.OPERATION_TYPE
+	    INTO #CTE_TIME_LIMIT
+	     FROM #CTE_OPERATIONS OP
+		LEFT OUTER JOIN  #CTE_SOLGEL_ISLIMITBETWEEN A
+	       ON OP.WORKORDER_TYPE = A.WORKORDER_TYPE
+	      AND OP.WORKORDER_BASE_ID = A.WORKORDER_BASE_ID
+	      AND OP.WORKORDER_LOT_ID = A.WORKORDER_LOT_ID
+		 AND OP.WORKORDER_SPLIT_ID = A.WORKORDER_SPLIT_ID
+		 AND OP.WORKORDER_SUB_ID = A.WORKORDER_SUB_ID
+		 AND OP.SEQUENCE_NO = A.SEQUENCE_NO 
+		LEFT OUTER JOIN #CTE_ISLIMITBETWEEN B
+	    ON OP.WORKORDER_TYPE = B.WORKORDER_TYPE
+	      AND OP.WORKORDER_BASE_ID = B.WORKORDER_BASE_ID
+	      AND OP.WORKORDER_LOT_ID = B.WORKORDER_LOT_ID
+		 AND OP.WORKORDER_SPLIT_ID = B.WORKORDER_SPLIT_ID
+		 AND OP.WORKORDER_SUB_ID = B.WORKORDER_SUB_ID
+		 AND OP.SEQUENCE_NO = B.SEQUENCE_NO
+
+
+SELECT --o.*
+	-- Added 10/22/2019 New stamp for TIME LIMIT for operation only not on footer
+	 CASE WHEN TL.MIN_HOURS = 'TIME LIMIT 0 HOURS' 
+	      THEN NULL 
+		 ELSE TL.MIN_HOURS 
+	 END AS TIME_LIMIT
+	, o.WORKORDER_TYPE
+	, o.WORKORDER_BASE_ID
+	, o.WORKORDER_LOT_ID
+	, o.WORKORDER_SPLIT_ID
+	, o.WORKORDER_SUB_ID
+	, o.SEQUENCE_NO
+	, o.RESOURCE_ID
+	, SR.DESCRIPTION AS RESOURCE_DESC
+	, o.SERVICE_ID
+	, o.OPERATION_TYPE
+	-- Added 10/22/2019 per request from Holly and Shannen
+	, ot.DESCRIPTION AS OP_TYPE_DESC
+	, o.VENDOR_ID
+	, o.VENDOR_SERVICE_ID
+	, o.RQ_PART_ID 
+	, o.RQ_PART_DESCRIPTION
+	, o.PIECE_NO
+	, O.PIECE_NO AS RQ_PIECE
+	, dbo.sfnWONUMFormat(o.WORKORDER_BASE_ID, o.WORKORDER_LOT_ID, o.WORKORDER_SPLIT_ID, o.WORKORDER_SUB_ID) AS WONUM
+	, dbo.sfnWONUMFormat(o.WORKORDER_BASE_ID, o.WORKORDER_LOT_ID, o.WORKORDER_SPLIT_ID, o.WORKORDER_SUB_ID) AS WONUM_ID
+	, o.WORKORDER_BASE_ID +N'/'+ o.WORKORDER_LOT_ID +N'/'+ o.WORKORDER_SPLIT_ID AS WO_ID
+	, w.PART_ID
+	, w.PART_ID AS WO_PART_ID
+	, ISNULL(w.DESIRED_WANT_DATE,(SELECT TOP 1 w.DESIRED_WANT_DATE FROM #CTE_WORKORDERS w)) AS DESIRED_WANT_DATE
+	, ISNULL(w.DESIRED_RLS_DATE, (SELECT TOP 1 w.DESIRED_RLS_DATE FROM #CTE_WORKORDERS w)) AS DESIRED_RLS_DATE
+	, (SELECT TOP 1 w.ENGINEERED_BY FROM #CTE_WORKORDERS W WHERE SUB_ID = '0') AS ENGINEERED_BY
+	, o.WORKORDER_BASE_ID AS BASE_ID
+	, o.WORKORDER_LOT_ID AS LOT_ID
+	, o.WORKORDER_SUB_ID AS SUB_ID
+	, o.WORKORDER_SPLIT_ID AS SPLIT_ID
+	, CASE WHEN rs.STAMP IS NOT NULL 
+	       THEN 1 ELSE 0 END AS STAMP                
+	, CASE WHEN rs.heightchange IS NOT NULL 
+  		  THEN 1 ELSE 0 END AS heightchange
+	, CASE WHEN rs.SHIP_VIA IS NOT NULL 
+		  THEN CO.SHIP_VIA
+	       ELSE NULL
+	   END AS SHIP_VIA 
+	,  CASE WHEN rs.barcode_review IS NOT NULL AND O.OPERATION_TYPE NOT IN (N'QP-REVIEW', N'QP-NI')
+		   THEN 1  
+	        WHEN (W.PART_ID like N'Tooling%' OR W.PART_ID LIKE N'%Tooling') and w.sub_id <> '0'
+	        THEN 1
+	        WHEN sr.auto_reporting = N'Y'
+	        THEN 1
+		  --added 8/31/2018 vme  needs to be optimized
+		   WHEN HEB.HIDE_ETCH_BARCODE = 1 
+		   THEN 1
+	        ELSE 0
+	    END as barcode
+	,  CASE WHEN O.OPERATION_TYPE IN (N'PRE-PULL', N'STAGING', N'REVIEW', N'QP-REVIEW', N'QP-NI','FAI', N'FAI-NI', N'PANEL',N'PROGM')
+		   THEN 1
+		   WHEN rs.QTY_IN IS NOT NULL
+		   THEN 0 
+		   ELSE 1
+	    END AS  HIDE_QTY_IN
+	, rs.qty_out
+	,  CASE WHEN rs.QTY_OUT IS NOT NULL
+	        THEN CAST(1 AS bit)
+ 	        ELSE CAST(0 AS bit)
+	    END AS  HIDE_QTY_OUT
+    -- beginning added 8/31/2018 VME
+     , CASE WHEN rs.QTY_NOSHOW IS NOT NULL
+	       THEN CAST(1 AS bit)
+	       ELSE CAST(0 AS bit)
+	   END AS  HIDE_QTY_NOSHOW
+    -- end added 8/31/2018 VME
+	, CASE WHEN rs.printuser IS NOT NULL 
+		  THEN 1
+		  ELSE 0 
+	   END AS PRINTUSER
+    --For printing Part Mark user information
+	, O.USER_1 
+	,'*' + SUBSTRING( REPLACE( O.USER_1 , N' ' , N'' ) , CHARINDEX( N':' , REPLACE( O.USER_1 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_1 , 
+	O.USER_2 , 
+	N'*' + SUBSTRING( REPLACE( O.USER_2 , N' ' , N'' ) , CHARINDEX( N':' , REPLACE( O.USER_2 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_2 , 
+	O.USER_3 , 
+	N'*' + SUBSTRING( REPLACE( O.USER_3 , N' ' , N'' ) , CHARINDEX( N':' , REPLACE( O.USER_3 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_3 , 
+	O.USER_4 , 
+	N'*' + SUBSTRING( REPLACE( O.USER_4 , N' ' , N'' ) , CHARINDEX( ':' , REPLACE( O.USER_4 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_4 , 
+	O.USER_5 , 
+	N'*' + SUBSTRING( REPLACE( O.USER_5 , N' ' , N'' ) , CHARINDEX( N':' , REPLACE( O.USER_5 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_5 , 
+	O.USER_6 , 
+	N'*' + SUBSTRING( REPLACE( O.USER_6 , N' ' , N'' ) , CHARINDEX( N':' , REPLACE( O.USER_6 , N' ' , N'' )) + 1 , 80 ) + N'*' AS   OP_USER_6 , 
+	O.USER_7 , 
+	'*' + SUBSTRING( REPLACE( O.USER_7 , ' ' , '' ) , CHARINDEX( ':' , REPLACE( O.USER_7 , ' ' , '' )) + 1 , 80 ) + '*' AS   OP_USER_7 , 
+	O.USER_8 , 
+	'*' + SUBSTRING( REPLACE( O.USER_8 , ' ' , '' ) , CHARINDEX( ':' , REPLACE( O.USER_8 , ' ' , '' )) + 1 , 80 ) + '*' AS   OP_USER_8 , 
+	O.USER_9 , 
+	'*' + SUBSTRING( REPLACE( O.USER_9 , ' ' , '' ) , CHARINDEX( ':' , REPLACE( O.USER_9 , ' ' , '' )) + 1 , 80 ) + '*' AS   OP_USER_9 , 
+	O.USER_10 , 
+	'*' + SUBSTRING( REPLACE( O.USER_10 , ' ' , '' ) , CHARINDEX( ':' , REPLACE( O.USER_10 , ' ' , '' )) + 1 , 80 ) + '*' AS OP_USER_10 
+
+	, CO.CUSTOMER_ID
+	, CO.ID AS CUST_ORDER_ID
+	, COL.CUSTOMER_PART_ID
+	, C.NAME AS Cust_Name
+	, CA.NAME AS Cust_AddrName
+	, w.DESCRIPTION AS WO_PART_DESCRIPTION
+	, ISNULL(w.WO_SPECS, CONVERT(NVARCHAR(MAX),CONVERT(VARBINARY(MAX),oRq.RQ_BITS))) AS WO_LONG_DESCR
+	, CONVERT(DECIMAL(14,0),W.SURFACE_AREA) AS SURFACE_AREA
+	---------- 10/21/2019 VME requirement per AS91000
+	, W.material_type
+	, W.alloy 
+	---------------------------------- 
+	--, W.material_type + ' ' 
+	--+ W.alloy + ' '
+	--+ convert(varchar(15),CONVERT(DECIMAL(5,2),W.Thickness_val)) + ' x '
+	--+ convert(varchar(15),CONVERT(DECIMAL(5,2),W.width_val)) + ' x '
+	--+ convert(varchar(15),CONVERT(DECIMAL(5,2),W.length_val)) as 
+	, W.sa_description2
+	, CAST( CAST(O.O_BITS AS varbinary(MAX))AS nvarchar(MAX)) AS OP_LONG_DESCR 
+	--, o.CUST_SPECS_LINES
+	--, O.RQ_PART_DESCRIPTION
+	, O.RQ_REQD_DATE AS RQ_REQD
+	, O.RQ_PART_STOCK_UM
+	, O.RQ_CALC_QTY
+	-- Added 9/5/2019 VME FAI signature on work order from master
+	, F.FAI_COMPLETE
+	, F.FAI_INITIALS
+	, F.FAI_DATE_SIGNED
+	-- Added 9/5/2019 VME replaces STAMP for FIRST ARTICLE INPECTION
+		/* VME 9/5/2019           */
+	,  O.FAI_STAMP
+	,  O.FAI_STAMP2
+	 , O.FAI_NET_STAMP 
+	-- Added 9/5/2019 VME replaces STAMP for NEW PART
+	, CASE WHEN EXISTS (SELECT 1 FROM #CTE_OPERATIONS O1
+		  WHERE NEWPART_STAMP = 1) 
+	       THEN 'NEW PART' --NEW PART
+		  ELSE NULL
+		  END AS NEWPART_STAMP2
+	, CASE WHEN EXISTS(SELECT 1 
+	                     FROM USER_DEF_FIELDS 
+				     WHERE DOCUMENT_ID = w.PART_ID AND PROGRAM_ID = 'VMPRTMNT' AND ID = 'UDF-0000040' AND BOOL_VAL = 1)
+		  THEN 'ITAR Controlled'
+	       WHEN W.PART_ID LIKE '737RIB-KIT-PROD%'
+	       THEN 'Tags must remain on parts throughout entire process!'
+		  WHEN W.PART_ID LIKE '737RIB-MAX-KIT-PROD%'
+	       THEN 'Tags must remain on parts throughout entire process!'
+	       ELSE ''
+	   END AS MESSAGE
+	, CASE WHEN DSL.SUPPLY_TYPE ='CP' AND COL.LINE_NO = 
+			( SELECT MIN( CL1.LINE_NO )
+				FROM dbo.cust_order_line AS CL1
+					INNER JOIN dbo.DEMAND_SUPPLY_LINK AS DSL1
+						ON CL1.CUST_ORDER_ID           = DSL1.DEMAND_BASE_ID
+							AND CL1.PART_ID                 = DSL1.SUPPLY_PART_ID
+							AND DSL1.SUPPLY_BASE_ID         = @BASE_ID  -- changed 6/10/2014
+							AND DSL1.SUPPLY_LOT_ID         = @LOT_ID
+							AND DSL1.SUPPLY_SPLIT_ID       = @SPLIT_ID
+							AND DSL1.SUPPLY_TYPE            = 'CP' 
+			)
+		THEN 0 
+	END AS CP_FIRST_PART
+	, CASE WHEN DSL.SUPPLY_TYPE = 'CP'
+		THEN COL.PART_ID
+		ELSE NULL
+	END AS CP_PART 
+	, DSL.SUPPLY_TYPE
+	, COL.LINE_NO
+	--, CASE WHEN SUPPLY_TYPE = 'CP'
+	--	THEN CAST( COL.ORDER_QTY AS INT )
+	--	ELSE NULL
+	--END AS CP_QTY 
+	, SA.DESIRED_QTY AS CP_QTY 
+	--, CASE WHEN DSL.SUPPLY_TYPE = 'CP'
+	--	THEN P.DESCRIPTION
+	--	ELSE NULL
+	--END AS CP_DESCRIPTION
+	, sa.DESCRIPTION AS CP_DESCRIPTION
+	, sa.sa_description2 AS cp_description2
+	, CASE WHEN ISNULL(SUPPLY_TYPE, 'WO') = 'WO'
+		THEN COL.CUSTOMER_PART_ID
+		ELSE NULL
+	END AS WO_CUSTOMER_PART_ID
+	, CASE WHEN SUPPLY_TYPE = 'CP'
+		THEN COL.CUSTOMER_PART_ID
+		ELSE NULL
+	END AS CP_CUSTOMER_PART_ID
+	, SR.AUTO_REPORTING
+	, ovd.LINE_NUM AS OVD_LINE_NO
+	, ovd.LABEL_YN as LABELYN
+	, ovd.PROMPT as OVD_PROMPT
+	, O.SUBORD_WO_SUB_ID AS RQ_SUB_ID
+	, CO.CUSTOMER_PO_REF
+	, w.DESIRED_QTY
+	--, w.PART_ID
+	--, w.SUB_ID
+	, wl.VALS AS WO_LINK
+	, CONVERT(NVARCHAR(MAX),CONVERT(VARBINARY(MAX),oRq.RQ_BITS)) AS REQ_SPECS
+	--, CS.ADD_CARRIAGE_RETURNS
+	, dbo.sfnGetCustSpecsString(o.WORKORDER_TYPE + N'~' + o.WORKORDER_BASE_ID + N'~' +o.WORKORDER_SUB_ID+N'~'+ o.WORKORDER_LOT_ID + N'~' + o.WORKORDER_SPLIT_ID+N'~'+CAST(o.SEQUENCE_NO AS NVARCHAR(3))) AS CustSpecsString
+FROM #CTE_WORKORDERS w
+	INNER JOIN #CTE_OPERATIONS o
+		 ON w.BASE_ID = o.WORKORDER_BASE_ID
+		AND w.LOT_ID = o.WORKORDER_LOT_ID
+		AND w.SPLIT_ID = o.WORKORDER_SPLIT_ID
+		AND w.SUB_ID = o.WORKORDER_SUB_ID
+		AND w.TYPE = o.WORKORDER_TYPE
+     LEFT OUTER JOIN operation_type ot
+	   ON O.OPERATION_TYPE = OT.ID
+     LEFT OUTER JOIN SHOP_RESOURCE SR
+		 ON sr.ID = o.RESOURCE_ID
+	LEFT OUTER JOIN DEMAND_SUPPLY_LINK DSL
+		INNER JOIN PART P
+			 ON DSL.SUPPLY_PART_ID = P.ID 
+		   ON DSL.SUPPLY_BASE_ID = w.BASE_ID
+            AND DSL.SUPPLY_LOT_ID = w.LOT_ID
+            AND DSL.SUPPLY_SPLIT_ID = w.SPLIT_ID
+            --AND DSL.SUPPLY_SUB_ID = w.SUB_ID
+            AND DSL.SUPPLY_TYPE IN ('WO', 'CP')
+     LEFT OUTER JOIN CUST_ORDER_LINE COL
+          ON DSL.DEMAND_BASE_ID = COL.CUST_ORDER_ID
+         AND DSL.DEMAND_SEQ_NO  = COL.LINE_NO
+	LEFT OUTER JOIN CUSTOMER_ORDER CO
+          ON COL.CUST_ORDER_ID = CO.ID
+     LEFT OUTER JOIN CUSTOMER AS C
+	     ON C.ID = CO.CUSTOMER_ID
+     LEFT OUTER JOIN CUST_ADDRESS AS CA
+	     ON CO.CUSTOMER_ID = CA.CUSTOMER_ID
+	    AND CO.SHIP_TO_ADDR_NO        = CA.ADDR_NO
+	LEFT OUTER JOIN #CTE_COPRODUCTS AS SA
+		ON W.BASE_ID                 = SA.WORKORDER_BASE_ID
+	    AND W.LOT_ID                  = SA.WORKORDER_LOT_ID
+	    AND W.SPLIT_ID                = SA.WORKORDER_SPLIT_ID
+	    AND W.SUB_ID			    = SA.WORKORDER_SUB_ID
+	    AND W.TYPE				    = SA.WORKORDER_TYPE
+     LEFT OUTER JOIN #CTE_FAI F
+	  ON F.PART_ID = W.PART_ID
+  -- added 8/31/2018 VME -- needs to be optimized
+     LEFT OUTER JOIN #CTE_HIDE_ETCH_BARCODE HEB
+		 ON O.WORKORDER_BASE_ID	 = HEB.WORKORDER_BASE_ID
+		AND O.WORKORDER_LOT_ID	 = HEB.WORKORDER_LOT_ID
+		AND O.WORKORDER_SPLIT_ID = HEB.WORKORDER_SPLIT_ID
+		AND O.WORKORDER_SUB_ID = HEB.WORKORDER_SUB_ID
+		AND O.WORKORDER_TYPE = 'W'
+		AND O.SEQUENCE_NO = HEB.SEQUENCE_NO
+-- needs to be optimized  
+    LEFT OUTER JOIN SKILLS_PART_UDF AS PSA
+		ON PSA.PART_ID = CASE WHEN SUPPLY_TYPE = 'CP'
+				THEN COL.PART_ID
+				ELSE NULL
+			END
+    LEFT OUTER JOIN #CTE_WOLINK wl
+        ON wl.WORKORDER_SUB_ID = w.SUB_ID
+	LEFT OUTER JOIN #CTE_OPERATIONS oRq
+		ON oRq.WORKORDER_BASE_ID = w.BASE_ID
+			AND oRq.WORKORDER_LOT_ID = w.LOT_ID
+			AND oRq.WORKORDER_SPLIT_ID = w.SPLIT_ID
+			AND oRq.SUBORD_WO_SUB_ID = w.SUB_ID
+			AND oRq.WORKORDER_TYPE = w.TYPE
+
+	LEFT OUTER JOIN @ReportSettings rs
+		ON sr.ID = rs.Resource                                
+	LEFT OUTER JOIN livesupplemental.[dbo].[operator_variable_data] ovd
+		ON o.resource_id     = ovd.resource_id
+			 AND o.operation_type = ovd.OPERATION_TYPE_ID
+       LEFT OUTER JOIN #CTE_TIME_LIMIT TL
+		ON o.WORKORDER_BASE_ID = TL.WORKORDER_BASE_ID
+			AND o.WORKORDER_LOT_ID = TL.WORKORDER_LOT_ID
+			AND o.WORKORDER_SPLIT_ID = TL.WORKORDER_SPLIT_ID
+			AND o.WORKORDER_SUB_ID = TL.WORKORDER_SUB_ID
+			AND o.WORKORDER_TYPE = TL.WORKORDER_TYPE
+			AND O.SEQUENCE_NO = TL.SEQUENCE_NO
+    -- LEFT OUTER JOIN cte_cust_specific_lines cs 
+	   --  ON O.WORKORDER_TYPE = 'W'
+			 --AND O.WORKORDER_BASE_ID	    = CS.BASE_ID 
+			 --AND O.WORKORDER_LOT_ID	    = CS.LOT_ID 
+			 --AND O.WORKORDER_SPLIT_ID    = CS.SPLIT_ID 
+			 --AND O.WORKORDER_SUB_ID	    = CS.SUB_ID 
+			 --AND CAST(O.SEQUENCE_NO AS NVARCHAR(3)) = CAST(CS.SEQUENCE_NO AS NVARCHAR(3))
+                                                
+ORDER BY
+	W.BASE_ID ,
+	W.LOT_ID , 
+	W.SPLIT_ID , 
+	W.SUB_ID , 
+	W.PART_ID , 
+	O.SEQUENCE_NO , 
+	O.PIECE_NO , 
+	CASE WHEN w.WO_SPECS IS NULL
+		THEN CAST( CAST( o.RQ_BITS AS varbinary(MAX))AS NVARCHAR(MAX))
+		ELSE w.WO_SPECS
+	END ,
+	COL.LINE_NO

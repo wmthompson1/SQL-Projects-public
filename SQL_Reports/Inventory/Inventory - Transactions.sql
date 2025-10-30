@@ -68,7 +68,7 @@ IF OBJECT_ID('tempdb..#temp5') IS NOT NULL DROP TABLE #temp5
 DECLARE @Tester int
  -- ,@Part_ID nvarchar(30) = '143T0033-7' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
  -- ,@SITE_id nvarchar(30) -- = 'SK01'
- -- ,@TRANSACTION_id nvarchar(30) -- = '1884520'
+ ,@TRANSACTION_id nvarchar(30) = '16499' -- Filter all datasets by this transaction ID
  -- ,@EndDate datetime = getdate() --
  Set @Tester = 0
  --Set @SITE_id = 'SK01'
@@ -124,7 +124,8 @@ SELECT
             from trace_inv_trans v, inventory_trans i 
         -- wnt testing 8/3
             where v.part_id = t.part_id -- @part_id -- @p2 
-            and v.part_id = i.part_id and i.site_id = 'SK01')
+            and v.part_id = i.part_id and i.site_id = 'SK01'
+            and (@TRANSACTION_id IS NULL OR i.TRANSACTION_ID = @TRANSACTION_id))
 
              or t.id in (
               select distinct ( x.trace_id ) from [sql-lab-2].live.dbo.trace_labor_trans x
@@ -157,6 +158,7 @@ on x.transaction_id = t.transaction_id
 and t.site_id = 'SK01' -- @site_id 
 --where x.part_id = @part_id 
 where x.part_id = t.part_id
+AND (@TRANSACTION_id IS NULL OR t.TRANSACTION_ID = @TRANSACTION_id) -- Filter by specific transaction ID
  
 
 ORDER BY T.TRANSACTION_DATE, T.TRANSACTION_ID
@@ -232,6 +234,7 @@ and t.location_id = l.id
  --AND TRANSACTION_DATE < @EndDate AND T.PART_ID IS NOT NULL 
 --AND T.PART_ID = @Part_ID  
 AND ( T.SITE_ID IN ( N'SK01' ) ) 
+AND (@TRANSACTION_id IS NULL OR T.TRANSACTION_ID = @TRANSACTION_id) -- Filter by specific transaction ID 
 ORDER BY T.SITE_ID, T.PART_ID, T.TRANSACTION_ID
 
 
@@ -726,5 +729,6 @@ order by part_id
 select * from #inventory_trans
 where 
 (part_id = @Part_ID
-or @Part_ID IS NULL ) 
+or @Part_ID IS NULL )
+AND (@TRANSACTION_id IS NULL OR TRANSACTION_ID = @TRANSACTION_id) -- Filter by specific transaction ID 
 

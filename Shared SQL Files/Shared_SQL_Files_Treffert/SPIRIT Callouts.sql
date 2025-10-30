@@ -1,0 +1,63 @@
+use live
+go
+
+select co.id
+	, co.[status]
+	, wo.base_id
+	, wo.[status]
+	, o.SEQUENCE_NO
+	, o.OPERATION_TYPE
+from work_order wo
+inner join operation o
+	on wo.base_id = o.workorder_base_id
+	and wo.lot_id = o.workorder_lot_id
+	and wo.split_id = o.workorder_split_id
+	and wo.sub_id = o.workorder_sub_id
+	and wo.[type] = o.workorder_type
+inner join DEMAND_supply_link dsl
+	on dsl.SUPPLY_TYPE = 'WO' 
+	and dsl.SUPPLY_BASE_ID = wo.base_id
+	and dsl.SUPPLY_LOT_ID = wo.lot_id
+	and dsl.SUPPLY_SPLIT_ID = wo.split_id
+	and dsl.SUPPLY_SUB_ID = wo.sub_id 
+inner join customer_order co
+	on dsl.DEMAND_TYPE = 'CO'
+	and dsl.DEMAND_BASE_ID = co.id  
+where co.customer_id like 'SPIAER'
+and wo.[status] in ('R', 'C')
+
+select distinct part_id
+from cust_order_line col
+inner join customer_order co
+on co.id = col.CUST_ORDER_ID
+where co.customer_id like 'SPIAER'
+
+select WO.BASE_ID
+	, WO.LOT_ID
+	, WO.SPLIT_ID
+	, WO.SUB_ID
+	, WO.[STATUS] AS WO_STATUS
+	, O.SEQUENCE_NO
+	, O.RESOURCE_ID
+	, O.OPERATION_TYPE
+	, OT.[DESCRIPTION]
+	, O.[STATUS] AS OPS_STATUS
+from work_order wo
+inner join operation o
+	on wo.base_id = o.workorder_base_id
+	and wo.lot_id = o.workorder_lot_id
+	and wo.split_id = o.workorder_split_id
+	and wo.sub_id = o.workorder_sub_id
+	and wo.[type] = o.workorder_type
+INNER JOIN OPERATION_TYPE OT
+	on o.OPERATION_TYPE = OT.id
+where wo.part_id in ('141Z6831-9501', '141Z6831-9502', '141Z6832-9501', '141Z6832-9502', '144Z6831-9501', '144Z6831-9502', '144Z6871-9501', '144Z6871-9502', '145Z6831-9501', '145Z6831-9502', '145Z6865-1', '145Z6865-2', '145Z6871-9501', '145Z6871-9502', '146Z6831-921', '146Z6831-922', '146Z6831-9501', '146Z6831-9502', '146Z6832-921', '146Z6832-922', '146Z6832-9501', '146Z6832-9502', '146Z6833-921', '146Z6833-922', '146Z6833-9501', '146Z6833-9502', '146Z6854-501', '146Z6854-502', '232A4440-11', '232A4440-12', '410Z1227-3', '410Z1233-3', '410Z1243-2', '413Z1133-402', '413Z1133-404', '413Z1134-401', '413Z1134-402', '413Z1134-423', '413Z1134-424', '413Z1134-435', '413Z1134-436', '415Z3413-15', '418Z1149-5', '418Z1159-19', '418Z1159-23', '418Z2303-1', '418Z2303-2', '418Z4084-101', '418Z4084-105', '418Z4084-107', '418Z4084-109', '418Z4084-115', '418Z4084-117', '418Z4084-119', '418Z4084-121', '418Z4084-123', '418Z4084-125', '418Z4084-127', '418Z4084-46', '418Z4084-47', '418Z4084-48', '418Z4084-6', '418Z4084-7', '418Z4084-8', '418Z5383-13', '418Z5383-17', '418Z5383-19', '418Z5383-3', '418Z5383-7', '418Z5383-9', '418Z6133-9', '418Z6243-1', '418Z6243-2', '418Z6341-4', '623Z2113-116', '623Z2113-51', '623Z2113-53', '624Z1190-203', '626Z1127-1', '632Z9106-12', '671Z1361-283', '671Z1363-13', '671Z1363-14', '671Z1363-7', '671Z1363-8', '678Z4111-149', '678Z4111-301', '678Z4132-1', '678Z4132-2', '715Z1551-1001', '715Z1683-3', '715Z2313-78', '715Z2313-79', '715Z2323-21', '715Z2323-22', '715Z2323-24', '715Z2361-6')
+AND OPERATION_TYPE IN ('F17.39', 'F20.02', 'F20.03')
+AND WO.[TYPE] = 'W'
+
+
+SELECT * FROM OPERATION_TYPE 
+WHERE ID IN ('30907A', '5010-1', '5034', '5423', '5656-8.3', 'ARACK', 'ASSY', 'ATD', 'AUB-DINSP', 'AUB-OVEN PRIME', 'AUB-oven 1', 'AUB-oven Prime', 'AUBREC', 'AUBSHIP', 'AVERIFY', 'BAC5753M4', 'BFC-Ti', 'BRAKEFORM', 'BRAKEFORM-HOT', 'CA-REVIEW', 'CHKMATL', 'CLATOO', 'CM-REVIEW', 'CMM', 'CNC', 'COC', 'COCP', 'DB001', 'DB002', 'DB5300', 'DB5748', 'DINSPECT', 'DINSPECT2', 'DINSPECT3', 'ENG-REVIEW', 'F14.692', 'F14.693', 'F17.39', 'F17.48A', 'F17.48B', 'F17.50C', 'F17.52A', 'F17.52B', 'F17.55A', 'F17.55B', 'F20.02', 'F20.03', 'F20.03PT', 'FAI', 'FAI-NI', 'FG-CHKMATL', 'FG-KITTING', 'HARDNESS', 'INSP', 'INSPCHEM', 'INSPMASK', 'MASK', 'MFG-REVIEW', 'MIL001', 'NULL', 'PANEL', 'PKG', 'PM', 'PRG-REVIEW', 'PROGM', 'PROGS', 'PS102', 'PTM-SPIAER', 'PTM001', 'PTM002', 'PTM004', 'QA-REVIEW', 'QP-NI', 'QP-REVIEW', 'REC-P1', 'REC-P2', 'REC-P3', 'RECINSP-FIN', 'REVIEW', 'REVIEW-FAI', 'RIVET1', 'RW-CRES', 'SCLEAN', 'SETUP', 'SETUP & TURN', 'SFI', 'SFI-NI', 'SFI-REVIEW', 'SHIP-P1 TO P2', 'SHIP-P2 TO P1', 'SHIP-P2 TO P3', 'SHIP-P3 TO P2', 'SHR001', 'SHR004', 'SOUINSPECT', 'SOUPKG', 'SOUREC', 'SOUSHIP', 'STRAIGHTEN-P1', 'STRAIGHTEN-P2', 'STRAIGHTEN-P3', 'UNRACK', 'WATERJET', 'WINSPECT', 'WJ', 'WORKFORCE')
+	AND ([DESCRIPTION] LIKE '%5632%'
+		OR [DESCRIPTION] LIKE '%5019%'
+		OR [DESCRIPTION] LIKE '%5736%')

@@ -1,0 +1,44 @@
+USE [LIVESupplemental]
+GO
+
+/****** Object:  Table [dbo].[MastersUpd20211109b]    Script Date: 11/9/2021 1:14:56 PM ******/
+SET ANSI_NULLS ON
+GO
+
+SET QUOTED_IDENTIFIER ON
+GO
+
+--CREATE TABLE [dbo].[MastersUpd20211109b](
+--	[Base_ID] [nvarchar](50) NULL,
+--	[Lot_ID] [nvarchar](5) NULL,
+--	[Split_ID] [nvarchar](5) NULL,
+--	[Sub_ID] [nvarchar](5) NULL,
+--	[SEQUENCE_NO] [nvarchar](5) NULL,
+--	[Operation_Type] [nvarchar](50) NULL,
+--	[Resource_ID] [nvarchar](50) NULL
+--) ON [PRIMARY]
+--GO
+
+SELECT * FROM LIVESupplemental.dbo.[MastersUpd20211109b]
+--> 106 ROWS
+
+USE LIVE
+GO
+
+SELECT * 
+FROM OPERATION 
+WHERE WORKORDER_TYPE = 'M'
+AND OPERATION_TYPE = 'PEN-POSTCLEAN'
+
+SELECT * FROM SHOP_RESOURCE WHERE ID = 'P1F1-PENETCH'
+
+
+/*
+BEGIN TRANSACTION;
+UPDATE OPERATION
+SET RESOURCE_ID = 'P1F1-PENETCH'
+WHERE OPERATION_TYPE = 'PEN-POSTCLEAN'
+AND WORKORDER_TYPE = 'M'
+--> 
+--> COMMIT TRANSACTION;
+--> ROLLBACK TRANSACTION;

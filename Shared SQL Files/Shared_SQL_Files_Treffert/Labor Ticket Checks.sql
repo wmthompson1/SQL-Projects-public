@@ -1,0 +1,55 @@
+use live
+go
+
+select 
+	case
+		when CLOCK_IN > CLOCK_OUT then 'Clock In > Out'
+		when ACT_CLOCK_IN > ACT_CLOCK_OUT then 'Actual In > Out'
+		when UNADJ_CLOCK_IN > UNADJ_CLOCK_OUT  then 'Actual In > Out'
+		when HOURS_WORKED > 8 then '>8Hours'
+	end as Msg,
+	TRANSACTION_ID, 
+	WORKORDER_TYPE, 
+	WORKORDER_BASE_ID, 
+	WORKORDER_LOT_ID, 
+	WORKORDER_SPLIT_ID, 
+	WORKORDER_SUB_ID, 
+	OPERATION_SEQ_NO, 
+	RESOURCE_ID, 
+	CREATE_DATE, 
+	TRANSACTION_DATE, 
+	SHIFT_DATE, 
+	USER_ID, 
+	EMPLOYEE_ID, 
+	CLOCK_IN, 
+	CLOCK_OUT, 
+	ACT_CLOCK_IN, 
+	ACT_CLOCK_OUT, 
+	UNADJ_CLOCK_IN, 
+	UNADJ_CLOCK_OUT,
+	HOURS_WORKED, 
+	HOURS_BREAK, 
+	HOURS_OVERALL, 
+	[description]
+from labor_ticket lt
+where 
+	TRANSACTION_DATE > '11/1/2016'
+	and (ACT_CLOCK_IN > ACT_CLOCK_OUT
+		or UNADJ_CLOCK_IN > UNADJ_CLOCK_OUT
+		or CLOCK_IN > CLOCK_OUT
+		or (HOURS_WORKED > 8 and ACT_CLOCK_IN <> UNADJ_CLOCK_IN and CLOCK_IN <> UNADJ_CLOCK_IN))
+
+order by 
+	case
+		when CLOCK_IN > CLOCK_OUT then 'Clock In > Out'
+		when ACT_CLOCK_IN > ACT_CLOCK_OUT then 'Actual In > Out'
+		when UNADJ_CLOCK_IN > UNADJ_CLOCK_OUT  then 'Actual In > Out'
+		when HOURS_WORKED > 8 then '>8Hours'
+	end
+	
+/*
+update labor_ticket
+set ACT_CLOCK_OUT = UNADJ_CLOCK_out,
+	CLOCK_OUT = UNADJ_CLOCK_out
+where transaction_id in (12469530, 12483650, 12532710, 12532908, 12532943, 12483243, 12483557, 12498606, 12463265, 12493259, 12497991, 12522998)
+*/

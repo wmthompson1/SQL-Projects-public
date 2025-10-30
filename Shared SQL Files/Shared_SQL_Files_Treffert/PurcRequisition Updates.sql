@@ -1,0 +1,53 @@
+USE LIVE
+GO
+
+/*
+I think I have figured it out. I found an incident on Infor’s site about someone having issue with the PR status not transferring down to the Line status.
+So next time this happens, let me know so I can see if that is what is happening.
+For the 2 recent issues, both of their status was still I (In Progress).
+*/
+
+DECLARE @ECID NVARCHAR(15) = '10549'
+
+SELECT *
+FROM [LIVE].[dbo].[task]
+WHERE EC_ID = @ECID
+
+/*
+UPDATE TASK
+SET [STATUS] = 'C'
+--, [USER_ID] = 'TRACEY'
+, COMPLETED_DATE = GETDATE()
+, REJ_TASK_NO = NULL
+, REJ_SEQ_NO = NULL
+--, SUB_TYPE = 'A'
+WHERE EC_ID = '10558'
+AND TASK_NO = '10150'
+AND SEQ_NO IN ('3')
+--AND [STATUS] NOT IN ('C', 'X')
+
+*/
+
+SELECT * FROM PURC_REQUISITION WHERE ID = @ECID
+/*
+UPDATE PURC_REQUISITION
+SET [STATUS] = 'V'
+--, APP1_DATE = GETDATE()
+--, APP2_DATE = GETDATE()
+WHERE ID = '10549'
+*/
+
+SELECT * FROM PURC_REQ_LINE WHERE PURC_REQ_ID = @ECID
+/*
+UPDATE PURC_REQ_LINE
+SET [LINE_STATUS] = 'V'
+WHERE PURC_REQ_ID = '10549'
+*/
+
+/*
+SELECT STATUS, COUNT(*) FROM PURC_REQUISITION GROUP BY STATUS ORDER BY STATUS
+SELECT * FROM PURC_REQUISITION WHERE ID LIKE '1055%'  -- STATUS = 'T'
+SELECT TOP 100 * FROM PURC_ORDER_REQ WHERE PURC_REQ_ID LIKE '1055%' ORDER BY PURC_REQ_ID DESC
+
+SELECT ID, [STATUS] FROM PURC_REQUISITION WHERE ID LIKE '10529%' ORDER BY ID DESC
+*/

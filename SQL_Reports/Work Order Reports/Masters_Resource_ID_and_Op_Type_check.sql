@@ -1,3 +1,4 @@
+-- file name: Masters_Resource_ID_and_Op_Type_check.sql
 
 SELECT 
        OP1.WORKORDER_TYPE,                          

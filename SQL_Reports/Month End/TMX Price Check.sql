@@ -13,6 +13,15 @@ Anyone, Active
 Can we please have a new SSRS report published titled "TMX Price Check". 
 Please put this in the Month End folder of the finance section of SSRS.
 
+for TMX only join  P.VOUCHER_ID = R.INVOICE_ID
+from Receivable R
+Left Outer Join Payable P
+on P.VOUCHER_ID = R.INVOICE_ID
+Left Outer Join PAYABLE_LINE PL
+on PL.VOUCHER_ID = P.VOUCHER_ID
+and Pl.RECEIVER_ID is null
+
+
 
 **********************************************************************************************/
 
@@ -30,6 +39,7 @@ Select
 
 from Receivable R (nolock)
 Left Outer Join Payable P  (nolock)
+-- for TMX only join  P.VOUCHER_ID = R.INVOICE_ID
 on P.VOUCHER_ID = R.INVOICE_ID
 Left Outer Join PAYABLE_LINE PL  (nolock)
 on PL.VOUCHER_ID = P.VOUCHER_ID
