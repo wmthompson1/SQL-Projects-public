@@ -41,13 +41,27 @@ IF OBJECT_ID('tempdb..#PLANNING_QUEUE') IS NOT NULL DROP TABLE #PLANNING_QUEUE
         REQ_QTY decimal(18,2), available decimal(18,2), remainder decimal(18,2), ISSUED_QTY decimal(18,2),
         QTY_ON_HAND decimal(18,2), QTY_IN_DEMAND decimal(18,2), CREATE_DATE datetime)
     
+
+
+
+
+
+
+
+
+
+    
     INSERT INTO #RAW_MATERIAL
-    SELECT a.WORKORDER_BASE_ID, a.WORKORDER_LOT_ID, a.WORKORDER_SPLIT_ID, a.PART_ID, a.CALC_QTY, 
+    SELECT a.WORKORDER_BASE_ID
+    , a.WORKORDER_LOT_ID, a.WORKORDER_SPLIT_ID, a.PART_ID, a.CALC_QTY, 
         iif(a.CALC_QTY <= b.QTY_ON_HAND, 0, 1) as 'available', iif(b.QTY_IN_DEMAND <= b.QTY_ON_HAND, 0, 1) as 'remainder', 
         a.ISSUED_QTY, b.QTY_ON_HAND, b.QTY_IN_DEMAND, GETDATE()  
-        FROM [SQL-LAB-1].[LIVE].dbo.REQUIREMENT a WITH (NOLOCK) INNER JOIN [SQL-LAB-1].[LIVE].dbo.PART b WITH (NOLOCK) 
-        on a.PART_ID = b.ID  inner join [SQL-LAB-1].[LIVE].dbo.WORK_ORDER c WITH (NOLOCK) ON 
-        a.WORKORDER_BASE_ID = c.BASE_ID and a.WORKORDER_LOT_ID = c.LOT_ID and a.WORKORDER_SPLIT_ID = c.SPLIT_ID
+        FROM [SQL-LAB-1].[LIVE].dbo.REQUIREMENT a WITH (NOLOCK) 
+        INNER JOIN [SQL-LAB-1].[LIVE].dbo.PART b WITH (NOLOCK) 
+        on a.PART_ID = b.ID  
+        
+        inner join [SQL-LAB-1].[LIVE].dbo.WORK_ORDER c WITH (NOLOCK) 
+        ON a.WORKORDER_BASE_ID = c.BASE_ID and a.WORKORDER_LOT_ID = c.LOT_ID and a.WORKORDER_SPLIT_ID = c.SPLIT_ID
         inner join (select WORKORDER_BASE_ID as 'WO', WORKORDER_LOT_ID as 'LOT', WORKORDER_SPLIT_ID as 'split', min(OPERATION_SEQ_NO) as 'OP_SEQ_NO' 
         from [SQL-LAB-1].[LIVE].dbo.REQUIREMENT  WITH (NOLOCK) group by WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID) d ON 
         a.WORKORDER_BASE_ID = d.WO and a.WORKORDER_LOT_ID = d.LOT and a.WORKORDER_SPLIT_ID = d.split and a.OPERATION_SEQ_NO = d.OP_SEQ_NO

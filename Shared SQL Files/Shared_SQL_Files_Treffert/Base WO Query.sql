@@ -27,7 +27,7 @@ left outer join
 		and wo.[SPLIT_ID] = r.WORKORDER_SPLIT_ID
 		and wo.[SUB_ID] = r.WORKORDER_SUB_ID
 		and r.[OPERATION_SEQ_NO] = o.SEQUENCE_NO
-left outer join
+left outer join					
 	[SKILL_OPERATION_BINARY] v
         on wo.[type] = v.[WORKORDER_TYPE]
 		and wo.base_id = v.workorder_base_id
@@ -35,7 +35,9 @@ left outer join
 		and wo.[SPLIT_ID] = v.WORKORDER_SPLIT_ID
 		and wo.[SUB_ID] = v.WORKORDER_SUB_ID
 		and o.SEQUENCE_NO = v.SEQUENCE_NO
-WHERE 
-	base_id = '1330531'
+WHERE 1=1
+	and base_id = '02GN089'
 ORDER BY 
 	o.workorder_sub_id, sequence_no
+
+	-- select * from requirement where workorder_base_id = '1330531'
