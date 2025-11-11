@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Document Reference
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:23
+Files Compared: Document Reference.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Document Reference.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Document Reference.xml
+
+FILE INFORMATION:
+Prior Size: 135230 bytes
+Current Size: 135230 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

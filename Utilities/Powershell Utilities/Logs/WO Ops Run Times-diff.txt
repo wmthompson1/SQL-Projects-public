@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: WO Ops Run Times
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:11:00
+Files Compared: WO Ops Run Times.xml
+Prior Path: Server\SSRS_Master\PriorVersion\WO Ops Run Times.xml
+Current Path: Server\SSRS_Master\CurrentVersion\WO Ops Run Times.xml
+
+FILE INFORMATION:
+Prior Size: 103990 bytes
+Current Size: 103990 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

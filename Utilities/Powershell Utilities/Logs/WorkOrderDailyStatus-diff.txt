@@ -1,0 +1,136 @@
+﻿COMPARISON RESULT: WorkOrderDailyStatus
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:11:09
+Files Compared: WorkOrderDailyStatus.xml
+Prior Path: Server\SSRS_Master\PriorVersion\WorkOrderDailyStatus.xml
+Current Path: Server\SSRS_Master\CurrentVersion\WorkOrderDailyStatus.xml
+
+FILE INFORMATION:
+Prior Size: 208722 bytes
+Current Size: 208835 bytes
+Size Difference: -113 bytes
+
+CHANGE SUMMARY:
+30 lines changed
+14 additions
+14 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\WorkOrderDailyStatus.xml" "b/Server\\SSRS_Master\\CurrentVersion\\WorkOrderDailyStatus.xml"
+index a2b46ea..5af17cb 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\WorkOrderDailyStatus.xml"
++++ "b/Server\\SSRS_Master\\CurrentVersion\\WorkOrderDailyStatus.xml"
+@@ -8,16 +8,16 @@
+       <am:Version>15.0.20283.0</am:Version>
+     </am:CreatedBy>
+     <am:UpdatedBy>
+-      <am:Name>SSDTRS</am:Name>
+-      <am:Version>17.14.36616.10</am:Version>
++      <am:Name>MSRB</am:Name>
++      <am:Version>15.0.20283.0</am:Version>
+     </am:UpdatedBy>
+-    <am:LastModifiedTimestamp>2025-10-24T17:22:51.2550486Z</am:LastModifiedTimestamp>
++    <am:LastModifiedTimestamp>2025-03-17T15:05:23.2512961Z</am:LastModifiedTimestamp>
+   </am:AuthoringMetadata>
+   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+   <AutoRefresh>0</AutoRefresh>
+   <DataSources>
+     <DataSource Name="Live">
+-      <DataSourceReference>Live</DataSourceReference>
++      <DataSourceReference>/Data Sources/Live</DataSourceReference>
+       <rd:SecurityType>None</rd:SecurityType>
+       <rd:DataSourceID>34fc9434-2cfc-41d9-9fa1-b066a8e589a0</rd:DataSourceID>
+     </DataSource>
+@@ -25,7 +25,7 @@
+   <DataSets>
+     <DataSet Name="PrimaryDataSet">
+       <SharedDataSet>
+-        <SharedDataSetReference>WODailyStatusData_RM_NEW</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/WODailyStatusData_RM_NEW</SharedDataSetReference>
+         <rd:ReportServerUrl>http://sql-bi-1.skillsinc.local/ReportServer</rd:ReportServerUrl>
+       </SharedDataSet>
+       <Fields>
+@@ -560,7 +560,7 @@
+     </DataSet>
+     <DataSet Name="BuyersLookup">
+       <SharedDataSet>
+-        <SharedDataSetReference>BuyersLookup</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/BuyersLookup</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="Account_ID">
+@@ -575,7 +575,7 @@
+     </DataSet>
+     <DataSet Name="PlannerLookup">
+       <SharedDataSet>
+-        <SharedDataSetReference>PlannerLookup</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/PlannerLookup</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="ID">
+@@ -586,7 +586,7 @@
+     </DataSet>
+     <DataSet Name="Supervisors">
+       <SharedDataSet>
+-        <SharedDataSetReference>Supervisors</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/Supervisors</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="SupervisorName">
+@@ -626,18 +626,18 @@ WHERE LTRIM(RTRIM(DESCRIPTION)) = 'DO NOT USE'</CommandText>
+     </DataSet>
+     <DataSet Name="PlantLookup">
+       <SharedDataSet>
+-        <SharedDataSetReference>PlantLookup</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/PlantLookup</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="Plant_ID">
+-          <DataField>PLANT_ID</DataField>
++          <DataField>Plant_ID</DataField>
+           <rd:TypeName>System.String</rd:TypeName>
+         </Field>
+       </Fields>
+     </DataSet>
+     <DataSet Name="ExpediteOptions">
+       <SharedDataSet>
+-        <SharedDataSetReference>ExpediteOptions</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/ExpediteOptions</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="ExpediteType">
+@@ -648,7 +648,7 @@ WHERE LTRIM(RTRIM(DESCRIPTION)) = 'DO NOT USE'</CommandText>
+     </DataSet>
+     <DataSet Name="PartMaterialType">
+       <SharedDataSet>
+-        <SharedDataSetReference>PartMaterialType</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/PartMaterialType</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="STRING_VAL">
+@@ -680,7 +680,7 @@ GROUP BY USER_5</CommandText>
+     </DataSet>
+     <DataSet Name="LookupCustomerID">
+       <SharedDataSet>
+-        <SharedDataSetReference>WODSCustomers</SharedDataSetReference>
++        <SharedDataSetReference>/Datasets/WODSCustomers</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+         <Field Name="CUSTOMER_ID">
+@@ -2594,7 +2594,7 @@ GROUP BY USER_5</CommandText>
+                               <Color>LightGrey</Color>
+                               <Style>Solid</Style>
+                             </Border>
+-                            <BackgroundColor>Silver</BackgroundColor>
++                            <BackgroundColor>=Fields!ReworkFontColor.Value</BackgroundColor>
+                           </Style>
+                         </Textbox>
+                       </CellContents>

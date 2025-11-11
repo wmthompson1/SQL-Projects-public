@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: WO Specs Search
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:11:01
+Files Compared: WO Specs Search.xml
+Prior Path: Server\SSRS_Master\PriorVersion\WO Specs Search.xml
+Current Path: Server\SSRS_Master\CurrentVersion\WO Specs Search.xml
+
+FILE INFORMATION:
+Prior Size: 61177 bytes
+Current Size: 61177 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

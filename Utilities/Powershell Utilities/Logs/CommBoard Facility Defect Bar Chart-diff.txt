@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: CommBoard Facility Defect Bar Chart
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:16
+Files Compared: CommBoard Facility Defect Bar Chart.xml
+Prior Path: Server\SSRS_Master\PriorVersion\CommBoard Facility Defect Bar Chart.xml
+Current Path: Server\SSRS_Master\CurrentVersion\CommBoard Facility Defect Bar Chart.xml
+
+FILE INFORMATION:
+Prior Size: 34564 bytes
+Current Size: 34564 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

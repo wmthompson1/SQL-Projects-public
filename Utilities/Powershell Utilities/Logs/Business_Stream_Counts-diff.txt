@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Business_Stream_Counts
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:12
+Files Compared: Business_Stream_Counts.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Business_Stream_Counts.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Business_Stream_Counts.xml
+
+FILE INFORMATION:
+Prior Size: 80764 bytes
+Current Size: 80764 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

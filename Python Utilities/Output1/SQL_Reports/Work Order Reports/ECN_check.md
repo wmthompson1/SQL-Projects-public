@@ -1,0 +1,38 @@
+# ECN_check
+
+```sql
+--DECLARE @BASE_ID AS NVARCHAR(30)
+--DECLARE @LOT_ID AS NVARCHAR(3)
+--DECLARE @SPLIT_ID AS NVARCHAR(3)
+
+--SET @BASE_ID = '140W9014-186032';
+--SET @LOT_ID = '0'
+--SET @SPLIT_ID = '0'
+
+SELECT WO_BASE_ID, 
+       WO_LOT_ID, 
+      WO_SPLIT_ID,
+      WO_TYPE, 
+      EC.ASSIGNED_TO,
+      EC_ID AS ECN,
+      LINE_NO AS ECN_LINE,
+       CASE
+         WHEN EC.STATUS = 'I'
+         THEN 'In Process'
+         WHEN EC.STATUS = 'H'
+         THEN 'On Hold'
+         WHEN EC.STATUS = 'P'
+         THEN 'Pending'
+         WHEN EC.STATUS = 'U'
+         THEN 'Undefined'
+         ELSE 'NOT IDENDIFIED'
+      END AS   EC_STATUS_DEFINED
+FROM EC_LINE ECL
+ INNER JOIN EC
+       ON ECL.EC_ID = EC.ID
+WHERE ECL.WO_BASE_ID = @BASE_ID
+AND ECL.WO_LOT_ID = @LOT_ID
+AND ECL.WO_SPLIT_ID = @SPLIT_ID 
+AND EC.STATUS NOT IN ('X','C');
+
+```

@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: BOE_Billing_MFG
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-10 14:25:45
+Files Compared: BOE_Billing_MFG.xml
+Prior Path: Server\SSRS_Master\PriorVersion\BOE_Billing_MFG.xml
+Current Path: Server\SSRS_Master\CurrentVersion\BOE_Billing_MFG.xml
+
+FILE INFORMATION:
+Prior Size: 60067 bytes
+Current Size: 60067 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

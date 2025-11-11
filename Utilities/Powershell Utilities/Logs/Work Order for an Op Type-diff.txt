@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Work Order for an Op Type
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:11:04
+Files Compared: Work Order for an Op Type.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Work Order for an Op Type.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Work Order for an Op Type.xml
+
+FILE INFORMATION:
+Prior Size: 36744 bytes
+Current Size: 36744 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

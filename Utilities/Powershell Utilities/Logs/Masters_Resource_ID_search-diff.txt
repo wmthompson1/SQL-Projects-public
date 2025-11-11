@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Masters_Resource_ID_search
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:30
+Files Compared: Masters_Resource_ID_search.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Masters_Resource_ID_search.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Masters_Resource_ID_search.xml
+
+FILE INFORMATION:
+Prior Size: 69852 bytes
+Current Size: 69852 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

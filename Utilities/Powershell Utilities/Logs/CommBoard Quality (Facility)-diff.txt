@@ -1,0 +1,82 @@
+﻿COMPARISON RESULT: CommBoard Quality (Facility)
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:20
+Files Compared: CommBoard Quality (Facility).xml
+Prior Path: Server\SSRS_Master\PriorVersion\CommBoard Quality (Facility).xml
+Current Path: Server\SSRS_Master\CurrentVersion\CommBoard Quality (Facility).xml
+
+FILE INFORMATION:
+Prior Size: 39981 bytes
+Current Size: 40011 bytes
+Size Difference: -30 bytes
+
+CHANGE SUMMARY:
+16 lines changed
+7 additions
+7 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\CommBoard Quality (Facility).xml" "b/Server\\SSRS_Master\\CurrentVersion\\CommBoard Quality (Facility).xml"
+index 27dcb7b..1cd11d6 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\CommBoard Quality (Facility).xml"	
++++ "b/Server\\SSRS_Master\\CurrentVersion\\CommBoard Quality (Facility).xml"	
+@@ -1,12 +1,12 @@
+ <!-- Converted from RDL file: CommBoard Quality (Facility).rdl -->
+-<!-- Conversion date: 2025-11-06 15:41:21 -->
++<!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+   <AutoRefresh>0</AutoRefresh>
+   <DataSources>
+-    <DataSource Name="DataMart">
+-      <DataSourceReference>Datamart</DataSourceReference>
++    <DataSource Name="DataWarehouse">
++      <DataSourceReference>DataWarehouse</DataSourceReference>
+       <rd:SecurityType>None</rd:SecurityType>
+       <rd:DataSourceID>1f9eadf4-9dbf-4e71-a7de-a4125debac7f</rd:DataSourceID>
+     </DataSource>
+@@ -14,7 +14,7 @@
+   <DataSets>
+     <DataSet Name="OperationsCount">
+       <Query>
+-        <DataSourceName>DataMart</DataSourceName>
++        <DataSourceName>DataWarehouse</DataSourceName>
+         <QueryParameters>
+           <QueryParameter Name="@STARTDATE">
+             <Value>=Parameters!STARTDATE.Value</Value>
+@@ -48,7 +48,7 @@ SELECT @OPS_COUNT AS OPS_COUNT</CommandText>
+     </DataSet>
+     <DataSet Name="DefectsCount">
+       <Query>
+-        <DataSourceName>DataMart</DataSourceName>
++        <DataSourceName>DataWarehouse</DataSourceName>
+         <QueryParameters>
+           <QueryParameter Name="@STARTDATE">
+             <Value>=Parameters!STARTDATE.Value</Value>
+@@ -102,7 +102,7 @@ SELECT ISNULL(@DEFECT_COUNT, 0) AS DEFECT_COUNT</CommandText>
+     </DataSet>
+     <DataSet Name="DefectList">
+       <Query>
+-        <DataSourceName>DataMart</DataSourceName>
++        <DataSourceName>DataWarehouse</DataSourceName>
+         <QueryParameters>
+           <QueryParameter Name="@STARTDATE">
+             <Value>=Parameters!STARTDATE.Value</Value>
+@@ -176,7 +176,7 @@ GROUP BY SR.USER_8
+     </DataSet>
+     <DataSet Name="TotalPercentage">
+       <Query>
+-        <DataSourceName>DataMart</DataSourceName>
++        <DataSourceName>DataWarehouse</DataSourceName>
+         <QueryParameters>
+           <QueryParameter Name="@STARTDATE">
+             <Value>=Parameters!STARTDATE.Value</Value>

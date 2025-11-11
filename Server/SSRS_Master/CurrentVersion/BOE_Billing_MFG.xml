@@ -1,0 +1,1380 @@
+<!-- Converted from RDL file: BOE_Billing_MFG.rdl -->
+<!-- Conversion date: 2025-11-10 14:24:23 -->
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+  <am:AuthoringMetadata>
+    <am:CreatedBy>
+      <am:Name>SSDTRS</am:Name>
+      <am:Version>17.14.36401.2</am:Version>
+    </am:CreatedBy>
+    <am:UpdatedBy>
+      <am:Name>SSDTRS</am:Name>
+      <am:Version>17.14.36401.2</am:Version>
+    </am:UpdatedBy>
+    <am:LastModifiedTimestamp>2025-08-25T21:58:59.0144870Z</am:LastModifiedTimestamp>
+  </am:AuthoringMetadata>
+  <Author>Ed Hammond</Author>
+  <AutoRefresh>0</AutoRefresh>
+  <DataSources>
+    <DataSource Name="DataMart">
+      <DataSourceReference>DataMart</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>f2c54be8-08e1-4506-896b-ec940c683c3f</rd:DataSourceID>
+    </DataSource>
+    <DataSource Name="Live">
+      <DataSourceReference>Live</DataSourceReference>
+      <rd:SecurityType>None</rd:SecurityType>
+      <rd:DataSourceID>43ff4cb9-50eb-4330-b48d-db72b4cb6716</rd:DataSourceID>
+    </DataSource>
+  </DataSources>
+  <DataSets>
+    <DataSet Name="SPROCMFG">
+      <Query>
+        <DataSourceName>Live</DataSourceName>
+        <QueryParameters>
+          <QueryParameter Name="@STARTDATE">
+            <Value>=Parameters!StartDate.Value</Value>
+          </QueryParameter>
+          <QueryParameter Name="@ENDDATE">
+            <Value>=Parameters!EndDate.Value</Value>
+          </QueryParameter>
+        </QueryParameters>
+        <CommandText>----USE [Datamart]
+--Use Live -- lab-2 break-fix William 8/15
+--GO
+
+---- =DateAdd(DateInterval.Day, 2-WeekDay(Today), DateAdd(DateInterval.Day, -7, Today()))
+
+
+---- =DateAdd(DateInterval.Day, 1-WeekDay(Today), Today())
+
+--/****** Object:  StoredProcedure [dbo].[usp_BOE_BILLING_MFG]    Script Date: 8/25/2025 1:43:28 PM ******/
+--SET ANSI_NULLS ON
+--GO
+
+--SET QUOTED_IDENTIFIER ON
+--GO
+
+
+-- =============================================
+-- Author:		traci treffert
+-- Create date: 9/17/2019
+-- Description:	Boeing Billing for BOE609 MFG
+--		converted from original code in Crystal Reports to be used as SSRS report
+--		take the logic/process out of hardcoded CR report and put in SQL for ease of maintenance
+--		logic to also be included in Gross Margin processing
+/*	Update Feb-14-2025 by JC line 160 link DB patch when fail synchronization with DataWarehouse	*/
+-- update William 8/25
+-- =============================================
+
+--DECLARE @STARTDATE DATE = '2025-08-17';
+--DECLARE @ENDDATE DATE = '2025-08-25';
+
+--- CREATE PROCEDURE [dbo].[usp_BOE_BILLING_MFG] (@STARTDATE DATE, @ENDDATE DATE) AS
+
+SET NOCOUNT ON;
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+SET DEADLOCK_PRIORITY LOW;
+
+
+DECLARE @CHARGE FLOAT = (SELECT CHARGE FROM [sql-bi-1].LIVESupplemental.dbo.[BOE_Billing_Charges] WHERE [REPORT] = 'usp_BOE_BILLING_MFG')
+, @SPECIAL FLOAT = (SELECT SPECIAL FROM [sql-bi-1].LIVESupplemental.dbo.[BOE_Billing_Charges] WHERE [REPORT] = 'usp_BOE_BILLING_MFG')
+, @SERVICE FLOAT = (SELECT [SERVICE] FROM [sql-bi-1].LIVESupplemental.dbo.[BOE_Billing_Charges] WHERE [REPORT] = 'usp_BOE_BILLING_MFG')
+--, @STARTDATE DATE = DATEADD(YEAR,-1,DATEADD(DAY,1,(EOMONTH(DATEADD(MONTH,-1,GETDATE())))))
+--, @ENDDATE DATE = GETDATE()-1
+;
+
+SELECT SPROC 
+	, [COST ITEM]
+	, [POS]
+	, [PART NUMBER]
+	, [RAMAC]
+	, [BILLED QTY]
+	, CASE
+		WHEN [BILLED QTY] &lt;= 0 THEN 0
+		WHEN [Description] LIKE 'Stanchion%' THEN ([Mfg_Unit Setup Hours] + [Mfg_Unit Run Hours]) * [BILLED QTY] 
+		WHEN [Description] LIKE 'Cargo Panel%' THEN ([Mfg_Unit Setup Hours] + [Mfg_Unit Run Hours]) * [BILLED QTY] 
+		ELSE (SUM(SORT_SETUP) + SUM(SORT_RUN) + (SERVICE_FEE)) 
+	END * @CHARGE / IIF([BILLED QTY] = 0, 1, [BILLED QTY]) AS [UNIT PRICE]
+	, CASE
+		WHEN [BILLED QTY] &lt;= 0 THEN 0
+		WHEN [Description] LIKE 'Stanchion%' THEN ([Mfg_Unit Setup Hours] + [Mfg_Unit Run Hours]) * [BILLED QTY] 
+		WHEN [Description] LIKE 'Cargo Panel%' THEN ([Mfg_Unit Setup Hours] + [Mfg_Unit Run Hours]) * [BILLED QTY] 
+		ELSE (SUM(SORT_SETUP) + SUM(SORT_RUN) + (SERVICE_FEE))
+	END * @CHARGE AS [EXTENDED DOLLARS]
+	, [EXPEDITE DOLLARS]
+	, [SPECIAL FEES]
+	, 0 AS [SERVICE_FEES]
+	, CASE 
+		WHEN [Description] LIKE 'Stanchion%' THEN [Mfg_Unit SETUP Hours] * [BILLED QTY]
+		WHEN [Description] LIKE 'Cargo Panel%' THEN [Mfg_Unit SETUP Hours] * [BILLED QTY]
+		ELSE SUM(SORT_SETUP) 
+	END AS [SETUP HOURS]
+	, CASE 
+		WHEN [Description] LIKE 'Stanchion%' THEN [Mfg_Unit Run Hours] * [BILLED QTY]
+		WHEN [Description] LIKE 'Cargo Panel%' THEN [Mfg_Unit Run Hours] * [BILLED QTY]
+		ELSE SUM(SORT_RUN) + (SERVICE_FEE)
+	END AS [RUN HOURS]
+	, [EXPEDITE HOURS]
+	, [PACK SLIPS / DATE]
+	, [INVOICE ID]
+	, [COMMENTS]
+	, '' AS SORTATION
+FROM 
+	( SELECT 'MFG' AS SPROC, '0' AS [COST ITEM], '1' AS [POS]
+		, COL.PART_ID AS [PART NUMBER]
+		, CO.ID AS [RAMAC]
+		, CONVERT(DECIMAL(14, 4), COL.TOTAL_SHIPPED_QTY) AS [BILLED QTY]
+		, S.INVOICE_ID AS [INVOICE ID]
+		, SL.PACKLIST_ID + ',' + STUFF(REPLACE('/' + CONVERT(NVARCHAR(15), INVOICED_DATE, 101), '/0', '/'), 1, 1, '') 
+			+ ',MFG,WRAP' AS [PACK SLIPS / DATE]
+		, 0 AS [EXPEDITE HOURS]
+		, 0 AS [EXPEDITE DOLLARS]
+		, ROUND((WO.ACT_SERVICE_COST/@SERVICE), 2) AS SERVICE_FEE
+		, CASE
+			WHEN WO.ACT_SERVICE_COST &gt; 0 THEN @SPECIAL
+			ELSE 0
+		END + CASE
+			WHEN TOTAL_SHIPPED_QTY &lt; [Batch Qty] AND CB.[Description] LIKE 'Stanchion%' THEN 175
+			ELSE 0
+		END AS [SPECIAL FEES]
+		, CASE
+			WHEN CB.[DESCRIPTION] IS NULL THEN ''
+			WHEN CB.[Description] LIKE 'Stanchion%' AND COL.TOTAL_SHIPPED_QTY &lt; 3.00        -- Change
+				THEN 'QTY ' + CAST(CAST(TOTAL_SHIPPED_QTY AS INT) AS NVARCHAR) + ',MIN LOT,'
+			ELSE '' 
+		END + CASE
+			WHEN CB.[Description] LIKE 'Stanchion%' THEN 'FIXED HOURS'
+			WHEN CB.[Description] LIKE 'Cargo Panel%' THEN 'FIXED HOURS'
+			--WHEN CB.[DESCRIPTION] IS NULL THEN ''
+			ELSE '' 
+		END AS [COMMENTS]
+		, CASE
+			WHEN CB.[Description] LIKE 'Stanchion%' THEN [Mfg_Unit Setup Hours] * COL.TOTAL_SHIPPED_QTY
+			WHEN CB.[Description] LIKE 'Cargo Panel%' THEN [Mfg_Unit Setup Hours] * COL.TOTAL_SHIPPED_QTY
+			--WHEN CB.[DESCRIPTION] IS NOT NULL THEN 0
+			WHEN LT.[TYPE] = 'S' THEN LT.HOURS_WORKED
+			ELSE 0
+		END AS SORT_SETUP
+		, CASE
+			WHEN CB.[Description] LIKE 'Stanchion%' THEN [Mfg_Unit Run Hours] * COL.TOTAL_SHIPPED_QTY
+			WHEN CB.[Description] LIKE 'Cargo Panel%' THEN [MFG_Unit Run Hours] * COL.TOTAL_SHIPPED_QTY
+			--WHEN CB.[DESCRIPTION] IS NOT NULL THEN 0
+			WHEN LT.[TYPE] = 'R' THEN LT.HOURS_WORKED
+			ELSE 0
+		END AS SORT_RUN
+		, CB.[DESCRIPTION]
+		, CB.[Mfg_Unit Setup Hours]
+		, CB.[Mfg_Unit Run Hours]
+		, CB.[Batch Qty]
+		--&gt; VERIFICATION FIELDS
+		, LT.WORKORDER_BASE_ID
+		, LT.HOURS_WORKED
+		, COL.PART_ID
+		, COL.TOTAL_SHIPPED_QTY
+		, LT.[TYPE]
+		, LT.TRANSACTION_ID
+		, CO.CUSTOMER_ID
+		, SR.USER_1
+		, SL.SHIPPED_QTY
+		, S.INVOICE_ID
+		, S.INVOICED_DATE
+		, S.PACKLIST_ID
+		, SR.RESOURCE_ID
+		, WO.ACT_SERVICE_COST
+	FROM dbo.SHIPPER S 
+	-- select top 1000 * from dbo.SHIPPER  order by rowid desc
+	INNER JOIN dbo.SHIPPER_LINE SL ON S.PACKLIST_ID = SL.PACKLIST_ID
+	INNER JOIN dbo.CUST_ORDER_LINE COL ON SL.CUST_ORDER_ID = COL.CUST_ORDER_ID
+		AND SL.CUST_ORDER_LINE_NO = COL.LINE_NO
+	INNER JOIN dbo.CUSTOMER_ORDER CO ON COL.CUST_ORDER_ID = CO.ID
+	-- select top 1000 CREATE_DATE, * from dbo.CUSTOMER_ORDER  order by rowid desc
+	INNER JOIN dbo.DEMAND_SUPPLY_LINK DSL ON COL.CUST_ORDER_ID = DSL.DEMAND_BASE_ID
+		AND COL.LINE_NO = DSL.DEMAND_SEQ_NO
+	INNER JOIN dbo.WORK_ORDER WO ON DSL.SUPPLY_BASE_ID = WO.BASE_ID
+		AND DSL.SUPPLY_LOT_ID = WO.LOT_ID
+		AND DSL.SUPPLY_SPLIT_ID = WO.SPLIT_ID
+	-- select top 1000 CREATE_DATE, * from dbo.WORK_ORDER  order by rowid desc
+	INNER JOIN dbo.LABOR_TICKET LT ON WO.BASE_ID = LT.WORKORDER_BASE_ID
+		AND WO.LOT_ID = LT.WORKORDER_LOT_ID
+		AND WO.SPLIT_ID = LT.WORKORDER_SPLIT_ID
+		AND WO.SUB_ID = LT.WORKORDER_SUB_ID
+		AND WO.[TYPE] = LT.WORKORDER_TYPE
+	-- select top 1000 CREATE_DATE, * from dbo.LABOR_TICKET  order by rowid desc
+	INNER JOIN dbo.OPERATION O ON WO.BASE_ID = O.WORKORDER_BASE_ID
+		AND WO.LOT_ID = O.WORKORDER_LOT_ID
+		AND WO.SPLIT_ID = O.WORKORDER_SPLIT_ID
+		AND WO.SUB_ID = O.WORKORDER_SUB_ID
+		AND WO.[TYPE] = O.WORKORDER_TYPE
+		AND LT.OPERATION_SEQ_NO = O.SEQUENCE_NO
+	/* When dbo.SHOP_RESOURCE_SITE synchronization is OK */
+	--INNER JOIN dbo.SHOP_RESOURCE_SITE SR ON LT.RESOURCE_ID = SR.RESOURCE_ID
+	--AND ISNULL(SR.USER_9, '') != 'BOE BILLING EXCLUDE'       -- Change
+
+	/* When dbo.SHOP_RESOURCE_SITE lost synchronization use [SQL-Lab-2].[LIVE] */
+	INNER JOIN [SQL-Lab-2].[LIVE].dbo.SHOP_RESOURCE_SITE SR ON LT.RESOURCE_ID = SR.RESOURCE_ID
+		-- wnt 8/23
+	LEFT OUTER JOIN [sql-bi-1].LIVESupplemental.dbo.[BOE_Stanchion_Cargo_Bay] CB ON CB.[PART NUMBER] = COL.PART_ID
+	WHERE SL.SHIPPED_QTY &gt; 0
+		AND SR.USER_1 IN (N'D', N'E', N'M')
+		AND CO.CUSTOMER_ID = N'BOE609'
+		-- wnt 8/25
+		AND NOT EXISTS (SELECT 1 FROM [sql-bi-1].LIVESupplemental.dbo.ReportSettings_PartID EX
+			WHERE COL.PART_ID = EX.PART_ID
+				AND REPORT_NAME = 'usp_BOE_BILLING_MFG'
+				AND REPORT_SECTION = 'MAIN EXCLUSION'
+		)
+		AND CASE
+				WHEN COL.PART_ID IN ('411N2001-1', '411A2001-1B') THEN 'OK'
+				WHEN LT.WORKORDER_BASE_ID LIKE '%R%' THEN 'NOT OK'
+				WHEN WO.PART_ID LIKE '%REWORK%' THEN 'NOT OK'
+			ELSE 'OK'
+			END = 'OK'
+		AND (S.INVOICED_DATE &gt;= @STARTDATE AND S.INVOICED_DATE &lt;= @ENDDATE)
+		--AND CO.ID = '001761716'
+	) A
+
+GROUP BY SPROC 
+	, [COST ITEM]
+	, [POS]
+	, [PART NUMBER]
+	, [RAMAC]
+	, [BILLED QTY]
+	, [INVOICE ID]
+	, [PACK SLIPS / DATE]
+	, [EXPEDITE HOURS]
+	, [EXPEDITE DOLLARS]
+	, [SPECIAL FEES]
+	, [COMMENTS]
+	, [Batch Qty]
+	, SERVICE_FEE
+	, [Description]
+	, [Mfg_Unit SETUP Hours]
+	, [Mfg_Unit Run Hours]
+----GO
+
+</CommandText>
+      </Query>
+      <Fields>
+        <Field Name="SPROC">
+          <DataField>SPROC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COST_ITEM">
+          <DataField>COST ITEM</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="POS">
+          <DataField>POS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="PART_NUMBER">
+          <DataField>PART NUMBER</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="RAMAC">
+          <DataField>RAMAC</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="BILLED_QTY">
+          <DataField>BILLED QTY</DataField>
+          <rd:TypeName>System.Decimal</rd:TypeName>
+        </Field>
+        <Field Name="UNIT_PRICE">
+          <DataField>UNIT PRICE</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EXTENDED_DOLLARS">
+          <DataField>EXTENDED DOLLARS</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EXPEDITE_DOLLARS">
+          <DataField>EXPEDITE DOLLARS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="SPECIAL_FEES">
+          <DataField>SPECIAL FEES</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SETUP_HOURS">
+          <DataField>SETUP HOURS</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="SERVICE_FEES">
+          <DataField>SERVICE_FEES</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="RUN_HOURS">
+          <DataField>RUN HOURS</DataField>
+          <rd:TypeName>System.Double</rd:TypeName>
+        </Field>
+        <Field Name="EXPEDITE_HOURS">
+          <DataField>EXPEDITE HOURS</DataField>
+          <rd:TypeName>System.Int32</rd:TypeName>
+        </Field>
+        <Field Name="PACK_SLIPS___DATE">
+          <DataField>PACK SLIPS / DATE</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="COMMENTS">
+          <DataField>COMMENTS</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="INVOICE_ID">
+          <DataField>INVOICE ID</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+        <Field Name="SORTATION">
+          <DataField>SORTATION</DataField>
+          <rd:TypeName>System.String</rd:TypeName>
+        </Field>
+      </Fields>
+    </DataSet>
+  </DataSets>
+  <ReportSections>
+    <ReportSection>
+      <Body>
+        <ReportItems>
+          <Tablix Name="Tablix1">
+            <TablixBody>
+              <TablixColumns>
+                <TablixColumn>
+                  <Width>0.48958in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.39583in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.71875in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.71875in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.5625in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.91666in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.78125in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.63542in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.59375in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>0.88542in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>2.80209in</Width>
+                </TablixColumn>
+                <TablixColumn>
+                  <Width>1.21875in</Width>
+                </TablixColumn>
+              </TablixColumns>
+              <TablixRows>
+                <TablixRow>
+                  <Height>0.5in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox1">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>COST ITEM</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox1</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox3">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>POS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox3</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox29">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>PART NUMBER</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox29</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox27">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>RAMAC</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox27</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox25">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>BILLED QTY</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox25</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox23">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>UNIT PRICE</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox23</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox21">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>EXTENDED DOLLARS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox21</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox19">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>EXPEDITE DOLLARS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox19</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox17">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>SPECIAL FEES</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox17</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox15">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>SETUP HOURS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox15</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox13">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>RUN HOURS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox13</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox11">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>EXPEDITE HOURS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox11</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox9">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>PACK SLIPS / DATE</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox9</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="Textbox7">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>COMMENTS</Value>
+                                  <Style>
+                                    <FontWeight>Bold</FontWeight>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>Textbox7</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+                <TablixRow>
+                  <Height>0.25in</Height>
+                  <TablixCells>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="COST_ITEM">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!COST_ITEM.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>COST_ITEM</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="POS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!POS.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>POS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PART_NUMBER">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PART_NUMBER.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PART_NUMBER</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="RAMAC">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!RAMAC.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>RAMAC</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="BILLED_QTY">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!BILLED_QTY.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>BILLED_QTY</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="UNIT_PRICE">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!UNIT_PRICE.Value</Value>
+                                  <Style>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>UNIT_PRICE</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="EXTENDED_DOLLARS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EXTENDED_DOLLARS.Value</Value>
+                                  <Style>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>EXTENDED_DOLLARS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="EXPEDITE_DOLLARS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EXPEDITE_DOLLARS.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>EXPEDITE_DOLLARS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="SPECIAL_FEES">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!SPECIAL_FEES.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>SPECIAL_FEES</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="SETUP_HOURS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!SETUP_HOURS.Value</Value>
+                                  <Style>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>SETUP_HOURS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="RUN_HOURS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!RUN_HOURS.Value</Value>
+                                  <Style>
+                                    <Format>0.00;(0.00)</Format>
+                                  </Style>
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>RUN_HOURS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="EXPEDITE_HOURS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!EXPEDITE_HOURS.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>EXPEDITE_HOURS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="PACK_SLIPS___DATE">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!PACK_SLIPS___DATE.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>PACK_SLIPS___DATE</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                    <TablixCell>
+                      <CellContents>
+                        <Textbox Name="COMMENTS">
+                          <CanGrow>true</CanGrow>
+                          <KeepTogether>true</KeepTogether>
+                          <Paragraphs>
+                            <Paragraph>
+                              <TextRuns>
+                                <TextRun>
+                                  <Value>=Fields!COMMENTS.Value</Value>
+                                  <Style />
+                                </TextRun>
+                              </TextRuns>
+                              <Style />
+                            </Paragraph>
+                          </Paragraphs>
+                          <rd:DefaultName>COMMENTS</rd:DefaultName>
+                          <Style>
+                            <Border>
+                              <Color>LightGrey</Color>
+                              <Style>Solid</Style>
+                            </Border>
+                            <PaddingLeft>2pt</PaddingLeft>
+                            <PaddingRight>2pt</PaddingRight>
+                            <PaddingTop>2pt</PaddingTop>
+                            <PaddingBottom>2pt</PaddingBottom>
+                          </Style>
+                        </Textbox>
+                      </CellContents>
+                    </TablixCell>
+                  </TablixCells>
+                </TablixRow>
+              </TablixRows>
+            </TablixBody>
+            <TablixColumnHierarchy>
+              <TablixMembers>
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+                <TablixMember />
+              </TablixMembers>
+            </TablixColumnHierarchy>
+            <TablixRowHierarchy>
+              <TablixMembers>
+                <TablixMember>
+                  <KeepWithGroup>After</KeepWithGroup>
+                </TablixMember>
+                <TablixMember>
+                  <Group Name="Details" />
+                </TablixMember>
+              </TablixMembers>
+            </TablixRowHierarchy>
+            <DataSetName>SPROCMFG</DataSetName>
+            <SortExpressions>
+              <SortExpression>
+                <Value>=Fields!RAMAC.Value</Value>
+              </SortExpression>
+            </SortExpressions>
+            <Height>0.75in</Height>
+            <Width>13.71875in</Width>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+            </Style>
+          </Tablix>
+        </ReportItems>
+        <Height>0.75in</Height>
+        <Style />
+      </Body>
+      <Width>13.71875in</Width>
+      <Page>
+        <LeftMargin>1in</LeftMargin>
+        <RightMargin>1in</RightMargin>
+        <TopMargin>1in</TopMargin>
+        <BottomMargin>1in</BottomMargin>
+        <Style />
+      </Page>
+    </ReportSection>
+  </ReportSections>
+  <ReportParameters>
+    <ReportParameter Name="ReportNote">
+      <DataType>Boolean</DataType>
+      <Prompt>Report Note : Verify Invoice Forms Run Date </Prompt>
+    </ReportParameter>
+    <ReportParameter Name="StartDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd(DateInterval.Day, 2-WeekDay(Today), DateAdd(DateInterval.Day, -7, Today()))</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>Start Date :</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="EndDate">
+      <DataType>DateTime</DataType>
+      <DefaultValue>
+        <Values>
+          <Value>=DateAdd(DateInterval.Day, 1-WeekDay(Today), Today())</Value>
+        </Values>
+      </DefaultValue>
+      <Prompt>End Date :</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <ReportParametersLayout>
+    <GridLayoutDefinition>
+      <NumberOfColumns>3</NumberOfColumns>
+      <NumberOfRows>1</NumberOfRows>
+      <CellDefinitions>
+        <CellDefinition>
+          <ColumnIndex>1</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>StartDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>2</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>EndDate</ParameterName>
+        </CellDefinition>
+        <CellDefinition>
+          <ColumnIndex>0</ColumnIndex>
+          <RowIndex>0</RowIndex>
+          <ParameterName>ReportNote</ParameterName>
+        </CellDefinition>
+      </CellDefinitions>
+    </GridLayoutDefinition>
+  </ReportParametersLayout>
+  <Language>en-US</Language>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Inch</rd:ReportUnitType>
+  <rd:ReportID>3352a5ac-dea1-41c2-9e4f-41bedcc5e2eb</rd:ReportID>
+</Report>

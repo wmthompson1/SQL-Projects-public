@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Rec POs To Invoice
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:45
+Files Compared: Rec POs To Invoice.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Rec POs To Invoice.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Rec POs To Invoice.xml
+
+FILE INFORMATION:
+Prior Size: 21097 bytes
+Current Size: 21097 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

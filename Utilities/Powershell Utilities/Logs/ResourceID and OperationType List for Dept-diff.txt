@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: ResourceID and OperationType List for Dept
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:46
+Files Compared: ResourceID and OperationType List for Dept.xml
+Prior Path: Server\SSRS_Master\PriorVersion\ResourceID and OperationType List for Dept.xml
+Current Path: Server\SSRS_Master\CurrentVersion\ResourceID and OperationType List for Dept.xml
+
+FILE INFORMATION:
+Prior Size: 63371 bytes
+Current Size: 63371 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

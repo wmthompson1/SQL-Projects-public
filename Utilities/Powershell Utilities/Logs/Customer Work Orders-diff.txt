@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Customer Work Orders
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:21
+Files Compared: Customer Work Orders.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Customer Work Orders.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Customer Work Orders.xml
+
+FILE INFORMATION:
+Prior Size: 45403 bytes
+Current Size: 45403 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

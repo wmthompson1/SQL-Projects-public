@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: DOCREF_check
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:22
+Files Compared: DOCREF_check.xml
+Prior Path: Server\SSRS_Master\PriorVersion\DOCREF_check.xml
+Current Path: Server\SSRS_Master\CurrentVersion\DOCREF_check.xml
+
+FILE INFORMATION:
+Prior Size: 22654 bytes
+Current Size: 22654 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

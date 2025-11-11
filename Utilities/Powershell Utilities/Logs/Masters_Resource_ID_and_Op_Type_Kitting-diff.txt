@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Masters_Resource_ID_and_Op_Type_Kitting
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:29
+Files Compared: Masters_Resource_ID_and_Op_Type_Kitting.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Masters_Resource_ID_and_Op_Type_Kitting.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Masters_Resource_ID_and_Op_Type_Kitting.xml
+
+FILE INFORMATION:
+Prior Size: 45707 bytes
+Current Size: 45707 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

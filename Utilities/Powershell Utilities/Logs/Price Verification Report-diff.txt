@@ -1,0 +1,71 @@
+﻿COMPARISON RESULT: Price Verification Report
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:42
+Files Compared: Price Verification Report.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Price Verification Report.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Price Verification Report.xml
+
+FILE INFORMATION:
+Prior Size: 46826 bytes
+Current Size: 46695 bytes
+Size Difference: 131 bytes
+
+CHANGE SUMMARY:
+16 lines changed
+5 additions
+9 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\Price Verification Report.xml" "b/Server\\SSRS_Master\\CurrentVersion\\Price Verification Report.xml"
+index 84ee5aa..0d1ac4c 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\Price Verification Report.xml"	
++++ "b/Server\\SSRS_Master\\CurrentVersion\\Price Verification Report.xml"	
+@@ -1,5 +1,5 @@
+ <!-- Converted from RDL file: Price Verification Report.rdl -->
+-<!-- Conversion date: 2025-11-06 15:41:21 -->
++<!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily">
+   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+@@ -107,13 +107,9 @@ WHERE CO.ORDER_DATE &gt;= @STARTDATE
+     </DataSet>
+     <DataSet Name="BusUnit">
+       <SharedDataSet>
+-        <SharedDataSetReference>LookUpUser1BusUnit</SharedDataSetReference>
++        <SharedDataSetReference>LookUpCustUserBusUnit</SharedDataSetReference>
+       </SharedDataSet>
+       <Fields>
+-        <Field Name="Skills_Type">
+-          <DataField>Skills_Type</DataField>
+-          <rd:TypeName>System.String</rd:TypeName>
+-        </Field>
+         <Field Name="BUSINESS_UNIT">
+           <DataField>BUSINESS_UNIT</DataField>
+           <rd:TypeName>System.String</rd:TypeName>
+@@ -1028,15 +1024,15 @@ ORDER ID</Value>
+       <DefaultValue>
+         <DataSetReference>
+           <DataSetName>BusUnit</DataSetName>
+-          <ValueField>BASE_ID</ValueField>
++          <ValueField>BUSINESS_UNIT</ValueField>
+         </DataSetReference>
+       </DefaultValue>
+       <Prompt>Business Unit :</Prompt>
+       <ValidValues>
+         <DataSetReference>
+           <DataSetName>BusUnit</DataSetName>
+-          <ValueField>BASE_ID</ValueField>
+-          <LabelField>BASE_ID</LabelField>
++          <ValueField>BUSINESS_UNIT</ValueField>
++          <LabelField>BUSINESS_UNIT</LabelField>
+         </DataSetReference>
+       </ValidValues>
+       <MultiValue>true</MultiValue>

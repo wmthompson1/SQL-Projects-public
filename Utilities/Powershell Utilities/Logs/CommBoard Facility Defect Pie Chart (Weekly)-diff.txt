@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: CommBoard Facility Defect Pie Chart (Weekly)
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:17
+Files Compared: CommBoard Facility Defect Pie Chart (Weekly).xml
+Prior Path: Server\SSRS_Master\PriorVersion\CommBoard Facility Defect Pie Chart (Weekly).xml
+Current Path: Server\SSRS_Master\CurrentVersion\CommBoard Facility Defect Pie Chart (Weekly).xml
+
+FILE INFORMATION:
+Prior Size: 32349 bytes
+Current Size: 32349 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

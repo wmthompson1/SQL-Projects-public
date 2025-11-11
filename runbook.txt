@@ -1,0 +1,24 @@
+# SSRS Report Comparison Runbook
+# Generated: 2025-11-10 14:25:00
+# Total XML files found: 7
+# ==============================================
+
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "BOE_Billing_5AXIS" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "BOE_Billing_ASSY" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "BOE_Billing_FINISH" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "BOE_Billing_MFG" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "Monthly BOE Billing 605" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "Monthly BOE Billing BOLTBOARDS" -FileExtension ".xml" -Summary
+powershell.exe -File "Utilities\Powershell Utilities\Run_File_Diff.ps1" -FileName "Monthly BOE Billing EME" -FileExtension ".xml" -Summary
+# ==============================================
+# QUICK STATUS CHECK COMMANDS
+# ==============================================
+
+# Check all log files for differences:
+Get-ChildItem -Path "Utilities\Powershell Utilities\Logs\*-diff.txt" | ForEach-Object { Get-Content $_.FullName -TotalCount 2 }
+
+# Count files with differences:
+Get-ChildItem -Path "Utilities\Powershell Utilities\Logs\*-diff.txt" | ForEach-Object { Get-Content $_.FullName -TotalCount 2 } | Where-Object { $_ -match "\[DIFFERENCES DETECTED\]" } | Measure-Object
+
+# List only files with differences:
+Get-ChildItem -Path "Utilities\Powershell Utilities\Logs\*-diff.txt" | ForEach-Object { $content = Get-Content $_.FullName -TotalCount 2; if ($content[1] -match "\[DIFFERENCES DETECTED\]") { Write-Host "$($content[0]) - DIFFERENCES FOUND" -ForegroundColor Yellow } }

@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Master_work_orders_missing_UM
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:26
+Files Compared: Master_work_orders_missing_UM.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Master_work_orders_missing_UM.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Master_work_orders_missing_UM.xml
+
+FILE INFORMATION:
+Prior Size: 51503 bytes
+Current Size: 51503 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

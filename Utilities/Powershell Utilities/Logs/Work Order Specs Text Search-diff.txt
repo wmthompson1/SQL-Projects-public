@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Work Order Specs Text Search
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:11:06
+Files Compared: Work Order Specs Text Search.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Work Order Specs Text Search.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Work Order Specs Text Search.xml
+
+FILE INFORMATION:
+Prior Size: 60250 bytes
+Current Size: 60250 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

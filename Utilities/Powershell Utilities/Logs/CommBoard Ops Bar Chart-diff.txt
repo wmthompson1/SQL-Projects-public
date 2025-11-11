@@ -1,0 +1,230 @@
+﻿COMPARISON RESULT: CommBoard Ops Bar Chart
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:18
+Files Compared: CommBoard Ops Bar Chart.xml
+Prior Path: Server\SSRS_Master\PriorVersion\CommBoard Ops Bar Chart.xml
+Current Path: Server\SSRS_Master\CurrentVersion\CommBoard Ops Bar Chart.xml
+
+FILE INFORMATION:
+Prior Size: 34024 bytes
+Current Size: 35177 bytes
+Size Difference: -1153 bytes
+
+CHANGE SUMMARY:
+111 lines changed
+74 additions
+35 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\CommBoard Ops Bar Chart.xml" "b/Server\\SSRS_Master\\CurrentVersion\\CommBoard Ops Bar Chart.xml"
+index 8ca3839..03aa6e6 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\CommBoard Ops Bar Chart.xml"	
++++ "b/Server\\SSRS_Master\\CurrentVersion\\CommBoard Ops Bar Chart.xml"	
+@@ -1,23 +1,23 @@
+ <!-- Converted from RDL file: CommBoard Ops Bar Chart.rdl -->
+-<!-- Conversion date: 2025-11-06 15:41:21 -->
++<!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report MustUnderstand="df" xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner" xmlns:df="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition/defaultfontfamily" xmlns:am="http://schemas.microsoft.com/sqlserver/reporting/authoringmetadata">
+   <am:AuthoringMetadata>
+     <am:CreatedBy>
+-      <am:Name>SSDTRS</am:Name>
+-      <am:Version>17.14.36414.22</am:Version>
++      <am:Name>MSRB</am:Name>
++      <am:Version>15.0.20283.0</am:Version>
+     </am:CreatedBy>
+     <am:UpdatedBy>
+-      <am:Name>SSDTRS</am:Name>
+-      <am:Version>17.14.36414.22</am:Version>
++      <am:Name>MSRB</am:Name>
++      <am:Version>15.0.20283.0</am:Version>
+     </am:UpdatedBy>
+-    <am:LastModifiedTimestamp>2025-09-04T19:13:09.2119534Z</am:LastModifiedTimestamp>
++    <am:LastModifiedTimestamp>2025-01-03T16:24:56.3162113Z</am:LastModifiedTimestamp>
+   </am:AuthoringMetadata>
+   <df:DefaultFontFamily>Segoe UI</df:DefaultFontFamily>
+   <AutoRefresh>0</AutoRefresh>
+   <DataSources>
+     <DataSource Name="DataMart">
+-      <DataSourceReference>Datamart</DataSourceReference>
++      <DataSourceReference>/Data Sources/DataMart</DataSourceReference>
+       <rd:SecurityType>None</rd:SecurityType>
+       <rd:DataSourceID>fbcb4cd0-5549-4a7a-b770-08a779f8d35a</rd:DataSourceID>
+     </DataSource>
+@@ -96,9 +96,10 @@ SELECT SR.USER_5 AS [FACILITY]
+ 		WHEN @TIMEFRAME = 'OTHER' THEN @ENDDATE
+ 		ELSE 'ERROR'
+ 	END AS [ENDDATE]
+-FROM DATAWAREHOUSE.DBO.OPERATION O
+-LEFT OUTER JOIN DATAWAREHOUSE.DBO.SHOP_RESOURCE_SITE SR
+-	ON SR.RESOURCE_ID = O.RESOURCE_ID
++--FROM DATAWAREHOUSE.DBO.OPERATION O
++--LEFT OUTER JOIN DATAWAREHOUSE.DBO.SHOP_RESOURCE_SITE SR ON SR.RESOURCE_ID = O.RESOURCE_ID
++FROM [SQL-Lab-2].[LIVE].DBO.OPERATION O
++LEFT OUTER JOIN [SQL-Lab-2].[LIVE].DBO.SHOP_RESOURCE_SITE SR ON SR.RESOURCE_ID = O.RESOURCE_ID
+ WHERE (
+ 		(@TIMEFRAME = 'LAST WEEK' 
+ 			AND O.CLOSE_DATE &gt;= CONVERT(DATE, DATEADD(WEEK, DATEDIFF(WEEK, 7, GETDATE()), 0))
+@@ -137,6 +138,7 @@ WHERE (
+ 	AND ISNULL(SR.USER_7, '_BLANK') IN (@PROCESS)
+ 	AND ISNULL(SR.USER_8, '_BLANK') IN (@DEPARTMENT)
+ 	AND O.[STATUS] != 'X'</CommandText>
++        <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+       </Query>
+       <Fields>
+         <Field Name="FACILITY">
+@@ -182,9 +184,24 @@ WHERE (
+       </Fields>
+     </DataSet>
+     <DataSet Name="TIMEFRAME">
+-      <SharedDataSet>
+-        <SharedDataSetReference>LookUpTimeframeOptions</SharedDataSetReference>
+-      </SharedDataSet>
++      <Query>
++        <DataSourceName>DataMart</DataSourceName>
++        <CommandText>SELECT 'CURRENT WEEK' AS [TIMEFRAME]
++UNION
++SELECT 'LAST WEEK' AS [TIMEFRAME]
++UNION
++SELECT 'CURRENT MONTH' AS [TIMEFRAME]
++UNION
++SELECT 'LAST MONTH' AS [TIMEFRAME]
++UNION
++SELECT 'CURRENT QUARTER' AS [TIMEFRAME]
++UNION
++SELECT 'LAST QUARTER' AS [TIMEFRAME]
++UNION
++SELECT 'CURRENT YEAR' AS [TIMEFRAME]
++UNION
++SELECT 'LAST YEAR' AS [TIMEFRAME]</CommandText>
++      </Query>
+       <Fields>
+         <Field Name="TIMEFRAME">
+           <DataField>TIMEFRAME</DataField>
+@@ -193,34 +210,57 @@ WHERE (
+       </Fields>
+     </DataSet>
+     <DataSet Name="FACILITY">
+-      <SharedDataSet>
+-        <SharedDataSetReference>LookUpUser5Facility</SharedDataSetReference>
+-      </SharedDataSet>
++      <Query>
++        <DataSourceName>DataMart</DataSourceName>
++        <CommandText>SELECT 'Undetermined' AS [FACILITY]
++UNION
++SELECT '_Blank' AS [FACILITY]
++UNION
++SELECT ISNULL(USER_5, '_Blank') AS [FACILITY]
++FROM SHOP_RESOURCE_SITE
++WHERE ([STATUS] != 'O' OR [STATUS] IS NULL)
++AND USER_5 != 'ALL'
++GROUP BY USER_5</CommandText>
++      </Query>
+       <Fields>
+-        <Field Name="Facility">
+-          <DataField>Facility</DataField>
++        <Field Name="FACILITY">
++          <DataField>FACILITY</DataField>
+           <rd:TypeName>System.String</rd:TypeName>
+         </Field>
+       </Fields>
+     </DataSet>
+     <DataSet Name="PROCESS">
+-      <SharedDataSet>
+-        <SharedDataSetReference>LookUpUser7Process</SharedDataSetReference>
+-      </SharedDataSet>
++      <Query>
++        <DataSourceName>DataMart</DataSourceName>
++        <CommandText>SELECT '_Blank' AS [PROCESS]
++UNION
++SELECT ISNULL(USER_7, '_Blank') AS [PROCESS]
++FROM SHOP_RESOURCE_SITE_VIEW
++WHERE ([STATUS] != 'O' OR [STATUS] IS NULL)
++AND USER_5 != 'ALL'
++GROUP BY USER_7</CommandText>
++      </Query>
+       <Fields>
+-        <Field Name="Process">
+-          <DataField>Process</DataField>
++        <Field Name="PROCESS">
++          <DataField>PROCESS</DataField>
+           <rd:TypeName>System.String</rd:TypeName>
+         </Field>
+       </Fields>
+     </DataSet>
+     <DataSet Name="DEPARTMENT">
+-      <SharedDataSet>
+-        <SharedDataSetReference>LookUpUser8ReptGroup</SharedDataSetReference>
+-      </SharedDataSet>
++      <Query>
++        <DataSourceName>DataMart</DataSourceName>
++        <CommandText>SELECT '_Blank' AS [REPTGROUP]
++UNION
++SELECT ISNULL(USER_8, '_Blank') AS [REPTGROUP]
++FROM SHOP_RESOURCE_SITE_VIEW
++WHERE ([STATUS] != 'O' OR [STATUS] IS NULL)
++AND USER_5 != 'ALL'
++GROUP BY USER_8</CommandText>
++      </Query>
+       <Fields>
+-        <Field Name="ReptGroup">
+-          <DataField>ReptGroup</DataField>
++        <Field Name="REPTGROUP">
++          <DataField>REPTGROUP</DataField>
+           <rd:TypeName>System.String</rd:TypeName>
+         </Field>
+       </Fields>
+@@ -735,8 +775,7 @@ ELSE
+       <ValidValues>
+         <DataSetReference>
+           <DataSetName>FACILITY</DataSetName>
+-          <ValueField>Facility</ValueField>
+-          <LabelField>Facility</LabelField>
++          <ValueField>FACILITY</ValueField>
+         </DataSetReference>
+       </ValidValues>
+     </ReportParameter>
+@@ -746,8 +785,8 @@ ELSE
+       <ValidValues>
+         <DataSetReference>
+           <DataSetName>DEPARTMENT</DataSetName>
+-          <ValueField>ReptGroup</ValueField>
+-          <LabelField>ReptGroup</LabelField>
++          <ValueField>REPTGROUP</ValueField>
++          <LabelField>REPTGROUP</LabelField>
+         </DataSetReference>
+       </ValidValues>
+     </ReportParameter>
+@@ -756,15 +795,14 @@ ELSE
+       <DefaultValue>
+         <DataSetReference>
+           <DataSetName>PROCESS</DataSetName>
+-          <ValueField>Process</ValueField>
++          <ValueField>PROCESS</ValueField>
+         </DataSetReference>
+       </DefaultValue>
+       <Prompt>PROCESS : </Prompt>
+       <ValidValues>
+         <DataSetReference>
+           <DataSetName>PROCESS</DataSetName>
+-          <ValueField>Process</ValueField>
+-          <LabelField>Process</LabelField>
++          <ValueField>PROCESS</ValueField>
+         </DataSetReference>
+       </ValidValues>
+       <MultiValue>true</MultiValue>
+@@ -809,5 +847,6 @@ ELSE
+     </GridLayoutDefinition>
+   </ReportParametersLayout>
+   <rd:ReportUnitType>Inch</rd:ReportUnitType>
++  <rd:ReportServerUrl>http://sql-bi-1.skillsinc.local/ReportServer</rd:ReportServerUrl>
+   <rd:ReportID>4412da20-8488-4b71-9e85-4d8e79c455ad</rd:ReportID>
+ </Report>

@@ -1,0 +1,62 @@
+﻿COMPARISON RESULT: WIP - Cargo Panels
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:57
+Files Compared: WIP - Cargo Panels.xml
+Prior Path: Server\SSRS_Master\PriorVersion\WIP - Cargo Panels.xml
+Current Path: Server\SSRS_Master\CurrentVersion\WIP - Cargo Panels.xml
+
+FILE INFORMATION:
+Prior Size: 54705 bytes
+Current Size: 54538 bytes
+Size Difference: 167 bytes
+
+CHANGE SUMMARY:
+9 lines changed
+3 additions
+4 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\WIP - Cargo Panels.xml" "b/Server\\SSRS_Master\\CurrentVersion\\WIP - Cargo Panels.xml"
+index 960e628..34a5372 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\WIP - Cargo Panels.xml"	
++++ "b/Server\\SSRS_Master\\CurrentVersion\\WIP - Cargo Panels.xml"	
+@@ -2,12 +2,12 @@
+ <!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+-  <Description>Work Order In Process that are over 30 Days .  Converted from a Crystal report.  Sent via subscription to personnel who are responsible for investigating them.</Description>
++  <Description>WIP for Cargo Panels</Description>
+   <Author>Vivian Elia</Author>
+   <AutoRefresh>0</AutoRefresh>
+   <DataSources>
+     <DataSource Name="Live">
+-      <DataSourceReference>Live</DataSourceReference>
++      <DataSourceReference>/Data Sources/Live</DataSourceReference>
+       <rd:SecurityType>None</rd:SecurityType>
+       <rd:DataSourceID>d2c12b6c-0f98-452a-b495-49e7f252ac64</rd:DataSourceID>
+     </DataSource>
+@@ -103,7 +103,7 @@ and wo.Part_ID in (
+ '453T1919-79',
+ '453T7027-2',
+ '453T7027-3',
+-'453T7027-5')</CommandText>
++'453T7027-5', '453A2610-81')</CommandText>
+         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+       </Query>
+       <Fields>
+@@ -584,7 +584,6 @@ and wo.Part_ID in (
+                             <PaddingBottom>2pt</PaddingBottom>
+                           </Style>
+                         </Textbox>
+-                        <rd:Selected>true</rd:Selected>
+                       </CellContents>
+                     </TablixCell>
+                     <TablixCell>

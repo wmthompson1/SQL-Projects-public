@@ -34,6 +34,15 @@ stored procedure
 managedData.usp_Load_Inventory_On_Hand_Reconcilable
 select * from Datawarehouse.managedData.Inventory_On_Hand_Reconcilable where is_reconciled = 'n'
 
+-- query reviewed 11/7/2025 different results for end item
+-- ex. part 'BACN11P3A5C-CMP' has trace records.
+-- ex.  End item '453T1450-9013' has no trace records in this query. WO 1795045 due 11/6/2025
+--  Stocked part '143T0033-7' has trace records.
+--  unstocked part '453T1450-9013' has no trace records.
+--    Linked to work order but no trace records.
+--    Unlinked to work order would mean non-eexclusive use.
+--    Unstocked parts may not have trace records if not serialized/lot controlled.
+
 **********************************************************************************************/
 
 
@@ -64,9 +73,12 @@ IF OBJECT_ID('tempdb..#temp3') IS NOT NULL DROP TABLE #temp3
 IF OBJECT_ID('tempdb..#temp4') IS NOT NULL DROP TABLE #temp4
 IF OBJECT_ID('tempdb..#temp5') IS NOT NULL DROP TABLE #temp5
 
+	
+
+
 
 DECLARE @Tester int
- -- ,@Part_ID nvarchar(30) = '143T0033-7' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
+ ,@Part_ID nvarchar(30) =  '453T1450-9013' --  'BACN11P3A5C-CMP' --  '143T0033-7' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
  -- ,@SITE_id nvarchar(30) -- = 'SK01'
  -- ,@TRANSACTION_id nvarchar(30) -- = '1884520'
  -- ,@EndDate datetime = getdate() --
@@ -88,10 +100,11 @@ SELECT
 , EDIT_EXP_DATE, [OWNERSHIP], SERIAL, LOT, PRODUCTION, RECEIVE_BY, AVAILABLE, SHIP_BY, EXPIRATION 
   into #trace_profile
 FROM [sql-lab-2].live.dbo.TRACE_PROFILE t
---WHERE PART_ID = @PART_id
+WHERE PART_ID = @PART_id
 -- where 1=2 SET FMTONLY OFF
 Create clustered index ci_tp12 on #trace_profile (part_id)
--- select * FROM TRACE_profile where apply_to_labor is not null
+
+-- select * from #trace_profile
 
 -- add net field
 SELECT 
@@ -104,8 +117,10 @@ SELECT
 , disp_out_qty, committed_qty 
   into #Trace
 FROM TRACE T  
---WHERE T.PART_ID = @Part_id
+WHERE T.PART_ID = @Part_id
 ORDER BY PART_ID, ID 
+
+-- select * from #Trace
 
 -- add net qty field
 SELECT 
@@ -139,6 +154,7 @@ SELECT
                and w.[type] = l.workorder_type ) or ( t.assigned_qty >= 0 and t.out_qty = 0 
                and t.in_qty = 0 ) ) order by part_id, id
 
+-- select * from #part_trace_maint order by part_id, id
 
 -- note the transaction_id join for foreign key
 select 
@@ -229,8 +245,9 @@ join [sql-lab-2].live.dbo.[location] l
 on w.id = l.warehouse_id 
 and t.location_id = l.id  
 
- --AND TRANSACTION_DATE < @EndDate AND T.PART_ID IS NOT NULL 
---AND T.PART_ID = @Part_ID  
+ --AND TRANSACTION_DATE < @EndDate AND T.PART_ID IS NOT NULL
+ -- williamt tst_1107 (2025-11-07) - limit to site sk01 for performance
+AND T.PART_ID = @Part_ID  
 AND ( T.SITE_ID IN ( N'SK01' ) ) 
 ORDER BY T.SITE_ID, T.PART_ID, T.TRANSACTION_ID
 

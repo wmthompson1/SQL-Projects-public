@@ -1,0 +1,96 @@
+# Operation Binary Update F21.26 (20220412)
+
+```sql
+USE LIVE
+GO
+
+-- Spiceworks Ticket Number #1955 
+-- Vivian Elia 
+-- tested on Server CRUNCH2018 database LIVE041322 
+-- this is to be used to update operation binary on masters after the foundation table of 
+-- OPER_TYPE_BINARY has been updated by the user from the Visual User interface
+
+ /***********************************************************************************/
+ --/*
+ --Drop all temporary table objects that exist in the tempDB for the current session
+DECLARE @TempTablesString NVARCHAR(MAX) 
+
+SELECT @TempTablesString = COALESCE(@TempTablesString + ', ', '') 
++ CASE WHEN name LIKE '##%' THEN name 
+       WHEN name LIKE '#%'  THEN SUBSTRING(name, 1, CHARINDEX( '____', name)-1)
+  END 
+FROM  tempdb..sysobjects WITH (NOLOCK) 
+WHERE name LIKE '#%' 
+AND   OBJECT_ID('tempdb..' + name) IS NOT NULL 
+AND   name NOT LIKE CASE WHEN 0 = 0 
+                         THEN '##%' 
+						 ELSE '#######%' 
+				    END 
+
+SET @TempTablesString = 'DROP TABLE ' + @TempTablesString EXECUTE sp_executesql @TempTablesString
+--*/
+
+SELECT OB.WORKORDER_TYPE
+	, OB.WORKORDER_BASE_ID
+	, OB.WORKORDER_LOT_ID
+	, OB.WORKORDER_SPLIT_ID
+	, OB.WORKORDER_SUB_ID
+	, OB.SEQUENCE_NO
+	, O.RESOURCE_ID
+	, O.OPERATION_TYPE
+	, O.[STATUS]
+	, CAST(CAST(OB.BITS AS VARBINARY(MAX)) AS NVARCHAR(MAX)) AS [OB_BIN]
+	, OB.BITS AS [OB_BINARY]
+	, OB.BITS_LENGTH AS [OB_BITLEN]
+	, CAST(CAST(OTB.BITS AS VARBINARY(MAX)) AS NVARCHAR(MAX)) AS [OTB_BIN]
+	, OTB.BITS AS [OTB_BINARY]
+	, OTB.BITS_LENGTH AS [OTB_BITLEN]
+INTO #T1
+FROM OPERATION O
+INNER JOIN OPER_TYPE_BINARY OTB
+	ON OTB.OPERATION_TYPE_ID = O.OPERATION_TYPE
+INNER JOIN OPERATION_BINARY OB
+	ON O.WORKORDER_TYPE = OB.WORKORDER_TYPE
+	AND O.WORKORDER_BASE_ID = OB.WORKORDER_BASE_ID
+	AND O.WORKORDER_LOT_ID = OB.WORKORDER_LOT_ID
+	AND O.WORKORDER_SPLIT_ID = OB.WORKORDER_SPLIT_ID
+	AND O.WORKORDER_SUB_ID = OB.WORKORDER_SUB_ID
+	AND O.SEQUENCE_NO = OB.SEQUENCE_NO
+JOIN dbo.OpType_ResourceIDMasters_upd_20220413$ T  -- Imported file from user that contains filtering data for Masters and sequence numbers
+ON T.[BASE ID] = OB.WORKORDER_BASE_ID
+	AND T.LOT = OB.WORKORDER_LOT_ID
+	AND T.SPLIT = OB.WORKORDER_SPLIT_ID
+	AND T.SUB = OB.WORKORDER_SUB_ID
+	AND T.[SEQ NO] = OB.SEQUENCE_NO
+
+WHERE (O.WORKORDER_TYPE = 'M')
+
+-- vme 04/12/2022 105 records
+   --AND RESOURCE_ID = 'P1F1-PNT-TC'
+
+SELECT * FROM #T1 
+--where workorder_base_id = '232U4318-29'
+where OB_BIN <> OTB_BIN
+--where OB_BITLEN <> OTB_BITLEN
+
+/*
+BEGIN TRANSACTION;
+UPDATE OB     
+SET OB.BITS = T.OTB_BINARY,
+	OB.BITS_LENGTH = OTB_BITLEN
+	--, OB.BITS_LENGTH = 356
+FROM OPERATION_BINARY OB
+INNER JOIN #T1 T
+	ON OB.WORKORDER_TYPE = T.WORKORDER_TYPE
+	AND OB.WORKORDER_BASE_ID = T.WORKORDER_BASE_ID
+	AND OB.WORKORDER_LOT_ID	= T.WORKORDER_LOT_ID
+	AND OB.WORKORDER_SPLIT_ID = T.WORKORDER_SPLIT_ID
+	AND OB.WORKORDER_SUB_ID = T.WORKORDER_SUB_ID
+	AND OB.SEQUENCE_NO = T.SEQUENCE_NO
+
+
+--> COMMIT TRANSACTION;
+--> ROLLBACK TRANSACTION;
+
+*/
+```

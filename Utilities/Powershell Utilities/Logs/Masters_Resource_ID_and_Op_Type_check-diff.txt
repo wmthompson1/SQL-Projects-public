@@ -1,0 +1,18 @@
+﻿COMPARISON RESULT: Masters_Resource_ID_and_Op_Type_check
+[FILES IDENTICAL]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:27
+Files Compared: Masters_Resource_ID_and_Op_Type_check.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Masters_Resource_ID_and_Op_Type_check.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Masters_Resource_ID_and_Op_Type_check.xml
+
+FILE INFORMATION:
+Prior Size: 89109 bytes
+Current Size: 89109 bytes
+Size Difference: 0 bytes
+
+No changes detected between files.\nNOTE: Small changes ignored by threshold (treated as IDENTICAL).
+
+================================================================================

@@ -1,0 +1,356 @@
+﻿COMPARISON RESULT: Planning_CMP_Non_CMP_counts
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:41
+Files Compared: Planning_CMP_Non_CMP_counts.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Planning_CMP_Non_CMP_counts.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Planning_CMP_Non_CMP_counts.xml
+
+FILE INFORMATION:
+Prior Size: 60189 bytes
+Current Size: 59571 bytes
+Size Difference: 618 bytes
+
+CHANGE SUMMARY:
+300 lines changed
+144 additions
+154 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\Planning_CMP_Non_CMP_counts.xml" "b/Server\\SSRS_Master\\CurrentVersion\\Planning_CMP_Non_CMP_counts.xml"
+index ad6649f..f2cd59b 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\Planning_CMP_Non_CMP_counts.xml"
++++ "b/Server\\SSRS_Master\\CurrentVersion\\Planning_CMP_Non_CMP_counts.xml"
+@@ -1,5 +1,5 @@
+ <!-- Converted from RDL file: Planning_CMP_Non_CMP_counts.rdl -->
+-<!-- Conversion date: 2025-11-06 15:41:21 -->
++<!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+   <Body>
+@@ -1256,175 +1256,165 @@
+   </Page>
+   <AutoRefresh>0</AutoRefresh>
+   <DataSources>
+-    <DataSource Name="Datawarehouse">
+-      <DataSourceReference>Datawarehouse</DataSourceReference>
++    <DataSource Name="Live">
++      <DataSourceReference>Live</DataSourceReference>
+       <rd:SecurityType>None</rd:SecurityType>
+-      <rd:DataSourceID>510a752f-dad0-461e-9d8a-2fe2d0864dad</rd:DataSourceID>
++      <rd:DataSourceID>6c41edb9-9ebd-4bd5-93fa-6e235bf2f14f</rd:DataSourceID>
+     </DataSource>
+   </DataSources>
+   <DataSets>
+     <DataSet Name="Plannning_Counts">
+       <Query>
+-        <DataSourceName>Datawarehouse</DataSourceName>
++        <DataSourceName>Live</DataSourceName>
+         <CommandText>--Visual Enterprise Reports --&gt; Manufacturing Reports --&gt; Planning_CMP_Non_CMP_counts
+ -- Get Manufacturing information
+-WITH CTE_WO
+-	AS (SELECT WO.BASE_ID, 
+-			 WO.LOT_ID, 
+-			 WO.SPLIT_ID, 
+-			 WO.SUB_ID, 
+-			 WO.TYPE, 
+-			 WO.PART_ID, 
+-			 P.PLANNER_USER_ID,
+-			 CASE
+-				WHEN P.PLANNER_USER_ID = 'MFG-HOURLY'
+-				THEN 'CMP'
+-				ELSE 'NON-CMP'
+-			 END AS                           CMP_NON_CMP, 
+-			 CONVERT(DATE, WO.CREATE_DATE) AS CREATEDATE
+-	    FROM WORK_ORDER WO
+-		    INNER JOIN PART P
+-			  ON WO.PART_ID = P.ID
+-	    WHERE CONVERT(DATE, WO.CREATE_DATE) &gt;= GETDATE() - 365
+-			AND LEFT(P.PLANNER_USER_ID, 3) = 'MFG'
+-			AND WO.TYPE = 'w'
+-			AND WO.SUB_ID = '0'
+-			AND WO.SPLIT_ID = '0')
++WITH CTE_WO AS 
++(SELECT WO.BASE_ID
++	, WO.LOT_ID
++	, WO.SPLIT_ID
++	, WO.SUB_ID
++	, WO.[TYPE]
++	, WO.PART_ID
++	, P.PLANNER_USER_ID
++	, CASE
++		WHEN P.PLANNER_USER_ID = 'MFG-HOURLY' THEN 'CMP'
++		ELSE 'NON-CMP'
++	END AS CMP_NON_CMP
++	, CONVERT(DATE, WO.CREATE_DATE) AS CREATEDATE
++FROM WORK_ORDER WO
++INNER JOIN PART P
++	ON WO.PART_ID = P.ID
++WHERE CONVERT(DATE, WO.CREATE_DATE) &gt;= GETDATE() - 365
++	AND LEFT(P.PLANNER_USER_ID, 3) = 'MFG'
++	AND WO.[TYPE] = 'W'
++	AND WO.SUB_ID = '0'
++	AND WO.SPLIT_ID = '0'
++)
+ 
+-	-- Determine if new or repeat 
+-	,
+-	CTE_NEW_REPEAT
+-	AS (SELECT A.PART_ID, 
+-			 A.MINDATE,
+-			 CASE
+-				WHEN A.CNT = 1
+-				THEN 'NEW'
+-				ELSE 'REPEAT'
+-			 END AS NEW_REPEAT
+-	    FROM
+-	    (
+-		   SELECT WO.PART_ID, 
+-				MIN(CONVERT(DATE, WO.CREATE_DATE)) AS MINDATE, 
+-				COUNT(1) AS                           CNT
+-		   FROM WORK_ORDER WO
+-			   INNER JOIN CTE_WO C
+-				 ON C.PART_ID = WO.PART_ID
+-				    AND WO.SUB_ID = '0'
+-				    AND WO.SPLIT_ID = '0'
+-				    AND WO.TYPE = 'W'
+-		   GROUP BY WO.PART_ID
+-	    ) AS A)
++--&gt; Determine if new or repeat 
++, CTE_NEW_REPEAT AS 
++(SELECT A.PART_ID
++	, A.MINDATE
++	, CASE
++		WHEN A.CNT = 1 THEN 'NEW'
++		ELSE 'REPEAT'
++	END AS NEW_REPEAT
++FROM
++	(SELECT WO.PART_ID
++		, MIN(CONVERT(DATE, WO.CREATE_DATE)) AS MINDATE
++		, COUNT(1) AS CNT
++	FROM WORK_ORDER WO
++	INNER JOIN CTE_WO C
++		ON C.PART_ID = WO.PART_ID
++		AND WO.SUB_ID = '0'
++		AND WO.SPLIT_ID = '0'
++		AND WO.[TYPE] = 'W'
++	GROUP BY WO.PART_ID
++	) AS A
++)
+ 
+-	--Get Finish information
+-	,
+-	CTE_WO_FIN
+-	AS (SELECT WO.BASE_ID, 
+-			 WO.LOT_ID, 
+-			 WO.SPLIT_ID, 
+-			 WO.SUB_ID, 
+-			 WO.TYPE, 
+-			 WO.PART_ID, 
+-			 P.PLANNER_USER_ID,
+-			 CASE
+-				WHEN P.PLANNER_USER_ID = 'FIN-HOURLY'
+-				THEN 'CMP'
+-				ELSE 'NON-CMP'
+-			 END AS                           CMP_NON_CMP, 
+-			 CONVERT(DATE, WO.CREATE_DATE) AS CREATEDATE
+-	    FROM WORK_ORDER WO
+-		    INNER JOIN PART P
+-			  ON WO.PART_ID = P.ID
+-	    WHERE CONVERT(DATE, WO.CREATE_DATE) &gt;= GETDATE() - 365
+-			AND LEFT(P.PLANNER_USER_ID, 3) = 'FIN'
+-			AND WO.TYPE = 'w'
+-			AND WO.SUB_ID = '0'
+-			AND WO.SPLIT_ID = '0')
++--&gt; Get Finish information
++, CTE_WO_FIN AS 
++(SELECT WO.BASE_ID
++	, WO.LOT_ID
++	, WO.SPLIT_ID
++	, WO.SUB_ID
++	, WO.[TYPE]
++	, WO.PART_ID
++	, P.PLANNER_USER_ID
++	, CASE
++		WHEN P.PLANNER_USER_ID = 'FIN-HOURLY' THEN 'CMP'
++		ELSE 'NON-CMP'
++	END AS CMP_NON_CMP
++	, CONVERT(DATE, WO.CREATE_DATE) AS CREATEDATE
++FROM WORK_ORDER WO
++INNER JOIN PART P
++	ON WO.PART_ID = P.ID
++WHERE CONVERT(DATE, WO.CREATE_DATE) &gt;= GETDATE() - 365
++	AND LEFT(P.PLANNER_USER_ID, 3) = 'FIN'
++	AND WO.[TYPE] = 'W'
++	AND WO.SUB_ID = '0'
++	AND WO.SPLIT_ID = '0'
++)
+ 
+-	-- Determine if new or repeat 
+-	,
+-	CTE_NEW_REPEAT_FIN
+-	AS (SELECT A.PART_ID, 
+-			 A.MINDATE,
+-			 CASE
+-				WHEN A.CNT = 1
+-				THEN 'NEW'
+-				ELSE 'REPEAT'
+-			 END AS NEW_REPEAT
+-	    FROM
+-	    (
+-		   SELECT WO.PART_ID, 
+-				MIN(CONVERT(DATE, WO.CREATE_DATE)) AS MINDATE, 
+-				COUNT(1) AS                           CNT
+-		   FROM WORK_ORDER WO
+-			   INNER JOIN CTE_WO_FIN C
+-				 ON C.PART_ID = WO.PART_ID
+-				    AND WO.SUB_ID = '0'
+-				    AND WO.SPLIT_ID = '0'
+-				    AND WO.TYPE = 'W'
+-		   GROUP BY WO.PART_ID
+-	    ) AS A)
+-	--SELECT * FROM CTE_NEW_REPEAT
++--&gt; Determine if new or repeat 
++, CTE_NEW_REPEAT_FIN AS 
++(SELECT A.PART_ID
++	, A.MINDATE
++	, CASE
++		WHEN A.CNT = 1 THEN 'NEW'
++		ELSE 'REPEAT'
++	END AS NEW_REPEAT
++FROM
++	(SELECT WO.PART_ID
++		, MIN(CONVERT(DATE, WO.CREATE_DATE)) AS MINDATE
++		, COUNT(1) AS CNT
++	FROM WORK_ORDER WO
++	INNER JOIN CTE_WO_FIN C
++		ON C.PART_ID = WO.PART_ID
++		AND WO.SUB_ID = '0'
++		AND WO.SPLIT_ID = '0'
++		AND WO.[TYPE] = 'W'
++	GROUP BY WO.PART_ID
++	) AS A
++)
+ 
+-   -- combine into single query
+-	,
+-	CTE_ALL
+-	AS
+-	(SELECT WO.*, 
+-		  R.NEW_REPEAT, 
+-		  'MFG'AS BUSINESS_UNIT 
+-	FROM CTE_WO WO
+-		LEFT OUTER JOIN CTE_NEW_REPEAT R
+-		   ON WO.PART_ID = R.PART_ID
+-	--where NEW_REPEAT = 'new'
+-	UNION ALL
+-	SELECT WO.*, 
+-		  NEW_REPEAT, 
+-		  'FIN' AS BUSINESS_UNIT
+-	FROM CTE_WO_FIN WO
+-		LEFT OUTER JOIN CTE_NEW_REPEAT_FIN R
+-		   ON WO.PART_ID = R.PART_ID)
++--&gt; Combine into single query
++, CTE_ALL AS
++(SELECT WO.* 
++	, R.NEW_REPEAT
++	, 'MFG' AS BUSINESS_UNIT 
++FROM CTE_WO WO
++LEFT OUTER JOIN CTE_NEW_REPEAT R
++	ON WO.PART_ID = R.PART_ID
++UNION ALL
++SELECT WO.*
++	, NEW_REPEAT
++	, 'FIN' AS BUSINESS_UNIT
++FROM CTE_WO_FIN WO
++LEFT OUTER JOIN CTE_NEW_REPEAT_FIN R
++	ON WO.PART_ID = R.PART_ID
++)
+ 
+ 
+-SELECT A.BUSINESS_UNIT,
+-       COUNT(A.BASE_ID) AS                        CNT_BASE_ID, 
+-	  CMP_NON_CMP, 
+-	  NEW_REPEAT, 
+-	  LEFT(DATENAME(month, OP_CLOSE_DATE), 3) AS MONTHNAME_CLOSE, 
+-	  DATEPART(MM, OP_CLOSE_DATE) AS             MONTH_CLOSE, 
+-	  DATEPART(YY, OP_CLOSE_DATE) AS             YEAR_CLOSE
++SELECT A.BUSINESS_UNIT
++	, COUNT(A.BASE_ID) AS CNT_BASE_ID
++	, CMP_NON_CMP
++	, NEW_REPEAT
++	, LEFT(DATENAME(month, OP_CLOSE_DATE), 3) AS MONTHNAME_CLOSE
++	, DATEPART(MM, OP_CLOSE_DATE) AS MONTH_CLOSE
++	, DATEPART(YY, OP_CLOSE_DATE) AS YEAR_CLOSE
+ FROM
+-(
+-    SELECT C.BUSINESS_UNIT, 
+-		 C.BASE_ID, 
+-		 C.LOT_ID, 
+-		 C.SPLIT_ID, 
+-		 C.SUB_ID, 
+-		 C.TYPE, 
+-		 C.PART_ID, 
+-		 C.PLANNER_USER_ID,
+-           C.CMP_NON_CMP, 
+-		 C.CREATEDATE, 
+-		 C.NEW_REPEAT, 
+-		 O.CLOSE_DATE AS OP_CLOSE_DATE
+-    FROM CTE_ALL C
+-   INNER JOIN OPERATION O
+-	 ON C.TYPE = O.WORKORDER_TYPE
+-	 AND C.BASE_ID = O.WORKORDER_BASE_ID
+-	 AND C.LOT_ID = O.WORKORDER_LOT_ID
+-	 AND C.SPLIT_ID = O.WORKORDER_SPLIT_ID
+-	 AND C.SUB_ID = O.WORKORDER_SUB_ID
+-    WHERE O.OPERATION_TYPE LIKE '%REVIEW%'
+- 	 AND CONVERT(DATE, O.CLOSE_DATE) &gt;= GETDATE() - 365
+-
++(SELECT C.BUSINESS_UNIT
++	, C.BASE_ID
++	, C.LOT_ID
++	, C.SPLIT_ID
++	, C.SUB_ID
++	, C.[TYPE]
++	, C.PART_ID
++	, C.PLANNER_USER_ID
++	, C.CMP_NON_CMP
++	, C.CREATEDATE
++	, C.NEW_REPEAT
++	, O.CLOSE_DATE AS OP_CLOSE_DATE
++FROM CTE_ALL C
++INNER JOIN OPERATION O
++	ON C.[TYPE] = O.WORKORDER_TYPE
++	AND C.BASE_ID = O.WORKORDER_BASE_ID
++	AND C.LOT_ID = O.WORKORDER_LOT_ID
++	AND C.SPLIT_ID = O.WORKORDER_SPLIT_ID
++	AND C.SUB_ID = O.WORKORDER_SUB_ID
++WHERE O.OPERATION_TYPE LIKE '%REVIEW%'
++	AND CONVERT(DATE, O.CLOSE_DATE) &gt;= GETDATE() - 365
+ ) AS A
+-GROUP BY BUSINESS_UNIT,
+-         CMP_NON_CMP, 
+-	    NEW_REPEAT, 
+-	    DATENAME(month, OP_CLOSE_DATE), 
+-	    DATEPART(MM, OP_CLOSE_DATE), 
+-	    DATEPART(YY, OP_CLOSE_DATE)
+-ORDER BY YEAR_CLOSE, 
+-	    MONTH_CLOSE;</CommandText>
++GROUP BY BUSINESS_UNIT
++	, CMP_NON_CMP
++	, NEW_REPEAT
++	, DATENAME(MONTH, OP_CLOSE_DATE)
++	, DATEPART(MM, OP_CLOSE_DATE)
++	, DATEPART(YY, OP_CLOSE_DATE)
++ORDER BY YEAR_CLOSE
++	, MONTH_CLOSE</CommandText>
+         <rd:UseGenericDesigner>true</rd:UseGenericDesigner>
+       </Query>
+       <Fields>

@@ -1,0 +1,131 @@
+﻿COMPARISON RESULT: Cargo Panel Wallboard
+[DIFFERENCES DETECTED]
+================================================================================
+DIFF SUMMARY REPORT
+================================================================================
+Timestamp: 2025-11-06 16:10:13
+Files Compared: Cargo Panel Wallboard.xml
+Prior Path: Server\SSRS_Master\PriorVersion\Cargo Panel Wallboard.xml
+Current Path: Server\SSRS_Master\CurrentVersion\Cargo Panel Wallboard.xml
+
+FILE INFORMATION:
+Prior Size: 58377 bytes
+Current Size: 56212 bytes
+Size Difference: 2165 bytes
+
+CHANGE SUMMARY:
+66 lines changed
+2 additions
+62 deletions
+\n
+
+================================================================================
+
+
+FULL DIFF OUTPUT:
+================================================================================
+diff --git "a/Server\\SSRS_Master\\PriorVersion\\Cargo Panel Wallboard.xml" "b/Server\\SSRS_Master\\CurrentVersion\\Cargo Panel Wallboard.xml"
+index 885cceb..b002a29 100644
+--- "a/Server\\SSRS_Master\\PriorVersion\\Cargo Panel Wallboard.xml"	
++++ "b/Server\\SSRS_Master\\CurrentVersion\\Cargo Panel Wallboard.xml"	
+@@ -1,5 +1,5 @@
+ <!-- Converted from RDL file: Cargo Panel Wallboard.rdl -->
+-<!-- Conversion date: 2025-11-06 15:41:21 -->
++<!-- Conversion date: 2025-11-06 15:41:22 -->
+ <?xml version="1.0" encoding="utf-8"?>
+ <Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2016/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+   <AutoRefresh>0</AutoRefresh>
+@@ -9,15 +9,6 @@
+       <rd:SecurityType>None</rd:SecurityType>
+       <rd:DataSourceID>ef4b4db7-80f0-4d40-990b-02c336ada95d</rd:DataSourceID>
+     </DataSource>
+-    <DataSource Name="LIVESupplemental">
+-      <ConnectionProperties>
+-        <DataProvider>SQL</DataProvider>
+-        <ConnectString>Data Source=SQL-BI-1;Initial Catalog=LIVESupplemental</ConnectString>
+-        <IntegratedSecurity>true</IntegratedSecurity>
+-      </ConnectionProperties>
+-      <rd:SecurityType>Integrated</rd:SecurityType>
+-      <rd:DataSourceID>394262f4-f672-4008-b397-6cd9d8b7f94f</rd:DataSourceID>
+-    </DataSource>
+   </DataSources>
+   <DataSets>
+     <DataSet Name="WODailyStatusData">
+@@ -450,20 +441,6 @@
+         </Field>
+       </Fields>
+     </DataSet>
+-    <DataSet Name="ResourceID_ReportSettings">
+-      <Query>
+-        <DataSourceName>LIVESupplemental</DataSourceName>
+-        <CommandText>SELECT [Resource_ID]
+-FROM [LIVESupplemental].[dbo].[ResourceID_ReportSettings]
+-WHERE Report_Name = 'Cargo Panel Wallboard'</CommandText>
+-      </Query>
+-      <Fields>
+-        <Field Name="Resource_ID">
+-          <DataField>Resource_ID</DataField>
+-          <rd:TypeName>System.String</rd:TypeName>
+-        </Field>
+-      </Fields>
+-    </DataSet>
+   </DataSets>
+   <ReportSections>
+     <ReportSection>
+@@ -1160,8 +1137,7 @@ WHERE Report_Name = 'Cargo Panel Wallboard'</CommandText>
+                 <FilterExpression>=Fields!RESOURCE_ID_Raw.Value</FilterExpression>
+                 <Operator>In</Operator>
+                 <FilterValues>
+-                  <FilterValue>=Parameters!ResourceIDValues.Value
+-'CStr("ANM-fladderburr,ANM-countersink,ANM-cncrouter3,ANM-cncrouter4").Split(",")</FilterValue>
++                  <FilterValue>=CStr("ANM-fladderburr,ANM-countersink,ANM-cncrouter3,ANM-cncrouter4").Split(",")</FilterValue>
+                 </FilterValues>
+               </Filter>
+             </Filters>
+@@ -1315,46 +1291,10 @@ WHERE Report_Name = 'Cargo Panel Wallboard'</CommandText>
+       </Page>
+     </ReportSection>
+   </ReportSections>
+-  <ReportParameters>
+-    <ReportParameter Name="ReportName">
+-      <DataType>String</DataType>
+-      <DefaultValue>
+-        <Values>
+-          <Value>Cargo Panel Wallboard</Value>
+-        </Values>
+-      </DefaultValue>
+-      <Prompt>Report Name</Prompt>
+-      <Hidden>true</Hidden>
+-    </ReportParameter>
+-    <ReportParameter Name="ResourceIDValues">
+-      <DataType>String</DataType>
+-      <DefaultValue>
+-        <DataSetReference>
+-          <DataSetName>ResourceID_ReportSettings</DataSetName>
+-          <ValueField>Resource_ID</ValueField>
+-        </DataSetReference>
+-      </DefaultValue>
+-      <Prompt>ResourceIDValues</Prompt>
+-      <Hidden>true</Hidden>
+-      <MultiValue>true</MultiValue>
+-    </ReportParameter>
+-  </ReportParameters>
+   <ReportParametersLayout>
+     <GridLayoutDefinition>
+       <NumberOfColumns>4</NumberOfColumns>
+       <NumberOfRows>2</NumberOfRows>
+-      <CellDefinitions>
+-        <CellDefinition>
+-          <ColumnIndex>0</ColumnIndex>
+-          <RowIndex>0</RowIndex>
+-          <ParameterName>ReportName</ParameterName>
+-        </CellDefinition>
+-        <CellDefinition>
+-          <ColumnIndex>1</ColumnIndex>
+-          <RowIndex>0</RowIndex>
+-          <ParameterName>ResourceIDValues</ParameterName>
+-        </CellDefinition>
+-      </CellDefinitions>
+     </GridLayoutDefinition>
+   </ReportParametersLayout>
+   <Language>en-US</Language>
