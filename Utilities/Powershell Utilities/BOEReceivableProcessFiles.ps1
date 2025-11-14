@@ -14,231 +14,29 @@
 ##  Date        Modified By         Change Description
 ##  ----------  ------------------  ------------------------------------------------------------
 ##  06/12/2019	William Thompson	Created.
-##  11/13/2025  GitHub Copilot      Fixed Excel COM cleanup and file locking issues
-##
+##  11/14/2025    William Thompson	Daily dateStamped file process Boeing_Export_$dateStamp.xlsx
+
 ##
 ##**********************************************************************************************/
 
 Write-Output ""
 Write-Output "Starting BOE Receivable Process - $(Get-Date)"
-
-# Detect execution context for better error handling
-$runningContext = "Interactive"
-try {
-    # Check if running under SQL Server Agent
-    $parentProcess = Get-WmiObject Win32_Process -Filter "ProcessId=$PID" | ForEach-Object { $_.ParentProcessId }
-    $parentProcessName = Get-Process -Id $parentProcess -ErrorAction SilentlyContinue | Select-Object -ExpandProperty ProcessName
-    
-    if ($parentProcessName -like "*SQL*" -or $parentProcessName -like "*Agent*") {
-        $runningContext = "SQLServerAgent"
-        Write-Output "Detected execution under SQL Server Agent context"
-    }
-}
-catch {
-    # Ignore detection errors
-}
-
-Write-Output "Execution context: $runningContext"
 $ErrorActionPreference = "Stop" 
 
-# Enhanced Excel process cleanup function
-function Stop-ExcelProcesses {
-    param(
-        [switch]$Force
-    )
-    
-    Write-Output "Cleaning up Excel processes..."
-    
-    # Get all Excel processes
-    $excelProcesses = Get-Process -Name "EXCEL" -ErrorAction SilentlyContinue
-    
-    if ($excelProcesses) {
-        Write-Output "Found $($excelProcesses.Count) Excel process(es)"
-        foreach ($process in $excelProcesses) {
-            try {
-                if ($Force) {
-                    $process.Kill()
-                    Write-Output "Force killed Excel process ID: $($process.Id)"
-                } else {
-                    $process.CloseMainWindow()
-                    if (!$process.WaitForExit(5000)) {
-                        $process.Kill()
-                        Write-Output "Killed Excel process ID: $($process.Id) after timeout"
-                    } else {
-                        Write-Output "Gracefully closed Excel process ID: $($process.Id)"
-                    }
-                }
-            }
-            catch {
-                Write-Warning "Could not close Excel process ID: $($process.Id) - $_"
-            }
-        }
-    } else {
-        Write-Output "No Excel processes found"
-    }
-    
-    # Wait for file handles to be released
-    Start-Sleep -Seconds 2
+# Check if Excel COM is available before proceeding
+try {
+    Add-Type -AssemblyName Microsoft.Office.Interop.Excel
+    $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
+    $xlCSV = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlCSV
+    Write-Output "Excel COM automation available - script can proceed"
 }
-
-# Enhanced file availability check with retry
-function Wait-ForFileAvailable {
-    param(
-        [string]$FilePath,
-        [int]$MaxRetries = 10,
-        [int]$DelaySeconds = 2
-    )
-    
-    $retryCount = 0
-    $fileAvailable = $false
-    
-    while ($retryCount -lt $MaxRetries -and -not $fileAvailable) {
-        try {
-            # Try to open file for write access to test if it's locked
-            $fileStream = [System.IO.File]::Open($FilePath, [System.IO.FileMode]::Open, [System.IO.FileAccess]::ReadWrite, [System.IO.FileShare]::None)
-            $fileStream.Close()
-            $fileStream.Dispose()
-            $fileAvailable = $true
-            Write-Output "File is available: $FilePath"
-        }
-        catch {
-            $retryCount++
-            Write-Warning "File locked (attempt $retryCount/$MaxRetries): $FilePath"
-            
-            if ($retryCount -eq 5) {
-                # At halfway point, try aggressive Excel cleanup
-                Write-Output "Performing aggressive Excel cleanup..."
-                Stop-ExcelProcesses -Force
-            }
-            
-            if ($retryCount -lt $MaxRetries) {
-                Start-Sleep -Seconds $DelaySeconds
-            }
-        }
-    }
-    
-    if (-not $fileAvailable) {
-        throw "File remains locked after $MaxRetries attempts: $FilePath"
-    }
-    
-    return $true
+catch {
+    Write-Error "Excel COM automation not available on this machine"
+    Write-Output "This script requires Microsoft Office Excel to be installed"
+    Write-Output "Typical deployment location: Production server with Office installed"
+    Write-Output "Error details: $_"
+    exit 1
 }
-
-# Enhanced file removal with comprehensive lock handling
-function Remove-FileWithRetry {
-    param(
-        [string]$FilePath,
-        [int]$MaxRetries = 5
-    )
-    
-    if (-not (Test-Path $FilePath)) {
-        Write-Output "File does not exist: $FilePath"
-        return
-    }
-    
-    $retryCount = 0
-    $success = $false
-    
-    while ($retryCount -lt $MaxRetries -and -not $success) {
-        try {
-            # Try simple removal first
-            Remove-Item -Path $FilePath -Force -ErrorAction Stop
-            Write-Output "Successfully removed: $FilePath"
-            $success = $true
-        }
-        catch {
-            $retryCount++
-            Write-Warning "Failed to remove file (attempt $retryCount/$MaxRetries): $FilePath - $_"
-            
-            if ($retryCount -eq 2) {
-                # Try to find what process has the file open
-                Write-Output "Attempting to identify locking process..."
-                try {
-                    $fileName = Split-Path $FilePath -Leaf
-                    $lockingProcesses = Get-Process | Where-Object { 
-                        $_.ProcessName -like "*Excel*" -or 
-                        $_.ProcessName -like "*Office*" -or
-                        $_.MainWindowTitle -like "*$fileName*" 
-                    }
-                    
-                    if ($lockingProcesses) {
-                        Write-Output "Found potential locking processes:"
-                        $lockingProcesses | ForEach-Object {
-                            Write-Output "  Process: $($_.ProcessName) (ID: $($_.Id))"
-                            try {
-                                $_.Kill()
-                                Write-Output "  Killed process $($_.ProcessName)"
-                            }
-                            catch {
-                                Write-Warning "  Could not kill process $($_.ProcessName): $_"
-                            }
-                        }
-                        Start-Sleep -Seconds 3
-                    }
-                }
-                catch {
-                    Write-Warning "Could not identify locking processes: $_"
-                }
-            }
-            
-            if ($retryCount -eq 3) {
-                # Try aggressive Excel cleanup
-                Stop-ExcelProcesses -Force
-                
-                # Try to unlock using handle.exe if available
-                Write-Output "Attempting advanced file unlock..."
-                try {
-                    # First, try using PowerShell to force unlock
-                    $fileInfo = Get-Item $FilePath -ErrorAction SilentlyContinue
-                    if ($fileInfo) {
-                        # Try to change file attributes to remove read-only/hidden
-                        $fileInfo.Attributes = 'Normal'
-                        Start-Sleep -Seconds 1
-                    }
-                }
-                catch {
-                    Write-Warning "Could not modify file attributes: $_"
-                }
-            }
-            
-            if ($retryCount -eq 4) {
-                # Last resort: Try to move the file instead of deleting
-                Write-Output "Attempting to move locked file instead of deletion..."
-                try {
-                    $timestamp = Get-Date -Format "yyyyMMdd_HHmmss"
-                    $directory = Split-Path $FilePath
-                    $fileName = Split-Path $FilePath -Leaf
-                    $baseName = [System.IO.Path]::GetFileNameWithoutExtension($fileName)
-                    $extension = [System.IO.Path]::GetExtension($fileName)
-                    $backupPath = Join-Path $directory "$baseName`_LOCKED_$timestamp$extension"
-                    
-                    Move-Item -Path $FilePath -Destination $backupPath -Force -ErrorAction Stop
-                    Write-Output "Successfully moved locked file to: $backupPath"
-                    $success = $true
-                }
-                catch {
-                    Write-Warning "Could not move locked file: $_"
-                }
-            }
-            
-            if ($retryCount -lt $MaxRetries -and -not $success) {
-                Start-Sleep -Seconds (2 * $retryCount) # Progressive delay
-            }
-        }
-    }
-    
-    if (-not $success) {
-        # Instead of throwing, try to continue with a warning
-        Write-Warning "Could not remove or move file after $MaxRetries attempts: $FilePath"
-        Write-Warning "Continuing with script execution - file will need manual cleanup"
-        return $false
-    }
-    
-    return $true
-}
-
-# Clean up any existing Excel processes before starting
-Stop-ExcelProcesses
 
 Add-Type -AssemblyName Microsoft.Office.Interop.Excel
 $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
@@ -251,8 +49,40 @@ $nl = [Environment]::NewLine
 $range1="A1:A1"
 $range2="A1:A1"
 
+# ######################################
+#  Test file setup
+# 
+# ######################################
+# # #$src_dir = "C:\mmm\20190612\"
+# # $src_dir = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\"
+# # $src_file = "xlDetailExport CK # 0002960218-TEST.xls"
+
+# # #$dest_dir = "C:\mmm\20190612\Input\"
+# # $dest_dir = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Input\"
+# # $dest_file = "BOE.xls"
+
+# # Write-Output $src_dir$src_file " " $dest_dir$dest_file
+
+# # Copy-Item $src_dir$src_file -Destination $dest_dir$dest_file -force 
+
+# # # 
+
+
+# ###################################
+# File Paths -> begins < -
+# 1. delete \process\1.x
+# 2. move \input\BOE.xlsx to \process\1.x
+# 3. copy the \process\Init.x overwrite ___
+# ###################################
+
+# #####################################
+# input -- > process --> processComplete
+# 
+# #####################################
+
 # File path definitions with daily date stamp (YYYYMMDD format for SSIS compatibility)
 $dateStamp = Get-Date -Format "yyyyMMdd"
+$dailyStamp = $dateStamp + "V1"
 $SourcePath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process"
 
 $FileName = "1 $(get-date -f yyyy-MM-dd-hh-mm-ss).xls"
@@ -262,7 +92,7 @@ $FileName2 = "2_$dateStamp.xlsx"
 $FilePath2 = Join-Path -Path $SourcePath -ChildPath $FileName2;
 
 # Use daily date stamp format that matches SSIS: Boeing_Export_YYYYMMDD.xlsx
-$FileName3 = "Boeing_Export_$dateStamp.xlsx"
+$FileName3 = "Boeing_Export_$dailyStamp.xlsx"
 $Result = Join-Path -Path $SourcePath -ChildPath $FileName3;
 
 $FileName4 = "2_$dateStamp.csv"
@@ -948,160 +778,76 @@ try {
 
 }
 catch {
-    Write-Error "Excel automation error: $_"
-    throw
-}
-finally {
-    # Enhanced cleanup with proper COM object release
-    Write-Output "Performing Excel cleanup..."
-    
-    try {
-        if ($wb2 -ne $null) {
-            $wb2.Close($false)
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($wb2) | Out-Null
-        }
-        if ($ws2 -ne $null) {
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($ws2) | Out-Null
-        }
-        if ($wb22 -ne $null) {
-            $wb22.Close($false)
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($wb22) | Out-Null
-        }
-        if ($Worksheet -ne $null) {
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($Worksheet) | Out-Null
-        }
-        if ($Workbook -ne $null) {
-            $Workbook.Close($false)
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($Workbook) | Out-Null
-        }
-        if ($Excel -ne $null) {
-            $Excel.DisplayAlerts = $false
-            $Excel.Quit()
-            [System.Runtime.Interopservices.Marshal]::ReleaseComObject($Excel) | Out-Null
-        }
-    }
-    catch {
-        Write-Warning "Error during Excel cleanup: $_"
-    }
-    
-    # Force garbage collection
-    [System.GC]::Collect()
-    [System.GC]::WaitForPendingFinalizers()
-    [System.GC]::Collect()
-    
-    # Final Excel process cleanup
-    Start-Sleep -Seconds 2
-    Stop-ExcelProcesses -Force
+  $_
+  throw
+  Write-Output "Cleaning up and Closing Files"
+  $Workbook.close($false) 
+  $Workbook,$Worksheet, $Excel | ForEach-Object {
+    [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
+  
+  }
+  
+} finally {
+  Write-Output ".."
 }
 
-# File operations with enhanced error handling
-Write-Output "Performing file operations..."
+Write-Output "Debug Prerequisite 1 liner 598 " "Remove "   $InputFilePath
 
+# carry the pristine file to the processComplete directory
 try {
-    # Copy header file to ProcessComplete
-    $complete = Join-Path -Path $ProcessCompletePath -ChildPath $FileName11
-    Write-Output "Copying header file to: $complete"
-    Copy-Item -Path $FilePath5 -Destination $complete -Force
-    
-    if (-not (Test-Path -Path $complete)) {
-        throw "Header file not found after copy: $complete"
-    }
-
-    # Copy main file to ProcessComplete
-    Write-Output "Copying main file to ProcessComplete: $ProcessCompleteFilePath"
-    Copy-Item -Path $ProcessFilePath -Destination $ProcessCompleteFilePath -Force
-    
-    if (-not (Test-Path -Path $ProcessCompleteFilePath)) {
-        throw "Main file not found after copy: $ProcessCompleteFilePath"
-    }
-
-    # Clean up process files
-    Write-Output "Cleaning up process files..."
-    Remove-FileWithRetry -FilePath $ProcessFilePath
-    Remove-FileWithRetry -FilePath $InputFilePath
-
-    # Final file copies with daily date stamp naming (SSIS-compatible)
-    Write-Output "Creating final output files with daily date stamp: $dateStamp"
-    
-    # Verify the Boeing_Export file was created properly
-    if (Test-Path $Result) {
-        Write-Output "Created SSIS-compatible Boeing Export: $Result"
-        $resultSize = (Get-Item $Result).Length
-        Write-Output "File size: $([math]::Round($resultSize/1KB,2)) KB"
-    } else {
-        Write-Warning "Boeing Export file was not created: $Result"
-        Write-Warning "This may indicate an Excel save operation failure"
-    }
-    
-    # Copy header file with daily stamp
-    try {
-        Copy-Item $FilePath5 -Destination $Header -Force
-        Write-Output "Updated header file: $Header"
-    }
-    catch {
-        Write-Warning "Could not update header file: $_"
-    }
-    
-    # Copy result to ProcessComplete with daily stamp
-    try {
-        # Wait for file to be available after Excel cleanup
-        Wait-ForFileAvailable -FilePath $Result -TimeoutSeconds 10
-        Copy-Item $Result -Destination $ProcessCompleteResultFilePath -Force
-        Write-Output "Archived result: $ProcessCompleteResultFilePath"
-    }
-    catch {
-        Write-Warning "Could not archive result file: $_"
-        # Try to check if file exists at least
-        if (Test-Path $Result) {
-            Write-Output "Result file exists but could not copy: $Result"
-        } else {
-            Write-Warning "Result file does not exist: $Result"
-        }
-    }
-
-    # Create SSIS-friendly indicator files for daily processing
-    Write-Output "Creating SSIS daily processing indicators..."
-    try {
-        # Create a simple text file with today's date for SSIS validation
-        $dailyIndicatorPath = Join-Path $SourcePath "BOE_Processing_Date.txt"
-        $dateStamp | Out-File $dailyIndicatorPath -Encoding UTF8 -Force
-        Write-Output "Created SSIS date indicator: $dailyIndicatorPath"
-        
-        # Create completion flag for SSIS to check processing status
-        $completionFlagPath = Join-Path $SourcePath "BOE_Processing_Complete_$dateStamp.txt"
-        "BOE Processing completed successfully on $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')" | Out-File $completionFlagPath -Encoding UTF8 -Force
-        Write-Output "Created SSIS completion flag: $completionFlagPath"
-        
-        # Create Excel metadata file for SSIS troubleshooting
-        $excelMetadataPath = Join-Path $SourcePath "BOE_Excel_Info_$dateStamp.txt"
-        $excelInfo = @"
-Excel File: $FileName3
-Worksheet Name: Sheet1
-Date Created: $(Get-Date -Format 'yyyy-MM-dd HH:mm:ss')
-SSIS Connection String: Provider=Microsoft.ACE.OLEDB.12.0;Data Source=$Result;Extended Properties="Excel 12.0 Xml;HDR=YES;IMEX=1"
-"@
-        $excelInfo | Out-File $excelMetadataPath -Encoding UTF8 -Force
-        Write-Output "Created SSIS Excel metadata: $excelMetadataPath"
-        
-    }
-    catch {
-        Write-Warning "Could not create SSIS indicators: $_"
-    }
-
-    Write-Output "BOE Receivable processing completed successfully - $(Get-Date)"
-    Write-Output "Output files:"
-    Write-Output "  - Boeing Export: $ProcessCompleteResultFilePath"
-    Write-Output "  - Header CSV: $complete"
-    Write-Output "  - Process Archive: $ProcessCompleteFilePath"
-
-}
-catch {
-    Write-Error "File operations error: $_"
+  Remove-Item -Path $InputFilePath -force
+  
+  }
+  catch {
+    $_
     throw
-}
-finally {
-    # Final cleanup of any remaining Excel processes
-    Stop-ExcelProcesses -Force
+    Write-Output "Cleaning up and Closing Files"
+    $Workbook.close($false) 
+    $Workbook,$Worksheet, $Excel | ForEach-Object {
+      [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
+    
+    }
+    
+  } finally {
+    Write-Output ".."
+  }
+
+# prepare to close and clean up
+$Excel.DisplayAlerts = $false
+$Excel.EnableEvents = $false
+
+$Excel.DisplayAlerts = $false
+$Excel.EnableEvents = $false
+
+$Workbook.close($false) 
+
+#Release the com objects
+$Workbook,$Worksheet, $Excel | ForEach-Object {
+  [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
+
 }
 
-Write-Output "Script execution completed - $(Get-Date)"
+
+$Excel.quit()
+
+spps -n excel
+Copy-Item $FilePath2 -Destination $Result -force 
+Copy-Item $FilePath5 -Destination $Header -force 
+Copy-Item $Result -Destination $ProcessCompleteResultFilePath -force
+
+# Final completion message
+$completionTime = Get-Date -Format "MM/dd/yyyy HH:mm:ss"
+Write-Output ""
+Write-Output "========================================"
+Write-Output "BOE Receivable processing completed successfully on $completionTime"
+Write-Output "========================================"
+Write-Output ""
+Write-Output "Output files generated:"
+Write-Output "  Boeing Export: $ProcessCompleteResultFilePath"
+Write-Output "  Header CSV: $ProcessCompletePath\BOEReceivableHeader.csv"
+Write-Output "  Process Archive: $ProcessCompleteFilePath"
+Write-Output ""
+Write-Output "No Excel processes found - cleanup complete"
+Write-Output "Script execution completed."
+Write-Output ""
+
