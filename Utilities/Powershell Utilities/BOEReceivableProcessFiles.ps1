@@ -1,13 +1,9 @@
+## file: boereceivableprocessfiles_BACKUP.ps1 
+
 ## file: BOEReceivableProcessFiles.ps1  
 ## created: 06/12/2019
 ## by: William Thompson
-## C:\development\CB 12 Powershell\Powershell\Excel\BOEReceivableProcessFiles.ps1
-## \\sql-bi-1\Operations\BOEReceivables\BOEReceivableProcessFiles.ps1
-## DEPLOYMENT *** 
-##  
-##  
-## C:\development\CB 12 Powershell\Powershell\Excel\BOEReceivableProcessFiles.ps1
-## \\sql-bi-1\Operations\BOEReceivables\BOEReceivableProcessFiles.ps1
+
 
 ##**********************************************************************************************
 ##  Description: Copies file from input to process folder	for BOE Receivables 
@@ -17,8 +13,7 @@
 ##  ----------  ------------------  ------------------------------------------------------------
 ##  06/12/2019	William Thompson	Created.
 ##  
-##  etl
-##  \\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process\Boeing_Export.xlsx
+
 ##
 ##**********************************************************************************************/
 

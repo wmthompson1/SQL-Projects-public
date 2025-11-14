@@ -12,13 +12,13 @@
 ##  Date        Modified By         Change Description
 ##  ----------  ------------------  ------------------------------------------------------------
 ##  06/12/2019	William Thompson	Created.
-##  11/14/2025    William Thompson	Daily dateStamped file process Boeing_Export_$dateStamp.xlsx
+##  
 
 ##
 ##**********************************************************************************************/
 
 Write-Output ""
-Write-Output "Starting BOE Receivable Process - $(Get-Date)"
+Write-Output "Testing..."
 $ErrorActionPreference = "Stop" 
 
 # Check if Excel COM is available before proceeding
@@ -35,10 +35,6 @@ catch {
     Write-Output "Error details: $_"
     exit 1
 }
-
-Add-Type -AssemblyName Microsoft.Office.Interop.Excel
-$xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
-$xlCSV = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlCSV
 
 $nl = [Environment]::NewLine
 [string]$filepath = $null;
@@ -630,9 +626,66 @@ $wb2.ActiveSheet.Range("A1").PasteSpecial(8) | Out-Null
 $wb2.ActiveSheet.Range("A1").PasteSpecial(-4122)  | Out-Null
 $wb2.ActiveSheet.Range("A1").PasteSpecial(-4104) | Out-Null
 
-
-
-$wb2.Save()
+# Step 1: Daily Operations Verification - [Supplier Invoice #] String Type Conversion
+Write-Output "Step 1: Locating and converting [Supplier Invoice #] column to string type..."
+try {
+    $supplierInvoiceCol = $null
+    $headerRow = 1
+    
+    # Locate the column
+    for ($col = 1; $col -le 20; $col++) {
+        $hdr = $wb2.ActiveSheet.Cells.Item($headerRow, $col).Value2
+        if ($null -ne $hdr) {
+            $txt = $hdr.ToString()
+            if ($txt -match "Supplier Invoice") {
+                $supplierInvoiceCol = $col
+                Write-Output "SUCCESS: Found [Supplier Invoice #] at column $col - '$txt'"
+                break
+            }
+        }
+    }
+    
+    if ($null -ne $supplierInvoiceCol) {
+        # Convert column to string type for consistent handling
+        $lastRow = $wb2.ActiveSheet.UsedRange.Rows.Count
+        Write-Output "Converting [Supplier Invoice #] data to string format (rows 2-$lastRow)..."
+        
+        $stringConversions = 0
+        for ($row = 2; $row -le $lastRow; $row++) {
+            $cellValue = $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Value2
+            
+            if ($null -ne $cellValue -and $cellValue.ToString().Trim() -ne "") {
+                $originalValue = $cellValue.ToString().Trim()
+                
+                # Ensure value is treated as string (prepend with apostrophe for Excel)
+                $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Formula = "=""$originalValue"""
+                $stringConversions++
+            }
+        }
+        
+        # Format entire column as text to ensure string type
+        $columnRange = $wb2.ActiveSheet.Range($wb2.ActiveSheet.Cells.Item(1, $supplierInvoiceCol), $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol))
+        $columnRange.NumberFormat = "@"  # Text format
+        
+        Write-Output "Step 1 COMPLETED: [Supplier Invoice #] column converted to string type"
+        Write-Output "  - Column position: $supplierInvoiceCol"
+        Write-Output "  - Values processed: $stringConversions"
+        Write-Output "  - Format applied: Text (@)"
+        Write-Output "  - Supports mixed formats: numeric (1460110) and alphanumeric (250531BOE602)"
+    }
+    else {
+        Write-Output "Step 1 FAILED: [Supplier Invoice #] not found in first 20 columns"
+        Write-Output "Available headers for debugging:"
+        for ($c = 1; $c -le 10; $c++) {
+            $val = $wb2.ActiveSheet.Cells.Item($headerRow, $c).Value2
+            if ($null -ne $val) { Write-Output "  Col $c`: '$($val.ToString())'" }
+        }
+    }
+}
+catch {
+    Write-Warning "Step 1 ERROR: $_"
+    Write-Output "Continuing with processing - [Supplier Invoice #] may need manual verification"
+}$wb2.Save()
 $wb2.SaveAs($FilePath4 , $xlcsv) 
 $wb2.close($false) 
 
@@ -750,9 +803,72 @@ $Workbook,$Worksheet, $Excel | ForEach-Object {
 
 $Excel.quit()
 
-spps -n excel
-Copy-Item $FilePath2 -Destination $Result -force 
-Copy-Item $FilePath5 -Destination $Header -force 
-Copy-Item $Result -Destination $ProcessCompleteResultFilePath -force
+Stop-Process -Name excel -Force -ErrorAction SilentlyContinue
+
+# Step 1: Daily Operations Verification - Final File Operations
+Write-Output ""
+Write-Output "=== STEP 1: DAILY OPERATIONS VERIFICATION - FILE OPERATIONS ==="
+Write-Output "Daily Stamp: $dailyStamp"
+Write-Output "Target Boeing Export: $Result"
+
+# Clean up any existing daily file before copying
+if (Test-Path $Result) {
+    Write-Output "Removing existing daily file: $Result"
+    try {
+        Remove-Item $Result -Force -ErrorAction Stop
+        Write-Output "SUCCESS: Existing file removed"
+    }
+    catch {
+        Write-Warning "Could not remove existing file: $_"
+        Write-Output "Attempting to continue with copy anyway..."
+    }
+}
+
+# Copy main result file with error handling
+Write-Output "Copying processed data: $FilePath2 -> $Result"
+try {
+    Copy-Item $FilePath2 -Destination $Result -Force -ErrorAction Stop
+    if (Test-Path $Result) {
+        $resultSize = [math]::Round((Get-Item $Result).Length/1KB, 2)
+        Write-Output "SUCCESS: Boeing Export created - $resultSize KB"
+    } else {
+        throw "File was not created despite no copy error"
+    }
+}
+catch {
+    Write-Error "FAILED: Could not create Boeing Export file: $_"
+    Write-Output "Source file check:"
+    if (Test-Path $FilePath2) {
+        $sourceSize = [math]::Round((Get-Item $FilePath2).Length/1KB, 2)
+        Write-Output "  Source exists: $FilePath2 ($sourceSize KB)"
+    } else {
+        Write-Output "  Source missing: $FilePath2"
+    }
+    throw "Boeing Export file creation failed"
+}
+
+# Copy header file with error handling  
+Write-Output "Copying header file: $FilePath5 -> $Header"
+try {
+    Copy-Item $FilePath5 -Destination $Header -Force -ErrorAction Stop
+    Write-Output "SUCCESS: Header file copied"
+}
+catch {
+    Write-Warning "FAILED: Could not copy header file: $_"
+}
+
+# Copy to ProcessComplete with error handling
+Write-Output "Archiving to ProcessComplete: $Result -> $ProcessCompleteResultFilePath"
+try {
+    Copy-Item $Result -Destination $ProcessCompleteResultFilePath -Force -ErrorAction Stop
+    Write-Output "SUCCESS: Result archived to ProcessComplete"
+}
+catch {
+    Write-Warning "FAILED: Could not archive to ProcessComplete: $_"
+}
+
+Write-Output "=== STEP 1 VERIFICATION COMPLETE ==="
+Write-Output "Primary Output: $Result"
+Write-Output "Archive Location: $ProcessCompleteResultFilePath"
 
 
