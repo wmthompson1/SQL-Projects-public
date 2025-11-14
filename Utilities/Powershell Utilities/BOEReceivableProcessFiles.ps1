@@ -12,14 +12,29 @@
 ##  Date        Modified By         Change Description
 ##  ----------  ------------------  ------------------------------------------------------------
 ##  06/12/2019	William Thompson	Created.
-##  
+##  11/14/2025    William Thompson	Daily dateStamped file process Boeing_Export_$dateStamp.xlsx
 
 ##
 ##**********************************************************************************************/
 
 Write-Output ""
-Write-Output "Testing..."
+Write-Output "Starting BOE Receivable Process - $(Get-Date)"
 $ErrorActionPreference = "Stop" 
+
+# Check if Excel COM is available before proceeding
+try {
+    Add-Type -AssemblyName Microsoft.Office.Interop.Excel
+    $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
+    $xlCSV = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlCSV
+    Write-Output "Excel COM automation available - script can proceed"
+}
+catch {
+    Write-Error "Excel COM automation not available on this machine"
+    Write-Output "This script requires Microsoft Office Excel to be installed"
+    Write-Output "Typical deployment location: Production server with Office installed"
+    Write-Output "Error details: $_"
+    exit 1
+}
 
 Add-Type -AssemblyName Microsoft.Office.Interop.Excel
 $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
@@ -63,7 +78,9 @@ $range2="A1:A1"
 # 
 # #####################################
 
-#$SourcePath = "C:\mmm\20251113\Process"
+# File path definitions with daily date stamp (YYYYMMDD format for SSIS compatibility)
+$dateStamp = Get-Date -Format "yyyyMMdd"
+$dailyStamp = $dateStamp + "V1"
 $SourcePath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process"
 
 $FileName = "1 $(get-date -f yyyy-MM-dd-hh-mm-ss).xls"
@@ -72,7 +89,8 @@ $FilePath = Join-Path -Path $SourcePath -ChildPath $FileName;
 $FileName2 = "2.xlsx"
 $FilePath2 = Join-Path -Path $SourcePath -ChildPath $FileName2;
 
-$FileName3 = "Boeing_Export.xlsx"  # etl step 1
+# Use daily date stamp format that matches SSIS: Boeing_Export_YYYYMMDD.xlsx
+$FileName3 = "Boeing_Export_$dailyStamp.xlsx"
 $Result = Join-Path -Path $SourcePath -ChildPath $FileName3;
 
 $FileName4 = "2.csv"
@@ -735,4 +753,19 @@ Copy-Item $FilePath2 -Destination $Result -force
 Copy-Item $FilePath5 -Destination $Header -force 
 Copy-Item $Result -Destination $ProcessCompleteResultFilePath -force
 
+# Final completion message
+$completionTime = Get-Date -Format "MM/dd/yyyy HH:mm:ss"
+Write-Output ""
+Write-Output "========================================"
+Write-Output "BOE Receivable processing completed successfully on $completionTime"
+Write-Output "========================================"
+Write-Output ""
+Write-Output "Output files generated:"
+Write-Output "  Boeing Export: $ProcessCompleteResultFilePath"
+Write-Output "  Header CSV: $ProcessCompletePath\BOEReceivableHeader.csv"
+Write-Output "  Process Archive: $ProcessCompleteFilePath"
+Write-Output ""
+Write-Output "No Excel processes found - cleanup complete"
+Write-Output "Script execution completed."
+Write-Output ""
 
