@@ -1,0 +1,21 @@
+# System - drop users
+
+```sql
+USE LIVE
+GO
+DROP SCHEMA JIMF
+DROP USER JIMF
+DROP USER JIMF#
+DELETE FROM APPLICATION_USER WHERE NAME = 'JIMF'
+GO
+
+USE master
+GO
+IF  EXISTS(SELECT * FROM sys.server_principals WHERE name =N'JIMF#')
+DROP LOGIN JIMF#
+GO
+IF  EXISTS(SELECT * FROM sys.server_principals WHERE name =N'JIMF')
+DROP LOGIN JIMF
+GO
+
+```

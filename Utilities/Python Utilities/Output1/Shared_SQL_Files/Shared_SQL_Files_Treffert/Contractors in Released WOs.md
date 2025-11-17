@@ -1,0 +1,113 @@
+# Contractors in Released WOs
+
+```sql
+USE LIVE
+GO
+
+SELECT
+	o.ROWID, 
+	o.WORKORDER_TYPE, 
+	o.WORKORDER_BASE_ID, 
+	o.WORKORDER_LOT_ID, 
+	o.WORKORDER_SPLIT_ID, 
+	o.WORKORDER_SUB_ID, 
+	o.SEQUENCE_NO, 
+	o.RESOURCE_ID, 
+	o.TRANSIT_DAYS, 
+	o.SERVICE_ID, 
+	o.CALC_START_QTY, 
+	o.CALC_END_QTY, 
+	o.COMPLETED_QTY, 
+	o.DEVIATED_QTY, 
+	o.STATUS, 
+	o.SETUP_COMPLETED, 
+	o.OVERRIDE_QTYS, 
+	o.SCHED_START_DATE, 
+	o.SCHED_FINISH_DATE, 
+	o.VENDOR_ID, 
+	o.ALLOCATED_QTY, 
+	o.FULFILLED_QTY, 
+	o.STATUS_EFF_DATE, 
+	wo.ROWID, 
+	wo.TYPE, 
+	wo.PART_ID, 
+	wo.GLOBAL_RANK, 
+	wo.DESIRED_QTY, 
+	wo.RECEIVED_QTY, 
+	wo.CREATE_DATE, 
+	wo.DESIRED_RLS_DATE, 
+	wo.DESIRED_WANT_DATE, 
+	wo.CLOSE_DATE, 
+	wo.COSTED_DATE, 
+	wo.STATUS, 
+	wo.PRODUCT_CODE, 
+	wo.SCHED_START_DATE, 
+	wo.SCHED_FINISH_DATE, 
+	wo.COULD_FINISH_DATE, 
+	wo.EST_MATERIAL_COST, 
+	wo.EST_LABOR_COST, 
+	wo.EST_BURDEN_COST, 
+	wo.EST_SERVICE_COST, 
+	wo.ACT_MATERIAL_COST, 
+	wo.ACT_LABOR_COST, 
+	wo.ACT_BURDEN_COST, 
+	wo.ACT_SERVICE_COST, 
+	wo.REM_MATERIAL_COST, 
+	wo.REM_LABOR_COST, 
+	wo.REM_BURDEN_COST, 
+	wo.REM_SERVICE_COST, 
+	wo.MARKED_FOR_PURGE, 
+	wo.PRINTED_DATE, 
+	wo.DRAWING_FILE, 
+	wo.WAREHOUSE_ID, 
+	wo.WIP_VAS_REQUIRED, 
+	wo.ALLOCATED_QTY, 
+	wo.FULFILLED_QTY, 
+	wo.DEF_LBL_FORMAT_ID, 
+	wo.HARD_RELEASE_DATE, 
+	wo.USER_1, 
+	wo.USER_2, 
+	wo.USER_3, 
+	wo.USER_4, 
+	wo.USER_5, 
+	wo.USER_6, 
+	wo.USER_7, 
+	wo.USER_8, 
+	wo.USER_9, 
+	wo.USER_10, 
+	wo.UDF_LAYOUT_ID, 
+	wo.DBR_TYPE, 
+	wo.DBR_PRIORITY, 
+	wo.DBR_CODE, 
+	wo.WBS_CODE, 
+	wo.WBS_PROJECT, 
+	wo.WBS_CUST_ORDER_ID, 
+	wo.MILESTONE_SEQ_NO, 
+	wo.MILESTONE_SUB_ID, 
+	wo.ECN_REVISION, 
+	wo.EDI_BLANKET_FLAG, 
+	wo.DISPATCHED, 
+	wo.ORIG_STAGE_REVISION_ID, 
+	wo.STATUS_EFF_DATE, 
+	wo.SITE_ID, 
+	wo.PROD_ORDER_TYPE, 
+	wo.PLANNER_ID, 
+	wo.INACTIVE
+FROM
+	operation o
+INNER JOIN
+	work_order wo
+        on wo.[type] = o.[WORKORDER_TYPE]
+		and wo.base_id = o.workorder_base_id
+        and wo.[LOT_ID] = o.[WORKORDER_LOT_ID]
+		and wo.[SPLIT_ID] = o.WORKORDER_SPLIT_ID
+		and wo.[SUB_ID] = o.WORKORDER_SUB_ID
+WHERE
+	o.resource_ID like '%contractor%'
+	and o.status = 'R'
+;
+
+
+
+
+```

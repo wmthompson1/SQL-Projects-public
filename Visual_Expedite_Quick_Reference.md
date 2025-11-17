@@ -1,0 +1,1 @@
+ C:\Users\williamt\source\skillsinc\skills-inc-org\IT_TeamProject\Visual_Expedite_Quick_Reference.md

@@ -1,0 +1,19 @@
+# Purchase_Requisition___Tablix8
+
+```sql
+SELECT T.EC_ID
+    , T.SUB_TYPE
+    , T.[USER_ID]
+    , EE.FIRST_NAME + ' ' + EE.LAST_NAME AS APPROVER_NAME
+FROM TASK T
+INNER JOIN EMPLOYEE EE
+    ON EE.[USER_ID] = T.[USER_ID]
+WHERE T.[TYPE] = 'REQ'
+    AND T.EC_ID = @REQ_ID
+    AND T.SUB_TYPE != 'AT'
+GROUP BY T.EC_ID
+    , T.SUB_TYPE
+    , T.[USER_ID]
+    , EE.FIRST_NAME + ' ' + EE.LAST_NAME
+
+```

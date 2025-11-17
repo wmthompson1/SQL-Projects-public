@@ -1,0 +1,46 @@
+# ECN Updates (20210630)
+
+```sql
+USE LIVE
+GO
+
+DECLARE @ECID NVARCHAR(15) = 'EC-03744'
+
+SELECT *
+FROM [LIVE].[dbo].[EC]
+WHERE ID = @ECID
+
+/*
+UPDATE EC
+SET [STATUS] = 'X'
+WHERE ID IN ('EC-03744')
+*/
+
+SELECT *
+FROM [LIVE].[dbo].[EC_LINE]
+WHERE EC_ID = @ECID
+
+/*
+UPDATE EC_LINE
+SET [STATUS] = 'X'
+WHERE EC_ID = 'EC-03634'
+AND LINE_NO IN ('37', '43')
+
+DELETE FROM EC_LINE
+WHERE EC_ID = 'EC-03634'
+AND LINE_NO IN ('20', '30', '31', '32', '33', '34', '35', '38', '39', '40', '41', '42')
+*/
+
+SELECT *
+FROM [LIVE].[dbo].[task]
+WHERE EC_ID = @ECID
+
+/*
+UPDATE TASK
+SET [STATUS] = 'X'
+WHERE EC_ID = 'EC-03744'
+AND TASK_NO = '8034'
+AND SEQ_NO IN ('1')
+*/
+
+```
