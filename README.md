@@ -3,11 +3,9 @@ https://github.com/Skills-Inc-Org
 
 Add commands to verify synchronization with the remote repository.
 
-## Work Order Reports SQL Search
+## SQL and AI
 
-https://github.com/Skills-Inc-Org/IT_TeamProject/search?q=path:%22SQL_Reports%2FWork%20Order%20Reports%22&type=code
-
-URL: https://github.com/Skills-Inc-Org/IT_TeamProject/search?q=path:%22SQL_Reports%2FWork%20Order%20Reports%22&type=code
+https://github.com/Skills-Inc-Org/SQL-Projects
 
 ## Help with Writing SQL using Visual Studio Code 
 
