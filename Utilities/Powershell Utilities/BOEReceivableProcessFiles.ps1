@@ -670,14 +670,22 @@ try {
         
         $stringConversions = 0
         for ($row = 2; $row -le $lastRow; $row++) {
-            $cellValue = $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Value2
+            $cell = $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol)
             
-            if ($null -ne $cellValue -and $cellValue.ToString().Trim() -ne "") {
-                $originalValue = $cellValue.ToString().Trim()
-                
-                # Clean up any Excel formula artifacts
-                $cleanValue = $originalValue -replace '^="(.+)"$', '$1'
-                $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Value2 = $cleanValue
+            # Check if cell has a formula (like ="250531BOLTBOARDS")
+            if ($null -ne $cell.Formula -and $cell.Formula.ToString().StartsWith("=")) {
+                # Extract value from formula: ="value" -> value
+                $formula = $cell.Formula.ToString()
+                if ($formula -match '^="(.+)"$') {
+                    $cleanValue = $matches[1]
+                    $cell.Formula = $cleanValue  # Replace formula with plain text
+                    $stringConversions++
+                }
+            }
+            elseif ($null -ne $cell.Value2 -and $cell.Value2.ToString().Trim() -ne "") {
+                # Handle plain values (already evaluated or no formula)
+                $originalValue = $cell.Value2.ToString().Trim()
+                $cell.Value2 = $originalValue
                 $stringConversions++
             }
         }

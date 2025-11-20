@@ -175,8 +175,7 @@ try {
     $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.xls"
     $blankHeaderFile = Join-Path $testCacheFolder "BLANK_BOE_Header.csv"
     
-    # Intermediate and final destination files
-    $intermediateReceivableFile = Join-Path $processFolder "Boeing_Export_$timestampFull.xls"
+    # Destination files (only final daily files, not intermediate)
     $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.xls"
     $targetHeaderFile = Join-Path $processFolder "BOEReceivableHeader.csv"
     
@@ -186,8 +185,7 @@ try {
     Write-Log "  Header: $blankHeaderFile" -Level INFO
     Write-Log "" -Level INFO
     Write-Log "Destination Files (Process Folder):" -Level INFO
-    Write-Log "  Intermediate: $intermediateReceivableFile" -Level INFO
-    Write-Log "  Final Receivable: $targetReceivableFile" -Level INFO
+    Write-Log "  Receivable: $targetReceivableFile" -Level INFO
     Write-Log "  Header: $targetHeaderFile" -Level INFO
     
     # Validate directory access (silent)
@@ -210,30 +208,21 @@ try {
     
     # Copy files (silent)
     $copyResults = @{
-        Intermediate = $false
         Receivable = $false
         Header = $false
     }
     
-    # Step 1: Copy blank template to intermediate timestamped file
-    $copyResults.Intermediate = Copy-FileWithValidation `
+    # Copy blank template directly to final daily file
+    $copyResults.Receivable = Copy-FileWithValidation `
         -SourcePath $blankReceivableFile `
-        -DestinationPath $intermediateReceivableFile `
-        -FileDescription "Intermediate BOE Receivable (Boeing_Export_$timestampFull.xls)"
+        -DestinationPath $targetReceivableFile `
+        -FileDescription "BOE Receivable (Boeing_Export_$dailyStamp.xls)"
     
-    # Step 2: Copy intermediate to final daily file (only if step 1 succeeded)
-    if ($copyResults.Intermediate) {
-        $copyResults.Receivable = Copy-FileWithValidation `
-            -SourcePath $intermediateReceivableFile `
-            -DestinationPath $targetReceivableFile `
-            -FileDescription "Final BOE Receivable (Boeing_Export_$dailyStamp.xls)"
-    }
-    
-    # Step 3: Copy header file
+    # Copy header file
     $copyResults.Header = Copy-FileWithValidation `
         -SourcePath $blankHeaderFile `
         -DestinationPath $targetHeaderFile `
-        -FileDescription "Blank BOE Header (BOEReceivableHeader.csv)"
+        -FileDescription "BOE Header (BOEReceivableHeader.csv)"
     
     # Evaluate results (silent)
     if ($copyResults.Receivable -and $copyResults.Header) {
