@@ -1,2 +1,2 @@
-"check_trace_num","best_code","payment_check_date","payment","payment_settlement_date","payment_status","site_supplier_code","invoices_paid_str"
-"0003243654","BE10407658","2025-11-14 12:00 AM","409894.36","2025-11-17 12:00 AM","Issued/Active","251310","169 Invoices Paid"
+"check_trace_num","payment_status","invoices_paid_str","best_code","site_supplier_code","payment_check_date","payment_settlement_date","payment"
+"0003243654","Issued/Active","169 Invoices Paid","BE10407658","251310","2025-11-14 12:00 AM","2025-11-17 12:00 AM","409894.36"

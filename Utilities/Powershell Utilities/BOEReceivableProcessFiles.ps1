@@ -1,4 +1,4 @@
-## file: boereceivableprocessfiles_BACKUP.ps1 
+## 
 
 ## file: BOEReceivableProcessFiles.ps1  
 ## created: 06/12/2019
@@ -21,11 +21,54 @@ Write-Output ""
 Write-Output "Testing..."
 $ErrorActionPreference = "Stop" 
 
+
+$nl = [Environment]::NewLine
+[string]$filepath = $null;
+[bool]$bln = $false;
+
+$range1="A1:A1"
+$range2="A1:A1"
+
+# #####################################
+# input -- > process --> processComplete
+# 
+# #####################################
+if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
+  $project = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\" 
+} else {
+  $project = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\"
+}
+
+$InputFilePath = Join-Path -Path $project -ChildPath "Input\BOE.xls"
+# Simulate app file input for local testing
+if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
+    ## $testInputFile = $project + "Input\Test Input Excel File Nov 2025 - Copy.xls"
+    $testInputFile = $project + "Input\xlDetailExport 003243654 Test William.xls"
+    ## 
+    $testOutputFile = $project + "Input\BOE.xls"
+    
+    if (Test-Path $testInputFile) {
+        Write-Output "==================================================================================="
+        Write-Output "DEVELOPMENT MODE: Processing test file"
+        Write-Output "Source: $testInputFile"
+        Write-Output "==================================================================================="
+        Copy-Item -Path $testInputFile -Destination $testOutputFile -Force
+        Write-Output "SUCCESS: Test file copied to Input\BOE.xls"
+    } else {
+        Write-Warning "Test input file not found: $testInputFile"
+        Write-Output "Script will proceed if BOE.xls already exists in Input folder"
+    }
+}
+
 # Check if Excel COM is available before proceeding
 try {
-    Add-Type -AssemblyName Microsoft.Office.Interop.Excel
-    $xlFixedFormat = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlWorkbookDefault
-    $xlCSV = [Microsoft.Office.Interop.Excel.XlFileFormat]::xlCSV
+    $testExcel = New-Object -ComObject Excel.Application
+    $testExcel.Quit()
+    [System.Runtime.Interopservices.Marshal]::ReleaseComObject($testExcel) | Out-Null
+    
+    # Define Excel constants directly (works without PIA)
+    $xlFixedFormat = 51  # xlWorkbookDefault
+    $xlCSV = 6           # xlCSV
     Write-Output "Excel COM automation available - script can proceed"
 }
 catch {
@@ -36,58 +79,32 @@ catch {
     exit 1
 }
 
-$nl = [Environment]::NewLine
-[string]$filepath = $null;
-[bool]$bln = $false;
-
-$range1="A1:A1"
-$range2="A1:A1"
-
-# ######################################
-#  Test file setup
-# 
-# ######################################
-# # #$src_dir = "C:\mmm\20190612\"
-# # $src_dir = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\"
-# # $src_file = "xlDetailExport CK # 0002960218-TEST.xls"
-
-# # #$dest_dir = "C:\mmm\20190612\Input\"
-# # $dest_dir = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Input\"
-# # $dest_file = "BOE.xls"
-
-# # Write-Output $src_dir$src_file " " $dest_dir$dest_file
-
-# # Copy-Item $src_dir$src_file -Destination $dest_dir$dest_file -force 
-
-# # # 
-
-
-# ###################################
-# File Paths -> begins < -
-# 1. delete \process\1.x
-# 2. move \input\BOE.xlsx to \process\1.x
-# 3. copy the \process\Init.x overwrite ___
-# ###################################
-
-# #####################################
-# input -- > process --> processComplete
-# 
-# #####################################
 
 # File path definitions with daily date stamp (YYYYMMDD format for SSIS compatibility)
 $dateStamp = Get-Date -Format "yyyyMMdd"
 $dailyStamp = $dateStamp + "V1"
-$SourcePath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process"
+$SourcePath = $project + "Process"
+
+$secondsStamp = Get-Date -Format "yyyyMMdd-HHmmss"
+$UniqueStamp = $secondsStamp + "V1"
+
 
 $FileName = "1 $(get-date -f yyyy-MM-dd-hh-mm-ss).xls"
 $FilePath = Join-Path -Path $SourcePath -ChildPath $FileName;
 
-$FileName2 = "2.xlsx"
+# $FileName2 = "2.xlsx"
+# $FilePath2 = Join-Path -Path $SourcePath -ChildPath $FileName2;SourcePath
+
+$FileName2 = "2_${secondsStamp}.xlsx"
 $FilePath2 = Join-Path -Path $SourcePath -ChildPath $FileName2;
 
 # Use daily date stamp format that matches SSIS: Boeing_Export_YYYYMMDD.xlsx
 $FileName3 = "Boeing_Export_$dailyStamp.xlsx"
 $Result = Join-Path -Path $SourcePath -ChildPath $FileName3;
+
+# Use unique time stamp format that matches then copy to Boeing_Export_YYYYMMDD.xlsx
+$FileName3_intermediate = "Boeing_Export_$UniqueStamp.xlsx"
+$Result_intermediate = Join-Path -Path $SourcePath -ChildPath $FileName3_intermediate;
 
 $FileName4 = "2.csv"
 $FilePath4 = Join-Path -Path $SourcePath -ChildPath $FileName4;
@@ -109,24 +126,15 @@ $Header = Join-Path -Path $SourcePath -ChildPath $FileName11;
 $FileName12 = "TEMPLATE_BOE_Header.csv"
 $TemplateHeader = Join-Path -Path $SourcePath -ChildPath $FileName12;
 
-$InputName = "BOE.xls"
-$InputPath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Input"
-#$InputPath = "C:\mmm\20190612\Input"
-$InputFilePath = Join-Path -Path $InputPath -ChildPath $InputName;
 
-$ProcessName = "BOE.xls"
-$ProcessPath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process"
-#$ProcessPath = "C:\mmm\20190612\Process"
-$ProcessFilePath = Join-Path -Path $ProcessPath -ChildPath $ProcessName;
 
-$ProcessCompleteName = "BOE.xls"
-$ProcessCompletePath = "\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\ProcessComplete"
-#$ProcessCompletePath = "C:\mmm\20190612\ProcessComplete"
-$ProcessCompleteFilePath = Join-Path -Path $ProcessCompletePath -ChildPath $ProcessCompleteName;
-
-$ProcessCompleteResultName = $FileName3
+$ProcessCompleteResultName = $FileName3   ## 3.csv  
+$ProcessCompletePath = $project + "ProcessComplete"
 $ProcessCompleteResultPath = $ProcessCompletePath
 $ProcessCompleteResultFilePath = Join-Path -Path $ProcessCompleteResultPath -ChildPath $ProcessCompleteResultName;
+
+$ProcessFilePath = Join-Path -Path $project -ChildPath "Process\BOE.xls"
+$ProcessCompleteFilePath = Join-Path -Path $project -ChildPath "ProcessComplete\BOEReceivable_$dailyStamp.xlsx" 
 
 # ######################
 # DEV RISK HERE IS HIGH - FILE CAN REMAIN OPEN IN OTHER PROCESS
@@ -199,7 +207,7 @@ If ((Test-Path -Path $InputFilePath) -eq $false) {
  Write-Output "Debug Prerequisite copy from " $InputFilePath
  Write-Output "to " $ProcessFilePath
  try {
-  Copy-Item -Path $InputFilePath -Destination $ProcessFilePath -Force   
+  Copy-Item -Path $InputFilePath -Destination $ProcessFilePath -Force   ## Process\BOE.xls
  }
  catch {
    $_
@@ -212,9 +220,9 @@ If ((Test-Path -Path $ProcessFilePath) -eq $false) {
   } 
 
 # COPY \process\BOE.x
-# TO: \process\1.x
 
-Write-Output "Debug Prerequisite copy from "  $ProcessFilePath
+
+Write-Output "Debug Prerequisite copy from "  $ProcessFilePath   # COPY \process\BOE.x  TO: \process\1.x
 Write-Output "to " $FilePath
 try {
   Write-Output "Debug Copy: "  $ProcessFilePath
@@ -233,10 +241,6 @@ If ((Test-Path -Path $FilePath) -eq $false) {
 
   } 
 
-
-
-# This command tells whether all elements in the path exist
-#$bln = (Test-Path -Path $FilePath) 
 
 
 
@@ -584,6 +588,20 @@ $Workbook.Save()
 # ### ////////////////////////////
 
 
+# ################################################################################
+# TABULAR DATA SECTION EXTRACTION - SINGLE PURPOSE
+# ################################################################################
+# Purpose: Extract tabular invoice data from Excel worksheet
+# Input: $Worksheet (source Excel data with "Boeing Invoice #" header)
+# Output: $FilePath2 (2_YYYYMMDD-HHmmss.xlsx) - timestamped working file
+# Process:
+#   1. Find "Boeing Invoice #" header row
+#   2. Copy range from header to end of data
+#   3. Paste into new workbook ($FilePath2)
+#   4. Apply string type conversion to Supplier Invoice # column
+#   5. Save as CSV ($FilePath4) and Excel ($FilePath2)
+# ################################################################################
+
 # Ver 2 FR 5.022
 # #########################################
 # 5.022 Search in header to define 
@@ -657,8 +675,9 @@ try {
             if ($null -ne $cellValue -and $cellValue.ToString().Trim() -ne "") {
                 $originalValue = $cellValue.ToString().Trim()
                 
-                # Ensure value is treated as string (prepend with apostrophe for Excel)
-                $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Formula = "=""$originalValue"""
+                # Clean up any Excel formula artifacts
+                $cleanValue = $originalValue -replace '^="(.+)"$', '$1'
+                $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol).Value2 = $cleanValue
                 $stringConversions++
             }
         }
@@ -824,19 +843,19 @@ if (Test-Path $Result) {
     }
 }
 
-# Copy main result file with error handling
-Write-Output "Copying processed data: $FilePath2 -> $Result"
+# Step 1: Copy to intermediate timestamped Boeing Export file
+Write-Output "Step 1: Copying to intermediate file: $FilePath2 -> $Result_intermediate"
 try {
-    Copy-Item $FilePath2 -Destination $Result -Force -ErrorAction Stop
-    if (Test-Path $Result) {
-        $resultSize = [math]::Round((Get-Item $Result).Length/1KB, 2)
-        Write-Output "SUCCESS: Boeing Export created - $resultSize KB"
+    Copy-Item $FilePath2 -Destination $Result_intermediate -Force -ErrorAction Stop
+    if (Test-Path $Result_intermediate) {
+        $intermediateSize = [math]::Round((Get-Item $Result_intermediate).Length/1KB, 2)
+        Write-Output "SUCCESS: Intermediate Boeing Export created - $intermediateSize KB"
     } else {
-        throw "File was not created despite no copy error"
+        throw "Intermediate file was not created despite no copy error"
     }
 }
 catch {
-    Write-Error "FAILED: Could not create Boeing Export file: $_"
+    Write-Error "FAILED: Could not create intermediate Boeing Export file: $_"
     Write-Output "Source file check:"
     if (Test-Path $FilePath2) {
         $sourceSize = [math]::Round((Get-Item $FilePath2).Length/1KB, 2)
@@ -844,6 +863,22 @@ catch {
     } else {
         Write-Output "  Source missing: $FilePath2"
     }
+    throw "Intermediate Boeing Export file creation failed"
+}
+
+# Step 2: Copy intermediate to final daily file
+Write-Output "Step 2: Copying to final daily file: $Result_intermediate -> $Result"
+try {
+    Copy-Item $Result_intermediate -Destination $Result -Force -ErrorAction Stop
+    if (Test-Path $Result) {
+        $resultSize = [math]::Round((Get-Item $Result).Length/1KB, 2)
+        Write-Output "SUCCESS: Final Boeing Export created - $resultSize KB"
+    } else {
+        throw "Final file was not created despite no copy error"
+    }
+}
+catch {
+    Write-Error "FAILED: Could not create final Boeing Export file: $_"
     throw "Boeing Export file creation failed"
 }
 
@@ -870,5 +905,6 @@ catch {
 Write-Output "=== STEP 1 VERIFICATION COMPLETE ==="
 Write-Output "Primary Output: $Result"
 Write-Output "Archive Location: $ProcessCompleteResultFilePath"
+
 
 
