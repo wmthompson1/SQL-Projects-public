@@ -664,41 +664,49 @@ try {
     }
     
     if ($null -ne $supplierInvoiceCol) {
-        # Convert column to string type for consistent handling
         $lastRow = $wb2.ActiveSheet.UsedRange.Rows.Count
         Write-Output "Converting [Supplier Invoice #] data to string format (rows 2-$lastRow)..."
         
+        # Get the entire column range (data only, skip header)
+        $dataStartCell = $wb2.ActiveSheet.Cells.Item(2, $supplierInvoiceCol)
+        $dataEndCell = $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol)
+        $columnRange = $wb2.ActiveSheet.Range($dataStartCell, $dataEndCell)
+        
+        # Copy the range
+        $columnRange.Copy() | Out-Null
+        
+        # Paste as values only to strip formulas
+        $columnRange.PasteSpecial(-4163) | Out-Null  # xlPasteValues = -4163
+        
+        # Clear clipboard
+        $Excel.CutCopyMode = $false
+        
+        # Now clean up any ="..." text that might remain as literal strings
         $stringConversions = 0
         for ($row = 2; $row -le $lastRow; $row++) {
             $cell = $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol)
             
-            # Check if cell has a formula (like ="250531BOLTBOARDS")
-            if ($null -ne $cell.Formula -and $cell.Formula.ToString().StartsWith("=")) {
-                # Extract value from formula: ="value" -> value
-                $formula = $cell.Formula.ToString()
-                if ($formula -match '^="(.+)"$') {
+            if ($null -ne $cell.Value2) {
+                $cellValue = $cell.Value2.ToString().Trim()
+                
+                # Check if the VALUE (after formula evaluation) starts with ="
+                if ($cellValue -match '^="(.+)"$') {
                     $cleanValue = $matches[1]
-                    $cell.Formula = $cleanValue  # Replace formula with plain text
+                    $cell.Value2 = $cleanValue
                     $stringConversions++
                 }
             }
-            elseif ($null -ne $cell.Value2 -and $cell.Value2.ToString().Trim() -ne "") {
-                # Handle plain values (already evaluated or no formula)
-                $originalValue = $cell.Value2.ToString().Trim()
-                $cell.Value2 = $originalValue
-                $stringConversions++
-            }
         }
         
-        # Format entire column as text to ensure string type
-        $columnRange = $wb2.ActiveSheet.Range($wb2.ActiveSheet.Cells.Item(1, $supplierInvoiceCol), $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol))
-        $columnRange.NumberFormat = "@"  # Text format
+        # Format entire column as text
+        $fullColumnRange = $wb2.ActiveSheet.Range($wb2.ActiveSheet.Cells.Item(1, $supplierInvoiceCol), $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol))
+        $fullColumnRange.NumberFormat = "@"
         
         Write-Output "Step 1 COMPLETED: [Supplier Invoice #] column converted to string type"
         Write-Output "  - Column position: $supplierInvoiceCol"
-        Write-Output "  - Values processed: $stringConversions"
+        Write-Output "  - Formulas stripped via PasteSpecial Values"
+        Write-Output "  - Text cleanup applied: $stringConversions cells"
         Write-Output "  - Format applied: Text (@)"
-        Write-Output "  - Supports mixed formats: numeric (1460110) and alphanumeric (250531BOE602)"
     }
     else {
         Write-Output "Step 1 FAILED: [Supplier Invoice #] not found in first 20 columns"

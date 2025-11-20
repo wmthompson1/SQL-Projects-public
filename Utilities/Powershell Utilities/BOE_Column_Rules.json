@@ -1,0 +1,51 @@
+{
+  "description": "Column formatting rules for BOE Receivable Excel processing",
+  "rules": [
+    {
+      "columnPattern": "Supplier.*Invoice",
+      "dataType": "String",
+      "excelFormat": "@",
+      "stripFormulas": true,
+      "trim": true,
+      "description": "Supplier Invoice # - must be text to preserve leading zeros and alphanumeric values"
+    },
+    {
+      "columnPattern": "Boeing.*Invoice",
+      "dataType": "String",
+      "excelFormat": "@",
+      "stripFormulas": false,
+      "trim": true,
+      "description": "Boeing Invoice # - text format"
+    },
+    {
+      "columnPattern": "StartDate|Start.*Date",
+      "dataType": "Date",
+      "excelFormat": "mm/dd/yyyy",
+      "stripFormulas": false,
+      "trim": false,
+      "description": "Date fields - short date format"
+    },
+    {
+      "columnPattern": ".*Date.*Time|Settlement.*Date|Check.*Date",
+      "dataType": "DateTime",
+      "excelFormat": "mm/dd/yyyy hh:mm:ss",
+      "stripFormulas": false,
+      "trim": false,
+      "description": "DateTime fields - full timestamp"
+    },
+    {
+      "columnPattern": "Payment|Amount",
+      "dataType": "Currency",
+      "excelFormat": "$#,##0.00",
+      "stripFormulas": false,
+      "trim": false,
+      "description": "Currency fields"
+    }
+  ],
+  "notes": [
+    "columnPattern uses regex for matching",
+    "excelFormat codes: @ = text, mm/dd/yyyy = date, $#,##0.00 = currency",
+    "stripFormulas removes Excel formulas like =\"value\" and keeps just the value",
+    "Rules are applied in order - first match wins"
+  ]
+}
