@@ -1,0 +1,4 @@
+﻿Excel File: Boeing_Export_20251113.xlsx
+Worksheet Name: Sheet1
+Date Created: 2025-11-13 15:54:47
+SSIS Connection String: Provider=Microsoft.ACE.OLEDB.12.0;Data Source=\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process\Boeing_Export_20251113.xlsx;Extended Properties="Excel 12.0 Xml;HDR=YES;IMEX=1"

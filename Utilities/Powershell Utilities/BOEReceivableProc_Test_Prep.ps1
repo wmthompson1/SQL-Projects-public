@@ -30,13 +30,20 @@ $ExitCode = 0
 
 function Write-Log {
     param(
-        [Parameter(Mandatory=$true)]
-        [string]$Message,
+        [Parameter(Mandatory=$false)]
+        [AllowEmptyString()]
+        [string]$Message = "",
         
         [Parameter(Mandatory=$false)]
         [ValidateSet('INFO', 'SUCCESS', 'WARNING', 'ERROR')]
         [string]$Level = 'INFO'
     )
+    
+    # Handle empty messages (blank lines)
+    if ([string]::IsNullOrWhiteSpace($Message)) {
+        Write-Host ""
+        return
+    }
     
     $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
     $logMessage = "[$timestamp] [$Level] $Message"
@@ -58,9 +65,7 @@ function Test-DirectoryAccess {
     
     try {
         if (-not (Test-Path $Path)) {
-            Write-Log "Creating missing directory: $DirectoryName at $Path" -Level WARNING
             New-Item -Path $Path -ItemType Directory -Force | Out-Null
-            Write-Log "Directory created successfully: $Path" -Level SUCCESS
         }
         
         # Test write access
@@ -71,7 +76,6 @@ function Test-DirectoryAccess {
         return $true
     }
     catch {
-        Write-Log "Cannot access or write to directory: $Path - $_" -Level ERROR
         return $false
     }
 }
@@ -91,29 +95,20 @@ function Copy-FileWithValidation {
     try {
         # Validate source exists
         if (-not (Test-Path $SourcePath)) {
-            Write-Log "Source file not found: $SourcePath" -Level ERROR
             return $false
         }
         
         # Get source file info
         $sourceFile = Get-Item $SourcePath
-        $sourceSize = [math]::Round($sourceFile.Length / 1KB, 2)
-        Write-Log "Source file validated: $FileDescription ($sourceSize KB)" -Level INFO
         
-        # Check if destination exists and backup if needed
+        # Create backup if destination exists
         if (Test-Path $DestinationPath) {
-            $destFile = Get-Item $DestinationPath
-            $destSize = [math]::Round($destFile.Length / 1KB, 2)
-            Write-Log "Existing destination file will be overwritten ($destSize KB)" -Level WARNING
-            
-            # Create backup of existing file
             $backupPath = "$DestinationPath.backup_$(Get-Date -Format 'yyyyMMddHHmmss')"
             try {
                 Copy-Item -Path $DestinationPath -Destination $backupPath -Force
-                Write-Log "Backup created: $backupPath" -Level INFO
             }
             catch {
-                Write-Log "Could not create backup (non-critical): $_" -Level WARNING
+                # Backup failure is non-critical
             }
         }
         
@@ -123,24 +118,18 @@ function Copy-FileWithValidation {
         # Validate copy
         if (Test-Path $DestinationPath) {
             $copiedFile = Get-Item $DestinationPath
-            $copiedSize = [math]::Round($copiedFile.Length / 1KB, 2)
-            
             if ($copiedFile.Length -eq $sourceFile.Length) {
-                Write-Log "Successfully copied: $FileDescription ($copiedSize KB)" -Level SUCCESS
                 return $true
             }
             else {
-                Write-Log "File copied but size mismatch! Source: $sourceSize KB, Destination: $copiedSize KB" -Level ERROR
                 return $false
             }
         }
         else {
-            Write-Log "Copy operation completed but file not found at destination" -Level ERROR
             return $false
         }
     }
     catch {
-        Write-Log "Failed to copy $FileDescription : $_" -Level ERROR
         return $false
     }
 }
@@ -160,7 +149,7 @@ try {
     
     # Determine environment and set project path
     if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
-        $project = "C:\Users\williamt\source\skillsinc\skills-inc-org\IT_TeamProject\Utilities\Powershell Utilities\"
+        $project = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\"
         Write-Log "Environment: DEVELOPMENT (WILLIAM-ADMINPC)" -Level INFO
         Write-Log "Project Path: $project" -Level INFO
     } 
@@ -170,10 +159,12 @@ try {
         Write-Log "Project Path: $project" -Level INFO
     }
     
-    # Generate daily timestamp for file naming (SSIS compatible format)
+    # Generate timestamps for file naming
     $dateStamp = Get-Date -Format "yyyyMMdd"
     $dailyStamp = "${dateStamp}V1"
+    $timestampFull = Get-Date -Format "yyyyMMdd-HHmmss"
     Write-Log "Daily Stamp: $dailyStamp" -Level INFO
+    Write-Log "Full Timestamp: $timestampFull" -Level INFO
     Write-Log "" -Level INFO
     
     # Define paths
@@ -184,7 +175,8 @@ try {
     $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.xls"
     $blankHeaderFile = Join-Path $testCacheFolder "BLANK_BOE_Header.csv"
     
-    # Destination files (ETL process folder)
+    # Intermediate and final destination files
+    $intermediateReceivableFile = Join-Path $processFolder "Boeing_Export_$timestampFull.xls"
     $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.xls"
     $targetHeaderFile = Join-Path $processFolder "BOEReceivableHeader.csv"
     
@@ -194,98 +186,65 @@ try {
     Write-Log "  Header: $blankHeaderFile" -Level INFO
     Write-Log "" -Level INFO
     Write-Log "Destination Files (Process Folder):" -Level INFO
-    Write-Log "  Receivable: $targetReceivableFile" -Level INFO
+    Write-Log "  Intermediate: $intermediateReceivableFile" -Level INFO
+    Write-Log "  Final Receivable: $targetReceivableFile" -Level INFO
     Write-Log "  Header: $targetHeaderFile" -Level INFO
-    Write-Log "" -Level INFO
     
-    # Validate directory access
-    Write-Log "=== Directory Access Validation ===" -Level INFO
-    
+    # Validate directory access (silent)
     if (-not (Test-DirectoryAccess -Path $testCacheFolder -DirectoryName "TestFileCache")) {
         throw "Cannot access TestFileCache folder: $testCacheFolder"
     }
-    Write-Log "TestFileCache folder accessible: $testCacheFolder" -Level SUCCESS
     
     if (-not (Test-DirectoryAccess -Path $processFolder -DirectoryName "Process")) {
         throw "Cannot access Process folder: $processFolder"
     }
-    Write-Log "Process folder accessible: $processFolder" -Level SUCCESS
-    Write-Log "" -Level INFO
     
-    # Validate source files exist
-    Write-Log "=== Source File Validation ===" -Level INFO
-    
-    $sourceFilesValid = $true
-    
+    # Validate source files exist (silent)
     if (-not (Test-Path $blankReceivableFile)) {
-        Write-Log "MISSING: Blank receivable file not found: $blankReceivableFile" -Level ERROR
-        $sourceFilesValid = $false
-    }
-    else {
-        $fileSize = [math]::Round((Get-Item $blankReceivableFile).Length / 1KB, 2)
-        Write-Log "FOUND: Blank receivable file ($fileSize KB)" -Level SUCCESS
+        throw "Blank receivable file not found: $blankReceivableFile"
     }
     
     if (-not (Test-Path $blankHeaderFile)) {
-        Write-Log "MISSING: Blank header file not found: $blankHeaderFile" -Level ERROR
-        $sourceFilesValid = $false
-    }
-    else {
-        $fileSize = [math]::Round((Get-Item $blankHeaderFile).Length / 1KB, 2)
-        Write-Log "FOUND: Blank header file ($fileSize KB)" -Level SUCCESS
+        throw "Blank header file not found: $blankHeaderFile"
     }
     
-    if (-not $sourceFilesValid) {
-        throw "One or more source files are missing from TestFileCache folder"
-    }
-    Write-Log "" -Level INFO
-    
-    # Copy files with validation
-    Write-Log "=== File Copy Operations ===" -Level INFO
-    
+    # Copy files (silent)
     $copyResults = @{
+        Intermediate = $false
         Receivable = $false
         Header = $false
     }
     
-    # Copy receivable file
-    $copyResults.Receivable = Copy-FileWithValidation `
+    # Step 1: Copy blank template to intermediate timestamped file
+    $copyResults.Intermediate = Copy-FileWithValidation `
         -SourcePath $blankReceivableFile `
-        -DestinationPath $targetReceivableFile `
-        -FileDescription "Blank BOE Receivable (Boeing_Export_$dailyStamp.xls)"
+        -DestinationPath $intermediateReceivableFile `
+        -FileDescription "Intermediate BOE Receivable (Boeing_Export_$timestampFull.xls)"
     
-    # Copy header file
+    # Step 2: Copy intermediate to final daily file (only if step 1 succeeded)
+    if ($copyResults.Intermediate) {
+        $copyResults.Receivable = Copy-FileWithValidation `
+            -SourcePath $intermediateReceivableFile `
+            -DestinationPath $targetReceivableFile `
+            -FileDescription "Final BOE Receivable (Boeing_Export_$dailyStamp.xls)"
+    }
+    
+    # Step 3: Copy header file
     $copyResults.Header = Copy-FileWithValidation `
         -SourcePath $blankHeaderFile `
         -DestinationPath $targetHeaderFile `
         -FileDescription "Blank BOE Header (BOEReceivableHeader.csv)"
     
-    Write-Log "" -Level INFO
-    
-    # Evaluate results
-    Write-Log "=== Operation Summary ===" -Level INFO
-    
+    # Evaluate results (silent)
     if ($copyResults.Receivable -and $copyResults.Header) {
-        Write-Log "SUCCESS: All test files copied successfully" -Level SUCCESS
-        Write-Log "ETL guardrails in place - process folder protected with blank test files" -Level SUCCESS
         $ExitCode = 0
     }
     elseif ($copyResults.Receivable -or $copyResults.Header) {
-        Write-Log "PARTIAL SUCCESS: Some files copied, but one or more failed" -Level WARNING
-        Write-Log "  Receivable: $(if($copyResults.Receivable){'SUCCESS'}else{'FAILED'})" -Level WARNING
-        Write-Log "  Header: $(if($copyResults.Header){'SUCCESS'}else{'FAILED'})" -Level WARNING
         $ExitCode = 2
     }
     else {
-        Write-Log "FAILURE: No files were copied successfully" -Level ERROR
         $ExitCode = 1
     }
-    
-    Write-Log "" -Level INFO
-    Write-Log "Final Status: Exit Code $ExitCode" -Level INFO
-    Write-Log "========================================" -Level INFO
-    Write-Log "$ScriptName v$ScriptVersion - Complete" -Level INFO
-    Write-Log "========================================" -Level INFO
 }
 catch {
     Write-Log "" -Level ERROR
@@ -301,13 +260,6 @@ catch {
 }
 finally {
     # Cleanup and exit
-    if ($ExitCode -eq 0) {
-        Write-Log "Script completed successfully" -Level SUCCESS
-    }
-    else {
-        Write-Log "Script completed with errors (Exit Code: $ExitCode)" -Level ERROR
-    }
-    
     exit $ExitCode
 }
 
