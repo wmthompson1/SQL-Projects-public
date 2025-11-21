@@ -565,9 +565,12 @@ $null = $Workbook.ActiveSheet.Range("A1").PasteSpecial(-4163)
 $Excel.DisplayAlerts = $false
 $Excel.EnableEvents = $false
 
-$SearchString = "StartDate"
-$FormatType = "Date"
-FindSearchRangeDates $Worksheet $SearchString $FormatType;
+# Note: StartDate column search skipped for BOE Receivable data
+# (Column does not exist in BOE export format)
+# $SearchString = "StartDate"
+# $FormatType = "Date"
+# FindSearchRangeDates $Worksheet $SearchString $FormatType;
+
 $Excel.DisplayAlerts = $false
 $Workbook.Save() 
 $Excel.DisplayAlerts = $false

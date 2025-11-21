@@ -1,13 +1,14 @@
 # Utilities\Powershell Utilities\BOESetReaderTest1.ps1
 
-#  Boeing Invoice #				
-# ,Boeing Purchase Order #
-# ,Supplier Invoice #
-# ,Invoice Received Date
-# ,Invoice Gross Amt
-# ,Applied Disc Amt
-# ,Invoice Net Amt
-# ,Conversion Rate
+Headers (include NBSPs and special chars as in original Excel):
+ Boeing Invoice #				
+,Boeing Purchase Order #
+,Supplier Invoice #
+,Invoice Received Date
+,Invoice Gross Amt
+,Applied Disc Amt
+,Invoice Net Amt
+,Conversion Rate
 
 # Load column formatting rules
 $rulesPath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\BOE_Column_Rules.json"
