@@ -637,90 +637,120 @@ $wb2 = $Excel.workbooks.open($FilePath2)
 $ws2 = $wb2.Worksheets.item(1) 
 $ws2.activate()
 
-# FR 5.022
-# Development risk -  must assign to a range (which will remain)
-
 $wb2.ActiveSheet.Range("A1").PasteSpecial(8) | Out-Null
 $wb2.ActiveSheet.Range("A1").PasteSpecial(-4122)  | Out-Null
 $wb2.ActiveSheet.Range("A1").PasteSpecial(-4104) | Out-Null
 
-# Step 1: Daily Operations Verification - [Supplier Invoice #] String Type Conversion
-Write-Output "Step 1: Locating and converting [Supplier Invoice #] column to string type..."
-try {
-    $supplierInvoiceCol = $null
-    $headerRow = 1
+# ################################################################################
+# COLUMN FORMATTING - JSON RULES-BASED APPROACH
+# ################################################################################
+# Purpose: Apply data type formatting based on JSON configuration rules
+# Input: $wb2 (workbook with tabular data)
+# Rules: BOE_Column_Rules.json (column patterns, formats, formula stripping)
+# Output: Formatted columns ready for SSIS import
+# ################################################################################
+
+Write-Output "=== APPLYING COLUMN FORMATTING RULES ==="
+
+# Load formatting rules from JSON configuration
+$rulesPath = Join-Path -Path $project -ChildPath "BOE_Column_Rules.json"
+if (Test-Path $rulesPath) {
+    $columnRules = (Get-Content $rulesPath | ConvertFrom-Json).rules
+    Write-Output "Loaded $($columnRules.Count) formatting rules from: BOE_Column_Rules.json"
+} else {
+    Write-Warning "Rules file not found: $rulesPath"
+    Write-Output "Proceeding without column formatting rules"
+    $columnRules = @()
+}
+
+# Read and clean headers (handle NBSP and whitespace)
+$headerRow = 1
+$lastCol = $wb2.ActiveSheet.UsedRange.Columns.Count
+$lastRow = $wb2.ActiveSheet.UsedRange.Rows.Count
+$headers = @()
+
+for ($col = 1; $col -le $lastCol; $col++) {
+    $rawHeader = $wb2.ActiveSheet.Cells.Item($headerRow, $col).Text
+    if ($rawHeader -ne "") {
+        # Clean header for matching (don't modify Excel file)
+        $cleanHeader = $rawHeader -replace [char]160, ' '  # Replace NBSP with regular space
+        $cleanHeader = $cleanHeader.Trim() -replace '\s+', ' '  # Normalize whitespace
+        $headers += $cleanHeader
+    }
+}
+
+Write-Output "Found $($headers.Count) columns in dataset"
+
+# Apply formatting rules to each column
+$formattedCount = 0
+for ($col = 1; $col -le $headers.Count; $col++) {
+    $header = $headers[$col - 1]
     
-    # Locate the column
-    for ($col = 1; $col -le 20; $col++) {
-        $hdr = $wb2.ActiveSheet.Cells.Item($headerRow, $col).Value2
-        if ($null -ne $hdr) {
-            $txt = $hdr.ToString()
-            if ($txt -match "Supplier Invoice") {
-                $supplierInvoiceCol = $col
-                Write-Output "SUCCESS: Found [Supplier Invoice #] at column $col - '$txt'"
-                break
-            }
+    # Find matching rule (first match wins)
+    $matchedRule = $null
+    foreach ($rule in $columnRules) {
+        if ($header -match $rule.columnPattern) {
+            $matchedRule = $rule
+            break
         }
     }
     
-    if ($null -ne $supplierInvoiceCol) {
-        $lastRow = $wb2.ActiveSheet.UsedRange.Rows.Count
-        Write-Output "Converting [Supplier Invoice #] data to string format (rows 2-$lastRow)..."
+    if ($matchedRule) {
+        Write-Output "[$col] '$header' -> $($matchedRule.dataType) ($($matchedRule.excelFormat))"
         
-        # Get the entire column range (data only, skip header)
-        $dataStartCell = $wb2.ActiveSheet.Cells.Item(2, $supplierInvoiceCol)
-        $dataEndCell = $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol)
-        $columnRange = $wb2.ActiveSheet.Range($dataStartCell, $dataEndCell)
+        # Get column data range (skip header)
+        $dataRange = $wb2.ActiveSheet.Range(
+            $wb2.ActiveSheet.Cells.Item(2, $col),
+            $wb2.ActiveSheet.Cells.Item($lastRow, $col)
+        )
         
-        # Copy the range
-        $columnRange.Copy() | Out-Null
-        
-        # Paste as values only to strip formulas
-        $columnRange.PasteSpecial(-4163) | Out-Null  # xlPasteValues = -4163
-        
-        # Clear clipboard
-        $Excel.CutCopyMode = $false
-        
-        # Now clean up any ="..." text that might remain as literal strings
-        $stringConversions = 0
-        for ($row = 2; $row -le $lastRow; $row++) {
-            $cell = $wb2.ActiveSheet.Cells.Item($row, $supplierInvoiceCol)
+        # Strip formulas if configured
+        if ($matchedRule.stripFormulas) {
+            $dataRange.Copy() | Out-Null
+            $dataRange.PasteSpecial(-4163) | Out-Null  # xlPasteValues
+            $Excel.CutCopyMode = $false
             
-            if ($null -ne $cell.Value2) {
-                $cellValue = $cell.Value2.ToString().Trim()
-                
-                # Check if the VALUE (after formula evaluation) starts with ="
-                if ($cellValue -match '^="(.+)"$') {
-                    $cleanValue = $matches[1]
-                    $cell.Value2 = $cleanValue
-                    $stringConversions++
+            # Additional cleanup for ="..." text formulas (string columns only)
+            if ($matchedRule.dataType -eq "String") {
+                $cleanedCells = 0
+                for ($row = 2; $row -le $lastRow; $row++) {
+                    $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
+                    if ($null -ne $cell.Value2) {
+                        $val = $cell.Value2.ToString()
+                        # Strip ="value" to value
+                        if ($val -match '^="(.+)"$') {
+                            $cell.Value2 = $matches[1]
+                            $cleanedCells++
+                        }
+                    }
+                }
+                if ($cleanedCells -gt 0) {
+                    Write-Output "  - Stripped formulas from $cleanedCells cells"
                 }
             }
         }
         
-        # Format entire column as text
-        $fullColumnRange = $wb2.ActiveSheet.Range($wb2.ActiveSheet.Cells.Item(1, $supplierInvoiceCol), $wb2.ActiveSheet.Cells.Item($lastRow, $supplierInvoiceCol))
-        $fullColumnRange.NumberFormat = "@"
+        # Apply Excel number format
+        $dataRange.NumberFormat = $matchedRule.excelFormat
         
-        Write-Output "Step 1 COMPLETED: [Supplier Invoice #] column converted to string type"
-        Write-Output "  - Column position: $supplierInvoiceCol"
-        Write-Output "  - Formulas stripped via PasteSpecial Values"
-        Write-Output "  - Text cleanup applied: $stringConversions cells"
-        Write-Output "  - Format applied: Text (@)"
-    }
-    else {
-        Write-Output "Step 1 FAILED: [Supplier Invoice #] not found in first 20 columns"
-        Write-Output "Available headers for debugging:"
-        for ($c = 1; $c -le 10; $c++) {
-            $val = $wb2.ActiveSheet.Cells.Item($headerRow, $c).Value2
-            if ($null -ne $val) { Write-Output "  Col $c`: '$($val.ToString())'" }
+        # Trim strings if configured
+        if ($matchedRule.trim -and $matchedRule.dataType -eq "String") {
+            for ($row = 2; $row -le $lastRow; $row++) {
+                $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
+                if ($null -ne $cell.Value2) {
+                    $cell.Value2 = $cell.Value2.ToString().Trim()
+                }
+            }
         }
+        
+        $formattedCount++
     }
 }
-catch {
-    Write-Warning "Step 1 ERROR: $_"
-    Write-Output "Continuing with processing - [Supplier Invoice #] may need manual verification"
-}$wb2.Save()
+
+Write-Output "Formatted $formattedCount columns using JSON rules"
+Write-Output ""
+
+$wb2.Save()
 $wb2.SaveAs($FilePath4 , $xlcsv) 
 $wb2.close($false) 
 

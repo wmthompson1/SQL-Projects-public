@@ -41,7 +41,12 @@ try {
     # Read headers (row 1)
     $headers = @()
     for ($col = 1; $col -le $lastCol; $col++) {
-        $headers += $worksheet.Cells.Item(1, $col).Text
+        $rawHeader = $worksheet.Cells.Item(1, $col).Text
+        # Clean header for internal matching only (keep Excel file unchanged)
+        $cleanHeader = $rawHeader -replace [char]160, ' '  # Replace NBSP with regular space
+        $cleanHeader = $cleanHeader.Trim() -replace '\s+', ' '  # Normalize multiple spaces
+        $headers += $cleanHeader
+        # Note: Original headers with NBSP/tabs remain intact in Excel file
     }
     
     Write-Output ""

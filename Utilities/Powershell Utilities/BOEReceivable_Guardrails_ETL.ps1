@@ -1,4 +1,4 @@
-# BOEReceivable_Test_Prep.ps1
+# BOEReceivable_Guardrails_ETL.ps1
 ## Description: ETL test preparation script - places blank test files in process folder
 ##              to prevent accidental processing of production data during testing
 ## Created: 2025-11-20
@@ -172,11 +172,11 @@ try {
     $testCacheFolder = Join-Path $project "TestFileCache"
     
     # Source files (blank test templates)
-    $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.xls"
+    $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.xlsx"
     $blankHeaderFile = Join-Path $testCacheFolder "BLANK_BOE_Header.csv"
     
     # Destination files (only final daily files, not intermediate)
-    $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.xls"
+    $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.xlsx"
     $targetHeaderFile = Join-Path $processFolder "BOEReceivableHeader.csv"
     
     Write-Log "=== Path Configuration ===" -Level INFO
@@ -216,7 +216,7 @@ try {
     $copyResults.Receivable = Copy-FileWithValidation `
         -SourcePath $blankReceivableFile `
         -DestinationPath $targetReceivableFile `
-        -FileDescription "BOE Receivable (Boeing_Export_$dailyStamp.xls)"
+        -FileDescription "BOE Receivable (Boeing_Export_$dailyStamp.xlsx)"
     
     # Copy header file
     $copyResults.Header = Copy-FileWithValidation `

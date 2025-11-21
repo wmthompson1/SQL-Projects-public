@@ -2,12 +2,12 @@
   "description": "Column formatting rules for BOE Receivable Excel processing",
   "rules": [
     {
-      "columnPattern": "Supplier.*Invoice",
+      "columnPattern": "Supplier.*Invoice|Supplier\\s+Invoice",
       "dataType": "String",
       "excelFormat": "@",
       "stripFormulas": true,
       "trim": true,
-      "description": "Supplier Invoice # - must be text to preserve leading zeros and alphanumeric values"
+      "description": "Supplier Invoice # - must be text to preserve leading zeros and alphanumeric values (handles NBSP)"
     },
     {
       "columnPattern": "Boeing.*Invoice",

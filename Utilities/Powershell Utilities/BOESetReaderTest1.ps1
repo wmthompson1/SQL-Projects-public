@@ -1,5 +1,14 @@
 # Utilities\Powershell Utilities\BOESetReaderTest1.ps1
 
+#  Boeing Invoice #				
+# ,Boeing Purchase Order #
+# ,Supplier Invoice #
+# ,Invoice Received Date
+# ,Invoice Gross Amt
+# ,Applied Disc Amt
+# ,Invoice Net Amt
+# ,Conversion Rate
+
 # Load column formatting rules
 $rulesPath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\BOE_Column_Rules.json"
 $columnRules = Get-Content $rulesPath | ConvertFrom-Json
@@ -28,7 +37,11 @@ $fullpath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Util
     for ($col = 1; $col -le $cols; $col++) {
         $headerName = $usedRange.Cells($headerRow, $col).Text
         if ($headerName -ne "") {
-            $headers += $headerName
+            # Clean header for internal use only (don't modify Excel file)
+            $cleanHeader = $headerName -replace [char]160, ' '  # Replace NBSP with regular space
+            $cleanHeader = $cleanHeader.Trim() -replace '\s+', ' '  # Normalize multiple spaces
+            $headers += $cleanHeader
+            # Note: Original header with NBSP remains intact in Excel
         }
     }
 
@@ -106,6 +119,29 @@ $fullpath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Util
     Write-Output "Loaded $($data.Count) rows of data"
     Write-Output ""
 
+    # Export full dataset to test output files for inspection
+    $testOutputPath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\Process"
+    $timestamp = Get-Date -Format "yyyyMMdd-HHmmss"
+    
+    # Export as CSV for easy viewing
+    $csvTestFile = Join-Path $testOutputPath "TEST_Data_$timestamp.csv"
+    $data | Export-Csv -Path $csvTestFile -NoTypeInformation -Force
+    Write-Output "Exported full dataset to CSV: $csvTestFile"
+    
+    # Export as formatted Excel for visual inspection
+    $xlsxTestFile = Join-Path $testOutputPath "TEST_Data_$timestamp.xlsx"
+    $data | Export-Csv -Path "$testOutputPath\temp.csv" -NoTypeInformation -Force
+    
+    # Convert CSV to formatted Excel
+    $tempCsv = "$testOutputPath\temp.csv"
+    $testWb = $excel.Workbooks.Open($tempCsv)
+    $testWb.SaveAs($xlsxTestFile, 51)  # 51 = xlWorkbookDefault
+    $testWb.Close($false)
+    Remove-Item $tempCsv -Force
+    
+    Write-Output "Exported full dataset to Excel: $xlsxTestFile"
+    Write-Output ""
+
     # Display first 5 rows as a sample
     Write-Output "=== SAMPLE DATA (First 5 rows) ==="
     $data | Select-Object -First 5 | Format-Table -AutoSize
@@ -135,6 +171,25 @@ $fullpath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Util
         Write-Output "Column matching 'Supplier Invoice' not found in headers"
         Write-Output "Available headers: $($headers -join ', ')"
     }
+
+    # Additional validation: Show column data types and sample values
+    Write-Output ""
+    Write-Output "=== COLUMN ANALYSIS ==="
+    foreach ($header in $headers) {
+        $sampleValues = $data | Select-Object -First 3 -ExpandProperty $header | Where-Object { $_ -ne "" }
+        if ($sampleValues.Count -gt 0) {
+            $sample = $sampleValues -join ", "
+            if ($sample.Length -gt 50) { $sample = $sample.Substring(0, 50) + "..." }
+            Write-Output "$header : $sample"
+        }
+    }
+    
+    Write-Output ""
+    Write-Output "=== TEST FILES CREATED ==="
+    Write-Output "CSV file: $csvTestFile"
+    Write-Output "Excel file: $xlsxTestFile"
+    Write-Output ""
+    Write-Output "Open these files to inspect the full dataset and verify formula stripping"
 
 # Close the workbook and Excel
 $workbook.Close($false)  # $false = don't save changes
