@@ -18,6 +18,14 @@
       "description": "Boeing Invoice # - text format"
     },
     {
+      "columnPattern": "Invoice.*Received.*Date",
+      "dataType": "Date",
+      "excelFormat": "mm/dd/yyyy",
+      "stripFormulas": false,
+      "trim": false,
+      "description": "Invoice Received Date - short date format (no time)"
+    },
+    {
       "columnPattern": "StartDate|Start.*Date",
       "dataType": "Date",
       "excelFormat": "mm/dd/yyyy",

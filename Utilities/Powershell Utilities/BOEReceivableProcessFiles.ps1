@@ -98,12 +98,12 @@ $FilePath = Join-Path -Path $SourcePath -ChildPath $FileName;
 $FileName2 = "2_${secondsStamp}.xlsx"
 $FilePath2 = Join-Path -Path $SourcePath -ChildPath $FileName2;
 
-# Use daily date stamp format that matches SSIS: Boeing_Export_YYYYMMDD.xlsx
-$FileName3 = "Boeing_Export_$dailyStamp.xlsx"
+# Use daily date stamp format that matches SSIS: Boeing_Export_YYYYMMDD.csv (changed from .xlsx for SSIS CSV flat file source)
+$FileName3 = "Boeing_Export_$dailyStamp.csv"
 $Result = Join-Path -Path $SourcePath -ChildPath $FileName3;
 
-# Use unique time stamp format that matches then copy to Boeing_Export_YYYYMMDD.xlsx
-$FileName3_intermediate = "Boeing_Export_$UniqueStamp.xlsx"
+# Use unique time stamp format that matches then copy to Boeing_Export_YYYYMMDD.csv
+$FileName3_intermediate = "Boeing_Export_$UniqueStamp.csv"
 $Result_intermediate = Join-Path -Path $SourcePath -ChildPath $FileName3_intermediate;
 
 $FileName4 = "2.csv"
@@ -134,7 +134,7 @@ $ProcessCompleteResultPath = $ProcessCompletePath
 $ProcessCompleteResultFilePath = Join-Path -Path $ProcessCompleteResultPath -ChildPath $ProcessCompleteResultName;
 
 $ProcessFilePath = Join-Path -Path $project -ChildPath "Process\BOE.xls"
-$ProcessCompleteFilePath = Join-Path -Path $project -ChildPath "ProcessComplete\BOEReceivable_$dailyStamp.xlsx" 
+$ProcessCompleteFilePath = Join-Path -Path $project -ChildPath "ProcessComplete\BOEReceivable_$dailyStamp.csv" 
 
 # ######################
 # DEV RISK HERE IS HIGH - FILE CAN REMAIN OPEN IN OTHER PROCESS
@@ -707,6 +707,9 @@ for ($col = 1; $col -le $headers.Count; $col++) {
             $wb2.ActiveSheet.Cells.Item($lastRow, $col)
         )
         
+        # Apply Excel number format FIRST (before stripping formulas)
+        $dataRange.NumberFormat = $matchedRule.excelFormat
+        
         # Strip formulas if configured
         if ($matchedRule.stripFormulas) {
             $dataRange.Copy() | Out-Null
@@ -716,32 +719,47 @@ for ($col = 1; $col -le $headers.Count; $col++) {
             # Additional cleanup for ="..." text formulas (string columns only)
             if ($matchedRule.dataType -eq "String") {
                 $cleanedCells = 0
+                $forcedTextCells = 0
                 for ($row = 2; $row -le $lastRow; $row++) {
                     $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
                     if ($null -ne $cell.Value2) {
-                        $val = $cell.Value2.ToString()
+                        $val = $cell.Value2.ToString().Trim()
+                        
                         # Strip ="value" to value
                         if ($val -match '^="(.+)"$') {
-                            $cell.Value2 = $matches[1]
+                            $val = $matches[1].Trim()
                             $cleanedCells++
+                        }
+                        
+                        # Force text treatment: Prefix ALL non-empty values with apostrophe
+                        # This ensures Excel/SSIS treats everything as text (both "1471074" and "250531BOE602")
+                        if ($val -ne "") {
+                            $cell.Value2 = "'" + $val
+                            $forcedTextCells++
                         }
                     }
                 }
                 if ($cleanedCells -gt 0) {
                     Write-Output "  - Stripped formulas from $cleanedCells cells"
                 }
+                if ($forcedTextCells -gt 0) {
+                    Write-Output "  - Forced text format on $forcedTextCells values"
+                }
             }
         }
-        
-        # Apply Excel number format
-        $dataRange.NumberFormat = $matchedRule.excelFormat
         
         # Trim strings if configured
         if ($matchedRule.trim -and $matchedRule.dataType -eq "String") {
             for ($row = 2; $row -le $lastRow; $row++) {
                 $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
                 if ($null -ne $cell.Value2) {
-                    $cell.Value2 = $cell.Value2.ToString().Trim()
+                    $cellValue = $cell.Value2.ToString().Trim()
+                    # Preserve apostrophe prefix if it exists
+                    if ($cellValue.StartsWith("'")) {
+                        $cell.Value2 = "'" + $cellValue.Substring(1).Trim()
+                    } else {
+                        $cell.Value2 = $cellValue
+                    }
                 }
             }
         }
@@ -892,10 +910,10 @@ if (Test-Path $Result) {
     }
 }
 
-# Step 1: Copy to intermediate timestamped Boeing Export file
-Write-Output "Step 1: Copying to intermediate file: $FilePath2 -> $Result_intermediate"
+# Step 1: Copy CSV output to intermediate timestamped Boeing Export file
+Write-Output "Step 1: Copying to intermediate file: $FilePath4 (CSV) -> $Result_intermediate"
 try {
-    Copy-Item $FilePath2 -Destination $Result_intermediate -Force -ErrorAction Stop
+    Copy-Item $FilePath4 -Destination $Result_intermediate -Force -ErrorAction Stop
     if (Test-Path $Result_intermediate) {
         $intermediateSize = [math]::Round((Get-Item $Result_intermediate).Length/1KB, 2)
         Write-Output "SUCCESS: Intermediate Boeing Export created - $intermediateSize KB"
@@ -906,11 +924,11 @@ try {
 catch {
     Write-Error "FAILED: Could not create intermediate Boeing Export file: $_"
     Write-Output "Source file check:"
-    if (Test-Path $FilePath2) {
-        $sourceSize = [math]::Round((Get-Item $FilePath2).Length/1KB, 2)
-        Write-Output "  Source exists: $FilePath2 ($sourceSize KB)"
+    if (Test-Path $FilePath4) {
+        $sourceSize = [math]::Round((Get-Item $FilePath4).Length/1KB, 2)
+        Write-Output "  Source exists: $FilePath4 ($sourceSize KB)"
     } else {
-        Write-Output "  Source missing: $FilePath2"
+        Write-Output "  Source missing: $FilePath4"
     }
     throw "Intermediate Boeing Export file creation failed"
 }
