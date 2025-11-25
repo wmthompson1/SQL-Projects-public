@@ -141,7 +141,7 @@ $ProcessCompleteFilePath = Join-Path -Path $project -ChildPath "ProcessComplete\
 # remove \process\1.x
 If ((Test-Path -Path $FilePath) -eq $true) {
   try {
-    Remove-Item –path $FilePath -Force -ErrorAction "Stop"
+    Remove-Item -Path $FilePath -Force -ErrorAction "Stop"
     Write-Output "Cleaning: " $nl $FilePath
   }
   catch {
@@ -615,10 +615,31 @@ $Workbook.Save()
 #    with boundary. 
 # #########################################
 
-$SearchString = "Boeing Invoice #"
-$RangeFinder1 = $Worksheet.Range("A1:z20").EntireRow
-$Search2 = $RangeFinder1.find($SearchString,[Type]::Missing,[Type]::Missing,[Type]::Missing) 
-
+# Find "Boeing Invoice #" - handle NBSP
+$SearchRange = $Worksheet.Range("A1:z20")
+$Search2 = $null
+Write-Output "Searching for 'Boeing Invoice #' header in rows 1-20..."
+for ($i = 1; $i -le 20; $i++) {
+    for ($j = 1; $j -le 26; $j++) {
+        $cellText = $Worksheet.Cells.Item($i, $j).Text
+        if ($cellText) {
+            $normalizedText = $cellText.Replace([char]160, " ").Trim()
+            if ($i -eq 14) {
+                Write-Output "Row 14, Col $j : '$cellText' -> normalized: '$normalizedText'"
+            }
+            if ($normalizedText -eq "Boeing Invoice #") {
+                $Search2 = $Worksheet.Cells.Item($i, $j)
+                Write-Output "Found Boeing Invoice # at row $i, col $j"
+                break
+            }
+        }
+    }
+    if ($null -ne $Search2) { break }
+}
+if ($null -eq $Search2) { 
+    Write-Output "ERROR: Boeing Invoice # header not found in range A1:Z20"
+    throw "Boeing Invoice # header not found" 
+}
 $col = $Search2.Column
 $row = $Search2.Row
 
@@ -1036,6 +1057,7 @@ catch {
 Write-Output "=== STEP 1 VERIFICATION COMPLETE ==="
 Write-Output "Primary Output: $Result"
 Write-Output "Archive Location: $ProcessCompleteResultFilePath"
+
 
 
 
