@@ -12,9 +12,9 @@
 ##  Date        Modified By         Change Description
 ##  ----------  ------------------  ------------------------------------------------------------
 ##  06/12/2019	William Thompson	Created.
-##  
+##  regarding BOEReceivableProcessFiles.ps1 and conversion rate column, I am ready to test now.
 
-##
+##  cd "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\"
 ##**********************************************************************************************/
 
 Write-Output ""
@@ -603,6 +603,8 @@ $Workbook.Save()
 #   3. Paste into new workbook ($FilePath2)
 #   4. Apply string type conversion to Supplier Invoice # column
 #   5. Save as CSV ($FilePath4) and Excel ($FilePath2)
+#
+#
 # ################################################################################
 
 # Ver 2 FR 5.022
@@ -656,14 +658,38 @@ $wb2.ActiveSheet.Range("A1").PasteSpecial(-4104) | Out-Null
 Write-Output "=== APPLYING COLUMN FORMATTING RULES ==="
 
 # Load formatting rules from JSON configuration
-$rulesPath = Join-Path -Path $project -ChildPath "BOE_Column_Rules.json"
+# JSON file must be in same directory as this script
+$scriptPath = Split-Path -Parent $MyInvocation.MyCommand.Path
+$rulesPath = Join-Path -Path $scriptPath -ChildPath "BOE_Column_Rules.json"
 if (Test-Path $rulesPath) {
-    $columnRules = (Get-Content $rulesPath | ConvertFrom-Json).rules
-    Write-Output "Loaded $($columnRules.Count) formatting rules from: BOE_Column_Rules.json"
+    try {
+        # Check file size first
+        $fileInfo = Get-Item $rulesPath
+        Write-Output "JSON file found: $rulesPath ($($fileInfo.Length) bytes)"
+        
+        # Read with explicit UTF8 encoding without BOM
+        $jsonContent = [System.IO.File]::ReadAllText($rulesPath, [System.Text.UTF8Encoding]::new($false))
+        
+        # Show first 100 chars for debugging (helps identify encoding issues)
+        $preview = $jsonContent.Substring(0, [Math]::Min(100, $jsonContent.Length))
+        Write-Output "JSON preview (first 100 chars): $preview"
+        
+        $columnRules = ($jsonContent | ConvertFrom-Json).rules
+        Write-Output "Loaded $($columnRules.Count) formatting rules from: BOE_Column_Rules.json"
+    }
+    catch {
+        Write-Error "CRITICAL: Error parsing JSON file: $($_.Exception.Message)"
+        Write-Error "JSON file location: $rulesPath"
+        Write-Error "File size: $($fileInfo.Length) bytes"
+        Write-Error "Ensure BOE_Column_Rules.json is valid JSON and saved with UTF-8 encoding without BOM"
+        Write-Error "You may need to recreate the file on the server"
+        throw "Failed to load column formatting rules: $($_.Exception.Message)"
+    }
 } else {
-    Write-Warning "Rules file not found: $rulesPath"
-    Write-Output "Proceeding without column formatting rules"
-    $columnRules = @()
+    Write-Error "CRITICAL: Rules file not found: $rulesPath"
+    Write-Error "Expected location: $rulesPath"
+    Write-Error "BOE_Column_Rules.json must be in the same directory as this script"
+    throw "Required configuration file missing: BOE_Column_Rules.json"
 }
 
 # Read and clean headers (handle NBSP and whitespace)
@@ -714,7 +740,7 @@ for ($col = 1; $col -le $headers.Count; $col++) {
         if ($matchedRule.stripFormulas) {
             $dataRange.Copy() | Out-Null
             $dataRange.PasteSpecial(-4163) | Out-Null  # xlPasteValues
-            $Excel.CutCopyMode = $false
+            # Note: CutCopyMode will be cleared automatically when workbook closes
             
             # Additional cleanup for ="..." text formulas (string columns only)
             if ($matchedRule.dataType -eq "String") {
@@ -764,12 +790,50 @@ for ($col = 1; $col -le $headers.Count; $col++) {
             }
         }
         
+        # Strip commas from currency fields if configured (for SSIS numeric parsing)
+        if ($matchedRule.PSObject.Properties.Name -contains 'stripCommas' -and $matchedRule.stripCommas) {
+            $commaCount = 0
+            for ($row = 2; $row -le $lastRow; $row++) {
+                $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
+                if ($null -ne $cell.Value2) {
+                    $originalValue = $cell.Value2.ToString()
+                    $cleanedValue = $originalValue -replace ',', ''
+                    
+                    # Force decimal format for currency (Excel CSV export fix)
+                    # Convert to number and format with 2 decimals
+                    try {
+                        $numValue = [double]$cleanedValue
+                        $cell.Value2 = [string]::Format("{0:0.00}", $numValue)
+                    } catch {
+                        # If not numeric, just remove commas
+                        $cell.Value2 = $cleanedValue
+                    }
+                    
+                    if ($originalValue -ne $cell.Value2) {
+                        $commaCount++
+                    }
+                }
+            }
+            if ($commaCount -gt 0) {
+                Write-Output "  - Formatted $commaCount currency values to 0.00 format"
+            }
+        }
+        
         $formattedCount++
     }
 }
 
 Write-Output "Formatted $formattedCount columns using JSON rules"
 Write-Output ""
+
+# ################################################################################
+# NOTE: EMPTY ROW FILTERING HANDLED IN SQL
+# ################################################################################
+# The staging table allows NULL for Invoice Received Date column.
+# Empty rows from Excel will import as NULL and can be filtered using:
+#   DELETE FROM staging_table WHERE [Invoice Received Date] IS NULL
+# This is more reliable than PowerShell Excel COM filtering for edge cases.
+# ################################################################################
 
 $wb2.Save()
 $wb2.SaveAs($FilePath4 , $xlcsv) 
