@@ -19,7 +19,8 @@ $destPath = "\\SQL-BI-1\E$\ITDA\Operations\BOEReceivables\"
 # Files to deploy
 $files = @(
     "BOEReceivableProcessFiles.ps1",
-    "BOE_Column_Rules.json"
+    "BOE_Column_Rules.json",
+    "BOEReceivable_Guardrails_ETL.ps1"
 )
 
 # Deploy files

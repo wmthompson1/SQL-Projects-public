@@ -23,11 +23,11 @@
       "stripFormulas": false
     },
     {
-      "description": "Invoice Received Date - text format allows NULL values, SSIS will handle datetime conversion with NULL support",
+      "description": "Invoice Received Date - format as mm/dd/yyyy date (Excel serial numbers will be displayed as dates)",
       "trim": false,
       "columnPattern": "Invoice.*Received.*Date",
-      "excelFormat": "@",
-      "dataType": "String",
+      "excelFormat": "mm/dd/yyyy",
+      "dataType": "Date",
       "stripFormulas": false
     },
     {
@@ -57,10 +57,10 @@
     },
     {
       "stripCommas": true,
-      "description": "Conversion Rate and other rate fields - numeric format with 2 decimals",
+      "description": "Conversion Rate and other rate fields - numeric format with 3 decimals (nullable in database)",
       "trim": false,
       "columnPattern": "Conversion.*Rate|.*Rate$",
-      "excelFormat": "0.00",
+      "excelFormat": "0.000",
       "dataType": "Currency",
       "stripFormulas": false
     }

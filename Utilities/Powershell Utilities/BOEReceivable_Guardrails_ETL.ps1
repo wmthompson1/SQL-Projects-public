@@ -172,11 +172,11 @@ try {
     $testCacheFolder = Join-Path $project "TestFileCache"
     
     # Source files (blank test templates)
-    $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.xlsx"
+    $blankReceivableFile = Join-Path $testCacheFolder "BLANK_BOE_Receivable.csv"
     $blankHeaderFile = Join-Path $testCacheFolder "BLANK_BOE_Header.csv"
     
     # Destination files (only final daily files, not intermediate)
-    $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.xlsx"
+    $targetReceivableFile = Join-Path $processFolder "Boeing_Export_$dailyStamp.csv"
     $targetHeaderFile = Join-Path $processFolder "BOEReceivableHeader.csv"
     
     Write-Log "=== Path Configuration ===" -Level INFO
@@ -216,7 +216,7 @@ try {
     $copyResults.Receivable = Copy-FileWithValidation `
         -SourcePath $blankReceivableFile `
         -DestinationPath $targetReceivableFile `
-        -FileDescription "BOE Receivable (Boeing_Export_$dailyStamp.xlsx)"
+        -FileDescription "BOE Receivable (Boeing_Export_$dailyStamp.csv)"
     
     # Copy header file
     $copyResults.Header = Copy-FileWithValidation `

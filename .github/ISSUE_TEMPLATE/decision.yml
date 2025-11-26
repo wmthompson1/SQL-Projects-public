@@ -1,0 +1,70 @@
+name: 📋 Decision Request
+description: Propose a decision that needs team input or approval
+title: "[DECISION] "
+labels: ["decision"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to document decisions that need to be made or have been made.
+
+  - type: input
+    id: decision-title
+    attributes:
+      label: Decision Title
+      description: Brief description of the decision
+      placeholder: e.g., "Standardize SQL naming conventions"
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: What situation requires this decision?
+      placeholder: Explain the background and why this decision is needed
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed-decision
+    attributes:
+      label: Proposed Decision
+      description: What are you proposing we decide?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other options were considered?
+      placeholder: |
+        - Option A: ...
+        - Option B: ...
+    validations:
+      required: false
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Who or what will be affected by this decision?
+      placeholder: |
+        - Teams affected:
+        - Systems affected:
+        - Process changes:
+    validations:
+      required: false
+
+  - type: dropdown
+    id: status
+    attributes:
+      label: Status
+      options:
+        - Proposed - needs discussion
+        - Under review
+        - Approved
+        - Implemented
+    validations:
+      required: true

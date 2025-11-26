@@ -816,15 +816,17 @@ for ($col = 1; $col -le $headers.Count; $col++) {
             $commaCount = 0
             for ($row = 2; $row -le $lastRow; $row++) {
                 $cell = $wb2.ActiveSheet.Cells.Item($row, $col)
-                if ($null -ne $cell.Value2) {
+                if ($null -ne $cell.Value2 -and $cell.Value2 -ne "") {
                     $originalValue = $cell.Value2.ToString()
                     $cleanedValue = $originalValue -replace ',', ''
                     
-                    # Force decimal format for currency (Excel CSV export fix)
-                    # Convert to number and format with 2 decimals
+                    # Force decimal format based on excelFormat from JSON
+                    # Convert to number and format (0.00 for currency, 0.000 for conversion rate)
                     try {
                         $numValue = [double]$cleanedValue
-                        $cell.Value2 = [string]::Format("{0:0.00}", $numValue)
+                        # Use the format from JSON rule
+                        $formatString = "{0:" + $matchedRule.excelFormat + "}"
+                        $cell.Value2 = [string]::Format($formatString, $numValue)
                     } catch {
                         # If not numeric, just remove commas
                         $cell.Value2 = $cleanedValue
@@ -836,7 +838,7 @@ for ($col = 1; $col -le $headers.Count; $col++) {
                 }
             }
             if ($commaCount -gt 0) {
-                Write-Output "  - Formatted $commaCount currency values to 0.00 format"
+                Write-Output "  - Formatted $commaCount currency values using format: $($matchedRule.excelFormat)"
             }
         }
         
@@ -846,6 +848,35 @@ for ($col = 1; $col -le $headers.Count; $col++) {
 
 Write-Output "Formatted $formattedCount columns using JSON rules"
 Write-Output ""
+
+# ################################################################################
+# CLEANUP: Delete empty columns beyond our data
+# ################################################################################
+# Excel UsedRange may include empty columns that cause extra commas in CSV
+# Delete any columns after the last column with data
+
+$lastDataCol = $wb2.ActiveSheet.UsedRange.Columns.Count
+$totalCols = $wb2.ActiveSheet.Columns.Count
+
+# Find the actual last column with a header
+$actualLastCol = 0
+for ($c = 1; $c -le $lastDataCol; $c++) {
+    $headerValue = $wb2.ActiveSheet.Cells.Item(1, $c).Text
+    if ($headerValue -and $headerValue.Trim() -ne "") {
+        $actualLastCol = $c
+    }
+}
+
+# Delete columns after the last header column
+if ($actualLastCol -gt 0 -and $actualLastCol -lt $lastDataCol) {
+    $columnsToDelete = $lastDataCol - $actualLastCol
+    $deleteRange = $wb2.ActiveSheet.Range(
+        $wb2.ActiveSheet.Cells.Item(1, $actualLastCol + 1),
+        $wb2.ActiveSheet.Cells.Item(1, $lastDataCol)
+    ).EntireColumn
+    $deleteRange.Delete() | Out-Null
+    Write-Output "Deleted $columnsToDelete empty columns after column $actualLastCol"
+}
 
 # ################################################################################
 # NOTE: EMPTY ROW FILTERING HANDLED IN SQL
@@ -879,10 +910,11 @@ catch {
 # ###############################################
 # ProcessCompletePath
 
+# Copy to ProcessComplete with standard name
 $complete = Join-Path -Path $ProcessCompletePath -ChildPath $FileName11;
 Write-Output $complete
 
-Copy-Item -Path $FilePath5 -Destination $complete -Force
+Copy-Item -Path $Header -Destination $complete -Force
 If ((Test-Path -Path $complete) -eq $false) {
    throw "Expected File Path  not found"
  
@@ -1039,6 +1071,17 @@ Write-Output "Copying header file: $FilePath5 -> $Header"
 try {
     Copy-Item $FilePath5 -Destination $Header -Force -ErrorAction Stop
     Write-Output "SUCCESS: Header file copied"
+    
+    # Now create timestamped versions with the CURRENT header data
+    $headerTimestampedName = "BOEReceivableHeader_$dateStamp.csv"
+    $headerTimestampedPath = Join-Path -Path $SourcePath -ChildPath $headerTimestampedName
+    $completeTimestamped = Join-Path -Path $ProcessCompletePath -ChildPath $headerTimestampedName
+    
+    Copy-Item -Path $Header -Destination $headerTimestampedPath -Force
+    Write-Output "Header timestamped file created in Process folder: $headerTimestampedPath"
+    
+    Copy-Item -Path $Header -Destination $completeTimestamped -Force
+    Write-Output "Header archived to ProcessComplete: $completeTimestamped"
 }
 catch {
     Write-Warning "FAILED: Could not copy header file: $_"
