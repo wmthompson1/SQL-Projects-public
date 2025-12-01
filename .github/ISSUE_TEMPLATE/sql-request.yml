@@ -1,0 +1,113 @@
+name: 📊 SQL Report Request
+description: Request a new SQL report or data query from IT Data Admin
+title: "[SQL REQUEST] "
+labels: ["sql-request", "finance"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Welcome! 👋
+        
+        Use this form to request SQL reports or data queries. The IT Data Admin team will work with you to deliver what you need.
+
+  - type: input
+    id: requested-by
+    attributes:
+      label: Your Name
+      description: Who is requesting this report?
+      placeholder: e.g., Jane Smith
+    validations:
+      required: true
+
+  - type: input
+    id: department
+    attributes:
+      label: Department
+      description: Which department are you in?
+      placeholder: e.g., Finance, Receivables, Accounting
+    validations:
+      required: true
+
+  - type: textarea
+    id: request
+    attributes:
+      label: What data or report do you need?
+      description: Describe what you're looking for in plain language
+      placeholder: |
+        Examples:
+        - "What are the receivables from July 1 to now?"
+        - "I need an aging report for all customers over 60 days"
+        - "Show me invoice details for customer ABC Corp"
+    validations:
+      required: true
+
+  - type: textarea
+    id: business-purpose
+    attributes:
+      label: What will you use this for?
+      description: Helps us understand the context and priority
+      placeholder: e.g., "Month-end closing", "Customer inquiry", "Management report"
+    validations:
+      required: false
+
+  - type: dropdown
+    id: urgency
+    attributes:
+      label: How soon do you need this?
+      options:
+        - "No rush - whenever convenient"
+        - "This week would be great"
+        - "Within 2-3 days"
+        - "URGENT - need ASAP"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: Will you need this regularly?
+      description: Should this become a saved report?
+      options:
+        - "One-time request"
+        - "Occasionally (a few times per year)"
+        - "Monthly"
+        - "Weekly"
+        - "Daily"
+    validations:
+      required: true
+
+  - type: textarea
+    id: output-format
+    attributes:
+      label: Preferred Output Format
+      description: How would you like to receive the results?
+      placeholder: |
+        - Excel spreadsheet
+        - CSV file
+        - PDF report
+        - Just show me in GitHub
+        - No preference
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-context
+    attributes:
+      label: Additional Details
+      description: Any other information that might be helpful?
+      placeholder: Date ranges, specific customers, account numbers, etc.
+    validations:
+      required: false
+
+  - type: checkboxes
+    id: data-systems
+    attributes:
+      label: Which systems might this involve?
+      description: Check all that apply (best guess is fine)
+      options:
+        - label: Visual Manufacturing (ERP)
+        - label: Receivables / AR
+        - label: Accounting / GL
+        - label: Inventory
+        - label: Sales Orders
+        - label: Not sure / Other
