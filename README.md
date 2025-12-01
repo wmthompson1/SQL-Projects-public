@@ -18,3 +18,8 @@ https://github.com/Skills-Inc-Org/SQL-Projects/search?q=path:%22SQL_Reports%2FWo
 GitBook URL (AI assist):   https://skills-inc.gitbook.io/sql-semantics/?ask=
 
 VS Code Web site:  https://code.visualstudio.com/
+
+## This Path
+C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\README.md
+
+cd "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects"
