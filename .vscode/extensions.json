@@ -3,6 +3,11 @@
   "recommendations": [
     "ms-dotnettools.csharp",
     "ms-dotnettools.csharp-devkit"
+  ],
+  // Mark agent-heavy extensions as unwanted to prefer classic C# and avoid noisy agent UI
+  "unwantedRecommendations": [
+    "github.copilot",
+    "github.copilot-chat",
+    "ms-dotnettools.csharp-devkit"
   ]
 }
-
