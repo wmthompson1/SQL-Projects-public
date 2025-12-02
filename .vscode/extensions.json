@@ -1,13 +1,11 @@
 {
   // Workspace recommendations for extensions
   "recommendations": [
-    "ms-dotnettools.csharp",
-    "ms-dotnettools.csharp-devkit"
+    "ms-dotnettools.csharp"
   ],
-  // Mark agent-heavy extensions as unwanted to prefer classic C# and avoid noisy agent UI
+  // Discourage legacy Copilot and the C# Dev Kit; keep Copilot Chat allowed
   "unwantedRecommendations": [
     "github.copilot",
-    "github.copilot-chat",
     "ms-dotnettools.csharp-devkit"
   ]
 }
