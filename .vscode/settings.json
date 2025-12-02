@@ -1,1 +1,4 @@
-{}
+{
+	"omnisharp.useModernNet": true,
+	"omnisharp.loggingLevel": "debug"
+}

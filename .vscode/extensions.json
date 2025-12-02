@@ -1,10 +1,8 @@
 {
   // Workspace recommendations for extensions
   "recommendations": [
-    "ms-dotnettools.csharp"
-  ],
-  // Mark C# Dev Kit as an unwanted recommendation so VS Code will suggest disabling it
-  "unwantedRecommendations": [
+    "ms-dotnettools.csharp",
     "ms-dotnettools.csharp-devkit"
   ]
 }
+
