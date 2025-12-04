@@ -4,7 +4,11 @@
 -- Date      Modified By      Change Description
 -- ---------- ------------------ ------------------------------------------------------------
 -- 11/04/2025 William Thompson  Created script to compare OPERATION_TYPE_BINARY.BITS with OPERATION_BINARY.BITS
--- 12/-1/2024 William Thompson  removed join  AND o.RESOURCE_ID    = ot.RESOURCE_ID
+-- 12/01/2025 William Thompson  removed join  AND o.RESOURCE_ID    = ot.RESOURCE_ID
+-- 12/02/2025 William Thompson  added join to Katies_Op_Types to limit to only relevant operation types
+
+
+-- *** IMPORTANT NOTES/ASSUMPTIONS/CONSIDERATIONS: ***
 -- note: within tail text, only the rightmost portion containing line breaks is relevant
 -- note: requirements will be limited in scope to only this module to enable verification of binary comparison.
 -- note: assume that two crlfs follow each spec line, do not validate those crlfs.
@@ -23,23 +27,24 @@ IF OBJECT_ID('tempdb..#Results') IS NOT NULL DROP TABLE #Results;
 
 
 
-DECLARE @WorkorderBaseId   varchar(50)  = NULL;      -- e.g., '5000-6730-001'
+DECLARE @WorkorderBaseId   varchar(50)  = '635TEST-LOS-EME-ALBRKTP';      -- e.g., '5000-6730-001'
 -- DECLARE @OperationTypeId   varchar(50)  = NULL;      -- e.g., '02GN089', '5793'
 -- OPTYPE
 DECLARE @ResourceId        varchar(100) = NULL;      -- e.g., 'P1F1-PNT-PRIME'
 DECLARE @WorkorderType     char(1)      = 'M';      -- e.g., 'M'
-DECLARE @TEST INT       = 1;        -- 1 = include all operation types, 0 = filter by @OPTYPE
+DECLARE @TEST INT       = 0;        -- 1 = include all operation types, 0 = filter by @OPTYPE
 --  -- DECLARE @OPTYPE NVARCHAR(MAX) = '5793'; -- Example: '5793'  'NULL';
-DECLARE @OPTYPE NVARCHAR(MAX) = NULL; -- Example: '5793'  'NULL'.
+DECLARE @OPTYPE NVARCHAR(MAX) = '5793'; -- Example: '5793'  NULL.
 
 ;WITH J AS
 (
-    SELECT  top 1000
+    SELECT  top 100000
         -- Keys (adjust if needed)
-        -- ob.WORKORDER_BASE_ID, ob.WORKORDER_LOT_ID, ob.WORKORDER_SPLIT_ID,
+        o.WORKORDER_BASE_ID
+        --, ob.WORKORDER_LOT_ID, ob.WORKORDER_SPLIT_ID,
         -- ob.WORKORDER_SUB_ID,
 
-        'x' as note   
+        ,'x' as note   
         , o.WORKORDER_BASE_ID + '-' + o.WORKORDER_lot_ID + '-' + o.WORKORDER_split_ID + '-' + o.WORKORDER_sub_ID AS FULL_LOT_ID
         
         ,  ob.WORKORDER_TYPE,   ob.SEQUENCE_NO,
@@ -70,8 +75,12 @@ DECLARE @OPTYPE NVARCHAR(MAX) = NULL; -- Example: '5793'  'NULL'.
      AND ob.WORKORDER_TYPE    = o.WORKORDER_TYPE
      AND ob.SEQUENCE_NO       = o.SEQUENCE_NO
 
+join [sql-bi-1].[Staging].[dbo].[Katies_Op_Types] ko
+on o.OPERATION_TYPE = ko.OPERATION_TYPE_ID
+
+
     WHERE 1=1
-    --   AND (@WorkorderBaseId IS NULL OR o.WORKORDER_BASE_ID = @WorkorderBaseId)
+     AND (@WorkorderBaseId IS NULL OR o.WORKORDER_BASE_ID = @WorkorderBaseId)
     --AND (@OperationTypeId IS NULL OR o.OPERATION_TYPE    = @OperationTypeId)
     and o.OPERATION_TYPE in (select id from [SQL-BI-1].[Staging].[dbo].[MyTable])
     and ( o.OPERATION_TYPE in (@OPTYPE)
@@ -134,7 +143,8 @@ Result AS
     FROM Bodies AS B
 )
 SELECT
-    --WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID,
+    WORKORDER_BASE_ID
+    --, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID,
     FULL_LOT_ID,
     WORKORDER_TYPE, SEQUENCE_NO, OPERATION_TYPE_ID, RESOURCE_ID,
     OTB_TrailingLen, OB_TrailingLen,
