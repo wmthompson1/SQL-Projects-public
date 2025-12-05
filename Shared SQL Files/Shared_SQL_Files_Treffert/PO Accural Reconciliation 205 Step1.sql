@@ -1,3 +1,5 @@
+-- File path: Shared SQL Files/Shared_SQL_Files_Treffert/PO Accural Reconciliation 205 Step1.sql
+
 --> step1
 use july19
 go

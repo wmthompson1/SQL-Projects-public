@@ -1,5 +1,13 @@
-    -- file path: SQL_Reports/Visual Enterprise Financial Reports/AP App Invoices without Vouchers.sql
--- data models: AP_App  
+SELECT top 100
+ S.INVOICE_ID,
+ R.[invoiceNo], R.[fileID]
+-- R.INVOICE_ID, R.INVOICE_DATE, R.AMOUNT, R.CUSTOMER_ID
+
+FROM [sql-lab-1].dbrms.dbo.tblInvoice R
+LEFT JOIN dbo.shipper s ON s.INVOICE_ID = R.invoiceNo
+WHERE s.INVOICE_ID IS NULL
+;
+
 SELECT 
       F.SECTION
     , P.PNO AS 'PO'
@@ -14,6 +22,3 @@ WHERE F.SECTION = 'INVOICE'
     AND F.VOUCHER# IS NULL
     -- AND F.ID  >= '3202'
     And F.ID >= '178539'
-
-
-

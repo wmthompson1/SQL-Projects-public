@@ -1,3 +1,6 @@
+-- file path: Shared SQL Files/Shared_SQL_Files_Treffert/AP App Receiver to Voucher Information.sql
+
+
 --DECLARE @POID NVARCHAR(10) = '143708'
 --SELECT * 
 --From dbRMS.dbo.Tblfiles F

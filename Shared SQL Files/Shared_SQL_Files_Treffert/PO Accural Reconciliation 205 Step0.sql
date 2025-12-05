@@ -1,5 +1,7 @@
 use july19
 go
+-- ├──
+--     ├──
 
 select *
 from payable_line pl
