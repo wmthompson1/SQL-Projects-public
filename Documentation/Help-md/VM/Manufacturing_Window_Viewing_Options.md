@@ -146,6 +146,19 @@ Use up and down keys to move back and forth between operations and
 material requirements in a leg. Use left and right keys to move between
 legs.
 
+#### Graphical view: card layout details
+
+- Each object (header, operation, material, leg) is represented by an index-card showing key fields such as ID, Quantity, and Status.
+- Cards are color-coded by object type; configure colors under Options → Color Preferences.
+- Card stacking and overlap are controlled by Size Preferences and the Top Down / Header Cards behind Other Cards settings.
+- Navigation: click a card to select, use arrow keys to move, double-click to open the detail dialog; use the context menu for quick actions (Insert, Delete, Copy From).
+
+#### Two-window material panel behavior
+
+- In two-window modes the material pane displays only materials for the currently-selected operation, allowing focused edits.
+- Selecting a different operation refreshes the material pane; edits made in the pane affect that operation's material requirements directly.
+- Use the material pane to adjust quantities, costs, vendor info, and to add non-inventory specification lines when needed.
+
 ### Selecting Objects in Text Viewing Mode
 
 To select any object, click its line. A right-pointing arrow is

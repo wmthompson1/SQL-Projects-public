@@ -5,6 +5,30 @@ Manufacturing Window Concepts
 
 # Manufacturing Window Concepts
 
+<!-- Short Navigation TOC: insert for quick navigation -->
+## Short Navigation TOC
+
+- [Manufacturing Window — overview](#manufacturing-window)
+  - [Understanding the Manufacturing Window Display](#understanding-the-manufacturing-window-display) — `Manufacturing_Window_Viewing_Options.md`
+    - [Selecting Views](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-views)
+    - [Graphical View → Graphical Options](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-graphical-view)
+    - [Text View / Two-window Views](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-text-view)
+    - [Selecting Objects / Size & Color Preferences](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-objects)
+      - [Graphical view card layout and navigation](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-graphical-view)
+      - [Two-window material panel behavior](Documentation/Help-md/VM/Manufacturing_Window_Viewing_Options.md#selecting-two-window-views)
+  - [Manufacturing Window Concepts](#manufacturing-window-concepts) — `Manufacturing_Window_Concepts.md`
+    - [Engineering Masters](Documentation/Help-md/VM/Manufacturing_Window_Concepts.md#engineering-masters)
+    - [Quote Masters](Documentation/Help-md/VM/Manufacturing_Window_Concepts.md#quote-masters)
+    - [Work Orders](Documentation/Help-md/VM/Manufacturing_Window_Concepts.md#work-orders)
+  - [The Master / Work Order & Starting the Window](Documentation/Help-md/VM/Starting_the_Manufacturing_Window.md)
+  - [Operations](Documentation/Help-md/VM/Adding_Operations_to_a_Quick_Quote.md)
+    - [Operation fields: Resource, Run Type, Setup/Run Time, Costs]
+  - [Material Requirements](Documentation/Help-md/VM/Adding_Material_Requirements_to_an_Operation_in_Quick_Quote.md)
+  - [Co-Products](Documentation/Help-md/VM/Allocating_Co-products_to_Demand.md)
+  - [User-defined Help](Documentation/Help-md/VM/User_defined_Help_Files_Manufacturing_Window.md)
+
+<!-- end TOC -->
+
 The Manufacturing Window and the objects it maintains
 are designed to achieve the following goals:
 
