@@ -32,6 +32,21 @@ Manufacturing Window Concepts
 The Manufacturing Window and the objects it maintains
 are designed to achieve the following goals:
 
+## Operations — Expanded (Level 4)
+
+The Operations branch defines the discrete work steps in an engineering
+master or work order. Key level-4 details and fields:
+
+- **Resource Identification:** `Resource ID` (internal resource) and `Service ID` (subcontractor). Resource lookup pulls cost defaults from Shop Resource Maintenance.
+- **Run Type & Measurement:** `Run Type` values (HRS/PC, PCS/HR, MIN/PC, PCS/MIN, HRS/LOAD, LOADS/HR, DAYS/PC, PCS/DAY, etc.) and how `Run` and `Load Size` interact to define throughput.
+- **Setup & Run Time:** `Setup Hours`, `Run Time`, `Move Hrs`, and `Min Move Qty` that influence scheduling and concurrency.
+- **Cost Structure:** `Setup cost/hour`, `Run cost/hour`, `Run cost/unit`, `Fixed Burden`, `Setup Burden/hr`, `Run Burden/unit`, `Burden %` — how these contribute to operation-level costing.
+- **Scrap / Yield:** `Scrap %`, `Yield %`, and fixed `Scrap Units` handling for loss and effective quantity calculations.
+- **Service/Transit Fields:** `Transit Days`, `Service base chg`, `Service min chg` for subcontracted operations.
+- **Auxiliary Fields:** `Drawing ID`, `Rev`, `Text` (operation notes/specs), and `Setup Resource ID` / `Run Resource ID` when operation types supply defaults.
+
+See also: [Adding Operations to a Quick Quote](Adding_Operations_to_a_Quick_Quote.md) and [Using the Manufacturing Window](Using_the_Manufacturing_Window.md).
+
 * Manufacture standard parts
   and custom products using the same flexible tool set. The Manufacturing
   Window provides a number of options for specifying fabrication
