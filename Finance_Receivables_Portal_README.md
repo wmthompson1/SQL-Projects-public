@@ -16,7 +16,7 @@ This is the **single entry point** for Finance and Receivables team members to r
 **Option A: GitHub Pages (Recommended)**
 1. Push this file to the repository
 2. Enable GitHub Pages in repo settings
-3. Share the URL: `https://skills-inc-org.github.io/SQL-Projects/Finance_Receivables_Portal.html`
+3. Share the URL: `https://github.com/Skills-Inc-Org/SQL-Projects/blob/main/Finance_Receivables_Portal.html`
 
 **Option B: Local Network**
 1. Copy `Finance_Receivables_Portal.html` to a shared network drive

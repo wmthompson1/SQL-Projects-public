@@ -1,3 +1,5 @@
+--fike path: SQL_Data_Models/AP_App/AP App Invoices.sql
+
 SELECT top 100
  S.INVOICE_ID,
  R.[invoiceNo], R.[fileID]
