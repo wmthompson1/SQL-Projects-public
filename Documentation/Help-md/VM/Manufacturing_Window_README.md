@@ -36,6 +36,54 @@ Repository & data model pointers (context)
 - Authoritative DDL extracts (per-table CREATE scripts): `Documentation/Data Models/ddl/schema-extract/output/LIVE/`.
 - Guessed templates (backed up): `Documentation/Data Models/ddl/templates_backup/`.
 
+---
+
+Manufacturing Journals index (top node)
+
+- Top node: `Documentation/Help-md/VM/Manufacturing_Journals.md`
+  - `Documentation/Help-md/VM/Purchase_Journals.md`
+  - `Documentation/Help-md/VM/Work_In_Process_WIP_Journals.md`
+  - `Documentation/Help-md/VM/Finished_Goods_Journals.md`
+  - `Documentation/Help-md/VM/Shipments_Journals.md`
+  - `Documentation/Help-md/VM/Adjustment_Journals.md`
+  - `Documentation/Help-md/VM/Indirect_Labor_Journals.md`
+  - `Documentation/Help-md/VM/Example_Postings_for_Journals.md`
+  - `Documentation/Help-md/VM/User_defined_Help_Files_Costing_Utilities.md`
+
+Mermaid graph (Manufacturing Journals → edges)
+
+```mermaid
+graph TD
+  MJ["Manufacturing Journals"]
+  PJ["Purchase Journals"]
+  WIP["Work In Process (WIP) Journals"]
+  FG["Finished Goods Journals"]
+  SJ["Shipments Journals"]
+  AJ["Adjustment Journals"]
+  IL["Indirect Labor Journals"]
+  EX["Example Postings for Journals"]
+  UDF["User-defined Help (Costing Utilities)"]
+
+  MJ --> PJ
+  MJ --> WIP
+  MJ --> FG
+  MJ --> SJ
+  MJ --> AJ
+  MJ --> IL
+  MJ --> EX
+  MJ --> UDF
+
+  %% annotate edges that map to financial/inventory flows
+  SJ -->|feeds| Receivable["Receivable / Invoice edges"]
+  PJ -->|feeds| Receiving["Receiving / PO edges"]
+  WIP -->|feeds| GL["Inventory / WIP -> GL"]
+  FG -->|feeds| GL
+  AJ -->|feeds| GL
+  IL -->|feeds| GL
+```
+
+You can click the file links above (they are in the same folder) to open the detailed pages for each journal.
+
 Suggested next steps
 
 - Review sample converted markdown files under `Documentation/Help-md/VM/` and adjust link/image paths if needed.

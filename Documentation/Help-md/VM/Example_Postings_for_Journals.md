@@ -12,6 +12,16 @@ This should be decided early on in the implementation of the system.
 
 The following transaction templates are used for each journal type:
 
+## Quick TOC
+
+- [Work Order Journals](#work-order-journals)
+- [Finished Goods Receipts Journals](#finished-goods-receipts-journals)
+- [Sales (Shipments) Journals](#sales-shipments-journals)
+- [Inventory Adjustments Journals](#inventory-adjustments-journals)
+- [Indirect Labor Journals](#indirect-labor-journals)
+- [Purchase Receipt Journals](#purchase-receipt-journals)
+
+
 ## Work Order Journals
 
 First attempts to use work order WIP accounts, then the Product
