@@ -1,0 +1,81 @@
+Inventory Transaction Costing
+
+
+
+
+# Inventory Transaction Costing
+
+The Inventory Transaction option from the Costing
+Utilities window causes incoming transactions to be related to and
+provide cost to outgoing transactions. It is only required when you
+are running in Actual Costing mode.
+
+Actual Costing is carried out by assigning the incoming costs represented
+by purchased part receipts or adjustments to inventory to outgoing
+costs represented by material issues, shipments, and adjustments to
+inventory. Before any cost can be assigned to an outgoing transaction,
+the system must first have a permanent cost for an incoming transaction.
+
+The primary source of incoming costs is the purchased part receipt.
+Another source of incoming costs is a work order receipt from work
+in process. We already know that labor tickets are given a permanent
+cost when they are created. Purchased part receipts may not be given
+a permanent cost at time of receipt. If the system is set to cost
+purchased part receipts from Purchase Orders, then the transaction
+is given its final value upon creation. If the system is set to cost
+purchased part receipts from A/P Invoices, then the transaction must
+wait for its permanent cost until the matching A/P invoice is entered.
+
+After the purchased part inventory receipt is given its final, permanent
+value, the system distributes costs from that transaction. This is
+done by connecting the receipt to one or more outgoing transactions
+for the same part. For instance, a receipt of 1000 parts can be distributed
+to an issue of 1000 parts, 10 issues of 100 parts, or, 1000 issues
+of 1 part, or any combination in between.
+
+The order of assignment of transactions is First In, First Out (i.e.
+FIFO).
+
+The Inventory Transaction Costing function examines each inventory
+parts incoming inventory transactions that have not been fully distributed
+and assigns them to the same parts outgoing inventory transactions
+that have not been previously assigned.
+
+The system maintains a table by which it can find all affected transactions
+when a given value has changed. For instance, a change to an A/P Invoice
+after its original entry would potentially have an affect which proceeds
+all the way to the Cost of Goods Sold account, assuming that the finished
+part, which used the purchased part being costed, has already been
+shipped.
+
+As purchased part receipts are costed, material issues are costed.
+In turn, material issues are part of the cost of a work order. Thus,
+the cost of these material issues affects the receipt costs for parts
+coming from the work order. Once all details of the work order are
+costed, the receipts of the work order can be costed. Those costs
+are then distributed to either material issue costs (when the part
+is used in the fabrication of another work order) or to shipment costs
+(when the part is a finished good and is shipped to a customer).
+
+The process of costing inventory transactions spirals up the bill
+of material and routing (i.e. engineering structure) until it becomes
+part of inventory or cost of goods sold.
+
+There are situations when the system overrides the FIFO rules normally
+applied. When a purchased part is linked to a work order material
+requirement, the system knows which material issue should be given
+the costs represented by the purchased part receipt. The link is used
+to create the inventory issue immediately upon creation of the receipt.
+At the same time, the distribution is created, even though we may
+not know the receipts permanent cost. When the permanent cost is
+finally entered. The system updates the corresponding issue transactions
+for the permanent cost.
+
+Similarly, when a work order is specified on a Customer Order line
+item, the system knows which shipment should be given the costs which
+result from the work order (ultimately). The cost distribution (described
+above) is created immediately upon creation of the shipment transaction.
+When the work order is given its permanent cost the cost is carried
+to the related shipments.
+
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help

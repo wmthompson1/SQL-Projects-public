@@ -1,5 +1,11 @@
 Data Models (DDL) — Receivables-related tables
 
+Authoritative replacement note (2025-12-05):
+- The guessed DDL templates in this folder were replaced with authoritative CREATE scripts extracted from the `LIVE` database using the schema-extract tool.
+- Source files: `Documentation/Data Models/ddl/schema-extract/output/LIVE/` (per-table scripts, e.g. `dbo.RECEIVABLE.sql`).
+- Replaced files: `RECEIVABLE.sql`, `RECEIVABLE_LINE.sql`, `CUSTOMER.sql`, `SHIPPER.sql`, `SHIPPER_LINE.sql`, `INVENTORY_TRANS.sql`, `INV_TRANS_DIST.sql`, `CUST_ORDER_LINE.sql`, `CUSTOMER_ORDER.sql`.
+- Originals backed up to: `Documentation/Data Models/ddl/templates_backup/`.
+
 This folder contains initial DDL templates for tables referenced by `Receivables.sql`.
 
 Purpose:

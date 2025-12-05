@@ -1,0 +1,7 @@
+# Minimal packages required to run html_to_md.py
+# Install with: python -m pip install -r requirements.txt
+markitdown
+markdownify
+html2text
+beautifulsoup4
+lxml
