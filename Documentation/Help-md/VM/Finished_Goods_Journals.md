@@ -5,6 +5,41 @@ Finished Goods Journals
 
 # Finished Goods Journals
 
+The Finished Goods Journals record summary transactions created by the Costing Utilities when work in process is received into finished goods inventory. These distributions summarize the movement of value from WIP into Finished Goods and prepare amounts for posting to the General Ledger.
+
+## Quick TOC
+
+- [Overview](#overview)
+- [Receipt Processing & Distribution Creation](#receipt-processing--distribution-creation)
+- [Actual vs Projected Costing Behavior](#actual-vs-projected-costing-behavior)
+- [Manufacturing Variances and Adjustments](#manufacturing-variances-and-adjustments)
+- [GL Posting / Account Selection Rules](#gl-posting--account-selection-rules)
+- [Examples & User-defined Help](#examples--user-defined-help)
+
+## Overview
+
+Finished Goods distributions are generated when items are moved from work in process to finished goods. These distributions reflect the accumulated material, labor, burden, and service costs that are transferred into finished goods inventory value.
+
+## Receipt Processing & Distribution Creation
+
+When finished goods are received from a work order, the Costing Utilities summarize all costs on the work order and create distributions that debit Finished Goods inventory and credit WIP or other appropriate accounts depending on your interface configuration.
+
+## Actual vs Projected Costing Behavior
+
+Under Actual costing, the finished goods receipt will use the accumulated actual costs from the work order. Under Projected costing, receipts may use the estimated unit costs in effect at the time of the movement.
+
+## Manufacturing Variances and Adjustments
+
+If there are differences between expected (standard or projected) and actual costs, the Costing Utilities may generate variance distributions. Variance handling depends on the costing method and the configuration of product-code and interface accounts.
+
+## GL Posting / Account Selection Rules
+
+Account selection for finished goods receipts follows the priority: product-code accounts → part accounts → default inventory accounts from the GL Interface table. Credit/debit behavior follows the templates described in the Example Postings documentation.
+
+## Examples & User-defined Help
+
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+
 The Finish Goods Journal contains a listing of the
 summary transactions created by the Costing Utilities as a result
 of processing inventory transactions of work orders. These are receipts

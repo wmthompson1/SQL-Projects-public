@@ -1,0 +1,25 @@
+graph TD
+  MJ["Manufacturing Journals"]
+  PJ["Purchase Journals"]
+  WIP["Work In Process (WIP) Journals"]
+  FG["Finished Goods Journals"]
+  SJ["Shipments Journals"]
+  AJ["Adjustment Journals"]
+  IL["Indirect Labor Journals"]
+  EX["Example Postings for Journals"]
+  UDF["User-defined Help (Costing Utilities)"]
+
+  MJ --> PJ
+  MJ --> WIP
+  MJ --> FG
+  MJ --> SJ
+  MJ --> AJ
+  MJ --> IL
+  MJ --> EX
+  MJ --> UDF
+
+  SJ -->|feeds| Receivable["Receivable / Invoice edges"]
+  PJ -->|feeds| Receiving["Receiving / PO edges"]
+  WIP -->|feeds| GL["Inventory / WIP -> GL"]
+  FG -->|feeds| GL
+  AJ -->|feeds| GL
