@@ -209,3 +209,17 @@ __marimo__/
 # Local env file with secrets
 .env
 .env.example
+
+# macOS
+.DS_Store
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+
+# Virtualenvs
+.venv/
+venv/
+
+# Node modules
+node_modules/
