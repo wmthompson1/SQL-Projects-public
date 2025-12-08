@@ -1,4 +1,6 @@
 --fike path: SQL_Data_Models/AP_App/AP App Invoices.sql
+-- note AP Automation is a different perspective, and a different schema.
+-- It's a dfferent DB as well: dbRMS vs Live, on sql-lab-1.  
 
 SELECT top 100
  S.INVOICE_ID,
