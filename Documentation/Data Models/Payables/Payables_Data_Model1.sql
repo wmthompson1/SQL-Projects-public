@@ -1,5 +1,7 @@
 /**
 Payables Data Model 1
+
+-- looking for vouchers not yet in AP Automation
 -- SQL queries to explore Payables data model relationships 
 -- file path: Documentation/Data Models/Payables/Payables_Data_Model1.sql
 
@@ -10,56 +12,127 @@ so 2025-07-01 as today is 2025-12-05
 -- also like the use of cte for the aging summary   
 **/
 
-declare @AsOfDate datetime = convert(date, '2025-12-01');
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+IF OBJECT_ID('tempdb..#Results') IS NOT NULL DROP TABLE #Results
+
+
+declare @AsOfDate datetime = convert(date, '2024-01-01');
 DECLARE @VendorID nvarchar(15) = NULL;  -- set to specific vendor id or NULL for all
 DECLARE @SiteID nvarchar(15) = NULL;    -- set to specific site id or NULL for all
 -- Date window for data extracts (defaults to 1 month up to @AsOfDate)
 DECLARE @StartDate DATE = DATEADD(day, -3 , @AsOfDate);
-DECLARE @EndDate DATE = @AsOfDate;
-declare @topper int = 1000;  -- set to limit rows returned, or NULL for no limit
+DECLARE @EndDate DATE = getdate();
+declare @topper int = 1000000;  -- set to limit rows returned, or NULL for no limit
 
 
-SELECT top (@topper)
+SELECT -- top (@topper)
  POL.PURC_ORDER_ID
 , POL.LINE_NO AS PO_LINE
 , RL.RECEIVER_ID
 , RL.LINE_NO AS RCVR_LINE
 , PL.VOUCHER_ID
 , PL.LINE_NO AS VCHR_LINE
---, pol.*
-, -- dateadd(day, VPO.PROMISED_DATE_DAYS, VPO.ORDER_DATE) AS PROMISED_DATE
-  (case 
-        when RL.RECEIVER_ID is not null then 
-            case 
-                when PL.VOUCHER_ID is not null then 1 
-                else 0 
-            end
-        else 0 
-      end) AS IS_INVOICED
-      -- get payable date 
-        , COALESCE(P.POSTING_DATE, P.INVOICE_DATE) AS PAYABLE_DATE
-     -- get purchase order date
-      , PO.ORDER_DATE AS PURCHASE_ORDER_DATE
+, po.ORDER_DATE
+-- --, pol.*
+-- , -- dateadd(day, VPO.PROMISED_DATE_DAYS, VPO.ORDER_DATE) AS PROMISED_DATE
+--   (case 
+--         when RL.RECEIVER_ID is not null then 
+--             case 
+--                 when PL.VOUCHER_ID is not null then 1 
+--                 else 0 
+--             end
+--         else 0 
+--       end) AS IS_INVOICED
+--       -- get payable date 
+--         , COALESCE(P.POSTING_DATE, P.INVOICE_DATE) AS PAYABLE_DATE
+--      -- get purchase order date
+--       , PO.ORDER_DATE AS PURCHASE_ORDER_DATE
 
+into #Results
     FROM PURC_ORDER_LINE POL
     INNER JOIN PURCHASE_ORDER PO ON POL.PURC_ORDER_ID = PO.ID
-    INNER JOIN RECEIVER_LINE RL
+    left JOIN RECEIVER_LINE RL
         ON POL.PURC_ORDER_ID = RL.PURC_ORDER_ID
         AND POL.LINE_NO = RL.PURC_ORDER_LINE_NO AND RL.RECEIVED_QTY > 0 -- UPD 8/7
 
     INNER JOIN RECEIVER R  ON RL.RECEIVER_ID = R.ID
-Left Outer Join Live.dbo.PAYABLE_LINE PL
+
+Left  Join Live.dbo.PAYABLE_LINE PL
     on PL.PURC_ORDER_ID = POL.PURC_ORDER_ID
     and PL.PURC_ORDER_LINE_NO = POL.LINE_NO
-Left Outer Join Live.dbo.PAYABLE P
-    on PL.PURC_ORDER_ID = POL.PURC_ORDER_ID
-    and PL.PURC_ORDER_LINE_NO = POL.LINE_NO
+    
+ left join   Live.dbo.PAYABLE P
+ ON PL.VOUCHER_ID = P.VOUCHER_ID
+-- Left Outer Join Live.dbo.PAYABLE P
+--     on p.PURC_ORDER_ID = POL.PURC_ORDER_ID
+--     and p.PURC_ORDER_LINE_NO = POL.LINE_NO
 WHERE 1=1
 -- and POL.PURC_ORDER_ID IN ('118367', 'B-2019PACWEL', 'B-2020PACWEL')
 and PO.STATUS <> 'CANCELLED'
-and (COALESCE(P.POSTING_DATE, P.INVOICE_DATE) BETWEEN @StartDate AND @EndDate)
-ORDER BY POL.PURC_ORDER_ID, POL.LINE_NO;
+and po.ORDER_DATE BETWEEN @StartDate AND @EndDate
+--and (COALESCE(P.POSTING_DATE, P.INVOICE_DATE) BETWEEN @StartDate AND @EndDate)
+ORDER BY POL.PURC_ORDER_ID, POL.LINE_NO,  PL.VOUCHER_ID, PL.LINE_NO
+          ;
 
+--select * from #results
+
+with filter_files as(
+SELECT 
+      F.SECTION
+    --, P.PNO AS 'PO'
+    , F.COMPANYID AS 'VENDOR_ID'
+    , F.DOCNO AS 'DOC'
+    , F.[FILENAME] AS 'FILE_NAME'
+    , F.DDATE AS 'UPLOAD_DATE'
+    , F.[VOUCHER#]
+    , F.ID
+FROM [sql-lab-1].dbrms.[dbo].[tblFiles] F
+
+-- join #results re
+-- on p.PNO = re.PURC_ORDER_ID
+-- and F.[VOUCHER#] = re.VOUCHER_ID
+WHERE 1=1
+   and F.SECTION = 'INVOICE'
+
+  AND F.[VOUCHER#] IS NULL
+--     -- AND F.ID  >= '3202'
+And F.ID >= '178539'
+)  
+select 
+      F.SECTION
+    , P.PNO AS 'PO'
+    , F.VENDOR_ID
+    , F.DOC
+    , F.FILE_NAME
+    , F.UPLOAD_DATE
+    , F.[VOUCHER#]
+    , F.ID
+
+from filter_files F
+LEFT JOIN [sql-lab-1].dbrms.[dbo].[tblPO] P
+ON P.FILEID = F.ID
+
+  and p.pno in (select PURC_ORDER_ID from #results group by PURC_ORDER_ID)
+;   
+
+-- SELECT 
+--       F.SECTION, count(*) AS RECORD_COUNT
+-- FROM [sql-lab-1].dbrms.[dbo].[tblFiles] F
+-- LEFT JOIN [sql-lab-1].dbrms.[dbo].[tblPO] P
+-- ON P.FILEID = F.ID
+-- -- join #results re
+-- -- on p.PNO = re.PURC_ORDER_ID
+-- -- and F.[VOUCHER#] = re.VOUCHER_ID
+-- WHERE 1=1
+--   --  and F.SECTION = 'INVOICE'
+--   and p.pno in (select distinct PURC_ORDER_ID from #results)
+--   --   AND F.[VOUCHER#] IS NULL
+-- -- --     -- AND F.ID  >= '3202'
+-- -- And F.ID >= '178539'
+-- group by f.section
+-- order by f.section
 
 
     --  - Invoice-level extract with aging buckets
