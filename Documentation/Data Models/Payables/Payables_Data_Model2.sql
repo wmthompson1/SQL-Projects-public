@@ -1,83 +1,147 @@
-/**
-file path: Documentation/Data Models/Payables/Payables_Data_Model2.sql
-Payables Data Model 2
--- SQL queries to explore Payables data model relationships 
--- file path: Documentation/Data Models/Payables/Payables_Data_Model1.sql
-
-nice work - I like how you placed @parameter is null or field = @parameter to make it optional
-that will save a lot of keyboardtime.
-One note, I like to add the relevant date filter for each query, I will typically set it manually for 6 month max 
-so 2025-07-01 as today is 2025-12-05
--- also like the use of cte for the aging summary   
-**/
-
-declare @AsOfDate datetime = convert(date, '2025-12-01');
-DECLARE @VendorID nvarchar(15) = NULL;  -- set to specific vendor id or NULL for all
-DECLARE @SiteID nvarchar(15) = NULL;    -- set to specific site id or NULL for all
--- Date window for data extracts (defaults to 1 month up to @AsOfDate)
-DECLARE @StartDate DATE = DATEADD(day, -3 , @AsOfDate);
-DECLARE @EndDate DATE = @AsOfDate;
-declare @topper int = 1000;  -- set to limit rows returned, or NULL for no limit
+--USE [DataWarehouse]
+--GO
 
 
-SELECT top (@topper)
- POL.PURC_ORDER_ID
-, POL.LINE_NO AS PO_LINE
-, RL.RECEIVER_ID
-, RL.LINE_NO AS RCVR_LINE
-, PL.VOUCHER_ID
-, PL.LINE_NO AS VCHR_LINE
--- --, pol.*
--- , -- dateadd(day, VPO.PROMISED_DATE_DAYS, VPO.ORDER_DATE) AS PROMISED_DATE
---    (case 
---         when RL.RECEIVER_ID is not null then 
---             case 
---                 when PL.VOUCHER_ID is not null then 1 
---                 else 0 
---             end
---         else 0 
---       end) AS IS_INVOICED
---       -- get payable date 
---         ,  (P.POSTING_DATE) AS PAYABLE_DATE
---      -- get purchase order date
---       ,  (VPO.ORDER_DATE) AS PURCHASE_ORDER_DATE
+-- based on Supplier_Perf_Shafer_2018.sql
+-- 1160-60
+-- ATUR012022A0001
 
-FROM Live.dbo.PURC_ORDER_LINE POL
-JOin Live.dbo.PURCHASE_ORDER VPO
-     on VPO.ID = POL.PURC_ORDER_ID
-Join Live.dbo.RECEIVER_LINE RL
-    on RL.PURC_ORDER_ID = POL.PURC_ORDER_ID
-    and RL.PURC_ORDER_LINE_NO = POL.LINE_NO
-Join Live.dbo.RECEIVER R
-    on RL.PURC_ORDER_ID = POL.PURC_ORDER_ID
-    and RL.PURC_ORDER_LINE_NO = POL.LINE_NO
--- Left Outer Join Live.dbo.PAYABLE_LINE PL
---     on PL.PURC_ORDER_ID = POL.PURC_ORDER_ID
---     and PL.PURC_ORDER_LINE_NO = POL.LINE_NO
--- Left Outer Join Live.dbo.PAYABLE P
---     on PL.PURC_ORDER_ID = POL.PURC_ORDER_ID
---     and PL.PURC_ORDER_LINE_NO = POL.LINE_NO
-WHERE 1=1
--- and POL.PURC_ORDER_ID IN ('118367', 'B-2019PACWEL', 'B-2020PACWEL')
-and VPO.STATUS <> 'CANCELLED'
-and (COALESCE(P.POSTING_DATE, P.INVOICE_DATE) BETWEEN @StartDate AND @EndDate)
--- GROUP BY POL.PURC_ORDER_ID, POL.LINE_NO,
---          RL.RECEIVER_ID,
---          RL.LINE_NO,
---          PL.VOUCHER_ID,
---          PL.LINE_NO
-ORDER BY POL.PURC_ORDER_ID, POL.LINE_NO
-         ;
+-- 167375
+-- Exclude TMXDIV
+-- START END
+-- + only no minus's 
 
-    -- -- Parameters: reuse `@AsOfDate`, `@SiteID`, `@VendorID` declared above in this file.
-    -- -- (Set @AsOfDate manually for the desired lookback window, e.g. '2025-07-01')
-    --  Assumptions:
-    --  - Main invoice header table: Live.dbo.PAYABLE (alias P)
-    --  - Invoice lines: Live.dbo.PAYABLE_LINE (alias PL)
-    --  - Distributions: Live.dbo.PAYABLE_DIST (alias PD)
-    --  - Payments: Live.dbo.CASH_DISBURSEMENT (alias CD) and
-    --      Live.dbo.CASH_DISBURSE_LINE (alias CDL) which link to vouchers
-    --  - Vendor master: Live.dbo.VENDOR (alias V)
-    --  - Aging base uses @AsOfDate and POSTING_DATE (falls back to INVOICE_DATE)
-    --  - Adjust field names if your Live schema uses different column names.
-    --  ------------------------------------------------------------------ */
+/**********************************************************************************************
+Description:
+0. payables flow with receivers flow 
+1. grain of Received data should be by vendor, po, po line, and receiver
+2. IQM grain is vendor, po, po line
+3. Requirement change 8/12 will roll up 
+4. Current versions of reports are probably not going to be in test plan
+
+Note:
+ previous processes and reports may have defects
+
+Date    Modified By     Change Description
+---------- ------------------ ------------------------------------------------------------
+2025-08-11    William        Created - based on 750 Supplier_Perf_Shafer_2018.sql
+2025-08-22    William      - adjusted due date  on_time_vs_late
+2025-09-02    William      -= [sql-bi-1].DATAWAREHOUSE.DBO.
+
+    1. Receiver.Received_Date for date range 
+    2. Included in data 
+    3. Vendor ID 
+    4. PO# 
+    5. PO Line  
+    6. Receiver ID – From Purchase Receipt 
+    7. Promise Date – From Purchase Order 
+    8. Desired_Recv Date – from Purchase Order 
+    9. Commodity Code – from part maintenance 
+    10. Controlled – Part Maintenance |  
+    11. Supplier Type -vendor maintenance 
+
+
+**********************************************************************************************/
+
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
+SET DEADLOCK_PRIORITY LOW
+
+IF OBJECT_ID('tempdb..#Results') IS NOT NULL DROP TABLE #Results
+
+SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+SET DEADLOCK_PRIORITY LOW;
+
+DECLARE @PURC_ORDER_ID NVARCHAR(15);
+
+DECLARE @VENDOR_ID NVARCHAR(255);
+
+SET @VENDOR_ID = null;
+SET @VENDOR_ID = NULL;
+SET @PURC_ORDER_ID = null;
+
+DECLARE @START_DATE DATE; 
+DECLARE @END_DATE DATE;
+SET @START_DATE = '2025-07-01';
+SET @END_DATE = GETDATE();
+
+
+
+    SELECT  
+    
+         --'Version 7/28 + - 1/1/25 - 6/30/25' NOTE
+         PO.VENDOR_ID              --3 
+        , POL.PURC_ORDER_ID      --4
+        , convert(smallint, POL.LINE_NO) AS 'PURC_ORDER_LINE_NO'    -- 5.
+        , POL.ORDER_QTY AS 'PO_LINE_ORDERQTY'
+        , RL.RECEIVER_ID    -- 6.
+        , RL.RECEIVED_Qty
+        , pol.PROMISE_DATE
+        , R.RECEIVED_Date
+
+        -- adjusted_due_date
+        ,convert(date,
+          iif(pol.promise_DATE is null, pol.Desired_recv_date + 3, 
+             iif (pol.promise_date >= pol.Desired_recv_date, pol.promise_date, pol.Desired_recv_date + 3))
+          ) adjusted_due_date 
+
+        -- on_time_vs_late
+          ,convert(varchar(15),
+             IIF(R.received_date <= (
+               -- using adjusted_due_date
+                 convert(date,
+                  iif(pol.promise_DATE is null, pol.Desired_recv_date + 3, 
+                     iif (pol.promise_date >= pol.Desired_recv_date, pol.promise_date, pol.Desired_recv_date + 3))
+                     ) 
+
+             ), 'On-time', 'Late')
+                ) on_time_vs_late
+
+        , pol.DESIRED_RECV_DATE -- 8.
+        , POL.COMMODITY_CODE
+                --, CONVERT(DATE, POL.DESIRED_RECV_DATE + 5, 101) as 'DUE_DATE'
+        , UD.STRING_VAL AS CONTROLLED
+        , V.USER_6 as SUPPLIER_TYPE
+        , POL.PART_ID
+        , PART.PLANNER_USER_ID
+        , V.user_7 as PRODUCT_TYPE
+
+
+
+    FROM PURC_ORDER_LINE POL
+    INNER JOIN PURCHASE_ORDER PO ON POL.PURC_ORDER_ID = PO.ID
+    INNER JOIN RECEIVER_LINE RL
+        ON POL.PURC_ORDER_ID = RL.PURC_ORDER_ID
+        AND POL.LINE_NO = RL.PURC_ORDER_LINE_NO AND RL.RECEIVED_QTY > 0 -- UPD 8/7
+    INNER JOIN RECEIVER R  ON RL.RECEIVER_ID = R.ID
+
+
+    -- LEFT JOIN Datamart.dbo.SKILLS_PART_UDF SKILLS_PART_UDF 
+    -- ON POL.PART_ID=SKILLS_PART_UDF.PART_ID
+
+    left JOIN.PART 
+    ON PART.ID = POL.PART_ID
+
+    left JOIN VENDOR V
+    ON PO.VENDOR_ID = V.ID
+
+    LEFT JOIN USER_DEF_FIELDS UD 
+    ON POL.PART_ID = UD.DOCUMENT_ID 
+    AND UD.ID = 'UDF-0000082' AND UD.PROGRAM_ID = 'VMPRTMNT'
+
+    WHERE (1=1)
+    --and (PO.VENDOR_ID = @VENDOR_ID
+    --     OR @VENDOR_ID IS NULL)
+        AND V.ID != 'TMXDIV'
+     --   AND 
+        --(POL.PURC_ORDER_ID = @PURC_ORDER_ID
+        --   OR @PURC_ORDER_ID IS NULL)
+                AND R.RECEIVED_Date >= @START_DATE AND R.RECEIVED_Date <= @END_DATE
+
+
+ORDER BY PURC_ORDER_ID, VENDOR_ID,PURC_ORDER_LINE_NO
+;
+
+
+
