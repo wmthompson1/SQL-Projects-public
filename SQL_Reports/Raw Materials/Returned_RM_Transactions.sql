@@ -52,11 +52,7 @@ CTE_Inv AS (
         it.WORKORDER_LOT_ID,
         it.WORKORDER_SPLIT_ID,
         it.WORKORDER_SUB_ID,
-        tit.TRACE_ID,
-        -- common trace columns; adjust if different in your schema
-        -- e.g. tit.LOT_ID or tit.SERIAL_NO if present
-        ISNULL(tit.LOT_ID, tit.TRACE_ID) AS LOT_ID,
-        tit.SERIAL_NO
+        tit.TRACE_ID
     FROM INVENTORY_TRANS it WITH (NOLOCK)
     LEFT JOIN TRACE_INV_TRANS tit WITH (NOLOCK)
         ON tit.TRANSACTION_ID = it.TRANSACTION_ID
@@ -94,8 +90,8 @@ SELECT
     it.WORKORDER_SUB_ID         AS Trans_WO_Sub_ID,
 
     it.TRACE_ID,
-    it.LOT_ID                   AS Trace_Lot_ID,
-    it.SERIAL_NO                AS Trace_Serial_No,
+    tr.LOT_ID                   AS Trace_Lot_ID,
+    tr.SERIAL_ID                AS Trace_Serial_ID,
 
     -- paired transaction if linked via INV_TRANS_DIST
     paired.TRANSACTION_ID       AS Paired_Transaction_ID,
@@ -121,6 +117,10 @@ LEFT JOIN CTE_Dist d
 LEFT JOIN INVENTORY_TRANS paired WITH (NOLOCK)
     ON (paired.TRANSACTION_ID = d.OUT_TRANS_ID AND paired.TRANSACTION_ID <> it.TRANSACTION_ID)
     OR (paired.TRANSACTION_ID = d.IN_TRANS_ID AND paired.TRANSACTION_ID <> it.TRANSACTION_ID)
+
+-- join to TRACE table to get lot/serial fields (TRACE.ID = TRACE_INV_TRANS.TRACE_ID)
+LEFT JOIN TRACE tr WITH (NOLOCK)
+  ON tr.ID = it.TRACE_ID
 
 WHERE 1=1
   -- restrict to inventory transaction TYPE/CLASS commonly used for returns
