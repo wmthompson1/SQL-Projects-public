@@ -1,5 +1,12 @@
+/**
+
+
+**/
+
 --Use LIVE
 --declare @Trace varchar(48) = '174081/1'
+
+-- Visual Enterprise Reports> Raw Materials>Returned RM
 
 ; WITH CTE_Rw as (
 Select P.ID as 'PartID'

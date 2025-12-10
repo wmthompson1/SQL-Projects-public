@@ -1,3 +1,4 @@
+-- file path: SQL_Reports/Inventory/Inventory - Transactions AI Review.sql
 -- run at sql-lab-2 in prod
 -- dw in stage on sql-bi-1
 
@@ -20,6 +21,7 @@ Code Base: 3.2.4 Inventory - On Hand Reconciled
 Date        Modified By         Change Description
 ----------  ------------------  ------------------------------------------------------------
 08/03/20    William Thompson    Created.
+12/10/25    William Thompson    Updated for Code Base 3.2.4 - Determine location of parts 
 
 TESTING:
 sql agent:
@@ -806,7 +808,7 @@ order by part_id
 -- -- '143T0033-7'
 --select * from #part_trace_maint
 select 
-'inventory_trans filter' note
+'1.1 inventory_trans filter' note
 ,* from #inventory_trans
 where 
 (part_id = @Part_ID
