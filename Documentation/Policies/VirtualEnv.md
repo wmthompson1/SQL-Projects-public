@@ -35,6 +35,7 @@ Developer notes and hygiene
 Manager / Supervisory Guidance (no venv required)
 - Managers may run simple viewer or report scripts using system Python. If a script requires extra packages, request the developer to run it or provide an export/packaged output.
 - When asked to run a script, managers can run it with the system interpreter, e.g.: `python script.py`.
+ - Managers are typically non-technical (finance/supervisory): when they need updated reports or data extracts, ask a developer to run SQL scripts based on the repository's preset data models and reporting queries and deliver the exported outputs (CSV/Excel/PDF). Managers do not need to create or manage virtual environments.
 
 Security and secrets
 - Never store secrets in source files. Use environment variables for local development and follow `Documentation/Policies/ENV-Handling.md`.
