@@ -1,0 +1,8 @@
+# Minimal development requirements for repository utilities
+# Add packages used by conversion scripts, small utilities, or dev tooling here.
+# Example packages (uncomment to use):
+# pyyaml
+# python-dateutil
+# markdownify
+
+# Keep this file minimal; developers should pin versions in their local environment if required.
