@@ -28,14 +28,14 @@ python -m pip install -r "Utilities\Powershell Utilities\requirements.txt"
 deactivate
 ```
 
-Developer notes and hygiene
+Developer notes
 - The `.venv` folder is local to your clone and should be ignored by Git. The repository's `.gitignore` already ignores common virtualenv names (if not, add `.venv/`).
 - Use the virtual environment for development tasks that require Python packages. Do not commit local environment artifacts.
 
 Manager / Supervisory Guidance (no venv required)
 - Managers may run simple viewer or report scripts using system Python. If a script requires extra packages, request the developer to run it or provide an export/packaged output.
 - When asked to run a script, managers can run it with the system interpreter, e.g.: `python script.py`.
- - Managers are typically non-technical (finance/supervisory): when they need updated reports or data extracts, ask a developer to run SQL scripts based on the repository's preset data models and reporting queries and deliver the exported outputs (CSV/Excel/PDF). Managers do not need to create or manage virtual environments.
+ - Managers are typically non-technical (finance/supervisory): when they need updated reports or data extracts, ask a developer to run SQL scripts based on the repository's preset data models and reporting queries. Managers do not need to create or manage virtual environments.
 
 Security and secrets
 - Never store secrets in source files. Use environment variables for local development and follow `Documentation/Policies/ENV-Handling.md`.
