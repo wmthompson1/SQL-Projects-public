@@ -35,7 +35,7 @@ Create dev user and verify (use the script you already have)
 # From repo root (PowerShell)
 python .\scripts\nx_to_arango.py --graph-file .\scripts\sample_graph.gpickle --create-user
 # If you don't have a sample graph, use --create-user to only create the DB/user:
-python .\scripts\nx_to_arango.py --graph-file .\scripts\sample_graph.gpickle --create-user --db nx_graphs
+python .\scripts\nx_to_arango.py --graph-file .\scripts\sample_graph.gpickle --create-user --db manufacturing_graph
 ```
 The script will:
 - Create the database if missing

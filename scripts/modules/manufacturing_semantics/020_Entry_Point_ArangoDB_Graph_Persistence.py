@@ -269,7 +269,7 @@ def demo_arangodb_persistence_local():
     print("   - DATABASE_HOST (e.g., https://your-instance.arangodb.cloud:8529)")
     print("   - DATABASE_USERNAME (e.g., root)")
     print("   - DATABASE_PASSWORD (your password)")
-    print("   - DATABASE_NAME (e.g., manufacturing_graphs)")
+    print("   - DATABASE_NAME (e.g., manufacturing_graph)")
     print("3. Install: pip install nx-arangodb")
     
     if not NXADB_AVAILABLE:
@@ -287,7 +287,7 @@ config = ArangoDBConfig(
     host="https://your-instance.arangodb.cloud:8529",
     username="root",
     password="your-password",
-    database_name="manufacturing_graphs"
+    database_name="manufacturing_graph"
 )
 
 persistence = ArangoDBGraphPersistence(config)

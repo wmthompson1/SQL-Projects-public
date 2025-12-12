@@ -79,9 +79,9 @@ def ensure_db_and_user(client, root_user, root_pass, db_name, dev_user=None, dev
         else:
             print(f"User '{dev_user}' exists; updating password and permissions")
             sys_db.update_user(dev_user, password=dev_pass)
-
-        # grant database access
-        sys_db.grant_database(dev_user, db_name)
+        # Note: granting database permissions via python-arango may vary by client version.
+        # We avoid calling client-specific grant helpers here; create/update the user
+        # and leave permission management to admins or separate scripts if required.
 
 
 def ensure_collections(db):
@@ -140,7 +140,7 @@ def main():
         root_pass = getpass('Arango root password: ')
 
     # DB name preference: CLI override -> DATABASE_NAME -> default
-    db_name = args.db or env('DATABASE_NAME', 'nx_graphs')
+    db_name = args.db or env('DATABASE_NAME', 'manufacturing_graph')
     dev_user = env('DATABASE_DEV_USER')
     dev_pass = env('DATABASE_DEV_PASSWORD')
 
