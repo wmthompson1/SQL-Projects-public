@@ -22,7 +22,7 @@ Mapping Example
   - `TRACE.APROPERTY_1` contains the physical lot/bin detail for this site
 
 Notes & Next Steps
-- The word "lot" is ambiguous across installs: sometimes `TRACE.LOT_ID`
+- The word "lot" is ambiguous across ERP: sometimes `TRACE.LOT_ID`
   stores a system lot identifier; in other cases the human-friendly location
   or batch label is stored in a flex field such as `APROPERTY_1`.
 - We should disambiguate the usage of "lot" in downstream reports and
@@ -37,3 +37,5 @@ Contact / Ownership
 - Please confirm or extend this mapping. When you provide the final
   disambiguation rules, paste them here or tell me where to find them and I
   will update the docs and queries.
+
+  
