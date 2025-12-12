@@ -30,6 +30,36 @@ def env(name, default=None):
     return os.environ.get(name, default)
 
 
+def load_dotenv_locations():
+    """Load environment variables from common .env locations (if present).
+
+    Search order (first match wins):
+      1. CWD/.env
+      2. repo-root /.env (parent of this script)
+      3. scripts/.env
+    Values are set into os.environ only if not already present.
+    """
+    candidate_paths = [
+        os.path.join(os.getcwd(), '.env'),
+        os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', '.env')),
+        os.path.join(os.path.dirname(os.path.abspath(__file__)), '.env'),
+    ]
+
+    for p in candidate_paths:
+        if os.path.isfile(p):
+            with open(p, 'r', encoding='utf-8') as fh:
+                for ln in fh:
+                    ln = ln.strip()
+                    if not ln or ln.startswith('#'):
+                        continue
+                    if '=' in ln:
+                        k, v = ln.split('=', 1)
+                        v = v.strip().strip('"').strip("'")
+                        os.environ.setdefault(k.strip(), v)
+            print(f'Loaded environment variables from: {p}')
+            return
+
+
 def ensure_db_and_user(client, root_user, root_pass, db_name, dev_user=None, dev_pass=None):
     sys_db = client.db('_system', username=root_user, password=root_pass)
 
@@ -97,6 +127,9 @@ def main():
     parser.add_argument('--db', '-d', help='Arango DB name (overrides ARANGO_DB env)')
     parser.add_argument('--create-user', action='store_true', help='Create dev user using ARANGO_DEV_USER/ARANGO_DEV_PASSWORD or prompt')
     args = parser.parse_args()
+
+    # load .env from repo root or scripts folder if present (so users with root .env work)
+    load_dotenv_locations()
 
     arango_url = env('ARANGO_URL', 'http://127.0.0.1:8529')
     root_user = env('ARANGO_ROOT_USER', 'root')
