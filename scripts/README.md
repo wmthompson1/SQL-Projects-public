@@ -9,8 +9,8 @@ Prerequisites
 
 Setup
 1. You can place environment variables in either the repo root `.env` (preferred) or `scripts/.env`.
-  - Copy `scripts/.env.example` to `.env` at the repo root or to `scripts/.env` and set `ARANGO_ROOT_PASSWORD` (or leave empty to be prompted).
-2. Optionally set `ARANGO_DEV_USER` and `ARANGO_DEV_PASSWORD` in the chosen `.env` file.
+  - Copy `scripts/.env.example` to `.env` at the repo root or to `scripts/.env` and set `DATABASE_PASSWORD` (or leave empty to be prompted).
+2. Optionally set `DATABASE_DEV_USER` and `DATABASE_DEV_PASSWORD` in the chosen `.env` file.
 
 Creating a dev user (if Arango already running)
 - If you have root credentials you can run the script with `--create-user` and it will create the dev user and grant DB permissions.

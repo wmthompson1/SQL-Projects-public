@@ -38,7 +38,7 @@ Python tooling (for persisting NetworkX)
 VS Code development tips
 - Install the Python extension for debugging and linting.
 - Keep arangod running locally; use the Arango web UI to inspect collections.
-- Use environment variables for ARANGO_URL, ARANGO_USER, ARANGO_PASSWORD in your launch.json / .env.
+- Use environment variables for DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD in your launch.json / .env.
 - Use the REST Client extension or write short scripts for quick queries.
 - Consider the Arango HTTP+JS drivers (arangojs) if you also develop JS tooling.
 

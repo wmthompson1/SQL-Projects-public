@@ -125,22 +125,24 @@ def graph_to_arango(db, graph):
 def main():
     parser = argparse.ArgumentParser(description='Persist NetworkX graph to ArangoDB')
     parser.add_argument('--graph-file', '-g', required=True, help='Path to NetworkX graph file (gpickle recommended)')
-    parser.add_argument('--db', '-d', help='Arango DB name (overrides ARANGO_DB env)')
-    parser.add_argument('--create-user', action='store_true', help='Create dev user using ARANGO_DEV_USER/ARANGO_DEV_PASSWORD or prompt')
+    parser.add_argument('--db', '-d', help='Database name (overrides DATABASE_NAME env)')
+    parser.add_argument('--create-user', action='store_true', help='Create dev user using DATABASE_DEV_USER/DATABASE_DEV_PASSWORD or prompt')
     args = parser.parse_args()
 
     # load .env from repo root or scripts folder if present (so users with root .env work)
     load_dotenv_locations()
 
-    arango_url = env('ARANGO_URL', 'http://127.0.0.1:8529')
-    root_user = env('ARANGO_ROOT_USER', 'root')
-    root_pass = env('ARANGO_ROOT_PASSWORD')
+    arango_url = env('DATABASE_HOST', 'http://127.0.0.1:8529')
+    # Use Replit-style DATABASE_* env names
+    root_user = env('DATABASE_USERNAME', 'root')
+    root_pass = env('DATABASE_PASSWORD')
     if not root_pass:
         root_pass = getpass('Arango root password: ')
 
-    db_name = args.db or env('ARANGO_DB', 'nx_graphs')
-    dev_user = env('ARANGO_DEV_USER')
-    dev_pass = env('ARANGO_DEV_PASSWORD')
+    # DB name preference: CLI override -> DATABASE_NAME -> default
+    db_name = args.db or env('DATABASE_NAME', 'nx_graphs')
+    dev_user = env('DATABASE_DEV_USER')
+    dev_pass = env('DATABASE_DEV_PASSWORD')
 
     # prompt for dev creds if requested
     if args.create_user and (not dev_user or not dev_pass):

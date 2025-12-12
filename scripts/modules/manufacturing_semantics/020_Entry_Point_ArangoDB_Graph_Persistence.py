@@ -57,14 +57,12 @@ class ArangoDBConfig:
             password: Database password (default: env DATABASE_PASSWORD)
             database_name: Database name (default: env DATABASE_NAME or 'networkx_graphs')
         """
-        # Prefer `ARANGO_DATABASE_NAME` (explicit), then `ARANGO_DB`, then legacy `DATABASE_NAME`.
+        # Prefer `DATABASE_NAME` (explicit). Default to `manufacturing_graph`.
         self.host = host or os.getenv("DATABASE_HOST", "http://localhost:8529")
         self.username = username or os.getenv("DATABASE_USERNAME", "root")
         self.password = password or os.getenv("DATABASE_PASSWORD", "")
         self.database_name = (
             database_name
-            or os.getenv("ARANGO_DATABASE_NAME")
-            or os.getenv("ARANGO_DB")
             or os.getenv("DATABASE_NAME")
             or "manufacturing_graph"
         )
@@ -74,9 +72,7 @@ class ArangoDBConfig:
         os.environ["DATABASE_HOST"] = self.host
         os.environ["DATABASE_USERNAME"] = self.username
         os.environ["DATABASE_PASSWORD"] = self.password
-        # Write both ARANGO-specific and legacy names so other scripts continue to work
-        os.environ["ARANGO_DATABASE_NAME"] = self.database_name
-        os.environ["ARANGO_DB"] = self.database_name
+        # Set the canonical DATABASE_* env vars
         os.environ["DATABASE_NAME"] = self.database_name
     
     def get_connection_info(self) -> Dict[str, str]:
