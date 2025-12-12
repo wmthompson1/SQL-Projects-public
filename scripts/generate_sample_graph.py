@@ -1,4 +1,5 @@
 import networkx as nx
+import pickle
 from pathlib import Path
 
 def main():
@@ -10,7 +11,8 @@ def main():
     G.add_edge('B', 'C', relation='to')
 
     out = Path(__file__).parent / 'sample_graph.gpickle'
-    nx.write_gpickle(G, out)
+    with open(out, 'wb') as fh:
+        pickle.dump(G, fh)
     print('Wrote sample graph to', out)
 
 if __name__ == '__main__':

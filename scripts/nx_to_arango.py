@@ -24,6 +24,7 @@ from getpass import getpass
 
 import networkx as nx
 from arango import ArangoClient
+import pickle
 
 
 def env(name, default=None):
@@ -161,7 +162,8 @@ def main():
     # Load NetworkX graph
     gf = args.graph_file
     print('Loading graph from', gf)
-    g = nx.read_gpickle(gf)
+    with open(gf, 'rb') as fh:
+        g = pickle.load(fh)
 
     graph_to_arango(db, g)
 
