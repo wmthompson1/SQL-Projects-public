@@ -33,8 +33,8 @@ DECLARE @StartDate DATE = DATEADD(day, -3 , @AsOfDate);
 DECLARE @EndDate DATE = getdate();
 declare @topper int = 1000000;  -- set to limit rows returned, or NULL for no limit
 --
-declare @RECEIVER_ID NVARCHAR(15) = '215915'
-declare @PURC_ORDER_ID NVARCHAR(15) = NULL  -- 175717
+declare @RECEIVER_ID NVARCHAR(15) = NULL; --'215915'
+declare @PURC_ORDER_ID NVARCHAR(15) = '184686';  -- 175717
 
 SELECT
         PO.VENDOR_ID,              
@@ -55,8 +55,7 @@ SELECT
         , PART.PLANNER_USER_ID
         , V.user_7 as PRODUCT_TYPE
         ,rl.transaction_id
-
-
+        ,P.VOUCHER_ID
 
 -- purchase_order_flow
 FROM PURC_ORDER_LINE POL
@@ -80,16 +79,16 @@ AND RL.RECEIVED_QTY > 0 -- UPD 8/7
     AND UD.ID = 'UDF-0000082' AND UD.PROGRAM_ID = 'VMPRTMNT'
 
 -- purchase_order_flow  -- > receiver_flow -- > payable_flow (via voucher)
-JOIN Live.dbo.PAYABLE_LINE PL
+LEFT JOIN Live.dbo.PAYABLE_LINE PL
   ON PL.RECEIVER_ID = RL.RECEIVER_ID
   AND PL.RECEIVER_LINE_NO = RL.LINE_NO
 
-JOIN Live.dbo.PAYABLE P
+LEFT JOIN Live.dbo.PAYABLE P
   ON PL.VOUCHER_ID = P.VOUCHER_ID
 
 
 WHERE 1=1 
-AND RL.RECEIVER_ID = ISNULL(@RECEIVER_ID, RL.RECEIVER_ID)
-and pol.PURC_ORDER_ID = ISNULL(@PURC_ORDER_ID, POL.PURC_ORDER_ID)
+AND RL.RECEIVER_ID = @RECEIVER_ID OR @RECEIVER_ID  IS NULL
+and pol.PURC_ORDER_ID = @PURC_ORDER_ID OR @PURC_ORDER_ID IS NULL
 -- and RL.INVOICE_ID IS NOT NULL
   AND P.POSTING_DATE BETWEEN @StartDate AND @EndDate
