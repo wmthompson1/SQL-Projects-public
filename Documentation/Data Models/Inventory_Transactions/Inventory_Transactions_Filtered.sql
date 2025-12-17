@@ -131,19 +131,21 @@ IF OBJECT_ID('tempdb..#temp5') IS NOT NULL DROP TABLE #temp5
 
 
 DECLARE @Tester int
-   ,@Part_ID nvarchar(30) = null
+  -- ,@Part_ID nvarchar(30) =  null; -- '71507E-1100153'
+declare @part_id nvarchar(250) = '70750B-071-MIL-NG';
 --'25243C-112 X 11.25 X 68.00' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
 -- ,@SITE_id nvarchar(30) -- = 'SK01'
 
 Set @Tester = 0
 --Set @SITE_id = 'SK01'
-DECLARE @workorder_base_id nvarchar(30) = '1793687'
+DECLARE @workorder_base_id nvarchar(30) = NULL --'1789047'; --'1670717'; -- '1801171'; -- '1793687'
 -- '1801516'; -- -- '1799404'
-dECLARE @Transaction_ID nvarchar(30) =  '138481'
+dECLARE @Transaction_ID nvarchar(30) =  NULL; -- '138481'
 --  '139140';
-DECLARE @TRACE_ID nvarchar(30) =  '183938/1'
-;
+DECLARE @TRACE_ID nvarchar(30) = null --'135047/1';   --'183938/1'
 
+
+ -- '25243C-112 X 11.25 X 68.00' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
 
 --  inventory trans
 select
@@ -151,7 +153,9 @@ select
     , t.transaction_id
     , t.transaction_date
     , t.class, t.type
-    , t.qty, t.costed_qty, t.act_material_cost, t.act_labor_cost
+    , t.qty
+
+    , t.costed_qty, t.act_material_cost, t.act_labor_cost
     , t.act_burden_cost, t.act_service_cost
     , t.workorder_base_id
     , t.workorder_lot_id, t.workorder_split_id
@@ -187,6 +191,9 @@ where t.class IN ( 'i' , 'r' )
   AND t.type IN ( 'i' , 'r' ) 
     AND ( T.SITE_ID IN ( N'SK01' ) )
     AND (@TRANSACTION_id IS NULL OR T.TRANSACTION_ID = @TRANSACTION_id)
+    and (T.PART_ID = @Part_ID   or @Part_ID IS NULL   )
+     and (T.PART_ID = @Part_ID   or @Part_ID IS NULL   )
+
 -- Filter by specific transaction ID 
 
 
@@ -248,6 +255,7 @@ select
     , i.trace_out_qty as trace_in_qty
     , i.trace_out_qty as trace_out_qty
     , o.RESOURCE_ID
+    ,P.STOCK_UM
 
 -- inventory transaction flow
 from #inventory_trans i
@@ -271,8 +279,11 @@ from #inventory_trans i
     o.WORKORDER_SPLIT_ID = r.WORKORDER_SPLIT_ID and o.SEQUENCE_NO = r.OPERATION_SEQ_NO
     and o.WORKORDER_SUB_ID = ISNULL(r.SUBORD_WO_SUB_ID, 0)
 
+  Inner Join PART P  with (nolock) on R.PART_ID = P.ID
+
 where 1=1
   --and i.warehouse_id = 'Auburn Mtl Cage'
+  AND (i.workorder_base_id = @workorder_base_id OR @workorder_base_id IS NULL)
   and a.STATUS not in ('X', 'C')
 
   and (i.part_id = @Part_ID

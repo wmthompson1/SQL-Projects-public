@@ -105,9 +105,14 @@ def graph_to_arango(db, graph):
     # Write nodes
     for n, data in graph.nodes(data=True):
         key = str(n)
-        doc = {'_key': key, **{k: v for k, v in data.items()}}
+        doc = {'_key': key}
+        if isinstance(data, dict):
+            doc.update({k: v for k, v in data.items()})
+        else:
+            doc['label'] = str(data)
         if nodes_col.has(key):
-            nodes_col.update(key, doc)
+            # arango-python expects a document mapping (with _key) for update
+            nodes_col.update(doc)
         else:
             nodes_col.insert(doc)
 
@@ -115,7 +120,11 @@ def graph_to_arango(db, graph):
     for u, v, data in graph.edges(data=True):
         from_key = f'nodes/{u}'
         to_key = f'nodes/{v}'
-        edge_doc = {'_from': from_key, '_to': to_key, **{k: v for k, v in data.items()}}
+        edge_doc = {'_from': from_key, '_to': to_key}
+        if isinstance(data, dict):
+            edge_doc.update({k: v for k, v in data.items()})
+        else:
+            edge_doc['label'] = str(data)
         # Insert edge (no direct upsert support for edges with same key)
         edges_col.insert(edge_doc)
 

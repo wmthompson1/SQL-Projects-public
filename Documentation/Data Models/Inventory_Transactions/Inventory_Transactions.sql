@@ -142,9 +142,9 @@ DECLARE @Tester int
 
  Set @Tester = 0
  --Set @SITE_id = 'SK01'
- DECLARE @workorder_base_id nvarchar(30) = '1793687' -- '1801516'; -- -- '1799404'
-dECLARE @Transaction_ID nvarchar(30) =  '138481' --  '139140';
-DECLARE @TRACE_ID nvarchar(30) =  '183938/1' ;  
+ DECLARE @workorder_base_id nvarchar(30) = '1773882'  ---'1789047';  --1801171' ; -- '1793687' -- '1801516'; -- -- '1799404'
+dECLARE @Transaction_ID nvarchar(30) = NULL;  --'138481' --  '139140';
+DECLARE @TRACE_ID nvarchar(30) = '179473';  -- '183938/1' ;  
 
 
 
@@ -220,30 +220,38 @@ include([transaction_date]
 
 
 select * from #inventory_trans
+where workorder_base_id = @workorder_base_id or @workorder_base_id IS NULL;
 
--- test 1799404 
-select * from #inventory_trans
-where workorder_base_id = @workorder_base_id -- --'1793687' --- '1801516'; -- -- '1799404'
 
-select * from inventory_trans t  
-where workorder_base_id = @workorder_base_id   -- -- '1793687' -- --'1801516'; -- -- '1799404'
+select 
+ 'inventory_trans' NOTE
+,* from inventory_trans t  
+where workorder_base_id = '1801171';;
+--@workorder_base_id   -- -- '1793687' -- --'1801516'; -- -- '1799404'
 
 select STATUS, * from work_order
-where base_id =  '1793687' -- ----  @workorder_base_id   -- -- '1793687' -- '1801516'; -- -- '1799404' -- 1793687
+where base_id = @workorder_base_id; -- '1801171';  -- '1793687' -- ----  @workorder_base_id   -- -- '1793687' -- '1801516'; -- -- '1799404' -- 1793687
 
-select * from TRACE_INV_TRANS
+select 
+  'TRACE_INV_TRANS' NOTE
+ ,*
+from TRACE_INV_TRANS
  where Transaction_ID = @Transaction_ID --  '138481' --  '139140';
 
-select id, OUT_QTY, IN_QTY, UNAVAILABLE_QTY from TRACE
+select 
+ 'trace' NOTE
+,id, OUT_QTY, IN_QTY, UNAVAILABLE_QTY from TRACE
  where ID = @TRACE_ID -- --  '183938/1' ;
 
- select * from REQUIREMENT
- where workorder_base_id = '1793687' --  '139140';
+ select 
+ 'REQ' NOTE
+ ,* from REQUIREMENT
+ where workorder_base_id =  workorder_base_id; -- '1801171'   -- --  '1793687' --  '139140';
 
-select 1,*
-  from INVENTORY_TRANS t WITH (NOLOCK)
-  LEFT JOIN TRACE_INV_TRANS ti WITH (NOLOCK)
-        ON ti.TRANSACTION_ID = t.TRANSACTION_ID 
-LEFT JOIN TRACE tr WITH (NOLOCK)
-  ON tr.ID = ti.TRACE_ID
-  where t.Transaction_ID = '138481'
+-- select 1,*
+--   from INVENTORY_TRANS t WITH (NOLOCK)
+--   LEFT JOIN TRACE_INV_TRANS ti WITH (NOLOCK)
+--         ON ti.TRANSACTION_ID = t.TRANSACTION_ID 
+-- LEFT JOIN TRACE tr WITH (NOLOCK)
+--   ON tr.ID = ti.TRACE_ID
+--   where t.Transaction_ID = '138481'

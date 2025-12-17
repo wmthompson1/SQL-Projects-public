@@ -78,7 +78,30 @@ Primary Classes:
 'P' = Purchasing/Receiving related
 Common TYPE + CLASS Combinations:
 
-CASE     -- Issue Returns    WHEN TYPE = 'IR' AND CLASS = 'R' THEN 'Issue Return - Material Returned to Stock'    WHEN TYPE = 'I' AND CLASS = 'R' THEN 'Issue Return - General'        -- Receipt Returns      WHEN TYPE = 'RR' AND CLASS = 'R' THEN 'Receipt Return - WO Receipt Reversed'    WHEN TYPE = 'R' AND CLASS = 'R' THEN 'Receipt Return - General'        -- Normal Issues    WHEN TYPE = 'I' AND CLASS = 'M' THEN 'Issue to Manufacturing/Work Order'    WHEN TYPE = 'I' AND CLASS = 'S' THEN 'Issue for Sales/Shipping'    WHEN TYPE = 'I' AND CLASS = 'N' THEN 'Issue - Normal'        -- Normal Receipts    WHEN TYPE = 'R' AND CLASS = 'P' THEN 'Receipt from Purchase Order'    WHEN TYPE = 'R' AND CLASS = 'M' THEN 'Receipt from Manufacturing/Work Order'    WHEN TYPE = 'R' AND CLASS = 'N' THEN 'Receipt - Normal'        -- Adjustments    WHEN TYPE = 'A' AND CLASS = 'A' THEN 'Inventory Adjustment'    WHEN TYPE = 'A' AND CLASS = 'C' THEN 'Cycle Count Adjustment'    WHEN TYPE = 'A' AND CLASS = 'P' THEN 'Physical Inventory Adjustment'        -- Transfers    WHEN TYPE = 'T' AND CLASS = 'N' THEN 'Location/Warehouse Transfer'        -- Standalone types (when CLASS might be NULL or not specified)    WHEN TYPE = 'IR' THEN 'Issue Return'    WHEN TYPE = 'RR' THEN 'Receipt Return'    WHEN TYPE = 'I' THEN 'Issue'    WHEN TYPE = 'R' THEN 'Receipt'    WHEN TYPE = 'A' THEN 'Adjustment'    WHEN TYPE = 'T' THEN 'Transfer'        -- Catch-all    ELSE TYPE + ' - ' + ISNULL(CLASS, 'N/A')END as TRANSACTION_TYPE_DESCRIPTION
+CASE     -- Issue Returns   
+WHEN TYPE = 'IR' AND CLASS = 'R' THEN 'Issue Return - Material Returned to Stock'    
+-- >
+WHEN TYPE = 'I' AND CLASS = 'R' THEN 'Issue Return - General'        -- Receipt Returns      
+WHEN TYPE = 'RR' AND CLASS = 'R' THEN 'Receipt Return - WO Receipt Reversed'    
+WHEN TYPE = 'R' AND CLASS = 'R' THEN 'Receipt Return - General'        -- Normal Issues   
+WHEN TYPE = 'I' AND CLASS = 'M' THEN 'Issue to Manufacturing/Work Order'    
+WHEN TYPE = 'I' AND CLASS = 'S' THEN 'Issue for Sales/Shipping'   
+WHEN TYPE = 'I' AND CLASS = 'N' THEN 'Issue - Normal'        -- Normal Receipts   
+WHEN TYPE = 'R' AND CLASS = 'P' THEN 'Receipt from Purchase Order'   
+WHEN TYPE = 'R' AND CLASS = 'M' THEN 'Receipt from Manufacturing/Work Order'    
+WHEN TYPE = 'R' AND CLASS = 'N' THEN 'Receipt - Normal'        -- Adjustments    
+WHEN TYPE = 'A' AND CLASS = 'A' THEN 'Inventory Adjustment'   
+WHEN TYPE = 'A' AND CLASS = 'C' THEN 'Cycle Count Adjustment'    
+WHEN TYPE = 'A' AND CLASS = 'P' THEN 'Physical Inventory Adjustment'        -- Transfers    
+WHEN TYPE = 'T' AND CLASS = 'N' THEN 'Location/Warehouse Transfer'        -- Standalone types (when CLASS might be NULL or not specified)   
+WHEN TYPE = 'IR' THEN 'Issue Return'    
+WHEN TYPE = 'RR' THEN 'Receipt Return'    
+WHEN TYPE = 'I' THEN 'Issue'    
+WHEN TYPE = 'R' THEN 'Receipt'    
+WHEN TYPE = 'A' THEN 'Adjustment'    
+WHEN TYPE = 'T' THEN 'Transfer'        -- Catch-all    
+   ELSE TYPE + ' - ' + ISNULL(CLASS, 'N/A')
+   END as TRANSACTION_TYPE_DESCRIPTION
 Usage Context:
 Returns (CLASS = 'R'):
 Issue Returns: Material issued to work orders but returned to stock (unused, excess, defective)
@@ -95,7 +118,11 @@ Vendor returns or receipt reversals
 To see the actual values in your system, you could run:
 
 
-SELECT DISTINCT     TYPE,     CLASS,     COUNT(*) as Count,    MIN(TRANSACTION_DATE) as Earliest,    MAX(TRANSACTION_DATE) as LatestFROM INVENTORY_TRANS WHERE TRANSACTION_DATE >= DATEADD(MONTH, -6, GETDATE())GROUP BY TYPE, CLASSORDER BY TYPE, CLASS;
+SELECT DISTINCT     TYPE,     CLASS,     COUNT(*) as Count,    MIN(TRANSACTION_DATE) as Earliest
+,    MAX(TRANSACTION_DATE) as Latest
+FROM INVENTORY_TRANS WHERE TRANSACTION_DATE >= DATEADD(MONTH, -6, GETDATE())
+GROUP BY TYPE, CLASS 
+ORDER BY TYPE, CLASS;
 This will show you the actual TYPE/CLASS combinations used in your system over the last 6 months.
 
 Claude Sonnet 4 • 1x

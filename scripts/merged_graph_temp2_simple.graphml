@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='utf-8'?>
+<graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d10" for="edge" attr.name="raw" attr.type="string" />
+  <key id="d9" for="edge" attr.name="label" attr.type="string" />
+  <key id="d8" for="edge" attr.name="right_card" attr.type="string" />
+  <key id="d7" for="edge" attr.name="left_card" attr.type="string" />
+  <key id="d6" for="edge" attr.name="constraint" attr.type="string" />
+  <key id="d5" for="edge" attr.name="notes" attr.type="string" />
+  <key id="d4" for="edge" attr.name="target_columns" attr.type="string" />
+  <key id="d3" for="edge" attr.name="type" attr.type="string" />
+  <key id="d2" for="edge" attr.name="source_columns" attr.type="string" />
+  <key id="d1" for="node" attr.name="pk" attr.type="string" />
+  <key id="d0" for="node" attr.name="table" attr.type="string" />
+  <graph edgedefault="undirected">
+    <node id="INVENTORY_TRANS">
+      <data key="d0">INVENTORY_TRANS</data>
+      <data key="d1">["TRANSACTION_ID"]</data>
+    </node>
+    <node id="TRACE">
+      <data key="d0">TRACE</data>
+      <data key="d1">["PART_ID", "ID"]</data>
+    </node>
+    <node id="TRACE_INV_TRANS">
+      <data key="d0">TRACE_INV_TRANS</data>
+      <data key="d1">["PART_ID", "TRACE_ID", "TRANSACTION_ID"]</data>
+    </node>
+    <node id="WAREHOUSE">
+      <data key="d0">WAREHOUSE</data>
+      <data key="d1">["ID"]</data>
+    </node>
+    <node id="LOCATION">
+      <data key="d0">LOCATION</data>
+      <data key="d1">["WAREHOUSE_ID", "ID"]</data>
+    </node>
+    <node id="WORK_ORDER">
+      <data key="d0">WORK_ORDER</data>
+      <data key="d1">["TYPE", "BASE_ID", "LOT_ID", "SPLIT_ID", "SUB_ID"]</data>
+    </node>
+    <node id="OPERATION">
+      <data key="d0">OPERATION</data>
+      <data key="d1">["WORKORDER_TYPE", "WORKORDER_BASE_ID", "WORKORDER_LOT_ID", "WORKORDER_SPLIT_ID", "WORKORDER_SUB_ID", "SEQUENCE_NO"]</data>
+    </node>
+    <node id="REQUIREMENT">
+      <data key="d0">REQUIREMENT</data>
+      <data key="d1">["WORKORDER_TYPE", "WORKORDER_BASE_ID", "WORKORDER_LOT_ID", "WORKORDER_SPLIT_ID", "WORKORDER_SUB_ID", "OPERATION_SEQ_NO", "PIECE_NO"]</data>
+    </node>
+    <node id="PAYABLE" />
+    <node id="PAYABLE_LINE" />
+    <node id="PAYABLE_DIST" />
+    <node id="RECEIVER_LINE" />
+    <node id="CASH_DISBURSE_LINE" />
+    <node id="CASH_DISBURSE" />
+    <node id="VENDOR" />
+    <node id="PURCHASE_ORDER" />
+    <node id="PURC_ORDER_LINE" />
+    <edge source="INVENTORY_TRANS" target="WORK_ORDER">
+      <data key="d2">["WORKORDER_BASE_ID", "WORKORDER_LOT_ID", "WORKORDER_SPLIT_ID"]</data>
+      <data key="d3">join</data>
+      <data key="d4">["BASE_ID", "LOT_ID", "SPLIT_ID"]</data>
+      <data key="d5">SQL joins these three columns to WORK_ORDER; TYPE/SUB_ID not included in this specific join in the report</data>
+    </edge>
+    <edge source="INVENTORY_TRANS" target="LOCATION">
+      <data key="d2">["LOCATION_ID"]</data>
+      <data key="d3">join</data>
+      <data key="d4">["ID"]</data>
+      <data key="d5">SQL joins INVENTORY_TRANS.location_id -&gt; LOCATION.id and LOCATION.warehouse_id -&gt; WAREHOUSE.id</data>
+    </edge>
+    <edge source="INVENTORY_TRANS" target="TRACE_INV_TRANS">
+      <data key="d2">["TRANSACTION_ID"]</data>
+      <data key="d3">fk</data>
+      <data key="d6">FKEY0284</data>
+      <data key="d4">["TRANSACTION_ID"]</data>
+    </edge>
+    <edge source="TRACE" target="TRACE_INV_TRANS">
+      <data key="d2">["PART_ID", "TRACE_ID"]</data>
+      <data key="d3">fk</data>
+      <data key="d6">FKEY0241</data>
+      <data key="d4">["PART_ID", "ID"]</data>
+    </edge>
+    <edge source="WAREHOUSE" target="LOCATION">
+      <data key="d2">["WAREHOUSE_ID"]</data>
+      <data key="d3">fk</data>
+      <data key="d6">FKEY0117</data>
+      <data key="d4">["ID"]</data>
+    </edge>
+    <edge source="WORK_ORDER" target="OPERATION">
+      <data key="d2">["WORKORDER_TYPE", "WORKORDER_BASE_ID", "WORKORDER_LOT_ID", "WORKORDER_SPLIT_ID", "WORKORDER_SUB_ID"]</data>
+      <data key="d3">fk</data>
+      <data key="d6">FKEY0132</data>
+      <data key="d4">["TYPE", "BASE_ID", "LOT_ID", "SPLIT_ID", "SUB_ID"]</data>
+    </edge>
+    <edge source="OPERATION" target="REQUIREMENT">
+      <data key="d2">["SEQUENCE_NO", "WORKORDER_SUB_ID"]</data>
+      <data key="d3">join</data>
+      <data key="d4">["OPERATION_SEQ_NO", "SUBORD_WO_SUB_ID"]</data>
+      <data key="d5">SQL matches OPERATION.SEQUENCE_NO-&gt;REQUIREMENT.OPERATION_SEQ_NO and uses ISNULL(REQUIREMENT.SUBORD_WO_SUB_ID,0) to compare to OPERATION.WORKORDER_SUB_ID</data>
+    </edge>
+    <edge source="PAYABLE" target="PAYABLE_LINE">
+      <data key="d7">||</data>
+      <data key="d8">o{</data>
+      <data key="d9">VOUCHER_ID</data>
+      <data key="d10">PAYABLE ||--o{ PAYABLE_LINE : "VOUCHER_ID"</data>
+    </edge>
+    <edge source="PAYABLE" target="PAYABLE_DIST">
+      <data key="d7">||</data>
+      <data key="d8">o{</data>
+      <data key="d9">VOUCHER_ID</data>
+      <data key="d10">PAYABLE ||--o{ PAYABLE_DIST : "VOUCHER_ID"</data>
+    </edge>
+    <edge source="PAYABLE" target="CASH_DISBURSE_LINE">
+      <data key="d7">||</data>
+      <data key="d8">o{</data>
+      <data key="d9">VOUCHER_ID</data>
+      <data key="d10">PAYABLE ||--o{ CASH_DISBURSE_LINE : "VOUCHER_ID"</data>
+    </edge>
+    <edge source="PAYABLE" target="VENDOR">
+      <data key="d7">||</data>
+      <data key="d8">||</data>
+      <data key="d9">VENDOR_ID</data>
+      <data key="d10">PAYABLE ||--|| VENDOR : "VENDOR_ID"</data>
+    </edge>
+    <edge source="PAYABLE_LINE" target="RECEIVER_LINE">
+      <data key="d7">}o</data>
+      <data key="d8">||</data>
+      <data key="d9">RECEIVER_ID + LINE_NO</data>
+      <data key="d10">PAYABLE_LINE }o--|| RECEIVER_LINE : "RECEIVER_ID + LINE_NO"</data>
+    </edge>
+    <edge source="RECEIVER_LINE" target="PURC_ORDER_LINE">
+      <data key="d7">}o</data>
+      <data key="d8">||</data>
+      <data key="d9">PO_NUMBER + LINE_NO</data>
+      <data key="d10">PURC_ORDER_LINE }o--|| RECEIVER_LINE : "PO_NUMBER + LINE_NO"</data>
+    </edge>
+    <edge source="CASH_DISBURSE_LINE" target="CASH_DISBURSE">
+      <data key="d7">||</data>
+      <data key="d8">o{</data>
+      <data key="d9">DISBURSE_ID</data>
+      <data key="d10">CASH_DISBURSE ||--o{ CASH_DISBURSE_LINE : "DISBURSE_ID"</data>
+    </edge>
+    <edge source="PURCHASE_ORDER" target="PURC_ORDER_LINE">
+      <data key="d7">||</data>
+      <data key="d8">o{</data>
+      <data key="d9">PO_NUMBER</data>
+      <data key="d10">PURCHASE_ORDER ||--o{ PURC_ORDER_LINE : "PO_NUMBER"</data>
+    </edge>
+  </graph>
+</graphml>

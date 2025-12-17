@@ -32,9 +32,7 @@ DECLARE @SiteID nvarchar(15) = NULL;    -- set to specific site id or NULL for a
 DECLARE @StartDate DATE = DATEADD(day, -3 , @AsOfDate);
 DECLARE @EndDate DATE = getdate();
 declare @topper int = 1000000;  -- set to limit rows returned, or NULL for no limit
---
-declare @RECEIVER_ID NVARCHAR(15) = '215915'
-declare @PURC_ORDER_ID NVARCHAR(15) = NULL  -- 175717
+
 
 SELECT
         PO.VENDOR_ID,              
@@ -54,7 +52,6 @@ SELECT
         , POL.PART_ID
         , PART.PLANNER_USER_ID
         , V.user_7 as PRODUCT_TYPE
-        ,rl.transaction_id
 
 
 
@@ -73,7 +70,7 @@ AND RL.RECEIVED_QTY > 0 -- UPD 8/7
 
     JOIN VENDOR V
     ON PO.VENDOR_ID = V.ID
-	--and PO.VENDOR_ID != 'TMXDIV'
+	and PO.VENDOR_ID = 'TMXDIV'
 
     LEFT JOIN USER_DEF_FIELDS UD 
     ON POL.PART_ID = UD.DOCUMENT_ID 
@@ -83,13 +80,10 @@ AND RL.RECEIVED_QTY > 0 -- UPD 8/7
 JOIN Live.dbo.PAYABLE_LINE PL
   ON PL.RECEIVER_ID = RL.RECEIVER_ID
   AND PL.RECEIVER_LINE_NO = RL.LINE_NO
-
 JOIN Live.dbo.PAYABLE P
   ON PL.VOUCHER_ID = P.VOUCHER_ID
 
 
 WHERE 1=1 
-AND RL.RECEIVER_ID = ISNULL(@RECEIVER_ID, RL.RECEIVER_ID)
-and pol.PURC_ORDER_ID = ISNULL(@PURC_ORDER_ID, POL.PURC_ORDER_ID)
 -- and RL.INVOICE_ID IS NOT NULL
   AND P.POSTING_DATE BETWEEN @StartDate AND @EndDate
