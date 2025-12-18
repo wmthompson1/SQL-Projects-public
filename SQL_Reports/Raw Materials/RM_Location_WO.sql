@@ -6,6 +6,7 @@ Date      Modified By      Change Description
 ---------- ------------------ ------------------------------------------------------------
 12/18/2025  William          Updated - Trace_Lot added to show lot number of trace
 12/18/2025  William          Updated - link to material requirements
+pr 12/18/2025  William        
 
 **********************************************************************************************/
 SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED
