@@ -1,9 +1,9 @@
 /**********************
 Payables Data Model 1
 
--- looking for vouchers not yet in AP Automation
--- SQL queries to explore Payables data model relationships 
--- file path: Documentation/Data Models/Payables/Payables_Data_Model1.sql
+-- looking for inovoices missing on the _visual side of join_
+-- SQL queries to explore data model relationships 
+-- file path: Documentation/Data Models/Payables/
 
 **Common pitfalls / repo findings**
 - `INVOICE_NO` appears in some reports and older queries — authoritative schema uses `INVOICE_ID`. Review each occurrence before bulk replacing.
@@ -40,8 +40,9 @@ SELECT top (@topper)
         PO.VENDOR_ID,              
         POL.PURC_ORDER_ID,
         RL.RECEIVER_ID,
-        RL.LINE_NO AS RCVR_LINE,
-        -- RL.INVOICE_ID AS RCVR_INVOICE,
+        po.ORDER_DATE,
+         RL.LINE_NO AS RCVR_LINE,
+        RL.INVOICE_ID AS RCVR_INVOICE,
         P.VOUCHER_ID,
         P.INVOICE_ID AS PAYABLE_INVOICE,
         PL.LINE_NO AS PAYABLE_LINE_NO,
@@ -56,7 +57,7 @@ SELECT top (@topper)
         , V.user_7 as PRODUCT_TYPE
         ,rl.transaction_id
         ,P.VOUCHER_ID
-
+        
 -- purchase_order_flow
 FROM PURC_ORDER_LINE POL
 INNER JOIN PURCHASE_ORDER PO ON POL.PURC_ORDER_ID = PO.ID
@@ -65,14 +66,14 @@ INNER JOIN PURCHASE_ORDER PO ON POL.PURC_ORDER_ID = PO.ID
 left JOIN RECEIVER_LINE RL
 ON POL.PURC_ORDER_ID = RL.PURC_ORDER_ID
 AND POL.LINE_NO = RL.PURC_ORDER_LINE_NO 
---AND RL.RECEIVED_QTY > 0 -- UPD 8/7
+AND RL.RECEIVED_QTY > 0 -- UPD 8/7
 
     left JOIN.PART 
     ON PART.ID = POL.PART_ID
 
-    left JOIN VENDOR V
+    JOIN VENDOR V
     ON PO.VENDOR_ID = V.ID
-	--and PO.VENDOR_ID != 'TMXDIV'
+	and PO.VENDOR_ID != 'TMXDIV'
 
     LEFT JOIN USER_DEF_FIELDS UD 
     ON POL.PART_ID = UD.DOCUMENT_ID 
@@ -88,8 +89,9 @@ LEFT JOIN Live.dbo.PAYABLE P
 
 
 WHERE 1=1 
-and RL.RECEIVER_ID is null
+
+--and RL.RECEIVER_ID is null
 --AND RL.RECEIVER_ID = @RECEIVER_ID OR @RECEIVER_ID  IS NULL
 and pol.PURC_ORDER_ID = @PURC_ORDER_ID OR @PURC_ORDER_ID IS NULL
 and RL.INVOICE_ID IS NULL
---  AND P.POSTING_DATE BETWEEN @StartDate AND @EndDate
+AND po.ORDER_DATE BETWEEN @StartDate AND @EndDate
