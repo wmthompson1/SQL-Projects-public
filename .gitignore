@@ -223,3 +223,12 @@ venv/
 
 # Node modules
 node_modules/
+
+# Docker volumes and data
+docker/arangodb_data/
+*.gpickle
+*.graphml
+*.dot
+
+# sensitive notes
+000index.md
