@@ -24,7 +24,7 @@ quantity, the material requirement is closed.
 Use the Issue function in the main Inventory Transaction window
 to issue a particular part to a single requirement. To issue parts
 to all requirements, use the Issue By Exception feature. See [Using
-Issue By Exception](VMINVENT_APLfrmIssue.htm).
+Issue By Exception](VMINVENT_APLfrmIssue.md).
 
 To issue parts to a material requirement:
 
@@ -64,7 +64,7 @@ Issue Reason
 Specify the code that indicates the reason you are issuing the materials.
 Depending on the settings in Site Maintenance, this field may  be
 required. See [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.htm).
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
 
 Description
 Specify a description of the transaction.
@@ -72,4 +72,4 @@ Specify a description of the transaction.
 7. Click Save.
    A transaction ID is generated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

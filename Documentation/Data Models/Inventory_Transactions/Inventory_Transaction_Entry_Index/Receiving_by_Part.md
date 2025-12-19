@@ -60,7 +60,7 @@ the ID of the location receiving the finished goods. To view a list
 of locations that can store the part, click the Location browse button.
 Depending on your Part Location on the Fly settings in Site Maintenance,
 you may be able to specify a new location for the part. See [Specifying
-Information on the General Tab](Specifying_Information_on_the_General_Tab_site.htm).
+Information on the General Tab](Specifying_Information_on_the_General_Tab_site.md).
 
 Description
 Specify a description of the transaction.
@@ -70,7 +70,7 @@ This field is displayed only if you selected the Autogen Labor During
 Receipt check box in Site Maintenance. If you autogenerate labor tickets,
 specify the ID of the employee who complete the labor for this finished
 good. See [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.htm).
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
 
 4. In the work order table,
    the quantity you specified is assigned to open orders. To adjust
