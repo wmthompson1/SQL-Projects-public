@@ -13,8 +13,8 @@ Use Inventory Transaction Entry for six basic operations that manage material fl
 Receive finished goods from work orders or parts directly into inventory.
 
 **Operation Variants:**
-- [Receipt by Work Order](Receipt_by_Work_Order.md) - Receive completed work order output
-- [Receipt by Part](Receipt_by_Part.md) - Receive materials by part number
+- Receipt by Work Order - Receive completed work order output
+- Receipt by Part - Receive materials by part number
 
 **Database Schema:**
 - **CLASS**: `R` (Released)
@@ -32,8 +32,8 @@ Receive finished goods from work orders or parts directly into inventory.
 - `QTY` (quantity being received)
 
 **Related Help Files:**
-- [Receiving Materials Into Inventory](../Help-md/VM/Receiving_Materials_Into_Inventory.md)
-- [Receipt by Part Inventory Transaction Entry](../Help-md/VM/Receipt_by_Part_Inventory_Transaction_Entry.md)
+- [Receiving Materials by Work Order](Receiving_Materials_Into_Inventory.md)
+- [Receiving by Part](Receiving_by_Part.md)
 
 ---
 
@@ -70,18 +70,14 @@ Issue raw materials from inventory to work order requirements for production.
 5. Material charged to work order
 
 **Related Help Files:**
-- [VMINVENTfrmIssue](../Help-md/VM/VMINVENTfrmIssue.md)
-- [Issue to a Work Order](../Help-md/VM/Issue_to_a_Work_Order.md)
-- [For Issue of Inventory to a Work Order](../Help-md/VM/For_Issue_of_Inventory_to_a_Work_Order.md)
+- [Issuing Materials to Work Orders](VMINVENTfrmIssue.md)
+- [Issue and Return by Exception](VMINVENT_APLfrmIssue.md)
 
 ---
 
 ### 3. Adjust Material Into Inventory
 
 Manually add material to inventory for corrections, found items, or adjustments.
-
-**Operation Details:**
-- [Adjust Material In](Adjust_Material_In.md)
 
 **Database Schema:**
 - **CLASS**: `A` (Adjust)
@@ -103,16 +99,13 @@ Manually add material to inventory for corrections, found items, or adjustments.
 - `DESCRIPTION` (explanation of adjustment)
 
 **Related Help Files:**
-- [Adjusting Materials](../Help-md/VM/Adjusting_Materials.md)
+- [Adjusting Materials](Adjusting_Materials.md)
 
 ---
 
 ### 4. Receipt Return
 
 Return a material to the work order (reverses a receipt transaction).
-
-**Operation Details:**
-- [Receipt Return to Work Order](Receipt_Return_to_Work_Order.md)
 
 **Database Schema:**
 - **CLASS**: `R` (Released)
@@ -136,7 +129,7 @@ Return a material to the work order (reverses a receipt transaction).
 - Material moves FROM finished goods TO work-in-process
 
 **Related Help Files:**
-- [Returning Received Materials](../Help-md/VM/Returning_Received_Materials.md)
+- [Returning Received Materials](Returning_Received_Materials.md)
 
 ---
 
@@ -177,18 +170,13 @@ Return issued material to the stockroom (reverses an issue transaction).
 - **Receipt Return** (R+O): Materials FROM inventory TO WIP (↓ QOH)
 
 **Related Help Files:**
-- [Returning Issued Materials](../Help-md/VM/Returning_Issued_Materials.md)
-- [For Return of Issued Material from a Work Order](../Help-md/VM/For_Return_of_Issued_Material_from_a_Work_Order.md)
-- [Issue Returning Piece Tracked Parts to Inventory](../Help-md/VM/Issue_Returning_Piece_Tracked_Parts_to_Inventory.md)
+- [Returning Issued Materials](Returning_Issued_Materials.md)
 
 ---
 
 ### 6. Adjust Material Out of Inventory
 
 Manually subtract material from inventory for corrections, scrap, or losses.
-
-**Operation Details:**
-- [Adjust Material Out](Adjust_Material_Out.md)
 
 **Database Schema:**
 - **CLASS**: `A` (Adjust)
@@ -268,7 +256,6 @@ When a purchase order line is linked to a work order requirement:
 
 **Related Documentation:**
 - [Inventory Transactions](../Help-md/VM/Inventory_Transactions.md)
-- [Receipt to Work Order Process](Receipt_to_Work_Order_Process.md)
 
 ---
 
@@ -304,7 +291,7 @@ When shipping a customer order with linked work order:
 - [Inventory - Transactions AI Review.sql](Inventory%20-%20Transactions%20AI%20Review.sql) - Analysis queries
 
 ### ERP Help Files
-- [VMINVENT_APLfrmInventoryEntry](../Help-md/VM/VMINVENT_APLfrmInventoryEntry.md) - Main transaction entry screen
+- [Using Inventory Transaction Entry](VMINVENT_APLfrmInventoryEntry.md) - Main transaction entry screen
 - [BTS_BI_Basic_Inventory_Transactions](../Help-md/VM/BTS_BI_Basic_Inventory_Transactions.md) - BTS integration
 - [Inventory Transaction Costing](../Help-md/VM/Inventory_Transaction_Costing.md) - Cost accounting
 
@@ -369,8 +356,7 @@ WHERE p.QTY_ON_HAND <> ISNULL(t.Calculated_QOH, 0);
 - Auto-mode for batch processing
 
 **Related:**
-- [Issue and Return by Exception](../Help-md/VM/VMINVENT_APLfrmIssue.md)
-- [Issuing by Exception Using Auto Issue Mode](../Help-md/VM/Issuing_by_Exception_Using_Auto_Issue_Mode.md)
+- [Issue and Return by Exception](VMINVENT_APLfrmIssue.md)
 
 ### Part Traceability
 - Lot number tracking
@@ -416,21 +402,20 @@ WHERE p.QTY_ON_HAND <> ISNULL(t.Calculated_QOH, 0);
 📘 Inventory Transaction Entry
 ├── 📄 Overview (this page)
 ├── 📁 Receipt Transactions
-│   ├── Receipt by Work Order
-│   ├── Receipt by Part
-│   └── Receipt to Work Order Process
+│   ├── Receiving Materials by Work Order (Receiving_Materials_Into_Inventory.md)
+│   ├── Receiving by Part (Receiving_by_Part.md)
+│   └── Receipt by Part Inventory Transaction Entry
 ├── 📁 Issue Transactions
-│   ├── Issue Material to Work Order
-│   ├── Issue by Exception
-│   └── Auto-Issue Configuration
+│   ├── Issue Material to Work Order ✓
+│   ├── Issue by Exception (VMINVENT_APLfrmIssue.md)
+│   └── Auto-Issue Settings
 ├── 📁 Return Transactions
-│   ├── Issue Return to Stockroom
-│   ├── Receipt Return to Work Order
-│   └── Return Transaction Disambiguation
+│   ├── Issue Return to Stockroom ✓ (Returning_Issued_Materials.md)
+│   ├── Receipt Return (Returning_Received_Materials.md)
+│   └── Return Transaction Disambiguation ✓
 ├── 📁 Adjustment Transactions
-│   ├── Adjust Material In
-│   ├── Adjust Material Out
-│   └── Adjustment Reason Codes
+│   ├── Adjusting Materials (Adjusting_Materials.md)
+│   └── For Adjust In or Adjust Out
 ├── 📁 Advanced Topics
 │   ├── Part Traceability
 │   ├── Move Requests
@@ -440,7 +425,7 @@ WHERE p.QTY_ON_HAND <> ISNULL(t.Calculated_QOH, 0);
     ├── Transaction Matrix
     ├── SQL Examples
     ├── Reconciliation Procedures
-    └── Terminology Guide
+    └── Terminology Guide ✓
 ```
 
 ---
