@@ -20,24 +20,24 @@ contents change as the current PO and selected line item change.
 
 You can also make changes and additions to these specifications.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Specifications.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Specifications.md)
 Adding Specifications
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_P_O_Specifications.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_P_O_Specifications.md)
 Adding Order Specifications
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Line_Item_Specifications.htm) Adding Line Item Specifications
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Line_Item_Specifications.md) Adding Line Item Specifications
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Notations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Notations.md)
 Adding Notations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Notations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Notations.md)
 Entering Notations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Notations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Notations.md)
 Editing Notations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Notation_Entries.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Notation_Entries.md)
 Deleting Notation Entries
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help
