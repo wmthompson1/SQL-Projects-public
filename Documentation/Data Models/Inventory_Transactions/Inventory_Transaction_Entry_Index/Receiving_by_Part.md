@@ -70,7 +70,7 @@ This field is displayed only if you selected the Autogen Labor During
 Receipt check box in Site Maintenance. If you autogenerate labor tickets,
 specify the ID of the employee who complete the labor for this finished
 good. See [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
+Information on the Defaults Tab](../../../Help-md/VM/Specifying_Information_on_the_Defaults_Tab_site.md).
 
 4. In the work order table,
    the quantity you specified is assigned to open orders. To adjust

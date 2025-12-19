@@ -64,7 +64,7 @@ Issue Reason
 Specify the code that indicates the reason you are issuing the materials.
 Depending on the settings in Site Maintenance, this field may  be
 required. See [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
+Information on the Defaults Tab](../../../Help-md/VM/Specifying_Information_on_the_Defaults_Tab_site.md).
 
 Description
 Specify a description of the transaction.
@@ -72,4 +72,4 @@ Specify a description of the transaction.
 7. Click Save.
    A transaction ID is generated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

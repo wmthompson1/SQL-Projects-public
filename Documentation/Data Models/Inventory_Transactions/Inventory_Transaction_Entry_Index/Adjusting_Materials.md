@@ -61,7 +61,7 @@ locations that can store the part, click the Location browse button.
 
 Reason Specify
 the reason for the adjustment. Depending on [your
-settings in Site Maintenance](Specifying_Information_on_the_Defaults_Tab_site.md), this field may be required.
+settings in Site Maintenance](../../../Help-md/VM/../../../Help-md/VM/Specifying_Information_on_the_Defaults_Tab_site.md), this field may be required.
 
 Account ID Specify
 the account to use to record the costs of this adjustment. To use
@@ -92,4 +92,4 @@ is populated with the default WBS Code, Project Reference Sequence
 Number, and Sub ID for the project. The department ID associated with
 the default WBS code is also inserted. You can specify different information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
