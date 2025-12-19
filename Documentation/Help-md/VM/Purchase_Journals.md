@@ -32,4 +32,4 @@ The purchase journals taken together for a given period represent
 the total purchase receipts for all types of purchases of manufacturing
 material and expense items for that period.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

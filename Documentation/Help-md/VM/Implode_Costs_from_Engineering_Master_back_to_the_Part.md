@@ -58,4 +58,4 @@ want to start again, just select Refresh from the File menu. VISUAL
 will ask you if you want to save the current changes; you can then
 answer No to revert back to the original part definition.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

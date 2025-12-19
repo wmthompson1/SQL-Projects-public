@@ -32,4 +32,4 @@ hide it, clear the Include check box.
    changing what appears in the panel, click the Ok
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

@@ -69,7 +69,7 @@ These conditions apply to the Gather Strings mode:
     strings from the window or dialog that you opened are displayed
     in the table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

@@ -69,8 +69,8 @@ new dispatch.
 The window populates with a new Dispatch
 ID and information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_to_Addresses_Service_Dispatch.htm) Changing Ship To Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_to_Addresses_Service_Dispatch.md) Changing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_from_Addresses.htm) Changing Ship From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_from_Addresses.md) Changing Ship From Addresses

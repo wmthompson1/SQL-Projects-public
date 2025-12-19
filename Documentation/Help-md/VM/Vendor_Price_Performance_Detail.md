@@ -5,7 +5,7 @@ Vendor Price Performance Detail
 
 # Vendor Price Performance Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid compares the costs of materials and services received from vendors
 with the amounts invoiced for the receipts.
 
@@ -27,10 +27,10 @@ No, PO Del Ln No, Received Qty, Purchase U/M (Received only), Amount
 Received (for Received lines, the amount on th purchase order line.
 For Invoiced lines, the amount invoiced), Currency ID, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

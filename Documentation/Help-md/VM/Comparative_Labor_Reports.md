@@ -87,4 +87,4 @@ VISUAL prints the report.
 
 VMCLURPT.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.md) User-defined Help

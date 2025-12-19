@@ -34,4 +34,4 @@ Calendar from the Options menu.
 A check mark is placed next to the option and the Financial Calendar
 is used to determine the time buckets used in the throughput calculations.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

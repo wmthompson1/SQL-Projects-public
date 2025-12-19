@@ -127,7 +127,7 @@ in the Assign to Demand dialog box line item table.
    to commit the allocation of purchase order line supply to work
    order material requirement demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Material_Requirement_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.htm) Viewing Work Order Material Requirement
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Material_Requirement_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.md) Viewing Work Order Material Requirement
 Demand Allocation Information for a Purchase Order Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

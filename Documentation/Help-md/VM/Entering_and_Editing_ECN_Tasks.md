@@ -51,4 +51,4 @@ a check appears in the Specs check box.
    entering tasks for this ECN, click the Save
    butten on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

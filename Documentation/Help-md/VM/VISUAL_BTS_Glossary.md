@@ -9,12 +9,12 @@ VISUAL BTS Glossary
 
 |  |  |
 | --- | --- |
-| IMPORTNT.gif | This glossary of terms is specific to VISUAL AMTS. It is NOT the Infor VISUAL Glossary of Terms. To view the Infor VISUAL Glossary, click [here](Infor_VISUAL_Enterprise_Glossary_of_Terms.htm). |
+| IMPORTNT.gif | This glossary of terms is specific to VISUAL AMTS. It is NOT the Infor VISUAL Glossary of Terms. To view the Infor VISUAL Glossary, click [here](Infor_VISUAL_Enterprise_Glossary_of_Terms.md). |
 
 The following list of defined terms may be helpful as you use VISUAL
 AMTS.
 
-To add your own terms to the glossary, click [here](User_defined_Help_Files_Glossary.htm).
+To add your own terms to the glossary, click [here](User_defined_Help_Files_Glossary.md).
 
   
 

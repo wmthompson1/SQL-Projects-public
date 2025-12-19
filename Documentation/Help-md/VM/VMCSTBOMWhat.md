@@ -32,6 +32,6 @@ unit of measure appear.
 
 VMCSTBOM.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTBOMfrmPrintCostedBOMReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTBOMfrmPrintCostedBOMReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costed_Bill_of_Material_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costed_Bill_of_Material_Report.md) User-defined Help

@@ -42,7 +42,7 @@ Return to Original Order
 To subtract the returned quantity from the shipped quantity on the
 original customer order line, select this option. To create a new
 customer order to receive the returned material, clear this option.
-See [Costing Replace RMAs](Costing_Replace_RMAs.htm).
+See [Costing Replace RMAs](Costing_Replace_RMAs.md).
 
 Ship from Original Order
 To reship the material from the original order, select this check
@@ -95,4 +95,4 @@ If you selected the Ship before return receipt check box, you can
 ship the replacement parts at any time. If you cleared the Ship before
 return receipt check box, you must first receive the defective material
 before shipping the replacement parts. See [Receiving
-Returned Materials](Receiving_Returned_Materials.htm).
+Returned Materials](Receiving_Returned_Materials.md).

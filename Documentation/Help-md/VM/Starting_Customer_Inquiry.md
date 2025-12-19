@@ -56,4 +56,4 @@ the customer on the customer order. When you specify a Customer Group
 ID, orders for customers that belong to the customer group are returned
 by the search
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md) User Defined Help

@@ -49,4 +49,4 @@ information specified at the tenant level information is used. When
 the site-level information is different from the tenant-level information,
 the text in the field is displayed in blue.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.md) User-defined Help

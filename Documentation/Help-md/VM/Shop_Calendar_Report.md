@@ -69,4 +69,4 @@ VISUAL prints the report.
 
 VMSCHRP4.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.md)

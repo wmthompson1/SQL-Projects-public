@@ -143,4 +143,4 @@ utility log file where all contact processing entries are to be logged.
 The file name is saved to the local preference file VMCRMSNC.INI with
 the key name Log File Name" in the frmContactSnc section.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.htm) What is the Synchronize Contact Utility?
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.md) What is the Synchronize Contact Utility?

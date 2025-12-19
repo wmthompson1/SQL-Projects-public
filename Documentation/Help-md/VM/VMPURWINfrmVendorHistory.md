@@ -37,4 +37,4 @@ order in which you are interested.
 If you expand the purchase order by clicking on its plus icon, a
 list of the parts on that PO appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

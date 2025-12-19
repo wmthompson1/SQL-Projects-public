@@ -25,7 +25,7 @@ To schedule the Reporting Service:
 3. In the Work Order Traveller
    window, specify the settings to use for the print job. For information
    about the settings, see [Printing
-   Travellers and Picklists](VMTRVRPTfrmPrintTravellers.htm).
+   Travellers and Picklists](VMTRVRPTfrmPrintTravellers.md).
 4. Select File,
    Save as Scheduled.
 5. Specify when the service
@@ -66,7 +66,7 @@ may pass before the travellers or picklists are printed.
 Printer Specify
 the printer to use with this scheduled print job. To add a printer
 to the list, use  VRPTSVC.exe. See [Installing
-the Reporting Service](VRPTSVCfrmMain.htm).
+the Reporting Service](VRPTSVCfrmMain.md).
 
 Copies Specify
 the number of copies to print.
@@ -77,7 +77,7 @@ If you have multiple sites, repeat this procedure for each site
 for which you want to print travellers and picklists with the Reporting
 Service.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.md)
 What is the Reporting Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

@@ -115,4 +115,4 @@ and New Value (value based on the Count). If sequencing by Part ID,
 the unit of measure for the part also appears. VISUAL totals Previous
 Value and New Value.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

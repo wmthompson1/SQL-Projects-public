@@ -14,8 +14,8 @@ them.
 See these topics:
 
 * [Reviewing
-  Reporting Service Print Job Configurations](Reviewing_Reporting_Service_Print_Job_Configurations.htm)
+  Reporting Service Print Job Configurations](Reviewing_Reporting_Service_Print_Job_Configurations.md)
 * [Deactivating
-  Reporting Service Print Job Configurations](Deactivating_Reporting_Service_Print_Job_Configurations.htm)
+  Reporting Service Print Job Configurations](Deactivating_Reporting_Service_Print_Job_Configurations.md)
 * [Deleting
-  Reporting Service Print Job Configurations](Deleting_Reporting_Service_Print_Job_Configurations.htm)
+  Reporting Service Print Job Configurations](Deleting_Reporting_Service_Print_Job_Configurations.md)

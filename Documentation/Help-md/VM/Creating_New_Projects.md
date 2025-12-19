@@ -79,7 +79,7 @@ Because your project must have a warehouse with the exact same project
 name, the Create Project Warehouse appears automatically selected.
 After you create your project, you can further define your project
 warehouse in the Warehouse Maintenance window. See [About
-Refining or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.htm).
+Refining or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.md).
 
 If you clear the Create Project Warehouse,
 you have to use Warehouse Maintenance to create your project warehouse,
@@ -99,4 +99,4 @@ cognizant, select the DCM Cognizance check box.
 7. Click the Save
    button on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.md) User-defined Help

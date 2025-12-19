@@ -18,4 +18,4 @@ to create them when you access the Concurrent Scheduler for the first
 time. You can define production schedules in the Concurrent Scheduler,
 or you can define production schedules in Site Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

@@ -200,4 +200,4 @@ planning or scheduling.
 13. To specify pricing information
     for another vendor, repeat steps 4 through 12.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

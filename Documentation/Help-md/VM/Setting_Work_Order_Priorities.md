@@ -71,4 +71,4 @@ priorities on an order-by-order basis you will essentially be trying
 to do one of the Schedulers jobs. Instead, use priority to handle
 the special cases.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

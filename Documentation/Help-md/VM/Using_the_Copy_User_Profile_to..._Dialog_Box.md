@@ -84,4 +84,4 @@ any component and field information you specified.
 4. Click Ok.
    The system copies permissions based on the parameters you specified.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

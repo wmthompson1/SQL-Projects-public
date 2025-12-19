@@ -37,17 +37,17 @@ to add to the group. Only labels of the type you specified in step
 Label Printer
 If the label has a default printer, VISUAL auto-fills this field
 with the printer name. See [defining
-thermal labels](VMBTSLPfrmLabelSetup.htm) for more information.
+thermal labels](VMBTSLPfrmLabelSetup.md) for more information.
 
 Copies If the
 label has a default number of copies setting, VISUAL auto-fills this
 field with the value. See [defining
-thermal labels](VMBTSLPfrmLabelSetup.htm) for more information.
+thermal labels](VMBTSLPfrmLabelSetup.md) for more information.
 
 Multiplier If
 the label is has a multiplier preference set for it, VISUAL selects
 this check box. See [defining thermal
-labels](VMBTSLPfrmLabelSetup.htm) for more information.
+labels](VMBTSLPfrmLabelSetup.md) for more information.
 
 6. Click the Save
    button to save the label group.
@@ -61,4 +61,4 @@ VISUAL removes the label from the group.
 7. Click the Close
    button to return to the main window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.md) User-defined Help

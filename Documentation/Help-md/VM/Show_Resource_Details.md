@@ -95,7 +95,7 @@ Order Entry window, click on the drill-down arrow.
 The Multiple
 Links text is displayed when more than one customer order allocation
 is associated with the work order. Click on the drill-back arrow to
-view the linked customer orders in the [Select Linked Order to View](Select_Linked_Order_to_View.htm)
+view the linked customer orders in the [Select Linked Order to View](Select_Linked_Order_to_View.md)
 window.
 
 3. If you
@@ -112,4 +112,4 @@ window appears with work order information.
    the File menu
    to return to the previous window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

@@ -51,4 +51,4 @@ box appears asking you if you want to view the new requisition.
 6. Click the Yes
    button to load the new requisition.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

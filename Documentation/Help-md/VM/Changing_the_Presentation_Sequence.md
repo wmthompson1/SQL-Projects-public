@@ -24,4 +24,4 @@ The next time you open the presentation
 sequence dialog box, the resources appear in the order defined by
 the position number.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

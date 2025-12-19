@@ -48,4 +48,4 @@ you want VISUAL to print dispatches.
 The report appears for you to view before
 printing.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Dispatch_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Dispatch_Entry.md) User-defined Help

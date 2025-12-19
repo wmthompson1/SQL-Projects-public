@@ -21,4 +21,4 @@ The detail information that appears in the
 right pane is the same as the information that appears for locked
 parts. See the above list for more specific information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

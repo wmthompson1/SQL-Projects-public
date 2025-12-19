@@ -28,4 +28,4 @@ Check boxes are small square boxes that you can click to select
 various options. Unlike option buttons, you can select any number
 of check boxes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

@@ -35,6 +35,6 @@ orders and receive shipments within the same site. You cannot create
 a purchase order in one site, then receive the shipment in a second
 site.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Purchase_Receipt_Entry.htm) Starting Purchase Receipt Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Purchase_Receipt_Entry.md) Starting Purchase Receipt Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

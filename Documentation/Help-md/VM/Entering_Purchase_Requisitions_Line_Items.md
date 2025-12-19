@@ -301,4 +301,4 @@ for the line.
 4. Click Save
    on the main toolbar to commit the requisition to the database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

@@ -52,4 +52,4 @@ Period ID and Ending Period ID fields blank.
 5. Click Ok.
    The report outputs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

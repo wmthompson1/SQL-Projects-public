@@ -15,13 +15,13 @@ database.
 You can use the Individual Privacy program to complete these tasks:
 
 * [Search
-  for the name of an individual data subject in your database](Finding_Data_Subject_Information.htm)
+  for the name of an individual data subject in your database](Finding_Data_Subject_Information.md)
 * [Generate
-  the Individual Privacy report that can be sent to the data subject](Individual_Privacy_Report.htm)
+  the Individual Privacy report that can be sent to the data subject](Individual_Privacy_Report.md)
 * [Redact
-  a data subjects information](Data_Redaction.htm)
+  a data subjects information](Data_Redaction.md)
 * [Monitor
-  Individual Privacy program usage](Monitoring_Usage_of_the_Individual_Privacy_Program.htm)
+  Individual Privacy program usage](Monitoring_Usage_of_the_Individual_Privacy_Program.md)
 
 ## Terminology
 
@@ -35,8 +35,8 @@ Data controller Data controllers are
 entities that hold data about data subjects. Since your VISUAL database
 can hold information about data subjects, your company is a data controller.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Individual_Privacy_Program_Limitations.htm) Individual Privacy Program Limitations
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Individual_Privacy_Program_Limitations.md) Individual Privacy Program Limitations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Individual_Privacy_Program_Limitations.htm) Data Privacy Best Practices
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Individual_Privacy_Program_Limitations.md) Data Privacy Best Practices
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

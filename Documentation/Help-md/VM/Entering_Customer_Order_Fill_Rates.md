@@ -19,4 +19,4 @@ must be allocated before the customer will accept the order. Minimum
 Fill Rates for C/O lines appear in the Customer Order Entry line item
 table in the Min Fill Rates column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

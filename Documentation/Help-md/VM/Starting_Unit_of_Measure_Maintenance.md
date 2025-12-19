@@ -20,4 +20,4 @@ The Unit of Measure Maintenance window contains upper and lower
 sections. The upper is the FROM section and the lower is the TO section.
 You enter all information in the TO section of the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.md) User-defined Help

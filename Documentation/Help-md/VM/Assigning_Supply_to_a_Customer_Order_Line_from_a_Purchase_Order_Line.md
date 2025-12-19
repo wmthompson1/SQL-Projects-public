@@ -150,4 +150,4 @@ allocated purchase order supply, the following appears:
   column, if there is more than one supplying purchase order link,
   the column is empty.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

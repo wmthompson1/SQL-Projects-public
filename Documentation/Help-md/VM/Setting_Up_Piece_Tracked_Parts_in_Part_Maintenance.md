@@ -57,4 +57,4 @@ are posted in the Stock U/M.
 11. Click the Save
     button to save the new part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.md) User-defined Help

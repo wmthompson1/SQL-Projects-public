@@ -61,11 +61,11 @@ specified as a ceiling for the project appears.
 Ceiling Hours The number of hours you
 specified as a ceiling for the project appears. Set up ceilings in
 the [Billing
-Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.htm) dialog box in Project Maintenance.
+Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.md) dialog box in Project Maintenance.
 
 Ceiling Amounts The amount you specified
 as a ceiling for the project appears. Set up ceilings in the [Billing
-Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.htm) dialog box in Project Maintenance.
+Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.md) dialog box in Project Maintenance.
 
 Over/Under Hours VISUAL calculates the
 over or under hours using the following:
@@ -115,4 +115,4 @@ falling between the start and end dates of the date period you entered.
 Period Amount A summarization of amounts
 falling between the start and end dates of the date period you entered.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.md) User-defined Help

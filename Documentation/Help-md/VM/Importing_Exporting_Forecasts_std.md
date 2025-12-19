@@ -26,4 +26,4 @@ only. You can also import the forecast into both portions of the dialog.
 When you export information, you can choose the types of actual
 usage to include in the exported file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

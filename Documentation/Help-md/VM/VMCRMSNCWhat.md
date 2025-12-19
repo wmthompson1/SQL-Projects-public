@@ -61,22 +61,22 @@ and higher and Infor VISUAL CRM 7.12 and higher. Consult with your
 VISUAL ICS staff for recommendations on updating VISUAL and VISUAL
 CRM.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.md)
 Adding Missing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustAcctsToProcessTable_GenID.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustAcctsToProcessTable_GenID.md)
 Generating IDs in the Cust/Accts to Process table in the Synchronize Customer/Account
 Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCLinkingExistingCustomersandAccounts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCLinkingExistingCustomersandAccounts.md)
 Linking Existing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCResyncLinkedAccountandCustomerAssociations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCResyncLinkedAccountandCustomerAssociations.md)
 Re-synchronizing Linked Account and Customer Associations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.md)
 Navigating in the Synchronize Customer/Account Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.md)
 Sorting the Customer/Account table in the Synchronize Customer/Account
 Utility

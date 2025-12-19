@@ -259,4 +259,4 @@ the Desired Ship Date is fine to use as part of your match criteria.
 7. Begin to define a record
    layout. See the section Defining Record Layouts for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

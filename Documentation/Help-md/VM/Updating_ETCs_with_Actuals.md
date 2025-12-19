@@ -20,4 +20,4 @@ To update ETCs with your actual figures:
 
 All ETCs are updated with current cost information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.md) User-defined Help

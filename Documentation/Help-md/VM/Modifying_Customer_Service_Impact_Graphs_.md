@@ -51,4 +51,4 @@ or press the F5 key before the display changes.
 Toggle Button - Click this button to view
 graph information tabularly.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

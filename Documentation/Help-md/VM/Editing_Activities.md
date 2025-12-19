@@ -20,17 +20,17 @@ to a CRM Task ID, then the task is opened in CRM.
 See these topics:
 
 * [Editing
-  Activities in Activity Maintenance](Editing_Activities_in_Activity_Maintenance.htm)
+  Activities in Activity Maintenance](Editing_Activities_in_Activity_Maintenance.md)
 * [Editing
-  Activities in Activity Entry](Editing_Activities_in_Activity_Entry.htm)
+  Activities in Activity Entry](Editing_Activities_in_Activity_Entry.md)
 * [Opening
-  CRM from Activity Maintenance](Opening_CRM_from_Activity_Maintenance.htm)
+  CRM from Activity Maintenance](Opening_CRM_from_Activity_Maintenance.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

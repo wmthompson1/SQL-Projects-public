@@ -22,4 +22,4 @@ and Condition code from the list that appears.
 3. When you have finished
    inserting Terms and Conditions for this project, click the Save button on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.md) User-defined Help

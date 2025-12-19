@@ -28,10 +28,10 @@ on your screen.
 See these topics:
 
 * [Common
-  Toolbars](Common_Toolbars.htm)
+  Toolbars](Common_Toolbars.md)
 * [Tooltips
-  in Toolbars](Tooltips_in_Toolbars.htm)
+  in Toolbars](Tooltips_in_Toolbars.md)
 * [Arranging
-  Toolbars](Arranging_Toolbars.htm)
+  Toolbars](Arranging_Toolbars.md)
 * [Displaying
-  and Hiding Toolbars](Displaying_and_Hiding_Toolbars.htm)
+  and Hiding Toolbars](Displaying_and_Hiding_Toolbars.md)

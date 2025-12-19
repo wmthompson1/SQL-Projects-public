@@ -99,4 +99,4 @@ line refers appears in the Part ID column.
 | --- | --- |
 | TIP.gif | The Part ID only appears on lines that refer to shipping buffers. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.md) User-defined Help

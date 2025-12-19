@@ -10,7 +10,7 @@ these templates to streamline the permissions setting process.
 
 If you store macros in your database, you can also assign macros
 created by the SYSADM user to security profiles. See [What
-are Macros?](What_are_Macros_.htm).
+are Macros?](What_are_Macros_.md).
 
 You can use profiles in two ways. You can assign the profile to
 the user, or you can copy the profile settings to a user.
@@ -63,20 +63,20 @@ for setting up individual users. To create a security profile:
 5. Click the Status
    tab and specify settings for each document type. For more information,
    refer to [Setting
-   Information on Status Tabs](Setting_Information_on_Status_Tabs.htm).
+   Information on Status Tabs](Setting_Information_on_Status_Tabs.md).
 6. Click the ECN
    Status tab and specify settings for ECNs. For more information,
    refer to [Setting
-   Information on Status Tabs](Setting_Information_on_Status_Tabs.htm).
+   Information on Status Tabs](Setting_Information_on_Status_Tabs.md).
 7. Click the Menu
    Security tab and specify which menus users with the profile
    can access. For more information on setting menu security, refer
    to [Setting Information on
-   the Menu Security Tab](Setting_Menu_Security.htm).
+   the Menu Security Tab](Setting_Menu_Security.md).
 8. Click the Program
    Security tab and specify security settings for each program.
    For more information on setting program security, refer to [Setting Information on the
-   Program Security Tab.](Setting_Program_Security.htm)
+   Program Security Tab.](Setting_Program_Security.md)
 9. The Macros tab is available
    only If you store macros in the database. Click the Macros tab
    to associate macros with this profile. You can specify any macro
@@ -88,6 +88,6 @@ for setting up individual users. To create a security profile:
    3. Click Ok.
 10. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_User_Profiles_to_Users.htm) Assigning User Profiles to Users
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_User_Profiles_to_Users.md) Assigning User Profiles to Users
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

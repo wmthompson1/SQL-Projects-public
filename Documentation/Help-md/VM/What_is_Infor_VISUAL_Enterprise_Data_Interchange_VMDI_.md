@@ -84,4 +84,4 @@ You can directly integrate the following information through VMDI:
 * Warehouse Shipment Advice
   (WSA)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Interchange.md) User-defined Help

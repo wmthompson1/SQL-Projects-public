@@ -61,4 +61,4 @@ Change Notices, and Workflow. Members of user groups are responsible
 for approving purchase requisitions, engineering change notices, and
 workflow processes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

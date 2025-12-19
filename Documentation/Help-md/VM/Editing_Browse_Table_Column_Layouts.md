@@ -48,4 +48,4 @@ the Column Name, indicating that you have edited that column.
 VISUAL refreshes the Browse table to display
 your changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

@@ -52,9 +52,9 @@ Receivables Export ID if you are generating reports to file.
 VAT Payables Export ID Specify the Payables
 Export ID if you are generating reports to file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_VAT_Books.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_VAT_Books.md)
 Setting Up VAT Books
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_VAT_Percentages_and_G_L_Accounts.htm) Setting Up VAT Percentages and G/L Accounts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_VAT_Percentages_and_G_L_Accounts.md) Setting Up VAT Percentages and G/L Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

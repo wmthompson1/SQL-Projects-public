@@ -28,14 +28,14 @@ in the other application.
 See these topics:
 
 * [Specifying
-  CRM Connection Settings for Activities](Specifying_CRM_Connection_Settings_for_Activities.htm)
+  CRM Connection Settings for Activities](Specifying_CRM_Connection_Settings_for_Activities.md)
 * [Editing
-  CRM Tasks in Activity Maintenance](Editing_CRM_Tasks_in_Activity_Maintenance_and_Activity_Entry.htm)
+  CRM Tasks in Activity Maintenance](Editing_CRM_Tasks_in_Activity_Maintenance_and_Activity_Entry.md)
 * [Opening
-  CRM from Activity Maintenance](Opening_CRM_from_Activity_Maintenance.htm)
+  CRM from Activity Maintenance](Opening_CRM_from_Activity_Maintenance.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What Are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

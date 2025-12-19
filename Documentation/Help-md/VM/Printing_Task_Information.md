@@ -38,4 +38,4 @@ If e-mailing the report, the system attaches
 the file to a Microsoft Outlook e-mail. For more information on addressing
 and sending the e-mail, refer to your Microsoft Outlook user documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

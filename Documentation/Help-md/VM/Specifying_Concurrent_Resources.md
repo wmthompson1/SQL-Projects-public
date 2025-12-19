@@ -54,7 +54,7 @@ the group schedules its members individually, specify the number of
 members in the group to schedule. A group resource schedules its members
 individually when the Schedule One option
 is selected in the Group Exclusivity section in Shop Resource Maintenance.
-See [Adding a New Shop Resource](VMRESMNTfrmShopResource.htm).
+See [Adding a New Shop Resource](VMRESMNTfrmShopResource.md).
 
 The total duration of the run time is split
 among the number of members that you schedule. For example, presume
@@ -88,4 +88,4 @@ outside the upper left corner of the graphical operation card. The
 C indicates that concurrent resources are present for this operation.
 The C is displayed in the Graphical display mode only.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -15,6 +15,6 @@ VMINVOU3.QRP
 VMINVOUT. QRP
 
 You can override these QRP files. See [Setting
-Report Format File Overrides](Setting_Report_Format_File_Overrides.htm).
+Report Format File Overrides](Setting_Report_Format_File_Overrides.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Out_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Out_Report.md) User-defined Help

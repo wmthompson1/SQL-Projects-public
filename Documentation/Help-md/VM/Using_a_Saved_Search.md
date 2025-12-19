@@ -5,7 +5,7 @@ Using a Saved Search
 
 # Using a Saved Search
 
-To use a [saved search](Saving_Search_Profiles.htm):
+To use a [saved search](Saving_Search_Profiles.md):
 
 1. In the advance browse
    dialog, select Profile, Open.

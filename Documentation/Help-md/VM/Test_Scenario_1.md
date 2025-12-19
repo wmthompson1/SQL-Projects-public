@@ -48,4 +48,4 @@ Click the example you want to view.
 
 ![Scen_Chart_shg.gif](Scen_Chart.gif "Scen_Chart_shg.gif")
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

@@ -15,6 +15,6 @@ classes on an enterprise-wide basis only.
 Use these procedures to set up and use problem classes:
 
 * [Setting
-  Up Problem Classes](Setting_Up_Problem_Classes.htm)
+  Up Problem Classes](Setting_Up_Problem_Classes.md)
 * [Assigning
-  Problem Classes to Buffers](Assigning_Problem_Classes_to_Buffers.htm)
+  Problem Classes to Buffers](Assigning_Problem_Classes_to_Buffers.md)

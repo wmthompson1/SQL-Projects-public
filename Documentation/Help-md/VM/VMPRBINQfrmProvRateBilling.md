@@ -35,4 +35,4 @@ rate, and date range you entered.
 | --- | --- |
 | POSTIT.gif | To access nested rate analysis information, double-click a category. A secondary dialog box appears with individual lines for each account within the selected category. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.md) User-defined Help

@@ -6,7 +6,7 @@ Checking Schedule Availability
 # Checking Schedule Availability
 
 If you are using the [Global
-Scheduler](VMGLBSCHWhat.htm), you may want to use the Check Availability option to
+Scheduler](VMGLBSCHWhat.md), you may want to use the Check Availability option to
 see how an order placed for this quote would affect your shop schedule.
 
 1. Select the line item
@@ -34,7 +34,7 @@ meet the desired schedule.
 The Treat Release Date
 as Hard check box is selected by default if you specified in
 [Site
-Maintenance](Specifying_Information_on_the_Scheduling_Tab_site.htm) that VISUAL must enforce hard release dates for all
+Maintenance](Specifying_Information_on_the_Scheduling_Tab_site.md) that VISUAL must enforce hard release dates for all
 work orders in all schedules.
 
 4. If quoting a standard
@@ -129,7 +129,7 @@ Rate per Day
 Information is displayed in this field if the part is a rate-based
 part. This field shows the quantity that the work order produces each
 day. See [What Are Rate-based
-Parts?](What_Are_Rate-based_Parts_.htm).
+Parts?](What_Are_Rate-based_Parts_.md).
 
 First Delivery Date
 Information is displayed in this field if the part is a rate-based
@@ -175,4 +175,4 @@ If you answer No to remove results, you
 can remove them later by using the Purge Availability Checks option
 in the Global Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

@@ -51,4 +51,4 @@ exchange rates for your customer order.
 Select the Fix Rates check box to apply
 this exchange rate to the customer receipt as well as the A/R invoice.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

@@ -16,4 +16,4 @@ for that currency during the time you specified.
 You can use this value or reselect the current date to use up-to-date
 exchange rates for the current purchase order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

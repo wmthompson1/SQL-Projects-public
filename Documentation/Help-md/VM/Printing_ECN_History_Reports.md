@@ -30,7 +30,7 @@ view all IDs, leave the Start ID and End ID fields blank. The browse
 table lists IDs associated with the sites that you selected. If you
 are browsing for Document IDs, the browse table also lists tenant-level
 documents that the selected sites are allowed to use. See [Setting
-Allowable Sites for Tenant Documents](Setting_Allowable_Sites_for_Tenant_Documents.htm).
+Allowable Sites for Tenant Documents](Setting_Allowable_Sites_for_Tenant_Documents.md).
 
 5. Specify filters for
    the report:
@@ -90,4 +90,4 @@ Rich Text Format (.RTF) file, clear the PDF Format check box.
 
 8. Click Print.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_History.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_History.md) User-defined Help

@@ -25,4 +25,4 @@ using Centura Report Builder. The following QRP report files apply:
 | Parts | VMRFQRP2.QRP |
 | Vendor Quotes | VMRFQRP3.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

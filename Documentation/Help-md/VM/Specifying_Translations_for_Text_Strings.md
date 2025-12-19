@@ -68,7 +68,7 @@ from the interface.
 6. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

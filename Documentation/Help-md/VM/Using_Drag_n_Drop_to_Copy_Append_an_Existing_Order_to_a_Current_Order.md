@@ -39,4 +39,4 @@ you can easily view the new copied/appended lines.
    as necessary and click the Save toolbar
    button to save the order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

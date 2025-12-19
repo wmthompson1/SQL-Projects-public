@@ -47,4 +47,4 @@ Assign to Demand dialog box line item table.
    | --- | --- |
    | POSTIT.gif | The quantity that you enter in the Assign Quantity column can not be greater than the Demand Unallocated Quantity of the work order material requirement or the Available Quantity of the P/O delivery schedule line. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

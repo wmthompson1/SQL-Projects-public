@@ -28,7 +28,7 @@ The Label ID fields appear.
    can record and share special information with those who have access
    to work in the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Using
 User Defined Fields

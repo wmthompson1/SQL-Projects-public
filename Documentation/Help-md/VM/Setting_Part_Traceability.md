@@ -85,4 +85,4 @@ If necessary, you can override this date here.
 10. Click the Save
     button in the Labor Ticket Entry window to complete the transaction.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

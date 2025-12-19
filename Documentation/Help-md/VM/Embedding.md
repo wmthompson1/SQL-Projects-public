@@ -70,4 +70,4 @@ The object is now embedded in the Manufacturing
 Window object. When you view the Manufacturing Window in graphical
 mode, a "p" appears beside the object containing the picture.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

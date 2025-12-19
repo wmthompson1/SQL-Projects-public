@@ -73,4 +73,4 @@ To add another coproduct, click the Insert button and repeat this
 procedure. Note that if you add a second coproduct, you must use the
 same quantity type as the first coproduct.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

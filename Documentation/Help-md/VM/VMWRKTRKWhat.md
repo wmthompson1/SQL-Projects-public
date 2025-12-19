@@ -11,4 +11,4 @@ the work area displays a color-coded border to indicate where the
 workflow started, which steps have been completed, and the current
 step.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

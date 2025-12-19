@@ -26,6 +26,6 @@ which you place focus. In general, the details indicate, in a table
 format, information related to the function you select. You can modify
 the width of the columns as well as the sort order, but you cannot
 change the column order. See [Working
-with Tables](Editing_Browse_Table_Column_Layouts.htm) for more information on setting column widths.
+with Tables](Editing_Browse_Table_Column_Layouts.md) for more information on setting column widths.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -22,4 +22,4 @@ To export data:
 If you make any changes to your Excel file after you export the
 information, the information is not saved in your database unless
 you use the [Import
-to Excel](Importing_Information_from_Excel_advanced.htm) function.
+to Excel](Importing_Information_from_Excel_advanced.md) function.

@@ -72,7 +72,7 @@ the user or group responsible for ECN distribution.
 
 Update After
 If the Update After check box is not already selected (you can specify
-a default [Update After](Revision_Update_Preferences.htm)
+a default [Update After](Revision_Update_Preferences.md)
 preference), select the point from the four ECN stages at which revision
 update should occur.
 
@@ -82,10 +82,10 @@ update should occur.
 
 8. Add lines to the ECN.
    See [Entering and
-   Editing ECN Tasks](Entering_and_Editing_ECN_Tasks.htm).
+   Editing ECN Tasks](Entering_and_Editing_ECN_Tasks.md).
 9. Enter any additional
    information about this ECN on the appropriate tab. See [Entering
-   Information on ECN Tabs](Entering_Information_on_ECN_Tabs.htm).
+   Information on ECN Tabs](Entering_Information_on_ECN_Tabs.md).
 10. Click the Save
     button on the toolbar or select Save
     from the File menu.
@@ -93,4 +93,4 @@ update should occur.
 If you have not entered an ID for this ECN,
 VISUAL automatically assigns the next available ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

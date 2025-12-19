@@ -59,6 +59,6 @@ parts only.
 
 6. Specify how to output
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.md) User-defined Help

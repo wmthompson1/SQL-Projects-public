@@ -23,10 +23,10 @@ the additional index and missing index are removed from the lists.
 After you analyze indexes, you can use the Repair tool to add missing
 indexes and repair incorrect indexes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKIDXfrmTestIndexes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKIDXfrmTestIndexes.md)
 Analyzing Indexes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repairing_Indexes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repairing_Indexes.md)
 Repairing Indexes

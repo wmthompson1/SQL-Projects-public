@@ -7,7 +7,7 @@ Adding a Picture in Employee Maintenance
 
 You can add a picture of the employee to the employee record. Depending
 on your settings in Preferences Maintenance, you can [display
-the picture directly on the Employee Maintenance window](Displaying_the_Picture_in_Employee_Maintenance.htm).
+the picture directly on the Employee Maintenance window](Displaying_the_Picture_in_Employee_Maintenance.md).
 
 To add a picture:
 

@@ -14,8 +14,8 @@ To open a related document in the Tree View:
    in the detail table. The linked document is displayed in the module
    in which it was created.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.md)
 Using the Tree Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

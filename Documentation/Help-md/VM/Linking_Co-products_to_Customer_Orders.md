@@ -18,7 +18,7 @@ be unable to tell if the user is creating a new reference. Further,
 the receiving and shipping process must be able to unambiguously find
 the part being received.
 
-Use [Customer Order Entry](VMORDENTWhat.htm) to link
+Use [Customer Order Entry](VMORDENTWhat.md) to link
 co-products to work orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

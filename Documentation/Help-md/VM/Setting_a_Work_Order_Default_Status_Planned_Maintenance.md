@@ -30,8 +30,8 @@ are ready for the shop floor; work may begin on them at any time.
    internal work orders. The VISUAL Concurrent Scheduler uses these
    ranks as priorities when scheduling released work orders. To change
    the priority of individual work orders, use the [VISUAL
-   Concurrent Scheduler](Setting_Work_Order_Priorities.htm).
+   Concurrent Scheduler](Setting_Work_Order_Priorities.md).
 4. Click the Save
    button to commit settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

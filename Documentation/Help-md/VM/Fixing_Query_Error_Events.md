@@ -8,7 +8,7 @@ Fixing Query Error Events
 After you have viewed the list of events that contain
 errors and have viewed the error messages, return to the Event Maintenance
 window to correct the error. In the example above with the invalid
-SQL statement, return to the [Tokens](VMMSGMNTfrmEvent.htm)
+SQL statement, return to the [Tokens](VMMSGMNTfrmEvent.md)
 tab and correct the problem; in this case, a simple spelling mistake.
 
 Now return to the Process Events dialog box to execute the event
@@ -50,4 +50,4 @@ To see if VISUAL has processes your corrected,
 open the Process Events dialog box again and look for the event you
 corrected in the Completed events table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.md) User-defined Help

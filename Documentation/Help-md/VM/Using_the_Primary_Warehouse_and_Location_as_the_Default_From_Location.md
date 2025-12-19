@@ -7,7 +7,7 @@ Using the Primary Warehouse and Location as the Default From Location
 
 Use the preference described in this topic in conjunction
 with [Transferring Inventory
-Between Locations](VMINVENT_APLfrmInventoryTransfer.htm) in Inventory Transaction Entry.
+Between Locations](VMINVENT_APLfrmInventoryTransfer.md) in Inventory Transaction Entry.
 
 You can set up a preference in Preferences Maintenance to always
 use a parts primary warehouse and location as the default location

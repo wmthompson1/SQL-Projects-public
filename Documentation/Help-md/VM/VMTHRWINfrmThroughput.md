@@ -20,4 +20,4 @@ option.
 From the Options menu, select Show Sales Values to view Throughput
 Values as sales values, or raw dollar amounts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

@@ -14,7 +14,7 @@ information such as Vendor ID, Date, and ship to address; the table
 section allows you to enter actual lines of material or service. Start
 the requisition process by filling in the fields in the header section.
 See [the next
-section](Entering_Purchase_Requisitions_Line_Items.htm) for more information.
+section](Entering_Purchase_Requisitions_Line_Items.md) for more information.
 
 ## Entering Header Information for Purchase Requisitions
 
@@ -115,7 +115,7 @@ A Buyer may be the purchasing agent who initiated the requisition
 or the same as the Requestor. Specify buyers in Buyer Maintenance.
 You must select an eligible buyer. You cannot specify a buyer who
 is excluded from using the vendor in this field. See [Excluded
-Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.htm).
+Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.md).
 
 FOB
 - From the Free on Board combo box, select the appropriate
@@ -269,9 +269,9 @@ VISUAL updates the Purchase From/Ship To
 field with the ship to address. VISUAL also updates the Shipto ID
 field if an ID exists for the address.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Purchase_Requisitions_Line_Items.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Purchase_Requisitions_Line_Items.md)
 Entering Purchase Requisition Line Items
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Task_Specification_Text.htm) Adding Task Specification Text
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Task_Specification_Text.md) Adding Task Specification Text

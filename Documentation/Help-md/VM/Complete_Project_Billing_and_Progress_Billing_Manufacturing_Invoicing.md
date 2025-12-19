@@ -84,5 +84,5 @@ Rate Maintenance for more information on creating exchange rates.
 12. Click Ok
     to print the invoice.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined
 Help

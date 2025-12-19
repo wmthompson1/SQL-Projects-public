@@ -68,6 +68,6 @@ view the next subordinate part in the list.
 Press the up-arrow button to view the previous
 part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Jumping_Up_to_the_Parent_Part_ID.htm) Jumping Up to the Parent Part ID
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Jumping_Up_to_the_Parent_Part_ID.md) Jumping Up to the Parent Part ID

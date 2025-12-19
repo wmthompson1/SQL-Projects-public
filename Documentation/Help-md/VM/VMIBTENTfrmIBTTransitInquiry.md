@@ -79,4 +79,4 @@ or receive are red. Fully shipped and received lines are black.
    and begin a new session, click the New
    toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

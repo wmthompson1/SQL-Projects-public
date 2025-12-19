@@ -19,4 +19,4 @@ When printing the Tag List, each lot number or serial number is
 shown indented under the main Part ID/Location entry, and a separate
 count is entered or shown for each.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

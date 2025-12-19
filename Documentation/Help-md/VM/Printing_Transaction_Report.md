@@ -86,4 +86,4 @@ the Transaction Date, Type, Quantity, Work Order ID, Employee ID,
 and Resource ID appears for each labor transaction that falls within
 the date range.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

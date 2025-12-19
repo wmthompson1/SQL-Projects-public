@@ -7,7 +7,7 @@ Using Code Mapping Maintenance
 
 Note: You can control access
 to Code Mapping Maintenance in [Program
-Security](Setting_Program_Security.htm).
+Security](Setting_Program_Security.md).
 
 To map codes:
 

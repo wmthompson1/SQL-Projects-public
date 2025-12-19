@@ -82,7 +82,7 @@ in the report.
 
 6. Specify the output for
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 
 7. Click the Ok
    button.
@@ -90,5 +90,5 @@ in the report.
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User
 Defined Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Customer_Shipment_Thermal_Label_Packlist_BOL_Print_Options.htm) Setting Customer Shipment Thermal Label
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Customer_Shipment_Thermal_Label_Packlist_BOL_Print_Options.md) Setting Customer Shipment Thermal Label
 Packlist & BOL Print options

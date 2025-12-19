@@ -89,10 +89,10 @@ Wherever you have set up Customizable User Defined Fields for a
 program, you can include those Customizable UDF fields in your search
 by SQL filter.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_are_Macros_.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_are_Macros_.md)
 What are Macros?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Browsing_by_SQL_Statement.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Browsing_by_SQL_Statement.md)
 Browsing by SQL Statement

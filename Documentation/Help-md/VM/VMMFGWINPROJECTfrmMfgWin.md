@@ -20,8 +20,8 @@ modes and options. In all cases, the same internal database information
 is displayed. The viewing modes present you with a variety of tools
 for viewing and editing the information.
 
-You can choose among three views: [Graphical](Manufacturing_Window_Viewing_Options.htm),
-[Text](Manufacturing_Window_Viewing_Options.htm), and [Grid](Using_the_Grid_View.htm). In the Graphical display,
+You can choose among three views: [Graphical](Manufacturing_Window_Viewing_Options.md),
+[Text](Manufacturing_Window_Viewing_Options.md), and [Grid](Using_the_Grid_View.md). In the Graphical display,
 you can choose to view information from the bottom of the window up
 or from the top of the window down.
 
@@ -31,7 +31,7 @@ and define up to 6 text size options.
 You can choose an interface when you open an existing master or
 create a new master. You can change the view using the View menu
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Popup_Information_Cards.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Popup_Information_Cards.md)
 Popup Information Cards

@@ -21,9 +21,9 @@ This table shows links to the concepts behind the Costing Tools
 Window.
 
 | Concept | Description |
-| [What are Costing Tools/Audits?](VMAPLTLSWhat.htm) | This topic describes the benefits of Costing Tools. |
-| [Using Costing Tools](Using_Costing_Tools.htm) | This topic describes the auditing of costs. |
-| [Costing Tools/Audit Overview](Costing_Tools_Audit_Overview.htm) | This topic lists the functions that are available in the Costing Tools window. |
+| [What are Costing Tools/Audits?](VMAPLTLSWhat.md) | This topic describes the benefits of Costing Tools. |
+| [Using Costing Tools](Using_Costing_Tools.md) | This topic describes the auditing of costs. |
+| [Costing Tools/Audit Overview](Costing_Tools_Audit_Overview.md) | This topic lists the functions that are available in the Costing Tools window. |
 
 ## Tasks
 
@@ -31,8 +31,8 @@ This table shows the tasks that you can complete in the Allocation
 Utilities window:
 
 | Task | Description |
-| [Costing Reports](Costing_Reports.htm) | Use this procedure to run costing reports. |
-| [Recalculating Balances and Costs](Recalculating_Balances_and_Costs.htm) | Use this procedure to recalculate distributions, standard costs, inventory balances, and WIP balances. |
+| [Costing Reports](Costing_Reports.md) | Use this procedure to run costing reports. |
+| [Recalculating Balances and Costs](Recalculating_Balances_and_Costs.md) | Use this procedure to recalculate distributions, standard costs, inventory balances, and WIP balances. |
 
 ## Fields
 
@@ -659,4 +659,4 @@ Remarks
 
 A description of the exception.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help

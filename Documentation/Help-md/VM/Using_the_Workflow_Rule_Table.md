@@ -91,5 +91,5 @@ The calendar dialog box appears.
    the time for your operator value; then click the OK
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.md)
 Working with Statements

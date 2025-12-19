@@ -17,4 +17,4 @@ without changing the RMA status to open.
 If you have not received the returned material from your customer,
 then click the Type arrow and select Credit. Process the Credit RMA
 as you normally would. See [Credit
-RMAs](What_Are_Credit_RMAs_.htm).
+RMAs](What_Are_Credit_RMAs_.md).

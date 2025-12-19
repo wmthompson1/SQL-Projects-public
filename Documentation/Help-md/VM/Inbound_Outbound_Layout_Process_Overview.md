@@ -22,4 +22,4 @@ file layout, and record definitions. Finally, use the EDI mapping
 software to translate the data into the EDI software for transmission
 to your trading partner.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

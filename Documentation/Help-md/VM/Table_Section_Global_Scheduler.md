@@ -45,7 +45,7 @@ columns may be available:
   Select this check box if you want VISUAL to schedule all
   the work order in this Schedule ID with hard release dates.
   See [Setting
-  the Global Hard Release Dates Preferences](Setting_the_Global_Hard_Release_Dates_Preference.htm).
+  the Global Hard Release Dates Preferences](Setting_the_Global_Hard_Release_Dates_Preference.md).
 * [Active](javascript:TextPopup(this))
 
   If this box is not checked then the employee is considered

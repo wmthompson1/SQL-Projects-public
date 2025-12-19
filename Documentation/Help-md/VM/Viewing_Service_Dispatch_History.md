@@ -103,4 +103,4 @@ Order, and sequence the table in Ascending or Descending order.
 If you want to view the Service Dispatch History Table without fully
 received services, select the Exclude Fully Received check box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

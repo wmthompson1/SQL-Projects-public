@@ -34,4 +34,4 @@ lines by holding the CTRL key while selecting the lines you want.
 The Copy Events From dialog box closes and
 the lines you selected appear in the Edit Billing Events dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

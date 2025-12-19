@@ -70,6 +70,6 @@ If you are licensed to use multiple sites,
 you can perform physical inventory counts on a site-by-site basis
 only.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPHYINV_APLfrmPhysicalCount.htm) Starting Physical Inventory Count
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPHYINV_APLfrmPhysicalCount.md) Starting Physical Inventory Count
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

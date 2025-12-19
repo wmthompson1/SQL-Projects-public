@@ -240,4 +240,4 @@ address by bill of lading.
 7. Click Save
    to save these E-commerce settings for this customer shipping address.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

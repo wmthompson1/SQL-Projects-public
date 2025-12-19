@@ -67,7 +67,7 @@ the PDF Format check box, a PDF is created and attached to the e-mail.
    Linked References check box.
 8. Click OK.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.md)
 What is Document Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

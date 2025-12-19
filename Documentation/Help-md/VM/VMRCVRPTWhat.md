@@ -29,6 +29,6 @@ information is provided:
 
 VMRCVRPT.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVRPTfrmPrintReceivingReport.htm) Printing/Viewing Receiving Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVRPTfrmPrintReceivingReport.md) Printing/Viewing Receiving Reports

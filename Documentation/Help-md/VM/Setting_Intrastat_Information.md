@@ -33,11 +33,11 @@ to suit your individual needs.
 Click the Intrastat tab to view the Intrastat section of the Accounting
 Entity Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enabling_Intrastat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enabling_Intrastat.md)
 Enabling Intrastat
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_General_Intrastat_Information.htm) Entering General Intrastat Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_General_Intrastat_Information.md) Entering General Intrastat Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_Reporting_Information.htm) Selecting Reporting Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_Reporting_Information.md) Selecting Reporting Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Intrastat_Maintenance_Information.htm) Entering Intrastat Maintenance Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Intrastat_Maintenance_Information.md) Entering Intrastat Maintenance Information

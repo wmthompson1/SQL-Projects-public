@@ -19,4 +19,4 @@ Planning Window.
 | --- | --- |
 | POSTIT.gif | You may wish to consider a Windows program scheduler, which has the capability of running a program like the Global Scheduler at a certain time without the system being attended. Some alternative desktop packages support this feature, as well as some automatic backup systems. You may wish to consider this for the Costing Utilities as well. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

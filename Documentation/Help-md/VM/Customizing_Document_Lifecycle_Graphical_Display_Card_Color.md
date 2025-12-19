@@ -6,7 +6,7 @@ Customizing Document Lifecycle Graphical Display Card Color
 # Customizing Document Lifecycle Graphical Display Card Color
 
 You can select the colors to use for the [lifecycle
-cards](Using_the_Document_Lifecycle_Graphical_Display.htm).
+cards](Using_the_Document_Lifecycle_Graphical_Display.md).
 
 To customize colors:
 
@@ -30,8 +30,8 @@ To customize colors:
    check box.
 5. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Document_Lifecycle_Graphical_Display.htm) Using the Document Lifecycle Graphical
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Document_Lifecycle_Graphical_Display.md) Using the Document Lifecycle Graphical
 Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

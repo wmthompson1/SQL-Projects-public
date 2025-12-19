@@ -53,4 +53,4 @@ For example, you may choose to only update Unreleased and Firmed operations
 You automatically return to the Service
 Maintenance window when the update is complete.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.md) User-defined Help

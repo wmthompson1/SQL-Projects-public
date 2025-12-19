@@ -65,4 +65,4 @@ one but slightly to the right and below the previous window.
 | --- | --- |
 | POSTIT.gif | If you want to save the default settings for new windows, select the Save as default check box. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

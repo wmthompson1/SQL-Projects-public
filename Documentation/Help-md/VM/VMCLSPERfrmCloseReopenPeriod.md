@@ -22,8 +22,8 @@ This table shows the tasks that you can complete in the Close/Reopen
 Period window:
 
 | Task | Description |
-| [Closing Accounting Periods (Global Financials)](Closing_Accounting_Periods_(Global_Financials).htm) | Use this procedure to close a period. |
-| [Reopening Accounting Periods (Global Financials License)](Reopening_Accounting_Periods_(Global_Financials_License).htm) | Use this procedure to reopen a closed period. |
+| [Closing Accounting Periods (Global Financials)](Closing_Accounting_Periods_(Global_Financials).md) | Use this procedure to close a period. |
+| [Reopening Accounting Periods (Global Financials License)](Reopening_Accounting_Periods_(Global_Financials_License).md) | Use this procedure to reopen a closed period. |
 
 ## Fields
 
@@ -53,4 +53,4 @@ sales shipments, and indirect labor. Use WIP Maintenance to post WIP
 Maintenance transactions. Use Project Journal Adjustment Entry to
 post project adjustments.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Close_Reopen_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Close_Reopen_Maintenance.md) User-defined Help

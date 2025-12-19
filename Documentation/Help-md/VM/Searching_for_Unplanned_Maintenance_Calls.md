@@ -57,4 +57,4 @@ ID, Status, or Call Date.
 Click the Clear button to clear the output
 table window and conduct a new search.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

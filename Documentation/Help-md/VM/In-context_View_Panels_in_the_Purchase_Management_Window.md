@@ -30,11 +30,11 @@ To access the Vendor View Panel, select View,
 Vendor View Panel. You can view summary
 information, detail information, and a chart. For information about
 setting up the summary and detail views, see [In-context
-View Panels](In-context_View_Panels.htm). For information about the chart, see [Vendor
-View Panel Chart](Vendor_View_Panel_Chart.htm).
+View Panels](In-context_View_Panels.md). For information about the chart, see [Vendor
+View Panel Chart](Vendor_View_Panel_Chart.md).
 
 To access the Part View Panel, select View,
 Part View Panel. For information about setting
 up the summary and detail views, see [In-context
-View Panels](In-context_View_Panels.htm). For information about the Part view panel chart,
-see [Part View Panel Chart](Part_View_Panel_Chart.htm).
+View Panels](In-context_View_Panels.md). For information about the Part view panel chart,
+see [Part View Panel Chart](Part_View_Panel_Chart.md).

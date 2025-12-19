@@ -30,4 +30,4 @@ A date and time stamp is entered for your
 comment and saves it to your database. The date, time, and the beginning
 of your comment appear in the Specifications column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

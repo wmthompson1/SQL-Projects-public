@@ -27,4 +27,4 @@ Book for common pricing formulas. These templates allow for quick
 and easy customizability. You can, of course, create formulas from
 scratch.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.md) User-defined Help

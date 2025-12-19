@@ -43,13 +43,13 @@ cross-selling part.
 Unallocated Demand - The available quantity
 of the part that you have not yet allocated to demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Cross_Selling_Part_Availability_Information.htm) Viewing Cross-Selling Part Availability
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Cross_Selling_Part_Availability_Information.md) Viewing Cross-Selling Part Availability
 Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Order_Cross_Selling_Parts.htm) Using Drag n Drop to Order Cross-Selling
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Order_Cross_Selling_Parts.md) Using Drag n Drop to Order Cross-Selling
 Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Order_Cross_Selling_Parts.htm) Using the Right Mouse Button to Order
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Order_Cross_Selling_Parts.md) Using the Right Mouse Button to Order
 Cross-Selling Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

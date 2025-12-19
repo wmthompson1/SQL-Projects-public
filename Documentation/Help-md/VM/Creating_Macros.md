@@ -75,13 +75,13 @@ The macro is run when you save a record.
   your user name. If you are not the SYSADM user, then only you
   can use the macro. If you are the SYSADM user, then you can share
   the macro with others. See [Assigning
-  Shared Macros to Profiles](Assigning_Shared_Macros_to_Profiles.htm).
+  Shared Macros to Profiles](Assigning_Shared_Macros_to_Profiles.md).
 * If macros
   are stored on the workstation, then a vms file is created and
   stored in your VISUAL executable directory. The file name is built
   using the file name of the executable and the name of your macro.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_are_Macros_.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_are_Macros_.md)
 What are Macros?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

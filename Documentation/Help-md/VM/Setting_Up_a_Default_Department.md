@@ -75,4 +75,4 @@ The Department Maintenance window closes.
 You cannot perform this phase of the Default Department set up until
 you have completed setting up your Cost Categories.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

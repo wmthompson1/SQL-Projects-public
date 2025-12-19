@@ -68,4 +68,4 @@ are interested in the explorer panel.
 | --- | --- |
 | POSTIT.gif | This information is the same information available in the Material Planning Report available in the Material Planning Window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

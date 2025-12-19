@@ -13,4 +13,4 @@ Upon clicking, a table appears in place of the graph. The selected
 Schedule IDs appear in the left hand column and the Part IDs for which
 there is constraint information each represent one column in the table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

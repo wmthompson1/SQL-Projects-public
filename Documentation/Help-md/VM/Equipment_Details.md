@@ -10,7 +10,7 @@ Equipment Details tab has the default position in the Unplanned Maintenance
 window. After selecting a piece of equipment, VISUAL auto-fills many of
 the fields in the Equipment Details tab with the equipments default information.
 
-Below is a list of the fields and their significance. Click [here](Entering_and_Maintaining_Equipment_Information.htm)
+Below is a list of the fields and their significance. Click [here](Entering_and_Maintaining_Equipment_Information.md)
 for more on entering default equipment information.
 
 Customer ID - The customer associated to the

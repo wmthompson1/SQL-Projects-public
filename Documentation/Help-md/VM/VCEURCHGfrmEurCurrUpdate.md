@@ -37,4 +37,4 @@ list of what you selected appears in the table.
 On successful completion of the update process,
 a notification dialog box appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.md) User-defined Help

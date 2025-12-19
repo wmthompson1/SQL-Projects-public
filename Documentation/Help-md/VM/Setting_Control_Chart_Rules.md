@@ -28,4 +28,4 @@ three points in a row are on the same side of the mean.
 3. Click Ok
    to save the new information and close the dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

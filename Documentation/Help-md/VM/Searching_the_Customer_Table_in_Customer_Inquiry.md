@@ -30,6 +30,6 @@ search field on the window. For example, if you want to search on
 Customer ID, but are not sure of the correct information, try the
 Customer Name data field instead.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md)
 User-defined
 Help

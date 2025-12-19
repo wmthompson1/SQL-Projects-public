@@ -42,4 +42,4 @@ into your current detail window.
 | --- | --- |
 | POSTIT.gif | Different versions of the system may support different versions of the clipboard format. This file is not intended as a permanent archival method but as an easy method to move large pieces of one work order/engineering master to another. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

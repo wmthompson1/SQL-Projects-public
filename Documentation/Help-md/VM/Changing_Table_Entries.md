@@ -27,4 +27,4 @@ the changes you make in the To table. First, you must save your changes.
    | --- | --- |
    | POSTIT.gif | You cannot change the Unit Of Measure column. If you need to change a Unit Of Measure, you must add it again. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.md) User-defined Help

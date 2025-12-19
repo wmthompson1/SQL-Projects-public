@@ -34,9 +34,9 @@ Notepad and your shipping software.
 
 See these topics:
 
-[Using the Graphical Menu](Using_the_Graphical_Menu.htm)
+[Using the Graphical Menu](Using_the_Graphical_Menu.md)
 
 [Modifying the Graphical
-Menu](Modifying_the_Graphical_Menu.htm)
+Menu](Modifying_the_Graphical_Menu.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

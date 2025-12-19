@@ -41,4 +41,4 @@ part master.
 | --- | --- |
 | POSTIT.gif | The maintenance applications have functions of their own that allow you to "push" the new values into multiple masters/work orders, rather than "pull" them from this side. Part Maintenance provides Reset Material Requirement Costs. Shop Resource Maintenance and Service Maintenance provide Reset Operation Costs. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

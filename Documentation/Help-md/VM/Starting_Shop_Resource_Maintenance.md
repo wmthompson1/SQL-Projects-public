@@ -17,4 +17,4 @@ The Shop Resource Maintenance window appears with no information
 in it. The Shop Resource Maintenance window contains both entry fields
 and action buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

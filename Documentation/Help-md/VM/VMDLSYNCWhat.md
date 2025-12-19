@@ -47,6 +47,6 @@ new parts or add parts to your VISUAL database using VDIU.
 * Automatically uses default
   costs from Part Maintenance and Resource Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Masters_and_Work_Orders.htm) Creating Masters and Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Masters_and_Work_Orders.md) Creating Masters and Work Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

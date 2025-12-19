@@ -6,7 +6,7 @@ Model
 ## Model
 
 Click the Model button to select a type for
-the equipment. Click [here](Entering_Maintaining_and_Deleting_Equipment_Models.htm)
+the equipment. Click [here](Entering_Maintaining_and_Deleting_Equipment_Models.md)
 for more information.
 
 If you select an equipment type, you may not be able to select a model.

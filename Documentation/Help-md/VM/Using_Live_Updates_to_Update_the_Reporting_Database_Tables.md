@@ -16,7 +16,7 @@ the metrics is changed:
    click Live.
 4. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

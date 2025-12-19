@@ -20,10 +20,10 @@ used in the windows. Not all database fields are available. Use the
 Available Fields field in the Edit Macro dialog to view a list of
 the fields you can work with.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Where_are_Macros_Available_.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Where_are_Macros_Available_.md)
 Where are Macros Available?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sample_Macros.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sample_Macros.md)
 Sample Macros
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

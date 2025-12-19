@@ -27,4 +27,4 @@ Orders that received fill rate allocation
 in pass two are eligible to receive future supply allocation in this
 pass.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help

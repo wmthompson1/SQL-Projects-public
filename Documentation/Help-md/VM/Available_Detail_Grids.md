@@ -8,45 +8,45 @@ Available Detail Grids
 These detail grids are available:
 
 * [Amount
-  Purchased from Supplier Detail](Amount_Purchased_from_Supplier_Detail.htm)
+  Purchased from Supplier Detail](Amount_Purchased_from_Supplier_Detail.md)
 * [Bookings
-  vs. Shipments Detail](Bookings_vs._Shipments_Detail.htm)
+  vs. Shipments Detail](Bookings_vs._Shipments_Detail.md)
 * [Customer
-  Revenue Detail](Customer_Revenue_Detail.htm)
+  Revenue Detail](Customer_Revenue_Detail.md)
 * [Delivery
-  Performance Detail](Delivery_Performance_Detail.htm)
+  Performance Detail](Delivery_Performance_Detail.md)
 * [Open
-  Accounts Payable Detail](Open_Accounts_Payable_Detail.htm)
+  Accounts Payable Detail](Open_Accounts_Payable_Detail.md)
 * [Open
-  Accounts Receivable Detail](Open_Accounts_Receivable_Detail.htm)
+  Accounts Receivable Detail](Open_Accounts_Receivable_Detail.md)
 * [Sales
-  Booking Detail](Sales_Booking_Detail.htm)
+  Booking Detail](Sales_Booking_Detail.md)
 * [Shipment
-  Detail](Shipment_Detail.htm)
+  Detail](Shipment_Detail.md)
 * [Tasks
-  Detail](Tasks_Detail.htm)
+  Detail](Tasks_Detail.md)
 * [Top
-  5 Customers by Open Balance Detail](Top_5_Customers_by_Open_Balance_Detail.htm)
+  5 Customers by Open Balance Detail](Top_5_Customers_by_Open_Balance_Detail.md)
 * [Top
-  5 Customers by Overdue Balance Detail](Top_5_Customers_by_Overdue_Balance_Detail.htm)
+  5 Customers by Overdue Balance Detail](Top_5_Customers_by_Overdue_Balance_Detail.md)
 * [Top
-  5 Customers by Revenue Detail](Top_5_Customers_by_Revenue_Detail.htm)
+  5 Customers by Revenue Detail](Top_5_Customers_by_Revenue_Detail.md)
 * [Top
-  5 Vendors by Open Balance Detail](Top_5_Vendors_by_Open_Balance_Detail.htm)
+  5 Vendors by Open Balance Detail](Top_5_Vendors_by_Open_Balance_Detail.md)
 * [Top
-  5 Vendors by Overdue Balance Detail](Top_5_Vendors_by_Overdue_Balance_Detail.htm)
+  5 Vendors by Overdue Balance Detail](Top_5_Vendors_by_Overdue_Balance_Detail.md)
 * [Vendor
-  Performance Detail](Vendor_Performance_Detail.htm)
+  Performance Detail](Vendor_Performance_Detail.md)
 * [Vendor
-  Price Performance Detail](Vendor_Price_Performance_Detail.htm)
+  Price Performance Detail](Vendor_Price_Performance_Detail.md)
 * [Work
-  Order Estimate vs. Actual Detail](Work_Order_Estimate_vs._Actual_Detail.htm)
+  Order Estimate vs. Actual Detail](Work_Order_Estimate_vs._Actual_Detail.md)
 * [Work
-  Order Estimated vs. Projected Detail](Work_Order_Estimated_vs._Projected_Detail.htm)
+  Order Estimated vs. Projected Detail](Work_Order_Estimated_vs._Projected_Detail.md)
 * [Project
-  Actual Cost Detail](Project_Actual_Cost_Detail.htm)
+  Actual Cost Detail](Project_Actual_Cost_Detail.md)
 * [Project
-  Info](Project_Info_detail.htm)
+  Info](Project_Info_detail.md)
 
 In the description of the detail grids, this information is provided:
 
@@ -70,10 +70,10 @@ text is displayed in red. The reason that text is red is provided.
 Details A list of the details available
 in the grid is provided.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

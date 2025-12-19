@@ -18,8 +18,8 @@ You can specify the number of copies of the same master label and
 the number of copies of the same container label you will need for
 each container on the skid.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Individual_Thermal_Labels.htm) Creating Individual Thermal Labels
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Individual_Thermal_Labels.md) Creating Individual Thermal Labels
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Thermal_Label_Groups.htm) Creating Thermal Label Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Thermal_Label_Groups.md) Creating Thermal Label Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Printing_Thermal_Labels.htm) Test Printing Thermal Labels
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Printing_Thermal_Labels.md) Test Printing Thermal Labels

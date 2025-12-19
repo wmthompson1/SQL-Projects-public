@@ -46,7 +46,7 @@ service. For example, the service may be completed by Case or Each.
 Obsolete
 - If you are creating a new service, clear this check box. If you
 select the check box, the service is not available for use. See [Marking an Outside
-Service Obsolete](Marking_an_Outside_Service_Obsolete.htm).
+Service Obsolete](Marking_an_Outside_Service_Obsolete.md).
 
 VAT
 Code - If the parent entity of the site is VAT-enabled, specify
@@ -60,7 +60,7 @@ box if the service is subject to intrastat reporting.
    tab. Use the fields on the cost tab to specify the standard costs
    for this service. You can specify vendor-specific costs in the
    Vendors supplying service dialog. See [Adding
-   Service Vendors](Adding_Service_Vendors.htm). Specify this information:
+   Service Vendors](Adding_Service_Vendors.md). Specify this information:
 
 Cost
 per unit - Specify the standard cost per unit of measure.
@@ -82,7 +82,7 @@ Bid
 Rate Category - Specify the bid rate category for this service.
 Use bid rate categories to analyze budgets and quotes for this service.
 Set up bid rate categories in Application Global Maintenance. See
-[Bid Rate Maintenance](Bid_Rate_Maintenance.htm).
+[Bid Rate Maintenance](Bid_Rate_Maintenance.md).
 
 4. Click the Planning
    tab. Use the fields on the Planning tab to specify the standard
@@ -115,4 +115,4 @@ if the quantity on an operation is 101, and the load size is 100,
    service.
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.md) User-defined Help

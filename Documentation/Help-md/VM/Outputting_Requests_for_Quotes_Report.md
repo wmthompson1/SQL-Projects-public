@@ -95,4 +95,4 @@ which allows you to select the number of copies to print.
     selections and click Ok to print the
     report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

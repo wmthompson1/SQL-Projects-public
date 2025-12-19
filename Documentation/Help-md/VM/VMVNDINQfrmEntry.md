@@ -149,4 +149,4 @@ the Vendor Inquiry window.
    Next button to view the next purchase
    order from the Search results table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help

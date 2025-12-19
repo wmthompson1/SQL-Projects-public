@@ -48,4 +48,4 @@ situation or as the result of a change in the design of a product.
 This change can be the result of a cost improvement program or a change
 in vendors.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

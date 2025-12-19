@@ -85,7 +85,7 @@ in selected windows and is active for users with system administration
 privileges. Click this button and then click an object on the window
 to view the database table and column that supplies the information
 in the object. See [Viewing the
-Data Source](Viewing_the_Data_Source.htm).
+Data Source](Viewing_the_Data_Source.md).
 
 ## Table Toolbar
 
@@ -115,4 +115,4 @@ Row - The Repeat button lets you repeat a lines information.
 VISUAL adds an identical line to save you the time of reentering the
 same information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

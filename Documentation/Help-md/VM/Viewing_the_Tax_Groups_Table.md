@@ -32,6 +32,6 @@ values from largest to smallest and alpha characters from Z to A.
    | --- | --- |
    | TIP.gif | Double clicking on the tax group name also selects the group and returns the information to the Sales Tax Group Maintenance window for editing. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Searching_the_Sales_Tax_Groups_Table.htm) Searching the Sales Tax Groups Table
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Searching_the_Sales_Tax_Groups_Table.md) Searching the Sales Tax Groups Table

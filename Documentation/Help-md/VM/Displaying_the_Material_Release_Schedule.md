@@ -129,7 +129,7 @@ planned warehouses are displayed.
 6. To view information
    about a work order, select a line with a work order and click
    W/O Status. See [Viewing
-   Work Order Status Information.](Viewing_Work_Order_Status_Information.htm#XREF_96898_Viewing_Work_Order)
+   Work Order Status Information.](Viewing_Work_Order_Status_Information.md#XREF_96898_Viewing_Work_Order)
 
 To open the Material Planning Window for
 a particular part, select a line with the part and click Planning.

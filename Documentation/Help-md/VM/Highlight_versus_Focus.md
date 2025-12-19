@@ -23,4 +23,4 @@ the focus." Notice the dotted line outline.
 ![nofocus.gif](nofocus.gif "nofocus.gif")This operation does not "have
 the focus." The outline is solid.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

@@ -28,4 +28,4 @@ highlighted.
 To select more than one column, hold the CTRL key and select the
 columns, you want highlighted.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

@@ -23,4 +23,4 @@ These documents are included in the Purchasing lifecycle:
 To access the Lifecycle Document Viewer, select Info,
 Document Lifecycle.
 
-See [Viewing Document Lifecycles](Viewing_Document_Lifecycles.htm).
+See [Viewing Document Lifecycles](Viewing_Document_Lifecycles.md).

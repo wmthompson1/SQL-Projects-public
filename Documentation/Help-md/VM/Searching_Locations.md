@@ -36,4 +36,4 @@ If VISUAL does not find the location, a
 message box appears indicating that VISUAL could not find the search
 string.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

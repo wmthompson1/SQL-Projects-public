@@ -22,4 +22,4 @@ to inform you that the task was successful.
 After VISUAL processes the work order, it changes the status to
 WO Created.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

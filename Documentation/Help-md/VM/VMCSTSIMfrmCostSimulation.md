@@ -42,14 +42,14 @@ This table shows the tasks that you can complete in the Costed Bill
 of Material Report window:
 
 | Task | Description |
-| [Creating Cost Simulations](Creating_Cost_Simulations.htm) | Use this procedure to set up a cost simulation. |
-| [Copying Cost Simulations](Copying_Cost_Simulations.htm) | Use this procedure to copy a cost simulation. |
-| [Deleting Cost Simulations](Deleting_Cost_Simulations.htm) | Use this procedure to delete a cost simulation. |
-| [Updating Parts, Resource Costs, and Outside Resources from Cost Simulations](Updating_Parts_Resource_Costs_and_Outside_Resources_from_Cost_Simulations.htm) | Use this procedure to update parts, resources, and outside services with the costs that are specified on the simulation. |
-| [Viewing G/L Entries](VMCSTSIMfrmGLEntries.htm) | Use this procedure to review G/L entries that were generated due to updating costs. G/L entries are created if the parent entity of the site uses the standard costing method. |
-| [Updating Engineering Master Costs from Cost Simulations](Updating_Engineering_Master_Costs_from_Cost_Simulations.htm) | Use this procedure to update engineering masters with the costs that are specified on the simulation. |
-| [Printing Engineering Master Simulation costs](VMCSTSIMfrmEngCosts.htm) | Use this procedure generate a report that shows costs of an engineering master based on a simulation. |
-| [Printing Cost Simulation Reports](Printing_Cost_Simulation_Reports.htm) | Use this procedure to generate a report that shows the costs specified in a simulation. |
+| [Creating Cost Simulations](Creating_Cost_Simulations.md) | Use this procedure to set up a cost simulation. |
+| [Copying Cost Simulations](Copying_Cost_Simulations.md) | Use this procedure to copy a cost simulation. |
+| [Deleting Cost Simulations](Deleting_Cost_Simulations.md) | Use this procedure to delete a cost simulation. |
+| [Updating Parts, Resource Costs, and Outside Resources from Cost Simulations](Updating_Parts_Resource_Costs_and_Outside_Resources_from_Cost_Simulations.md) | Use this procedure to update parts, resources, and outside services with the costs that are specified on the simulation. |
+| [Viewing G/L Entries](VMCSTSIMfrmGLEntries.md) | Use this procedure to review G/L entries that were generated due to updating costs. G/L entries are created if the parent entity of the site uses the standard costing method. |
+| [Updating Engineering Master Costs from Cost Simulations](Updating_Engineering_Master_Costs_from_Cost_Simulations.md) | Use this procedure to update engineering masters with the costs that are specified on the simulation. |
+| [Printing Engineering Master Simulation costs](VMCSTSIMfrmEngCosts.md) | Use this procedure generate a report that shows costs of an engineering master based on a simulation. |
+| [Printing Cost Simulation Reports](Printing_Cost_Simulation_Reports.md) | Use this procedure to generate a report that shows the costs specified in a simulation. |
 
 ## Fields
 
@@ -101,7 +101,7 @@ database, then Active is displayed.
 Output
 
 The output for the Cost Simulation report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
 PDF Format
 
@@ -454,4 +454,4 @@ If the simulated costs are applied, then the
 previous minimum charge. This is the value that the simulated cost
 replaced.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

@@ -7,13 +7,13 @@ Setting Unit Prices by Market
 
 Before you can specify unit prices by market, set
 up market codes. See [Maintaining
-Market Information](Maintaining_Market_Information.htm). To assign a customer to a market, use Customer
-Maintenance. See [Adding Customers](VMCUSMNTfrmCustomer.htm).
+Market Information](Maintaining_Market_Information.md). To assign a customer to a market, use Customer
+Maintenance. See [Adding Customers](VMCUSMNTfrmCustomer.md).
 
 When you enter a customer order, the market-specific prices you
 set up are used if customer-specific prices or discount codes prices
 have not been set up. See [Customer
-Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.htm).
+Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.md).
 
 When you set up prices for a part by market, the prices you specify
 in the Unit Prices by Market dialog are used as-is when you enter
@@ -62,4 +62,4 @@ between the two units.
    not fall within one of the ranges you specify.
 9. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

@@ -24,4 +24,4 @@ as a guide to how you may create formulas.
    Book main toolbar, click the Save button
    to save your changes to the Formulas window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

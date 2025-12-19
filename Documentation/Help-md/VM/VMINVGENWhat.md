@@ -22,7 +22,7 @@ Builder. The following QRP files apply:
 | User Defined 2 | VMINVUD2.QRP |
 | User Defined 3 | VMINVUD3.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINVGENfrmPrintInvoice.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINVGENfrmPrintInvoice.md)
 Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.md) User-defined Help

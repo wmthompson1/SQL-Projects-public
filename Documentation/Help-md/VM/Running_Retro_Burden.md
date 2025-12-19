@@ -12,7 +12,7 @@ The system looks for all prime costs that used the rate ID that
 you have flagged as the Use for Actual rate for the period and applies
 the new rate you specify. For more information on setting up rates,
 see [Setting
-Up Static Data in the Rate Management Window](Setting_Up_Static_Data_in_the_Rate_Maintenance_Window.htm).
+Up Static Data in the Rate Management Window](Setting_Up_Static_Data_in_the_Rate_Maintenance_Window.md).
 
 To calculate retro burden:
 

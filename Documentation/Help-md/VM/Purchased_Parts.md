@@ -12,4 +12,4 @@ VISUAL uses the Inventory default account from the Interface table.
 Also like the fabricated parts, if you do not assign an account number
 to the purchased part, the default account is used.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

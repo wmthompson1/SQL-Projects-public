@@ -38,7 +38,7 @@ The Print Labels dialog box appears
    when you are finished setting Packlist Thermal Label Printing
    information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Available_Warehouse_VISUAL_Database_Tables.htm) Available Warehouse VISUAL Database
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Available_Warehouse_VISUAL_Database_Tables.md) Available Warehouse VISUAL Database
 Tables
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Warehouse

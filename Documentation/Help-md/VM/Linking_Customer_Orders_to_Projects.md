@@ -22,4 +22,4 @@ and expenditures for your contract.
 | --- | --- |
 | POSTIT.gif | By specifying a Project ID and using CLINs for each line of a customer order, your CLINs become unique to the Order ID and Project ID. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

@@ -37,4 +37,4 @@ If you clear this selection, then only the unit costs are applied.
 A check mark is displayed next to the options you select. To remove
 this preference, select the option again.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

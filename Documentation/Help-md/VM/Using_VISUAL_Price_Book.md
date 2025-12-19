@@ -15,4 +15,4 @@ information rather than duplicating it between the various databases.
 In some cases, however, certain application objects have a meaning
 or definition specific to their native database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.md) User-defined Help

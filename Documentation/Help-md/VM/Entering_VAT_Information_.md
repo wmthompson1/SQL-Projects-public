@@ -74,4 +74,4 @@ vendor and initially calculate a VAT amount using this code when you
 are entering invoices. With this check box cleared, VISUAL uses the
 VAT Code from the part master, if one is established.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

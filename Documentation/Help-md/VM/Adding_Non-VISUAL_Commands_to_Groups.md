@@ -50,11 +50,11 @@ The Customize dialog box closes and the
 new command is added to the bottom of the group you selected in your
 Personal Menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Groups.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Groups.md)
 Adding New Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commands_to_Existing_Groups.htm) Adding Commands to Existing Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commands_to_Existing_Groups.md) Adding Commands to Existing Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.htm) Removing Commands from Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.md) Removing Commands from Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

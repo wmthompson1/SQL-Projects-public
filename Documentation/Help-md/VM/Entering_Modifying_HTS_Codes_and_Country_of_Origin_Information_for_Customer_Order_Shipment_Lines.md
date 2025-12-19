@@ -32,4 +32,4 @@ of Origin or sets this as the lines default Country of Origin.
 5. Click the Save
    button to commit these new or modified settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

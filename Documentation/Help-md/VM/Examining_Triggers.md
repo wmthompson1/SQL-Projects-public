@@ -63,7 +63,7 @@ These totals are displayed:
    database triggers, click the Exit toolbar
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKTRGWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKTRGWhat.md)
 What is Examining Triggers?

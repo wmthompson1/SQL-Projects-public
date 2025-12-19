@@ -95,6 +95,6 @@ end. When the No Updates Performed message appears, all activity to
 date has been costed. Under normal circumstances, you should leave
 both of these options checked.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Receipt_and_Inventory_Transactions.htm) Setting Up Receipt and Inventory Transactions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Receipt_and_Inventory_Transactions.md) Setting Up Receipt and Inventory Transactions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

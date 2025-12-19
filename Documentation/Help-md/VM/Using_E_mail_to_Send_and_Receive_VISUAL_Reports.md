@@ -14,10 +14,10 @@ with an .RTF (Rich Text Format) file extension.
 The E-mail print destination is available in all applications that
 support report printing.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sending_Infor_VISUAL_Enterprise_Financials_.htm) Sending VE/VF QRP Files in Rich Text
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sending_Infor_VISUAL_Enterprise_Financials_.md) Sending VE/VF QRP Files in Rich Text
 Format (RTF)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Infor_VISUAL_Enterprise_Financials_.htm) Receiving VE/VF QRP Files in a Rich
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Infor_VISUAL_Enterprise_Financials_.md) Receiving VE/VF QRP Files in a Rich
 Text Format (RTF)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

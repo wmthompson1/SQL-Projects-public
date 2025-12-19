@@ -30,4 +30,4 @@ for the customer order itself, not for the packlist.
 | --- | --- |
 | POSTIT.gif | It is important to realize that you are changing specifications for the customer order itself, not for the packlist. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

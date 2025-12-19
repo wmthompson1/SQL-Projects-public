@@ -19,7 +19,7 @@ SHIPPER
 
 SHIPPER\_LINE
 
-See [Defining Thermal Labels](Defining_Thermal_Labels.htm).
+See [Defining Thermal Labels](Defining_Thermal_Labels.md).
 
 For SHIPPING TRACEABLE thermal label types,
 you can associate software label fields to the following VISUAL database
@@ -39,6 +39,6 @@ TRANS
 
 TRANS\_INV\_TRANS
 
-See [Defining Thermal Labels](Defining_Thermal_Labels.htm).
+See [Defining Thermal Labels](Defining_Thermal_Labels.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

@@ -29,15 +29,15 @@ check box is selected, the demand orders release date will
 be used to determine the forecast bucket to include the demand. If
 it is unchecked, it will use the required date.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_a_Forecast.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_a_Forecast.md)
 Maintaining a Forecast
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Transferring_Customer_Forecasts_to_Part_Forecasts.htm) Transferring Customer Forecasts to Part
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Transferring_Customer_Forecasts_to_Part_Forecasts.md) Transferring Customer Forecasts to Part
 Forecasts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Customer_Forecasts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Customer_Forecasts.md)
 Editing Customer Forecasts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_a_Master_Production_Schedule.htm) Maintaining a Master Production Schedule
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_a_Master_Production_Schedule.md) Maintaining a Master Production Schedule

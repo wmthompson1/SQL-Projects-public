@@ -22,4 +22,4 @@ of all planned orders that were processed in the Schedule you selected.
    order from the schedule, highlight that order in the table window
    and click the Remove from Schedule button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

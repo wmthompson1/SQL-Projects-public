@@ -74,7 +74,7 @@ then the report shows summary totals that are not broken down by customer.
    select the output format for the report. If you select email,
    select the PDF Format check box to attach a PDF to the email instead
    of an RTF file. See [Report
-   Output Options](Report_Output_Options.htm).
+   Output Options](Report_Output_Options.md).
 9. Click Print/View.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.md) User-defined Help

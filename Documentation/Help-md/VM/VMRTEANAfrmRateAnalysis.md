@@ -49,4 +49,4 @@ Variance VISUAL
 calculates the variance as the Actual Rate percent subtracted from
 Current applied rate percentage.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Analysis.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Analysis.md) User-defined Help

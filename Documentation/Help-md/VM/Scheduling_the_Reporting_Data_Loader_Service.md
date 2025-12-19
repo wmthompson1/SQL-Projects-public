@@ -9,7 +9,7 @@ Only the SYSADM user can perform this procedure.
 
 To update the reporting tables based on the schedule you specify,
 you must also install the Reporting Data Loader Service. See [Installing
-the Visual Reporting Data Loader Service](VRDTASVCfrmMain.htm).
+the Visual Reporting Data Loader Service](VRDTASVCfrmMain.md).
 
 To schedule the service:
 
@@ -78,10 +78,10 @@ between 7:00:00 and 7:10:00.
 
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCWhat.md)
 What is the Visual Reporting Data Loader Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

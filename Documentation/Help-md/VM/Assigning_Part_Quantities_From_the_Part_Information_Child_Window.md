@@ -11,4 +11,4 @@ child window and the Order Entry child window open and tiled either
 vertically or horizontally. You will need to refer to both windows
 as you assign part quantities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

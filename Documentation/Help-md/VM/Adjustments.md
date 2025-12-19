@@ -42,4 +42,4 @@ from N to Y.
 The Costing Tools make any necessary adjustments
 to the costs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help

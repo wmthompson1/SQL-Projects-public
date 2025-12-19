@@ -77,12 +77,12 @@ Remove Selection.
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif")
 Adding Missing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.htm) Navigating in the Synchronize Customer/Account
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.md) Navigating in the Synchronize Customer/Account
 Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.md)
 Sorting the Customer/Account table in the Synchronize Customer/Account
 Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What is the Synchronize Customer/Account
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What is the Synchronize Customer/Account
 Utility?

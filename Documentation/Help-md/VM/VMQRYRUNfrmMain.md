@@ -11,7 +11,7 @@ user toolbar.
 To run a different query, click the Query Name drop-down button
 and select the query to run.
 
-To create queries, see [Creating a Query](VMQUERYfrmMain.htm).
+To create queries, see [Creating a Query](VMQUERYfrmMain.md).
 
 To add queries to the user toolbar, see [Setting
-Up User Toolbars](Setting_Up_User_Toolbars.htm).
+Up User Toolbars](Setting_Up_User_Toolbars.md).

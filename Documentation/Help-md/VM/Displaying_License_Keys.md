@@ -229,4 +229,4 @@ A VISUAL Shop Floor license does not have a user limit.
 Expiration Date The system inserts the
 date that the license is scheduled to expire.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help

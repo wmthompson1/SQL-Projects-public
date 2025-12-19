@@ -13,7 +13,7 @@ from an evaluation RMA, and you created a quote for repairs as part
 of the evaluation process. To use the pricing you specified on the
 quote for the repair costs, select the Use Quote Pricing check box
 before you convert the evaluation RMA to a repair RMA. See [Converting
-to a Repair RMA](Converting_an_Evaluation_RMA_to_a_Repair_RMA.htm).
+to a Repair RMA](Converting_an_Evaluation_RMA_to_a_Repair_RMA.md).
 
 Use the customer order repair line When
 you create a repair RMA, either a new customer order is created for

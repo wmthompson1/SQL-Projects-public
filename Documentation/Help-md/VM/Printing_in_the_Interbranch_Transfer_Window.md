@@ -10,10 +10,10 @@ Transfer Entry window. Click the appropriate hot spot to view specific
 instructions for printing that report.
 
 * [Printing
-  IBTs](Printing_Interbranch_Transfers.htm)
+  IBTs](Printing_Interbranch_Transfers.md)
 * [Printing
-  Open IBTs](Printing_Open_IBTs.htm)
+  Open IBTs](Printing_Open_IBTs.md)
 * [Printing
-  Transportation Documents](Printing_Transportation_Documents_IBTs.htm)
+  Transportation Documents](Printing_Transportation_Documents_IBTs.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

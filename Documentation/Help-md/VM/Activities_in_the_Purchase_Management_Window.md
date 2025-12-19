@@ -14,7 +14,7 @@ be the active window.
 
 To add a new activity, enter or select a purchase order, then select
 Edit, Activity Entry.
-See [Creating Activities](VMACTENTfrmActivityEntry.htm).
+See [Creating Activities](VMACTENTfrmActivityEntry.md).
 
 To view existing activities, select View,
 Activities. To view all activities related
@@ -22,4 +22,4 @@ to the purchasing cycle, select View, Activities from a blank Purchase Order Ent
 To view all activities related to a particular order, select the order
 in the Purchase Order Entry window before selecting View,
 Activities. See [Reviewing
-Activities](VMACTMNTfrmActivities.htm).
+Activities](VMACTMNTfrmActivities.md).

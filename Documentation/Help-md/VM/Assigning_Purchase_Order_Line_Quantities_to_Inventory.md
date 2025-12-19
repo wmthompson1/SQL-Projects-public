@@ -112,7 +112,7 @@ in the Assign to Demand dialog box line item table.
 7. Click Save
    to commit the allocation of the purchase order quantity to inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Inventory_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.htm) Viewing Inventory Demand Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Inventory_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.md) Viewing Inventory Demand Allocation
 Information for a Purchase Order Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

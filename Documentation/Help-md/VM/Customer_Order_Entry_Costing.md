@@ -16,7 +16,7 @@ in each of the fields. If you do not make an entry here for these
 accounts, VISUAL uses the cost of goods sold accounts from the General
 Ledger Account Interface Table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMORDENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMORDENTWhat.md)
 What is Customer Order Entry?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

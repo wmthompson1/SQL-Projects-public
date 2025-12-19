@@ -5,7 +5,7 @@ Work Order Estimated vs. Projected Detail
 
 # Work Order Estimated vs. Projected Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid compares the estimated costs of work orders with the projected
 costs. All work orders are evaluated. Projected costs are calculated
 by adding the actual costs for the completed portion of a work order
@@ -24,10 +24,10 @@ Projected Cost, Variance, Release Date, Want Date, Close Date, Desired
 Qty, Received Qty, Stock U/M, Part ID, Part Desc. Status, Product
 Code, Commodity Code, Warehouse ID, Planner ID, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

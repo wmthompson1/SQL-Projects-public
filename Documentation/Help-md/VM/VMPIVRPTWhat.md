@@ -96,6 +96,6 @@ on.
 | By Product Code | VMPIVRP1.QRP |
 | By Commodity Code | VMPIVRP2.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPIVRPTfrmPrintInventoryValueReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPIVRPTfrmPrintInventoryValueReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Valuation_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Valuation_Report.md) User-defined Help

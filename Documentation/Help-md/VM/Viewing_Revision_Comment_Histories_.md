@@ -18,7 +18,7 @@ The table contains the following fields:
 
 Stage ID If
 you specified a stage for the revision, the stage code appears in
-this field. Stages apply to revision numbering. Click [here](Maintaining_Revision_Numbering.htm)
+this field. Stages apply to revision numbering. Click [here](Maintaining_Revision_Numbering.md)
 for more on stages in numbering profiles.
 
 Revision ID
@@ -47,4 +47,4 @@ The Documents tab contains the same fields
 as the Part tab, with the exception of the ID field, which contains
 the ID of the document linked to the part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

@@ -27,6 +27,6 @@ in the line item table.
 The Print Invoices dialog box reappears.
 
 3. Enter in the necessary
-   information. See [Printing Invoices](Printing_Invoices_2.htm).
+   information. See [Printing Invoices](Printing_Invoices_2.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

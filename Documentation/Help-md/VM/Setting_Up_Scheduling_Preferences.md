@@ -10,7 +10,7 @@ up scheduling preferences at the tenant level, for each site, and
 for each schedule.
 
 You can also set up [schedule
-preferences](Setting_Concurrent_Scheduler_Preferences.htm) in the Concurrent Scheduler window.
+preferences](Setting_Concurrent_Scheduler_Preferences.md) in the Concurrent Scheduler window.
 
 To set up scheduling preferences:
 

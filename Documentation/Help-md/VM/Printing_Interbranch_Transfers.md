@@ -58,10 +58,10 @@ button and select the end date for the report.
    button to print the report. VISUAL displays the report on your
    screen.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Open_IBTs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Open_IBTs.md)
 Printing Open IBTs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Transportation_Documents_IBTs.htm) Printing Transportation Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Transportation_Documents_IBTs.md) Printing Transportation Documents
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Printing
 IBTs User Defined Information

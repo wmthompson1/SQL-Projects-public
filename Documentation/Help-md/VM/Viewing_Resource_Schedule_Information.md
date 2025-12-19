@@ -59,4 +59,4 @@ A dialog box appears, showing the operation schedule for every operation
 in the production schedule that uses the same resource. This dialog
 box is identical to the Resource Detail window in the Scheduling Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

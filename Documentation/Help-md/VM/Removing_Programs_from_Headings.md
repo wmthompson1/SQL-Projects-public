@@ -15,4 +15,4 @@ To remove a program from a heading:
 3. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

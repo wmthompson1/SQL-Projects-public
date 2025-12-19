@@ -15,7 +15,7 @@ ordersin your database.
 
 For those of you familiar with the Part Maintenance window, this
 feature is similar to the [Reset
-Part Information](Resetting_Part_Information_Master.htm) function.
+Part Information](Resetting_Part_Information_Master.md) function.
 
 1. From the VISUAL main
    menu, select Customer Maintenance from
@@ -171,4 +171,4 @@ updated.
     button to close the dialog box and return to the Customer Maintenance
     window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

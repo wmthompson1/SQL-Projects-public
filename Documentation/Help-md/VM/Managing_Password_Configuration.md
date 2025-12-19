@@ -64,7 +64,7 @@ Password must be reset
 by administrator Select this option to require a system administrator
 to reset user passwords after users exceed the number of retry attempts.
 System administrators can reset passwords using the [Changing
-Users Passwords](Maintaining_Users.htm#ChangingUsersPasswords) procedure.
+Users Passwords](Maintaining_Users.md#ChangingUsersPasswords) procedure.
 
 5. In the Password Identification
    section, specify the following:
@@ -108,4 +108,4 @@ Characters field.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

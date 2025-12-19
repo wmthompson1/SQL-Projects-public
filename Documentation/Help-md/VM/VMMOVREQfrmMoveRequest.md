@@ -19,13 +19,13 @@ This table shows the tasks that you can complete in the Move Requests
 window:
 
 | Task | Description |
-| [Adding Move Equipment Types](Adding_Move_Equipment_Types.htm) | Use this task to add the equipment that is used to move parts. |
-| [Specifying the Time Entry Format on Move Requests](Specifying_the_Time_Entry_Format_on_Move_Requests.htm) | Use this task to specify the format to use when entering information in time fields. |
-| [Manually Creating a Move Request](Manually_Creating_a_Move_Request.htm) | Use this task to create a move request. |
-| [Copying Move Requests](Copying_Move_Requests.htm) | Use this task to copy an existing move request. |
-| [Using the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.htm) | Use this task to pick up materials. |
-| [Using the Move Request Window to Deliver Move Requests](Using_the_Move_Request_Window_to_Deliver_Move_Requests.htm) | Use this task to drop off materials. |
-| [Viewing Move Request Delivery Information](Viewing_Move_Request_Delivery_Information.htm) | Use this task to review move requests. |
+| [Adding Move Equipment Types](Adding_Move_Equipment_Types.md) | Use this task to add the equipment that is used to move parts. |
+| [Specifying the Time Entry Format on Move Requests](Specifying_the_Time_Entry_Format_on_Move_Requests.md) | Use this task to specify the format to use when entering information in time fields. |
+| [Manually Creating a Move Request](Manually_Creating_a_Move_Request.md) | Use this task to create a move request. |
+| [Copying Move Requests](Copying_Move_Requests.md) | Use this task to copy an existing move request. |
+| [Using the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.md) | Use this task to pick up materials. |
+| [Using the Move Request Window to Deliver Move Requests](Using_the_Move_Request_Window_to_Deliver_Move_Requests.md) | Use this task to drop off materials. |
+| [Viewing Move Request Delivery Information](Viewing_Move_Request_Delivery_Information.md) | Use this task to review move requests. |
 
 ## Fields
 
@@ -96,7 +96,7 @@ Equip Type
 
 The piece of equipment that the material handler should use to move
 the parts. Set up equipment types in the Move Equipment Type dialog
-box. See [Move Equipment Types](Move_Equipment_Types.htm).
+box. See [Move Equipment Types](Move_Equipment_Types.md).
 
 Weight
 

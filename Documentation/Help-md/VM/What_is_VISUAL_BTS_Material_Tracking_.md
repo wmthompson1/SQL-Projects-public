@@ -33,9 +33,9 @@ You can perform the following tasks using VISUAL/BTS :
 * Physical Inventory and Cycle
   Counting
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VISUAL_BTS_Graphical_Hardware_Overview.htm) VISUAL BTS Graphical Hardware Overview
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VISUAL_BTS_Graphical_Hardware_Overview.md) VISUAL BTS Graphical Hardware Overview
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VISUAL_BTS_Connectivity_Diagram.htm) VISUAL BTS Connectivity Diagram
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VISUAL_BTS_Connectivity_Diagram.md) VISUAL BTS Connectivity Diagram
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User-defined
 Help

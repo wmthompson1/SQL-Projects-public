@@ -28,4 +28,4 @@ item that must be custom built, and have special services performed.
 Each of these would be a different type of order, but they can exist
 on the same customer order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

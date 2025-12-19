@@ -57,17 +57,17 @@ PLN CUMM FAB Quantities - Example 2
 | prior to today and we are NOT starting the proration on the transmission date, Today is automatically | | |
 | included in the proration. As a result, examples 33 and 34 create the same set of delivery schedules. | | |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.htm) CPO Discrete Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.md) CPO Discrete Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.htm) PLN Discrete Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.md) PLN Discrete Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.htm) PLN CUMM Shipped Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.md) PLN CUMM Shipped Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.htm) PLN CUMM FAB Quantities Example 1
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.md) PLN CUMM FAB Quantities Example 1
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_3.htm) PLN CUMM FAB Quantities Example 3
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_3.md) PLN CUMM FAB Quantities Example 3
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_4.htm) PLN CUMM FAB Quantities Example 4
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_4.md) PLN CUMM FAB Quantities Example 4
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.md)
 Working with Subtract Intransit Quantities (CPO CUM Quantities)

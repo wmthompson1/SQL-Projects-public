@@ -18,7 +18,7 @@ The table contains the following fields:
 
 Stage ID If
 you specified a stage for the revision, the stage code appears in
-this field. Stages apply to revision numbering. Click [here](Maintaining_Revision_Numbering.htm)
+this field. Stages apply to revision numbering. Click [here](Maintaining_Revision_Numbering.md)
 for more on stages in numbering profiles.
 
 Revision ID
@@ -45,7 +45,7 @@ Close button.
    the ECN Entry button.
 3. To print a history report,
    select the appropriate [print
-   output](Common_Printing_Outputs_in_Infor_VISUAL_Enterprise.htm) from the print list and click the Print
+   output](Common_Printing_Outputs_in_Infor_VISUAL_Enterprise.md) from the print list and click the Print
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

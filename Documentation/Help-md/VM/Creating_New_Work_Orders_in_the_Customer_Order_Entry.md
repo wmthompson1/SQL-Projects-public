@@ -30,4 +30,4 @@ a New Work Order from Engineering Master. These work orders are also
 linked to the customer order line items. See Customer Order Entry
 for full details.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

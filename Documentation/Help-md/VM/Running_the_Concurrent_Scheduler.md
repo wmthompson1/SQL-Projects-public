@@ -34,4 +34,4 @@ date to determine if there is enough capacity and time (according
 to the calendar which applies to the schedule in question) to complete
 each operation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

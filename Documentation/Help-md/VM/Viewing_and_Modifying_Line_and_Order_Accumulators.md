@@ -12,4 +12,4 @@ certain values. Use the charts below to reference the manner in which
 VISUAL figured values previous to version 6.2.8 and the way it calculates
 them now.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

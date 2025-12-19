@@ -81,4 +81,4 @@ time it schedules the final operation to begin. The move hours setting
 determines the minimum required offset from this optimal positioning.
 If needed, VISUAL also checks for material availability.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

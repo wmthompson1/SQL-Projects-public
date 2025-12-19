@@ -23,19 +23,19 @@ A/P invoices, and A/P payments associated with the purchase order.
 See these topics:
 
 * [Purchasing
-  Lifecycle](Purchasing_Lifecycle.htm)
+  Lifecycle](Purchasing_Lifecycle.md)
 * [Sales
-  Lifecycle](Sales_Lifecycle.htm)
+  Lifecycle](Sales_Lifecycle.md)
 * [Accessing
-  the Lifecycle Viewer](Accessing_the_Lifecycle_Viewer.htm)
+  the Lifecycle Viewer](Accessing_the_Lifecycle_Viewer.md)
 * [Choosing
-  a Document Lifecycle Display](Choosing_a_Document_Lifecycle_Display.htm)
+  a Document Lifecycle Display](Choosing_a_Document_Lifecycle_Display.md)
 * [Key
-  Differences in Document Lifecycle Views](Key_Differences_in_Document_Lifecycle_Views.htm)
+  Differences in Document Lifecycle Views](Key_Differences_in_Document_Lifecycle_Views.md)
 * [Using
-  the Tree Display](Using_the_Tree_Display.htm)
+  the Tree Display](Using_the_Tree_Display.md)
 * [Using
-  the Document Lifecycle Graphical Display](Using_the_Document_Lifecycle_Graphical_Display.htm)
+  the Document Lifecycle Graphical Display](Using_the_Document_Lifecycle_Graphical_Display.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -21,24 +21,24 @@ Infor VISUAL provides you with two powerful tools, the Concurrent
 Scheduler and the Scheduling Window; use both of these tools to properly
 schedule all of your manufacturing activities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Load_Versus_Capacity.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Load_Versus_Capacity.md)
 Load Versus Capacity
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Schedule_Inputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Schedule_Inputs.md)
 Schedule Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_order_Scheduling_Inputs.htm) Work order Scheduling Inputs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_order_Scheduling_Inputs.md) Work order Scheduling Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resource_Scheduling_Inputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resource_Scheduling_Inputs.md)
 Resource Scheduling Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Outputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Outputs.md)
 Scheduling Outputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Standard_Schedule.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Standard_Schedule.md)
 The Production Schedule
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Scheduling_Process.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Scheduling_Process.md)
 The Scheduling Process
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

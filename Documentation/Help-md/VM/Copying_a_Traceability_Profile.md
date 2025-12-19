@@ -51,4 +51,4 @@ to the parts. If you clicked on Replace Existing Profiles, any previously
 defined profile for a selected part is overwritten; otherwise, only
 parts without profiles receive the new profile.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.md) User-defined Help

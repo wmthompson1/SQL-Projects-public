@@ -36,4 +36,4 @@ Receivables Export ID if you are generating reports to file.
 VAT Payables Export ID - Enter the Payables
 Export ID if you are generating reports to file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

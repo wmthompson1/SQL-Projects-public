@@ -9,16 +9,16 @@ There are a number of options available for outputting
 information from the Estimating Window.
 
 * [Printing
-  Proforma Reports](Printing_Proforma_Reports.htm)
+  Proforma Reports](Printing_Proforma_Reports.md)
 * [Printing
-  Quotations](Printing_Quotations.htm)
+  Quotations](Printing_Quotations.md)
 * [Printing
-  Cost Detail Reports](Printing_Cost_Detail_Reports.htm)
+  Cost Detail Reports](Printing_Cost_Detail_Reports.md)
 * [Printing
-  the Quote Log](Printing_the_Quote_Log.htm)
+  the Quote Log](Printing_the_Quote_Log.md)
 * [Printing
-  Engineering Reports](Printing_Engineering_Reports_Estimating_Window.htm)
+  Engineering Reports](Printing_Engineering_Reports_Estimating_Window.md)
 * [Printing
-  Formats](Printing_Formats_Estimating_Window.htm)
+  Formats](Printing_Formats_Estimating_Window.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

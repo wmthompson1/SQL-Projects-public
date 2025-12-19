@@ -52,10 +52,10 @@ and/or material.
 A 10% increase in throughput raises utilization
 from 50% to 55%.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Throughput_Definitions.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Throughput_Definitions.md)
 Throughput Definitions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTHRWINfrmThroughput.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTHRWINfrmThroughput.md)
 Starting the Throughput Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

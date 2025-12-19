@@ -80,9 +80,9 @@ searches invoices based on ASN ID.
    automatically.
 
 See [Importing
-CSH Transactions](Importing_CSH_Cash_Receipts_Transactions.htm) for more information.
+CSH Transactions](Importing_CSH_Cash_Receipts_Transactions.md) for more information.
 
 8. Begin to define a record
    layout.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

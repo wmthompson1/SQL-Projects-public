@@ -12,8 +12,8 @@ the lifecycle is attached to the edge. You can attach the lifecycle
 to any edge of the window. When you move the window, the lifecycle
 is moved with it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Document_Lifecycle_Graphical_Display.htm) Using the Document Lifecycle Graphical
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Document_Lifecycle_Graphical_Display.md) Using the Document Lifecycle Graphical
 Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

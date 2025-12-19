@@ -10,5 +10,5 @@ Maintenance do not affect auto-issue warehouses. Quantity in auto-issue
 warehouses can be driven negative regardless of the issue negative
 settings that are specified for the site.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.md)
 Auto-issue Parts

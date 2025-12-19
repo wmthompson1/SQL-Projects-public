@@ -23,6 +23,6 @@ an inches to feet conversion is searched for.
 The Unit of Measure Maintenance table and the conversions you establish
 are used throughout many modules.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Unit_of_Measure_Maintenance.htm) Starting Unit of Measure Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Unit_of_Measure_Maintenance.md) Starting Unit of Measure Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.md) User-defined Help

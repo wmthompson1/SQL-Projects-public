@@ -218,4 +218,4 @@ for the UseUniversalForMaterialAvailability preference:
 To view material netting information for a part in the Material
 Planning Window, double-click the line containing the part to view.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

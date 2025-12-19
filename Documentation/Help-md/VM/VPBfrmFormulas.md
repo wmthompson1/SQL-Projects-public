@@ -36,15 +36,15 @@ ERP systems database.
    Book main toolbar, click the Save button
    to save your changes to the Formulas window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_General_Formula_Information.htm) Adding General Formula Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_General_Formula_Information.md) Adding General Formula Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Formula_Information.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Formula_Information.md)
 Adding Formula Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Formulas.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Formulas.md)
 Deleting Formulas
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Variable_Information.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Variable_Information.md)
 Adding Variable Information

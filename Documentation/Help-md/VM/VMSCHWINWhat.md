@@ -23,19 +23,19 @@ work dispatching purposes.
 
 |  |  |
 | --- | --- |
-| POSTIT.gif | You may wish to consider a Windows program scheduler, which has the capability of running a program like the [Concurrent Scheduler](VMGLBSCHWhat.htm) at a certain time without the system being attended. Some alternative desktop packages support this feature, as well as some automatic backup systems. You may wish to consider this for the Costing Utilities as well. |
+| POSTIT.gif | You may wish to consider a Windows program scheduler, which has the capability of running a program like the [Concurrent Scheduler](VMGLBSCHWhat.md) at a certain time without the system being attended. Some alternative desktop packages support this feature, as well as some automatic backup systems. You may wish to consider this for the Costing Utilities as well. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_the_Scheduling_Window.htm) Understanding the Scheduling Window
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_the_Scheduling_Window.md) Understanding the Scheduling Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_the_Operation_Bar_Color_Code.htm) Understanding Operation Bar Color Code
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_the_Operation_Bar_Color_Code.md) Understanding Operation Bar Color Code
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Rescheduling_Operations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Rescheduling_Operations.md)
 Rescheduling Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Rescheduling_Operations_Using_the_Menu_Commands.htm) Rescheduling Operations Using the Menu
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Rescheduling_Operations_Using_the_Menu_Commands.md) Rescheduling Operations Using the Menu
 Commands
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Highlight_versus_Focus.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Highlight_versus_Focus.md)
 Highlight versus Focus
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

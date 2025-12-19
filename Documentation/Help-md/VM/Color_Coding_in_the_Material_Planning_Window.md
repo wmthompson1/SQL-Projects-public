@@ -39,4 +39,4 @@ Click the Restore Defaults button to remove your custom colors and
 return the Material  Planning Window to its default color scheme.
 The default scheme is no color for each category.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

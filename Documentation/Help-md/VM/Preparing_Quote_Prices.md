@@ -124,6 +124,6 @@ the union of all available purchase price breaks for quoted materials.
     button to save the Markups, Quoted Unit Price, Trade Discount,
     Unit of Measure, In Proforma fields.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_New_Quoted_Quantities.htm) Entering New Quoted Quantities
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_New_Quoted_Quantities.md) Entering New Quoted Quantities

@@ -10,7 +10,7 @@ on, Last notified, and Completed fields are read only and display
 information only when the step has been triggered in a workflow. You
 can use the information in these fields when creating workflow statements.
 For more information on workflow statements, refer to [Working
-with Statements](Working_with_Statements.htm).
+with Statements](Working_with_Statements.md).
 
 The status area displays the following fields:
 
@@ -27,4 +27,4 @@ step.
 Completed - The date when VISUAL completed
 the step.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

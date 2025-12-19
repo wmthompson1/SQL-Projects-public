@@ -24,15 +24,15 @@ independently. You can sort the information in the grid by any of
 the columns and drill to a related document.
 
 If the system metrics do not meet your needs, [you
-can create your own metrics](Custom_Metrics.htm). When you create your own metrics,
-you first create a [data source](About_Data_Sources.htm).
+can create your own metrics](Custom_Metrics.md). When you create your own metrics,
+you first create a [data source](About_Data_Sources.md).
 A data source is a SQL statement that extracts the information that
 you want to include in your metrics. After you build the data source,
-you create the [analytic](About_Analytics.htm) or [detail
-grid](About_Detail_Grids.htm). You can share your custom metric with others.
+you create the [analytic](About_Analytics.md) or [detail
+grid](About_Detail_Grids.md). You can share your custom metric with others.
 
 Analytics and detail grids read information from VISUAL [reporting
-database tables](Reporting_Database_Tables.htm). Before you can build analytics and grids, you
+database tables](Reporting_Database_Tables.md). Before you can build analytics and grids, you
 must first load information into the database tables. After you load
 your existing data into the tables, you can decide how to update the
 tables when new changes are made to your database. You can manually
@@ -60,11 +60,11 @@ VISUAL executable (VM.exe) to access the Dashboard.
 See these topics:
 
 * [Reporting
-  Database Tables](Reporting_Database_Tables.htm)
+  Database Tables](Reporting_Database_Tables.md)
 * [Setting
-  Up A Dashboard](Setting_Up_A_Dashboard.htm)
-* [Analytics](Analytics.htm)
+  Up A Dashboard](Setting_Up_A_Dashboard.md)
+* [Analytics](Analytics.md)
 * [Detail
-  Grids](Detail_Grids.htm)
+  Grids](Detail_Grids.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

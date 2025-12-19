@@ -85,7 +85,7 @@ Counts dialog box, with only the following exceptions:
 * You can re-enter a quantity
   for a tag as many times as necessary.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Extra_Tags.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Extra_Tags.md)
 Creating Extra Tags

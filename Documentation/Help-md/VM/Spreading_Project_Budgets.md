@@ -30,4 +30,4 @@ VISUAL calculates the budget spread for
 your project based on the budget figures you entered and the Distribution
 ID you selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

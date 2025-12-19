@@ -38,9 +38,9 @@ to see.
 4. Click Ok.
 5. Add metrics:
 6. To add an
-   analytic, click Add Analytic. See [Adding an Analytic](Adding_an_Analytic.htm).
+   analytic, click Add Analytic. See [Adding an Analytic](Adding_an_Analytic.md).
 7. To add a detail
-   grid, click Add Detail Grid. See [Adding a Detail Grid](Adding_a_Detail_Grid.htm).
+   grid, click Add Detail Grid. See [Adding a Detail Grid](Adding_a_Detail_Grid.md).
 
 6. Arrange the metrics.
    You can resize and move the metrics manually. You can also use
@@ -78,4 +78,4 @@ After you save your layout, be careful not to click Save if you
 temporarily rearrange your dashboard. If you click Save, your previous
 layout for the dashboard is replaced with the current layout.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

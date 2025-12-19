@@ -38,4 +38,4 @@ You can create blank tags also, if you select the option in the
 dialog box. There are other options to check whether to lock each
 location and all part inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

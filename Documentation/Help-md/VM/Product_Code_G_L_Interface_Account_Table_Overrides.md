@@ -81,4 +81,4 @@ Purchase Price Variance
 | 2. G/L Interface Table | 2. Indirect Code |
 |  | 3. G/L Interface Table |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

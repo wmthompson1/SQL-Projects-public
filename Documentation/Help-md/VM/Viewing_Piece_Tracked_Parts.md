@@ -14,4 +14,4 @@ The Physical Inventory Pieces Part table appears.
 Use this table to view the number of pieces, length, width, height,
 and Trace ID of piece tracked parts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

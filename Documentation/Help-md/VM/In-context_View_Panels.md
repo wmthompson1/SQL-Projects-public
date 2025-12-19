@@ -34,10 +34,10 @@ followed by the selected entity, followed by the ID of the customer.
 See these topics:
 
 * [Where
-  are In-context View Panels Available?](Where_are_In-context_View_Panels_Available_.htm)
+  are In-context View Panels Available?](Where_are_In-context_View_Panels_Available_.md)
 * [Displaying
-  and Arranging View Panels](Displaying_and_Arranging_View_Panels.htm)
+  and Arranging View Panels](Displaying_and_Arranging_View_Panels.md)
 * [Customizing
-  the View Panel Interface](Customizing_the_View_Panel_Interface.htm)
+  the View Panel Interface](Customizing_the_View_Panel_Interface.md)
 * [About
-  the View Panel Charts](About_the_View_Panel_Charts.htm)
+  the View Panel Charts](About_the_View_Panel_Charts.md)

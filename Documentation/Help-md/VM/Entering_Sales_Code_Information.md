@@ -33,4 +33,4 @@ By default, copy sequence is 0.
 5. Click the Save
    button to save the new information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.md) User-defined Help

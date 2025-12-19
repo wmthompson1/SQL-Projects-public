@@ -45,5 +45,5 @@ ID.
 5. Click Ok
    to confirm your ID Generation preferences.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What is the Synchronize Customer/Account
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What is the Synchronize Customer/Account
 Utility?

@@ -112,7 +112,7 @@ PDF Format check box.
 Your report is created in the format you
 selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_RMA.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_RMA.md)
 RMA Print Formats
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

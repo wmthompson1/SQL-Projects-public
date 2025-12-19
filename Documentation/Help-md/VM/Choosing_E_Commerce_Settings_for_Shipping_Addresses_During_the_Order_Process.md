@@ -20,7 +20,7 @@ The Customer Maintenance window appears.
 
 2. If this is a new order,
    follow normal [order entry
-   procedures](VMORDENTfrmCustomerOrder.htm).
+   procedures](VMORDENTfrmCustomerOrder.md).
 
 If this is an exiting order, click the Our Order ID button select the appropriate customer
 order.
@@ -183,4 +183,4 @@ Print by Bill of Lading
 button if you want VISUAL to print customs documents for this customer
 address by bill of lading.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

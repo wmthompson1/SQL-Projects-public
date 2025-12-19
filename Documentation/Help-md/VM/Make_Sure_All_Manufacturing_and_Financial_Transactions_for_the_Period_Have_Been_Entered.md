@@ -22,59 +22,59 @@ A detailed description of how to run each report can be found in the
 Helpful Reports section. The manufacturing transactions include:
 
 Shipments - The [Pack
-Lists](Pack_List_Report.htm) report run by actual ship date shows the shipments that
+Lists](Pack_List_Report.md) report run by actual ship date shows the shipments that
 have been processed during the period.
 
 To view shipments that are scheduled to be shipped (but have not
 been shipped yet), run the [Customer
-Shipping/Delivery](Shipping_Delivery_Report.htm) report.
+Shipping/Delivery](Shipping_Delivery_Report.md) report.
 
 A/R Manufacturing Invoices The [Customer
-Sales Journal](Customer_Sales_Journal_Report.htm) report shows all invoiced orders.
+Sales Journal](Customer_Sales_Journal_Report.md) report shows all invoiced orders.
 
 You can also view shipments eligible for invoicing by selecting
-File, [Print One Invoice](Print_One_Invoice.htm) from the
+File, [Print One Invoice](Print_One_Invoice.md) from the
 Invoice Forms window.
 
 Project Billing To review the transactions
 that have been entered and processed, run the [Project
-Billing Events](Project_Billing_Events_Report_Helpful.htm) report.
+Billing Events](Project_Billing_Events_Report_Helpful.md) report.
 
 You can also run the [Order
-Invoice Status](Order_Invoice_Status_Report_Helpful.htm) report to review transactions.
+Invoice Status](Order_Invoice_Status_Report_Helpful.md) report to review transactions.
 
 Purchase Receipts To review purchase
-receipts, run the [Receiving report](Receiving_Report.htm)
+receipts, run the [Receiving report](Receiving_Report.md)
 twice: once to review actual receipts for the month and a second time
 to review scheduled receipts.
 
 Inventory Transactions - To review inventory
 transactions for the month, run the [Inventory
-Transactions](Inventory_Transactions_Report.htm) report.
+Transactions](Inventory_Transactions_Report.md) report.
 
 Labor Reporting - To review the labor
 tickets that have been entered for the month, print a [Labor
-Ticket](Labor_Tickets_Helpful.htm) report.
+Ticket](Labor_Tickets_Helpful.md) report.
 
 The financial transactions that should be entered and posted include:
 
 A/R Invoices - To review the A/R invoices
 entered for the month, run the [Accounts
-Receivable Invoice Register](A_R_Invoice_Register.htm).
+Receivable Invoice Register](A_R_Invoice_Register.md).
 
-Run the [Gross Profit](Gross_Profit_Report.htm) report
+Run the [Gross Profit](Gross_Profit_Report.md) report
 to view sales and costs for customer orders.
 
 A/R Cash Receipts Run the [Cash
-Receipts](A_R_Cash_Receipts.htm) report to assess cash received for the period.
+Receipts](A_R_Cash_Receipts.md) report to assess cash received for the period.
 
 A/P Invoices - To make sure that invoices
 have been entered for all purchase receipts for the month, run the
-[Uninvoiced Receivers](Uninvoiced_Receivers_Report_Detailed.htm)
+[Uninvoiced Receivers](Uninvoiced_Receivers_Report_Detailed.md)
 report.
 
 A/P Payments Run the [Payment
-Register](Payment_Register.htm) to review cash disbursements for the period.
+Register](Payment_Register.md) to review cash disbursements for the period.
 
 General Journal Adjustments, including Recurring
 General Journals and Allocations Execute and post any Recurring
@@ -85,13 +85,13 @@ reconciliations from the prior period are entered and posted.
 
 All Revenue Recognition Transactions
 The [Revenue
-Recognition Transactions](Revenue_Recognition_Transactions_Report_Helpful.htm) report shows details of your revenue
+Recognition Transactions](Revenue_Recognition_Transactions_Report_Helpful.md) report shows details of your revenue
 recognition transactions for projects.
 
 The Deferred Revenue report shows revenue recognition transactions
 for the period.
 
-Run the [Milestone Status](Milestone_Report.htm) report
+Run the [Milestone Status](Milestone_Report.md) report
 to review progress billings that are ready to be triggered.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

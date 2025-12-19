@@ -38,7 +38,7 @@ The Print Invoice dialog box appears.
 
 For more information on working in the Print
 Invoices dialog box, refer to [Printing
-Invoices](Printing_Invoices_1.htm).
+Invoices](Printing_Invoices_1.md).
 
 7. Click the Ok
    button.
@@ -46,4 +46,4 @@ Invoices](Printing_Invoices_1.htm).
 VISUAL prints the invoices you selected
 using the setting you selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

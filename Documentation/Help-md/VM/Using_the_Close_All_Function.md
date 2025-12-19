@@ -12,4 +12,4 @@ The Close all function from the Infor VISUAL
 File menu allows you to exit from all active windows from Infor VISUAL,
 however, the Infor VISUAL Main window remains open.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

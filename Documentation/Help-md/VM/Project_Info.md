@@ -5,7 +5,7 @@ Project Summary
 
 # Project Summary
 
-This [dashboard](VMDBOARDWhat.htm) analytic
+This [dashboard](VMDBOARDWhat.md) analytic
 is available only if you are licensed to use projects/A&D functionality.
 This analytic shows a variety of project summary information. You
 must specify a project ID to display data in this chart.
@@ -33,10 +33,10 @@ project ID to view data in this chart.
 
 Detail grid: n/a
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

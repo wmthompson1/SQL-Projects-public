@@ -57,10 +57,10 @@ settings for a particular subset of orders.
 
 ## Opening the Scheduling Window
 
-## Opening the [Utilization Inquiry](Using_Utilization_Inquiry.htm) Window
+## Opening the [Utilization Inquiry](Using_Utilization_Inquiry.md) Window
 
-## Opening the [Contention Inquiry](Using_Contention_Inquiry.htm) Window
+## Opening the [Contention Inquiry](Using_Contention_Inquiry.md) Window
 
-## Opening the [Material Constraint Inquiry](Using_Material_Constraint_Inquiry.htm) Window
+## Opening the [Material Constraint Inquiry](Using_Material_Constraint_Inquiry.md) Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

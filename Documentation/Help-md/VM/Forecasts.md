@@ -12,4 +12,4 @@ separately from the Master Production Schedule (MPS).
 You can build the MPS using a single forecast or multiple forecasts,
 customer demand, independent demand and gross demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

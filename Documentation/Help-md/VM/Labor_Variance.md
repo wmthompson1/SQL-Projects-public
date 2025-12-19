@@ -47,4 +47,4 @@ Design changes can occur due to operations
 being added that were overlooked, or operations being deleted due
 to cost improvement programs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

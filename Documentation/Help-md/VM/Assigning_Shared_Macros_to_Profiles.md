@@ -35,7 +35,7 @@ have only one macro of a particular name per application. For example,
 the SYSADM can have only one OnSave macro for Part Maintenance. If
 you want to assign different OnSave macros in Part Maintenance to
 different users, load the macros as private macros per user. See [Copying
-Macros from a Workstation to the Database](Copying_Macros_from_a_Workstation_to_the_Database.htm).
+Macros from a Workstation to the Database](Copying_Macros_from_a_Workstation_to_the_Database.md).
 
 To assign SYSADM macros to user profiles:
 
@@ -54,4 +54,4 @@ To assign SYSADM macros to user profiles:
    to assign to the profile.
 8. Click Save.
    Users assigned to the profile can run the macros. See [Assigning
-   User Profiles to Users](Assigning_User_Profiles_to_Users.htm).
+   User Profiles to Users](Assigning_User_Profiles_to_Users.md).

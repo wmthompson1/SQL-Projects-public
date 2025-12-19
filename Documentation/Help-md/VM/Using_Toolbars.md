@@ -218,4 +218,4 @@ outline changes from a thick bold border to a normal style border.
 This is when you can release the grippers and dock the toolbar in
 the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

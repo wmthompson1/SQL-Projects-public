@@ -71,4 +71,4 @@ Date at this point, if needed.
 If necessary, you can re-enter Part Traceability
 as many times as needed before completing the transaction.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

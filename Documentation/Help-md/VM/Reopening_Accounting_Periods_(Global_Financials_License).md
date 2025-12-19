@@ -11,7 +11,7 @@ period to post the adjustment transactions.
 
 You cannot reopen a locked period in the Close/Reopen Period window.
 To reopen a locked period, see [Financials
-Application Global Maintenance](VF.chm::/VFAPLGLBfrmApplGlobal.htm).
+Application Global Maintenance](VFAPLGLBfrmApplGlobal.md).
 
 1. Select Accounting,
    Close/Reopen Period.

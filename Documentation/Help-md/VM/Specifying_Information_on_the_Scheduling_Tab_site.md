@@ -16,7 +16,7 @@ for holidays and different work center schedules are handled elsewhere.
 
 If you are licensed to use a single site, set up scheduling information
 in Application Global Maintenance. See [Specifying
-Scheduling Information](Specifying_Scheduling_Information_Tenant.htm) in Application Global Maintenance.
+Scheduling Information](Specifying_Scheduling_Information_Tenant.md) in Application Global Maintenance.
 
 1. Click the Scheduling
    tab.
@@ -139,4 +139,4 @@ use in calculations. Clear the check box to ignore calendar exceptions.
    of 10 minutes.
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

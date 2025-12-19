@@ -16,6 +16,6 @@ Black A black dash outline indicates a completed workflow step.
 Yellow A yellow dash outline indicates
 the current workflow step.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.htm) Using the Workflow Gatekeeper
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.md) Using the Workflow Gatekeeper

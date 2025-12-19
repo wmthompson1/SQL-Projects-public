@@ -20,4 +20,4 @@ To access the Currency Exchange Rate Maintenance window:
    buttons. Use these fields and buttons while working in Currency
    Exchange Rate Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.md) User-defined Help

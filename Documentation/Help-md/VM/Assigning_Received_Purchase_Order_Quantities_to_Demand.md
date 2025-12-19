@@ -20,27 +20,27 @@ Click the appropriate link for more information.
 
 [Assigned
 Received Purchase Order Quantities to Customer Order Delivery Schedule
-Demand](Assigned_Received_Purchase_Order_Quantities_to_Customer_Order_Delivery_Schedule_Demand.htm)
+Demand](Assigned_Received_Purchase_Order_Quantities_to_Customer_Order_Delivery_Schedule_Demand.md)
 
 [Assigned
-Received Purchase Order Quantities to Customer Order Demand](Assigned_Received_Purchase_Order_Quantities_to_Customer_Order_Delivery_Schedule_Demand.htm)
+Received Purchase Order Quantities to Customer Order Demand](Assigned_Received_Purchase_Order_Quantities_to_Customer_Order_Delivery_Schedule_Demand.md)
 
 [Assigned
-Received Purchase Order Delivery Schedule Quantities to Inventory](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Inventory.htm)
-
-[Assigned
-Received Purchase Order Delivery Schedule Quantities to Work Order
-Material Operation Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Work_Order_Material_Operation_Demand.htm)
+Received Purchase Order Delivery Schedule Quantities to Inventory](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Inventory.md)
 
 [Assigned
 Received Purchase Order Delivery Schedule Quantities to Work Order
-Material Requirement Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Work_Order_Material_Requirement_Demand.htm)
+Material Operation Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Work_Order_Material_Operation_Demand.md)
+
+[Assigned
+Received Purchase Order Delivery Schedule Quantities to Work Order
+Material Requirement Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Work_Order_Material_Requirement_Demand.md)
 
 [Assigned
 Received Purchase Order Delivery Schedule Quantities to Interbranch
-Transfer Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Interbranch_Transfer_Demand.htm)
+Transfer Demand](Assigned_Received_Purchase_Order_Delivery_Schedule_Quantities_to_Interbranch_Transfer_Demand.md)
 
 [Viewing
-Received Delivery Schedule Line Demand Allocation Information](Viewing_Received_Delivery_Schedule_Line_Demand_Allocation_Information.htm)
+Received Delivery Schedule Line Demand Allocation Information](Viewing_Received_Delivery_Schedule_Line_Demand_Allocation_Information.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

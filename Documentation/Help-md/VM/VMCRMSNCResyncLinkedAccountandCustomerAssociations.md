@@ -108,17 +108,17 @@ Maintenance.
    View Log File to review the linked account
    and customer associations that were re-synchronized.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What
 is the Synchronize Customer/Account Utility?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.md)
 Adding Missing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCLinkingExistingCustomersandAccounts.htm) Linking Existing Customers and Accounts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCLinkingExistingCustomersandAccounts.md) Linking Existing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.md)
 Navigating in the Synchronize Customer/Account Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCCustomerAccountTableSort.md)
 Sorting the Customer/Account table in the Synchronize Customer/Account
 Utility

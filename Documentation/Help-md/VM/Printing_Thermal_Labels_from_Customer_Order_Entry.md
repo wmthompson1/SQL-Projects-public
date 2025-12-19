@@ -52,4 +52,4 @@ field with SHIPPING.
 8. Verify that you thermal
    label printer is configured properly, and then click the Print Labels button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

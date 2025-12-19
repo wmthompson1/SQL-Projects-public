@@ -63,16 +63,16 @@ either environment, all others must be run prior to the end of any
 financial period so that the journals created can be posted to the
 ledger before the period closes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manufacturing_Costs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manufacturing_Costs.md)
 Manufacturing Costs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Account_Assignments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Account_Assignments.md)
 Account Assignments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manufacturing_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manufacturing_Journals.md)
 Manufacturing Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Database_Setup.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Database_Setup.md)
 Database Setup
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

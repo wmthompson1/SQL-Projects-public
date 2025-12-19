@@ -27,4 +27,4 @@ it defaults to showing the last shop view that appeared on that computer.
    to select that view, or Cancel to close
    the dialog box without selecting a view.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

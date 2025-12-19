@@ -19,4 +19,4 @@ line that you just deleted.
    button to complete the deletion. Click the Close
    button to close the dialog box without deleting the resource.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

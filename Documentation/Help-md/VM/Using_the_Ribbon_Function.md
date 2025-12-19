@@ -12,4 +12,4 @@ This function takes up less space, and provides you with the ability
 to size the windows on your system so that you can view the menu options
 and the active windows at once.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

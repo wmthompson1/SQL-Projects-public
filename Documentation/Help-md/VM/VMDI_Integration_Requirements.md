@@ -18,23 +18,23 @@ mode.
 EDI transactions currently integrated with VISUAL are:
 
 * [CPO
-  - Customer Order Information (Inbound)](VMDI_Integration_Requirements.htm#CPO)
+  - Customer Order Information (Inbound)](VMDI_Integration_Requirements.md#CPO)
 * [PLN
-  - Planning Information (Inbound)](VMDI_Integration_Requirements.htm#PLN)
+  - Planning Information (Inbound)](VMDI_Integration_Requirements.md#PLN)
 * [CSH
-  - Cash Receipts Information (Inbound)](VMDI_Integration_Requirements.htm#CSH)
+  - Cash Receipts Information (Inbound)](VMDI_Integration_Requirements.md#CSH)
 * [ACK
-  - Customer Order Acknowledgment Information (Outbound)](VMDI_Integration_Requirements.htm#ACK)
+  - Customer Order Acknowledgment Information (Outbound)](VMDI_Integration_Requirements.md#ACK)
 * [ASN
-  - Shipping Information (Outbound)](VMDI_Integration_Requirements.htm#ASN)
+  - Shipping Information (Outbound)](VMDI_Integration_Requirements.md#ASN)
 * [INV
-  - Invoice Information (Outbound)](VMDI_Integration_Requirements.htm#INV)
+  - Invoice Information (Outbound)](VMDI_Integration_Requirements.md#INV)
 * [VPO
-  - Purchase Order Information (Outbound)](VMDI_Integration_Requirements.htm#VPO)
+  - Purchase Order Information (Outbound)](VMDI_Integration_Requirements.md#VPO)
 * [RCA
-  - Purchase Order Receipt Information (Outbound)](VMDI_Integration_Requirements.htm#RCA)
+  - Purchase Order Receipt Information (Outbound)](VMDI_Integration_Requirements.md#RCA)
 * [WSA
-  - Purchase Order Receipt Information (Outbound)](Creating_WSA_Layouts.htm)
+  - Purchase Order Receipt Information (Outbound)](Creating_WSA_Layouts.md)
 
 ## CPO - Customer Order Information (Inbound)
 
@@ -62,7 +62,7 @@ will be inserted in the customer order line. If a warehouse is not
 included in the .vdi file, the file import will still be successful
 because the site does not require the warehouse.
 
-View a [sample layout](VMDI_Sample_Layouts_CPO.htm)
+View a [sample layout](VMDI_Sample_Layouts_CPO.md)
 
 This is typically the most complex transaction to integrate because
 of the vast differences in how you and your trading partners may use
@@ -103,7 +103,7 @@ can also be brought into VISUAL through integration as a CPO.
 
 ## PLN - Planning Information (Inbound)
 
-View a [sample layout](VMDI_Sample_Layouts_PLN.htm)
+View a [sample layout](VMDI_Sample_Layouts_PLN.md)
 
 This is typically the simplest transaction to implement. When planning
 information is imported, the CUSTOMER\_ FORECAST table is populated
@@ -141,7 +141,7 @@ for testing the maps prior to delivery to the customer.
 
 ## ASN - Shipping Information (Outbound)
 
-View a [sample layout](VMDI_Sample_Layouts_ASN.htm)
+View a [sample layout](VMDI_Sample_Layouts_ASN.md)
 
 Shipping data is extracted from VISUAL to one or more fixed length
 or delimited files. The files contain ASN information, BOL information,
@@ -171,7 +171,7 @@ A typical ASN has the following information:
 
 ## INV - Invoice Information (Outbound)
 
-View a [sample layout](VMDI_Sample_Layouts_INV.htm)
+View a [sample layout](VMDI_Sample_Layouts_INV.md)
 
 Invoice data is extracted from VISUAL to one or more fixed length
 or delimited files. The files contain the Invoice header information
@@ -194,7 +194,7 @@ invoice related information such as:
 
 ## CSH - Cash Receipts Information (Inbound)
 
-View a [sample layout](VMDI_Sample_Layouts_CSH.htm)
+View a [sample layout](VMDI_Sample_Layouts_CSH.md)
 
 In order to import Cash Receipts, you are first required to set
 up the following in VISUAL:
@@ -207,7 +207,7 @@ up the following in VISUAL:
   Currency ID
 
 Please see [Importing
-CSH (Cash Receipts) Transactions](Importing_CSH_Cash_Receipts_Transactions.htm) section in for more information.
+CSH (Cash Receipts) Transactions](Importing_CSH_Cash_Receipts_Transactions.md) section in for more information.
 
 ## EDI Transaction 820 - Remittance Advice
 
@@ -242,7 +242,7 @@ were applied to your invoices.
 
 ## ACK - Customer Order Acknowledgment Information (Outbound)
 
-View a [sample layout](VMDI_Sample_Layouts.htm)
+View a [sample layout](VMDI_Sample_Layouts.md)
 
 The Customer Order Acknowledgement is used for acknowledging new
 customer orders, changed orders, or both new and changed. Typically
@@ -325,7 +325,7 @@ need to update the codes on your orders and re-export the ACKs.
 
 ## VPO - Purchase Order Information (Outbound)
 
-View a [sample layout](VMDI_Sample_Layouts_VPO.htm)
+View a [sample layout](VMDI_Sample_Layouts_VPO.md)
 
 The Purchase Order transaction is used to send purchase order requests
 to your vendors. Purchase Order data is extracted from VISUAL to one
@@ -350,7 +350,7 @@ are:
 
 ## RCA - Purchase Order Receipt Information (Outbound)
 
-View a [sample layout](VMDI_Sample_Layouts_RCA.htm)
+View a [sample layout](VMDI_Sample_Layouts_RCA.md)
 
 The 861 Purchase Order Receipt transaction is used to send your
 vendors receipt information regarding purchase orders for which have
@@ -372,4 +372,4 @@ fields that are often transmitted are:
 * Delivery schedule on which
   quantity was received
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Interchange.md) User-defined Help

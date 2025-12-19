@@ -11,4 +11,4 @@ to select a Part ID from the part table, enter the parts alias in
 the Part ID field. When you tab or move the cursor to enter more information,
 VISUAL replaces the Part Alias with the Part ID proper.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

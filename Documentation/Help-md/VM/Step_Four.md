@@ -27,4 +27,4 @@ journals, post the journals to the General Ledger.
 6. Click the Post
    All button to post all journal types.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

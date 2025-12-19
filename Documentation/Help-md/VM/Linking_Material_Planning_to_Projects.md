@@ -65,7 +65,7 @@ part). These orders appear in material netting in the same way as
 actual orders. You can then firm and release the planned orders into
 real purchase and/or work orders. For more information on Material
 Requirements Planning, see [What is the
-Material Planning Window?](VMPLNWINWhat.htm).
+Material Planning Window?](VMPLNWINWhat.md).
 
 If you have assigned any supply or demand orders to warehouses that
 are MRP-exempt, material requirements planning will ignore these orders
@@ -90,4 +90,4 @@ The MRP dialog box appears.
 3. Continue the Material
    Requirement Planning process as you would for commercial warehouses..
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

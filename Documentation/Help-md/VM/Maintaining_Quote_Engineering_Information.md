@@ -68,9 +68,9 @@ Quote has an easy-to-use table based format; because it is smaller
 and is not a separate application, Quick Quote uses less memory and
 system resources than the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Manufacturing_Window.htm) Using the Manufacturing Window
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Manufacturing_Window.md) Using the Manufacturing Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMESTWINfrmQuickQuote.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMESTWINfrmQuickQuote.md)
 Using Quick Quote

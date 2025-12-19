@@ -10,7 +10,7 @@ multiple sites, install the service for each site where you want to
 use the service to run MRP.
 
 Before you install the service, make sure the computer where you
-are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 
 To install the service:
 

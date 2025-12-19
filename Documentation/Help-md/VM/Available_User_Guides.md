@@ -85,4 +85,4 @@ and revaluation.
 Cash Management Users Guide This guide
 describes how to manage cash flow and how to create bank information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

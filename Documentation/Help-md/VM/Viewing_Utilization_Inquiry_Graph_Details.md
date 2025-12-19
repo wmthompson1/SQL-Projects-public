@@ -32,7 +32,7 @@ details to a specified date, select any number of table rows before
 selecting the Show
 Resource Detail option.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Show_Resource_Details.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Show_Resource_Details.md)
 Show Resource Detail
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

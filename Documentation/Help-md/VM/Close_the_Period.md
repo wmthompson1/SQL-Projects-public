@@ -28,4 +28,4 @@ to close the period.
    click the Close Period button to close
    the period.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

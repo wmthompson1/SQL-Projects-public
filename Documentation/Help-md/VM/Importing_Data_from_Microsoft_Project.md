@@ -73,4 +73,4 @@ handle the active Microsoft Project file.
 To view your imported data, refresh the
 Project Window or Project Summary Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

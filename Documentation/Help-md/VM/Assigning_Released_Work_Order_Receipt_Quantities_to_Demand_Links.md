@@ -13,7 +13,7 @@ You can use the Assign Released Work Order Receipt Quantities to
 Demand Links function to assign receipts to existing demand only.
 You cannot create a new demand link in this dialog. To create a new
 demand link, see [Allocating
-Released Work Order Quantities to Demand](Allocating_Released_Work_Order_Quantities_to_Demand.htm).
+Released Work Order Quantities to Demand](Allocating_Released_Work_Order_Quantities_to_Demand.md).
 
 To specify the quantity to assign to demand:
 
@@ -67,4 +67,4 @@ the work orders Allocated Quantity from the Received Quantity.
    you assign cannot exceed the quantity you are receiving.
 7. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

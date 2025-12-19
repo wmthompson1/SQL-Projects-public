@@ -117,4 +117,4 @@ Requirement Quantity of the customer order line.
     button to commit the allocation of supply from the purchase order
     delivery schedule line to the customer order line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

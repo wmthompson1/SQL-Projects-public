@@ -98,4 +98,4 @@ Vendor Part ID
 3. Click the Ok
    button to commit the assignment of supply to the ship quantity.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.md) User-defined Help

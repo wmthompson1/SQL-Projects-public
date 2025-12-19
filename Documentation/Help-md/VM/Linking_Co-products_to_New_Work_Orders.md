@@ -7,7 +7,7 @@ Linking Co-products to New Work Orders
 
 You can link co-products to new and existing work
 orders. For new work orders, you can only specify the main part in
-[Customer Order Entry](VMORDENTWhat.htm) enter the co-products
+[Customer Order Entry](VMORDENTWhat.md) enter the co-products
 to the new work order in the Manufacturing Window.
 
 1. Select Customer
@@ -79,4 +79,4 @@ Window.
 12. Enter the co-products
     for this work order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

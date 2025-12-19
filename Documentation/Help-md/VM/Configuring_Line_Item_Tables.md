@@ -62,4 +62,4 @@ Be careful not to hide any columns that are required by the program.
 If this happens, VISUAL gives you the normal error message that a
 field needs an entry when you try to use the application.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

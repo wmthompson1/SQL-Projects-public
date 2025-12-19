@@ -79,7 +79,7 @@ Window appears automatically.
    click the Use
    Selected Contact toolbar
    button. If the contact you want to use is not yet in the database,
-   click [Add New Contact](VMCONMNTfrmContact.htm).
+   click [Add New Contact](VMCONMNTfrmContact.md).
 
 If you do not want to assign a contact to
 this estimate, click Use No Contact.
@@ -183,7 +183,7 @@ inserted. This is a read-only field.
 Terms
 - Specifies the following sales terms that will apply if an order
 is placed. Refer to [Adding
-Terms](Entering_Information_in_Terms_Maintenance.htm) for more information.
+Terms](Entering_Information_in_Terms_Maintenance.md) for more information.
 
 Create Quote Masters for MPC Line Items - If you
 want VISUAL to create Quote Master for your MPC line Items, select
@@ -203,8 +203,8 @@ by a line item in the table.
    associate with the quote. The system inserts the Project Type,
    the default WBS code, and the Project Warehouse from Project Maintenance.
    Refer to [Creating
-   Quotes for Existing Projects](Creating_Quotes_for_Existing_Projects.htm) and [Creating
-   a Project from the Estimating Window](Creating_a_Project_from_the_Estimating_Window.htm) for more information.
+   Quotes for Existing Projects](Creating_Quotes_for_Existing_Projects.md) and [Creating
+   a Project from the Estimating Window](Creating_a_Project_from_the_Estimating_Window.md) for more information.
 10. Enter the Part ID for
     the inventory part you are quoting. Double-click the column header
     to get a browse list of all parts.
@@ -274,8 +274,8 @@ engineering master that is only used for this quote.
     Projects/A&D modules, you can specify a WBS Code, WBS CLIN,
     and Proj Ref Seq No to link the line item to a WBS code within
     the project you specified on the Project tab. Refer to [Creating
-    Quotes for Existing Projects](Creating_Quotes_for_Existing_Projects.htm) and [Creating
-    a Project from the Estimating Window](Creating_a_Project_from_the_Estimating_Window.htm) for more information.
+    Quotes for Existing Projects](Creating_Quotes_for_Existing_Projects.md) and [Creating
+    a Project from the Estimating Window](Creating_a_Project_from_the_Estimating_Window.md) for more information.
 18. Click the Save
     button to save the initial quote information.
 
@@ -296,4 +296,4 @@ must be completed before the quote will be ready:
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Setting
 Terms
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

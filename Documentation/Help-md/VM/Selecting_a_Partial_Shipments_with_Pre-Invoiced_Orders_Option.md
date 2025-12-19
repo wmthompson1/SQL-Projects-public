@@ -43,14 +43,14 @@ short prior to consuming all of a pre-invoice amount, the user must
 manually generate a memo to offset the remaining balance of the pre-invoice.
 
 If you select this option, certain options
-may be disabled in [Invoice Forms](VMINVGENfrmPrintInvoice.htm).
+may be disabled in [Invoice Forms](VMINVGENfrmPrintInvoice.md).
 If at least one customer order has been partially shipped and has
 a pre-invoice applied to it, the system disables the Create A/R Invoices,
 Combine All Packlists for an Order on One Invoice, and Combine All
 Packlists for a Customer on One Invoice options. You can re-activate
 these options by generating invoices for pre-invoiced orders with
 partial shipments. To identify these orders, print the [List
-of Pre-Invoiced Orders with Partial Shipments](Printing_a_List_of_Pre-invoiced_Orders_with_Partial_Shipments.htm) report. Then, use
+of Pre-Invoiced Orders with Partial Shipments](Printing_a_List_of_Pre-invoiced_Orders_with_Partial_Shipments.md) report. Then, use
 the Generate/Print One Invoice option available on the File menu to
 generate an invoice for each order in the List of Pre-Invoiced Orders
 with Partial Shipments report. After you generate each invoice, the
@@ -58,4 +58,4 @@ system reactivates the Create A/R Invoices, Combine All Packlists
 for an Order on One Invoice, and Combine All Packlists for a Customer
 on One Invoice options.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

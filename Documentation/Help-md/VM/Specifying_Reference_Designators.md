@@ -68,7 +68,7 @@ If you would like to use an existing reference ID, click the Ref Designator ID b
 reference ID you would like to use. The system inserts the selected
 ID into the table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINfrmMaterial.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINfrmMaterial.md)
 Adding Material Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

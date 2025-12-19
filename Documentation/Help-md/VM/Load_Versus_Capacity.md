@@ -54,4 +54,4 @@ at one time in each of three shifts. For example, it is possible that
 you work more than one shift per day, yet do not have identical levels
 of staffing on each shift.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

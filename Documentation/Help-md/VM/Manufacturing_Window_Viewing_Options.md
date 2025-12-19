@@ -17,7 +17,7 @@ editing masters and work orders.
 There are three fundamental viewing modes for Manufacturing Window
 graphical, textual, and grid. Graphical and textual views are described
 in this topic. Refer to [Using the
-Grid View](Using_the_Grid_View.htm) for more information on the grid.
+Grid View](Using_the_Grid_View.md) for more information on the grid.
 
 ## Selecting Graphical View
 
@@ -467,7 +467,7 @@ leg header for the leg is put into home position. This lets you focus
 on a particular leg to work on. You can also use Shift-F9 to activate
 this function.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_High_Contrast_Mode.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_High_Contrast_Mode.md)
 Using High Contrast Mode

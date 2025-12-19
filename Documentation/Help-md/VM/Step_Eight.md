@@ -38,4 +38,4 @@ You can also view percentage of completion for the project by selecting
 Info, Percentage of Completion.
 The Percentage of Completion window appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

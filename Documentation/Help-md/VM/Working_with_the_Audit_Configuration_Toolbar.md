@@ -21,4 +21,4 @@ buttons you have not encountered elsewhere within the VISUAL application.
 |  | Unselect All | To remove tracking from all rows on the Audit Configuration table, click Unselect All. |
 |  | Restore Selections | If you want to return to the most recent tracking selections, click this toolbar button. Keep in mind that this only reverts to the settings from the most recent Save. |
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

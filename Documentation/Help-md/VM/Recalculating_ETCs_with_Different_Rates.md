@@ -24,4 +24,4 @@ you selected and upon successful calculation, a dialog box appears.
 | --- | --- |
 | IMPORTNT.gif | VISUAL only calculates ETCs for the project you selected, if you want to recalculate ETCs for all of your projects, you must do so in the Rate Maintenance window.. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.md) User-defined Help

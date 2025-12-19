@@ -6,7 +6,7 @@ Editing Activities in Activity Entry
 # Editing Activities in Activity Entry
 
 To edit an activity in [Activity
-Entry](VMACTENTfrmActivityEntry.htm), you must access Activity Entry through the Activity Maintenance
+Entry](VMACTENTfrmActivityEntry.md), you must access Activity Entry through the Activity Maintenance
 window or through the Reminder dialog. When you select Edit,
 Activity Entry... in an application, you
 can only add a new activity. You cannot edit an existing activity.
@@ -16,13 +16,13 @@ only. You cannot use Activity Entry to edit activities created in
 CRM. If you click the drill-down button next to a CRM task in either
 Activity Maintenance or the Reminder dialog, then CRM is opened instead.
 See [Editing
-CRM Tasks](Editing_CRM_Tasks_in_Activity_Maintenance_and_Activity_Entry.htm).
+CRM Tasks](Editing_CRM_Tasks_in_Activity_Maintenance_and_Activity_Entry.md).
 
 To access Activity Entry from [Activity
-Maintenance](Starting_Activity_Maintenance.htm), click the drill-down button next to the activity
+Maintenance](Starting_Activity_Maintenance.md), click the drill-down button next to the activity
 ID.
 
-To access Activity Entry from the [Reminder](Activity_Reminders.htm)
+To access Activity Entry from the [Reminder](Activity_Reminders.md)
 dialog, click the drill-down button next to the activity ID.
 
 You can edit this information:
@@ -44,11 +44,11 @@ You can edit this information:
 * Comments
 * User-defined Fields
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

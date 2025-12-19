@@ -41,9 +41,9 @@ information by day, select this option.
    button. To display the data as a table, click the Table
    toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Actual_Throughput_Details.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Actual_Throughput_Details.md)
 Viewing Actual Throughput Details
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Actual_Throughput_Reports.htm) Printing Actual Throughput Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Actual_Throughput_Reports.md) Printing Actual Throughput Reports

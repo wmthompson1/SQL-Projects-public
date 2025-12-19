@@ -40,4 +40,4 @@ of the Set Picture/Object window.
    and Exit button to accept the linked
    object and return to the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

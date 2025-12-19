@@ -15,4 +15,4 @@ Call the warehouses into the appropriate fields and, if a transit
 time already exists between the two, manually change the value that
 appears in the Transit Days Field to the new value.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

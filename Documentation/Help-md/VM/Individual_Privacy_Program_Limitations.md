@@ -8,12 +8,12 @@ Individual Privacy Program Limitations
 The Individual Privacy program searches for a data
 subjects name in the FIRST\_NAME, LAST\_NAME, and NAME columns in the
 tables listed in [Finding
-Data Subject Information](Finding_Data_Subject_Information.htm). If a data subjects name is stored in
+Data Subject Information](Finding_Data_Subject_Information.md). If a data subjects name is stored in
 any other database column, you must search for and remove the data
 subjects name manually.
 
 The Individual Privacy program redacts only the data displayed in
-the table in [Data Redaction](Data_Redaction.htm). No other
+the table in [Data Redaction](Data_Redaction.md). No other
 data is redacted.
 
 The Individual Privacy program does not search for nor redact information
@@ -27,7 +27,7 @@ in these areas:
 * Data in VISUAL reporting
   tables. You must manually reload the reporting tables after you
   redact data. See [Manually
-  Loading Existing Data into the Reporting Database Tables](Manually_Loading_Existing_Data_into_the_Reporting_Database_Tables.htm).
+  Loading Existing Data into the Reporting Database Tables](Manually_Loading_Existing_Data_into_the_Reporting_Database_Tables.md).
 * Database views
 * Notations
 * Specifications
@@ -48,7 +48,7 @@ In addition to the areas in the above list, other areas of the VISUAL
 database could contain personal information that you must search for
 and redact manually.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

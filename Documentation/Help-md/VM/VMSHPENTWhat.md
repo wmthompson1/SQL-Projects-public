@@ -35,4 +35,4 @@ If you are licensed to use multiple sites, ship orders on a site-by-site
 basis. The site that ships orders to customers must be the same site
 in which the order was placed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

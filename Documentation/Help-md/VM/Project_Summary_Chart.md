@@ -22,8 +22,8 @@ to evaluate whether the project is profitable.
 See these topics:
 
 * [Viewing
-  the Project Summary Chart](Viewing_the_Project_Summary_Chart.htm)
+  the Project Summary Chart](Viewing_the_Project_Summary_Chart.md)
 * [Printing
-  the Project Summary Chart](Printing_the_Project_Summary_Chart.htm)
+  the Project Summary Chart](Printing_the_Project_Summary_Chart.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

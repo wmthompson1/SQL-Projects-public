@@ -8,7 +8,7 @@ Adding Addresses to a Warehouse
 If you are a Projects/A&D user, you may find it useful to set
 up multiple addresses for the same warehouse. Then, you can account
 for travel time between the two addresses in [IBT
-Transfer](Generating_Interbranch_Transfers_within_the_Same_Warehouse.htm).
+Transfer](Generating_Interbranch_Transfers_within_the_Same_Warehouse.md).
 
 1. Select Inventory,
    Warehouse Maintenance.

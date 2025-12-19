@@ -67,4 +67,4 @@ or task is frozen.
 Dark Green Operation is part of the
 determinant path, and will be late or just in time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

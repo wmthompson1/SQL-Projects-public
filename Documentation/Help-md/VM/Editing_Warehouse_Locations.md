@@ -67,9 +67,9 @@ If you record last count date by warehouse,
 then this field is blank. This field is also blank if a last count
 date has not been specified or a cycle count has not been completed.
 
-See [Cycle Counts](Cycle_Counts.htm).
+See [Cycle Counts](Cycle_Counts.md).
 
 7. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

@@ -5,7 +5,7 @@ Bookings vs. Shipments Detail
 
 # Bookings vs. Shipments Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail grid lists
+This [dashboard](VMDBOARDWhat.md) detail grid lists
 bookings (customer orders) and shipments.
 
 Date filter applies to: For bookings,
@@ -25,10 +25,10 @@ Qty, Selling U/M, Unit Price, Trade Disc. Pct., Amount Ordered, Amount
 Shipped, Balance Amount, Sales Rep, Territory, Product Code, Commodity
 Code, Currency ID, Site ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

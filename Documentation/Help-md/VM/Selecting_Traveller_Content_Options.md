@@ -42,4 +42,4 @@ If you are using Part Trace Maintenance, this option allows you
 to print part traceability information for parts associated with this
 work order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

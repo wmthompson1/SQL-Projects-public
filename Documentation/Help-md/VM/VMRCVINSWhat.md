@@ -37,6 +37,6 @@ window.
 VISUAL populates the Receiving Inspection window with all of the
 orders you have received and marked for inspection.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVINSfrmReceivingInspection.htm) Maintaining Goods Under Inspection
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVINSfrmReceivingInspection.md) Maintaining Goods Under Inspection
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Receiving_Inspection.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Receiving_Inspection.md) User-defined Help

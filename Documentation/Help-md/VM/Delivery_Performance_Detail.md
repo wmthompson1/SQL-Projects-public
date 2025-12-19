@@ -5,7 +5,7 @@ Delivery Performance Detail
 
 # Delivery Performance Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid lists all late, on time, and early shipments.
 
 Date filter applies to: Actual Ship Date
@@ -24,10 +24,10 @@ Desired Ship Date, Shipped Date, Order Qty, Shipped Qty, Selling U/M,
 Status, Customer ID, Customer Name, Sales Rep, Product Code, Territory,
 Commodity Code, Part Desc. Service Charge ID, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

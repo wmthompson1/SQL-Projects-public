@@ -47,6 +47,6 @@ this:
 5. Click the Save
    button to commit the information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Transit_Times_Between_Warehouses.htm) Modifying Transit Times Between Warehouses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Transit_Times_Between_Warehouses.md) Modifying Transit Times Between Warehouses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

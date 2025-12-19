@@ -303,15 +303,15 @@ the following must have occurred:
   costed, i.e. invoice received or sub work order receipt costed)
 * The work order is closed
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP_Costing_in_VISUAL.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP_Costing_in_VISUAL.md)
 WIP Costing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_is_Actual_and_Projected_Cost.htm) What is Actual and Projected Cost
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_is_Actual_and_Projected_Cost.md) What is Actual and Projected Cost
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Determining_Whether_Actual_or_Projected_Cost_is_Used.htm) Determining whether Actual or Projected
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Determining_Whether_Actual_or_Projected_Cost_is_Used.md) Determining whether Actual or Projected
 Cost is Used
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setup_Manufacturing_Costing.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setup_Manufacturing_Costing.md)
 Setup Manufacturing Costing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

@@ -35,4 +35,4 @@ Graph
 Type - If you want to change the style of graph that appears,
 click the Graph Type arrow and select the style you want to use.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Resource_Delay_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Resource_Delay_Report.md) User-defined Help

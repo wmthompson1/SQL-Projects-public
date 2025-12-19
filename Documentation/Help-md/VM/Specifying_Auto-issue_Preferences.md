@@ -19,5 +19,5 @@ Specifying Auto-issue Preferences
 
 5. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.md)
 Auto-issue Parts

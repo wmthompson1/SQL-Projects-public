@@ -26,4 +26,4 @@ by selecting the appropriate option from the View menu.
 To view labor tickets that are currently in process, select the
 Show In-Process Tickets Only check box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

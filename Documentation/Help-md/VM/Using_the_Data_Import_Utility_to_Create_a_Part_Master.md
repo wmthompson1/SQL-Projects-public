@@ -27,4 +27,4 @@ As it imports, the blue progress meter and
 accompanying percent-done display inform you of what portion of the
 data you have successfully imported.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

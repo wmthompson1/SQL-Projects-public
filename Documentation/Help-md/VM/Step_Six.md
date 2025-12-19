@@ -24,4 +24,4 @@ date of the period.
 3. Click the Run
    button. The Update ETC window appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

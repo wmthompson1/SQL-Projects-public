@@ -37,4 +37,4 @@ To access the Topology table:
    Price Book database. Typically, this is the identification code
    of the database against which your ERP system runs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

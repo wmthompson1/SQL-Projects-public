@@ -31,13 +31,13 @@ use most.
 9. After setting up your
    new group, click the OK button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Group_Captions.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Group_Captions.md)
 Editing Group Captions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Groups_from_the_Personal_Menu.htm) Removing Groups from the Personal Toolbar
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Groups_from_the_Personal_Menu.md) Removing Groups from the Personal Toolbar
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commands_to_Existing_Groups.htm) Adding Commands to Existing Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commands_to_Existing_Groups.md) Adding Commands to Existing Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.htm) Adding Non-VISUAL Commands to Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.md) Adding Non-VISUAL Commands to Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

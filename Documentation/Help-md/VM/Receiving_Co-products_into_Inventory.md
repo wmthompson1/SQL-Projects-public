@@ -14,7 +14,7 @@ This means that the inventory transaction table carries several inventory
 transactions for a given work order, each referring to a different
 part ID.
 
-Use [Inventory Transaction Entry](VMINVENTWhat.htm) to
+Use [Inventory Transaction Entry](VMINVENTWhat.md) to
 receive co-products into inventory.
 
 1. Select Inventory Transaction
@@ -55,4 +55,4 @@ VISUAL adds the co-product into inventory
 and creates a Transaction ID. Repeat this procedure to add additional
 co-products into inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

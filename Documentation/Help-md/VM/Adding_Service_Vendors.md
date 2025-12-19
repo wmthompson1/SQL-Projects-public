@@ -83,10 +83,10 @@ to complete the job.
     button to save any changes to the Vendors Supplying Service dialog
     box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Quotes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Quotes.md)
 Editing Quotes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Delete_Service_Vendors.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Delete_Service_Vendors.md)
 Delete Service Vendors
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.md) User-defined Help

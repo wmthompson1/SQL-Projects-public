@@ -23,4 +23,4 @@ records for the part, and does not allow deletion if there are.
 The window does not clear. If you want to
 re-save the profile, click the Save button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.md) User-defined Help

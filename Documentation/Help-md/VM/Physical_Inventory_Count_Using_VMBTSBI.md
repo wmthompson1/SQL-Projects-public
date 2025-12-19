@@ -22,10 +22,10 @@ For example:
 * Material Recounts are performed
   using barcode hardware
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Physical_Inventory.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Physical_Inventory.md)
 Physical Inventory
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Cycle_Counting.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Cycle_Counting.md)
 Cycle Counting
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User

@@ -21,8 +21,8 @@ This table shows the tasks that you can complete in the Audit
 Configuration window:
 
 | Task | Description |
-| [Working with the Audit Configuration Toolbar](Working_with_the_Audit_Configuration_Toolbar.htm) | Use this task to learn about the Audit Configuration toolbar. |
-| [Configuring Audit Files](Configuring_Audit_Files.htm) | Use this task to specify the database columns to track. |
+| [Working with the Audit Configuration Toolbar](Working_with_the_Audit_Configuration_Toolbar.md) | Use this task to learn about the Audit Configuration toolbar. |
+| [Configuring Audit Files](Configuring_Audit_Files.md) | Use this task to specify the database columns to track. |
 
 ## Fields
 
@@ -81,4 +81,4 @@ time and end time of any report run is recorded. If you select this
 check box, all reports are tracked. You cannot choose which reports
 to track.
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

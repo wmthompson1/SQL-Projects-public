@@ -76,4 +76,4 @@ input from the user.
 Make the appropriate selections and click
 Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

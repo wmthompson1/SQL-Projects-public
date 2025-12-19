@@ -11,15 +11,15 @@ labor usage. You can access all three reports by selecting Work
 In Process Report from the Eng/Mfg menu.
 
 [Print
-Work in Process](VMWIPRPTfrmWorkInProcessReports.htm)
+Work in Process](VMWIPRPTfrmWorkInProcessReports.md)
 
 [Print
-Comparative Material](Comparative_Material_Reports.htm)
+Comparative Material](Comparative_Material_Reports.md)
 
 [Print
-Comparative Labor](Comparative_Labor_Reports.htm)
+Comparative Labor](Comparative_Labor_Reports.md)
 
 [Print
-Inventory Balances](Inventory_Balances_Reports.htm)
+Inventory Balances](Inventory_Balances_Reports.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.md) User-defined Help

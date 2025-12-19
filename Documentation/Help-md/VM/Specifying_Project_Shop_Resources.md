@@ -14,4 +14,4 @@ only for work order estimating purposes. VISUAL does NOT use these
 rates when booking labor against shop resources. Maintain all of your
 burden rates and mappings in the Project Summary Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

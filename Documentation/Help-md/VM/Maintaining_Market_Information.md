@@ -11,14 +11,14 @@ assign a customer to a market. For example, an Italian customer can
 have a market designation with Euro as its Currency ID.
 
 You can also set up part sales prices by market. See [Setting
-Unit Prices by Market](Setting_Unit_Prices_by_Market.htm).
+Unit Prices by Market](Setting_Unit_Prices_by_Market.md).
 
 The market adjustment you specify is applied to customer order pricing
 only if no customer-specific pricing, discount-specific pricing, or
 market-specific pricing is associated with the customer. The market
 adjustment rate is applied to the unit price specified in the Selling
 Price section of Part Maintenance. See [Customer
-Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.htm).
+Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.md).
 
 To add markets:
 
@@ -52,4 +52,4 @@ is treated as a 5 percent positive adjustment.
 
 7. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

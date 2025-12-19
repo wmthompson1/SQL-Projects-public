@@ -24,4 +24,4 @@ the table.
 VISUAL removes the individual tax from the
 tax group.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.md) User-defined Help

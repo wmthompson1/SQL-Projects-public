@@ -47,4 +47,4 @@ Otherwise, the text on the button may be difficult to see.
 If you have finished adding headings, click
 the Close button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

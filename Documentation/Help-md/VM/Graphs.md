@@ -12,6 +12,6 @@ choose the type of graph to use.
 See these topics:
 
 * [Types
-  of Graphs](Types_of_Graphs.htm)
+  of Graphs](Types_of_Graphs.md)
 * [Working
-  with Graphs](Working_with_Graphs.htm)
+  with Graphs](Working_with_Graphs.md)

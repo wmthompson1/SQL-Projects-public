@@ -43,14 +43,14 @@ select the Work Order radio button.
 11. Click Save
     to save any changes to the Service Dispatch window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.md)
 Changing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.md)
 Editing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.htm) Changing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.md) Changing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.htm) Editing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.md) Editing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Planning_Window.md) User-defined Help

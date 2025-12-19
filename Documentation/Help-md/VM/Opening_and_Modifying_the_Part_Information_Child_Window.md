@@ -23,4 +23,4 @@ The Part Information child window appears.
 General part information appears in the left pane of the window;
 part availability details appear in the right pane.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

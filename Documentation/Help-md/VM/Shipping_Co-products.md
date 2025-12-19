@@ -5,7 +5,7 @@ Shipping Co-products
 
 # Shipping Co-products
 
-Use [Shipping Entry](VMSHPENTWhat.htm)
+Use [Shipping Entry](VMSHPENTWhat.md)
 to ship co-products. Similar to receiving parts into inventory, VISUAL
 handles the shipping process for each part on the work order separately.
 
@@ -40,4 +40,4 @@ the line or No to keep the line open.
 6. Click Save
    to ship the part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

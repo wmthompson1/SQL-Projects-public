@@ -52,4 +52,4 @@ it creates a Service Receipt. This updates Quantity Completed for
 the service operation in the work order, and captures other data as
 well.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

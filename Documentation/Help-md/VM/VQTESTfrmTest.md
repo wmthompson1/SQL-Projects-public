@@ -82,4 +82,4 @@ appear in the Current Count column in the dialog box.
 Click the Save Decision
 Tests button to save the decision tests that you just ran.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.md) User-defined Help

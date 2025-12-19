@@ -366,4 +366,4 @@ the field display is automatically encrypted.
    select the Use SSL Security check box.
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

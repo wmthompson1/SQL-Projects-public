@@ -15,7 +15,7 @@ To edit an existing print settings profile:
 4. Select File,
    Save Print Option.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Saved_Work_Order_Traveller_Print_Settings.htm) Working with Saved Work Order Traveller
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Saved_Work_Order_Traveller_Print_Settings.md) Working with Saved Work Order Traveller
 Print Settings
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

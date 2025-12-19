@@ -5,7 +5,7 @@ Open Accounts Payable Detail
 
 # Open Accounts Payable Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid lists outstanding accounts payable invoices.
 
 Date filter applies to: Invoice Date
@@ -20,10 +20,10 @@ Date, Vendor ID, Vendor Name, Payment Date, Due Date, Last Paid Date,
 Posting Date, Pay Status, Total Amount, Discount Taken, Paid Amount,
 Balance Amount, Currency ID, Type, Site ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

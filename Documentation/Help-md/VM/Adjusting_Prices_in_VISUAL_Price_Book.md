@@ -107,7 +107,7 @@ is updated, and you return to the first screen in the Wizard. To create
 another Price Adjustment, repeat steps 1 through 11. To exit the Price
 Adjustment wizard, click the Cancel button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.md) User-defined Help
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Using
 Price Testing

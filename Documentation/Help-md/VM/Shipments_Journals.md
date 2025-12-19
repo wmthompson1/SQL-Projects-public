@@ -43,4 +43,4 @@ values that transaction at the estimated unit cost based on the work
 order at that time when a partial quantity is moved from WIP to finished
 goods.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

@@ -35,7 +35,7 @@ this quantity is equal to the Calculated Piece Qty field on the Planning
 tab of the Material Card. This is true for piece tracked parts even
 if you use the actual quantity used calculation for the Calculated
 Quantity field. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 Addl Qty This
 field is available only if you are purchasing a non-piece tracked
@@ -92,4 +92,4 @@ purchase order, rather than creating a new one. When finished, Click
 the Save button and use the Clear option
 to ready the Purchase Order Entry screen for any other orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

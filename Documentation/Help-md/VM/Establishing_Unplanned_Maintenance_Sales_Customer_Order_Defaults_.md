@@ -31,4 +31,4 @@ kind of place holder.
 3. Click the Save
    button to commit the default status.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

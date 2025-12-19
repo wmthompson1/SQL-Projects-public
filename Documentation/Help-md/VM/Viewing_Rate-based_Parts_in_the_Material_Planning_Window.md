@@ -33,4 +33,4 @@ less than the daily run rate of the parent rate-based part, then one
 planned supply order is generated for each day of demand.
 
 The ability to generate planned orders depends upon the order policy
-of the part. See [MRP Processing](MRP_Processing.htm).
+of the part. See [MRP Processing](MRP_Processing.md).

@@ -120,4 +120,4 @@ than the actual costs. This occurs if you purchase and manufacture
 those fabricated parts specifically to meet the order, thereby taking
 advantage of second-level price breaks and fixed costs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

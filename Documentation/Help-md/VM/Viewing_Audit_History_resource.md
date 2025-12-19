@@ -12,7 +12,7 @@ to a shop resource in the Audit History dialog.
 A system administrator must grant you permission to view this dialog.
 
 Use Audit Maintenance to set up the audit. See [Audit
-Maintenance](VMAUDMNTfrmAuditConfiguration.htm).
+Maintenance](VMAUDMNTfrmAuditConfiguration.md).
 
 Information is written to this dialog if you are auditing columns
 in these database tables:

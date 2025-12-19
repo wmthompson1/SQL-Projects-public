@@ -19,7 +19,7 @@ orders associated with the sites to which they are assigned. They
 cannot select a work order form a site to which they are not assigned.
 
 You can also [assign employees
-to sites](Assigning_Employees_to_Sites.htm) in Site Maintenance.
+to sites](Assigning_Employees_to_Sites.md) in Site Maintenance.
 
 To assign an employee to a site:
 

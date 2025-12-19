@@ -9,7 +9,7 @@ You can add parts with or without Part IDs to the
 part database. This procedure describes how to add parts to the part
 database using a part ID. To add parts that do not have a part ID,
 see [Adding Parts Without
-IDs](Adding_Parts_Without_Part_ID_s.htm).
+IDs](Adding_Parts_Without_Part_ID_s.md).
 
 If you are licensed to use multiple sites, you can select a site
 and define all part information when you are creating a part. Some
@@ -19,7 +19,7 @@ select the \*\*Tenant\*\* option in the Site ID field to continue specifying
 information for certain fields.
 
 Before you add a part to the database, define units of measure.
-See [Adding Units of Measure](VMUMTMNTfrmUnitOfMeasure.htm).
+See [Adding Units of Measure](VMUMTMNTfrmUnitOfMeasure.md).
 
 1. Select Inventory,
    Part Maintenance.
@@ -59,7 +59,7 @@ Product Code -
 Specify the product code for this part. Use product codes to group
 parts into classes and to specify which General Ledger accounts are
 used in transactions involving the part. See [Adding
-Product Codes](Adding_Product_Codes.htm).
+Product Codes](Adding_Product_Codes.md).
 
 Process Type
 Click the browse button or arrow and select the process type for this
@@ -68,12 +68,12 @@ part.
 Assign a process type to track the performance
 lead time of this part. Performance lead time measures the duration
 of the sales cycle. See [Performance
-Leadtime Processes](What_is_Performance_Leadtime_.htm).
+Leadtime Processes](What_is_Performance_Leadtime_.md).
 
 Commodity Code - Specify a commodity code for
 this part. Use commodity codes to group parts together. You can use
 both product codes and commodity codes to sequence and filter a variety
-of material planning functions and many different reports. See [Adding Commodity Codes](Adding_Commodity_Codes.htm).
+of material planning functions and many different reports. See [Adding Commodity Codes](Adding_Commodity_Codes.md).
 
 Case Qty - Specify the quantity of this part that
 constitutes a case.
@@ -178,7 +178,7 @@ used as estimates when you use the part in the Manufacturing Window.
 For fabricated parts, you can manually specify costs, or you can
 calculate the costs based on the engineering master for the part.
 See [Implode
-Costs from Engineering Master back to the Part](Implode_Costs_from_Engineering_Master_back_to_the_Part.htm).
+Costs from Engineering Master back to the Part](Implode_Costs_from_Engineering_Master_back_to_the_Part.md).
 
 To specify costing information:
 
@@ -253,7 +253,7 @@ this field.
    the information.
 
 See [Calculating
-Standard Unit Hours](Calculating_Standard_Unit_Hours.htm).
+Standard Unit Hours](Calculating_Standard_Unit_Hours.md).
 
 After you implode hours, this information
 is displayed:
@@ -303,12 +303,12 @@ B is added to determine the multi-level run standard hours.
 Unit price Specify the default price per unit.
 The price you specify is used if no customer-specific price, discount-specific
 price, or market-specific price can be identified for the part. See
-[Setting Unit Prices](Setting_Unit_Prices.htm).
+[Setting Unit Prices](Setting_Unit_Prices.md).
 
 Wholesale Unit Price Specify the default wholesale
 unit price. Depending on the settings you use in Customer Maintenance,
 VAT may be calculated based on the wholesale price instead of the
-unit price. See [Adding New Customers](VMCUSMNTfrmCustomer.htm).
+unit price. See [Adding New Customers](VMCUSMNTfrmCustomer.md).
 
 6. In the Price Controls
    section, specify this information:
@@ -316,7 +316,7 @@ unit price. See [Adding New Customers](VMCUSMNTfrmCustomer.htm).
 ABC
 Code - If you use ABC Code analysis in your inventory management
 system, enter the code to use for this part. See [Using
-ABC Analysis](Using_ABC_Analysis.htm).
+ABC Analysis](Using_ABC_Analysis.md).
 
 Customer Price Effectivity Settings - Specify
 the action to take if a customer-specific price cannot be found for
@@ -329,7 +329,7 @@ the shipment of this part if a valid unit price cannot be found in
 the Customer Pricing table for the date of shipment, specify Yes.
 If you select this option, you must specify Shipments or Both in the
 By Order/Ship Date column when you set up customer-specific pricing.
-See [Setting Unit Prices](Setting_Unit_Prices.htm)
+See [Setting Unit Prices](Setting_Unit_Prices.md)
 
 No To use the unit
 price specified on the customer order line if no price exists in the
@@ -346,7 +346,7 @@ Leave the field blank to use the setting
 specified on the Defaults tab in Application Global Maintenance.
 
 To set up customer pricing for this part,
-see [Setting Unit Prices](Setting_Unit_Prices.htm).
+see [Setting Unit Prices](Setting_Unit_Prices.md).
 
 Price Group If you use VISUAL Pricebook and
 want to set up pricing information by price group, specify the group
@@ -506,7 +506,7 @@ part. A rate-based part is a fabricated part that you produce in predictable
 daily quantities. Because the daily run rate is predictable, the quantity
 produced per day is used to determine when supply of the part is anticipated
 to be available to meet demand. See [What
-Are Rate-based Parts?](What_Are_Rate-based_Parts_.htm).
+Are Rate-based Parts?](What_Are_Rate-based_Parts_.md).
 
 4. Click the Save
    button.
@@ -543,7 +543,7 @@ Default Sales Tax Group ID - Specify the default
 tax group to use for this part on Customer Orders. The system will
 use this ID on Customer Orders if no other Tax Groups for this part
 have been defined in the [Sales
-Tax Group by Part ID](Assigning_Sales_Tax_Groups_by_Part_ID.htm) dialog box.
+Tax Group by Part ID](Assigning_Sales_Tax_Groups_by_Part_ID.md) dialog box.
 
 UPC
 - Specify the universal product code (UPC) or European Article Number
@@ -653,7 +653,7 @@ If you are licensed to use piece tracking, the Piece Trk tab is
 displayed. Use this tab to specify whether the part is a dimensional
 part. Dimensional inventory takes into account the shape and size
 of a part, not just the number of units. See [What
-is Dimensional Inventory?](What_is_Dimensional_Inventory_.htm). To specify dimension information:
+is Dimensional Inventory?](What_is_Dimensional_Inventory_.md). To specify dimension information:
 
 1. Click the Piece
    Trk tab.
@@ -975,7 +975,7 @@ the part.
 
 You can also replace a material requirement
 with an alternate part in the [Material
-Planning Window](Replacing_a_Material_Requirement_with_an_Alternate_Part.htm).
+Planning Window](Replacing_a_Material_Requirement_with_an_Alternate_Part.md).
 
 To enter alternate parts:
 
@@ -1006,9 +1006,9 @@ this part is obsolete, select the Obsolete check box.
 
 For more information on obsolete parts,
 see [Classifying Parts
-as Obsolete](Classifying_a_Part_as_Obsolete_.htm).
+as Obsolete](Classifying_a_Part_as_Obsolete_.md).
 
 3. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

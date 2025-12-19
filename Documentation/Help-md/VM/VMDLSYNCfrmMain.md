@@ -18,4 +18,4 @@ directory where your executables are installed.
 | --- | --- |
 | POSTIT.gif | Do not enter any information into the DesignLink database, User ID, Password or Transfer fields. They are for DesignLink use only. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

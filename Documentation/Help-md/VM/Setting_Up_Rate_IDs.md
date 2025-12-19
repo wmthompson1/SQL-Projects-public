@@ -37,4 +37,4 @@ a description for this rate.
 The Maintain Rate ID window closes and VISUAL
 saves the changes to your rate list to your database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.md) User-defined Help

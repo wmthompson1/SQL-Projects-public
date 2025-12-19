@@ -18,7 +18,7 @@ ID change Comments dialog box appears.
    menu.
 
 The [Revision
-ID Change Comments](Prompting_for_Part_Revision_Comments.htm) dialog box appears.
+ID Change Comments](Prompting_for_Part_Revision_Comments.md) dialog box appears.
 
 3. Enter text for the revision
    into the field and click the Ok button.
@@ -29,6 +29,6 @@ ID Change Comments](Prompting_for_Part_Revision_Comments.htm) dialog box appears
 The comments are saved to the Revision ID.
 
 For more information on viewing archived
-comments, click [here](Viewing_Revision_Comment_Histories_.htm).
+comments, click [here](Viewing_Revision_Comment_Histories_.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

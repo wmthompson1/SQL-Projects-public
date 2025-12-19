@@ -43,4 +43,4 @@ the test results of the selected test step, either for the displayed
 operation, displayed part or entire test step, depending on the radio
 button selection.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.md) User-defined Help

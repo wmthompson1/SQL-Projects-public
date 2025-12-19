@@ -6,7 +6,7 @@ Using Dynamic Filtering
 # Using Dynamic Filtering
 
 Use the dynamic filtering option in conjunction with [quick
-filters](Applying_a_Quick_Filter.htm). When you activate the dynamic filtering option, the advanced
+filters](Applying_a_Quick_Filter.md). When you activate the dynamic filtering option, the advanced
 browse table is updated with rows that match your search criteria
 as you type your search criteria in. For example, if you are viewing
 the Customer ID advanced browse table, if you type A then all customer

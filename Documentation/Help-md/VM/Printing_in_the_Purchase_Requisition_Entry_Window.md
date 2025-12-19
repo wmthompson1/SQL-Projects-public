@@ -10,10 +10,10 @@ or reports listing all open requisitions. VISUAL considers all Draft
 requisitions open.
 
 * [Printing
-  Task Information](Printing_Task_Information.htm)
+  Task Information](Printing_Task_Information.md)
 * [Printing
-  Individual Requisitions](Printing_Individual_Requisition_Reports.htm)
+  Individual Requisitions](Printing_Individual_Requisition_Reports.md)
 * [Printing
-  Open Requisition Reports](Printing_Open_Requisition_Reports.htm)
+  Open Requisition Reports](Printing_Open_Requisition_Reports.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

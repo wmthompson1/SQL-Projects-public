@@ -39,7 +39,7 @@ This is the warehouse location from which you want to auto-issue this
 material.
 
 The warehouse location must carry this part.
-Use [Warehouse Maintenance](Adding_a_Part_to_a_Location.htm)
+Use [Warehouse Maintenance](Adding_a_Part_to_a_Location.md)
 to add parts to warehouse locations. Also, only auto-issue locations
 are eligible for selection.
 
@@ -75,7 +75,7 @@ is set to Y, then the calculated quantity is equal to the Calculated
 Piece Qty. If this setting is set to N, then  the calculated
 quantity is equal to the actual quantity used in the work order. See
 [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 Issued Quantity
 - The quantity of the material you have issued thus far to satisfy
@@ -89,7 +89,7 @@ one or multiple sources of supply. Types of supply include (CP) Coproducts,
 Orders, (WH) Interbranch Transfers, and (WO) Work Orders.
 
 Use the Edit menu option [Allocate
-Supply to this Material](Allocating_Supply_to_Work_Order_Material_Requirement_Demand_.htm) to allocate quantities to a work order
+Supply to this Material](Allocating_Supply_to_Work_Order_Material_Requirement_Demand_.md) to allocate quantities to a work order
 material requirement.
 
 Fulfilled Quantity
@@ -119,7 +119,7 @@ of one material piece. The value is rounded up to the next whole number
 and inserted in this field. If you place a purchase order for this
 requirement, the value in this field is inserted in the # Pieces column
 on the purchase order line. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 Calculated Piece Qty
 A value is displayed in this field only if this requirement is a
@@ -127,10 +127,10 @@ piece tracked part. To determine the value in this field, the Calculated
 # of Pcs is multiplied by the size of one material piece. If you place
 a purchase order for this requirement, this value is inserted in the
 Quantity field on the purchase order line. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 3. Click the Save
    button to commit location lead-time information to this material
    requirement.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

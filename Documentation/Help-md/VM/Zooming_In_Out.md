@@ -18,4 +18,4 @@ once from the default display resolution; the window then displays
 approximately six weeks of load and capacity on a standard 640 X 480
 resolution monitor.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

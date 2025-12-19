@@ -24,4 +24,4 @@ If you are licensed to use APS functionality, use
 the APS Import Utility window to import files that from your advanced
 planning and scheduling system into VISUAL.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.md) User-defined Help

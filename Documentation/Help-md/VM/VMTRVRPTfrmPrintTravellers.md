@@ -10,11 +10,11 @@ include multiple sites in the report.
 
 After you select
 print settings, you can save them for future use. See [Working
-with Saved Work Order Traveller Print Settings](Working_with_Saved_Work_Order_Traveller_Print_Settings.htm).
+with Saved Work Order Traveller Print Settings](Working_with_Saved_Work_Order_Traveller_Print_Settings.md).
 
 Use this procedure to print travellers manually. You can also use
 a service to schedule traveller print jobs. See [What
-is the Reporting Service?](VRPTSVCWhat.htm).
+is the Reporting Service?](VRPTSVCWhat.md).
 
 To print travellers/picklists:
 
@@ -427,4 +427,4 @@ printed in bold-faced font. If you are having issues scanning the
 barcode, you can edit the report to print the barcodes in plain font.
 Use a report designer to edit the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

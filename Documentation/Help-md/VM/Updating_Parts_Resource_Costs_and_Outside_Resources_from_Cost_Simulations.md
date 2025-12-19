@@ -51,4 +51,4 @@ Click Ok. The General
 Journal transactions are created. Information about the transactions
 is displayed in a dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

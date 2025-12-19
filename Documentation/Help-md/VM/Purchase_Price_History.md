@@ -38,4 +38,4 @@ are currently editing or creating a Purchase Order, VISUAL prompts
 you to confirm the new or changed information before VISUAL resets
 the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

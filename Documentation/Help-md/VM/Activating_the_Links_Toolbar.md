@@ -22,10 +22,10 @@ To activate the links and the Links toolbar:
    button displayed in the toolbar is shown in place of the VISUAL
    splash screen.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_URL_Links.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_URL_Links.md)
 Adding URL Links
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.md)
 URL Links Toolbar
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

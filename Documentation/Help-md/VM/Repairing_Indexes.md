@@ -25,7 +25,7 @@ If you use Oracle as your database engine,
 then indexes could be created with incorrect names. If an index does
 not have a name, then Oracle then generates a name for the index.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKIDXfrmTestIndexes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCHKIDXfrmTestIndexes.md)
 Analyzing Indexes

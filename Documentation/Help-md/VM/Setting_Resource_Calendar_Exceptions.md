@@ -118,9 +118,9 @@ estimation of resource availability.
    button to save the changes.
 
 Your changes will take effect the next time
-you run the [Concurrent Scheduler](VMGLBSCHWhat.htm).
+you run the [Concurrent Scheduler](VMGLBSCHWhat.md).
 
 10. Click the Close
     button to return to the Shop Resource Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

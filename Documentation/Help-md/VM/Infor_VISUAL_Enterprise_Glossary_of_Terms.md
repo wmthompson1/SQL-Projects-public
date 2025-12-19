@@ -13,7 +13,7 @@ for the same thing. VISUAL Manufacturing standardizes terminology,
 using conventions commonly found in the industry. Where applicable,
 Infor provides terms to simplify complex concepts.
 
-To add your own terms to the glossary, click [here](User_defined_Help_Files_Glossary.htm).
+To add your own terms to the glossary, click [here](User_defined_Help_Files_Glossary.md).
 
 |  |  |
 | --- | --- |
@@ -1096,4 +1096,4 @@ To add your own terms to the glossary, click [here](User_defined_Help_Files_Glos
 | Yield | Use the radio buttons to indicate whether the percentage represents the final yield from the Start Quantity, or the scrap lost from that quantity. |
 | YTD Balance | The cumulative amount currently in the account. System generated up to (15) numbers. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Glossary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Glossary.md) User-defined Help

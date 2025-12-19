@@ -31,10 +31,10 @@ percent for the shipment.
 
 4. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.htm) Deleting Codes in Application Global
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.md) Deleting Codes in Application Global
 Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_HTS_Duty_Percents_by_Country_of_Origin.htm) Entering HTS Duty Percentages by Country
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_HTS_Duty_Percents_by_Country_of_Origin.md) Entering HTS Duty Percentages by Country
 of Origin
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

@@ -6,7 +6,7 @@ Viewing the Supplier Performance Graph
 # Viewing the Supplier Performance Graph
 
 After you specify [performance
-criteria](Setting_Up_Supplier_Performance_Criteria.htm), you can view supplier performance in the graph.
+criteria](Setting_Up_Supplier_Performance_Criteria.md), you can view supplier performance in the graph.
 
 To generate the graph:
 
@@ -68,7 +68,7 @@ is displayed. To calculate the percentage, the received quantity is
 divided by the order quantity and then multiplied by 100.
 
 For information about the common functions and features available
-in grids, see [Grids](Grids.htm).
+in grids, see [Grids](Grids.md).
 
 ## Filtering Information in the Supplier Performance Window
 
@@ -98,5 +98,5 @@ dialog.
 
 To clear the part ID field, click New.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Exporting_Supplier_Performance_Information_to_Microsoft_Excel.htm) Exporting Supplier Performance Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Exporting_Supplier_Performance_Information_to_Microsoft_Excel.md) Exporting Supplier Performance Information
 to Microsoft Excel

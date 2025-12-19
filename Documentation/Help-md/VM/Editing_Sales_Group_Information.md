@@ -25,4 +25,4 @@ Sales Tax Group Maintenance window.
 3. Click the Save
    button to save the changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.md) User-defined Help

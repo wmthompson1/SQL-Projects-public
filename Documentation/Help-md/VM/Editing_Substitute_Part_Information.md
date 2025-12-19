@@ -14,9 +14,9 @@ necessary change.
 
 Take note that you cannot enter new Part IDs in the Substitute Parts
 dialog box. To enter new parts, refer to [Adding
-Parts to the Database](VMPRTMNTfrmPart.htm).
+Parts to the Database](VMPRTMNTfrmPart.md).
 
-Refer to [Editing Part Information](Editing_Part_Information.htm)
+Refer to [Editing Part Information](Editing_Part_Information.md)
 for more on modifying parts in inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

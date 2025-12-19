@@ -26,21 +26,21 @@ VISUAL BTS processes the selected row. The standard VISUAL Purchase
 Receipt Entry window appears instantaneously and then disappears.
 The transaction is now processed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Timer_Options.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Timer_Options.md)
 Setting Timer Options
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Populating_Pending_Transactions_on_the_Timer.htm) Populating Pending Transactions on the
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Populating_Pending_Transactions_on_the_Timer.md) Populating Pending Transactions on the
 Timer
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Timer.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Timer.md)
 Starting the Timer
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Stopping_the_Timer.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Stopping_the_Timer.md)
 Stopping the Timer
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Purchase_Receipt_Reports.htm) Printing BTS Purchase Receipt Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Purchase_Receipt_Reports.md) Printing BTS Purchase Receipt Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Purchase_Receipt_Thermal_Label_and_Receiver_Print_Options.htm) Setting Purchase Receipt Thermal Label
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Purchase_Receipt_Thermal_Label_and_Receiver_Print_Options.md) Setting Purchase Receipt Thermal Label
 and Receiver Print Options
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Processing

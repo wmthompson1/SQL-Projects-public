@@ -8,7 +8,7 @@ Uninstalling Services
 To uninstall an instance of a service for a site:
 
 1. In your VISUAL executables
-   directory, locate the [executable](Services.htm) for
+   directory, locate the [executable](Services.md) for
    the service.
 2. Right-click the executable
    and select Run as Administrator. The

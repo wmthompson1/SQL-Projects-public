@@ -33,4 +33,4 @@ using Centura Report Builder. The following QRP report files apply:
 | By Part ID | VMPURRP3.QRP |
 | By Service ID | VMPURRP6.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

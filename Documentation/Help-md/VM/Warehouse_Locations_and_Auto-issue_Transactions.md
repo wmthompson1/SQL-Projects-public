@@ -21,5 +21,5 @@ this hierarchy is used:
   auto-issue location that is specified on the Defaults tab in Part
   Maintenance is used.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.md)
 Auto-issue Parts

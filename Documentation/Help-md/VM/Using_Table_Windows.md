@@ -192,4 +192,4 @@ inserts a triangle in the column header. Double-click the triangle
 in a column to sort the table by that column. You can double-click
 the triangle again to switch between ascending and descending order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

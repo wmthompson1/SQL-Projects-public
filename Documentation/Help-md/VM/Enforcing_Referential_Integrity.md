@@ -82,12 +82,12 @@ Warehouse ID. Project warehouses must have the same name as the projectif
 the project warehouse does not exist when you save the project master,
 VISUAL prompts you to create one.
 
-For more information on creating project warehouses, refer to [Entering Project Information](VMPRJMNTfrmProject.htm).
+For more information on creating project warehouses, refer to [Entering Project Information](VMPRJMNTfrmProject.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_New_Projects.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_New_Projects.md)
 Creating New Projects
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPRJMNTfrmProject.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPRJMNTfrmProject.md)
 Entering Project Information

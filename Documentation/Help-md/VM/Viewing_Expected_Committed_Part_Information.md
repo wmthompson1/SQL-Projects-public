@@ -96,10 +96,10 @@ order allocated to supply.
 Unallocated Quantity - The quantity of
 the purchase/work order line which you have yet to allocate to supply.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Customer_Orders.htm) Customer Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Customer_Orders.md) Customer Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Interbranch_Transfers.htm) Interbranch Transfers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Interbranch_Transfers.md) Interbranch Transfers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Work_Order_Material_Requirements.htm) Work Order Material Requirements
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information_for_Work_Order_Material_Requirements.md) Work Order Material Requirements

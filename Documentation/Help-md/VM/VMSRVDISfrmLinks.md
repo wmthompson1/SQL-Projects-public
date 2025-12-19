@@ -18,4 +18,4 @@ work orders for your outside service dispatches:
 The Linked Work Orders dialog box appears
 populated with a list of the work orders linked to the part you selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

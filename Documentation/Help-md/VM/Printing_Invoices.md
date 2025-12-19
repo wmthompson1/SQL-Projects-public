@@ -281,15 +281,15 @@ encrypted.
    select the Use SSL Security check box.
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Duplicate_Invoices.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Duplicate_Invoices.md)
 Printing Duplicate Invoices
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Deferred_Revenue_Status_Reports.htm) Printing Deferred Revenue Status Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Deferred_Revenue_Status_Reports.md) Printing Deferred Revenue Status Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Milestone_Status_Reports.htm) Printing Milestone Status Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Milestone_Status_Reports.md) Printing Milestone Status Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Order_Invoice_Status_Reports.htm) Printing Order Invoice Status Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Order_Invoice_Status_Reports.md) Printing Order Invoice Status Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_Progress_Billing.htm) Print Formats
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_Progress_Billing.md) Print Formats

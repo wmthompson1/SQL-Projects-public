@@ -7,7 +7,7 @@ Printing Packlist Thermal Labels
 
 |  |  |
 | --- | --- |
-| IMPORTNT.gif | You must define Label formats in the VISUAL Automated Material Tracking System Barcode Labels/Printer Setup Utility - VMBTSLP. If you are not using VAMTS, disregard this section. If you are using VAMTS LP, click [here](What_is_the_Label_Printer_Setup_Utility_.htm) for more information on defining Label formats using VISUAL Database tables. |
+| IMPORTNT.gif | You must define Label formats in the VISUAL Automated Material Tracking System Barcode Labels/Printer Setup Utility - VMBTSLP. If you are not using VAMTS, disregard this section. If you are using VAMTS LP, click [here](What_is_the_Label_Printer_Setup_Utility_.md) for more information on defining Label formats using VISUAL Database tables. |
 
 If you are using VAMTS, you can print packlist thermal labels for
 barcoding purposes in Shipping Entry.
@@ -40,8 +40,8 @@ The Print Labels dialog box appears
    Ok when
    you are finished setting Packlist Thermal Label Printing information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Available_VISUAL_Database_Tables.htm) Available VISUAL Database Tables
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Available_VISUAL_Database_Tables.md) Available VISUAL Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_Barcode_Printing_Options.htm) Configuring Barcode Printing Options
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_Barcode_Printing_Options.md) Configuring Barcode Printing Options
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

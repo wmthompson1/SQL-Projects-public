@@ -22,7 +22,7 @@ If you want to follow the example, set up the following:
    schedules.
 
 To view the test scenario outputs, [click
-here](Test_Scenario_1.htm).
+here](Test_Scenario_1.md).
 
 ## Step 1:
 

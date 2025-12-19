@@ -46,6 +46,6 @@ with the CEO to discuss:
 * How do we sell
   more such jobs?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](An_Example_of_Common_Sense_Throughput.htm) An Example of Common Sense Throughput
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](An_Example_of_Common_Sense_Throughput.md) An Example of Common Sense Throughput

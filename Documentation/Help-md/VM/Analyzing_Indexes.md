@@ -40,7 +40,7 @@ Indexes The list shows indexes that were not correctly created.
 Total
 Incorrect Indexes The number of incorrect indexes is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repairing_Indexes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repairing_Indexes.md)
 Repairing Indexes

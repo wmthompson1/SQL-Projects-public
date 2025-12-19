@@ -34,7 +34,7 @@ the database on which to run the service.
    the Scheduling Service. You must generate the site's schedules
    manually in the Concurrent Scheduler window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.md)
 What is the Scheduling Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

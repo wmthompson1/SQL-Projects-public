@@ -95,4 +95,4 @@ shipment, and close the order short.
 You can set up a preference to also close
 the operation linked to the outside service when you close the order.
 See [Closing
-a Service Line Short](VMRCVENT_APLfrmReceiving.htm#Closing_a_Service_Line_Short).
+a Service Line Short](VMRCVENT_APLfrmReceiving.md#Closing_a_Service_Line_Short).

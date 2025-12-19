@@ -16,7 +16,7 @@ ID, Split ID, Release Date, Want Date, Quantity, Status, and Forward
 Schedule. However, intelligent defaults are set based on the selected
 demand to meet.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPLNWINWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPLNWINWhat.md)
 What is the Material Planning Window?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

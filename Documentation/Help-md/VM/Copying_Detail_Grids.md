@@ -20,10 +20,10 @@ detail grid. To copy a detail grid:
 6. Click Ok.
    The new detail grid is loaded in the dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Building_Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Building_Detail_Grids.md)
 Building Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

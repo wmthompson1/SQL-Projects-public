@@ -36,4 +36,4 @@ Use the Receiving Report to review purchase receipts.
 If there are scheduled deliveries that do not appear on your actuals
 report, you may want to investigate the discrepancy.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

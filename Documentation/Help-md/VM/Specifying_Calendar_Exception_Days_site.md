@@ -39,4 +39,4 @@ You can modify and add information to the
 Shop Calendar and Exception Days Table at any time. The changes take
 effect the next time you run the Global Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

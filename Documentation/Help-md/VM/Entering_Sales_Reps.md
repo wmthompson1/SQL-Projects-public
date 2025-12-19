@@ -40,7 +40,7 @@ Sales Rep ID - Specify
 the ID for this sales rep. To comply with the European Union GDPR
 rules, we recommend that you do not use personal information, such
 as a name, for the ID. See [What Is Individual
-Privacy?](VMINDPRVWhat.htm).
+Privacy?](VMINDPRVWhat.md).
 
 Name - Specify
 the name of this sales rep.
@@ -131,4 +131,4 @@ account credits.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

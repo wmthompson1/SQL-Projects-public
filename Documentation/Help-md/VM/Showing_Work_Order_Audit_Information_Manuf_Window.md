@@ -31,4 +31,4 @@ The Audit Result Codes dialog box appears.
 The Audit Result Codes dialog box contains
 a list of audit result codes for operations in the current work order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

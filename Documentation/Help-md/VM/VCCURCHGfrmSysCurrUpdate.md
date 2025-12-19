@@ -28,4 +28,4 @@ currency appears in the read-only Current Entity Currency field.
 
 VISUAL performs the update.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.md) User-defined Help

@@ -34,8 +34,8 @@ sources.
 Click the appropriate button to view details
 for each type.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_for_Customer_Orders.htm) Customer Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_for_Customer_Orders.md) Customer Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_for_Work_.htm) Work Order Material Requirements
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_for_Work_.md) Work Order Material Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_.htm) Interbranch Transfers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information_.md) Interbranch Transfers

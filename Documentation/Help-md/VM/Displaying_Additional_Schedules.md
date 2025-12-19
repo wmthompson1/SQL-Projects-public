@@ -51,4 +51,4 @@ both windows to scroll. This keeps the windows in synch by resource
 and by date/time. If this option is not active, then each window scrolls
 independently.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

@@ -106,4 +106,4 @@ If you do not want customer information to appear.
 
 VISUAL prints the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Engineering_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Engineering_Report.md) User-defined Help

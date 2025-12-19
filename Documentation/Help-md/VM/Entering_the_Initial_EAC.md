@@ -20,7 +20,7 @@ You may find it easier to decide on a numbering sequence before
 you start so that the versions make sense to you in the future. For
 more information on setting up a numbering scheme for your EACs, refer
 to [Setting
-Up Automatic Numbering for ETCs and EACs](Setting_Up_Automatic_Numbering_for_ETCs_and_EACs.htm).
+Up Automatic Numbering for ETCs and EACs](Setting_Up_Automatic_Numbering_for_ETCs_and_EACs.md).
 
 To create the first formal EAC:
 

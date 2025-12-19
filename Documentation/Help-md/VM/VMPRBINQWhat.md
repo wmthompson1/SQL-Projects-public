@@ -8,7 +8,7 @@ What is Provisional Rate Billing Inquiry?
 Provisional Billing Rates provide the ability to link a projects
 actual costs and EAC figures to a Provisional set of Burden Rates.
 Specify the provisional rate for the project in the [Contract
-Financial](Step_3_Entering_Contract_Financial_Information.htm) dialog box in Project Maintenance.
+Financial](Step_3_Entering_Contract_Financial_Information.md) dialog box in Project Maintenance.
 
 Because Project based Aerospace and Defense companies contract specific
 billing rates for certain types of contracts (such as cost reimbursable
@@ -38,4 +38,4 @@ years after the company has made its final deliverable. The ability
 to compare different types of rates against each other is called Provisional
 Rate Billing Inquiry.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Provisional_Rate_Billing_Inquiry.md) User-defined Help

@@ -64,6 +64,6 @@ sequencing.
 | By G/L Acct ID | VMCBKRP9.QRP |
 | No Sequence | VMCBKR11.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCBKRPTfrmPrintBookingsReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCBKRPTfrmPrintBookingsReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.md) User-defined Help

@@ -78,9 +78,9 @@ Calendar.
 
 8. Click the Engineering
    tab to designate this master as [eligible
-   for updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.htm) with the Master Updater function. This tab also
+   for updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.md) with the Master Updater function. This tab also
    displays [information
-   about when the master was last updated](Viewing_Update_Information.htm). This tab is available
+   about when the master was last updated](Viewing_Update_Information.md). This tab is available
    on Engineering masters and Legs only.
 9. Click the Save
    button to save the new information.
@@ -101,4 +101,4 @@ leg to the same operation.
 | --- | --- |
 | POSTIT.gif | If you want to quickly add a leg with minimal details, clear the Leg Edit Form option on the Views menu.  When you add a leg, a list of parts appears, select the part you want to use for the leg.  VISUAL creates a leg using the information from the part record.  If you have opened the Leg child window, you can use the Show/Hide Edit Leg Detail Form toolbar button to hide or show the Leg window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

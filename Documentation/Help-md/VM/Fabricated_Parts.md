@@ -34,4 +34,4 @@ Product Code as defined in the Part Maintenance Product Code table,
 or from the default accounts setup in the General Ledger Interface
 table for fabricated parts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

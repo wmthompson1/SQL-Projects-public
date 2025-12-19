@@ -189,4 +189,4 @@ VISUAL prints the report.
 | By Resource | VMSCHRP7.QRP |
 | By Employee | VMSCHRP9.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.md) User-defined Help

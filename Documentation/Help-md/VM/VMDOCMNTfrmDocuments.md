@@ -102,7 +102,7 @@ instead of c:\\documents.pdf.
    field, specify a description for this document.
 5. Click the Document Category drop-down button and
    select the category from the list. See [Setting
-   Up Document Categories](Setting_Up_Document_Categories.htm).
+   Up Document Categories](Setting_Up_Document_Categories.md).
 6. If
    this document is under ECN Revision Control, select the ECN Rev Control check box, which also
    deactivates the Stage and Revision fields. If the document is
@@ -116,7 +116,7 @@ predefined (VISUAL generates numbers based on your preferences) revision
 numbers.
 
 To create stage codes, use [revision
-numbering maintenance](Maintaining_Revision_Numbering.htm).
+numbering maintenance](Maintaining_Revision_Numbering.md).
 
 If the stage code you select has any predefined
 revision numbers assigned to it, VISUAL displays a browse for the
@@ -136,7 +136,7 @@ opens the document in the application in which it was created. If
 you provided a physical document location, the system also opens the
 document in the application in which it was created.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.md)
 What is Document Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

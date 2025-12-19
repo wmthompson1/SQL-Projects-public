@@ -53,4 +53,4 @@ VISUAL creates the number of packlists necessary to fulfill your shipping
 requirements. In the Packlist field, you can see the newly-created
 Packlist IDs appear as VISUAL ships them.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

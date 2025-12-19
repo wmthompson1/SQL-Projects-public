@@ -29,7 +29,7 @@ Total Quantity Required
 The total quantity required. For work order material requirements,
 this value is equal to the Calculated Qty value specified on the Material
 card. See [Specifying
-Planning/Leadtime Information](Specifying_Planning_Leadtime_Information.htm).
+Planning/Leadtime Information](Specifying_Planning_Leadtime_Information.md).
 
 Quantity Issued
 The quantity that has been issued to an order.
@@ -62,7 +62,7 @@ then the order is a work order.
 If there is an asterisk after the work order
 ID, then the work order is for a rate-based part. A rate-based part
 is a fabricated part that you produce in predictable daily quantities.
-See [What Are Rate-based Parts?](What_Are_Rate-based_Parts_.htm).
+See [What Are Rate-based Parts?](What_Are_Rate-based_Parts_.md).
 
 Customer ID For
 customer orders, the ID of the customer who placed the order.
@@ -187,7 +187,7 @@ then the supply is a work order.
 If there is an asterisk after the work order
 ID, then the work order is for a rate-based part. A rate-based part
 is a fabricated part that you produce in predictable daily quantities.
-See [What Are Rate-based Parts?](What_Are_Rate-based_Parts_.htm)
+See [What Are Rate-based Parts?](What_Are_Rate-based_Parts_.md)
 
 Vendor ID The
 ID of the vendor on the purchase order is displayed.
@@ -347,6 +347,6 @@ Severity option available on the View menu.
 | --- | --- |
 | POSTIT.gif | For Project users, if you select a project related Part ID, the WBS Codes relating to the line item appear. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

@@ -13,8 +13,8 @@ part.
 Set up these codes in Part Maintenance:
 
 * [Product
-  codes](Adding_Product_Codes.htm)
+  codes](Adding_Product_Codes.md)
 * [Commodity
-  codes](Adding_Commodity_Codes.htm)
+  codes](Adding_Commodity_Codes.md)
 * [Price
-  groups.](Adding_Price_Groups.htm) Use these codes in conjunction with VISUAL Pricebook.
+  groups.](Adding_Price_Groups.md) Use these codes in conjunction with VISUAL Pricebook.

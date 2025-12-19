@@ -75,19 +75,19 @@ bill of lading.
    button or select Save from the File
    menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Carriers.htm) Entering and Deleting Carriers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Carriers.md) Entering and Deleting Carriers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCUSMNTfrmCustomer.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCUSMNTfrmCustomer.md)
 Adding New Customers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Carriers.htm) Entering and Deleting Carriers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Carriers.md) Entering and Deleting Carriers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_FOB_Codes.htm) Entering and Deleting FOB Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_FOB_Codes.md) Entering and Deleting FOB Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Ship_Via_Codes.htm) Entering and Deleting Ship Via Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Ship_Via_Codes.md) Entering and Deleting Ship Via Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Containers_for_Parts.htm) Creating Containers for Parts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Containers_for_Parts.md) Creating Containers for Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Containers_for_Parts.htm) Creating Containers for Parts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Containers_for_Parts.md) Creating Containers for Parts

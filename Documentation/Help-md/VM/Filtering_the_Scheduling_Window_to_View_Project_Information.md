@@ -5,7 +5,7 @@ Filtering the Scheduling Window to View Project Information
 
 # Filtering the Scheduling Window to View Project Information
 
-In the [Scheduling Window](VMSCHWINfrmSchWin.htm), use
+In the [Scheduling Window](VMSCHWINfrmSchWin.md), use
 the following options available on the Info menu to filter the information
 that the system displays:
 
@@ -36,4 +36,4 @@ this option to view only the currently select project or work order
 in the Scheduling window. If you select a task within the project,
 the system displays only the task and its related work orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

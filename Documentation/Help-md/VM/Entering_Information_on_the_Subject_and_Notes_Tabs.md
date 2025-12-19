@@ -41,4 +41,4 @@ anything that appears in the Comment or Notes tabs.
    comments at any time. Each additional comment you add to the text
    box appears above any previous comments you have entered.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

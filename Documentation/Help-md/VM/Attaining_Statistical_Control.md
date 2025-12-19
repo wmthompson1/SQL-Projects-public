@@ -30,4 +30,4 @@ Limits item of the Edit menu in the Test Input/Analysis window.
 5. Run the decisions tests
    to determine if the process is in statistical control.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

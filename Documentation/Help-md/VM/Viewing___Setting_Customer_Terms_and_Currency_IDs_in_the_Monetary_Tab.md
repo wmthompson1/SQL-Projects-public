@@ -25,4 +25,4 @@ The Terms dialog box appears.
    a currency change, click the arrow and select a Currency ID from
    the list box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

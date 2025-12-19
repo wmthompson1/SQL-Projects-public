@@ -134,7 +134,7 @@ Repair RMA:
 
 Process the repair RMA as you normally would.
 See [Repair
-RMAs](Converting_an_Evaluation_RMA_to_a_Repair_RMA.htm).
+RMAs](Converting_an_Evaluation_RMA_to_a_Repair_RMA.md).
 
 ## Building the Repair Work Order from the Evaluation Quote
 

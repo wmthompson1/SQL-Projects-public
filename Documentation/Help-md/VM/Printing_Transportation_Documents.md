@@ -7,7 +7,7 @@ Printing Transportation Documents
 
 Use transportation documents for the return of purchase
 receipt quantities. This option is only available if you have Shipment
-Tracking enabled. Click [here](Setting_Shipment_Tracking_Information.htm)
+Tracking enabled. Click [here](Setting_Shipment_Tracking_Information.md)
 for more information on enabling Shipment Tracking and setting Ship
 Reason Codes. A Transportation Document is a status report of inventory
 that you can produce on demand which details the location and value
@@ -49,6 +49,6 @@ of the shipment.
 The document appears for you to view before
 printing.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Transportation_Documents.htm) Printing Formats Transportation Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Transportation_Documents.md) Printing Formats Transportation Documents

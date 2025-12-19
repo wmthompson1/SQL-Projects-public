@@ -15,7 +15,7 @@ an error, informing you the customer does not exist.
 
 Only customers youve added to your VISUAL
 database are eligible for selection. For more information on adding
-customers to your database, click [here](VMCUSMNTfrmCustomer.htm).
+customers to your database, click [here](VMCUSMNTfrmCustomer.md).
 
 The customers default shipping address
 appears in the data field to the right.
@@ -44,4 +44,4 @@ changing the type.
 
 5. Move to the [tabbed](javascript:void(0);) sections and begin adding information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

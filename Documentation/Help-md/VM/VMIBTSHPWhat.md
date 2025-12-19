@@ -19,7 +19,7 @@ as Shipping Entry. However, IBT Shipping Entry does not support:
 * Copy Estimated Freight.
 * RMAs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Shipping_Entry.htm) Starting Interbranch Transfer Shipping
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Shipping_Entry.md) Starting Interbranch Transfer Shipping
 Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

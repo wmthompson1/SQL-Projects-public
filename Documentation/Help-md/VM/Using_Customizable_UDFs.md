@@ -160,4 +160,4 @@ The system displays the customizable UDFs
 when you have closed the User Defined Field Maintenance [program name]
 dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

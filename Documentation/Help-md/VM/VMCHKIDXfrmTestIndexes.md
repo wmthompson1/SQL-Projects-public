@@ -34,8 +34,8 @@ This table shows the tasks that you can complete in the Examine
 Indexes window:
 
 | Task | Description |
-| [Analyzing Indexes](Analyzing_Indexes.htm) | Use this procedure to identify inconsistences between the indexes in your database and a master list of indexes. |
-| [Repairing Indexes](Repairing_Indexes.htm) | Use this procedure to attempt to repair incorrect indexes. Ensure that the SYSADM user is the only user signed in to VISUAL when you complete this procedure. |
+| [Analyzing Indexes](Analyzing_Indexes.md) | Use this procedure to identify inconsistences between the indexes in your database and a master list of indexes. |
+| [Repairing Indexes](Repairing_Indexes.md) | Use this procedure to attempt to repair incorrect indexes. Ensure that the SYSADM user is the only user signed in to VISUAL when you complete this procedure. |
 
 ## Fields
 

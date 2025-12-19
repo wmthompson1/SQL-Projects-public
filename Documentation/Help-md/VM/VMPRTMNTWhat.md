@@ -22,4 +22,4 @@ If you are licensed to use multiple sites, some of the part information
 is specified at the tenant level and some of the information is specified
 at the site level.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

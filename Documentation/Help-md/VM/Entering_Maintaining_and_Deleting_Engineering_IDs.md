@@ -46,4 +46,4 @@ button to delete the line.
 7. Click the Close
    button to return to the Planned Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

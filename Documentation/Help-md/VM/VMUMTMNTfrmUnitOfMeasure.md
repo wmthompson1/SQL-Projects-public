@@ -35,6 +35,6 @@ enter a whole integer with two decimal places after it: 2.34.
 
 7. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Unit_of_Measure_Categories.htm) Maintaining Unit of Measure Categories
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Unit_of_Measure_Categories.md) Maintaining Unit of Measure Categories
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.md) User-defined Help

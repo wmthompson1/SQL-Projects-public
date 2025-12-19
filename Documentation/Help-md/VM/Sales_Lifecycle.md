@@ -25,5 +25,5 @@ order is displayed in the lifecycle. If a new customer order is created
 to address an RMA, then the new customer order is also included in
 the lifecycle.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

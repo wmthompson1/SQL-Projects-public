@@ -134,4 +134,4 @@ as the output, a standard Windows dialog box appears.
 
 VISUAL prints the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Valuation_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Valuation_Report.md) User-defined Help

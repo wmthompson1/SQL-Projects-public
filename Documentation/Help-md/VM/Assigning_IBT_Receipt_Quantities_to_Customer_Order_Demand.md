@@ -17,7 +17,7 @@ Assigning IBT Receipt Quantities to Customer Order Demand
 
 By default, the entire Order Quantity appears
 in this column. See [Receiving Interbranch
-Transfer Entries](VMIBTRCVfrmReceiving.htm) for more information.
+Transfer Entries](VMIBTRCVfrmReceiving.md) for more information.
 
 Besides being the receipt quantity, this
 quantity is now what is available to you to assign to demand.
@@ -43,7 +43,7 @@ creation of the IBT from a source of supply using the Assign
 Supply to IBT Line option in the IBT Entry window. For example,
 if you allocated full supply to this IBT from a purchase order, this
 value is equal to the IBT Order Quantity. See [Allocating
-Supply to IBT Lines](Allocating_Supply_to_Interbranch_Transfers.htm) more information.
+Supply to IBT Lines](Allocating_Supply_to_Interbranch_Transfers.md) more information.
 
 Fulfilled Quantity
 - The portion of the quantity that you have allocated to demand successfully
@@ -127,4 +127,4 @@ Quantity of the customer order line.
     button to commit the allocation of supply from the IBT receipt
     quantity to the customer order line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

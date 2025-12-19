@@ -28,4 +28,4 @@ If VISUAL finds the Leg ID, the leg "card"
 appears at the bottom left of the Project window with an arrow pointing
 to it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

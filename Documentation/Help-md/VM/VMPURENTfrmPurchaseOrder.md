@@ -91,7 +91,7 @@ determine the pricing. To use the price breaks offered to each site
 on the individual lines, clear this check box.
 
 See [Consolidated
-Purchasing](Consolidated_Purchasing.htm).
+Purchasing](Consolidated_Purchasing.md).
 
 FOB
 - If necessary, override Free On Board information by selecting
@@ -106,7 +106,7 @@ Buyer
 appropriate Buyer information from the drop down box. You must select
 an eligible buyer. You cannot specify a buyer who is excluded from
 using the vendor in this field. See [Excluded
-Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.htm).
+Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.md).
 
 ShipTo
 ID The ShipTo ID of the address to which the vendor will
@@ -122,7 +122,7 @@ orders to purchase materials from other sites in your enterprise.
 If you are licensed to use multiple sites, you must place internal
 orders to acquire materials from sites that have a different parent
 entity than the site selected in the Site ID field. See [Buying and Selling Between
-Accounting Entities](Buying_and_Selling_between_Accounting_Entities.htm).
+Accounting Entities](Buying_and_Selling_between_Accounting_Entities.md).
 
 Internal Customer ID
 If you selected the Internal Order check box, specify the ID of
@@ -131,12 +131,12 @@ the internal customer.
 Use Cust VAT/Tax
 This check box is used in transactions between accounting entities.
 See [Buying
-and Selling Between Accounting Entities](Buying_and_Selling_between_Accounting_Entities.htm).
+and Selling Between Accounting Entities](Buying_and_Selling_between_Accounting_Entities.md).
 
 SO Tax Shipto ID
   This field is used in transactions between accounting entities.
 See [Buying
-and Selling Between Accounting Entities](Buying_and_Selling_between_Accounting_Entities.htm).
+and Selling Between Accounting Entities](Buying_and_Selling_between_Accounting_Entities.md).
 
 13. If
     necessary, change the Ship To address.
@@ -414,7 +414,7 @@ and assigns it a line number.
    the header.
 
 See [Consolidated
-Purchasing](Consolidated_Purchasing.htm).
+Purchasing](Consolidated_Purchasing.md).
 
 3. Enter
    the number of parts you are ordering in the Quantity column.
@@ -668,7 +668,7 @@ the VAT Rcv %.
 17. Click
     Save to save your purchase
     order and line items. The User ID of the User who entered each
-    line is displayed in the Entered By column of the table. See **[Configuring Line Item Tables](Configuring_Line_Item_Tables.htm)**
+    line is displayed in the Entered By column of the table. See **[Configuring Line Item Tables](Configuring_Line_Item_Tables.md)**
     for more information on how to customize columns within a table.
 
 If you have not specified a status of Firmed,
@@ -680,14 +680,14 @@ the quantity you entered in the Dispatch Quantity column appears in
 the Total Quantity Dispatched column. You can now view this dispatch
 in the Service Dispatch Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.htm) Changing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.md) Changing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.htm) Editing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.md) Editing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.md)
 Changing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.md)
 Editing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

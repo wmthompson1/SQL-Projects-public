@@ -17,13 +17,13 @@ of measurements is taken in production order. If the measurements
 are not in production order then the results from the statistical
 tests are NOT valid.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Definitions_and_Basic_Concepts.htm) Definitions and Basic Concepts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Definitions_and_Basic_Concepts.md) Definitions and Basic Concepts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Infor_VISUAL_Quality_Process.htm) The Quality Process
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Infor_VISUAL_Quality_Process.md) The Quality Process
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Quality_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Quality_Maintenance.md)
 Using Quality Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Quality_Maintenance.htm) Starting Quality Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Quality_Maintenance.md) Starting Quality Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

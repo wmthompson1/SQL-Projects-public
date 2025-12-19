@@ -8,7 +8,7 @@ Backdating Inventory Transactions
 You can backdate inventory transactions. When you backdate a transaction
 that causes materials to be removed from your inventory, your ability
 to complete the transaction depends upon the [Prevent
-Negative Backdating setting specified for the site in Site Maintenance](Specifying_Information_on_the_General_Tab_site.htm).
+Negative Backdating setting specified for the site in Site Maintenance](Specifying_Information_on_the_General_Tab_site.md).
 
 If the check box is selected, then the quantity you had on hand
 on each date from the date of the transaction to the current date

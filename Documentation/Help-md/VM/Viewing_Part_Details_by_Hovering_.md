@@ -17,4 +17,4 @@ rely on the Order Management Windows unique part information pop-ups.
 To view pop-ups, place your mouse pointer, or hover, over the Part
 ID field.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

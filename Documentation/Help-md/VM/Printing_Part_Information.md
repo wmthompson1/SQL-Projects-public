@@ -97,8 +97,8 @@ is attached.
 
 10. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Part_Maintenance.htm) Printing Formats
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Part_Maintenance.md) Printing Formats
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Thermal_Labels_for_Parts_Auto.htm) Printing Thermal Labels
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Thermal_Labels_for_Parts_Auto.md) Printing Thermal Labels
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

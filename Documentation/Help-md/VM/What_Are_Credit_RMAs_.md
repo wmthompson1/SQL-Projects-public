@@ -13,10 +13,10 @@ customer order.
 Use these procedures to create and process Credit RMAs:
 
 * [Creating
-  Credit RMAs](Creating_Credit_RMAs.htm)
+  Credit RMAs](Creating_Credit_RMAs.md)
 * [Closing
-  or Canceling Incomplete Credit RMAs](Closing_or_Canceling_Incomplete_Credit_RMAs.htm)
+  or Canceling Incomplete Credit RMAs](Closing_or_Canceling_Incomplete_Credit_RMAs.md)
 * [Costing
-  Credit RMAs](Costing_Credit_RMAs.htm)
+  Credit RMAs](Costing_Credit_RMAs.md)
 * [Converting
-  Credit RMAs](Converting_Credit_RMAs.htm)
+  Credit RMAs](Converting_Credit_RMAs.md)

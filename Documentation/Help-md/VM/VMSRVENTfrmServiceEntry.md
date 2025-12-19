@@ -98,4 +98,4 @@ operation.
   can view and edit this transaction (see below). The Costing utilities
   use these transactions in computing actual work order costs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.md) User-defined Help

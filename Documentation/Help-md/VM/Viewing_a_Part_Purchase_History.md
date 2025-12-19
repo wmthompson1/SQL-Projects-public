@@ -21,9 +21,9 @@ The table is populated with one line for each existing purchase
 order line that is for the specified Part ID. This includes all firmed,
 released, closed, and canceled purchase orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Shipping_Performance.htm) Viewing Shipping Performance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Shipping_Performance.md) Viewing Shipping Performance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchase_Price_History.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchase_Price_History.md)
 Purchase Price History

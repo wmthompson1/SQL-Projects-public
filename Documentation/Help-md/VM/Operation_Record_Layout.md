@@ -67,4 +67,4 @@ the right of the decimal point.
 | 45 | Burden Percent Run | Number String (3.3) | Y | The burden rate for running up the operation. |
 | 46 | Operation Type | String (15) | N | The operation type. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

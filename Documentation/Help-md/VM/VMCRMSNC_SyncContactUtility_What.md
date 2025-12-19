@@ -39,14 +39,14 @@ and higher and Infor VISUAL CRM 7.12.00054 and higher. Consult with
 your VISUAL ICS staff for recommendations on updating VISUAL and VISUAL
 CRM.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmContactSnc.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmContactSnc.md)
 Adding Missing Contacts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.md)
 Navigating in the Synchronize Contact Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_CustomerAccountTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_CustomerAccountTableSort.md)
 Sorting the Contact table in the Synchronize Contact Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_LinkingExistingContacts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_LinkingExistingContacts.md)
 Linking Existing Contacts

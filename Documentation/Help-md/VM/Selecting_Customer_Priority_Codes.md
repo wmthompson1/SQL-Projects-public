@@ -32,4 +32,4 @@ stock; if the customer fill rate is 70, VISUAL allows the customer
 access to 70% of available stock. VISUAL uses this rate when it figures
 Quantity Available to Customer in the VISUAL Order Management Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

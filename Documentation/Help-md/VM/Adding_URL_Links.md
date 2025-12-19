@@ -25,14 +25,14 @@ Bitmap Select
 the icon to display on the toolbar for this link. The toolbar buttons
 for the URL links must follow the same rules as the toolbar buttons
 for personal toolbars. See [Setting
-Up Toolbar Bitmaps](Setting_Up_Toolbar_Bitmaps.htm).
+Up Toolbar Bitmaps](Setting_Up_Toolbar_Bitmaps.md).
 
 Tool Tip Specify
 the text to display when you place your cursor over the toolbar button.
 
 4. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.md)
 URL Links Toolbar
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

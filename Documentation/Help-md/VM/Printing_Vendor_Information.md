@@ -141,4 +141,4 @@ Centura Report Builder. The following QRP report files apply:
 |  | User-Defined 2 | VMVLBUD2.QRP |
 |  | User-Defined 3 | VMVLBUD3.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

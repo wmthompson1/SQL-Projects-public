@@ -12,7 +12,7 @@ Adding New Customers
 2. Enter the new Customer ID. To comply with the European Union
    GDPR rules, we recommend that you do not use personal information,
    such as a name, for the ID. See [What
-   Is Individual Privacy?](VMINDPRVWhat.htm).
+   Is Individual Privacy?](VMINDPRVWhat.md).
 
 2. Enter the customers address
    information in the Sold to address fields.
@@ -43,7 +43,7 @@ push button that lets you browse on the available codes. If you are
 unsure of which one to use, press the Discount
 Code button and select a code from the Discount Code table.
 If you do not see the appropriate discount code, see [Entering
-Discount Codes](Entering_Discount_Codes.htm).
+Discount Codes](Entering_Discount_Codes.md).
 
 Label
 ID - Click the Label ID browse button to select a Label ID
@@ -57,7 +57,7 @@ Sales Rep ID - Specify the salesperson code for
 this customer. This is the salesperson that services this customer.
 Enter the Sales Rep ID or click the Sales Rep ID
 button and select it from the Sales Reps Table. To add sales reps,
-see [Entering Sales Reps](Entering_Sales_Reps.htm).
+see [Entering Sales Reps](Entering_Sales_Reps.md).
 
 Territory - Specifythe sales territory in which
 the customer is located. You can also select from the drop down box.
@@ -99,7 +99,7 @@ two sites in different accounting entities.
    can also associate contacts with
    the
    customer and change the primary contact. See [Entering
-   Information on the Customers Tab](VMCONMNTfrmContact.htm) for more information.
+   Information on the Customers Tab](VMCONMNTfrmContact.md) for more information.
    You
    can also assign contacts to customers in the Contact Maintenance
    window.
@@ -326,7 +326,7 @@ due invoice.
 
 For more information on choosing a default
 setting in Application Global Maintenance, refer to [Setting
-Order Management Global Values](Setting_Order_Management_Global_Values.htm).
+Order Management Global Values](Setting_Order_Management_Global_Values.md).
 
 Credit
 Threshold In the Credit Threshold box, specify credit ratings
@@ -406,7 +406,7 @@ in the Terms field and default terms have not been defined in Application
 Global Maintenance, then the terms ID that is specified in the Due
 on Receipt ID field in Application Global Maintenance is inserted.
 If the Due on Receipt ID field is blank, then the first ID in the
-database that meets the criteria for due on receipt is used. See [Adding Terms](Entering_Information_in_Terms_Maintenance.htm).
+database that meets the criteria for due on receipt is used. See [Adding Terms](Entering_Information_in_Terms_Maintenance.md).
 
 Currency
 ID - A unique abbreviation code used to describe the currency
@@ -571,11 +571,11 @@ customer.
 
 Customer Type - Click the browse button
 and select the type of customer. See [Entering
-Customer Types](Entering_Customer_Types.htm).
+Customer Types](Entering_Customer_Types.md).
 
 Priority Code - Click the browse button and select
 a priority assignment for this customer. See [Entering
-Customer Priority Codes](Entering_Customer_Priority_Codes.htm).
+Customer Priority Codes](Entering_Customer_Priority_Codes.md).
 
 Order Fill Rate - Click in the Order Fill Rate
 field and enter an fill rate for this customer's orders.
@@ -647,7 +647,7 @@ Forms to send the e-mails.
 
 You can specify the customer contacts who
 receive e-mailed invoices in the Email Documents dialog. See [Maintaining
-Customer E-mail Document Lists](Maintaining_Customer_E-mail_Document_Lists.htm).
+Customer E-mail Document Lists](Maintaining_Customer_E-mail_Document_Lists.md).
 
 Clear this check box to print invoices to
 mail to the customer.
@@ -655,11 +655,11 @@ mail to the customer.
 16. For
     more information on E-Commerce, refer to Setting General Customer
     [E-Commerce
-    Preferences](Setting_General_Customer_E_Commerce_Preferences_.htm).
+    Preferences](Setting_General_Customer_E_Commerce_Preferences_.md).
 
 17. For
     more information on specifying Language forms, refer to [Specifying
-    Customer Language Forms](Specifying_Customer_Language_Forms.htm).
+    Customer Language Forms](Specifying_Customer_Language_Forms.md).
 18. You can enter the following
     information in the Shipping tab:
 
@@ -683,12 +683,12 @@ Add ship via codes in Application Global Maintenance.
 Ship Charge Acct If you have specified the customer
 account to charge when shipments are sent by the selected ship via
 method, the account ID is displayed. See [Adding
-Customer Shipment Accounts](Adding_Customer_Shipment_Accounts_vmcusmnt.htm).
+Customer Shipment Accounts](Adding_Customer_Shipment_Accounts_vmcusmnt.md).
 
 Customer Accepts Partial Shipments - If the customer
 accepts partial shipments, select the Accepts Partial Shipments check
 box. If the customer only accepts full shipments, clear this check
-box. If you use [consolidated sales](Consolidated_Sales.htm),
+box. If you use [consolidated sales](Consolidated_Sales.md),
 ensure that you select this check box.
 
 Accepts
@@ -708,7 +708,7 @@ Match Invoice ID to Packlist ID - To use the same
 ID for both the packlist and A/R invoice, select this check box. If
 you select this check box, you must print Before Shipment packlists
 to match the packlist ID and invoice ID. See [Matching
-Invoice IDs to Packlist IDs](Matching_Invoice_IDs_to_Packlist_IDs.htm).
+Invoice IDs to Packlist IDs](Matching_Invoice_IDs_to_Packlist_IDs.md).
 
 If you do not want to use the same ID for
 the packlist and the invoice, clear this check box.
@@ -734,14 +734,14 @@ by bill of lading, select the Print by Bill of Lading option button.
 
 For more
 information on specifying 3PL customers, refer to [Specifying
-3PL Customers](Specifying_3PL_Customers.htm).
+3PL Customers](Specifying_3PL_Customers.md).
 
 20. Click on the Specs tab
     and enter your comments about this customer.
 21. Click Save
     to save the new Customer information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCUSMNTfrmPartPricing.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCUSMNTfrmPartPricing.md)
 Setting Customer Part Pricing

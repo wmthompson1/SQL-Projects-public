@@ -31,4 +31,4 @@ settings.
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User-defined
 Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Shipment_Transaction_Reports.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Shipment_Transaction_Reports.md)

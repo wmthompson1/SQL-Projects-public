@@ -43,4 +43,4 @@ To update an engineering master from the leg of another master:
    Click No if you do not want to update
    legs that use the engineering master.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

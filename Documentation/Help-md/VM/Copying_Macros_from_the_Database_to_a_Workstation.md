@@ -15,7 +15,7 @@ no longer used.
 Before you begin this procedure, make sure that the Store Macros
 in Database check box on the Defaults tab in Application Global Maintenance
 is cleared. See [Setting
-Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.htm).
+Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.md).
 
 When macros are saved to the database, they are saved by user ID.
 When you copy macros from the database to the workstation, only the

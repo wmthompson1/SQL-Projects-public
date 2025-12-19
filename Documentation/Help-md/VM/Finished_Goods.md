@@ -43,4 +43,4 @@ headers, indicating the lines to be corrected.
    are selected for change, click the Post
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.md) User-defined Help

@@ -33,21 +33,21 @@ you must post the journals manually using the Post Manufacturing Journals
 window. The Costing Service does not post manufacturing journals.
 
 If you set up the Costing Service, you can still [run
-costing utilities manually](VMAPLUTLfrmApplUtilities.htm).
+costing utilities manually](VMAPLUTLfrmApplUtilities.md).
 
 See these topics:
 
 * [Preparing
-  Manufacturing Journals Using the Service](Preparing_Manufacturing_Journals_Using_the_Service.htm)
+  Manufacturing Journals Using the Service](Preparing_Manufacturing_Journals_Using_the_Service.md)
 * [Installing
-  the Costing Service](VMCSTSVCfrmMain.htm)
+  the Costing Service](VMCSTSVCfrmMain.md)
 * [Scheduling
-  the Costing Service](Scheduling_the_Costing_Service.htm)
+  the Costing Service](Scheduling_the_Costing_Service.md)
 * [Deactivating
-  the Costing Service Schedule for a Site](Deactivating_the_Costing_Service_Schedule_for_a_Site.htm)
+  the Costing Service Schedule for a Site](Deactivating_the_Costing_Service_Schedule_for_a_Site.md)
 * [Deleting
-  the Costing Service Schedule for a Site](Deleting_the_Costing_Service_Schedule_for_a_Site.htm)
+  the Costing Service Schedule for a Site](Deleting_the_Costing_Service_Schedule_for_a_Site.md)
 * [Removing
-  the Costing Service](Removing_the_Costing_Service.htm)
+  the Costing Service](Removing_the_Costing_Service.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

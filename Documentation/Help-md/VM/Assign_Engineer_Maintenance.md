@@ -34,22 +34,22 @@ columns Type, Model, and Assigned appear in the line item table.
 4. Enter information in
    the following fields:
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Fault_Types.htm) Fault Types
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Fault_Types.md) Fault Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Fault_Codes.htm) Fault Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Fault_Codes.md) Fault Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Remedy_Types.htm) Remedy Types
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Remedy_Types.md) Remedy Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Remedy_Codes.htm) Remedy Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Remedy_Codes.md) Remedy Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Urgency_Codes.htm) Urgency Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Urgency_Codes.md) Urgency Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Escalation_Codes.htm) Escalation Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Maintaining_and_Deleting_Escalation_Codes.md) Escalation Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assign_Engineer_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assign_Engineer_Maintenance.md)
 Assign Engineer Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Standard_Repair_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Standard_Repair_Maintenance.md)
 Standard Repair Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

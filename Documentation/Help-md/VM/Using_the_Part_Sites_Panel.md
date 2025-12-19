@@ -14,7 +14,7 @@ To view all sites, click the Show All Sites button.
 
 When you view all sites, you can add the selected part to sites.
 See  [Adding a Part
-to Multiple Sites](Adding_Parts_to_Sites.htm#Multiple).
+to Multiple Sites](Adding_Parts_to_Sites.md#Multiple).
 
 By default, the dialog box shows this information by site:
 
@@ -27,4 +27,4 @@ By default, the dialog box shows this information by site:
 
 You can configure the dialog box to show additional information.
 Click Configure Table to add or remove columns.
-See [Configuring Tables](Moving_and_Resizing_Table_Columns.htm).
+See [Configuring Tables](Moving_and_Resizing_Table_Columns.md).

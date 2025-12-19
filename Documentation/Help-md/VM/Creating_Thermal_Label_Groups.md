@@ -33,7 +33,7 @@ and select a label to include in this group.
 Label Printer
 - VISUAL auto-fills this field with the Label IDs default thermal
 printer. See [Creating
-Individual Thermal Labels](Creating_Individual_Thermal_Labels.htm) for more information on establishing
+Individual Thermal Labels](Creating_Individual_Thermal_Labels.md) for more information on establishing
 thermal label printer defaults.
 
 Copies - VISUAL

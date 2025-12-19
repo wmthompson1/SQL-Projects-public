@@ -35,4 +35,4 @@ If VISUAL accepts the license you
 provided, you return to the main menu. If VISUAL rejects the license
 number you provided, a warning message appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help

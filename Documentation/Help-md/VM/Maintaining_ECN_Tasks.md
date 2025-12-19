@@ -11,6 +11,6 @@ members of an ECN, must appropriately change the statuses of those
 tasks. Use the ECN Task Maintenance window to manage and maintain
 your ECN tasks.
 
-See [What is Task Maintenance](VMTSKMNTWhat.htm).
+See [What is Task Maintenance](VMTSKMNTWhat.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

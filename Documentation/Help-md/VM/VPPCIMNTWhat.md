@@ -27,7 +27,7 @@ used in VISUAL may not be displayed or stored properly in the MPC
 database. For best results, use single-byte characters for configured
 parts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Product_Configurator_Interface_Maintenance.htm) Starting Product Configurator Interface
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Product_Configurator_Interface_Maintenance.md) Starting Product Configurator Interface
 Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.md) User-defined Help

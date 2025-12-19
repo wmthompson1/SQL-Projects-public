@@ -101,13 +101,13 @@ If you choose not to reopen the order, the
 order header status remains Closed. If the status of the line was
 Inherit, it remains Inherit.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Returned_Shipments.htm) Receiving Returned Shipments from Customers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Returned_Shipments.md) Receiving Returned Shipments from Customers
 with RMA Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Supply_from_Returned_Shipments_with_Demand_Links.htm) Assigning Supply from Returned Shipments
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Supply_from_Returned_Shipments_with_Demand_Links.md) Assigning Supply from Returned Shipments
 with Demand Links
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Supply_from_Returned_Shipments_with_Delivery_Schedule_Lines.htm) Assigning Supply from Returned Shipments
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Supply_from_Returned_Shipments_with_Delivery_Schedule_Lines.md) Assigning Supply from Returned Shipments
 with Delivery Schedule Lines
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

@@ -88,14 +88,14 @@ information by day, select this option.
     the graph. The Utilization
     Inquiry Detail dialog appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Utilization_Inquiry_Graph_Details.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Utilization_Inquiry_Graph_Details.md)
 Viewing Utilization Inquiry Detail Dialog
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Utilization_Inquiry_Graphs_Tabularly.htm) Viewing Utilization Inquiry Graphs Tabularly
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Utilization_Inquiry_Graphs_Tabularly.md) Viewing Utilization Inquiry Graphs Tabularly
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_&_Interpreting_Utilization_Inquiry_Delta_Graph_Information.htm) Viewing and Interpreting Utilization
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_&_Interpreting_Utilization_Inquiry_Delta_Graph_Information.md) Viewing and Interpreting Utilization
 Delta Graph Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Utilization_Inquiry_Reports.htm) Printing Utilization Inquiry Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Utilization_Inquiry_Reports.md) Printing Utilization Inquiry Reports

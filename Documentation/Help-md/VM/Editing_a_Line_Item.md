@@ -16,4 +16,4 @@ A check mark appears in the row header.
 3. Click select Save
    to update the quotation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

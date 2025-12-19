@@ -7,7 +7,7 @@ Scheduling Work Orders
 
 The following section covers how work order schedule
 checks and actual scheduling are performed. For more information about
-scheduling, see [What is Scheduling?](What_is_Scheduling_.htm).
+scheduling, see [What is Scheduling?](What_is_Scheduling_.md).
 
 ## Checking Schedule Availability
 
@@ -141,4 +141,4 @@ If you answer NO to remove results, you
 can remove them later by using the Purge Availability Checks option
 in the Global Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

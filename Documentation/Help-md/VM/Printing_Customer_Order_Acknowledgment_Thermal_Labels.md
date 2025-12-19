@@ -15,7 +15,7 @@ and exclusive Label Type for customer orders is ORDERING.
 
 Before you try to print any thermal labels for a customer order
 or acknowledgment, design the appropriate thermal labels using the
-[Label Printer Setup Utility](VMBTSLPfrmLabelSetup.htm).
+[Label Printer Setup Utility](VMBTSLPfrmLabelSetup.md).
 
 1. From the File menu,
    select Print Acknowledgment.
@@ -89,7 +89,7 @@ This setting is especially useful for container
 labels that are part of a label group. When selected, VISUAL automatically
 creates the appropriate number of carton labels for the shipment.
 Make this setting a default using the [Label
-Printer Setup Utility](VMBTSLPfrmLabelSetup.htm)
+Printer Setup Utility](VMBTSLPfrmLabelSetup.md)
 
 Label Printer
 If appropriate, adjust the label printer you want to use to print
@@ -101,4 +101,4 @@ these labels.
 Based on your starting and ending preference,
 VISUAL prints a range of thermal labels for the specified acknowledgments.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

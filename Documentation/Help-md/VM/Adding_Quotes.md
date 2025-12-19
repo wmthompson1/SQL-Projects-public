@@ -31,4 +31,4 @@ ordered costs more than the minimum charge allowed, the actual cost
 is charged. If the service ordered cost is less than the minimum charge,
 the minimum charge is charged.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

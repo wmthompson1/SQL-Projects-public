@@ -43,7 +43,7 @@ your own planning size. If you are licensed to use the Advanced mode
 of the Material Planning window and you have set up a planning calendar,
 select this check box to use the currently active calendar to determine
 the size of the planning periods. See [Creating
-a Planning Calendar](Creating_a_Planning_Calendar.htm).
+a Planning Calendar](Creating_a_Planning_Calendar.md).
 
 Planning size
 If you did not select the Use active calendar check box, specify

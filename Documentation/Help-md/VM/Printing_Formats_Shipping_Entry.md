@@ -34,4 +34,4 @@ User Defined 2 VMSLBUD2.QRP
 
 User Defined 3 VMSLBUD3.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

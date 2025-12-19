@@ -28,4 +28,4 @@ the receipt has been removed from the database.
 If you click the Save
 button at this point, VISUAL recreates the transaction you just deleted.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.md) User-defined Help

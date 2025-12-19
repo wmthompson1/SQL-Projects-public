@@ -24,7 +24,7 @@ material requirement card to validate the number. You can save more
 or fewer reference designators than expected.
 
 For more information about reference designators, see [Specifying
-Reference Designators](Specifying_Reference_Designators.htm).
+Reference Designators](Specifying_Reference_Designators.md).
 
 This table shows the layout of the row in the file. It shows the
 data that is expected in each token, the length and type of the data,
@@ -43,4 +43,4 @@ and whether you are required to include the data in your import file.
 | 7 | Y Coordinate | String(15) | N | The y-coordinate of the designator. |
 | 8 | Description | String(30) | N | A description of the designator. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

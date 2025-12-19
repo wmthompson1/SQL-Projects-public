@@ -36,13 +36,13 @@ To use the service to load existing data:
    data types, the service updates the reporting tables when it is
    next scheduled to be run.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.md)
 Reporting Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manually_Loading_Existing_Data_into_the_Reporting_Database_Tables.htm) Manually Loading Existing Data into
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Manually_Loading_Existing_Data_into_the_Reporting_Database_Tables.md) Manually Loading Existing Data into
 the Reporting Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

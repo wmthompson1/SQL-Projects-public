@@ -95,4 +95,4 @@ appears in the Project Summary window.
 The appropriate information appears in the
 Project Summary window for the Summary Type you selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

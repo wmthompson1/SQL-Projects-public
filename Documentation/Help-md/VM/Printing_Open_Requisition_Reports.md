@@ -77,4 +77,4 @@ and sending the e-mail, refer to your Microsoft Outlook user documentation.
 If you are sending a PDF, VISUAL starts the distiller, converts the
 document to PDF, and attaches it to the e-mail.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

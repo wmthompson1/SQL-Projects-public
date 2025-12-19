@@ -73,6 +73,6 @@ Order ID, Customer ID, Customer Name, Part ID and Work Order ID.
 | By Part ID | VMSDSRP5.QRP |
 | By Work Order ID | VMSDSRP6.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Delivery_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Delivery_Report.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSDSRPTfrmPrintShippingDeliveryReport.htm) Printing Shipping/Delivery Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSDSRPTfrmPrintShippingDeliveryReport.md) Printing Shipping/Delivery Reports

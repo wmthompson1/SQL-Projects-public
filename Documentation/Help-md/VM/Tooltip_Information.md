@@ -14,4 +14,4 @@ is determinant. For project tasks, the system also displays the associated
 WBS code. If a work order is attached to a project task, the system
 displays the linked project task.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

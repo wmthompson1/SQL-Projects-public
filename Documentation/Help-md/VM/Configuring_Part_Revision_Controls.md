@@ -7,7 +7,7 @@ Configuring Part Revision Controls
 
 |  |  |
 | --- | --- |
-| IMPORTNT.gif | Before assigning Rev IDs to parts, take time to establish a [revision-numbering scheme](Maintaining_Revision_Numbering.htm). |
+| IMPORTNT.gif | Before assigning Rev IDs to parts, take time to establish a [revision-numbering scheme](Maintaining_Revision_Numbering.md). |
 
 Whether you use the Infor VISUAL ECN module or a manual
 revision scheme to control part revisions, use the Part Maintenance
@@ -23,12 +23,12 @@ window to establish part master revision preferences.
 
 If you previously generated revision numbers
 using [Revision Numbering
-Maintenance](Maintaining_Revision_Numbering.htm), you may want to select a stage first, which allows
+Maintenance](Maintaining_Revision_Numbering.md), you may want to select a stage first, which allows
 you to choose a Revision ID associated with the stage.
 
 4. From the Stage list
    box, select a Stage for the revision. Stages are predefined in
-   [Revision Numbering](Maintaining_Revision_Numbering.htm)
+   [Revision Numbering](Maintaining_Revision_Numbering.md)
    Maintenance and apply to the various levels of part production
    and subsequent maintenance revision.
 
@@ -54,12 +54,12 @@ fields.
 
 |  |  |
 | --- | --- |
-| IMPORTNT.gif | The Obsolete check box only applies to parts you want to inactivate and lock in inventory. Click [here](Classifying_a_Part_as_Obsolete_.htm) for more information. |
+| IMPORTNT.gif | The Obsolete check box only applies to parts you want to inactivate and lock in inventory. Click [here](Classifying_a_Part_as_Obsolete_.md) for more information. |
 
 9. Click the Save
    button to save the revision.
 10. If the [Prompt
-    for Revision Comments](Prompting_for_Part_Revision_Comments.htm) preference is set to yes, a [comment
-    dialog box](Adding_Revision_Comments.htm) appears.
+    for Revision Comments](Prompting_for_Part_Revision_Comments.md) preference is set to yes, a [comment
+    dialog box](Adding_Revision_Comments.md) appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

@@ -55,4 +55,4 @@ Supply Mode - The mode of supply.
 User ID - The ID of the user who entered
 the order and committed the allocations.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

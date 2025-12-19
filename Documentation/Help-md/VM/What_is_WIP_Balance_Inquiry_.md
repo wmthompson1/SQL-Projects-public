@@ -12,4 +12,4 @@ this report to reconcile your WIP balances after closing a period.
 You can use the inquiry window to print a WIP Balance report or view
 the information in a table within the inquiry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_WIP_Balance_Reports.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_WIP_Balance_Reports.md) User-defined Help

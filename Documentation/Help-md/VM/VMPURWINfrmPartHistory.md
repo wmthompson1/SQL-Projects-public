@@ -45,4 +45,4 @@ as a graph by clicking the Graph button.
 To return back to the table view, click the Table
 button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

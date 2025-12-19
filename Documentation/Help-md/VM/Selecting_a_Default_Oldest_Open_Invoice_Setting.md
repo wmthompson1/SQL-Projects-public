@@ -21,4 +21,4 @@ Determined by Due Date If you select
 this option, the system uses the date by which the full amount of
 the invoice should be paid to identify the oldest past due invoice.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

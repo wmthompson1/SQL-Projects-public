@@ -85,4 +85,4 @@ VISUAL printed invoices and it did NOT transfer them to Accounts Receivable.
 
 The Print Invoices dialog box also closes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

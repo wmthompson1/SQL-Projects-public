@@ -54,4 +54,4 @@ is different from the tenant-level information, the text in the field
 is displayed in blue. For options and check boxes, the label is displayed
 in blue.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

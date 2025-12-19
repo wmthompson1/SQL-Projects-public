@@ -79,7 +79,7 @@ to the shipment.
 Throughput per Hour
 - Throughput amount multiplied by Hours at Resource.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Actual_Throughput_by_Resource_Inquiry_Reports.htm) Printing Actual Throughput by Resource
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Actual_Throughput_by_Resource_Inquiry_Reports.md) Printing Actual Throughput by Resource
 Inquiry Reports

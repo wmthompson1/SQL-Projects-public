@@ -11,7 +11,7 @@ needs and habits through the use of priority rankings. Types can also
 have a default reallocation preference setting of No or Yes and a
 default reallocation fence value. Set reallocation preferences and
 reallocation fence values per Customer Type in Accounting Entity Maintenance.
-See [Entering Customer Types](Entering_Customer_Types.htm).
+See [Entering Customer Types](Entering_Customer_Types.md).
 
 1. Select Sales,
    Customer Maintenance.
@@ -25,4 +25,4 @@ See [Entering Customer Types](Entering_Customer_Types.htm).
    line and click OK or double-click the
    line and the order type appears in the Customer Type field.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

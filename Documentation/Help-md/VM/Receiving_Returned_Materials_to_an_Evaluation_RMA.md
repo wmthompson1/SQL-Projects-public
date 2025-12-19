@@ -10,4 +10,4 @@ transactions are created. Since the customer still owns the returned
 materials, you do not receive the returned materials into your inventory.
 
 See [Receiving Returned
-Materials](Receiving_a_Returned_Shipment.htm).
+Materials](Receiving_a_Returned_Shipment.md).

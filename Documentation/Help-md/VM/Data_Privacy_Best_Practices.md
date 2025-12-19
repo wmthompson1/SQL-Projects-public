@@ -21,7 +21,7 @@ best practices:
   use a code in the file name or store the attachments in a dedicated
   folder.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

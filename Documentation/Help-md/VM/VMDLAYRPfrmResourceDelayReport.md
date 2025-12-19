@@ -73,4 +73,4 @@ starting with the least delayed resource to the most delayed resource.
 VISUAL prints the report or displays the
 results on your monitor.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Resource_Delay_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Resource_Delay_Report.md) User-defined Help

@@ -37,4 +37,4 @@ the Shift-Insert key combination.
    button to close the Specs dialog box and return to the Purchase
    Receipt Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

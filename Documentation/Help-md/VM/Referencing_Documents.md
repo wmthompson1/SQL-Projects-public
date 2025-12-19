@@ -55,17 +55,17 @@ whether documents can be attached to the header, line, or both:
 | Vendor RFQ Entry | General  RFQ | Header and Line |
 | WIP Maintenance | A/P Invoice  General | Header |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Referencing_Existing_Documents.htm) Referencing Existing Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Referencing_Existing_Documents.md) Referencing Existing Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Inserting_a_New_Document_in_the_Document_Reference_Dialog.htm) Inserting a New Document in the Document
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Inserting_a_New_Document_in_the_Document_Reference_Dialog.md) Inserting a New Document in the Document
 Reference Dialog
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Documents__On-the-Fly_.htm) Using Drag-and-Drop to Associate Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Documents__On-the-Fly_.md) Using Drag-and-Drop to Associate Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Document_References_in_Maintenance_Windows.htm) Creating Document References in Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Document_References_in_Maintenance_Windows.md) Creating Document References in Maintenance
 Windows
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.md)
 What is Document Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

@@ -72,8 +72,8 @@ To view the General Ledger Inventory Account information in the
 Part Maintenance window, click the Accounting
 button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchased_Parts_Costing_Utils.htm) Purchased Parts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchased_Parts_Costing_Utils.md) Purchased Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Fabricated_Parts_Costing_Utils.htm) Fabricated Parts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Fabricated_Parts_Costing_Utils.md) Fabricated Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

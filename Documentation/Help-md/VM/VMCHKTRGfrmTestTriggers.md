@@ -21,7 +21,7 @@ This table shows the task that you can complete in the Examine Triggers
 window:
 
 | Task | Description |
-| [Examining Triggers](Examining_Triggers.htm) | Use this procedure to identify inconsistences between the triggers in your database and a master list of triggers. |
+| [Examining Triggers](Examining_Triggers.md) | Use this procedure to identify inconsistences between the triggers in your database and a master list of triggers. |
 
 ## Fields
 

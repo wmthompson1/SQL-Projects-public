@@ -16,10 +16,10 @@ record of the task is updated.
 See these topics:
 
 * [Viewing
-  Tasks](VMTSKMNTfrmTasks.htm)
+  Tasks](VMTSKMNTfrmTasks.md)
 * [Approving
-  Tasks](Approving_Tasks.htm)
+  Tasks](Approving_Tasks.md)
 * [Rejecting
-  Tasks](Rejecting_Tasks.htm)
+  Tasks](Rejecting_Tasks.md)
 * [Processing
-  On Hold Tasks](Processing_On_Hold_Tasks.htm)
+  On Hold Tasks](Processing_On_Hold_Tasks.md)

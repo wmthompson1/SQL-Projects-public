@@ -59,8 +59,8 @@ Note:
 Because multiple revenue dates can be assigned to a single customer
 order, a customer order may be displayed more than once in the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTfrmPrintRevenueReport.htm) Printing Revenue Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTfrmPrintRevenueReport.md) Printing Revenue Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Examples_of_Printed_Revenue_Reports.htm) Examples of Printed Revenue Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Examples_of_Printed_Revenue_Reports.md) Examples of Printed Revenue Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.md) User-defined Help

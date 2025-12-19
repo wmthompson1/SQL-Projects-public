@@ -5,7 +5,7 @@ Scheduling the Costing Service
 
 # Scheduling the Costing Service
 
-After you [install the Costing Service](VMCSTSVCfrmMain.htm),
+After you [install the Costing Service](VMCSTSVCfrmMain.md),
 specify when the Costing Service should be prompted to run costing
 for a site.
 
@@ -166,7 +166,7 @@ cost calculations, and whether the costs have been updated.
 
 9. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.md)
 Running Costing with the Costing Service
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

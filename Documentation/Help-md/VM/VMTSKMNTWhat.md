@@ -31,10 +31,10 @@ rule is triggered, the task is generated.
 See these topics:
 
 * [Creating
-  Approval Groups](User_Group_Maintenance.htm)
+  Approval Groups](User_Group_Maintenance.md)
 * [Assigning
-  Tasks](Assigning_Tasks.htm)
+  Tasks](Assigning_Tasks.md)
 * [Completing
-  Tasks](Completing_Tasks.htm)
+  Tasks](Completing_Tasks.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Task_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Task_Maintenance.md) User-defined Help

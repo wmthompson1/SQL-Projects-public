@@ -18,4 +18,4 @@ of warehouses or manually enter a Warehouse ID in the field.
 Orders with the specified Part ID and Warehouse ID appear in the
 appropriate line item tables.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

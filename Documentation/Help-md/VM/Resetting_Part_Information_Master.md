@@ -186,4 +186,4 @@ Material Per Commodity Code check box.
     When processing is finished, a dialog box is displayed listing
     the number of records updated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

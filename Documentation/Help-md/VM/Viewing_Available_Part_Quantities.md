@@ -15,4 +15,4 @@ one level down the Part Availability tree.
    The Detail information that appears in the right pane is the same
    as the information for Available to Customer.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

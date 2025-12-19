@@ -6,7 +6,7 @@ Scheduling the Scheduler Service
 # Scheduling the Scheduler Service
 
 After you [install the
-Scheduling Service](VMSCHSVCfrmMain.htm), specify when the Scheduling Service should
+Scheduling Service](VMSCHSVCfrmMain.md), specify when the Scheduling Service should
 be prompted to run schedules with the Concurrent Scheduler.
 
 You can set up a run schedule for one schedule ID per site. If you
@@ -67,7 +67,7 @@ To consider the availability of materials required by work orders
 when building the schedule, select this check box. To schedule work
 orders as if the materials are available, clear this check box. See
 [Behind the
-Scenes of the Scheduling Process](Behind_the_Scenes_of_the_Scheduling_Process.htm).
+Scenes of the Scheduling Process](Behind_the_Scenes_of_the_Scheduling_Process.md).
 
 Check Service Availability
 To consider the availability of outside services required by work
@@ -139,7 +139,7 @@ pass before the Concurrent Scheduler is run.
 
 12. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.md)
 What is the Scheduling Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

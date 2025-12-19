@@ -35,4 +35,4 @@ Programs to Headings](javascript:void(0);) section.
 To access sub-menus on the Graphical Menu,
 right-click the heading and click the program you want to use.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

@@ -18,6 +18,6 @@ Order Quantity - The work order quantity.
 Want Date - The date on which the customer
 wants the order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Pegging_to_the_Original_Order.htm) Pegging to the Original Order
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Pegging_to_the_Original_Order.md) Pegging to the Original Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

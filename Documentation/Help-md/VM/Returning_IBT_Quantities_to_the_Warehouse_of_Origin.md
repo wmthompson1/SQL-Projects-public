@@ -8,7 +8,7 @@ Returning IBT Quantities to the Warehouse of Origin
 You must enable Shipment Tracking in Application Global Maintenance
 before you can return Interbranch Transfers. For more information,
 refer to [Setting
-Shipment Tracking Information](Setting_Shipment_Tracking_Information.htm).
+Shipment Tracking Information](Setting_Shipment_Tracking_Information.md).
 
 After you have generated, shipped, and received an interbranch transfer,
 you can, from the warehouse where the IBT quantity now is, return
@@ -56,8 +56,8 @@ field on the Other tab.
    the original warehouse and Interbranch Transfer Receipt Entry
    to receive the shipment back into the original warehouse. For
    more information on Interbranch Transfer Shipping Entry, refer
-   to [Shipping Interbranch Transfers](VMIBTSHPfrmShipping.htm).
+   to [Shipping Interbranch Transfers](VMIBTSHPfrmShipping.md).
    For more information on Interbranch Transfer Receipt Entry, refer
-   to [Receiving Interbranch Transfers](VMIBTRCVfrmReceiving.htm).
+   to [Receiving Interbranch Transfers](VMIBTRCVfrmReceiving.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

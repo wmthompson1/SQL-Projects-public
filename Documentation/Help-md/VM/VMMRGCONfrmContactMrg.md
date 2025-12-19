@@ -118,11 +118,11 @@ variable name of Log File Name.
    The parent contact is updated with the customer or vendor associations
    of the duplicate contact(s).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONWhat.md)
 What is the Contact Merge Utility?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONInterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONInterfaceOvrvw.md)
 Navigating in the Contact Merge Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONContactTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMRGCONContactTableSort.md)
 Sorting the contact table in the Contact Merge Utility

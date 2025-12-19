@@ -22,12 +22,12 @@ existing customer notes.
 4. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Customer_Notes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Customer_Notes.md)
 Editing Customer Notes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Pasting_Customer_Notes.htm) Copying and Pasting Customer Notes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Pasting_Customer_Notes.md) Copying and Pasting Customer Notes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Customer_Notes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Customer_Notes.md)
 Deleting Customer Notes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

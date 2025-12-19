@@ -12,4 +12,4 @@ Tickets... from the Info menu. The Labor Tickets table appears.
 To output the report, select the View
 arrow to select the output method, then click the Print button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

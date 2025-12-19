@@ -22,7 +22,7 @@ The Customer Order Entry window appears.
    to define user-defined labels.
 
 If you want to create a new sales order,
-refer to [order entry procedures](VMORDENTfrmCustomerOrder.htm).
+refer to [order entry procedures](VMORDENTfrmCustomerOrder.md).
 
 The necessary fields are auto-filled, and
 all sales order lines are displayed.
@@ -61,4 +61,4 @@ the Layout ID.
    button to save the User Defined Field Layout ID to the Shipto
    ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

@@ -25,12 +25,12 @@ To view more details about each bar or wedge in an analytic:
    Microsoft Excel.
 
 You can sort and group the data in the grid
-in a variety of ways. See [Grids](Grids.htm).
+in a variety of ways. See [Grids](Grids.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

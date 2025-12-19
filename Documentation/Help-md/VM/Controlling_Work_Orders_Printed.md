@@ -40,4 +40,4 @@ If you select Print New Releases Only, only work orders
 that were auto released (see below) from a Firm status are printed.
 Otherwise, all Firm and Released work orders are printed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

@@ -23,7 +23,7 @@ You can access Activity Maintenance in these ways:
   in the graphical Lifecycle Document Viewer.
 
 See [Starting Activity
-Maintenance](Starting_Activity_Maintenance.htm).
+Maintenance](Starting_Activity_Maintenance.md).
 
 ## Tasks
 
@@ -31,8 +31,8 @@ This table shows the tasks that you can complete in the Activity
 Entry window:
 
 | Task | Description |
-| [Reviewing Activities](Reviewing_Activities.htm) | Use this procedure to review activities that are attached to records. |
-| [Editing Activities](Editing_Activities.htm) | Use this procedure to edit activities directly in the Activity Maintenance window |
+| [Reviewing Activities](Reviewing_Activities.md) | Use this procedure to review activities that are attached to records. |
+| [Editing Activities](Editing_Activities.md) | Use this procedure to edit activities directly in the Activity Maintenance window |
 
 ## Fields
 
@@ -75,7 +75,7 @@ Reminder
 this activity, then the check box is selected. The assigned to user
 will receive a reminder provided that the user activates the reminder
 feature in Activity Maintenance Preferences. See [Activating
-Reminder Features](Activating_Reminder_Features.htm).
+Reminder Features](Activating_Reminder_Features.md).
 
 Category ID
 
@@ -193,11 +193,11 @@ Snooze Interval
 
 This field is reserved for future use.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

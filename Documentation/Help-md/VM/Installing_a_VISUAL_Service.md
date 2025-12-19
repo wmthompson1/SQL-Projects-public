@@ -5,7 +5,7 @@ Installing a VISUAL Service
 
 # Installing a VISUAL Service
 
-Before you install a service, make sure you meet the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+Before you install a service, make sure you meet the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 Then, use procedures described in this section to install services.
 
 This table shows the services you can install to run VISUAL processes:

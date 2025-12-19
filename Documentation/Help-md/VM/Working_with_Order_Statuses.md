@@ -37,7 +37,7 @@ To manage each order line individually, assign the line a status
 that is not inherit. When an order line has a specific status, such
 as On Hold, then the status on the order header is ignored.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_the_Status_of_the_Order_Header.htm) Changing the Status of the Order Header
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_the_Status_of_the_Order_Header.md) Changing the Status of the Order Header
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments_and_Line_Statuses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments_and_Line_Statuses.md)
 Shipments and Line Statuses

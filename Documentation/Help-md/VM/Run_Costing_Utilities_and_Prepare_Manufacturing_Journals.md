@@ -360,4 +360,4 @@ detail to view, the Sum column is blank.
    viewing information in the Inquiry / Print G/L Transactions window,
    click Close to exit the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

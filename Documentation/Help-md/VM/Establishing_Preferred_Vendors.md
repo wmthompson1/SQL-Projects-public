@@ -52,12 +52,12 @@ table with that Vendor ID.
 9. If you have finished
    adding vendors for a part, click Close.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Vendors_from_the_Table.htm) Deleting Vendors from the Table
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Vendors_from_the_Table.md) Deleting Vendors from the Table
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Multiple_Vendor_Part_IDs_for_the_Same_Part.htm) Specifying Multiple Vendor Part IDs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Multiple_Vendor_Part_IDs_for_the_Same_Part.md) Specifying Multiple Vendor Part IDs
 for the Same Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Vendor_Quotes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Vendor_Quotes.md)
 Adding Vendor Quotes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

@@ -59,7 +59,7 @@ Select By Project Info Filters to limit the information to transactions
 associated with projects that match the criteria you determine in
 the Project Info box. When you select By Project Info Filters, the
 Project Info box becomes active. Click the [Project
-Info](VMPRJSUMfrmProjectSummary.htm) button and select the project criteria. If you select By
+Info](VMPRJSUMfrmProjectSummary.md) button and select the project criteria. If you select By
 Project Filters, the Starting Date and Ending Date fields become active.
 In the Starting Date field, enter the first date of the period you
 would like to view. In the Ending Date field, enter the last day of
@@ -342,4 +342,4 @@ ID, Project name, WBS code, Department, Cost Category, Site ID, Debit,
 and Credit amounts are also listed. The report is subtotaled by batch,
 and a grand total for all batches is printed at the end of the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

@@ -27,7 +27,7 @@ tab has the default position.
 Leave this check box cleared if you want
 to manually refresh the current display using the Refresh
 button. See [Order
-Management Window Buttons and their Functions](Order_Management_Window_Buttons_and_their_Function.htm) for more information.
+Management Window Buttons and their Functions](Order_Management_Window_Buttons_and_their_Function.md) for more information.
 
 3. Determine the frequency
    of the refresh.
@@ -125,4 +125,4 @@ Window.
 4. Click the Apply
    button to commit the settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

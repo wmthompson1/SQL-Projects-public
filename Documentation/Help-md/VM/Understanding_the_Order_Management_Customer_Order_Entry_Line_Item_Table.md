@@ -351,4 +351,4 @@ Note:
 8.0.0. A User ID is displayed in this field only if the order was
 created in VISUAL 8.0.0 or later.***
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

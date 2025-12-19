@@ -29,4 +29,4 @@ Now, when you attempt to open a VMX file, Windows associates the
 action (Open) with the application (Vm.exe) and performs the actions
 necessary to open the main Infor VISUAL application.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

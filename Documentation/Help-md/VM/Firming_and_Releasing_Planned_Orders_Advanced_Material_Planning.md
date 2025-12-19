@@ -37,7 +37,7 @@ the window.
 The data in the Firm
 Orders window can be populated based on the selected filters
 and configured options. See, [Configuring
-Options](Configuring_Options.htm).
+Options](Configuring_Options.md).
 
 4. Enter the starting and
    ending Part IDs in the Starting and Ending Part ID fields.
@@ -209,4 +209,4 @@ When you double-click a row header, the value in the part ID field
 on the Parent Material
 Planning window is updated with the line item part ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

@@ -12,7 +12,7 @@ dialog in the Work Order Traveller window can schedule a traveller
 print job.
 
 Before you install the service, make sure the computer where you
-are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 
 To install the service:
 
@@ -101,7 +101,7 @@ To add a printer:
 4. Click Ok.
 5. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.md)
 What is the Reporting Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

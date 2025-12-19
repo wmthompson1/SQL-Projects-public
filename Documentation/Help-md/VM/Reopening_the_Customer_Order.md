@@ -20,6 +20,6 @@ The Supply Links dialog box appears.
 The three links of supply the Allocation Utility created appear
 in the line item table. See Customer Order Entry for more information
 on establishing [supply
-links to customer orders](Assigning_Supply_to_Customer_Order_Lines.htm).
+links to customer orders](Assigning_Supply_to_Customer_Order_Lines.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help

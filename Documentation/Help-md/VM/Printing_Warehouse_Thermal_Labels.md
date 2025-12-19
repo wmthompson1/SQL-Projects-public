@@ -13,7 +13,7 @@ Warehouse Maintenance supports the printing of thermal barcode labels
 for physical inventory counts and warehouse locations. Before you
 try to print any thermal labels for a customer order or acknowledgment,
 design the appropriate thermal labels using the [Label
-Printer Setup Utility](BARCODE.chm::/What_is_VISUAL_BTS_.htm).
+Printer Setup Utility](What_is_VISUAL_BTS_.md).
 
 1. From
    the File menu, select Print.
@@ -147,7 +147,7 @@ This setting is especially useful for container labels
 that are part of a label group. When selected, VISUAL automatically
 creates the appropriate number of carton labels for a shipment. Make
 this setting a default using the [Label Printer
-Setup Utility](BARCODE.chm::/What_is_VISUAL_BTS_.htm)
+Setup Utility](What_is_VISUAL_BTS_.md)
 
 Label
 Printer If appropriate, adjust the label printer you want
@@ -160,5 +160,5 @@ Based
 on your starting and ending preference, VISUAL prints a range of thermal
 labels for the specified warehouse or counts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined
 Help

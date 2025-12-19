@@ -11,7 +11,7 @@ You also use the Notifications dialog to specify the employees that
 receive copies of the notifications.
 
 To create templates for the emails that you send to customers, use
-Notifications Maintenance. See [Notifications](VMNFTMNTWhat.htm).
+Notifications Maintenance. See [Notifications](VMNFTMNTWhat.md).
 
 To specify the actions that generate notifications:
 

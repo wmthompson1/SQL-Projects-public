@@ -360,4 +360,4 @@ Linked Purchases - It is possible to link
 a material purchase directly to the material requirement it will meet.
 This simplifies the management of this type of order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

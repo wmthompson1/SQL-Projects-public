@@ -97,6 +97,6 @@ Use the following methods to create purchase orders:
   and modify them before saving the order.
 
 For more information, refer to the [Releasing
-Purchase Orders](VMPURWINfrmSessionPOHistory.htm) section.
+Purchase Orders](VMPURWINfrmSessionPOHistory.md) section.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

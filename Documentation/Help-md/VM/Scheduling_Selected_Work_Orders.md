@@ -8,7 +8,7 @@ Scheduling Selected Work Orders
 This option is not available if you are licensed to use DBR or Easy
 Lean. If you are licensed to use DBR or Easy Lean, use the DBR Scheduler
 to create and schedule work orders. See [What
-is DBR Scheduling](VMDBRSCHWhat.htm).
+is DBR Scheduling](VMDBRSCHWhat.md).
 
 You can choose to schedule only some of the work orders. To use
 this option:
@@ -107,4 +107,4 @@ are displayed in the work order table.
 7. Click the Schedule
    button to schedule the work orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

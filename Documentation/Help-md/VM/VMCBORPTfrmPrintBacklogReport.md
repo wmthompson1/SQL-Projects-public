@@ -22,7 +22,7 @@ This table shows the tasks that you can complete in the Customer
 Backlog Report window:
 
 | Task | Description |
-| [Printing Customer Backlog Reports](Printing_Customer_Backlog_Reports.htm) | Use this procedure to generate customer backlog reports. |
+| [Printing Customer Backlog Reports](Printing_Customer_Backlog_Reports.md) | Use this procedure to generate customer backlog reports. |
 
 ## Fields
 
@@ -65,7 +65,7 @@ Report
 output
 
 Select the output format for the report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
 Suppress
 amount
@@ -89,4 +89,4 @@ the Print Month to date/Year to date summary or Print Month to date
 summary check boxes, you can sort the report by Customer ID, Customer
 Name, or None.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.md) User-defined Help

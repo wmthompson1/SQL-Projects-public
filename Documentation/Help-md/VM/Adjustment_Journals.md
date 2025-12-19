@@ -31,4 +31,4 @@ it to the financials via this subsidiary ledger. This journal is transactional.
 That is, each transaction results in a separate distribution to the
 appropriate accounts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

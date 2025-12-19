@@ -15,7 +15,7 @@ Assigning IBT Receipt Quantities to Inventory
    column, enter what portion of the total IBT Order Quantity you
    want to receive. By default, the entire Order Quantity appears
    in this column. See [Receiving
-   Interbranch Transfer Entries](VMIBTRCVfrmReceiving.htm) for more information.
+   Interbranch Transfer Entries](VMIBTRCVfrmReceiving.md) for more information.
 
 Besides being the receipt quantity, this
 quantity is now what is available to you to assign to demand.
@@ -120,4 +120,4 @@ line.
     button to commit the allocation of supply from the IBT receipt
     line to warehouse inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

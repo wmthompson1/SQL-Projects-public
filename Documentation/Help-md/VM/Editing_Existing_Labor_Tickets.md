@@ -162,4 +162,4 @@ Indirect ID specified for indirect labor transactions.
 9. Click Close
    to close the Recalc Proration dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

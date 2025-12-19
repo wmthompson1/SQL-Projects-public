@@ -78,4 +78,4 @@ If you prepare the journals but dont post them, the next time you
 prepare journals, the previous journals are deleted and their distributions
 are included in the new journals.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

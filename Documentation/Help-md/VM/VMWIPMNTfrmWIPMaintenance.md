@@ -154,7 +154,7 @@ is a required field if this line references a work order or project.
 
 For more information on Enforcing Referential
 Integrity, refer to [Enforcing
-Referential Integrity](Enforcing_Referential_Integrity.htm).
+Referential Integrity](Enforcing_Referential_Integrity.md).
 
 <Cost Category ID>
 - Double-click the <Cost Category ID>
@@ -170,6 +170,6 @@ purposes.
    button to save the transaction line and generate a Transaction
    ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

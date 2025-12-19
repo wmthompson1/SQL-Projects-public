@@ -46,27 +46,27 @@ VISUAL computes the total cost of the order, apportions it to each
 of the co-products including the main part, and then computes a unit
 cost for each co-product.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Co-products.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Co-products.md)
 Setting Up Co-products
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_Customer_Orders.htm) Linking Co-products to Customer Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_Customer_Orders.md) Linking Co-products to Customer Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_New_Work_Orders.htm) Linking Co-products to New Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_New_Work_Orders.md) Linking Co-products to New Work Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_Existing_Work_Orders.htm) Linking Co-products to Existing Work
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking_Co-products_to_Existing_Work_Orders.md) Linking Co-products to Existing Work
 Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Co-products_into_Inventory.htm) Receiving Co-products into Inventory
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Receiving_Co-products_into_Inventory.md) Receiving Co-products into Inventory
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Co-products.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Co-products.md)
 Shipping Co-products
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Netting_Co-products.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Netting_Co-products.md)
 Netting Co-products
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Co-products_to_Demand.htm) Allocating Co-products to Demand
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Co-products_to_Demand.md) Allocating Co-products to Demand
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Co_product_Demand_Allocation_Information.htm) Viewing Co-product Demand Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Co_product_Demand_Allocation_Information.md) Viewing Co-product Demand Allocation
 Information

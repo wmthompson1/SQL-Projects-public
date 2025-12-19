@@ -5,7 +5,7 @@ Viewing Purchase Requisitions
 
 # Viewing Purchase Requisitions
 
-If a purchase order started as a [requisition](Generating_Purchase_Orders_from_Purchase_Requisitions.htm),
+If a purchase order started as a [requisition](Generating_Purchase_Orders_from_Purchase_Requisitions.md),
 you can view the original purchase requisition using this feature.
 
 1. With the appropriate
@@ -84,4 +84,4 @@ share a common Buyer.
    the Requisition button or double-click
    a line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help

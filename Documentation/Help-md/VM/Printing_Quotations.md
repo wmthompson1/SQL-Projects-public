@@ -44,15 +44,15 @@ to Printed. These dates are entered in the dates fields.
    formats are only available if the forms have been created.
 7. If the quote is for
    an international customer, select a Language ID for the quote.
-   See [Entering Languages](Entering_Languages.htm) and
+   See [Entering Languages](Entering_Languages.md) and
    [Specifying Customer
-   Language Forms](Specifying_Customer_Language_Forms.htm).
+   Language Forms](Specifying_Customer_Language_Forms.md).
 8. Select the Draft
    Mode check box to print a draft of the quote. If you select
    the check box, the quote is not locked after you print it.
 9. Specify how to output
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 10. To print the documents
     that you have associated with this customer, select the Print Associated Documents check box.
 11. Click Ok.
@@ -60,4 +60,4 @@ to Printed. These dates are entered in the dates fields.
     printer dialog box is displayed. Make the appropriate selections
     and click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

@@ -9,7 +9,7 @@ If you use User Toolbars, you can add a button that
 launches a macro stored in your database. You can add toolbar buttons
 only for macros you manually run. You cannot add a toolbar button
 for macros that are run automatically based on an event. See [Types
-of Macros](Types_of_Macros.htm).
+of Macros](Types_of_Macros.md).
 
 To add a user toolbar button for a database macro:
 

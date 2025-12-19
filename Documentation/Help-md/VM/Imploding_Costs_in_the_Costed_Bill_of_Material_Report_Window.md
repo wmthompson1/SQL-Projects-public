@@ -77,4 +77,4 @@ All top-level parts
    | POSTIT.gif | If you do not select Permanently Save All Levels, the implosion results appear only in the Costing section of the current screen. Permanently Save All Levels is automatically turned on and cannot be changed when you choose All Top Level Parts. |
 
 [About
-the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.htm)
+the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.md)

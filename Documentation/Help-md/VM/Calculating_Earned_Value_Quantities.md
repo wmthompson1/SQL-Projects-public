@@ -74,4 +74,4 @@ of hours you reported appears in the Hours column.
    selecting the line items you want to post, click the Save
    icon on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Calculate_Earned_Value.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Calculate_Earned_Value.md) User-defined Help

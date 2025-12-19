@@ -63,6 +63,6 @@ order is now Closed.
 The Create Internal Order check box, Use Cust VAT Tax check box, Internal Customer
 ID field, and SO Tax Shipto ID field are used for buying and selling
 between accounting entities. See [Copying
-Internal Purchase Orders](Copying_Internal_Purchase_Orders.htm).
+Internal Purchase Orders](Copying_Internal_Purchase_Orders.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

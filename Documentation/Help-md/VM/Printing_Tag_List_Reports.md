@@ -88,4 +88,4 @@ group (or the report, if printing in Tag sequence) blank lines are
 provided for Counted By, Recounted By, Entered By, and Checked By
 identification.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

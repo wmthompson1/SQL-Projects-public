@@ -36,4 +36,4 @@ Invoices, Combine All Packlists for an Order on One Invoice, and Combine
 All Packlists for a Customer on One Invoice options are reactivated.
 
 See [Specifying
-Shipment Tracking Information](Setting_Shipment_Tracking_Information.htm).
+Shipment Tracking Information](Setting_Shipment_Tracking_Information.md).

@@ -18,18 +18,18 @@ Select from these four supply options when allocating IBT line supply
 to demand:
 
 [Customer
-Order Delivery Schedule supply](Assigning_IBT_Line_Supply_to_Customer_Order_Delivery_Schedule_Demand.htm)
+Order Delivery Schedule supply](Assigning_IBT_Line_Supply_to_Customer_Order_Delivery_Schedule_Demand.md)
 
 [Customer
-Order supply](Assigning_IBT_Line_Supply_to_Customer_Order_Demand.htm)
+Order supply](Assigning_IBT_Line_Supply_to_Customer_Order_Demand.md)
 
 [Work
-Order Material Requirement supply](Assigning_IBT_Line_Supply_to_Work_Order_Material_Requirement_Demand.htm)
+Order Material Requirement supply](Assigning_IBT_Line_Supply_to_Work_Order_Material_Requirement_Demand.md)
 
 [Interbranch
-Transfer supply](Assigning_Interbranch_Transfer_Supply_to_IBT_Line_Demand.htm)
+Transfer supply](Assigning_Interbranch_Transfer_Supply_to_IBT_Line_Demand.md)
 
 [Viewing
-Demand Allocated Quantities for IBT Lines](Viewing_Demand_Allocated_Quantities_for_IBT_Lines.htm)
+Demand Allocated Quantities for IBT Lines](Viewing_Demand_Allocated_Quantities_for_IBT_Lines.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

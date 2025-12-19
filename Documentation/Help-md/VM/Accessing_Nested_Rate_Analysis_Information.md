@@ -56,4 +56,4 @@ order. Clear the selection to view the information in descending order.
 The totals for all of the accounts within your Category Pool and
 Base appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Analysis.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Analysis.md) User-defined Help

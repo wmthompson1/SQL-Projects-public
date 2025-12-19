@@ -102,8 +102,8 @@ Reject Code
 If the previous task is rejected, the code specified during the rejection
 is displayed. Rejection codes indicate the reason a task is rejected.
 Maintain rejection codes either on the [ECN
-tab in Site Maintenance](Specifying_ECN_Maintenance_Codes.htm) or the [Defaults
-tab in Accounting Entity Maintenance](Specifying_Information_on_the_Defaults_Tab.htm). While rejection codes are
+tab in Site Maintenance](Specifying_ECN_Maintenance_Codes.md) or the [Defaults
+tab in Accounting Entity Maintenance](Specifying_Information_on_the_Defaults_Tab.md). While rejection codes are
 added in Site Maintenance or Accounting Entity Maintenance, the codes
 are saved at the tenant level. Codes you add to one site or entity
 are available for all sites and entities. The same table is used to
@@ -115,4 +115,4 @@ The date that the task was created is displayed.
 Site The ID
 of the site where the task was created is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

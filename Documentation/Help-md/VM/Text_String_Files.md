@@ -11,9 +11,9 @@ the differences is text strings between the current version of VISUAL
 and the previous version of VISUAL. You can import these files to
 begin a translation.
 
-See [Importing Translations](Importing_Translations.htm).
+See [Importing Translations](Importing_Translations.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

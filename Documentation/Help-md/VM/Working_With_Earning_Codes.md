@@ -53,4 +53,4 @@ the Earning Code) into the new line.
 4. Enter the earning code
    to be associated with the new entry in Earning Code field.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.md) User-defined Help

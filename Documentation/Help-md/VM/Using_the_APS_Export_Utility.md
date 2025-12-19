@@ -54,4 +54,4 @@ currently contains.
 VISUAL exports the data to the file you
 specified.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.md) User-defined Help

@@ -7,7 +7,7 @@ Setting Unit Prices by Discount Code
 
 Before you can set up unit prices by discount code,
 you must first set up the discount codes in Customer Maintenance.
-See [Specifying Discount Codes](Entering_Discount_Codes.htm).
+See [Specifying Discount Codes](Entering_Discount_Codes.md).
 
 You can define a unit price matrix for a discount code. Use discount
 codes to set up general unit price quantity breaks based on a discount
@@ -18,7 +18,7 @@ discount.
 
 When you enter a customer order, the discount code pricing is used
 if customer-specific pricing has not been specified. See [Customer
-Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.htm).
+Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.md).
 
 If you are licensed to use multiple sites, maintain discount code
 pricing by site.
@@ -53,4 +53,4 @@ between the two units.
    in ascending quantity sequence.
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

@@ -48,7 +48,7 @@ available are displayed.
 
 After you select a work order, you can assign
 the work order supply to a demand source. See [Allocating
-Released Work Order Quantities to Demand](Allocating_Released_Work_Order_Quantities_to_Demand.htm).
+Released Work Order Quantities to Demand](Allocating_Released_Work_Order_Quantities_to_Demand.md).
 
 6. Specify the quantity
    of finished goods you are receiving and the location in which
@@ -68,7 +68,7 @@ the ID of the location receiving the finished goods. To view a list
 of locations that can store the part, click the Location browse button.
 Depending on your Part Location on the Fly settings in Site Maintenance,
 you may be able to specify a new location for the part. See [Specifying
-Information on the General Tab](Specifying_Information_on_the_General_Tab_site.htm).
+Information on the General Tab](Specifying_Information_on_the_General_Tab_site.md).
 
 Description
 Specify a description of the transaction.
@@ -78,16 +78,16 @@ This field is displayed only if you selected the Autogen Labor During
 Receipt check box in Site Maintenance. If you autogenerate labor tickets,
 specify the ID of the employee who complete the labor for this finished
 good. See [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.htm).
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
 
 7. Click Save.
    The quantity you specified is received into the location you specified.
    A transaction ID is generated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Released_Work_Order_Quantities_to_Demand.htm) Allocating Released Work Order Quantities
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Released_Work_Order_Quantities_to_Demand.md) Allocating Released Work Order Quantities
 to Demand
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Released_Work_Order_Receipt_Quantities_to_Demand_Links.htm) Assigning Released Work Order Receipt
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Released_Work_Order_Receipt_Quantities_to_Demand_Links.md) Assigning Released Work Order Receipt
 Quantities to Demand Links

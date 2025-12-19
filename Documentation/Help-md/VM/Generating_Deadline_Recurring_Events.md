@@ -71,4 +71,4 @@ deadline event. If the system date is after the desired ship date,
 the system automatically generates the proper message every time you
 log on to VISUAL.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.md) User-defined Help

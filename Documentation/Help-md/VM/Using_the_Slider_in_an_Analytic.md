@@ -16,10 +16,10 @@ in the X-axis.
 
 You may need to exit and reopen the Dashboard to view the slider.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

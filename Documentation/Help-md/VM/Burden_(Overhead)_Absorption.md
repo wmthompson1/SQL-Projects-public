@@ -33,4 +33,4 @@ incurred in a period are $65,000 and the manufacturing process absorbs
 $67,000 based on the allocation method used. The difference would
 be a $2,000 favorable absorption variance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

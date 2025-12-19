@@ -18,4 +18,4 @@ Info icon, double click the Part Availability
 icon, then highlight the part that appears. The warehouses in which
 you currently stock the part appear in the right pane.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

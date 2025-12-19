@@ -5,7 +5,7 @@ Delivery Performance
 
 # Delivery Performance
 
-This [dashboard](VMDBOARDWhat.htm) analytic
+This [dashboard](VMDBOARDWhat.md) analytic
 shows the number of shipments you delivered early, the number delivered
 on time, and the number delivered late.
 
@@ -29,13 +29,13 @@ Part ID, Site ID
 
 Detail grid: Click a section of a bar
 to open the [Delivery Performance
-Detail](Delivery_Performance_Detail.htm) grid filtered to display the information that contributes
+Detail](Delivery_Performance_Detail.md) grid filtered to display the information that contributes
 to the section.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

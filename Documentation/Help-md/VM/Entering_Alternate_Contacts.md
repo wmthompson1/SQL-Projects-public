@@ -11,7 +11,7 @@ can enter new contacts or select and modify existing contacts from
 the Contacts for Vendor dialog. You
 can also assign contacts to the vendor in Contact Maintenance, refer
 to [Entering Information on the Vendors
-Tab](VMCONMNTfrmContact.htm).
+Tab](VMCONMNTfrmContact.md).
 
 When
 you add an alternate contact, the contact is also added to the Email
@@ -110,4 +110,4 @@ a vendor:
    Save in
    the Contact for Vendor window to save your selections.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

@@ -132,7 +132,7 @@ is, one group member is selected for the entire duration needed.
 The Concurrent Scheduler can schedule operations
 "discontinuously," which allows you to complete operations
 in "segments." See [Setting
-Up Discontinuous Operations](Setting_Up_Discontinuous_Operations.htm).
+Up Discontinuous Operations](Setting_Up_Discontinuous_Operations.md).
 
 16. Define the type of resource
     by selecting the appropriate radio button in the Type area:
@@ -201,4 +201,4 @@ active.
 21. Click the Save
     button to save the new resource information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

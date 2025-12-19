@@ -12,6 +12,6 @@ applies:
 VMCUSRP1.QRP
 
 See [Report Format
-Overrides](Setting_Report_Format_File_Overrides.htm) for more information.
+Overrides](Setting_Report_Format_File_Overrides.md) for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

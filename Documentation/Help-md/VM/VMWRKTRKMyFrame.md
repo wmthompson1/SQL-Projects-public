@@ -15,9 +15,9 @@ and the current step.
 With the appropriate permissions, you can manually complete a step
 in the process or print workflow reports.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKWfOpen.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKWfOpen.md)
 Opening Workflow Tracker
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.htm) Using the Workflow Gatekeeper
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.md) Using the Workflow Gatekeeper

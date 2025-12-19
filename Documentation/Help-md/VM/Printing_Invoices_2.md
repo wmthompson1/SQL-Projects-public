@@ -51,4 +51,4 @@ The Print dialog box appears.
 5. Click the Ok
    button to output the invoice to your default printer.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.md) User-defined Help

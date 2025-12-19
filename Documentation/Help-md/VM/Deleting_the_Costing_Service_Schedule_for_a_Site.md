@@ -24,7 +24,7 @@ To delete a Costing Service schedule:
    Do not click Save before you click Close. If you click Save before
    you click Close, the service schedule is recreated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.md)
 Running Costing with the Costing Service
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

@@ -25,7 +25,7 @@ a payment.
 
 Note: These three fields only appear if you have activated Withholding
 in Accounting Entity Maintenance. See [Setting
-Electronic Payment Information](Setting_Electronic_Payment_Information.htm).
+Electronic Payment Information](Setting_Electronic_Payment_Information.md).
 
 Withholding Code - Enter the vendors
 withholding code.
@@ -39,4 +39,4 @@ you want to use when making payments to this vendor.
 Social Security No. - Enter the vendors
 social security number.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

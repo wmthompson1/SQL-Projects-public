@@ -61,4 +61,4 @@ A new line appears in the table.
 3. Click the Save
    button to save the modifications.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Dispatch_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Dispatch_Entry.md) User-defined Help

@@ -29,7 +29,7 @@ the following information:
 ## Step One: Make Sure All Project Invoices Have Been Issued and Payments Have Been Received
 
 To make sure that all invoices have been issued, run the [Project
-Billing Events Report](Project_Billing_Events_Report_Helpful.htm) for the project you would like to close.
+Billing Events Report](Project_Billing_Events_Report_Helpful.md) for the project you would like to close.
 
 To review the invoices issued for the project, run the Project Billing
 Events Report. To check to see if invoices have been issued, run the
@@ -189,8 +189,8 @@ To update the formal EAC, you can use the Updated ETCs with Actuals
 utility. Select the Mark new ETC versions as current, Create new EAC
 versions, and Mark new EAC versions as current options when you run
 the utility. [See Updating ETCs
-with Actual Costs](VMUPDETCfrmUpdateETC.htm).
+with Actual Costs](VMUPDETCfrmUpdateETC.md).
 
 You can also manually update the formal EAC to match the final costs.
 See [Manually
-Creating Estimates at Completion.](Entering_Project_Estimates_at_Completion.htm)
+Creating Estimates at Completion.](Entering_Project_Estimates_at_Completion.md)

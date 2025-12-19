@@ -25,7 +25,7 @@ To deactivate a scheduled print job:
    check box.
 5. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.md)
 What is the Reporting Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

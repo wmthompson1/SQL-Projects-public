@@ -37,4 +37,4 @@ The key information on the Pack List detail
 report is the customer, the items shipped, the quantity and the value
 of the shipment.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

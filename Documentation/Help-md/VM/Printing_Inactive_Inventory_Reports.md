@@ -11,7 +11,7 @@ time. You can print the report to include all transaction types and
 classes. You can also include parts with a zero on-hand balance. Use
 this report to monitor materials in inventory undergoing few quantity
 changes that you may want to classify as obsolete. See [Classifying
-a Part as Obsolete](Classifying_a_Part_as_Obsolete_.htm).
+a Part as Obsolete](Classifying_a_Part_as_Obsolete_.md).
 
 If you are licensed to use multiple sites, you can print the inactive
 inventory report by site or by the tenant level. If you print part
@@ -104,4 +104,4 @@ and the report is attached.
 7. Click the Ok
    button to output the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

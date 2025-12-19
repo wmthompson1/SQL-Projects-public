@@ -14,7 +14,7 @@ To specify this information:
 1. Access Activity Maintenance.
    For example, select Admin, Activity
    Maintenance. See [Starting
-   Activity Maintenance](Starting_Activity_Maintenance.htm).
+   Activity Maintenance](Starting_Activity_Maintenance.md).
 2. Select Options,
    Preferences.
 3. In the CRM Drillback

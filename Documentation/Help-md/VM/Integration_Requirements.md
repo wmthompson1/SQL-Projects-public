@@ -21,4 +21,4 @@ which fields VMDIXCHG populates (inbound data) and from which it extracts
 (outbound data). To do this, use the VMDI Generate Layouts window
 to define the file layout and select the fields for each record type.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

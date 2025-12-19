@@ -35,4 +35,4 @@ An entry is required.
 Eng ID - Eng ID for the part entered.
 An entry is required.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Configurator_Interface_Maintenance.md) User-defined Help

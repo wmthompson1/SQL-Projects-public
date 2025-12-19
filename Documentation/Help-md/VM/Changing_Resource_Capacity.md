@@ -159,4 +159,4 @@ below will affect all schedules, at all times or always.
 VISUAL reloads the Scheduling window to
 show the modified resource capacity.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

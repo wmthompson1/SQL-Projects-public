@@ -8,7 +8,7 @@ Customer Price Effectivity
 Select a global customer price effectivity setting for
 shipping parts on customer orders. This setting is global but can be overridden
 on the part level, using a feature [in
-Part Maintenance](Establishing_Customer_Price_Effectivity.htm) that makes it possible to establish a price matrix
+Part Maintenance](Establishing_Customer_Price_Effectivity.md) that makes it possible to establish a price matrix
 on a part-by-part basis that is sensitive to specific customers and dates
 of effectiveness.
 

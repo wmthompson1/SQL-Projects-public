@@ -21,4 +21,4 @@ a business as documentation for a purchase or can be part of a formalized,
 controlled purchasing system to include extensive documentation, review
 and approval processes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

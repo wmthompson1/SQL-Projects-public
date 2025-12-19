@@ -14,14 +14,14 @@ If youre working with parts, click a button to view a procedure:
 
 See Also
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPRTMNTfrmPart.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPRTMNTfrmPart.md)
 Adding a Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Part_Information.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Part_Information.md)
 Editing Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Part.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Part.md)
 Deleting a Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Part_Information.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Part_Information.md)
 Printing Part Information

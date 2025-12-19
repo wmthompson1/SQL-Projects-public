@@ -76,4 +76,4 @@ user-specified directory as your import file. You should check the
 log files after each exchange, especially if your Run Dialog indicates
 that your run generated errors.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

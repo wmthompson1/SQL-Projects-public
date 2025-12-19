@@ -37,7 +37,7 @@ The Print Pack List dialog box appears.
 6. From the Format section,
    select the Print Form option button.
 7. Specify the output format.
-   See [Report Output Options](Report_Output_Options.htm).
+   See [Report Output Options](Report_Output_Options.md).
 8. Click the Ok
    button to output the pack list.
 
@@ -75,7 +75,7 @@ window, which it has cleared and readied for shipping.
     as necessary, and then ship the appropriate quantities by clicking
     the Ship All button or selecting Ship All from the Edit menu. Click here for
     more information on [shipping
-    quantities](VMSHPENTfrmShipping.htm).
+    quantities](VMSHPENTfrmShipping.md).
 
 VISUAL creates a pack list for the order
 and assigns the ASN and invoice the same ID.
@@ -92,4 +92,4 @@ you print the pack list.
 To verify the invoice, use the A/R Invoice
 Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

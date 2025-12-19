@@ -28,10 +28,10 @@ To load existing data:
    and CTRL+click to select multiple rows.
 6. Click Load.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.md)
 Reporting Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

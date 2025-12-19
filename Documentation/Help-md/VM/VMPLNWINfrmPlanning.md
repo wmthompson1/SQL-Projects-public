@@ -42,4 +42,4 @@ Date. To decrease the Thru Date value by one day, click Prev Date.
 Use the date fields at the top of the window to window with the appropriate
 information from the selected line in the Material Planning window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

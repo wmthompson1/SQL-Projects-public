@@ -19,12 +19,12 @@ web sites must be compatible with Internet Explorer 7 or earlier.
 See these topics:
 
 * [Adding
-  URL Links](Adding_URL_Links.htm)
+  URL Links](Adding_URL_Links.md)
 * [Previewing
-  URL Link Toolbar Buttons](Previewing_URL_Link_Toolbar_Buttons.htm)
+  URL Link Toolbar Buttons](Previewing_URL_Link_Toolbar_Buttons.md)
 * [Activating
-  the Links Toolbar](Activating_the_Links_Toolbar.htm)
+  the Links Toolbar](Activating_the_Links_Toolbar.md)
 * [Deactivating
-  the Links Toolbar](Deactivating_the_Links_Toolbar.htm)
+  the Links Toolbar](Deactivating_the_Links_Toolbar.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

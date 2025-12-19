@@ -45,16 +45,16 @@ Inactive Mode Hex code: #EFEFEF; RGB:
 Hover Mode Hex code: #DFDFDF; RGB: 223,
 223, 223
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.md)
 User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.md)
 Activating the User Toolbar Function
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.htm) Using Toolbar Buttons to Pass Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.md) Using Toolbar Buttons to Pass Information
 to Custom Executables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.md)
 Setting Up User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

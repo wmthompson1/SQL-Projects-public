@@ -146,7 +146,7 @@ in the Assign to Demand dialog box.
     to commit the allocation from the purchase order line to the customer
     order line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Order_Line_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.htm) Viewing Customer Order Line Demand Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Order_Line_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.md) Viewing Customer Order Line Demand Allocation
 Information for a Purchase Order Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

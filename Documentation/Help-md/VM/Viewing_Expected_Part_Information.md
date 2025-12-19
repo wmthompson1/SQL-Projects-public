@@ -35,10 +35,10 @@ supplying sources.
 Click the button to view details for the
 appropriate type.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_for_Purchase_Orders.htm) Purchase Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_for_Purchase_Orders.md) Purchase Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_for_Work_Orders.htm) Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_for_Work_Orders.md) Work Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_.htm) IBTs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information_.md) IBTs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

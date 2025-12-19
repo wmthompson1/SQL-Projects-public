@@ -128,4 +128,4 @@ the database on which you are running the service.
 Related Topics
 
 [About the Account Balance Dimensions
-Service](VMACCTBALDIMSVCWhat.htm)
+Service](VMACCTBALDIMSVCWhat.md)

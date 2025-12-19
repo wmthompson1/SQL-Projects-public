@@ -102,10 +102,10 @@ The Total Hours field displays the time in hours previously reported
 (read from the database) plus the current hours to report (the value
 in the Hours field).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQTESTfrmTest.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQTESTfrmTest.md)
 Entering Test Results
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Test_Results.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Test_Results.md)
 Displaying Test Results
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.md) User-defined Help

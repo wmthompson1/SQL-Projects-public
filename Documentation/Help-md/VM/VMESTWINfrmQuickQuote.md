@@ -39,12 +39,12 @@ information in the quote in the Manufacturing Window.
 See these topics:
 
 * [Manually
-  Building a Quick Quote](Manually_Building_a_Quick_Quote.htm)
+  Building a Quick Quote](Manually_Building_a_Quick_Quote.md)
 * [Creating
-  Quick Quotes with Microsoft Excel](Creating_Quick_Quotes_with_Microsoft_Excel.htm)
+  Quick Quotes with Microsoft Excel](Creating_Quick_Quotes_with_Microsoft_Excel.md)
 * [Creating
-  a Quick Quote from an Existing Master](Using_Copy_From_to_Specify_Quick_Quote_Information.htm)
+  a Quick Quote from an Existing Master](Using_Copy_From_to_Specify_Quick_Quote_Information.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_a_Table_in_Quick_Quote.htm) Configuring a Table in Quick Quote
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_a_Table_in_Quick_Quote.md) Configuring a Table in Quick Quote
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

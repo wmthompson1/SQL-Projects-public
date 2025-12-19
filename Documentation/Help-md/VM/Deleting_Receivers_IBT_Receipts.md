@@ -23,8 +23,8 @@ when you have received materials results in incorrect inventory balances.
 
 VISUAL deletes the receiver.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Existing_IBT_Receivers.htm) Working with Existing Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Existing_IBT_Receivers.md) Working with Existing Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Calling_Up_Existing_Receivers.htm) Calling Up Existing Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Calling_Up_Existing_Receivers.md) Calling Up Existing Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

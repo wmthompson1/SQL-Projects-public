@@ -17,6 +17,6 @@ shipping process, asks you to confirm the creation of a range of pack
 lists, one for each Shipto ID.
 
 [Creating Pack
-Lists During Shipment](Creating_Pack_Lists_During_Shipment.htm)
+Lists During Shipment](Creating_Pack_Lists_During_Shipment.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

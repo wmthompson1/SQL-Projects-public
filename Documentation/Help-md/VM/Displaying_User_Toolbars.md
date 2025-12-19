@@ -24,16 +24,16 @@ Y.
 
 4. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.md)
 User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.htm) Using Toolbar Buttons to Pass Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.md) Using Toolbar Buttons to Pass Information
 to Custom Executables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.md)
 Setting Up User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.md)
 Setting Up Toolbar Bitmaps
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

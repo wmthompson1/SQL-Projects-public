@@ -57,4 +57,4 @@ Fulfilled Quantity
 See the next section for more information
 on viewing general shipping information for customer order lines.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md) User-defined Help

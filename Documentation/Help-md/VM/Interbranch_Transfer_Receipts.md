@@ -25,9 +25,9 @@ to a project, the default Seq No Ref for the project appears.
 | --- | --- |
 | POSTIT.gifstyle="width: | Because project costing and burdening require these fields, you cannot save project related Interbranch Transfers without the relevant project information. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity in Projects
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity in Projects
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTRCVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTRCVWhat.md)
 What is Interbranch Transfer Receipt Entry?

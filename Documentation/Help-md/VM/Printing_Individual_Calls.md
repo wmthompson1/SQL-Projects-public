@@ -55,4 +55,4 @@ attaches it to the e-mail.
 6. Click the Cancel
    button to return to the Unplanned Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

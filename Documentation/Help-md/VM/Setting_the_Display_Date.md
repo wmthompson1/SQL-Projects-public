@@ -21,4 +21,4 @@ The Set Start Date dialog box appears.
    to set the start date, or Cancel to
    close the dialog box without setting the start date.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

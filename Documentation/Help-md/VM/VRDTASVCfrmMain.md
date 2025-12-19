@@ -14,10 +14,10 @@ install the service once for each database.
 To use the service to update the reporting tables, you must also
 specify when to run the service. Specify when to run the service in
 Application Global Maintenance. See [Scheduling
-the Reporting Data Loader Service](Scheduling_the_Reporting_Data_Loader_Service.htm).
+the Reporting Data Loader Service](Scheduling_the_Reporting_Data_Loader_Service.md).
 
 Before you install the service, make sure the computer where you
-are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 
 To install the service:
 
@@ -75,10 +75,10 @@ a new VRDTASVC.log is created.
 6. Click Install
    Service.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCWhat.md)
 What is the VISUAL Reporting Data Loader Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

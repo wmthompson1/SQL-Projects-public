@@ -40,6 +40,6 @@ printer where the service sent the print job is displayed.
 4. To reread configuration
    information from the database, click Refresh.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Monitoring_Reporting_Service_Print_Jobs.htm) Monitoring Reporting Service Print Jobs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Monitoring_Reporting_Service_Print_Jobs.md) Monitoring Reporting Service Print Jobs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

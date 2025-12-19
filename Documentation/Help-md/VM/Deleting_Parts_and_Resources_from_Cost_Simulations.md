@@ -31,4 +31,4 @@ from a simulation if these criteria are met:
 6. To delete the marked
    rows, click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

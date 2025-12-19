@@ -17,4 +17,4 @@ Notes:
 _Source: Adding_Drill-to_Buttons_to_Query_Results.htm (converted)._ 
 
 **See also:**
-![nav](../../../../../Visual Mfg Help Files/VM/btn_mini.gif) `Query tool drill-to icons`
+![nav](btn_mini.gif) `Query tool drill-to icons`

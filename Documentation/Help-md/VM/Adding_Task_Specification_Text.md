@@ -6,7 +6,7 @@ Adding Task Specification Text
 # Adding Task Specification Text
 
 As mentioned in the [previous
-procedure](Viewing_Requisition_Tasks_.htm), it is possible to add specification text to requisition
+procedure](Viewing_Requisition_Tasks_.md), it is possible to add specification text to requisition
 task sequences. It is not, however, possible to modify existing specification
 text, which may include auto-generated text inserted on the changing
 of a task status from Pending to Completed.
@@ -52,4 +52,4 @@ the task has a specification.
 This specification button with the diagonal
 line through it indicates the task does not have a specification.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

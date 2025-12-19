@@ -11,13 +11,13 @@ you receive the defective materials from your customer.
 
 Use these procedures to create and process Replace RMAs:
 
-[Creating Replace RMAs](Creating_Replace_RMAs.htm)
+[Creating Replace RMAs](Creating_Replace_RMAs.md)
 
-[Shipping Replacement Parts](Shipping_Replacement_Parts.htm)
+[Shipping Replacement Parts](Shipping_Replacement_Parts.md)
 
 [Closing
-or Canceling an Incomplete Replace RMAs](Closing_or_Canceling_an_Incomplete_Replace_RMA.htm)
+or Canceling an Incomplete Replace RMAs](Closing_or_Canceling_an_Incomplete_Replace_RMA.md)
 
-[Costing Replace RMAs](Costing_Replace_RMAs.htm)
+[Costing Replace RMAs](Costing_Replace_RMAs.md)
 
-[Converting Replace RMAs](Converting_Replace_RMAs.htm)
+[Converting Replace RMAs](Converting_Replace_RMAs.md)

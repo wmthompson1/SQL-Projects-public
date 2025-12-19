@@ -32,4 +32,4 @@ order from the Search Result table.
 4. Click the Close
    button to return to the Vendor Inquiry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help

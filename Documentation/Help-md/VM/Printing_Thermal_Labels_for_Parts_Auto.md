@@ -12,7 +12,7 @@ Printing Thermal Labels for Parts
 Part Maintenance supports the printing of thermal barcode labels
 for parts. Before you print thermal labels for a part, design the
 appropriate thermal labels using the [Label
-Printer Setup Utility](VMBTSLPfrmLabelSetup.htm).
+Printer Setup Utility](VMBTSLPfrmLabelSetup.md).
 
 1. Select Inventory, Part
    Maintenance.
@@ -81,7 +81,7 @@ For PART\_SHIPPING label types:
 Part ID - Click
 the Part ID button to choose a part to print.
 Only the parts you've specified [carton
-information](Creating_Containers_for_Parts.htm) for appear as possible choices.
+information](Creating_Containers_for_Parts.md) for appear as possible choices.
 
 Ship To ID - If
 there is more than one Shipto ID for this part, click the Shipto
@@ -143,7 +143,7 @@ This setting is especially useful for container
 labels that are part of a label group. When selected, VISUAL automatically
 creates the appropriate number of carton labels for the shipment.
 Make this setting a default using the [Label
-Printer Setup Utility](VMBTSLPfrmLabelSetup.htm)
+Printer Setup Utility](VMBTSLPfrmLabelSetup.md)
 
 Label Printer
 - If appropriate, adjust the label printer you want to use to print
@@ -155,4 +155,4 @@ these labels.
 Based on your starting and ending preference,
 VISUAL prints a range of thermal labels for the specified parts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

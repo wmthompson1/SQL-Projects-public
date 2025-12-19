@@ -6,7 +6,7 @@ Viewing the Purchasing Lifecycle
 # Viewing the Purchasing Lifecycle
 
 If a work order is linked to a purchase order, you can view the
-[purchasing lifecycle](Purchasing_Lifecycle.htm) for the
+[purchasing lifecycle](Purchasing_Lifecycle.md) for the
 order. To view the lifecycle:
 
 1. Select Eng/Mfg,
@@ -15,7 +15,7 @@ order. To view the lifecycle:
 3. Select Info,
    Purchasing Lifecycle....
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Document_Lifecycles.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Document_Lifecycles.md)
 Viewing Document Lifecycles
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

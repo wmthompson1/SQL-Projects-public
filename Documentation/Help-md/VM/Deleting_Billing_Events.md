@@ -33,4 +33,4 @@ you have marked the event for deletion.
    | --- | --- |
    | POSTIT.gif | Because VISUAL does not prompt you to confirm the deletion of billing events, make sure you have marked the correct events before clicking the Save button. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

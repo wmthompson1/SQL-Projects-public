@@ -20,6 +20,6 @@ and print traceability records. Additionally, a Part Traceability
 button and dialog are used in all applications that are involved in
 material transactions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Part_Trace_Profile_Maintenance.htm) Starting Part Trace Profile Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Part_Trace_Profile_Maintenance.md) Starting Part Trace Profile Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.md) User-defined Help

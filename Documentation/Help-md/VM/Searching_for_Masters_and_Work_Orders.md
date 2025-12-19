@@ -83,4 +83,4 @@ of the master/work orders by selecting its line and clicking on Ok, or by double
 now ready to edit the master or work order using the Manufacturing
 Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

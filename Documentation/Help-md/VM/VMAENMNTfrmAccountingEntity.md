@@ -28,20 +28,20 @@ This table shows the tasks that you can complete in the Accounting
 Entity Maintenance window:
 
 | Task | Description |
-| [Creating Accounting Entities](Creating_Accounting_Entities.htm) | Use this procedure to create an accounting entity ID |
-| [Specifying Information in the General Tab of Accounting Entity Maintenance](Specifying_Information_in_the_General_Tab_of_Accounting_Entity_Maintenance.htm) | Use this procedure to specify general information about the accounting entity, such as the address and tax ID number. |
-| [Setting Up Standard Costing](Setting_Up_Standard_Costing.htm) | If the accounting entity uses standard costing, use this procedure to set up costing. |
-| [Setting Up Actual Costing](Setting_Up_Actual_Costing.htm) | If the accounting entity uses actual costing, use this procedure to set up costing. |
-| [Setting Up Average Costing](Setting_Up_Average_Costing.htm) | If the accounting entity uses average costing, use this procedure to set up costing. |
-| [Specifying a POC Revenue Recognition Method](Specifying_a_POC_Revenue_Recognition_Method.htm) | If you are licensed to use Aerospace & Defense modules, use this procedure to select a Percentage of Completion (POC) revenue recognition method. |
-| [Setting VAT Information](Setting_VAT_Information.htm) | Use this procedure to enable VAT functions. |
-| [Setting Up VAT Books](Setting_Up_VAT_Books.htm) | Use this procedure to specify VAT Book codes and their characteristics. |
-| [Setting Up VAT Percentages and G/L Accounts](Setting_Up_VAT_Percentages_and_G_L_Accounts.htm) | Use this procedure to set up VAT tax percentages and associated G/L accounts. |
-| [Setting Up VAT Categories](Setting_Up_VAT_Categories.htm) | Use this procedure to create VAT categories, VAT categories identify the type of item being taxed: material, service, or other.. |
-| [Setting Intrastat Information](Setting_Intrastat_Information.htm) | Use this procedure to enable Intrastat functionality. |
-| [Setting Electronic Payment Information](Setting_Electronic_Payment_Information.htm) | Use this procedure to specify default information for electronic payments that you make to vendors. |
-| [Setting Order Management Global Values](Setting_Order_Management_Global_Values.htm) | Use this procedure to specify default information for the management of customers. |
-| [Specifying Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab.htm) | Use this procedure to specify requisition approval group names, how purchase requisition approval tasks are generated, and requisition rejection codes. |
+| [Creating Accounting Entities](Creating_Accounting_Entities.md) | Use this procedure to create an accounting entity ID |
+| [Specifying Information in the General Tab of Accounting Entity Maintenance](Specifying_Information_in_the_General_Tab_of_Accounting_Entity_Maintenance.md) | Use this procedure to specify general information about the accounting entity, such as the address and tax ID number. |
+| [Setting Up Standard Costing](Setting_Up_Standard_Costing.md) | If the accounting entity uses standard costing, use this procedure to set up costing. |
+| [Setting Up Actual Costing](Setting_Up_Actual_Costing.md) | If the accounting entity uses actual costing, use this procedure to set up costing. |
+| [Setting Up Average Costing](Setting_Up_Average_Costing.md) | If the accounting entity uses average costing, use this procedure to set up costing. |
+| [Specifying a POC Revenue Recognition Method](Specifying_a_POC_Revenue_Recognition_Method.md) | If you are licensed to use Aerospace & Defense modules, use this procedure to select a Percentage of Completion (POC) revenue recognition method. |
+| [Setting VAT Information](Setting_VAT_Information.md) | Use this procedure to enable VAT functions. |
+| [Setting Up VAT Books](Setting_Up_VAT_Books.md) | Use this procedure to specify VAT Book codes and their characteristics. |
+| [Setting Up VAT Percentages and G/L Accounts](Setting_Up_VAT_Percentages_and_G_L_Accounts.md) | Use this procedure to set up VAT tax percentages and associated G/L accounts. |
+| [Setting Up VAT Categories](Setting_Up_VAT_Categories.md) | Use this procedure to create VAT categories, VAT categories identify the type of item being taxed: material, service, or other.. |
+| [Setting Intrastat Information](Setting_Intrastat_Information.md) | Use this procedure to enable Intrastat functionality. |
+| [Setting Electronic Payment Information](Setting_Electronic_Payment_Information.md) | Use this procedure to specify default information for electronic payments that you make to vendors. |
+| [Setting Order Management Global Values](Setting_Order_Management_Global_Values.md) | Use this procedure to specify default information for the management of customers. |
+| [Specifying Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab.md) | Use this procedure to specify requisition approval group names, how purchase requisition approval tasks are generated, and requisition rejection codes. |
 
 ## Fields
 
@@ -105,7 +105,7 @@ Language
 
 Select USA. This field enables menus when you build a baseline database.
 The field does not control the translations used in the interface.
-See [Translation Maintenance](VMTRNMNTWhat.htm).
+See [Translation Maintenance](VMTRNMNTWhat.md).
 
 Effective
 Exchange Rate
@@ -118,7 +118,7 @@ to a transaction.
 Costing Method
 
 The costing method used by the accounting entity. See
-[About Costing Options](Accessing_the_Costing_Tab.htm).
+[About Costing Options](Accessing_the_Costing_Tab.md).
 
 Source
 of Raw Material Cost

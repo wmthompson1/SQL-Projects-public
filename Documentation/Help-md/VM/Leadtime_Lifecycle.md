@@ -13,16 +13,16 @@ overall percent complete of the entire process.
 See these topics:
 
 * [Viewing
-  the Leadtime Lifecycle](Viewing_the_Leadtime_Lifecycle.htm)
+  the Leadtime Lifecycle](Viewing_the_Leadtime_Lifecycle.md)
 * [Selecting
-  a Measurement Basis for the Overall Percent Complete Calculation](Selecting_a_Measurement_Basis_for_the_Overall_Percent_Complete_Calculation.htm)
+  a Measurement Basis for the Overall Percent Complete Calculation](Selecting_a_Measurement_Basis_for_the_Overall_Percent_Complete_Calculation.md)
 * [Customizing
-  Leadtime Lifecycle Colors](Customizing_Leadtime_Lifecycle_Colors.htm)
+  Leadtime Lifecycle Colors](Customizing_Leadtime_Lifecycle_Colors.md)
 * [Restoring
-  Original Colors](Restoring_Original_Colors_leadtime.htm)
+  Original Colors](Restoring_Original_Colors_leadtime.md)
 * [Attaching
-  the Leadtime Lifecycle Viewer to a Window](Attaching_the_Leadtime_Lifecycle_Viewer_to_a_Window.htm)
+  the Leadtime Lifecycle Viewer to a Window](Attaching_the_Leadtime_Lifecycle_Viewer_to_a_Window.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_is_Performance_Leadtime_.htm) What is Performance Leadtime?
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](What_is_Performance_Leadtime_.md) What is Performance Leadtime?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

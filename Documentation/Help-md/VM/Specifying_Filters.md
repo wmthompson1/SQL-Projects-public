@@ -45,10 +45,10 @@ To add filters to the metric:
    | Viewable Sites | Apply this filter source type to a data source column for Site ID. Select this option to present a list of the users viewable sites. | n/a |
    | Viewable Warehouses | Apply this filter source type to a data source column for warehouse ID. Select this option to present a list of the users viewable warehouses. | n/a |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.md)
 Creating Data Sources
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

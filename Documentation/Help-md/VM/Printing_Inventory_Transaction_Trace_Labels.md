@@ -36,6 +36,6 @@ maximum lot sizes. You should immediately affix these labels to the
 materials or containers.
 
 To print thermal labels, see [Printing
-Part Thermal Labels](Printing_Part_Thermal_Labels.htm).
+Part Thermal Labels](Printing_Part_Thermal_Labels.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

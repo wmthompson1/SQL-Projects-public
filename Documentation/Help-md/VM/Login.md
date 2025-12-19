@@ -16,4 +16,4 @@ application. When you access this option, you must complete the sign
 in process; if you cancel out of it, Infor VISUAL closes, and you
 must re-start the application from your desktop or Start menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

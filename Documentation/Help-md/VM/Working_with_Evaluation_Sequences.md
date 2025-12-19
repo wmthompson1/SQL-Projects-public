@@ -14,4 +14,4 @@ following example, the value in the Evaluation Sequence field determines
 the evaluation order, starting with Sequence 1 and ending with Sequence
 3.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

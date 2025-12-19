@@ -12,4 +12,4 @@ button.
 The ECN Tree dialog appears with an indented list of the ECN in
 the left pane and a table in the right pane.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

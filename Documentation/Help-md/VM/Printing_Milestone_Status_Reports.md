@@ -108,4 +108,4 @@ If you selected File,
 a dialog box appears that you can use to name the file and the location
 to which you want VISUAL to print the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

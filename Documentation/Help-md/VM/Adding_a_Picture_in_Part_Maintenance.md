@@ -7,7 +7,7 @@ Adding a Picture in Part Maintenance
 
 You can add a picture of the part to the part record. Depending
 on your settings in Preferences Maintenance, you can [display
-the picture directly on the Part Maintenance window](Displaying_the_Picture_in_the_Part_Maintenance_Window.htm). Add pictures
+the picture directly on the Part Maintenance window](Displaying_the_Picture_in_the_Part_Maintenance_Window.md). Add pictures
 to parts at the tenant level.
 
 To add a picture:

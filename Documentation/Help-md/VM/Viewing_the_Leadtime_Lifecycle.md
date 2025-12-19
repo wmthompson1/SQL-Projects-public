@@ -27,7 +27,7 @@ To view the Leadtime Lifecycle:
 percentage complete of the entire lifecycle. You can decide whether
 to measure this percentage based on the number of steps in the process
 or the number of days in the process. See [Selecting
-a Measurement Basis for the Overall Percent Complete Calculation](Selecting_a_Measurement_Basis_for_the_Overall_Percent_Complete_Calculation.htm).
+a Measurement Basis for the Overall Percent Complete Calculation](Selecting_a_Measurement_Basis_for_the_Overall_Percent_Complete_Calculation.md).
 
 Part The part
 from the order or quote line.

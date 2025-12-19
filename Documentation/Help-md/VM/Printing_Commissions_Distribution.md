@@ -17,7 +17,7 @@ The report shows customer order line item amounts and commissions,
 and the standard or override commission sharing currently defined
 for the sales rep. Invoices and payments are not referenced. To report
 on actual commissions paid, use the [Commissions
-Actuals](Printing_Commissions_Actuals.htm) report.
+Actuals](Printing_Commissions_Actuals.md) report.
 
 1. Select Sales,
    Sales Commission Report.
@@ -59,7 +59,7 @@ is not found.
    select the output format for the report. If you select email,
    select the PDF Format check box to attach
    a PDF to the email instead of an RTF file. See [Report
-   Output Options](Report_Output_Options.htm).
+   Output Options](Report_Output_Options.md).
 8. Click Ok.
 
 ## QRP Files
@@ -69,4 +69,4 @@ is not found.
 | By Order ID | VMCSRR10.QRP |
 | By Sales Rep | VMCSRR11.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Commission_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Commission_Report.md) User-defined Help

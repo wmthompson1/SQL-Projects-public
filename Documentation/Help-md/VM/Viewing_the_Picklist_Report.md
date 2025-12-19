@@ -22,4 +22,4 @@ Material barcodes and part locations also show here if selected.
 You can print material requirements in part location sequence or
 in Sub ID, Operation Number, Piece Number sequence.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

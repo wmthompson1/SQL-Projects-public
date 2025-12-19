@@ -317,4 +317,4 @@ Labor Tickets - Labor tickets report completion
 quantities and labor hours against a work order operation. These are
 permanently linked and can be viewed if necessary.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

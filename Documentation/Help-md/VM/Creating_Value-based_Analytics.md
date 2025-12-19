@@ -131,10 +131,10 @@ column is displayed.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.md)
 Building Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

@@ -53,4 +53,4 @@ between start date of first load exists occurrence for an operation
 and the scheduled start date of that operation, measured in resource
 working hours.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

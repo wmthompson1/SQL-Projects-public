@@ -79,6 +79,6 @@ to the sites part table.
 If you edit a part's drawing number, drawing revision, drawing file,
 specifications, or customer pricing, you can use the Resetting Part
 Information function to update transactions. See [Resetting
-Part Information](Resetting_Part_Information_Master.htm).
+Part Information](Resetting_Part_Information_Master.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

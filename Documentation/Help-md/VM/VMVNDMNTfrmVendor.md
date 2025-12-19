@@ -29,7 +29,7 @@ the General Information section.
    the new Vendor ID. To comply with
    the European Union GDPR rules, we recommend that you do not use
    personal information, such as a name, for the ID. See [What
-   Is Individual Privacy?](VMINDPRVWhat.htm).
+   Is Individual Privacy?](VMINDPRVWhat.md).
 3. Enter
    the name of the vendor in the Name
    field.
@@ -77,7 +77,7 @@ table. If the buyer you select is excluded, a message is displayed.
 Click Yes to change the buyer to an eligible buyer. Click No to retain
 the excluded buyers. Excluded buyers are restricted from certain functionality
 on purchasing documents. See [Excluded
-Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.htm).
+Buyers and Vendor Documents](Excluded_Buyers_and_Vendor_Documents.md).
 
 Default
 Disp Addr ID - The address from which you want your vendor
@@ -89,7 +89,7 @@ edit of PO after receipt -
 Select this check box to prevent users from
 modifying purchase orders for this vendor after receipts have been
 made. Clear this check box to allow users to modify certain information
-on purchase orders after receipts have been made. See [Editing a Purchase Order](Editing_a_Purchase_Order.htm).
+on purchase orders after receipts have been made. See [Editing a Purchase Order](Editing_a_Purchase_Order.md).
 
 Default
 Ship To Address ID - The address to which you want your vendor
@@ -144,7 +144,7 @@ Enter
 the contact information in the data fields to create a new contact
 and click Save.
 The contact becomes
-the primary contact, and a contact ID is generated. See [Adding Contacts](VMCONMNTfrmContact.htm) for more information.
+the primary contact, and a contact ID is generated. See [Adding Contacts](VMCONMNTfrmContact.md) for more information.
 
 Specify a new contact
 in the Contacts for Vendor dialog -
@@ -237,14 +237,14 @@ code and mobile phone number.
     the Save toolbar button to save you
     information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Accounting_Information.htm) Entering Accounting Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Accounting_Information.md) Entering Accounting Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_VAT_Information_.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_VAT_Information_.md)
 Entering VAT Information for Vendors
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Intrastat_Information.htm) Entering Intrastat Information for Vendors
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Intrastat_Information.md) Entering Intrastat Information for Vendors
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Payment_Information.htm) Entering Electronic Payment Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Payment_Information.md) Entering Electronic Payment Information
 for Vendors

@@ -34,7 +34,7 @@ this field is unavailable.
 3. Click
    the Graph
    Type drop-down
-   list and select your preferred graph display option. See [Graphs](Graphs.htm)
+   list and select your preferred graph display option. See [Graphs](Graphs.md)
    for more information.
 4. Click
    the Currency drop-down
@@ -130,9 +130,9 @@ columns are displayed with the orders in the appropriate column based
 on their ship date. If you use multiple shop schedules, each schedule
 is displayed on a separate line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTWhat.md)
 What is the Revenue Report?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Examples_of_Printed_Revenue_Reports.htm) Examples of Printed Revenue Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Examples_of_Printed_Revenue_Reports.md) Examples of Printed Revenue Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.md) User-defined Help

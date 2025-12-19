@@ -10,26 +10,26 @@ about your business. You can sort the information in the grid by any
 of the columns, drill to a related document, or export the information
 in the grid to Microsoft Excel.
 
-For information about common features in grids, see [Grids](Grids.htm).
+For information about common features in grids, see [Grids](Grids.md).
 
 See these topics:
 
 * [Adding
-  a Detail Grid](Adding_a_Detail_Grid.htm)
+  a Detail Grid](Adding_a_Detail_Grid.md)
 * [Changing
-  a Detail Grid](Changing_a_Detail_Grid.htm)
+  a Detail Grid](Changing_a_Detail_Grid.md)
 * [Sorting
-  a Detail Grid](Sorting_a_Detail_Grid.htm)
+  a Detail Grid](Sorting_a_Detail_Grid.md)
 * [Drilling
-  to Related Records in a Detail Grid](Drilling_to_Related_Records_in_a_Detail_Grid.htm)
+  to Related Records in a Detail Grid](Drilling_to_Related_Records_in_a_Detail_Grid.md)
 * [Exporting
-  Detail Grid Information to Excel](Exporting_Information_to_Excel.htm)
+  Detail Grid Information to Excel](Exporting_Information_to_Excel.md)
 * [Removing
-  a Detail Grid](Removing_a_Detail_Grid.htm)
+  a Detail Grid](Removing_a_Detail_Grid.md)
 * [Available
-  Detail Grids](Available_Detail_Grids.htm)
+  Detail Grids](Available_Detail_Grids.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

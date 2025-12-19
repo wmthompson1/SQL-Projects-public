@@ -8,7 +8,7 @@ Advanced Browse Wildcards
 You can use wildcards and operators when you search
 for information in the advanced browse dialog. You can use wildcards
 with filters and with query by example searches. If you use [auto
-browsing](Using_Automatic_Browsing.htm), you can use the % and \_ wildcards when you specify text
+browsing](Using_Automatic_Browsing.md), you can use the % and \_ wildcards when you specify text
 in the ID field in the main window.
 
 These wildcards and operators are available:

@@ -192,7 +192,7 @@ Repeat this procedure for each line you
 want to add.
 
 12. Choose [CPO
-    special settings](Choosing_Special_CPO_Settings.htm) and begin to define a record layout. See
+    special settings](Choosing_Special_CPO_Settings.md) and begin to define a record layout. See
     Defining Record Layouts more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

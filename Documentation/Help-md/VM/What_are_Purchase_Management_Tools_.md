@@ -18,4 +18,4 @@ expandable explorer pane on the left and a table panel on the right.
 By selecting items in the explorer panel, you can change what appears
 in the table panel.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

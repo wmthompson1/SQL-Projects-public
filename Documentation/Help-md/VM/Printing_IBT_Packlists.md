@@ -115,6 +115,6 @@ allows you to select the number of copies to print.
 11. Make the appropriate
     selections in the dialog box and click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_IBT_Transportation_Documents.htm) Printing IBT Transportation Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_IBT_Transportation_Documents.md) Printing IBT Transportation Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.md) User-defined Help

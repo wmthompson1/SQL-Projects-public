@@ -14,4 +14,4 @@ to your projects.
 | --- | --- |
 | POSTIT.gif | You can also view your Earned Value Quantities in the Project Summary window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Calculate_Earned_Value.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Calculate_Earned_Value.md) User-defined Help

@@ -13,9 +13,9 @@ yet require them to ship a certain percentage of quantity each day.
 For PLN Allocations, see the section named Allocating PLN Forecasts
 for additional requirements. If you will also need to update Customer
 Order Line Item Accumulator fields when importing your PLN documents,
-see [Allocating PLN Forecasts](Allocating_PLN_Forecasts.htm)
+see [Allocating PLN Forecasts](Allocating_PLN_Forecasts.md)
 & [Updating Line
-Item Accumulator](Updating_Line_Item_Accumulators.htm) fields.
+Item Accumulator](Updating_Line_Item_Accumulators.md) fields.
 
 1. With either a [CPO](javascript:void(0);) or [PLN](javascript:void(0);) Key in the VMDIGEN window,
    select Delivery Schedule Allocation
@@ -39,7 +39,7 @@ The Day of Week table is auto-filled.
    Intransit Quantity and/or Start Proration
    from Transmission Date check boxes as appropriate.
 
-Click [here](Allocation_Examples.htm)
+Click [here](Allocation_Examples.md)
 for more information on how these options affect delivery schedule
 allocation.
 
@@ -74,4 +74,4 @@ the percentage out of 100 of allocation to occur on Friday.
 6. Click Save
    to save the customer delivery schedule allocation scheme.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

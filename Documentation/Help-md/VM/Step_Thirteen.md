@@ -30,4 +30,4 @@ date of the period.
    click the Close Period button to close
    the period.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

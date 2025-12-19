@@ -20,18 +20,18 @@ The Customize dialog box appears.
 3. Begin to customize the
    personal menu. See the following sections for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.htm) Adding Non-VISUAL Commands to Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.md) Adding Non-VISUAL Commands to Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Group_Captions.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Group_Captions.md)
 Editing Group Captions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Clearing_or_Resetting_the_Personal_Menu.htm) Clearing or Resetting the Personal Menu
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Clearing_or_Resetting_the_Personal_Menu.md) Clearing or Resetting the Personal Menu
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Commands_in_Group_Menus.htm) Editing Items in Group Menus
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Commands_in_Group_Menus.md) Editing Items in Group Menus
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.htm) Removing Items from Group Menus
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.md) Removing Items from Group Menus
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Groups.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Groups.md)
 Adding Groups

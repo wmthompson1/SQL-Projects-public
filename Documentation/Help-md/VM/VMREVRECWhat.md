@@ -22,6 +22,6 @@ in the revenue recognition transaction. If you have not entered an
 EAC, the transactions eligible for revenue recognition may not appear
 in the Prepare Revenue Recognition window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Revenue_Recognition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Revenue_Recognition.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

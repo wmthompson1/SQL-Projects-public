@@ -13,24 +13,24 @@ From the Maintenance menu, you can enter and maintain equipment
 information of the following types:
 
 * [Equipment
-  Type](Entering_Maintaining_and_Deleting_Equipment_Types.htm)
+  Type](Entering_Maintaining_and_Deleting_Equipment_Types.md)
 * [Equipment
-  Model](Entering_Maintaining_and_Deleting_Equipment_Models.htm)
+  Model](Entering_Maintaining_and_Deleting_Equipment_Models.md)
 * [Service
-  Area Maintenance](Entering_Maintaining_and_Deleting_Service_Areas.htm)
+  Area Maintenance](Entering_Maintaining_and_Deleting_Service_Areas.md)
 * [Service
-  Branch Maintenance](Entering_Maintaining_and_Deleting_Service_Branches.htm)
+  Branch Maintenance](Entering_Maintaining_and_Deleting_Service_Branches.md)
 * [Maintenance
-  Type](Entering_Maintaining_and_Deleting_Maintenance_Types.htm)
+  Type](Entering_Maintaining_and_Deleting_Maintenance_Types.md)
 * [Coverage
-  Hours Maintenance](Entering_Maintaining_and_Deleting_Coverage_Times.htm)
+  Hours Maintenance](Entering_Maintaining_and_Deleting_Coverage_Times.md)
 * [Part
-  Price List Maintenance](Establishing_Part_Price_Lists.htm)
+  Price List Maintenance](Establishing_Part_Price_Lists.md)
 * [Labor
-  Price List Maintenance](Establishing_Labor_Price_Lists.htm)
+  Price List Maintenance](Establishing_Labor_Price_Lists.md)
 * [Labor
-  Calendar Maintenance](Establishing_Labor_Calendars.htm)
+  Calendar Maintenance](Establishing_Labor_Calendars.md)
 * [Auto
-  Numbering](Setting_Up_Auto_Numbering.htm)
+  Numbering](Setting_Up_Auto_Numbering.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

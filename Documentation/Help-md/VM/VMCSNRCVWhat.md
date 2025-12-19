@@ -142,4 +142,4 @@ the customer/vendor.
 * Purchase Order Entry
 * Purchase Receipt Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.md) User-defined Help

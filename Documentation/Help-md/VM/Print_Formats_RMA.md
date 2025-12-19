@@ -12,4 +12,4 @@ The following QRP files apply to RMA reports:
 
 You can edit these report formats.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

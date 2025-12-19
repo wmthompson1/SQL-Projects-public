@@ -20,13 +20,13 @@ This table shows links to the concepts behind the Costing Utilities
 Window.
 
 | Concept | Description |
-| [What is Costing Utilities?](VMAPLUTLWhat.htm) | This topic describes the benefits of Costing Utilities. |
-| [Using Costing Utilities](Using_Costing_Utilities.htm) | This topic provides an overview of the actions that occur when you run costing utilities. |
-| [Manufacturing Costs](Manufacturing_Costs.htm) | This topic describes the types of manufacturing costs. |
-| [Account Assignments](Account_Assignments.htm) | This topic describes how costs are recorded to G/L accounts. |
-| [Receipt Transaction Costing (Work Orders)](Receipt_Transaction_Costing_Work_Orders.htm) | This topic describes the actions that occur when you update receipt transaction costs. |
-| [Inventory Transaction Costing](Inventory_Transaction_Costing.htm) | This topic describes the actions that occur when you update inventory transaction costs. |
-| [Manufacturing Journals](Manufacturing_Journals.htm) | This topic describes the manufacturing journals that are prepared with Costing Utilities. actions that occur when you update receipt transaction costs. |
+| [What is Costing Utilities?](VMAPLUTLWhat.md) | This topic describes the benefits of Costing Utilities. |
+| [Using Costing Utilities](Using_Costing_Utilities.md) | This topic provides an overview of the actions that occur when you run costing utilities. |
+| [Manufacturing Costs](Manufacturing_Costs.md) | This topic describes the types of manufacturing costs. |
+| [Account Assignments](Account_Assignments.md) | This topic describes how costs are recorded to G/L accounts. |
+| [Receipt Transaction Costing (Work Orders)](Receipt_Transaction_Costing_Work_Orders.md) | This topic describes the actions that occur when you update receipt transaction costs. |
+| [Inventory Transaction Costing](Inventory_Transaction_Costing.md) | This topic describes the actions that occur when you update inventory transaction costs. |
+| [Manufacturing Journals](Manufacturing_Journals.md) | This topic describes the manufacturing journals that are prepared with Costing Utilities. actions that occur when you update receipt transaction costs. |
 
 ## Tasks
 
@@ -34,9 +34,9 @@ This table shows the tasks that you can complete in the Costing
 Utilities window:
 
 | Task | Description |
-| [Running Costing Utilities Manually](Running_Costing_Utilities_Manually.htm) | This topic describes how to run costing utilities manually. |
-| [Prepare Manufacturing Journals](Prepare_Manufacturing_Journals.htm) | This topic describes how to prepare manufacturing journals for posting. |
-| [Printing Costing Reports](Printing_Costing_Reports.htm) | This topic describes how to print costing reports. |
+| [Running Costing Utilities Manually](Running_Costing_Utilities_Manually.md) | This topic describes how to run costing utilities manually. |
+| [Prepare Manufacturing Journals](Prepare_Manufacturing_Journals.md) | This topic describes how to prepare manufacturing journals for posting. |
+| [Printing Costing Reports](Printing_Costing_Reports.md) | This topic describes how to print costing reports. |
 
 ## Fields
 
@@ -133,4 +133,4 @@ Labor journal contains a listing of the summary transactions created
 by the Costing Utilities as a result of processing labor tickets which
 are not for a specific work order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

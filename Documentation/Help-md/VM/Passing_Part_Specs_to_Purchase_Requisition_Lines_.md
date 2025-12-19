@@ -20,4 +20,4 @@ above button on the Table toolbar or configuring the line item table
 to show the Text column, which VISUAL uses
 to display specification text.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

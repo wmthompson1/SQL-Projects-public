@@ -15,4 +15,4 @@ To change the background color:
    picker, select the color to use.
 3. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

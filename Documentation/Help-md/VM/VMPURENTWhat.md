@@ -14,6 +14,6 @@ window.
 You can enter a purchase order here, or you can generate a purchase
 order using the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Purchase_Order_Entry.htm) Starting Purchase Order Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Purchase_Order_Entry.md) Starting Purchase Order Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

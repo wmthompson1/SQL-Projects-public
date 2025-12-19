@@ -134,4 +134,4 @@ when you want to reduce a buffer size.
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Overview
 of DBR Scheduling
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.md) User-defined Help

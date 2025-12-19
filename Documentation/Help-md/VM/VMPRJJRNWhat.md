@@ -16,4 +16,4 @@ You can manipulate single currency balances or all tracking currency
 balances as well as view postings from all subsidiary ledgers. You
 can create reversing entries or transpose an entry made improperly.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Adjustment_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Adjustment_Entry.md) User-defined Help

@@ -18,4 +18,4 @@ and a tabbed section. Dont concern yourself with any of the fields
 in the window yet. Begin using the window by entering general equipment
 information. See the next section for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

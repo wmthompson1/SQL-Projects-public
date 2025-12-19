@@ -46,9 +46,9 @@ You can edit the following service charge line item information:
 * Service charge miscellaneous
   reference
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Existing_Packlists.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Existing_Packlists.md)
 Editing Existing Packlists
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Appending_Service_Charge_Lines_to_Packlists.htm) Appending Service Charge Lines to Packlists
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Appending_Service_Charge_Lines_to_Packlists.md) Appending Service Charge Lines to Packlists
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

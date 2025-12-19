@@ -20,6 +20,6 @@ existing information and import new information.
 See these topics:
 
 * [Opening
-  Advanced Browse Tables for Editing](Opening_Advanced_Browse_Tables_for_Editing.htm)
+  Advanced Browse Tables for Editing](Opening_Advanced_Browse_Tables_for_Editing.md)
 * [Importing
-  Information from Excel into the Advanced Browse Table](Importing_Information_from_Excel_advanced.htm)
+  Information from Excel into the Advanced Browse Table](Importing_Information_from_Excel_advanced.md)

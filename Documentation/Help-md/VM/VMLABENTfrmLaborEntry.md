@@ -197,7 +197,7 @@ hours can be reported, but the percent of quantity remaining value
 is not changed.
 
 See [Setting
-Preferences in Site Maintenance and the Manufacturing Window](Setting_Preferences_in_Site_Maintenance_and_the_Manufacturing_Window.htm).
+Preferences in Site Maintenance and the Manufacturing Window](Setting_Preferences_in_Site_Maintenance_and_the_Manufacturing_Window.md).
 
 Qty
 Complete/Percent Completed If the operation is set up to
@@ -374,4 +374,4 @@ indicate that labor is complete and the operation is closed:
    to change the status of the operation to Closed. The operation
    completion meter will not equal 100%.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

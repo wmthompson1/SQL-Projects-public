@@ -32,4 +32,4 @@ To hide or make visible every column at once, click the Select
 All button and then click the Make Hidden
 or Make Visible button as appropriate.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

@@ -35,19 +35,19 @@ The Project Maintenance window appears.
 Project Type button
 and select the type of project you are entering. For more information
 on setting up project types, refer to [Setting
-Up Project Type Codes](Setting_Up_Project_Type_Codes.htm).
+Up Project Type Codes](Setting_Up_Project_Type_Codes.md).
 
 Division Click
 the Division button and select the division
 you want to use for this project. For more information on setting
 up divisions, refer to [Setting
-Up Divisions](Setting_Up_Divisions.htm).
+Up Divisions](Setting_Up_Divisions.md).
 
 Business Line
 Click the Business Line button and select
 the type of business you want to associate with this project. For
 more information on setting up business lines, refer to [Setting
-Up Business Line Codes](Setting_Up_Business_Line_Codes.htm).
+Up Business Line Codes](Setting_Up_Business_Line_Codes.md).
 
 Customer Click
 the Customer button and select the name
@@ -57,7 +57,7 @@ Contract Type
 Click the Contract Type button and select
 the contract type you want to associate with this project. For more
 information on setting up contract types, refer to [Setting
-Up Contract Type Codes](Setting_Up_Contract_Type_Codes.htm).
+Up Contract Type Codes](Setting_Up_Contract_Type_Codes.md).
 
 5. Using the appropriate
    arrows, select the following information:
@@ -82,7 +82,7 @@ name, the Create Project Warehouse appears automatically selected.
 After you create your project, you can further define your project
 warehouse in the Warehouse Maintenance window. For more information
 on the project warehouse, refer to [Refining
-or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.htm).
+or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.md).
 
 If you clear the Create Project Warehouse,
 you have to use Warehouse Maintenance to create your project warehouse,
@@ -110,10 +110,10 @@ box.
    define a default WBS code, default reference sequence number,
    and default reference sub ID for your project. For more information
    on WBS codes, refer to [Creating
-   Work Breakdown Structures (WBS)](Setting_Up_WBS_Codes_for_Projects.htm). For more information on the
+   Work Breakdown Structures (WBS)](Setting_Up_WBS_Codes_for_Projects.md). For more information on the
    reference sequence numbers and reference sub IDs, refer to refer
    to Building Projects.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

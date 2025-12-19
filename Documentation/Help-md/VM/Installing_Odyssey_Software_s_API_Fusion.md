@@ -9,7 +9,7 @@ For Odyssey Softwares (www.odysseysoftware.com) API-Fusion,
 you will want to download apifnsetup.exe
 at
 
-[http://www.odysseysoftware.com/products\_apifusion.aspl](http://www.odysseysoftware.com/download.htm).
+[http://www.odysseysoftware.com/products\_apifusion.aspl](http://www.odysseysoftware.com/download.md).
 
 You will need the following demo keys to unlock the ComServer /
 ODBC Agent temporarily. The keys last 3 months and it takes a week

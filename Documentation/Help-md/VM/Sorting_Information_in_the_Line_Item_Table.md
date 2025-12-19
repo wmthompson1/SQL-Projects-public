@@ -15,4 +15,4 @@ the triangle. If the triangle points up, then the system sorts the
 column in ascending order. If the triangle points down, then the system
 sorts the column in descending order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

@@ -97,4 +97,4 @@ Windows dialog box appears.
 
 VISUAL prints the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Delivery_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Delivery_Report.md) User-defined Help

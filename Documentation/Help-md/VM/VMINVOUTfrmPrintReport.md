@@ -77,7 +77,7 @@ now presents a print preferences dialog box (Print), displays the
 report on your screen (View), or displays a dialog box that lets you
 specify where you want to save this report (File).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_Inventory_Out.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Print_Formats_Inventory_Out.md)
 Inventory Out Reports Printing Formats
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Out_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Out_Report.md) User-defined Help

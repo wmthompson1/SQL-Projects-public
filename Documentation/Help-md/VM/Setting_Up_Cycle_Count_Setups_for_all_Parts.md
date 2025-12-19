@@ -49,7 +49,7 @@ codes.
 ABC Code - To
 set up counts for parts with a certain ABC code, enter the ABC code
 in this field. Leave the field blank to include all ABC codes. See
-[Using ABC Analysis](Using_ABC_Analysis.htm).
+[Using ABC Analysis](Using_ABC_Analysis.md).
 
 4. In the Count Setting
    section, specify when to perform the count:
@@ -99,4 +99,4 @@ row.
    Maintain, Cycle
    Count Setup. Cycle count information is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

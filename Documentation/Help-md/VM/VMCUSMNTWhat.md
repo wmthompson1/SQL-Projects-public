@@ -51,6 +51,6 @@ about your sales representatives, including their commission rates,
 how you pay them, and whether they share commission with another sales
 representative.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Customer_Maintenance.htm) Starting Customer Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Customer_Maintenance.md) Starting Customer Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

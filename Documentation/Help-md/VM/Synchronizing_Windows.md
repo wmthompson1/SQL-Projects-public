@@ -31,4 +31,4 @@ Select Synchronize Vertical
 when you want to scroll up and down the lists of resources in more
 than one schedule windows.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

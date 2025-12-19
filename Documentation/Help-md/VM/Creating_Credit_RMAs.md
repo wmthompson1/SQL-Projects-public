@@ -44,7 +44,7 @@ original customer order line, select this option. To create a new
 customer order to process the credit, clear this option. Clear the
 check box if a different customer than the one who placed the order
 should be credited for the return. See [Costing
-Credit RMAs](Costing_Credit_RMAs.htm).
+Credit RMAs](Costing_Credit_RMAs.md).
 
 Ship from Original Order
 If you are re-shipping material, select this option to ship the
@@ -96,7 +96,7 @@ are returned. If you specified an ID in the New Customer ID field,
 the credit memo is created for that customer. If the New Customer
 ID field is blank, then the credit memo is created for the customer
 in the Customer ID field. See [Receiving
-Returned Materials](Receiving_Returned_Materials.htm).
+Returned Materials](Receiving_Returned_Materials.md).
 
 After you receive the returned materials,
 the materials are stored in your inventory. If these materials are

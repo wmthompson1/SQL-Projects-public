@@ -18,4 +18,4 @@ If you are licensed to use multiple sites, you must select a site
 ID on the Order Mgt tab before accessing the Shipping Address dialog
 to set up order management information for the alternate address.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

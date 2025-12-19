@@ -121,5 +121,5 @@ do not appear in the table, including notations and specifications.
 If you are currently editing or creating a Purchase Order, VISUAL
 prompts you to confirm before the View option resets the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined
 Help

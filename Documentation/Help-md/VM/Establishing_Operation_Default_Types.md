@@ -42,4 +42,4 @@ To add operation Types do the following:
    another Type line and add operation default information for it.
    Continue until done and return to the previous Shop Resource Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

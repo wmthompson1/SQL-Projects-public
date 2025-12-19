@@ -22,4 +22,4 @@ field at the top of the dialog box.
 4. Click the Save
    button to save any modified pallet lines.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

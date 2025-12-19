@@ -33,4 +33,4 @@ the Location you want to use as a Transit Location
 See Part Maintenance for more information on setting Location IDs
 as Transit Location IDs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

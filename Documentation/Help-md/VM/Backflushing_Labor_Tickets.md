@@ -38,19 +38,19 @@ of each other or together.
 
 See these topics:
 
-[Backflushing Limitations](Backflushing_Limitations.htm)
+[Backflushing Limitations](Backflushing_Limitations.md)
 
-[Setting Up Labor Backflush](Setting_Up_Labor_Backflush.htm)
+[Setting Up Labor Backflush](Setting_Up_Labor_Backflush.md)
 
 [Backflush Settings
-and Behavior](Backflush_Settings_and_Behavior.htm)
+and Behavior](Backflush_Settings_and_Behavior.md)
 
 [Understanding
-How VISUAL Backflushes](Understanding_How_VISUAL_Backflushes.htm)
+How VISUAL Backflushes](Understanding_How_VISUAL_Backflushes.md)
 
-[Auto-issue Parts](Auto-issue_Parts.htm)
+[Auto-issue Parts](Auto-issue_Parts.md)
 
 [Using
-Labor Backflush with Auto-issue Parts](Using_Labor_Backflush_with_Auto-issue_Parts.htm)
+Labor Backflush with Auto-issue Parts](Using_Labor_Backflush_with_Auto-issue_Parts.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

@@ -10,7 +10,7 @@ replacements to other inventory parts. Use substitute parts to meet
 order demands when the part you originally intended to use is unavailable.
 
 Define substitutes for parts in Part Maintenance. See [Adding
-Parts to the Database](VMPRTMNTfrmPart.htm).
+Parts to the Database](VMPRTMNTfrmPart.md).
 
 From the Tools menu of the Order Management Window, select Substitute Parts.
 
@@ -44,16 +44,16 @@ substitute part.
 Unallocated Demand - The available quantity
 of the part that you have not yet allocated to demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Substitute_Part_Availability_Information.htm) Viewing Substitute Part Availability
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Substitute_Part_Availability_Information.md) Viewing Substitute Part Availability
 Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Replace_a_Primary_Part_with_a_Substitute_Part.htm) Using Drag n Drop to Replace a Primary
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Replace_a_Primary_Part_with_a_Substitute_Part.md) Using Drag n Drop to Replace a Primary
 Part with a Substitute Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Replace_a_Primary_Part_with_a_Substitute_Part.htm) Using the Right Mouse Button to Replace
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Replace_a_Primary_Part_with_a_Substitute_Part.md) Using the Right Mouse Button to Replace
 a Primary Part with a Substitute Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Insert_a_Substitute_Part_into_the_Current_Customer_Order.htm) Using the Right Mouse Button to Insert
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Insert_a_Substitute_Part_into_the_Current_Customer_Order.md) Using the Right Mouse Button to Insert
 a Substitute Part into the Current Customer Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -20,15 +20,15 @@ following process to enter your companys response to your customers
 request for proposal (RFP).
 
 1. From the Project menu,
-   select [Project window](VMMFGWINPROJECTfrmMfgWin.htm).
+   select [Project window](VMMFGWINPROJECTfrmMfgWin.md).
 2. Click the New
    button to open a new [Project
-   Header](Creating_a_New_Project_in_the_Project_Window.htm).
+   Header](Creating_a_New_Project_in_the_Project_Window.md).
 
 Enter a new ID in the Project Info, then
 press the Tab key. When the system asks if you would like to add the
 project, click Yes. The system opens the
-[Project Maintenance window](Creating_New_Projects.htm).
+[Project Maintenance window](Creating_New_Projects.md).
 
 3. At minimum, enter the
    Project Type and at least one WBS code to use on the Project Header.
@@ -46,26 +46,26 @@ assign these parts to your project warehouse.
 
 Add all the WBS codes for your project,
 then build the project master. As you build the project master, you
-can enter [budget information](VMMFGWINPROJECTfrmOperation.htm).
+can enter [budget information](VMMFGWINPROJECTfrmOperation.md).
 
 Assign a default WBS code by choosing a
 task to use as the project default. You can also enter this information
 in the Project Maintenance window.
 
 5. [Release
-   the project](Releasing_a_Project.htm).
+   the project](Releasing_a_Project.md).
 6. [Schedule
-   the project](Scheduling_Projects.htm).
+   the project](Scheduling_Projects.md).
 7. In the [Budget
-   Maintenance](Setting_Up_Budgets.htm) window in available in the Project Summary window,
+   Maintenance](Setting_Up_Budgets.md) window in available in the Project Summary window,
    complete the following tasks:
 
 Enter budget figures, or review the budget
 figures entered in the Project window. Then, [spread
-the budget](Spreading_Project_Budgets.htm).
+the budget](Spreading_Project_Budgets.md).
 
 [Initialize
-the estimate to complete (ETC)](Initializing_Estimate_to_Complete_Figures.htm).
+the estimate to complete (ETC)](Initializing_Estimate_to_Complete_Figures.md).
 
 8. In the Project Maintenance
    window, complete the following tasks:
@@ -78,15 +78,15 @@ through the Project window, select a default WBS code in the Project
 Maintenance window.
 
 Enter [Contractual
-General Information](Step_2_Entering_Contract_General_Information.htm), [Contractual
-Financial Information](Step_3_Entering_Contract_Financial_Information.htm), and [Billing
-Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.htm).
+General Information](Step_2_Entering_Contract_General_Information.md), [Contractual
+Financial Information](Step_3_Entering_Contract_Financial_Information.md), and [Billing
+Ceilings](Step_4_Entering_Project_Billing_Caps_and_Ceilings.md).
 
 9. Open the [Customer
-   Order Entry](Entering_Project_Information_in_Customer_Orders.htm) window to complete the contract information.
+   Order Entry](Entering_Project_Information_in_Customer_Orders.md) window to complete the contract information.
 10. After Customer Order
     Entry information is complete, enter [EAC/Target
-    Costs](Entering_Project_Estimates_at_Completion.htm).
+    Costs](Entering_Project_Estimates_at_Completion.md).
 
 While we recommend creating projects using the process outlined
 above, the system does allow you some flexibility in creating your

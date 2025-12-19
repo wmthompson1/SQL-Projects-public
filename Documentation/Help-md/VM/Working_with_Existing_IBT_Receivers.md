@@ -25,8 +25,8 @@ Click Yes to continue. VISUAL displays the
 above message box; click No to discontinue
 the process.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Calling_Up_Existing_Receivers.htm) Calling Up Existing Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Calling_Up_Existing_Receivers.md) Calling Up Existing Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Receivers_IBT_Receipts.htm) Deleting Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Receivers_IBT_Receipts.md) Deleting Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

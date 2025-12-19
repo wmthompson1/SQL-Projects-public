@@ -46,4 +46,4 @@ the following appears:
   Qty Allocated column, the quantity thus far of the purchase
   order line that you have allocated to sources of demand appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

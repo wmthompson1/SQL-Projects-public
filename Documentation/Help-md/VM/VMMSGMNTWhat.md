@@ -25,6 +25,6 @@ This feature is helpful if you want to:
 * Need immediate notification
   that an event has occurred.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Message_Maintenance.htm) Starting Message Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Message_Maintenance.md) Starting Message Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.md) User-defined Help

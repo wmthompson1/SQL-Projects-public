@@ -39,4 +39,4 @@ are working in the project environment, VISUALs uses a different
 hierarchy of accounts than when you are working in a standard manufacturing
 environment.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.md) User-defined Help

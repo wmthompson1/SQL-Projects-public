@@ -15,7 +15,7 @@ are attached to the record.
 To view an attached document, click the Documents
 toolbar button and double-click the document to view it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.md)
 What is Document Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

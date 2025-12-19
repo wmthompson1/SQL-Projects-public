@@ -67,4 +67,4 @@ use percentage of completion as the billing basis.
 6. Click Save.
    The system alerts you to the actions it performed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.md) User-defined Help

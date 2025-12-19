@@ -22,8 +22,8 @@ This table shows links to the concepts behind the Allocation Utility
 Window.
 
 | Concept | Description |
-| [Allocation Processing](Allocation_Processing.htm) | This topic describes how the utility processes allocations. |
-| [Allocation Utilities at Work](Allocation_Utilities_at_Work.htm) | This topic provides a specific example of how the Allocation Utility allocates supply to a customer order when on-hand quantities cannot satisfy demand. |
+| [Allocation Processing](Allocation_Processing.md) | This topic describes how the utility processes allocations. |
+| [Allocation Utilities at Work](Allocation_Utilities_at_Work.md) | This topic provides a specific example of how the Allocation Utility allocates supply to a customer order when on-hand quantities cannot satisfy demand. |
 
 ## Tasks
 
@@ -31,9 +31,9 @@ This table shows the tasks that you can complete in the Allocation
 Utilities window:
 
 | Task | Description |
-| [Starting the Allocation Utilities](Starting_the_Allocation_Utilities.htm) | Use this procedure to start the Allocation Utilities window |
-| [Setting Allocation Utility Preferences](Setting_Allocation_Utility_Preferences.htm) | Use this procedure to specify the criteria to use for the allocation process. |
-| [Running the Allocation Utility](Running_the_Allocation_Utility.htm) | Use this procedure to run the allocation utility. |
+| [Starting the Allocation Utilities](Starting_the_Allocation_Utilities.md) | Use this procedure to start the Allocation Utilities window |
+| [Setting Allocation Utility Preferences](Setting_Allocation_Utility_Preferences.md) | Use this procedure to specify the criteria to use for the allocation process. |
+| [Running the Allocation Utility](Running_the_Allocation_Utility.md) | Use this procedure to run the allocation utility. |
 
 ## Fields
 
@@ -110,4 +110,4 @@ Future Supply Orders check box. Select this check box if you
 want the Allocation Utility to allocate firmed work order quantities
 to customer order demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help

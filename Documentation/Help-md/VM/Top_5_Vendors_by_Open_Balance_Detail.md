@@ -5,7 +5,7 @@ Top 5 Vendors by Open Balance Detail
 
 # Top Vendors by Open Balance Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid lists the invoices for the vendors with whom you have the highest
 unpaid invoice amounts. You can specify the number of vendors to include.
 Unpaid invoices that are overdue and invoices that are not due to
@@ -23,10 +23,10 @@ ID, Invoice ID, Invoice Date, Payment Date, Due Date, Last Paid Date,
 Posting Date, Pay Status, Total Amount, Discount Taken, Paid Amount,
 Balance Amount, Currency ID, Type, Site ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

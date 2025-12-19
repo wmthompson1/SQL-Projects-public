@@ -23,17 +23,17 @@ to be run, the service runs MRP based on the settings specified in
 the Material Requirements Planning Service Schedule dialog.
 
 If you set up the MRP Service, you can still [run
-MRP manually](Using_Material_Requirements_Planning.htm).
+MRP manually](Using_Material_Requirements_Planning.md).
 
 See these procedures:
 
 * [Installing
-  the MRP Service](VMMRPSVCfrmMain.htm)
+  the MRP Service](VMMRPSVCfrmMain.md)
 * [Scheduling
-  the MRP Service](Scheduling_the_MRP_Service.htm)
+  the MRP Service](Scheduling_the_MRP_Service.md)
 * [Deactivating
-  an MRP Service Schedule](Deactivating_an_MRP_Service_Schedule.htm)
+  an MRP Service Schedule](Deactivating_an_MRP_Service_Schedule.md)
 * [Deleting
-  an MRP Service Schedule](Deleting_an_MRP_Service_Schedule.htm)
+  an MRP Service Schedule](Deleting_an_MRP_Service_Schedule.md)
 * [Removing
-  the MRP Service](Removing_the_MRP_Service.htm)
+  the MRP Service](Removing_the_MRP_Service.md)

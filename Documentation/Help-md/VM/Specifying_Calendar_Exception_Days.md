@@ -45,4 +45,4 @@ is not to work at all, enter zero (0) in that shifts column.
    The updates that you made take effect the next time that you run
    the Global Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

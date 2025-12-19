@@ -12,9 +12,9 @@ not: An Order Management tab and a Monetary tab.
 Click a link below for more information.
 
 * [Selecting
-  Customer Order Types](Selecting_Customer_Order_Types_.htm)
+  Customer Order Types](Selecting_Customer_Order_Types_.md)
 * [Viewing
   & Setting Customer Terms and Currency IDs in the Monetary
-  Tab](Viewing___Setting_Customer_Terms_and_Currency_IDs_in_the_Monetary_Tab.htm)
+  Tab](Viewing___Setting_Customer_Terms_and_Currency_IDs_in_the_Monetary_Tab.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -22,19 +22,19 @@ You can view the following information from the Vendor Inquiry window:
 * Purchase Order Request for
   Quotes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Purchase_Receipts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Purchase_Receipts.md)
 Viewing Purchase Receipts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Back_Orders.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Back_Orders.md)
 Viewing Back Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Status.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Status.md)
 Viewing Work Order Statuses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Month_to_Date_and_Year_to_Date_Vendor_status.htm) Viewing MTD/YTD Vendor Status
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Month_to_Date_and_Year_to_Date_Vendor_status.md) Viewing MTD/YTD Vendor Status
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Purchase_Requisitions_Vendor_Inquiry.htm) Viewing Purchase Requisitions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Purchase_Requisitions_Vendor_Inquiry.md) Viewing Purchase Requisitions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Vendor_RFQs_Vendor_Inquiry.htm) Viewing Vendor RFQs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Vendor_RFQs_Vendor_Inquiry.md) Viewing Vendor RFQs

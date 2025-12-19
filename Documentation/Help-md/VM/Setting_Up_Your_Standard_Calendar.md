@@ -24,4 +24,4 @@ using Site Maintenance to edit the weekly calendar.
 If you are licensed to use a single site, this is the equivalent
 of using Application Global Maintenance to edit the weekly calendar
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

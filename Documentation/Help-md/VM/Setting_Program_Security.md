@@ -70,7 +70,7 @@ of the purchase order exceeds the limit you set for the user.
    component settings have not been changed. For more information
    on the program components for which you can define security settings,
    refer to [Program
-   Component Security Settings](Program_Component_Security_Settings.htm).
+   Component Security Settings](Program_Component_Security_Settings.md).
 6. If the Field column
    contains Yes or No, you can control access to specific program
    fields. If the Field column contains Yes, then the default field
@@ -78,7 +78,7 @@ of the purchase order exceeds the limit you set for the user.
    then the default field settings have not been changed. For more
    information on the program fields for which you can define security
    settings, refer to [Program
-   Field Security Settings](Program_Field_Security_Settings.htm).
+   Field Security Settings](Program_Field_Security_Settings.md).
 7. When you are finished
    defining security settings, click Save.
 
@@ -89,4 +89,4 @@ permissions for user Bob for Part Maintenance and Bob has Part Maintenance
 open, those permissions do not take effect until Bob closes Part Maintenance
 and starts it again.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

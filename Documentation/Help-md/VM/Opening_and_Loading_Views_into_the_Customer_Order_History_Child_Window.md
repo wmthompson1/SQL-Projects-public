@@ -57,10 +57,10 @@ Shipping Status
 - The status of the customer order. Statuses include: Not Shipped
 & Late, Not Shipped & Not Late, Partially Shipped, Shipped,
 and Cancellation Before Shipment . Each status has a different colored
-icon. Click [here](VMORDWINfrmCustOrderHistory.htm) for
+icon. Click [here](VMORDWINfrmCustOrderHistory.md) for
 more information.
 
 Carrier ID - The
 customers default carrier, from Customer Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

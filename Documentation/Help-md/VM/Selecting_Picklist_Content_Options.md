@@ -29,4 +29,4 @@ All specified picklists are printed as one print job. Pages break
 for work orders if all legs are being printed, all materials for
 all legs are printed as one list.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm)  User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md)  User-defined Help

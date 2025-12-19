@@ -129,4 +129,4 @@ If you are using generated IDs, the revision IDs are entered in
 order when you create a revision. If you have used all of the generated
 revision IDs, you are warned when you try to create a revision.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

@@ -40,4 +40,4 @@ For example:
 Run c:\Infor\visual\vmdlsync.exe D VMFG U USERNAME P PASSWORD
 ENG\_ID c:\Infor\temp\file.txt SITE\_ID MMC LOG\_PATH c:\Infor\logs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Data_Import_Utility.md) User-defined Help

@@ -35,7 +35,7 @@ the department the default department, highlight the line and click
 the Set Default Department button.
 
 Summarize to Department
-If the department has a subordinate department (click [here](Specifying_Subordinate_Departments.htm)
+If the department has a subordinate department (click [here](Specifying_Subordinate_Departments.md)
 for more on subordinate departments), the department ID appears in
 this column as a summarized or reporting subordinate.
 
@@ -57,9 +57,9 @@ and maintain cost category codes for materials, services, and labor.
 5. Click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif") Adding User Dimensions to Departments](Adding_User_Dimension_Codes_to_Departments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif") Adding User Dimensions to Departments](Adding_User_Dimension_Codes_to_Departments.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.htm) Deleting Codes in Application Global
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.md) Deleting Codes in Application Global
 Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

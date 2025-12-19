@@ -29,4 +29,4 @@ The List of Tests dialog box appears.
 VISUAL runs the test after you enter the
 results in Test Definition Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

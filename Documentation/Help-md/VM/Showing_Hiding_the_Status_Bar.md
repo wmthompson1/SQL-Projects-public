@@ -12,4 +12,4 @@ in the status bar. As you drag an operation to a different date and
 time, the status bar displays the time and date upon which you are
 about to drop the operation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

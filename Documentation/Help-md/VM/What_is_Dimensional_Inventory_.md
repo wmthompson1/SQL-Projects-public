@@ -66,4 +66,4 @@ unit of measure, there should be no difficulty.
 | --- | --- |
 | POSTIT.gif | VISUAL does not support Dimensional Inventory for Inter Branch Transfers or Consignments. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.md) User-defined Help

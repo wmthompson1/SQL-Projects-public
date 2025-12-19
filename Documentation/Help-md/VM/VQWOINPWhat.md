@@ -12,7 +12,7 @@ also allows you to copy tests from one work order to another work
 order for the same part. You can also change the sample size and status
 of a test step using Work Order/Operation Test Input.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQWOINPfrmWorkInput.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQWOINPfrmWorkInput.md)
 Using Work Order/Operation Input
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.md) User-defined Help

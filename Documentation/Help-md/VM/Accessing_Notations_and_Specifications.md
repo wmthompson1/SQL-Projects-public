@@ -22,4 +22,4 @@ menu. This menu contains options to view the different types of notes
 and specs available. This menu also contains options for controlling
 the display of notes and specs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

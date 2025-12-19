@@ -68,4 +68,4 @@ the ID if you specified an existing ID.
    the Save button. Click the Close
    button to return to the Equipment Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

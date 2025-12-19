@@ -10,7 +10,7 @@ multiple sites, install the service for each site where you want to
 use the service to run costing.
 
 Before you install the service, make sure the computer where you
-are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 
 To install the service:
 
@@ -90,7 +90,7 @@ date time].log, and a new VMCSTSVC\_[Your Site Name].log is created.
    for another site, repeat steps 5 through 7. Repeat these steps
    for each site where you want to run costing with the service.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSTSVCWhat.md)
 Running Costing with the Costing Service
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

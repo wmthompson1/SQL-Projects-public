@@ -88,4 +88,4 @@ VISUAL prints the report.
 | By Work Order | VMSCHR15.QRP |
 | By Product Code | VMSCHR16.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Production_Schedule_Report.md) User-defined Help

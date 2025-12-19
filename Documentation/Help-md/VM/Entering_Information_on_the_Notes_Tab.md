@@ -14,4 +14,4 @@ enter the text you want.
 When you have finished entering notes or comments for this project,
 click the Save button on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Maintenance.md) User-defined Help

@@ -34,7 +34,7 @@ This table shows the tasks that you can complete in the Bill of
 Material Report window:
 
 | Task | Description |
-| [Generating Bill of Material Reports](Generating_Bill_of_Material_Reports.htm) | Use this procedure to generate bill of material reports. |
+| [Generating Bill of Material Reports](Generating_Bill_of_Material_Reports.md) | Use this procedure to generate bill of material reports. |
 
 ## Fields
 
@@ -87,6 +87,6 @@ Output
 format
 
 Specify how to output the report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.md) User-defined Help

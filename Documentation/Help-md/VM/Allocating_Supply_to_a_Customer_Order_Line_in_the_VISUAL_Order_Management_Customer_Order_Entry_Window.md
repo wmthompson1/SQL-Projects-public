@@ -42,7 +42,7 @@ assign supply. At this point, you can use a substitute part or a cross-selling
 part in the focus parts place; you can also assign supply from another
 source.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Allocated_Quantities_for_a_Customer_Order_Line.htm) Viewing Allocated Quantities for a Customer
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Allocated_Quantities_for_a_Customer_Order_Line.md) Viewing Allocated Quantities for a Customer
 Order Line
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

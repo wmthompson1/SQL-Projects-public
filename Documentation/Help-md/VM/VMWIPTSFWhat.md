@@ -25,16 +25,16 @@ by these actions:
 See these topics:
 
 [About the WIP Inventory
-Transaction Window](VMWIPTSFfrmWIPInventoryEntry.htm)
+Transaction Window](VMWIPTSFfrmWIPInventoryEntry.md)
 
 [Adjusting WIP
-Materials into Locations](Adjusting_WIP_Materials_into_Locations.htm)
+Materials into Locations](Adjusting_WIP_Materials_into_Locations.md)
 
 [Adjusting
-WIP Materials out of Locations](Adjusting_WIP_Materials_out_of_Locations.htm)
+WIP Materials out of Locations](Adjusting_WIP_Materials_out_of_Locations.md)
 
 [Transferring
-WIP Materials Between Locations](Transferring_WIP_Materials_Between_Locations.htm)
+WIP Materials Between Locations](Transferring_WIP_Materials_Between_Locations.md)
 
 [Reviewing WIP
-Inventory Transactions](Reviewing_WIP_Inventory_Transactions.htm)
+Inventory Transactions](Reviewing_WIP_Inventory_Transactions.md)

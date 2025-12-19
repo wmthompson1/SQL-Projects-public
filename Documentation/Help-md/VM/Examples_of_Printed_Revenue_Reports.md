@@ -95,9 +95,9 @@ revenue date is determined:
 | Customer Order | Yes |  | No | Yes | The allocated items use the later of either the work orders Finish Date or the Desired Ship Date of the customer order line item or customer order header.  The unallocated items use the Desired Ship Date.  Revenue is shown for each allocated quantity and unallocated quantity. |
 | Work Order |  | No | No |  | The work orders Finish Date. Work orders with co-products are shown multiple times, once for each product produced in the work order. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTWhat.md)
 What is the Revenue Report?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTfrmPrintRevenueReport.htm) Printing Revenue Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMREVRPTfrmPrintRevenueReport.md) Printing Revenue Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Revenue_Report.md) User-defined Help

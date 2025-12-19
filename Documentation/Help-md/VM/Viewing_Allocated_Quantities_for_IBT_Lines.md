@@ -20,4 +20,4 @@ is the quantity available to you to which you can still allocate supply.
 Demand Quantity Fulfilled - The quantity
 of parts that the supplying source has fulfilled.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

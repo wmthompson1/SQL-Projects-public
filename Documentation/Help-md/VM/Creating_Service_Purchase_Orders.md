@@ -147,7 +147,7 @@ of the Purchase From/Ship To field.
 
 You can also use this dialog box to add,
 modify, and delete Ship To addresses for your company. See [Entering
-Shipping Addresses](Entering_Shipping_Addresses.htm).
+Shipping Addresses](Entering_Shipping_Addresses.md).
 
 15. If necessary, override
     FOB and Ship Via information by changing the appropriate fields.
@@ -278,16 +278,16 @@ If you do not specify a status of Firmed,
 Released, Closed, or Cancelled/Void in the Status field, VISUAL creates
 the PO with a default status of Firmed or Released.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.htm) Changing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Purchase_From_Addresses.md) Changing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.htm) Editing Purchase From Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Purchase_From_Addresses.md) Editing Purchase From Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Changing_Ship_To_Addresses.md)
 Changing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Ship_To_Addresses.md)
 Editing Ship To Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Outside_Services.htm) Dispatching Services
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Outside_Services.md) Dispatching Services
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

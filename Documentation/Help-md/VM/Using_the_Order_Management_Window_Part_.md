@@ -25,19 +25,19 @@ The Part Alternate Warehouses for Part dialog box appears.
 
 The IDs of the alternate warehouses appear in the right pane.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Part_Availability_in_Part_Alternate_Warehouses.htm) Viewing Part Availability in Part Alternate
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Part_Availability_in_Part_Alternate_Warehouses.md) Viewing Part Availability in Part Alternate
 Warehouses.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Allocate_Available_to_Customer_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.htm) Using Drag n Drop to Allocate Available
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Allocate_Available_to_Customer_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.md) Using Drag n Drop to Allocate Available
 to Customer Supply to Customer Orders from Part Alternate Warehouses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Allocate_Available_to_Customer_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.htm) Using the Right Mouse Button to Allocate
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Allocate_Available_to_Customer_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.md) Using the Right Mouse Button to Allocate
 Available to Customer Supply to Customer Orders from Part Alternate Warehouses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Allocate_Expected_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.htm) Using Drag n Drop to Allocate Expected
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_to_Allocate_Expected_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.md) Using Drag n Drop to Allocate Expected
 Supply to Customer Orders from Part Alternate Warehouses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Allocate_Expected_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.htm) Using the Right Mouse Button to Allocate
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Right_Mouse_Button_to_Allocate_Expected_Supply_to_Customer_Orders_from_Part_Alternate_Warehouses.md) Using the Right Mouse Button to Allocate
 Expected Supply to Customer Orders from Part Alternate Warehouses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

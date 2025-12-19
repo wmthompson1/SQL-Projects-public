@@ -99,23 +99,23 @@ costs will be based on FIFO (first in, first out).
 There are six journals associated with VISUAL. Each of these journals
 are discussed in this section.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchase_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchase_Journals.md)
 Purchase Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_In_Process_WIP_Journals.htm) Work In Process (WIP) Journals
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_In_Process_WIP_Journals.md) Work In Process (WIP) Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finished_Goods_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finished_Goods_Journals.md)
 Finished Goods Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments_Journals.md)
 Shipments Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adjustment_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adjustment_Journals.md)
 Adjustment Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Indirect_Labor_Journals.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Indirect_Labor_Journals.md)
 Indirect Labor Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Example_Postings_for_Journals.htm) Example Postings for Journals
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Example_Postings_for_Journals.md) Example Postings for Journals
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

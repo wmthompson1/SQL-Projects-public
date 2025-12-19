@@ -29,4 +29,4 @@ VISUAL changes line 50s Seq # to 20 and
 renumbers all other lines in increments of 10 keeping them in the
 same order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

@@ -46,7 +46,7 @@ tables, these columns and tables must be added to the database prior
 to using the Generate VMDI Layouts window.
 
 See [Joining
-Tables](Joining_Tables.htm) for more information
+Tables](Joining_Tables.md) for more information
 
 When you first define a new layout, the
 default tables appear. These tables are mandatory. You can remove
@@ -130,7 +130,7 @@ Note: Where XXX
 is the layout key and 9999 is the layout version.
 
 See [Including
-Trace IDs when exporting ASN data](Including_Trace_IDs_when_exporting_ASN_data.htm) for more information about exporting
+Trace IDs when exporting ASN data](Including_Trace_IDs_when_exporting_ASN_data.md) for more information about exporting
 Trace.
 
 All tables where XXX is the layout key (CPO,
@@ -140,4 +140,4 @@ line item records, S indicates it contains subline item records, no
 trailing letter indicates it contains all types. .VDI is the file
 type.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

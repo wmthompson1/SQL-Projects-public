@@ -17,7 +17,7 @@ Purchase Receipts Entry functions:
 * Receiving Inspection.
 * Returns.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Receipts_Entry.htm) Starting Interbranch Transfer Receipts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Receipts_Entry.md) Starting Interbranch Transfer Receipts
 Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

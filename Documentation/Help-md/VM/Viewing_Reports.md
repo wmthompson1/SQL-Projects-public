@@ -51,4 +51,4 @@ select Print from the Print menu.
 To close the report window, select Close Report
 from the File menu. This also usually closes the VISUAL Print dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

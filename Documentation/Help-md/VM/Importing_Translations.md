@@ -32,7 +32,7 @@ the translation.
 
 Before you can import a translation, you must first create a language
 pack. See [Creating Language
-Pack IDs](Creating_Language_Pack_IDs.htm).
+Pack IDs](Creating_Language_Pack_IDs.md).
 
 1. Select Admin,
    Translation Maintenance.
@@ -82,7 +82,7 @@ Existing Translations option.
 6. Click the Run
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

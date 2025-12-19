@@ -7,7 +7,7 @@ Showing Work Order Audit Information
 
 Use the Show Work Order Audit option to display the
 work order audit information for all work orders in the current schedule
-ID. You must have activated the Work Order Audit function in the [Concurrent Scheduler](VMGLBSCHWhat.htm) to view work order
+ID. You must have activated the Work Order Audit function in the [Concurrent Scheduler](VMGLBSCHWhat.md) to view work order
 audits.
 
 1. Select Show
@@ -23,4 +23,4 @@ The Work Order Audit dialog box appears.
 3. Click the Close
    button to close the dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

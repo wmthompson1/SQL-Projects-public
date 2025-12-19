@@ -29,4 +29,4 @@ There are three basic steps to exporting your VISUAL project information:
 3. Transfer data to Microsoft
    Project.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

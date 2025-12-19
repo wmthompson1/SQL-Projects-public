@@ -62,7 +62,7 @@ of the rep that shares commissions is also displayed.
    select the output format for the report. If you select email,
    select the PDF Format check box to attach
    a PDF to the email instead of an RTF file. See [Report
-   Output Options](Report_Output_Options.htm).
+   Output Options](Report_Output_Options.md).
 9. Click Ok.
 
 ## QRP Files
@@ -82,4 +82,4 @@ of the rep that shares commissions is also displayed.
 | By Sales Rep | VMCSRRP7.QRP |
 | By Territory | VMCSRRP8.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Commission_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Commission_Report.md) User-defined Help

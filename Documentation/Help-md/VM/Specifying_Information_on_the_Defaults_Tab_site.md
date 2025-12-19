@@ -265,7 +265,7 @@ Maintenance, this quantity can include fixed scrap and extra materials
 for deviated quantities.
 
 For more information on setting up auto-issue
-parts, see [Auto-issue Parts](Auto-issue_Parts.htm).
+parts, see [Auto-issue Parts](Auto-issue_Parts.md).
 
 8. You can specify a default
    internal customer ID to use when this site buys items from another
@@ -309,7 +309,7 @@ Login URL If
 this site uses a unique URL to access PLM, specify the external launch
 URL for Web PLM in this field. If this site uses the default URL specified
 in [Application
-Global Maintenance](Specifying_Default_Information_tenant.htm), leave this field blank.
+Global Maintenance](Specifying_Default_Information_tenant.md), leave this field blank.
 
 Enable Specify
 whether you can directly access PLM from Part Maintenance when viewing
@@ -344,4 +344,4 @@ in Application Global Maintenance is used to access PLM.
 
 11. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

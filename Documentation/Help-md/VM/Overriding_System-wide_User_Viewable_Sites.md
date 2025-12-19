@@ -28,7 +28,7 @@ icon designates the currently selected site.
 
 You cannot designate your default site in
 this dialog. Use the [Sites, Set Viewable
-Sites](VMSETSTEfrmSetSite.htm) dialog to designate your default site.
+Sites](VMSETSTEfrmSetSite.md) dialog to designate your default site.
 
 You can sort the Set User Viewable Sites
 dialog box by Site ID or by Entity ID.

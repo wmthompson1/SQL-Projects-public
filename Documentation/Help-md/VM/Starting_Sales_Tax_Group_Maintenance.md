@@ -22,4 +22,4 @@ An empty Sales Tax Group Maintenance window appears.
 The Sales Tax Group Maintenance window is made up of both entry
 fields and action buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.md) User-defined Help

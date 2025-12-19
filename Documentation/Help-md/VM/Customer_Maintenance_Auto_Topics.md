@@ -15,8 +15,8 @@ Click the appropriate link for more information
 on:
 
 * [Setting
-  General Customer E-Commerce Preferences](Setting_General_Customer_E_Commerce_Preferences_.htm)
+  General Customer E-Commerce Preferences](Setting_General_Customer_E_Commerce_Preferences_.md)
 * [Setting
-  Customer Shipping Address E-Commerce Preferences](Setting_Customer_Shipping_Address_E_Commerce_Preferences.htm)
+  Customer Shipping Address E-Commerce Preferences](Setting_Customer_Shipping_Address_E_Commerce_Preferences.md)
 * [Resetting
-  Customer Order Information](Resetting_Customer_Order_Information.htm)
+  Customer Order Information](Resetting_Customer_Order_Information.md)

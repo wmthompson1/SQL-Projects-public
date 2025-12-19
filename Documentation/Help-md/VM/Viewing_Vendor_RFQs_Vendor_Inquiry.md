@@ -5,7 +5,7 @@ Viewing Vendor RFQs
 
 # Viewing Vendor RFQs
 
-If a purchase order started as an [RFQ](Generating_Purchase_Orders_from_Purchase_Requisitions.htm),
+If a purchase order started as an [RFQ](Generating_Purchase_Orders_from_Purchase_Requisitions.md),
 you can view the original vendor RFQ using this feature.
 
 1. With the appropriate
@@ -68,4 +68,4 @@ Purchase Order Buyer
 5. To view a requisition
    record in Vendor RFQ Entry, select an entry and click the RFQ button or double-click a line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help

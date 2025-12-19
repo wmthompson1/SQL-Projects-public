@@ -50,4 +50,4 @@ to copy the Priority Settings of the chosen schedule.
 Click the Cancel
 button to close the dialog box without copying the schedule.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

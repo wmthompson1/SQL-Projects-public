@@ -47,7 +47,7 @@ is $50.00.
 5. Click the Ok
    button when you are finished entering information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_WIP_VAS_Information_for_a_Part_.htm) Viewing WIP/VAS Information for a Part
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_WIP_VAS_Information_for_a_Part_.md) Viewing WIP/VAS Information for a Part
 on the Customer Order Line Level
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

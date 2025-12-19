@@ -151,4 +151,4 @@ If you linked a purchase order to demand, you can view the purchase
 order. Select the line containing the purchase order, and then click
 Purchase Order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

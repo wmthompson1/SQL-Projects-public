@@ -17,7 +17,7 @@ the terms ID that is specified in the Due on Receipt ID field in Application
 Global Maintenance is inserted. If the Due on Receipt ID field is
 blank, then the first ID in the database that meets the criteria for
 due on receipt is used. See [Adding
-Terms](Entering_Information_in_Terms_Maintenance.htm).
+Terms](Entering_Information_in_Terms_Maintenance.md).
 
 Internal Site ID - If this vendor is an
 internal vendor, click the arrow and select the site ID this vendor
@@ -81,4 +81,4 @@ Not Checked If
 you do not require the Purchase Order total to be compared to the
 A/P Invoice, select Not Checked.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

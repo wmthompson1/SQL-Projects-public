@@ -61,7 +61,7 @@ deliver to earn the top rating for quantity. If a vendor delivers
 a percentage that is less than the value you specify here, the vendor
 receives a prorated portion of the quality rating for delivery performance.
 See [How
-Supplier Performance Ratings are Calculated](How_Supplier_Performance_Ratings_are_Calculated.htm).
+Supplier Performance Ratings are Calculated](How_Supplier_Performance_Ratings_are_Calculated.md).
 
 % of Quality
 Specify the rating a vendor earns for delivering the quantity percentage
@@ -83,4 +83,4 @@ Specify the number of vendors to include in the graph.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.htm) Viewing the Supplier Performance Graph
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.md) Viewing the Supplier Performance Graph

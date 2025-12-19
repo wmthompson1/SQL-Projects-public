@@ -80,11 +80,11 @@ or XDoubleBar, and at the average range, RBar. An upper control limit
 (UCL) and lower control limit (LCL) are established and the area between
 these two limits defines where a natural fluctuating pattern occurs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Control_Charts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Control_Charts.md)
 Using Control Charts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Attaining_Statistical_Control.htm) Attaining Statistical Control
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Attaining_Statistical_Control.md) Attaining Statistical Control
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Steps_in_Setting_Up_Control_Charts.htm) Steps in Setting Up Control Charts
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Steps_in_Setting_Up_Control_Charts.md) Steps in Setting Up Control Charts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

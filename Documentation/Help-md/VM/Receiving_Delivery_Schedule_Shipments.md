@@ -25,6 +25,6 @@ appears.
 5. Click the Ok
    button to receive the shipment.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Received_Delivery_Schedule_LInes.htm) Viewing Received Delivery Schedule Lines
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Received_Delivery_Schedule_LInes.md) Viewing Received Delivery Schedule Lines

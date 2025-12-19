@@ -14,7 +14,7 @@ user who is currently signed into the database can report task completion
 against an ECN.
 
 If the option [Generate All Options
-Simultaneously](Setting_Up_ECNs.htm) is active, VISUAL generates all ECN tasks at once
+Simultaneously](Setting_Up_ECNs.md) is active, VISUAL generates all ECN tasks at once
 and displays them all in the table. Be sure, however, to report task
 completion in the proper order, according to the ECN hierarchy: Authorization,
 Implementation, Approval, and then Distribution.
@@ -138,4 +138,4 @@ table) VISUAL either changes the status or issues an error message.
    button to continue. Refer to the table above for possible status
    changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

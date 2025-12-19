@@ -82,4 +82,4 @@ part, VISUAL selects this check box.
 New Part Warehouse - VISUAL selects this
 check box if this warehouse is a new part warehouse.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

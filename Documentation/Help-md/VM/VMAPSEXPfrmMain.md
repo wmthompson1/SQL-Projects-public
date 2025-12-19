@@ -19,7 +19,7 @@ This table shows the tasks that you can complete in the APS Export
 Utility window:
 
 | Task | Description |
-| [Using the APS Export Utility](Using_the_APS_Export_Utility.htm) | Use this procedure to export data to a file that can be imported into your advanced planning and scheduling system. |
+| [Using the APS Export Utility](Using_the_APS_Export_Utility.md) | Use this procedure to export data to a file that can be imported into your advanced planning and scheduling system. |
 
 ## Fields
 
@@ -51,4 +51,4 @@ Output File Directory
 
 Specify the location of the output file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.md) User-defined Help

@@ -16,4 +16,4 @@ the Order Management tab.
 Select the Compliance Labeling box if
 you require that the ship-to address have compliance labeling.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

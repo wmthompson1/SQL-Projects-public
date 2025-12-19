@@ -13,7 +13,7 @@ Resetting Part Information in Material Requirements and Work Orders
 The Reset Part Info dialog box appears.
 
 See [Resetting
-Part Information](Resetting_Part_Information_Master.htm) for more information on setting general part
+Part Information](Resetting_Part_Information_Master.md) for more information on setting general part
 reset options.
 
 The Requirements
@@ -58,4 +58,4 @@ five options unavailable.
 6. Click the Ok
    button to begin the part information update process.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

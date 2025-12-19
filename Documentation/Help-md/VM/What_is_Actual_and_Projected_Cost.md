@@ -35,4 +35,4 @@ on hours. The remaining cost is calculated for each requirement, based
 on the remaining units to complete, at the estimated hours multiplied
 by the estimated labor and burden rates.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

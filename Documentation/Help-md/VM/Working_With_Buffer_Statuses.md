@@ -22,4 +22,4 @@ Calculating buffer statuses on a daily basis:
   of buffer penetration to assist adjusting buffer sizes to minimize
   lead times to their shortest, safest levels.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.md) User-defined Help

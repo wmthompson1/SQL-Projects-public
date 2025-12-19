@@ -10,4 +10,4 @@ the document or click the Revision ID button
 to select a predefined revision number.
 
 Predefined revision numbers using [revision
-numbering maintenance](Maintaining_Revision_Numbering.htm).
+numbering maintenance](Maintaining_Revision_Numbering.md).

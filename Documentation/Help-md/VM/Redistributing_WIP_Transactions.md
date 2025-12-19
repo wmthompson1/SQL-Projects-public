@@ -26,4 +26,4 @@ Transactions option for each transaction as necessary.
 VISUAL automatically updates the distribution
 record (invoice) of the modifications.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.md) User-defined Help

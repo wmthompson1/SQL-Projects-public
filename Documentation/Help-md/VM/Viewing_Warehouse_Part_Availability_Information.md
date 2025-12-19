@@ -59,4 +59,4 @@ transfers that you have already committed to the demand fulfillment
 of customer orders, interbranch transfers, work material requirements,
 and inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

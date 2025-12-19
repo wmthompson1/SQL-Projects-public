@@ -19,7 +19,7 @@ This table shows the tasks that you can complete in the APS Import
 Utility window:
 
 | Task | Description |
-| [Using the APS Import Utility](Using_the_APS_Import_Utility.htm) | Use this procedure to import data from your advanced planning and scheduling system. |
+| [Using the APS Import Utility](Using_the_APS_Import_Utility.md) | Use this procedure to import data from your advanced planning and scheduling system. |
 
 ## Fields
 
@@ -83,4 +83,4 @@ Work Order Sched Priority
 Select this check box to import work order priorities. In the File
 Path field, specify the location of the file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_APS.md) User-defined Help

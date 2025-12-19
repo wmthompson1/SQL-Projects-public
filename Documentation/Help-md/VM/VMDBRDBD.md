@@ -29,7 +29,7 @@ These tools are available:
 Buffer Management  The Buffer Management
 Tool is identical to the Buffer Management window. For procedures,
 see [Managing
-Buffers](Managing_Buffers.htm#XREF_24036_Managing_Buffers).
+Buffers](Managing_Buffers.md#XREF_24036_Managing_Buffers).
 
 When you use the Buffer Management Tool, you can set the Site ID
 using the Dashboard Toolbar or using the Site ID field in the Buffer
@@ -93,7 +93,7 @@ To ignore calendar exceptions and use the standard shop schedule in
 the load analysis, clear this check box.
 
 Throughput See [Using
-the Throughput Tool](Using_the_Throughput_Tool.htm).
+the Throughput Tool](Using_the_Throughput_Tool.md).
 
 Buffer Intrusions Percentage See [Using the
-Buffer Intrusions Tool](Viewing_Percent_Buffer_Intrusions_Information.htm).
+Buffer Intrusions Tool](Viewing_Percent_Buffer_Intrusions_Information.md).

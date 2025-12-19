@@ -54,4 +54,4 @@ master specified in the ECN to the corresponding work orders of the
 same ID by clicking the Apply Changes icon
 on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

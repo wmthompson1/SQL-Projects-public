@@ -15,4 +15,4 @@ _Source: Infor VISUAL Enterprise glossary (Voucher ID)._
 **Related:** GL mapping examples — see `voucher-gl-mapping.md`.
 
 **See also:**
-![nav](../../../../../Visual Mfg Help Files/VM/btn_mini.gif) `User-defined Help` (original icon)
+![nav](btn_mini.gif) `User-defined Help` (original icon)

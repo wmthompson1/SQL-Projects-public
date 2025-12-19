@@ -64,4 +64,4 @@ button or by selecting Print from the Print menu.
 If you selected File,
 enter a filename in the Print to File dialog box, then click Ok to save the report to the file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

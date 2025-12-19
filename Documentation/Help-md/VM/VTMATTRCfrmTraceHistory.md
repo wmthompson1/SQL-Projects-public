@@ -125,4 +125,4 @@ Num 1-5 - Any
 associated numeric properties labels. Enter numeric properties labels
 in Part Trace  Profile Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Trace_History.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Trace_History.md) User-defined Help

@@ -56,4 +56,4 @@ line and click the Delete button in the
 Forecasts table. Click Save to save any
 changes to the Forecast dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

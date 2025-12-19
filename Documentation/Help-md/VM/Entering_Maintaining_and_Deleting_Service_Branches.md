@@ -29,7 +29,7 @@ previously entered any service areas, none appear in the line item
 table. Because Service Areas are necessary in the entry of new branches,
 pause in this procedure and enter at least one Service Area now. See
 [Entering,
-Maintaining, and Deleting Service Areas](Entering_Maintaining_and_Deleting_Service_Areas.htm).
+Maintaining, and Deleting Service Areas](Entering_Maintaining_and_Deleting_Service_Areas.md).
 
 Description -
 A description of the service branch. Be detailed in your descriptions.
@@ -52,4 +52,4 @@ line.
 7. Click the Close
    button to return to the Equipment Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

@@ -56,7 +56,7 @@ from a list.
 
 You cannot enter a CLIN until you have set up the contract for the
 project in Customer Order Entry. See [About
-Refining or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.htm).
+Refining or Entering Project Warehouse Information](About_Refining_or_Entering_Project_Warehouse_Information.md).
 
 Customer WBS - If the customer uses a
 WBS code that is different from yours, enter the customers WBS code

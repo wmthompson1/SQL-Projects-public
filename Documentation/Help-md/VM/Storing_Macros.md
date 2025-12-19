@@ -48,23 +48,23 @@ If you decide to store macros on the workstation, then see these
 topics:
 
 * [Working
-  with Macros Stored on the Workstation](Working_with_Macros_Stored_on_the_Workstation.htm)
+  with Macros Stored on the Workstation](Working_with_Macros_Stored_on_the_Workstation.md)
 * [Setting
-  Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.htm)
+  Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.md)
 * [Copying
-  Macros from the Database to a Workstation](Copying_Macros_from_the_Database_to_a_Workstation.htm)
+  Macros from the Database to a Workstation](Copying_Macros_from_the_Database_to_a_Workstation.md)
 * [Creating
-  a User Toolbar Button for a Workstation Macro](Creating_a_User_Toolbar_Button_for_a_Workstation_Macro.htm)
+  a User Toolbar Button for a Workstation Macro](Creating_a_User_Toolbar_Button_for_a_Workstation_Macro.md)
 
 If you decide to store macros in the database, then see these topics:
 
 * [Working
-  with Macros Stored in the Database](Working_with_Macros_Stored_in_the_Database.htm)
+  with Macros Stored in the Database](Working_with_Macros_Stored_in_the_Database.md)
 * [Setting
-  Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.htm)
+  Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.md)
 * [Copying
-  Macros from a Workstation to the Database](Copying_Macros_from_a_Workstation_to_the_Database.htm)
+  Macros from a Workstation to the Database](Copying_Macros_from_a_Workstation_to_the_Database.md)
 * [Assigning
-  Shared Macros to Profiles](Assigning_Shared_Macros_to_Profiles.htm)
+  Shared Macros to Profiles](Assigning_Shared_Macros_to_Profiles.md)
 * [Creating
-  a User Toolbar Button for a Database Macro](Creating_a_User_Toolbar_Button_for_a_Database_Macro.htm)
+  a User Toolbar Button for a Database Macro](Creating_a_User_Toolbar_Button_for_a_Database_Macro.md)

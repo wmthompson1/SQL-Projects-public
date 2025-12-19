@@ -16,4 +16,4 @@ To edit a purchase requisition at any time before the status reaches
 Ordered, choose the appropriate Requisition ID and use the procedures
 in the previous sections to modify the header or lines as necessary.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

@@ -81,4 +81,4 @@ Default Price = $0.70
 | 1000 | $0.80 | 201 - 1000 are $0.80 each |
 |  |  | Over 1000 are $0.70 each |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

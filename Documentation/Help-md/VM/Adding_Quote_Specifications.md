@@ -38,4 +38,4 @@ in the Estimating Window while using the Spec dialog box.
 | --- | --- |
 | POSTIT.gif | If you are pasting information into the dialog box the entire contents of the dialog is replaced with the incoming text. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

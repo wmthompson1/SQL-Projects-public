@@ -106,7 +106,7 @@ The path to drawing file.
 Entered By The
 method used to create the master. This field is populated by the system.
 See [Working
-with Information in the Entered By Field](Working_with_Information_in_the_Entered_By_Field_in_the_Manufacturing_Window.htm).
+with Information in the Entered By Field](Working_with_Information_in_the_Entered_By_Field_in_the_Manufacturing_Window.md).
 
 Product Code -
 The Code associated with a product of this master. Each product code
@@ -205,7 +205,7 @@ field)/100) \* total hours required for the operation
 
 To complete the labor on an operations,
 users must manually close the operation. See [Completing
-Labor on Operations with Max Percent Complete Thresholds](VMLABENTfrmLaborEntry.htm#CompletingLaborMaxPercent).
+Labor on Operations with Max Percent Complete Thresholds](VMLABENTfrmLaborEntry.md#CompletingLaborMaxPercent).
 
 10. To prevent this engineering
     master from being used to generate a work order or to be considered
@@ -289,9 +289,9 @@ the changes.
     tab, and select a User Defined Field Layout ID if appropriate.
 16. Click the Engineering
     tab to designate this master as [eligible
-    for updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.htm) with the Master Updater function. This tab also
+    for updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.md) with the Master Updater function. This tab also
     displays [information
-    about when the master was last updated](Viewing_Update_Information.htm). This tab is available
+    about when the master was last updated](Viewing_Update_Information.md). This tab is available
     on Engineering masters and Legs only.
 17. Click the Save
     button to create the new master.
@@ -299,4 +299,4 @@ the changes.
 The master header appears in the window
 in home position, and the dialog box automatically closes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

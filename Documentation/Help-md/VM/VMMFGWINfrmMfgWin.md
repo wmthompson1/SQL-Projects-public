@@ -380,4 +380,4 @@ of the Manufacturing Window by a darker outline around each operation
 on the path. The work order must be scheduled into the production
 schedule to show a determinate path.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -47,4 +47,4 @@ box reappears with the return quantity in the Qty Returned column.
 7. Click the Save button
    to receive the return delivery schedule quantity.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

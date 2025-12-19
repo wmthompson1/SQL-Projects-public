@@ -17,8 +17,8 @@ Other actions occur depending on the type of RMA you select. See
 these procedures:
 
 * [Converting
-  an Evaluation RMA to a Repair RMA](Converting_an_Evaluation_RMA_to_a_Repair_RMA.htm)
+  an Evaluation RMA to a Repair RMA](Converting_an_Evaluation_RMA_to_a_Repair_RMA.md)
 * [Converting
-  an Evaluation RMA to a Credit RMA](Converting_an_Evaluation_RMA_to_a_Credit_RMA.htm)
+  an Evaluation RMA to a Credit RMA](Converting_an_Evaluation_RMA_to_a_Credit_RMA.md)
 * [Converting
-  an Evaluation RMA to a Replace RMA](Converting_an_Evaluation_RMA_to_a_Replace_RMA.htm)
+  an Evaluation RMA to a Replace RMA](Converting_an_Evaluation_RMA_to_a_Replace_RMA.md)

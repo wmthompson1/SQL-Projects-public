@@ -59,4 +59,4 @@ Generate button.
 | --- | --- |
 | POSTIT.gif | VISUAL only creates a new Purchase Order with a status of Firmed: you must release the order using the Purchase Order Entry child window or the Session P/O History window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

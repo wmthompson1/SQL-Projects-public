@@ -256,4 +256,4 @@ button. The system constructs a SQL statement that you can use to
 add the export file format to your database. Copy the SQL statement
 from the dialog box and paste it into a database management tool.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

@@ -67,7 +67,7 @@ information by day, select this option.
    one resource then you may select multiple schedules. When you
    select multiple schedules, you can use delta graphs to compare
    differences between them. See [Viewing
-   & Interpreting Contention Delta Graph Information](Viewing_&_Interpreting_Contention_Delta_Graph_Information.htm).
+   & Interpreting Contention Delta Graph Information](Viewing_&_Interpreting_Contention_Delta_Graph_Information.md).
 8. Use the check boxes
    to specify how to evaluate load on the resources:
 
@@ -95,14 +95,14 @@ information by day, select this option.
     button. To display the data as a table, click the Table
     toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Contention_Inquiry_Details.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Contention_Inquiry_Details.md)
 Viewing Contention Inquiry Details
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Contention_Inquiry_Graphs_Tabularly.htm) Viewing Contention Inquiry Graphs Tabularly
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Contention_Inquiry_Graphs_Tabularly.md) Viewing Contention Inquiry Graphs Tabularly
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_&_Interpreting_Contention_Delta_Graph_Information.htm) Viewing and Interpreting Contention
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_&_Interpreting_Contention_Delta_Graph_Information.md) Viewing and Interpreting Contention
 Delta Graph Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Contention_Inquiry_Reports.htm) Printing Contention Inquiry Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Contention_Inquiry_Reports.md) Printing Contention Inquiry Reports

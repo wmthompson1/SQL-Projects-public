@@ -7,7 +7,7 @@ Adding Issue/Return/Transfer Reason Codes
 
 Use Issue Reason Codes for specifying why you issued
 or returned inventory. Depending on how sites are set up in [Site
-Maintenance](Specifying_Information_on_the_Defaults_Tab_site.htm), the use of reason codes on issues and returns may
+Maintenance](Specifying_Information_on_the_Defaults_Tab_site.md), the use of reason codes on issues and returns may
 be mandatory.
 
 1. Select Admin,
@@ -30,7 +30,7 @@ a single type of transaction or any combination of transactions.
 
 5. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.htm) Deleting Codes in Application Global
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.md) Deleting Codes in Application Global
 Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

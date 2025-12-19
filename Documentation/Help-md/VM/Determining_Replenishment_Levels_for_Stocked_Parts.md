@@ -13,16 +13,16 @@ usage over a particular period of time, use the Demand-driven Buffer
 Analysis dialog box.
 
 In the [Replenishment
-Buffer Analysis dialog](Recalculating_Replenishment_Levels_Based_on_Demand_During_the.htm), you analyze the usage of a part during
+Buffer Analysis dialog](Recalculating_Replenishment_Levels_Based_on_Demand_During_the.md), you analyze the usage of a part during
 the leadtime buffer specified for the part. You can examine usage
 during a single leadtime buffer or multiple leadtime buffers. The
 average number of parts issued during the lead-time buffer is used
 as the replenishment level.
 
 In the [Demand-driven
-Buffer Analysis dialog](Recalculating_Replenishment_Levels_Based_on_Demand_and_Average.htm), you analyze the average daily usage of
+Buffer Analysis dialog](Recalculating_Replenishment_Levels_Based_on_Demand_and_Average.md), you analyze the average daily usage of
 the part over a period of time you specify. If you use this tool,
-set up a [buffer profile](Setting_Up_Buffer_Profiles.htm)
+set up a [buffer profile](Setting_Up_Buffer_Profiles.md)
 to categorize the parts usage patterns; for example, the volatility
 of supply and demand. The average daily usage is used with the buffer
 profile to calculate the replenishment level, the parts red zone,

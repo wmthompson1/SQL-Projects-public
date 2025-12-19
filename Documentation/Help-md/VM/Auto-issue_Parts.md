@@ -80,12 +80,12 @@ for this part.
 7. Click
    Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Warehouse_Locations_and_Auto-issue_Transactions.htm) Warehouse Locations and Auto-issue Transactions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Warehouse_Locations_and_Auto-issue_Transactions.md) Warehouse Locations and Auto-issue Transactions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_and_Issue_Negative_Settings.htm) Auto-issue and Issue Negative Settings
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_and_Issue_Negative_Settings.md) Auto-issue and Issue Negative Settings
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Transaction_Quantities_and_Timing.htm) Auto-issue Transaction Quantities and
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Transaction_Quantities_and_Timing.md) Auto-issue Transaction Quantities and
 Timing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.md)
 Working with Backflushing

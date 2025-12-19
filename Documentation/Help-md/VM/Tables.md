@@ -14,20 +14,20 @@ all tables operate in essentially the same way.
 See these topics:
 
 * [Window
-  Table Buttons](Window_Table_Buttons.htm)
+  Table Buttons](Window_Table_Buttons.md)
 * [Table
-  Components](Table_Components.htm)
+  Components](Table_Components.md)
 * [Selecting
-  Table Rows](Selecting_Table_Rows.htm)
+  Table Rows](Selecting_Table_Rows.md)
 * [Modifying
-  Table Rows](Modifying_Table_Rows.htm)
+  Table Rows](Modifying_Table_Rows.md)
 * [Deleting
-  Table Rows](Deleting_Table_Rows.htm)
+  Table Rows](Deleting_Table_Rows.md)
 * [Using
-  the Keyboard with Tables](Using_the_Keyboard_with_Tables.htm)
+  the Keyboard with Tables](Using_the_Keyboard_with_Tables.md)
 * [Sorting
-  Tables](Sorting_Tables.htm)
+  Tables](Sorting_Tables.md)
 * [Scrolling
-  in Tables](Scrolling_in_Tables.htm)
+  in Tables](Scrolling_in_Tables.md)
 * [Configuring
-  Tables](Moving_and_Resizing_Table_Columns.htm)
+  Tables](Moving_and_Resizing_Table_Columns.md)

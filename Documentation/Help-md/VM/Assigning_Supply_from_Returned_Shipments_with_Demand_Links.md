@@ -66,4 +66,4 @@ as the Supply Part ID, if it does in fact appear.
    to complete the receipt of the return quantities and commit any
    new links of return supply to demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

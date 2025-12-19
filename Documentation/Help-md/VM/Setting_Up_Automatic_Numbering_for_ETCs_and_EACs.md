@@ -60,4 +60,4 @@ will not prohibit you from having more than 99 EAC versions.
 When you are finished entering EAC and ETC
 numbering information, click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Update_ETC.md) User-defined Help

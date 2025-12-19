@@ -116,4 +116,4 @@ structure of masters and work orders is covered from the top down,
 moving from header information, to subassemblies, to individual operations
 and material requirements.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

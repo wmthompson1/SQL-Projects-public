@@ -19,12 +19,12 @@ and types you define in VISUAL CRM can be used in VISUAL.
 See these topics:
 
 * [Creating
-  Activity Categories](Creating_Activity_Categories.htm)
+  Activity Categories](Creating_Activity_Categories.md)
 * [Creating
-  Activity Types](Creating_Activity_Types.htm)
+  Activity Types](Creating_Activity_Types.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

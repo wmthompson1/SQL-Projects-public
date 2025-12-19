@@ -31,5 +31,5 @@ To sort the Customer/Account table:
    Ok to confirm
    your sort priorities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What is the Synchronize Customer/Account
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What is the Synchronize Customer/Account
 Utility?

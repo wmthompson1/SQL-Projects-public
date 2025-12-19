@@ -7,7 +7,7 @@ Defining Thermal Labels
 
 |  |  |
 | --- | --- |
-| POSTIT.gif | Thermal labels are present throughout much of VISUAL. You can print thermal labels in the following programs:  purple_right_sm.gif [Customer Order Entry/Order Management Window](Printing_Customer_Order_Acknowledgment_Thermal_Labels.htm)  purple_right_sm.gif [Shipping Entry](Printing_Thermal_Labels_from_Shipping_Entry.htm)  purple_right_sm.gif [Physical Inventory Count](Printing_Thermal_Labels_for_Tags_and_Tag_Lists.htm)  purple_right_sm.gif [Part Maintenance](Printing_Thermal_Labels_for_Parts_Auto.htm)  purple_right_sm.gif [Warehouse Maintenance](Printing_Warehouse_Thermal_Labels.htm)  purple_right_sm.gif [Purchase Order Entry](Printing_Purchase_Order_Thermal_Labels.htm)  purple_right_sm.gif [Purchase Receipt Entry](Printing_Purchase_Receipt_Thermal_Labels.htm)  purple_right_sm.gif [Inventory Transaction Entry](Printing_Part_Thermal_Labels.htm)  purple_right_sm.gif [Labor Ticket Entry](Printing_Labor_Ticket_Thermal_Labels.htm)  purple_right_sm.gif [Work Order Travellers](Printing_Work_Order_Traveller_Thermal_Labels.htm)  purple_right_sm.gif [IBT Shippers](Printing_IBT_Shipper_Thermal_Labels.htm)  purple_right_sm.gif [IBT Receivers](Printing_IBT_Receipt_Thermal_Labels.htm) |
+| POSTIT.gif | Thermal labels are present throughout much of VISUAL. You can print thermal labels in the following programs:  purple_right_sm.gif [Customer Order Entry/Order Management Window](Printing_Customer_Order_Acknowledgment_Thermal_Labels.md)  purple_right_sm.gif [Shipping Entry](Printing_Thermal_Labels_from_Shipping_Entry.md)  purple_right_sm.gif [Physical Inventory Count](Printing_Thermal_Labels_for_Tags_and_Tag_Lists.md)  purple_right_sm.gif [Part Maintenance](Printing_Thermal_Labels_for_Parts_Auto.md)  purple_right_sm.gif [Warehouse Maintenance](Printing_Warehouse_Thermal_Labels.md)  purple_right_sm.gif [Purchase Order Entry](Printing_Purchase_Order_Thermal_Labels.md)  purple_right_sm.gif [Purchase Receipt Entry](Printing_Purchase_Receipt_Thermal_Labels.md)  purple_right_sm.gif [Inventory Transaction Entry](Printing_Part_Thermal_Labels.md)  purple_right_sm.gif [Labor Ticket Entry](Printing_Labor_Ticket_Thermal_Labels.md)  purple_right_sm.gif [Work Order Travellers](Printing_Work_Order_Traveller_Thermal_Labels.md)  purple_right_sm.gif [IBT Shippers](Printing_IBT_Shipper_Thermal_Labels.md)  purple_right_sm.gif [IBT Receivers](Printing_IBT_Receipt_Thermal_Labels.md) |
 
 1. Click the Site ID drop-down
    arrow and select a site to use.
@@ -103,6 +103,6 @@ conventional barcodes.
     the fields and entered all necessary information, click the Save button on the main toolbar or select
     Save from the file menu to save the new label format.
 11. After defining labels,
-    [test print](Test_Printing_Thermal_Labels.htm) them.
+    [test print](Test_Printing_Thermal_Labels.md) them.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.md) User-defined Help

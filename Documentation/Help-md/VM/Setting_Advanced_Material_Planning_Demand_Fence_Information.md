@@ -15,6 +15,6 @@ for the part during MRP; if a part has a demand fence defined in its
 part master, VISUAL uses the part master demand fence over both product
 code demand fence and Site Maintenance demand fence values.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activating_the_Frozen_Demand_Fence.htm) Activating the Frozen Demand Fence
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activating_the_Frozen_Demand_Fence.md) Activating the Frozen Demand Fence
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md)

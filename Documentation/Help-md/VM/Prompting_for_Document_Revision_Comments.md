@@ -21,4 +21,4 @@ Each time you modify a document record and assign a new revision
 number, VISUAL displays a comment dialog box into which you can enter
 comments regarding the revision.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

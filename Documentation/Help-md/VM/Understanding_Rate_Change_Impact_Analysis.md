@@ -41,4 +41,4 @@ Cumulative Amounts for Date Range A
 list of the cost elements with cumulative amounts based on the date
 range you entered appears in the bottom section of the dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Change_Impact_Analysis.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Change_Impact_Analysis.md) User-defined Help

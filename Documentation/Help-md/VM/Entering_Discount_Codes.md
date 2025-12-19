@@ -49,4 +49,4 @@ of the dialog box fill in with the appropriate information.
 To remove a discount code completely, highlight the address line
 and click the Delete button. Click the Save button to save the deletion.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

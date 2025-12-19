@@ -65,4 +65,4 @@ After youve created the new work order, you can modify it as necessary.
 Because the new work order does not inherit status, you can now release
 it to the floor and begin to report labor against it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

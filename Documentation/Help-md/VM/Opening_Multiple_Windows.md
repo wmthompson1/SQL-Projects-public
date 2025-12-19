@@ -33,15 +33,15 @@ you want to open multiple windows. Leave this check box cleared if
 you want each work order/master you open to replace the work order/master
 currently open in the active window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Arranging_Open_Windows.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Arranging_Open_Windows.md)
 Arranging Open Windows
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_Open_Windows_.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_Open_Windows_.md)
 Selecting Open Windows
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Minimizing_Restoring_Windows.htm) Minimizing and Restoring Windows
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Minimizing_Restoring_Windows.md) Minimizing and Restoring Windows
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Closing_Windows.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Closing_Windows.md)
 Closing Windows

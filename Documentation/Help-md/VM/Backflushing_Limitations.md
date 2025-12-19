@@ -17,5 +17,5 @@ then these features are unavailable:
   tab of the operation card are unavailable. You cannot require
   inspection for auto-reporting resources.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.md)
 Working with Backflushing

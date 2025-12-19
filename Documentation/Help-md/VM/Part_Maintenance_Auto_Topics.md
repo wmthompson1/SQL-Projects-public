@@ -14,10 +14,10 @@ and thermal labels.
 Click the appropriate link for more information on:
 
 * [Creating
-  Containers for Parts](Creating_Containers_for_Parts.htm)
+  Containers for Parts](Creating_Containers_for_Parts.md)
 * [Establishing
-  Customer Price Effectivity](Establishing_Customer_Price_Effectivity.htm)
+  Customer Price Effectivity](Establishing_Customer_Price_Effectivity.md)
 * [Resetting
-  Part Information](Resetting_Part_Information_Master.htm)
+  Part Information](Resetting_Part_Information_Master.md)
 * [Printing
-  Thermal Labels for Parts](Printing_Thermal_Labels_for_Parts_Auto.htm)
+  Thermal Labels for Parts](Printing_Thermal_Labels_for_Parts_Auto.md)

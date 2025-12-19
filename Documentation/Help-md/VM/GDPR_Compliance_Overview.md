@@ -21,7 +21,7 @@ to help you to comply with components of the GDPR:
 | Technical & Organizational Security Measures | GDPR, Article 25 | Data Controller can secure application access by user login and passwords are encrypted |
 | Consent | GDPR, Article 7 | There is no data processing activity that requires consent. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

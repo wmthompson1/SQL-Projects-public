@@ -32,4 +32,4 @@ Save each changed record.
    button. VISUAL re-calculates the prices and amounts with the new
    changes to your records.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

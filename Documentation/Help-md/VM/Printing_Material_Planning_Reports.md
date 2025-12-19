@@ -108,10 +108,10 @@ of the Material Planning Window. Detail Quantities are not shown,
 and the total quantities for demand and supply orders appear for each
 Part ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Material_Planning_Reports_from_the_Browse_Dialog_Box.htm) Printing Material Planning Reports from
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Material_Planning_Reports_from_the_Browse_Dialog_Box.md) Printing Material Planning Reports from
 the Browse Dialog Box
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Order_Point_Reports_Material_Planning.htm) Printing Order Point Reports Material
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Order_Point_Reports_Material_Planning.md) Printing Order Point Reports Material
 Planning

@@ -16,6 +16,6 @@ When looking at the Cumulative examples, keep in mind the following:
   Delivery Schedule section.
 * If you are working with
   Subtract Intransit Quantities, refer to [Working
-  with Subtract Intransit Quantities](Working_with_Subtract_Intransit_Quantities.htm) for more information.
+  with Subtract Intransit Quantities](Working_with_Subtract_Intransit_Quantities.md) for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

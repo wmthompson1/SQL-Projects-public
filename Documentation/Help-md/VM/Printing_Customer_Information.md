@@ -99,6 +99,6 @@ If you want to delete the temporary file
 VISUAL creates, select the Delete tmp files (HTML)
 check box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_CUstomer_Maintenance.htm) Printing Formats
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_CUstomer_Maintenance.md) Printing Formats
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

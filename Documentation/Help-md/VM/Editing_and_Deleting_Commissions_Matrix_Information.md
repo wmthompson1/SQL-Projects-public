@@ -48,4 +48,4 @@ table.
    | --- | --- |
    | POSTIT.gif | You can delete an entire Matrix by clicking the Delete button on the VISUAL Price Book main toolbar. This affects only the currently opened Matrix. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

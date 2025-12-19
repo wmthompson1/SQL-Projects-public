@@ -32,7 +32,7 @@ the following steps.
    Master. You must select the proper type an engineering master
    does not open if you select Work Order. You can specify a default
    setting for the type. See [Specifying
-   the Default Document Type in the Open Dialog](Specifying_the_Default_Document_Type_in_the_Open_Dialog.htm).
+   the Default Document Type in the Open Dialog](Specifying_the_Default_Document_Type_in_the_Open_Dialog.md).
 4. If you are licensed
    to use multiple sites, click the Site ID arrow and select the
    site to use. Masters are created by site.
@@ -62,4 +62,4 @@ button.
 The master/work order appears in the Manufacturing
 Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

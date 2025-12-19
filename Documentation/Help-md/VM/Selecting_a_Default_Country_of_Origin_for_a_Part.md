@@ -32,4 +32,4 @@ If you use this part in Customer Order Entry,
 the system inserts the default country of origin in the Country of
 Origin column in the lines table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

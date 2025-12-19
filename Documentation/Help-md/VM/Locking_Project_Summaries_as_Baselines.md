@@ -17,4 +17,4 @@ budget settings.
 | --- | --- |
 | POSTIT.gif | If you prematurely lock a summary as a baseline, you will not be able to unlock the summary for further adjustmentsmake sure that the budget on which you are working completely finished and approved before you lock it. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

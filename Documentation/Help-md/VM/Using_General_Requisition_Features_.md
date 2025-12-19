@@ -11,16 +11,16 @@ features and, where necessary, adds information applicable specifically
 to requisitions.
 
 * [Setting
-  Exchange Rates](Setting_Exchange_Rates_for_Individual_Purchase_Requisitions.htm)
+  Exchange Rates](Setting_Exchange_Rates_for_Individual_Purchase_Requisitions.md)
 * [Renumbering
-  Requisition Lines](Renumbering_Requisition_Lines.htm)
+  Requisition Lines](Renumbering_Requisition_Lines.md)
 * [Repricing
-  Requisition Lines](Repricing_Requisition_Line_Items.htm)
+  Requisition Lines](Repricing_Requisition_Line_Items.md)
 * [Repeating
-  Requisition Lines](Repeating_Purchase_Requisition_Lines.htm)
+  Requisition Lines](Repeating_Purchase_Requisition_Lines.md)
 * [Copying
-  Purchase Requisitions](Copying_Purchase_Requisitions.htm)
+  Purchase Requisitions](Copying_Purchase_Requisitions.md)
 * [Passing
-  Part Specs to Requisition Headers](Passing_Part_Specs_to_Purchase_Requisition_Lines_.htm)
+  Part Specs to Requisition Headers](Passing_Part_Specs_to_Purchase_Requisition_Lines_.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

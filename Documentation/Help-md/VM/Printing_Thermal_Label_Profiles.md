@@ -33,7 +33,7 @@ this field blank.
 
    |  |  |
    | --- | --- |
-   | POSTIT.gif | All labels are eligible for selection, although only labels with mapped data fields appear on the report. Mapped data fields are the fields shared by Loftware and VISUAL, which you can configure when [defining](VMBTSLPfrmLabelSetup.htm) the actual label. |
+   | POSTIT.gif | All labels are eligible for selection, although only labels with mapped data fields appear on the report. Mapped data fields are the fields shared by Loftware and VISUAL, which you can configure when [defining](VMBTSLPfrmLabelSetup.md) the actual label. |
 
 4. Select
    the Print Barcodes check
@@ -76,4 +76,4 @@ If e-mailing the report, the system attaches
 the file to a Microsoft Outlook e-mail. For more information on addressing
 and sending the e-mail, refer to your Microsoft Outlook user documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Label_Printer_Setup_Utility.md) User-defined Help

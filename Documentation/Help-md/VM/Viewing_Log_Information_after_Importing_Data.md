@@ -15,4 +15,4 @@ importation and creation of a master header.
 
 ![imprtlog_wmf.gif](imprtlog_wmf.gif "imprtlog_wmf.gif")
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

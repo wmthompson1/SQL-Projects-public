@@ -45,5 +45,5 @@ If you want to add a shortcut icon to your Windows Desktop to start
 the VISUAL APS Import program, please consult your Windows documentation
 for further instructions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.md)
 User-defined Help

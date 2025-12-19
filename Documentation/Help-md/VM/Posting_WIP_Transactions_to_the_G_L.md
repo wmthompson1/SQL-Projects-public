@@ -79,6 +79,6 @@ After posting a WIP transaction to the general
 ledger, VISUAL selects the Posted check box in the main WIP Maintenance
 window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Redistributing_WIP_Transactions.htm) Redistributing WIP Transactions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Redistributing_WIP_Transactions.md) Redistributing WIP Transactions

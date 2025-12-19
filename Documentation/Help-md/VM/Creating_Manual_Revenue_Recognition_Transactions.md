@@ -42,4 +42,4 @@ to the General Ledger, you cannot edit the information in the table.
 10. Click the Close
     button to exit the Project Revenue Recognition window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

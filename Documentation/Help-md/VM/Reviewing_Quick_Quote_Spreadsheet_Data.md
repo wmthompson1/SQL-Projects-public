@@ -11,4 +11,4 @@ the original information imported from the spreadsheet, click the
 View Excel Data button. A grid that contains
 the imported information is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

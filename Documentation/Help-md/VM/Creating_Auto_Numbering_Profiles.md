@@ -66,10 +66,10 @@ The following fields are optional:
 8. Click the Save
    button to save the new Number ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Existing_Profiles.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Existing_Profiles.md)
 Editing Existing Profiles
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Profiles.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Profiles.md)
 Deleting Profiles
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Profile_Maintenance.md) User-defined Help

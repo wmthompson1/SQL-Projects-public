@@ -16,7 +16,7 @@ You can access Activity Maintenance in these ways:
   supports activities.
 * Click the Activities icon
   in the graphical Lifecycle Document Viewer. See [Viewing
-  Information about Documents in the Lifecycle Graphical Display](Viewing_Information_about_Documents_in_the_Lifecycle.htm).
+  Information about Documents in the Lifecycle Graphical Display](Viewing_Information_about_Documents_in_the_Lifecycle.md).
 
 When you access Activity Maintenance, only your activities are displayed.
 Your activities are any activity you created and any activity assigned
@@ -40,11 +40,11 @@ based on how you access Activity Maintenance
 | View all activities related to the sales cycle for a particular customer | In Customer Maintenance, select the customer. Then, select **View**, **Activities**. Activities created when the customer is specified in these applications are displayed:   * Accounts Receivable   Invoice Entry * Cash Receipt * Customer Maintenance * Customer Order Entry * Order Management   Window * Equipment Maintenance * Estimating Window * Return Material   Authorization * Shipping Entry |
 | View all activities related to the purchasing cycle for a particular vendor. | In Vendor Maintenance, select the vendor. Then, select **View**, **Activities**. Activities created when the vendor is specified in these applications are displayed:   * Accounts Payable   Invoice Entry * Payment Entry * Purchase Order Entry * Purchase Management   Window * Purchase Receipt   Entry * Outside Service   Maintenance * Outside Service   Dispatch Entry * Purchase Requisition   Entry * Vendor RFQ Entry * Vendor Maintenance |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

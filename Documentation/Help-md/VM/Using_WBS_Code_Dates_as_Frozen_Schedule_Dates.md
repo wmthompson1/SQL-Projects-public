@@ -11,4 +11,4 @@ Preferences Maintenance. In the Scheduler section, find the entry,
 FreezeOpsWithWBSDates. Set the value to Y (the line will be FreezeOpsWithWBSDates=Y).
 The WBS dates will be treated as frozen schedule dates
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

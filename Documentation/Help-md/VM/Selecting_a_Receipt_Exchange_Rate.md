@@ -37,4 +37,4 @@ conversion date that you set earlier. The transaction date determines
 which exchange rate to apply unless you have opted to use the System
 date.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md)

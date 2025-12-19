@@ -51,4 +51,4 @@ Close Short - VISUAL selects this check
 box if you have received only a partial quantity of the line and opted
 to close the line with a balance, or "short."
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

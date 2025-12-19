@@ -17,7 +17,7 @@ To set up addition Intrastat information:
 
    |  |  |
    | --- | --- |
-   | POSTIT.gif | For this option to appear on the Inventory menu, Intrastat must be enabled in [Accounting Entity Maintenance](VMAENMNTfrmAccountingEntity.htm). You may need to restart VISUAL to view the menu option. |
+   | POSTIT.gif | For this option to appear on the Inventory menu, Intrastat must be enabled in [Accounting Entity Maintenance](VMAENMNTfrmAccountingEntity.md). You may need to restart VISUAL to view the menu option. |
 
 The Additional Intrastat Maintenance window
 appears.
@@ -90,4 +90,4 @@ Number of consignments
 7. Click the Save
    button on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Additional_Intrastat.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Additional_Intrastat.md) User-defined Help

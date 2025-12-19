@@ -28,4 +28,4 @@ Because VISUAL does not create the links
 until you click the Create Links button, you can remove the cartons
 from the Linked table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

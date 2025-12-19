@@ -22,4 +22,4 @@ Using the DD Form 250 as an invoice streamlines the payment process,
 reduces paperwork, and eliminates paying office problems. For example,
 matching separate invoices to the receiving reports.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

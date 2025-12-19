@@ -12,4 +12,4 @@ and select Delete from the right-click menu.
 | --- | --- |
 | IMPORTNT.gif | Because you can easily undo a delete, VISUAL Workflow will not confirm you about what you are deleting. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

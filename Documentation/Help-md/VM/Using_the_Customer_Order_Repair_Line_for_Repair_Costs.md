@@ -30,4 +30,4 @@ To price the repair:
 4. When you ship the repaired
    parts, specify Approved in the Ship Status
    field. An approved packlist is eligible for invoicing. See [Shipping the Repaired
-   Materials](Shipping_the_Repaired_Materials.htm).
+   Materials](Shipping_the_Repaired_Materials.md).

@@ -78,22 +78,22 @@ This figure is based on a percentage of the material cost.
 
 There are six Manufacturing Sub-Ledger Journals.
 
-[Purchase Receipts Journal (PUR)](Purchase_Journals.htm)
+[Purchase Receipts Journal (PUR)](Purchase_Journals.md)
 Order Based
 
-[Work Order Journal (WIP)](Work_In_Process_WIP_Journals.htm)
+[Work Order Journal (WIP)](Work_In_Process_WIP_Journals.md)
 Order Based
 
 [Finished Goods Receipt Journal
-(FG)](Finished_Goods_Journals.htm) Order Based
+(FG)](Finished_Goods_Journals.md) Order Based
 
-[Shipments Journal (SLS)](Shipments_Journals.htm) Order
+[Shipments Journal (SLS)](Shipments_Journals.md) Order
 Based
 
-[Inventory Adjustment Journal (ADJ)](Adjustment_Journals.htm)
+[Inventory Adjustment Journal (ADJ)](Adjustment_Journals.md)
 Transaction Based
 
-[Indirect Labor Journal (IND)](Indirect_Labor_Journals.htm)
+[Indirect Labor Journal (IND)](Indirect_Labor_Journals.md)
 Transaction Based
 
 ## Preparing Manufacturing Journals
@@ -116,4 +116,4 @@ If you prepare the journals but dont post them, the next time you
 prepare journals, the previous journals are deleted and their distributions
 are included in the new journals.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

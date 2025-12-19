@@ -73,4 +73,4 @@ containing the word maintenance are also listed. If you specified
 customer NOT (part OR maintenance), then topics containing the word
 customer, but not containing the words part or maintenance, are listed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

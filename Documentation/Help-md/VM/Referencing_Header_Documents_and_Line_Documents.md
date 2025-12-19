@@ -16,4 +16,4 @@ across the full range of your enterprise.
 Within Purchase Requisition Entry, you can specify multiple documents
 per header and multiple documents per line, if applicable.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

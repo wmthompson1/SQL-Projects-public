@@ -16,4 +16,4 @@ window.
 | --- | --- |
 | POSTIT.gif | Before you can set up as rate table, you must set up your Rate IDs and Period IDs. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.md) User-defined Help

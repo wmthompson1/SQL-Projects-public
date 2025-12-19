@@ -26,9 +26,9 @@ have associated the VMX file extension to the VISUAL main application
 and have access to the same database, open the file as they would
 an attachment and view the document in its native VE application.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Associating_VMX_Files.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Associating_VMX_Files.md)
 Associating VMX Files
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sending_Infor_VISUAL_EnterpriseFinancials_Information.htm) Sending Infor VISUAL/Financials Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Sending_Infor_VISUAL_EnterpriseFinancials_Information.md) Sending Infor VISUAL/Financials Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

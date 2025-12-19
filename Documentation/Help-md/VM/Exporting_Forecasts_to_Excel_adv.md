@@ -42,7 +42,7 @@ use the currently active calendar to determine the size of the planning
 periods. The Days in Period value specified for the current planning
 calendar is inserted in the Planning size field. The ID of the current
 calendar is inserted in the Calendar # field. See [Creating
-a Planning Calendar](Creating_a_Planning_Calendar.htm).
+a Planning Calendar](Creating_a_Planning_Calendar.md).
 
 To specify your own planning period size,
 clear this check box.

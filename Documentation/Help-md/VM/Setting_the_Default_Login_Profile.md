@@ -58,4 +58,4 @@ box is displayed informing you that users will be prompted to supply
 the missing information the next time the system is accessed. Click
 Yes to exit the dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

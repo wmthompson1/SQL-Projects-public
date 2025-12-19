@@ -28,4 +28,4 @@ are ready for the floor; work may begin on them at any time.
 3. Click the Save
    button to commit settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

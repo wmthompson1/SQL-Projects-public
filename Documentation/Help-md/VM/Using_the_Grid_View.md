@@ -106,7 +106,7 @@ caveats:
   displayed in all rows that contain parts. The protocol is displayed
   even if a URL has not been defined for a particular part. See
   [Setting Up Customizable
-  User Defined Fields](Using_Customizable_UDFs.htm).
+  User Defined Fields](Using_Customizable_UDFs.md).
 
 ## Using the Grid View
 
@@ -178,4 +178,4 @@ cards you added to the spreadsheet, provided that you formatted the
 information correctly. The system adds any new headers, legs, operations,
 or material cards you created in the spreadsheet.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -12,7 +12,7 @@ Printing Thermal Labels from Shipping Entry
 Shipping Entry supports the printing of thermal barcode labels for
 pack lists. Before you try to print any thermal labels for a customer
 order or acknowledgment, design the appropriate thermal labels using
-the [Label Printer Setup Utility](Defining_Thermal_Labels.htm).
+the [Label Printer Setup Utility](Defining_Thermal_Labels.md).
 
 1. From the File menu,
    select Print Pack Lists.
@@ -82,7 +82,7 @@ For PART\_SHIPPING label types:
 Part ID - Click
 the Part ID button to choose a part to print.
 Only the parts you've specified [carton
-information](Creating_Containers_for_Parts.htm) for appear as possible choices.
+information](Creating_Containers_for_Parts.md) for appear as possible choices.
 
 Ship To ID - If
 there is more than one Shipto ID for this part, click the Shipto
@@ -144,7 +144,7 @@ This setting is especially useful for container
 labels that are part of a label group. When selected, VISUAL automatically
 creates the appropriate number of carton labels for the shipment.
 Make this setting a default using the [Label
-Printer Setup Utility](Defining_Thermal_Labels.htm)
+Printer Setup Utility](Defining_Thermal_Labels.md)
 
 Label Printer
 - If appropriate, adjust the label printer you want to use to print
@@ -157,4 +157,4 @@ these labels.
 preference, VISUAL prints a range of thermal labels for the specified
 pack lists.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

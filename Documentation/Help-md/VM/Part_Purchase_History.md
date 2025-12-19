@@ -124,4 +124,4 @@ Use Item Name option.
 If the export is successful, Export Complete
 appears at the bottom of the Send to XML dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

@@ -49,4 +49,4 @@ Entry to the Post Manufacturing Journal PO Accrual report. The transactions
 on each of these reports should match, and you should find the transactions
 represented in the General Ledger.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

@@ -13,12 +13,12 @@ your personal menu.
 See these topics:
 
 * [Setting
-  Up the Personal Menu](Setting_Up_the_Personal_Menu.htm)
+  Up the Personal Menu](Setting_Up_the_Personal_Menu.md)
 * [Customizing
-  the Appearance of the Personal Menu](Customizing_the_Appearance_of_the_Personal_Menu.htm)
+  the Appearance of the Personal Menu](Customizing_the_Appearance_of_the_Personal_Menu.md)
 * [Customizing
-  the Content of the Personal Menu](Customizing_the_Content_of_the_Personal_Menu.htm)
+  the Content of the Personal Menu](Customizing_the_Content_of_the_Personal_Menu.md)
 * [Using
-  the Personal Menu in a Window](Using_the_Personal_Menu_in_a_Window.htm)
+  the Personal Menu in a Window](Using_the_Personal_Menu_in_a_Window.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

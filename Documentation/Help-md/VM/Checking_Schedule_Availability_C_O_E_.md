@@ -109,7 +109,7 @@ Rate per Day
 Information is displayed in this field if the part is a rate-based
 part. This field shows the quantity that the work order produces each
 day. See [What Are Rate-based
-Parts?](What_Are_Rate-based_Parts_.htm).
+Parts?](What_Are_Rate-based_Parts_.md).
 
 First Delivery Date
 Information is displayed in this field if the part is a rate-based
@@ -141,4 +141,4 @@ If you answer No to remove results, you
 can remove them later by using the Purge Availability Checks option
 in the Global Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

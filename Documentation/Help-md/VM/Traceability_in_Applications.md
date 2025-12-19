@@ -189,20 +189,20 @@ If you find you need to change it before completing the transaction,
 you are allowed to re-edit traceability information by pressing Part
 Traceability again.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Purchase_Receipt_Entry.htm) Traceability in Purchase Receipt Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Purchase_Receipt_Entry.md) Traceability in Purchase Receipt Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Inventory_Transaction_Entry.htm) Traceability in Inventory Transaction
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Inventory_Transaction_Entry.md) Traceability in Inventory Transaction
 Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Labor_Ticket_Entry.htm) Traceability in Labor Ticket Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Labor_Ticket_Entry.md) Traceability in Labor Ticket Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Shipping_Entry.htm) Traceability in Shipping Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Shipping_Entry.md) Traceability in Shipping Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_the_Service_Planning_Window.htm) Traceability in Service Planning
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_the_Service_Planning_Window.md) Traceability in Service Planning
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_the_Material_Planning_Window.htm) Traceability in the Material Planning
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_the_Material_Planning_Window.md) Traceability in the Material Planning
 Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Physical_Inventory.htm) Traceability in Physical Inventory Count
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Traceability_in_Physical_Inventory.md) Traceability in Physical Inventory Count
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

@@ -29,4 +29,4 @@ VISUAL represents order lines with blue screws. When you expand the Explorer
 tree by double-clicking any of the document icons or clicking a plus
 box, blue screws appear, one for each order line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

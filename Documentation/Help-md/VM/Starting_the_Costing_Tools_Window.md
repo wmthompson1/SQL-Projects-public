@@ -16,4 +16,4 @@ The Costing Tools window appears with no information in it.
 
 The Costing Tools window contains both entry fields and action buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User Defined Help

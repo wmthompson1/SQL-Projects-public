@@ -69,6 +69,6 @@ by the Required Date of material requirements on the work orders.
 
 VMWRQRP1.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRQRPTfrmWorkOrderReqReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRQRPTfrmWorkOrderReqReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Requirement_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Requirement_Report.md) User-defined Help

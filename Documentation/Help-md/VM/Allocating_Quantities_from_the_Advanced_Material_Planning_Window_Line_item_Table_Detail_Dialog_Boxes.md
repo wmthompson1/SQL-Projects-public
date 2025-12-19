@@ -23,10 +23,10 @@ You can perform the following allocations:
 * Allocate Incoming Interbranch
   Transfer Quantities to Demand
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Supply_Quantities_to_Customer_Order_Demand.htm) Allocating Supply Quantities to Customer
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Supply_Quantities_to_Customer_Order_Demand.md) Allocating Supply Quantities to Customer
 Order Demand
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Supply_Quantities_to_Outgoing_Interbranch_Transfers_and_Work_Order_Material_Requirements.htm) Allocating Supply Quantities to Outgoing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocating_Supply_Quantities_to_Outgoing_Interbranch_Transfers_and_Work_Order_Material_Requirements.md) Allocating Supply Quantities to Outgoing
 Interbranch Transfers and Work Order Material Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

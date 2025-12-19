@@ -51,4 +51,4 @@ If you over issue a dimensionally tracked
 part, you can return the remaining quantity to your inventory after
 the work order is complete.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.md) User-defined Help

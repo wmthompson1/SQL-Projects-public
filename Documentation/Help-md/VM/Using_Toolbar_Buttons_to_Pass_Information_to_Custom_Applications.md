@@ -40,16 +40,16 @@ The entire command line is enclosed in single quotes.
 You can set up your custom application to parse the information
 in the command line and extract additional information from the database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.md)
 User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.md)
 Activating the User Toolbar Function
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_User_Toolbars.md)
 Setting Up User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.md)
 Setting Up Toolbar Bitmaps
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

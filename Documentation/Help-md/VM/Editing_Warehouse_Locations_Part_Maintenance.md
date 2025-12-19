@@ -12,7 +12,7 @@ If you are licensed to use multiple sites, you must select a site
 ID before you can access the Warehouse Locations dialog box.
 
 You can also add parts to warehouse locations in Warehouse Maintenance.
-See [Adding a Part to a Location](Adding_a_Part_to_a_Location.htm).
+See [Adding a Part to a Location](Adding_a_Part_to_a_Location.md).
 
 To add a part to warehouse locations:
 
@@ -111,7 +111,7 @@ of statuses earlier), double-click the Hold Reason
 ID browse button to choose a hold reason code for the action.
 
 Selecting a [hold
-reason](Setting_Hold_Reasons.htm) code prompts VISUAL to change the warehouse location status
+reason](Setting_Hold_Reasons.md) code prompts VISUAL to change the warehouse location status
 to On Hold.
 
 Quantity If
@@ -131,7 +131,7 @@ If you record last count date by warehouse,
 then this field is blank. This field is also blank if a last count
 date has not been specified or a cycle count has not been completed.
 
-See [Cycle Counts](Cycle_Counts.htm).
+See [Cycle Counts](Cycle_Counts.md).
 
 7. Click Save.
 
@@ -145,4 +145,4 @@ row and click the Delete button.
 VISUAL places an X next to the row. Click
 the Save button to complete the deletion.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

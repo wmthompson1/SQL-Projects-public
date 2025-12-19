@@ -83,6 +83,6 @@ To calculate the total rating, the value for on-time performance
 is added to the value for percentage delivered. In this example, the
 total rating for the supplier is 40+26.4, or 66.4.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Supplier_Performance_Criteria.htm) Setting Up Supplier Performance Criteria
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Supplier_Performance_Criteria.md) Setting Up Supplier Performance Criteria
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.htm) Viewing the Supplier Performance Graph
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.md) Viewing the Supplier Performance Graph

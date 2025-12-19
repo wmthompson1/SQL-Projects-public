@@ -52,4 +52,4 @@ window appears. All of your Cost Group IDs automatically appear.
    setting up your GL/Burden mappings, click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

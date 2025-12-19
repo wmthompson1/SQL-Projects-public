@@ -25,11 +25,11 @@ ID field.
 
 The requirement of ship reasons is a setting
 in Site Maintenance under the [Shipment
-Track](Entering_Ship_Reason_Priority_Codes.htm) tab.
+Track](Entering_Ship_Reason_Priority_Codes.md) tab.
 
 3. Select an output for
    the document. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 
 4. Click Ok.
 
@@ -46,4 +46,4 @@ If you selected E-mail,
 a Send dialog box appears in which you can specify to whom you want
 to send the document.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

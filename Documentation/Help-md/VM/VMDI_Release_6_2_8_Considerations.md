@@ -11,25 +11,25 @@ their current installation to 6.2. As always, if you experience any
 difficulty during an upgrade with your current EDI layouts, contact
 Infor Global Solutions Customer Support for assistance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Fixed_File_Style) Fixed File Style
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Fixed_File_Style) Fixed File Style
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Delimited_File_Style) Delimited File Style
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Delimited_File_Style) Delimited File Style
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Accessibility_to_Buttons_and_Boxes) Buttons and Boxes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Accessibility_to_Buttons_and_Boxes) Buttons and Boxes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Regarding_ACK_Transactions) ACK Transactions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Regarding_ACK_Transactions) ACK Transactions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Regarding_CPO_transactions) CPO Transactions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Regarding_CPO_transactions) CPO Transactions
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Regarding_PLN_Transactions) PLN Transaction
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Regarding_PLN_Transactions) PLN Transaction
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Regarding_Log_Files) Log Files in General
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Regarding_Log_Files) Log Files in General
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Successful_Transactions_(Good)_Log_) Successful Transaction Log File
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Successful_Transactions_(Good)_Log_) Successful Transaction Log File
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#Autogenerate_Log) Autogenerate Log
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#Autogenerate_Log) Autogenerate Log
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.htm#The_PrintLogs_feature) Printing Logs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDI_Release_6_2_8_Considerations.md#The_PrintLogs_feature) Printing Logs
 
 ## Record and File Naming
 
@@ -113,7 +113,7 @@ your trading partner requires are not in the list, you may add them.
 See below:
 
 Select Maintenance>[Application
-Global Maintenance](Adding_Customer_Order_Acknowledgment_Codes.htm)
+Global Maintenance](Adding_Customer_Order_Acknowledgment_Codes.md)
 
 Select Maintain>CO Acknowledgment Codes
 
@@ -815,4 +815,4 @@ LIN02007 7001312679 000000000140000 20000414
 The File>Print Logs feature of VMDIXCHG allows you to print any
 .LOG file created in VISUAL.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

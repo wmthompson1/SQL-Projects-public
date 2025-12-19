@@ -13,4 +13,4 @@ If you modify projects and want to keep the original project information
 for your records, VISUAL provides a version control mechanism to help
 you track your changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

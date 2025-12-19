@@ -222,4 +222,4 @@ Unallocated for Overpayment condition.
 | --- | --- |
 | POSTIT.gif | If the Amount listed in the HDR record of your CSH VDI file does not match the sum of the amounts in the LIN records associated with that HDR, then that transaction is not processed into VISUAL. The user needs to diagnose the reason for the discrepancy.  If the LIN amount in the VDI file is greater than the payment balance of the invoice amount in VISUAL , then the transaction the Amount from the LIN is created as an unapplied credit memo for the customer. The user needs to diagnose the reason for the discrepancy and manually apply as necessary.  All processed transactions will appear in the Cash Application program with a payment method of "Export" but will be otherwise indistinguishable from manually entered transactions. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

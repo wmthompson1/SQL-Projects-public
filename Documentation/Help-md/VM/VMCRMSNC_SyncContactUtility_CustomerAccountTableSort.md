@@ -35,5 +35,5 @@ To sort the Contact table:
    Ok to confirm
    your sort priorities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.md)
 What is the Synchronize Contact Utility?

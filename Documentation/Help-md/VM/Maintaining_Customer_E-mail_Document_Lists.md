@@ -8,7 +8,7 @@ Maintaining Customer E-mail Document Lists
 When you print documents related to customers, you
 have the option of e-mailing the documents to your customer contacts.
 To specify which documents to e-mail, use the [Email
-Documents](Maintaining_Customer_E-mail_Document_Lists.htm) dialog.
+Documents](Maintaining_Customer_E-mail_Document_Lists.md) dialog.
 
 To set up e-mail lists for customer documents:
 
@@ -47,6 +47,6 @@ window.
 When you print a report, select the Send to document contents check
 box to e-mail the document to the contacts you specified.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_CUstomer_Maintenance.htm) Printing Formats
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_CUstomer_Maintenance.md) Printing Formats
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

@@ -11,12 +11,12 @@ part purchase history, to current part balances in inventory.
 You can view this information:
 
 * [Part
-  Purchase History](Viewing_Part_Purchase_History.htm)
+  Purchase History](Viewing_Part_Purchase_History.md)
 * [Material
-  Requirements (Where Used Command)](Viewing_Material_Requirements_(Where_Used_Command).htm)
+  Requirements (Where Used Command)](Viewing_Material_Requirements_(Where_Used_Command).md)
 * [Warehouse
-  Locations for Parts](Viewing_Warehouse_Locations_for_Parts.htm)
+  Locations for Parts](Viewing_Warehouse_Locations_for_Parts.md)
 * [Warehouse
-  Part Availability Information](Viewing_Warehouse_Part_Availability_Information.htm)
+  Part Availability Information](Viewing_Warehouse_Part_Availability_Information.md)
 * [All
-  Warehouse Locations](Viewing_all_Warehouse_Locations.htm)
+  Warehouse Locations](Viewing_all_Warehouse_Locations.md)

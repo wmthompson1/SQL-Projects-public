@@ -33,6 +33,6 @@ any numerical value up to four digits.
 4. Click the Save
    button to save the new master production schedules.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Master_Production_Schedules.htm) Viewing Master Production Schedules
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Master_Production_Schedules.md) Viewing Master Production Schedules
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

@@ -15,7 +15,7 @@ the workstation macros are no longer used.
 Before you begin this procedure, make sure that the Store Macros
 in Database check box on the Defaults tab in Application Global Maintenance
 is selected. See [Setting
-Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.htm).
+Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.md).
 
 When you copy macros from a workstation, the macros are associated
 with the user who is signed in. For example, if you sign in as user

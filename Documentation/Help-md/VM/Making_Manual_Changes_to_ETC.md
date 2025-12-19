@@ -17,4 +17,4 @@ adjust each burden category amount as you need.
 VISUAL does not allow you to make manual ETC adjustment to any Summary
 Type other than Estimate to Complete.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

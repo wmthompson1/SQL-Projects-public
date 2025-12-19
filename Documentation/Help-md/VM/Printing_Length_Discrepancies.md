@@ -17,10 +17,10 @@ keep some of your older EDI maps functionally accurate.
    Length Discrepancies button on the main toolbar.
 2. Select an output for
    the length discrepancies report. See [Report
-   Output Options](Report_Output_Options.htm).
+   Output Options](Report_Output_Options.md).
 3. Click the Print
    button.
 4. Click the Apply
    to DB button to apply field changes to the layout.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

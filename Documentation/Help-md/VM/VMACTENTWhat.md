@@ -48,17 +48,17 @@ CRM Task Maintenance in Activity Maintenance.
 See these topics:
 
 * [Setting
-  Up Activities](Setting_Up_Activities.htm)
+  Up Activities](Setting_Up_Activities.md)
 * [Creating
-  Activities](VMACTENTfrmActivityEntry.htm)
+  Activities](VMACTENTfrmActivityEntry.md)
 * [Activity
-  Reminders](Activity_Reminders.htm)
+  Reminders](Activity_Reminders.md)
 * [Reviewing
-  Activities](VMACTMNTfrmActivities.htm)
+  Activities](VMACTMNTfrmActivities.md)
 * [Deleting
-  Records with Attached Activities](Deleting_Records_with_Attached_Activities.htm)
+  Records with Attached Activities](Deleting_Records_with_Attached_Activities.md)
 * [Activities
-  and CRM](Activities_and_CRM.htm)
+  and CRM](Activities_and_CRM.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

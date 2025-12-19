@@ -64,4 +64,4 @@ Candidate (P/C) column from N to Y.
 If VISUAL determines it is appropriate to
 do so, the adjustment will be made the next time you run Costing Utilities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help

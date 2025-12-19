@@ -43,4 +43,4 @@ Uncleared payments for a complete view of the payments for the month.
 7. Click Ok.
    The report outputs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

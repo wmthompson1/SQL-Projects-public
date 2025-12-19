@@ -30,8 +30,8 @@ receipt date, because you can search the IBT dialog box by date.
 You can delete a bad receiver by calling
 it up and clicking the Delete button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Existing_IBT_Receivers.htm) Working with Existing Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Existing_IBT_Receivers.md) Working with Existing Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Receivers_IBT_Receipts.htm) Deleting Receivers
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Receivers_IBT_Receipts.md) Deleting Receivers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

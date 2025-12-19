@@ -45,6 +45,6 @@ the name of the document you selected appears in the Document ID column.
    linking documents to Trace IDs, click the Close
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md)
 User-defined
 Help

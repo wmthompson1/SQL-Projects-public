@@ -40,9 +40,9 @@ To create a quote by copying a master:
    specify the source to copy. Click Engineering Master, Work Order,
    or Quote Master. You can also import an Excel spreadsheet. See
    [Creating
-   Quick Quotes with Microsoft Excel](Creating_Quick_Quotes_with_Microsoft_Excel.htm).
+   Quick Quotes with Microsoft Excel](Creating_Quick_Quotes_with_Microsoft_Excel.md).
 7. Click the Base ID browse
    button and select the master to copy.
 8. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

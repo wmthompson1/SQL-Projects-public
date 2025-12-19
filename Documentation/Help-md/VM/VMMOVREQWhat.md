@@ -15,14 +15,14 @@ Inventory Transaction Entry.
 See these topics:
 
 * [About
-  the Move Requests Window](VMMOVREQfrmMoveRequest.htm)
+  the Move Requests Window](VMMOVREQfrmMoveRequest.md)
 * [Manually
-  Creating a Move Request](Manually_Creating_a_Move_Request.htm)
+  Creating a Move Request](Manually_Creating_a_Move_Request.md)
 * [Move
-  Requests in Inventory Transaction Entry](Move_Requests_in_Inventory_Transaction_Entry.htm)
+  Requests in Inventory Transaction Entry](Move_Requests_in_Inventory_Transaction_Entry.md)
 * [Copying
-  Move Requests](Copying_Move_Requests.htm)
+  Move Requests](Copying_Move_Requests.md)
 * [Using
-  the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.htm)
+  the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.md)
 * [Using
-  the Move Request Window to Deliver Move Requests](Using_the_Move_Request_Window_to_Deliver_Move_Requests.htm)
+  the Move Request Window to Deliver Move Requests](Using_the_Move_Request_Window_to_Deliver_Move_Requests.md)

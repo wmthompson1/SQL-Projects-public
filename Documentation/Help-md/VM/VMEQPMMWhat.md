@@ -15,4 +15,4 @@ maintenance work on the equipment and VISUAL closes the work order,
 you can generate billing details for the equipment, if the equipment
 is external and the work order is for a piece of customer equipment.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

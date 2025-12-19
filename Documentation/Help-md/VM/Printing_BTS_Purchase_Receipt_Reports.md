@@ -6,7 +6,7 @@ Printing BTS Purchase Receipt Reports
 # Printing BTS Purchase Receipt Reports
 
 ![POSTIT.gif](POSTIT.gif "POSTIT.gif") You can
-not print reports if the session timer is on. Click [here](Stopping_the_Timer.htm)
+not print reports if the session timer is on. Click [here](Stopping_the_Timer.md)
 to find out how to turn off the timer.
 
 You can print a report of purchase receipt transactions. Constrain
@@ -104,7 +104,7 @@ you can use to specify to whom you want to send the QRP report information.
 7. Click the Ok
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Purchase_Receipt_Thermal_Label_and_Receiver_Print_Options.htm) Setting Purchase Receipt Thermal Label
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Purchase_Receipt_Thermal_Label_and_Receiver_Print_Options.md) Setting Purchase Receipt Thermal Label
 and Receiver Print Options
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User

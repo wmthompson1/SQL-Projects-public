@@ -39,7 +39,7 @@ Priority - VISUAL
 uses this value to sort customers during the allocation process. The
 lower the number you assign the customer, the higher the priority
 for the customer. You can specify a different priority for each customer
-in Customer Maintenance. Click [here](Entering_Customer_Priority_Codes.htm)
+in Customer Maintenance. Click [here](Entering_Customer_Priority_Codes.md)
 for more on customer priority codes.
 
 Allocation Fence
@@ -49,7 +49,7 @@ date is outside the allocation fence, the Allocator ignores it during
 the allocation process. For customers of this type, this allocation
 fence value becomes the default setting. You can, however, override
 this setting in Customer Maintenance during the entry of Customer
-Order Management information. Click [here](Setting_a_Customer_s_Allocation_Fence.htm)
+Order Management information. Click [here](Setting_a_Customer_s_Allocation_Fence.md)
 for more on setting allocation fences for customers.
 
 Reallocate - Before
@@ -57,7 +57,7 @@ creating new allocations, existing allocations may be removed. If
 you select this check box, all customers of this type are Reallocation
 enabled by default. You can, however, override this setting in Customer
 Maintenance during the entry of Customer Order management information.
-Click [here](Enabling_Customer_Reallocation.htm) for more
+Click [here](Enabling_Customer_Reallocation.md) for more
 on customer reallocation.
 
 Auto Allocate
@@ -82,4 +82,4 @@ have allocated supply before you firm or release the requirement.
 7. Click Save
    when you are finished entering customer type information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

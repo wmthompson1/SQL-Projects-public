@@ -22,14 +22,14 @@ Consolidated orders are invoiced on a site-by-site basis also.
 See these topics:
 
 * [Creating
-  a Consolidated Sales Order](Creating_a_Consolidated_Sales_Order.htm)
+  a Consolidated Sales Order](Creating_a_Consolidated_Sales_Order.md)
 * [Shipping
-  a Consolidated Sales Order](Shipping_a_Consolidated_Sales_Order.htm)
+  a Consolidated Sales Order](Shipping_a_Consolidated_Sales_Order.md)
 * [RMAs
-  and Consolidated Sales Orders](RMAs_and_Consolidated_Sales_Orders.htm)
+  and Consolidated Sales Orders](RMAs_and_Consolidated_Sales_Orders.md)
 * [Costing
-  Consolidated Sales Orders](Costing_Consolidatd_Sales_Orders.htm)
+  Consolidated Sales Orders](Costing_Consolidatd_Sales_Orders.md)
 * [Invoicing
-  Consolidated Sales Orders](Invoicing_Consolidated_Sales_Orders.htm)
+  Consolidated Sales Orders](Invoicing_Consolidated_Sales_Orders.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

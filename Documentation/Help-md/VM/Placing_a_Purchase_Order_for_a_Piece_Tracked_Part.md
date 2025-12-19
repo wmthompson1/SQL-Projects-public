@@ -59,4 +59,4 @@ the part in 10x10 sheets, you need to order two 10x10 sheets (200
 square feet) to supply the required quantity. VISUAL automatically
 calculates the required quantity for the order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.md) User-defined Help

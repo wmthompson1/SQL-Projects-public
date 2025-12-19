@@ -18,4 +18,4 @@ From an Expected Throughput graph with multiple schedules loaded,
 hold down the CTRL key and click the schedule you want to use as the
 base.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

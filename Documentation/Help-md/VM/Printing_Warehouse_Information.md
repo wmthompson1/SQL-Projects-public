@@ -71,8 +71,8 @@ If you selected E-mail,
 a Send - Print box appears in which you can specify to whom you want
 to send the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Warehouse_Information.htm) Printing Formats Warehouse Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Formats_Warehouse_Information.md) Printing Formats Warehouse Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Warehouse_Thermal_Labels.htm) Printing Warehouse Thermal Labels
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Warehouse_Thermal_Labels.md) Printing Warehouse Thermal Labels
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

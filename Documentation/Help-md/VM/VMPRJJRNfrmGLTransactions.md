@@ -88,4 +88,4 @@ the number of hours to adjust.
 11. Click the Save
     toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Adjustment_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Adjustment_Entry.md) User-defined Help

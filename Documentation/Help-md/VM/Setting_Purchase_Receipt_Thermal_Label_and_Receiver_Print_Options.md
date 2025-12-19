@@ -25,7 +25,7 @@ The BTS Print Options dialog box appears.
 4. Click the Save
    button to commit these settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Purchase_Receipt_Reports.htm) Printing BTS Purchase Receipt Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_BTS_Purchase_Receipt_Reports.md) Printing BTS Purchase Receipt Reports
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") User
 Defined Information

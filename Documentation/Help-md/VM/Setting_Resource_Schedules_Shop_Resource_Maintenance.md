@@ -53,4 +53,4 @@ during a shift, leave the field blank or put a zero (0) in it.
 Click the Delete
 button to delete a weekly schedule.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

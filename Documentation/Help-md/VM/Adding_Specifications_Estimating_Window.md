@@ -20,4 +20,4 @@ quote, and Line Specs with individual line items.
 | --- | --- |
 | POSTIT.gif | You do not need to close Specification windows after each use. They can remain open for the whole session, and their contents change as the current quote and selected line item change. You must select the field (the spec line quote) for the change to occur. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

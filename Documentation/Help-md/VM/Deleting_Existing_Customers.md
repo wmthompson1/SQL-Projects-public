@@ -30,4 +30,4 @@ in your database, VISUAL does not allow you to delete the customer.
 4. Click the Clear
    button to clear the customer information from the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

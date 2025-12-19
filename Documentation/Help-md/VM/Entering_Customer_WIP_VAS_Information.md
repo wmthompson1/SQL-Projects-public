@@ -70,9 +70,9 @@ conformation.
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Customer
 Maintenance User Defined Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Pasting_Customer_WIP_VAS_Information.htm) Copying & Pasting Customer WIP/VAS
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Pasting_Customer_WIP_VAS_Information.md) Copying & Pasting Customer WIP/VAS
 Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Customer_WIP_VAS_Information.htm) Deleting Customer WIP/VAS Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Customer_WIP_VAS_Information.md) Deleting Customer WIP/VAS Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

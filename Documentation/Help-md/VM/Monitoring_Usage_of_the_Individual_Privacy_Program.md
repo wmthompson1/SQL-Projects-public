@@ -52,7 +52,7 @@ this option to attach the report to an email as an RTF (Rich Text
 Format). To attach a PDF (Portable Document Format), select the PDF
 Format check box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

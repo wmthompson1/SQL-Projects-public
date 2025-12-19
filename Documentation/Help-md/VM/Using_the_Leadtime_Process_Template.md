@@ -18,5 +18,5 @@ To build a leadtime process from the template:
    field, specify a new name for the process.
 5. Edit the process as
    necessary. See [Creating
-   Leadtime Processes](Creating_Leadtime_Processes.htm).
+   Leadtime Processes](Creating_Leadtime_Processes.md).
 6. Click Save.

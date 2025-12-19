@@ -31,4 +31,4 @@ In the Customer Order Entry child window, you can verify the supply
 by looking at the Supply Type column in the line table. For example,
 if the expected order was a purchase order, PO appears in the column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

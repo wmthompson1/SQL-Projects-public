@@ -58,4 +58,4 @@ When multiple links are present, the Base
 ID field of the line item displays the message Multiple Links. You
 can view the links using Assign to Work Order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

@@ -68,4 +68,4 @@ the code or ID you want to use.
 For more information on Purchase Requisition,
 refer to your Infor VISUAL documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

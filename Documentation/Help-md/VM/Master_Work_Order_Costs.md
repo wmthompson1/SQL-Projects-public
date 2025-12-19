@@ -43,4 +43,4 @@ Projected - Projected cost is equal to
 the actual cost of the completed work or issued materials, plus the
 remainder of the work at estimated cost.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

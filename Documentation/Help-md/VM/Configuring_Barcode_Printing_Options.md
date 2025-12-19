@@ -42,6 +42,6 @@ With this default, the Print
 Barcodes check box in the Print Packlists dialog boxes is selected
 automatically. You can override this setting at any time by clearing
 the check box before printing a packlist report. See [Printing
-Packlists](Printing_Packlists.htm) for more information.
+Packlists](Printing_Packlists.md) for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

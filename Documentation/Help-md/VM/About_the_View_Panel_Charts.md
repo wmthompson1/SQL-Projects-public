@@ -16,7 +16,7 @@ the Orders bar to view the released orders that contributed to the
 value expressed by the bar. The list of orders is displayed in a grid,
 and only orders placed in your allowable sites for the entity are
 displayed. You can sort and arrange the data in the grid in a variety
-of ways. See [Grids](Grids.htm).
+of ways. See [Grids](Grids.md).
 
 To export the contents of the table to Microsoft Excel, right-click
 in the table and select Send to Microsoft Excel.
@@ -27,10 +27,10 @@ in the orders grid you can click an order ID to open the order.
 See these topics:
 
 * [Customer
-  View Panel Chart](Customer_View_Panel_Chart.htm)
+  View Panel Chart](Customer_View_Panel_Chart.md)
 * [Order
-  Line View Panel Chart](Order_Line_View_Panel_Chart.htm)
+  Line View Panel Chart](Order_Line_View_Panel_Chart.md)
 * [Part
-  View Panel Chart](Part_View_Panel_Chart.htm)
+  View Panel Chart](Part_View_Panel_Chart.md)
 * [Vendor
-  View Panel Chart](Vendor_View_Panel_Chart.htm)
+  View Panel Chart](Vendor_View_Panel_Chart.md)

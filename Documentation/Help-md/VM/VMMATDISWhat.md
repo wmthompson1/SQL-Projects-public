@@ -19,12 +19,12 @@ tab and Detail tab.
 You can complete these tasks in the Material Handler Queue:
 
 * [Sort
-  and filter the material handler queue table](Sorting_and_Filtering_the_Material_Handler_Queue_Table.htm)
+  and filter the material handler queue table](Sorting_and_Filtering_the_Material_Handler_Queue_Table.md)
 * [Assign
-  a move request to an employee](Assigning_Move_Requests_to_an_Employee.htm)
+  a move request to an employee](Assigning_Move_Requests_to_an_Employee.md)
 * [Pick
-  up materials](Picking_Up_Materials.htm)
+  up materials](Picking_Up_Materials.md)
 * [Deliver
-  materials](Delivering_a_Move_Request.htm)
+  materials](Delivering_a_Move_Request.md)
 * [Deliver
-  move requests to an alternate location](Delivering_Materials_to_an_Alternate_Location.htm)
+  move requests to an alternate location](Delivering_Materials_to_an_Alternate_Location.md)

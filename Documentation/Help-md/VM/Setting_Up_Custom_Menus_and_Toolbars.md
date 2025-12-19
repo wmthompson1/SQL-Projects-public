@@ -30,10 +30,10 @@ application, and so on.
 See these topics:
 
 * [Using
-  the Personal Menu](Using_the_Personal_Menu.htm)
+  the Personal Menu](Using_the_Personal_Menu.md)
 * [User
-  Toolbars](User_Toolbars.htm)
+  Toolbars](User_Toolbars.md)
 * [URL
-  Links Toolbar](URL_Links_Toolbar.htm)
+  Links Toolbar](URL_Links_Toolbar.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

@@ -27,4 +27,4 @@ mate rials you want to be Universally Planned.
 For more information on Inventory and Material Planning, refer to
 your Infor VISUAL documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

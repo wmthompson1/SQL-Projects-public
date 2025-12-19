@@ -35,4 +35,4 @@ now associated with this layout. When this layout is selected in the
 VMDI Exchange window, data for all customers or vendors who have been
 associated with this layout will be exported.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

@@ -17,14 +17,14 @@ site.
 
 Refer to the following topics for more information:
 
-* [Designating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.htm)
+* [Designating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.md)
   [Legs and
-  Engineering Masters as Eligible for Updating](Updating_Engineering_Masters_from_Legs.htm)
+  Engineering Masters as Eligible for Updating](Updating_Engineering_Masters_from_Legs.md)
 * [Updating
-  Engineering Masters from Legs](Updating_Engineering_Masters_from_Legs_ECN.htm)
+  Engineering Masters from Legs](Updating_Engineering_Masters_from_Legs_ECN.md)
 * [Updating
-  Legs from Engineering Masters](Updating_Legs_from_Engineering_Masters_ECN.htm)
+  Legs from Engineering Masters](Updating_Legs_from_Engineering_Masters_ECN.md)
 * [Printing
-  a Where Used on Leg Report](Printing_a_Where_Used_on_Leg_Report.htm)
+  a Where Used on Leg Report](Printing_a_Where_Used_on_Leg_Report.md)
 * [Viewing
-  Update Information](Viewing_Update_Information.htm)
+  Update Information](Viewing_Update_Information.md)

@@ -47,4 +47,4 @@ six supply sources to meet an orders supply requirements; it is also
 quite possible that you may have sufficient stock in inventory alone
 to fulfill an order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

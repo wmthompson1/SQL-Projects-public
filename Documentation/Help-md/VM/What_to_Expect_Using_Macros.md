@@ -46,4 +46,4 @@ in your VISUAL executable directory. If you store macros on workstations,
 no further steps are needed. Your macro is displayed in the Macros
 menu. If you store macros in your database, you must import the macro
 into the database before you can use it. See [Storing
-Macros](Storing_Macros.htm).
+Macros](Storing_Macros.md).

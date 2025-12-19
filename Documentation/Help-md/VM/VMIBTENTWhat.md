@@ -31,12 +31,12 @@ Interbranch Transfer entry provides the following functions:
 | --- | --- |
 | IMPORTNT.gif | VISUAL does not let you save interbranch transfer lines unless you have at least one location in each warehouse with the same ID as the warehouse itself. For example, warehouse MMC-MAIN, must have a location MMC-MAIN. Enter these identical Location IDs in Warehouse Maintenance before attempting to enter and save any IBT lines. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Entry.htm) Starting Interbranch Transfer Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Interbranch_Transfer_Entry.md) Starting Interbranch Transfer Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTSHPWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTSHPWhat.md)
 Interbranch Transfer Shipping Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTRCVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMIBTRCVWhat.md)
 Interbranch Transfer Receipt Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

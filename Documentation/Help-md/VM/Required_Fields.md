@@ -26,4 +26,4 @@ fields in the following cases:
   based on your settings. For example, if you use a VAT-enabled
   database, you must enter values in VAT-related fields.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

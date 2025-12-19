@@ -68,4 +68,4 @@ of pages.
 You can modify the format of the receiver
 report using Centura Report Builder. The QRP file name is VMRCVFRM.QRP.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

@@ -201,7 +201,7 @@ hours/costs across the duration of the task.
 Before you can use the ETC Tab to enter estimate to complete figures,
 you must initialize the first ETC. For more information, refer to
 [Initializing
-Estimate to Complete Figures](Initializing_Estimate_to_Complete_Figures.htm).
+Estimate to Complete Figures](Initializing_Estimate_to_Complete_Figures.md).
 
 Use the ETC tab to maintain estimate to complete figures for the
 task. You can also maintain ETCs in the Maintain ETC window available
@@ -230,4 +230,4 @@ buttons. Click the Insert End Period to add a period to the end of
 the ETC. Click the Insert Start Period to add a period at the beginning
 of the ETC.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

@@ -13,7 +13,7 @@ results table to Microsoft Excel.
 2. Sign in as the SYSADM
    user.
 3. Run the query. See [Using the Change Country
-   Utility](VMCHGCNTfrmChangeCountryCodes.htm).
+   Utility](VMCHGCNTfrmChangeCountryCodes.md).
 4. After you execute your
    search, select File, Send
    to Microsoft Excel.

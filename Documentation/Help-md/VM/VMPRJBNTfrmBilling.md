@@ -77,4 +77,4 @@ revenue recognition before proceeding.
     | --- | --- |
     | POSTIT.gif | The total amount of billing events cannot be greater that the total of the order line to which you have attached the events. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

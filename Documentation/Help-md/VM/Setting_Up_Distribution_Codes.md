@@ -77,4 +77,4 @@ button and correct the offending Interval Percentages.
     entering Distribution Codes, click the Close
     Window button or, from the File menu, select the Exit but ton.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Distribution_Code_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Distribution_Code_Maintenance.md) User-defined Help

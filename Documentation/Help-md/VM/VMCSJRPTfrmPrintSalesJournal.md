@@ -25,7 +25,7 @@ This table shows the tasks that you can complete in the Customer
 Order Sales Journal Report window:
 
 | Task | Description |
-| [Printing Customer Order Sales Journals](Printing_Customer_Order_Sales_Journals.htm) | Use this procedure to generate customer sales journal reports. |
+| [Printing Customer Order Sales Journals](Printing_Customer_Order_Sales_Journals.md) | Use this procedure to generate customer sales journal reports. |
 
 ## Fields
 
@@ -68,7 +68,7 @@ Report
 output
 
 Select the output format for the report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
 Summary
 
@@ -90,4 +90,4 @@ Sequence
 Specify how to sort the report. For example, if you click Part ID,
 the report shows customer orders for each part ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Sales_Journal.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Sales_Journal.md) User-defined Help

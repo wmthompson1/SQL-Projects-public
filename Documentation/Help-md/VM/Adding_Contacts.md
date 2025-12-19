@@ -17,7 +17,7 @@ an ID for the contact, or leave this field blank to generate an ID
 when the record is saved. To set up the numbering scheme for auto-generated
 IDs, select Edit, Auto
 Numbering. See [Using Auto
-Numbering](Using_Auto_Numbering.htm).
+Numbering](Using_Auto_Numbering.md).
 
 First/Last Name
 Specify the honorific, first name, and last name of the contact
@@ -61,8 +61,8 @@ Active - Select
 this check box to activate the contact. Clearing the check box maintains
 the contact information, but sets the contact status to inactive.
 See [Designating Contacts
-as Active](Designating_Contacts_as_Active.htm) or [Designating
-Contacts as Inactive](Designating_Contacts_as_Inactive.htm) for more information.
+as Active](Designating_Contacts_as_Active.md) or [Designating
+Contacts as Inactive](Designating_Contacts_as_Inactive.md) for more information.
 
 Phone/Extension
 Enter
@@ -232,7 +232,7 @@ To specify user-defined information:
 Select Maintain, User
 Defined Field Labels to set up the fields in this tab. See
 [Defining
-Label Set IDs for Header User Defined Fields](Defining_Label_Set_IDs_for_Header_User_Defined_Fields.htm).
+Label Set IDs for Header User Defined Fields](Defining_Label_Set_IDs_for_Header_User_Defined_Fields.md).
 
 ## Entering Specifications
 

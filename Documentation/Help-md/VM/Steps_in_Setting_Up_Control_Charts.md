@@ -77,4 +77,4 @@ for a given quality characteristic of a specified process.
     and analyze the results, taking corrective actions to eliminate
     assignable causes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

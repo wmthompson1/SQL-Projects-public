@@ -27,4 +27,4 @@ If you want to stop using the Graphical menu, select Graphical
 Menu from the File menu. The Graphical menu closes and VISUAL
 appears with its standard interface.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Graphical_Menu.md) User-defined Help

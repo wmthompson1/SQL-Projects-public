@@ -27,7 +27,7 @@ main functions; each is printed as a separate report:
   IDs. The Picklist Format portion of the Work Order Traveller provides
   this function.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRVRPTfrmPrintTravellers.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRVRPTfrmPrintTravellers.md)
 Printing Travellers and Picklists
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

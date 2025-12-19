@@ -78,7 +78,7 @@ Equip Type Click
 the drop-down arrow and select the piece of equipment that the material
 handler should use to move the parts. Set up equipment types in the
 Move Equipment Type dialog box. See [Move
-Equipment Types](Move_Equipment_Types.htm).
+Equipment Types](Move_Equipment_Types.md).
 
 Weight Specify
 the total weight of the parts that are being moved, including packaging.
@@ -111,7 +111,7 @@ If the parts are located in a WIP location, specify the ID of the
 location. If you specified a warehouse in the Warehouse field, the
 WIP Location browse table is filtered to show the locations in the
 warehouse that you selected. Set up WIP locations in Warehouse Maintenance.
-See [WIP Inventory Locations](WIP_Inventory_Locations.htm).
+See [WIP Inventory Locations](WIP_Inventory_Locations.md).
 
 Directions Use
 this field to provide directions to the pick up location.
@@ -138,7 +138,7 @@ WIP Location
 To move the parts to a WIP location, specify the ID of the location.
 If you specified a warehouse in the Warehouse field, the WIP Location
 browse table is filtered to show the locations in the warehouse that
-you selected. Set up WIP locations in Warehouse Maintenance. See [WIP Inventory Locations](WIP_Inventory_Locations.htm).
+you selected. Set up WIP locations in Warehouse Maintenance. See [WIP Inventory Locations](WIP_Inventory_Locations.md).
 
 Directions Use
 this field to provide directions to the drop-off location.

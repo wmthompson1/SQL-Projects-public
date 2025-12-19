@@ -19,4 +19,4 @@ for the actual specification.
 | --- | --- |
 | POSTIT.gif | If you do not specify a specification for a MATERIAL or ASSEMBLY record but do specify a valid Part ID for that MATERIAL or ASSEMBLY record, VDIU copies the specification from part Maintenance to the material requirement or leg specifications. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

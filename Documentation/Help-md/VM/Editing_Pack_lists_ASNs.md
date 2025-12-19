@@ -18,13 +18,13 @@ a packlist you can then edit.
    packlist ID, select the order with the packlist you want to edit.
 2. If you have not already
    shipped the order, [print
-   a pack list for it before shipment](Consolidating_Pack_Lists_.htm), or ship it.
+   a pack list for it before shipment](Consolidating_Pack_Lists_.md), or ship it.
 3. After VISUAL generates
    the packlist and ships the order, click the Edit
    Pack list button on the main toolbar.
 
 The Edit packlist dialog box appears. For
-general information on using edit packlist features, click [here](Editing_Packlists.htm).
+general information on using edit packlist features, click [here](Editing_Packlists.md).
 
 The Order ID and the packlist ID appears
 in read-only reference fields at the top of the dialog box.
@@ -37,7 +37,7 @@ in read-only reference fields at the top of the dialog box.
    attached to an order.
 6. If VISUAL generated
    an ASN for this order [at
-   the time of shipment](Consolidating_Pack_Lists_.htm), and you want to change ASN details,
+   the time of shipment](Consolidating_Pack_Lists_.md), and you want to change ASN details,
    click the Edit ASN toolbar button.
 
 The Advance Ship Notice dialog box appears.
@@ -50,7 +50,7 @@ Exped Trans Code
 
 Carrier ID - From the Carrier IDlist box,
 select a valid VISUAL Carrier ID. Enter Carrier IDs through [Application
-Global Maintenance](Adding_Carriers.htm).
+Global Maintenance](Adding_Carriers.md).
 
 Exped Trans Auth
 - Enter an Exped Trans Auth for the ASN.
@@ -87,9 +87,9 @@ If you want to put the ASN on hold, select
 this check box.
 
 It is possible to make ASN on Hold a default
-selection, either by [customer](Setting_General_Customer_E_Commerce_Preferences_.htm)
+selection, either by [customer](Setting_General_Customer_E_Commerce_Preferences_.md)
 or by [Ship
-To ID](Setting_Customer_Shipping_Address_E_Commerce_Preferences.htm).
+To ID](Setting_Customer_Shipping_Address_E_Commerce_Preferences.md).
 
 If appropriate, select a User Defined Layout
 ID for the ASN from the User Defined Layout ID list box.
@@ -100,4 +100,4 @@ and you can add information as necessary.
 9. Click the Save
    toolbar button to save the edited ASN information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

@@ -67,14 +67,14 @@ the frmCustomerSnc section.
    table. Actions taken to process customer and account are written
    to the log file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What is
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What is
 the Synchronize Customer/Account Utility?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCfrmCustomerSnc.md)
 Adding Missing Customers and Accounts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCInterfaceOvrvw.md)
 Navigating in the Synchronize Customer/Account Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCResyncLinkedAccountandCustomerAssociations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCResyncLinkedAccountandCustomerAssociations.md)
 Re-synchronizing Linked Account and Customer Associations

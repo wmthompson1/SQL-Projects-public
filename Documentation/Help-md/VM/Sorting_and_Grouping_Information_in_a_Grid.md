@@ -36,7 +36,7 @@ To use the Group By Box:
 To remove a group, drag the group name from the Group Box to the
 grid header row.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Grids.md)
 Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

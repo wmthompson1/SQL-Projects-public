@@ -6,7 +6,7 @@ Where are Macros Available?
 # Where are Macros Available?
 
 Macros are available in these applications. Click
-[here](What_are_Macros_.htm) for more on defining and running
+[here](What_are_Macros_.md) for more on defining and running
 macros.
 
 Macros are available in these applications:

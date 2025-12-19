@@ -383,4 +383,4 @@ Below is a comprehensive list of the ANSI/X12 Transaction Sets.
 
 998 - Set Cancellation EDI Requirements Worksheet:
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

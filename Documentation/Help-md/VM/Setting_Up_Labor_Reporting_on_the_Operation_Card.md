@@ -65,9 +65,9 @@ field)/100) \* total hours required for the operation
 
 To complete the labor on an operations,
 users must manually close the operation. See [Completing
-Labor on Operations with Max Percent Complete Thresholds](VMLABENTfrmLaborEntry.htm#CompletingLaborMaxPercent)..
+Labor on Operations with Max Percent Complete Thresholds](VMLABENTfrmLaborEntry.md#CompletingLaborMaxPercent)..
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINfrmOperation.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINfrmOperation.md)
 Adding an Operation

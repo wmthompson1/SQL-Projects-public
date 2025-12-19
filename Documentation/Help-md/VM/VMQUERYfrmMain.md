@@ -88,18 +88,18 @@ written for you automatically, select the No Auto Joining check box.
 6. To add other SQL commands
    to your query, use the SQL Command list. Select a command from
    the list to add it to your query. See [SQL
-   Commands](SQL_Commands.htm).
+   Commands](SQL_Commands.md).
 7. To construct the statement
    as a single line, select the singe line sql
    statement check box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYWhat.md)
 What is the Query Tool?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Query_Results_Outside_of_the_Query_Tool.htm) Displaying Query Results Outside of
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Query_Results_Outside_of_the_Query_Tool.md) Displaying Query Results Outside of
 the Query Tool
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](BrowsefrmBrowse.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](BrowsefrmBrowse.md)
 Advanced searches using wildcards and operators

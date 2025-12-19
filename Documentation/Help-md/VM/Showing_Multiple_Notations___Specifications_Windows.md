@@ -43,4 +43,4 @@ from the Notes menu. There is a check box to control saving of window
 positions and another to control saving of sizes. If the boxes are
 not checked, VISUAL does not save the sizes/positions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

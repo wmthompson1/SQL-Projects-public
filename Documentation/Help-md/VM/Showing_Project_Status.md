@@ -16,4 +16,4 @@ option.
 A secondary window appears showing, by WBS, all the work orders
 and A/P invoices associated with the project.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

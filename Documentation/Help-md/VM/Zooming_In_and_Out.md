@@ -30,4 +30,4 @@ When you close the Scheduling Window, the system retains the zoom
 level you set. When you next open the Scheduling Window, the zoom
 level will be the same as when you last exited the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

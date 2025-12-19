@@ -20,11 +20,11 @@ This table shows the tasks that you can complete in the Costed Bill
 of Material Report window:
 
 | Task | Description |
-| [Generating Costed Bill of Material Reports](Printing_Costed_Bill_of_Material_Reports.htm) | Use this procedure to generate costed bill of materials reports. |
-| [Resetting Material Requirement Costs in the Costed Bill of Material Report Window](Resetting_Material_Requirement_Costs_in_the_Costed_Bill_of_Material_Report_Window.htm) | Use this procedure to reset material requirement costs for one or more parts. |
-| [Resetting Operation Costs in the Costed Bill of Material Report Window](Resetting_Operation_Costs_in_the_Costed_Bill_of_Material_Report_Window.htm) | Use this procedure to reset operation costs for one or more parts. |
-| [Resetting Outside Service Costs in the Costed Bill of Material Report Window](Resetting_Outside_Service_Costs_in_the_Costed_Bill_of_Material_Report_Window.htm) | Use this procedure to reset service costs for one or more parts. |
-| [Imploding Costs in the Costed Bill of Material Report Window](Imploding_Costs_in_the_Costed_Bill_of_Material_Report_Window.htm) | Use this procedure to calculate the total cost of one or more parts based on the operations and material requirements in the engineering master. |
+| [Generating Costed Bill of Material Reports](Printing_Costed_Bill_of_Material_Reports.md) | Use this procedure to generate costed bill of materials reports. |
+| [Resetting Material Requirement Costs in the Costed Bill of Material Report Window](Resetting_Material_Requirement_Costs_in_the_Costed_Bill_of_Material_Report_Window.md) | Use this procedure to reset material requirement costs for one or more parts. |
+| [Resetting Operation Costs in the Costed Bill of Material Report Window](Resetting_Operation_Costs_in_the_Costed_Bill_of_Material_Report_Window.md) | Use this procedure to reset operation costs for one or more parts. |
+| [Resetting Outside Service Costs in the Costed Bill of Material Report Window](Resetting_Outside_Service_Costs_in_the_Costed_Bill_of_Material_Report_Window.md) | Use this procedure to reset service costs for one or more parts. |
+| [Imploding Costs in the Costed Bill of Material Report Window](Imploding_Costs_in_the_Costed_Bill_of_Material_Report_Window.md) | Use this procedure to calculate the total cost of one or more parts based on the operations and material requirements in the engineering master. |
 
 ## Fields
 
@@ -70,6 +70,6 @@ Output
 format
 
 Specify how to output the report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costed_Bill_of_Material_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costed_Bill_of_Material_Report.md) User-defined Help

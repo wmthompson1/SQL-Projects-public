@@ -18,21 +18,21 @@ to deactivate it.
 Many of the menu selections under the Options
 menu also have corresponding buttons on the Toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Part_IDs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Part_IDs.md)
 Showing Part IDs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Popup_Menu.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Popup_Menu.md)
 Using the Popup Menu
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_Capacity.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_Capacity.md)
 Showing/Hiding Capacity
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_Operations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_Operations.md)
 Showing/Hiding Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_the_Grid.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_the_Grid.md)
 Showing/Hiding the Grid
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_the_Status_Bar.htm) Showing/Hiding the Status Bar
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Showing_Hiding_the_Status_Bar.md) Showing/Hiding the Status Bar

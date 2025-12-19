@@ -59,9 +59,9 @@ time, using the standard Labor Ticket Entry application.
 
 Prior to using Labor Ticket Entry, you should have already entered
 information about all employees who are reporting labor. See [Adding
-Employee Information](VMEMPMNTfrmEmployee.htm).
+Employee Information](VMEMPMNTfrmEmployee.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Labor_Ticket_Entry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Labor_Ticket_Entry.md)
 Starting Labor Ticket Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

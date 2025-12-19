@@ -19,6 +19,6 @@ In the same way that inventory receipt transactions record incoming
 materials, Service Receipt Entry creates Service Receipt transactions
 to log incoming shipments of serviced materials.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Receipt_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Service_Receipt_Entry.htm) Starting Outside Service Receipt Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Service_Receipt_Entry.md) Starting Outside Service Receipt Entry

@@ -21,18 +21,18 @@ into VFIN.
 These applications are available in the Accounting Menu:
 
 * [Post
-  Manufacturing Journals](VF.chm::/VFMFGJRNWhat.htm)
+  Manufacturing Journals](VFMFGJRNWhat.md)
 * [Progress
-  Billing Entry](VMPBCENTWhat.htm)
+  Billing Entry](VMPBCENTWhat.md)
 * [Accounting
-  Window](VF.chm::/VFGLAWINWhat.htm)
+  Window](VFGLAWINWhat.md)
 * [Costing
-  Utilities](VMAPLUTLWhat.htm)
+  Utilities](VMAPLUTLWhat.md)
 * [Close/Reopen
-  Maintenance](VMCLSPERWhat.htm)
+  Maintenance](VMCLSPERWhat.md)
 * [WIP
-  Maintenance](VMWIPMNTWhat.htm)
+  Maintenance](VMWIPMNTWhat.md)
 * [Financials
-  Application Global Maintenance](VF.chm::/VFAPLGLBWhat.htm)
+  Application Global Maintenance](VFAPLGLBWhat.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Exchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Exchange.md) User-defined Help

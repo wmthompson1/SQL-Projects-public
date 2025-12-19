@@ -24,24 +24,24 @@ Select from these six supply options when soft allocating supply
 to a IBT line:
 
 [Co-product
-supply](Assigning_Co_product_Supply_to_Outgoing_IBT_Lines.htm)
+supply](Assigning_Co_product_Supply_to_Outgoing_IBT_Lines.md)
 
 [Inventory
-(Warehouse) supply](Assigning_Inventory_Supply_to_Outgoing_IBT_Lines.htm)
+(Warehouse) supply](Assigning_Inventory_Supply_to_Outgoing_IBT_Lines.md)
 
 [Purchase
-Order Delivery Schedule supply](Assigning_Purchase_Order_Delivery_Schedule_Line_Supply_to_Outgoing_IBT_Lines.htm)
+Order Delivery Schedule supply](Assigning_Purchase_Order_Delivery_Schedule_Line_Supply_to_Outgoing_IBT_Lines.md)
 
 [Purchase
-Order supply](Assigning_Purchase_Order_Line_Supply_to_Outgoing_IBT_Lines.htm)
+Order supply](Assigning_Purchase_Order_Line_Supply_to_Outgoing_IBT_Lines.md)
 
 [Interbranch
-Transfer supply](Assigning_Interbranch_Transfer_Supply_to_Outgoing_IBT_Lines.htm)
+Transfer supply](Assigning_Interbranch_Transfer_Supply_to_Outgoing_IBT_Lines.md)
 
 [Work
-Order supply](Assigning_Work_Order_Supply_to_Outgoing_IBT_Lines.htm)
+Order supply](Assigning_Work_Order_Supply_to_Outgoing_IBT_Lines.md)
 
 [Viewing
-Allocated Quantities for IBT Lines](Viewing_Allocated_Quantities_for_IBT_Lines.htm)
+Allocated Quantities for IBT Lines](Viewing_Allocated_Quantities_for_IBT_Lines.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

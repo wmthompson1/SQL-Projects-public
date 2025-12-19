@@ -141,4 +141,4 @@ Drawing File If the drawing number you
 entered has a picture file, navigate to and select the appropriate
 file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

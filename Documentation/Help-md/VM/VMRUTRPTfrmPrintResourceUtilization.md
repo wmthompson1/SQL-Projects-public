@@ -77,4 +77,4 @@ time).
 VISUAL prints the report or displays the
 results on your monitor.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Utilization_Percentages.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Utilization_Percentages.md) User-defined Help

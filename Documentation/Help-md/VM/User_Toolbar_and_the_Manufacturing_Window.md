@@ -16,4 +16,4 @@ or material card in two ways:
   toolbar.
 
 See [Using
-Toolbar Buttons to Pass Information to Custom Applications](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.htm).
+Toolbar Buttons to Pass Information to Custom Applications](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.md).

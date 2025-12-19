@@ -20,4 +20,4 @@ value for the preference setting. If an individual user specifies
 a different value than the default value, then the value is displayed
 in blue.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) Adding Default Preferences
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) Adding Default Preferences

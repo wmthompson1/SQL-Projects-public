@@ -176,7 +176,7 @@ The calendar dialog box appears.
    the time for your operator value; then click the OK
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.md)
 Working with Statements

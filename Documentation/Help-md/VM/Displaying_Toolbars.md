@@ -50,4 +50,4 @@ they both appear when you open the Order Management Window. From the
 View menu, either select or clear the Show Toolbar
 and Show Statusbar options as appropriate.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -63,29 +63,29 @@ part that you must keep in inventory.
 Unallocated Demand - The quantity of the
 part that you have not allocated to demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Available_to_Customer_Part_Quantities.htm) Viewing Available to Customer Part Quantities
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Available_to_Customer_Part_Quantities.md) Viewing Available to Customer Part Quantities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Available_Part_Quantities.htm) Viewing Available Part Quantities
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Available_Part_Quantities.md) Viewing Available Part Quantities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information.htm) Viewing Committed Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Committed_Part_Information.md) Viewing Committed Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information.htm) Viewing Expected Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Part_Information.md) Viewing Expected Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information.htm) Viewing Expected/Committed Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Committed_Part_Information.md) Viewing Expected/Committed Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_On_Hold_Part_Information.htm) Viewing On-hold Part information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_On_Hold_Part_Information.md) Viewing On-hold Part information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Locked_Part_Information.htm) Viewing Locked Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Locked_Part_Information.md) Viewing Locked Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Unavailable_Part_Information.htm) Viewing Unavailable Part information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Unavailable_Part_Information.md) Viewing Unavailable Part information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Minimum_Inventory_Part_Information.htm) Viewing Minimum Inventory Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Minimum_Inventory_Part_Information.md) Viewing Minimum Inventory Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Unallocated_Demand_Part_Information.htm) Viewing Unallocated Demand Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Unallocated_Demand_Part_Information.md) Viewing Unallocated Demand Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_On_Hand_Part_Information.htm) Viewing On Hand Part Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_On_Hand_Part_Information.md) Viewing On Hand Part Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_in_the_Order_Management_Window.htm) Using Drag n Drop to Allocate Available
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Drag_n_Drop_in_the_Order_Management_Window.md) Using Drag n Drop to Allocate Available
 to Customer Supply to Customer Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

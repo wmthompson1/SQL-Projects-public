@@ -189,4 +189,4 @@ This function does NOT copy the engineering
 master for the Part ID specified a single work order header is created.
 This function is most useful for creating custom work orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

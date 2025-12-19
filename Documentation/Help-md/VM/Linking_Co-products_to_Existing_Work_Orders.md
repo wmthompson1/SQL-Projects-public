@@ -6,7 +6,7 @@ Linking Co-products to Existing Work Orders
 # Linking Co-products to Existing Work Orders
 
 You can link co-products to existing work orders directly
-from [Customer Order Entry](VMORDENTWhat.htm) .
+from [Customer Order Entry](VMORDENTWhat.md) .
 
 1. From the Customer Order
    Entry window, enter the customer order ID in the Our Order ID
@@ -37,4 +37,4 @@ Co-products.
 7. Click the Save
    button to save the new line item.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

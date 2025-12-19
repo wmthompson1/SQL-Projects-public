@@ -81,10 +81,10 @@ dashboards, they can specify different date filters.
 13. Click Save.
     Users can now add the detail grid to their dashboards.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Building_Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Building_Detail_Grids.md)
 Building Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

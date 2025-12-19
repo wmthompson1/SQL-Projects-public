@@ -15,4 +15,4 @@ button. The line must exist before you can paste into it. When you
 paste the information into the new line, the fields at the bottom
 of the dialog box fill in with the appropriate information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

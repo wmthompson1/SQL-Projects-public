@@ -25,7 +25,7 @@ From the Order Management Window, you can view:
 If you are licensed to use multiple sites, the child windows display
 information for all of your sites.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](General_Functions_of_the_Order_Management_Window.htm) General Functions of the Order Management
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](General_Functions_of_the_Order_Management_Window.md) General Functions of the Order Management
 Window

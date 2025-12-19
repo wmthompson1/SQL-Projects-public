@@ -24,4 +24,4 @@ Use this report to reconcile project transactions. To run the report:
 If the actual amounts do not match the formal amounts, you may want
 to update your EAC for the project. Print the report to use as a guide.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Period_Closing.md) User-defined Help

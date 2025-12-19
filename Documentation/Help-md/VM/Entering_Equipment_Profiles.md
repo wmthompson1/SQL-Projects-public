@@ -67,4 +67,4 @@ When you return to the Add Equipment Profiles
 dialog box, youll find that VISUAL has selected the Exception check
 box in the line table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

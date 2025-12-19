@@ -95,7 +95,7 @@ to Demand dialog box line item table.
    to commit the allocation of purchase order quantities to the interbranch
    transfer.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_IBT_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.htm) Viewing IBT Demand Allocation Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_IBT_Demand_Allocation_Information_for_a_Purchase_Order_Line_Item.md) Viewing IBT Demand Allocation Information
 for a Purchase Order Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

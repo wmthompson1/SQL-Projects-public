@@ -12,7 +12,7 @@ To add a piece-tracked part as a material requirement:
 2. Open the work order.
 3. Follow the standard
    procedure for adding a material card. See [Adding
-   Material Requirements](VMMFGWINfrmMaterial.htm). In the Part ID field, specify the ID
+   Material Requirements](VMMFGWINfrmMaterial.md). In the Part ID field, specify the ID
    for a piece tracked part.
 4. On the Quantities tab,
    specify this information:
@@ -65,7 +65,7 @@ Maintenance. If this setting is set to Y, then the calculated quantity
 is equal to the Calculated Piece Qty. If this setting is set to N,
 then  the calculated quantity is equal to the actual quantity
 used in the work order. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 Issued Quantity
 The quantity of the material you have issued thus far to satisfy
@@ -105,7 +105,7 @@ of one material piece. The value is rounded up to the next whole number
 and inserted in this field. If you place a purchase order for this
 requirement, the value in this field is inserted in the # Pieces column
 on the purchase order line. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 Calculated Piece Qty
 A value is displayed in this field only if this requirement is a
@@ -113,9 +113,9 @@ piece tracked part. To determine the value in this field, the Calculated
 # of Pcs is multiplied by the size of one material piece. If you place
 a purchase order for this requirement, this value is inserted in the
 Quantity field on the purchase order line. See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md).
 
 6. Complete the information
    on the Material card.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Dimensional_Inventory.md) User-defined Help

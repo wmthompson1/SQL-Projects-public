@@ -11,7 +11,7 @@ window is not available from the main VISUAL menu.
 From the directory where your executables are installed, double-click
 Vmbtsinv.exe.
 
-Click [here](VISUAL_BTS_Material_Movements_Issues_and_Work_Orders_Table.htm)
+Click [here](VISUAL_BTS_Material_Movements_Issues_and_Work_Orders_Table.md)
 to view definitions of the columns in both the Pending Transaction
 and Complete Transaction portions of the window.
 

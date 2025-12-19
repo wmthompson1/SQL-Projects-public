@@ -32,7 +32,7 @@ for these parts are created at this point, when receiving.
 
 If this is the case, then the system inserts enough lines to handle
 the quantity being received, in a way identical to that described
-in [Purchase Receipt Entry](VMRCVENTWhat.htm).
+in [Purchase Receipt Entry](VMRCVENTWhat.md).
 
 There may also be lines for preassigned lot numbers. This means
 that Part Trace Maintenance was used to create lot numbers ahead of
@@ -63,4 +63,4 @@ enter 100 for the Quantity in Inventory Transaction Entry, then enter
 traceability and realize you are only receiving 95, you can choose
 to override, and VISUAL adjusts the Quantity down to 95 for you.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

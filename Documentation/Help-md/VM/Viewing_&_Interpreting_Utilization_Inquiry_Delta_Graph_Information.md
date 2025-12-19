@@ -31,4 +31,4 @@ graph format, press the CTRL key and click a data point of the baseline
 schedule. Other schedules are compared against the schedule that you
 first selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

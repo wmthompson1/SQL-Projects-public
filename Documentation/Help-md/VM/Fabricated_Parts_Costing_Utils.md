@@ -41,9 +41,9 @@ Product Code as defined in the Part Maintenance Product Code table,
 or from the default accounts setup in the General Ledger Interface
 Accounts Table (for fabricated parts).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resetting_Material_Requirement_Costs.htm) Reset Material Requirement Costs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resetting_Material_Requirement_Costs.md) Reset Material Requirement Costs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Product_Code_G_L_Interface_Account_Table_Overrides.htm) Product Code G/L Interface Account Table
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Product_Code_G_L_Interface_Account_Table_Overrides.md) Product Code G/L Interface Account Table
 Overrides
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

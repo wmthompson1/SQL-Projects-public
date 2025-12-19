@@ -11,4 +11,4 @@ Inquiry Window. To select a record either double-click the record
 you want or click the record and click the Open
 toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md) User-defined Help

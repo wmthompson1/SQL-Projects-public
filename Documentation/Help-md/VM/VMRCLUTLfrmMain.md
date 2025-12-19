@@ -45,4 +45,4 @@ VISUAL begins the countdown to the next reclass.
 | --- | --- |
 | POSTIT.gif | To stop a the timer or a reclass, click the Stop toolbar button. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Reclass_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Reclass_Utility.md) User-defined Help

@@ -40,4 +40,4 @@ a Cross-Selling Part ID.
    cross-selling part information for a part, click the Save
    button to commit the cross-selling part information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

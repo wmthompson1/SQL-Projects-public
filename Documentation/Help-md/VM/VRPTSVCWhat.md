@@ -41,15 +41,15 @@ Use the Reporting Service executable (VRPTSVC.exe) to perform these
 procedures:
 
 * [Installing
-  the Reporting Service](VRPTSVCfrmMain.htm)
+  the Reporting Service](VRPTSVCfrmMain.md)
 * [Removing
-  the Reporting Service](Removing_the_Reporting_Service.htm)
+  the Reporting Service](Removing_the_Reporting_Service.md)
 
 Use the Work Order Traveller window to perform these procedures:
 
 * [Scheduling
-  the Service](Scheduling_the_Service.htm)
+  the Service](Scheduling_the_Service.md)
 * [Deactivating
-  the Reporting Service Schedule](Deactivating_the_Reporting_Service.htm)
+  the Reporting Service Schedule](Deactivating_the_Reporting_Service.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

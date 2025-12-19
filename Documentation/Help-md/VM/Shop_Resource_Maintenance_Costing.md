@@ -17,4 +17,4 @@ Burden and Applied Labor in the General Ledger. To do this, you can
 assign an account to each of the shop resources or to those that you
 want detailed cost information on in the General Ledger.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

@@ -78,17 +78,17 @@ entered the Count or Recount.
 To commit the changes, click the Save
 button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Piece_Tracked_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Piece_Tracked_Parts.md)
 Viewing Piece Tracked Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Tag_Comparison_Reports.htm) Printing Tag Comparison Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Tag_Comparison_Reports.md) Printing Tag Comparison Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Part_Comparison_Reports.htm) Printing Part Comparison Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Part_Comparison_Reports.md) Printing Part Comparison Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Tag_List_Reports.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Tag_List_Reports.md)
 Printing Tag List Reports
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Print_Formats.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Print_Formats.md)
 Modifying Print Formats

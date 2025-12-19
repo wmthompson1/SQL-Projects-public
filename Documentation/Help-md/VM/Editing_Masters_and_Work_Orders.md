@@ -37,48 +37,48 @@ You can use two functions to renumber items in an Engineering Master
 or Quote Master. Use the Renumber Operations dialog box to renumber
 the operations in an engineering master. You cannot renumber the operations
 on work orders or quote masters. Use the [Renumber
-Pieces by Part ID](Renumbering_Piece_Numbers.htm) menu option to renumber material requirements
+Pieces by Part ID](Renumbering_Piece_Numbers.md) menu option to renumber material requirements
 for an operation in ascending order by part ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Header_Information.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Header_Information.md)
 Editing Header Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Co-products.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Co-products.md)
 Defining Co-products
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Masters_and_Work_Orders.htm) Deleting Masters and Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Masters_and_Work_Orders.md) Deleting Masters and Work Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Operations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Operations.md)
 Editing Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Operations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Operations.md)
 Deleting Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Renumbering_Operations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Renumbering_Operations.md)
 Renumbering Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Material_Requirements.htm) Editing Material Requirements
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Material_Requirements.md) Editing Material Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finding_a_Material_Requirement_by_Part_ID.htm) Finding a Material Requirement by Part
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finding_a_Material_Requirement_by_Part_ID.md) Finding a Material Requirement by Part
 ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Renumbering_Piece_Numbers.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Renumbering_Piece_Numbers.md)
 Renumbering Piece Numbers
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Mass_Replacing_Material_Requirement_Parts.htm) Mass Replacing Material Requirement
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Mass_Replacing_Material_Requirement_Parts.md) Mass Replacing Material Requirement
 Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Material_Requirements.htm) Deleting Material Requirements
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Material_Requirements.md) Deleting Material Requirements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Legs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Legs.md)
 Editing Legs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Legs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Legs.md)
 Deleting Legs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Recalculating_Quantities.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Recalculating_Quantities.md)
 Recalculating Quantities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resetting_Costs_From_Standards.htm) Resetting Costs From Standards
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resetting_Costs_From_Standards.md) Resetting Costs From Standards
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

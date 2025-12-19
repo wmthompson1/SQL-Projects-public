@@ -16,4 +16,4 @@ The Service Dispatch Entry window appears.
 The Service Dispatch Entry window contains fields and buttons for
 entering dispatch information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

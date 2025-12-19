@@ -13,4 +13,4 @@ In addition, VISUAL allows you to generate Vendor RFQs and purchase
 orders from approved purchase requisitions. See later for more information
 on generating RFQs and purchase orders from requisitions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

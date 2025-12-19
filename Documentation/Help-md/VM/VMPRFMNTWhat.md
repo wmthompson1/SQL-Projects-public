@@ -23,4 +23,4 @@ Certain settings that VISUAL needs to launch, such as log in information,
 remain in the VISUAL.ini file. You should not edit the settings that
 remain in the VISUAL.ini file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

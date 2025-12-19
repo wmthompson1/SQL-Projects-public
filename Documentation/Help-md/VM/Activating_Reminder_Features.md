@@ -8,7 +8,7 @@ Activating Reminder Features
 To activate the task tray icon and reminder features:
 
 1. [Access
-   Activity Maintenance](Starting_Activity_Maintenance.htm). For example, select Sales,
+   Activity Maintenance](Starting_Activity_Maintenance.md). For example, select Sales,
    Activity Maintenance.
 2. Select Options,
    Preferences.
@@ -31,14 +31,14 @@ is displayed or refreshed with the new reminder.
 
 4. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTMNTWhat.md)
 What is Activity Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

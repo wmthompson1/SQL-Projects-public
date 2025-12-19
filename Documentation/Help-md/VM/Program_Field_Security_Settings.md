@@ -11,7 +11,7 @@ with read-only access can view the information in the fields, but
 cannot edit the information.
 
 For more information, refer to [Setting
-Information on the Program Security Tab](Setting_Program_Security.htm).
+Information on the Program Security Tab](Setting_Program_Security.md).
 
 |  |  |  |
 | --- | --- | --- |
@@ -27,4 +27,4 @@ Information on the Program Security Tab](Setting_Program_Security.htm).
 | Vendor Maintenance  VMVNDMNT | Active  Address Line 1  Address Line 2  Address Line 3  City  Country  Name  Remit to Address Line 1  Remit to Address Line 2  Remit to Address Line 3  Remit to City  Remit to Country  Remit to Name  Remit to State  Remit to Zipcode  State  Web URL  Zipcode |  |
 | WIP Inventory Transaction  VMWIPTSF | Adjust In  Adjust Out  Transfer |  |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

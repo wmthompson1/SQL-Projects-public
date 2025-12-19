@@ -10,7 +10,7 @@ as a forecast, as the master production schedule, or both. To save
 the information:
 
 1. Build the [export
-   information](Exporting_Forecasts_to_Excel_adv.htm).
+   information](Exporting_Forecasts_to_Excel_adv.md).
 2. Click the Import
    tab.
 3. Specify this information:

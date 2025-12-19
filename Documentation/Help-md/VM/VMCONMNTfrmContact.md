@@ -24,12 +24,12 @@ This table shows the task that you can complete in the Contact Maintenance
 window:
 
 | Task | Description |
-| [Adding Contacts](Adding_Contacts.htm) | Use this procedure to add a contact. |
-| [Viewing Contact Associations](Viewing_Contact_Associations.htm) | Use this procedure to view the relationships between a contact and customers or suppliers. |
-| [Designating Contacts as Active](Designating_Contacts_as_Active.htm) | Use this procedure to make a contact available for use on transactions. |
-| [Designating Contacts as Inactive](Designating_Contacts_as_Inactive.htm) | Use this procedure to prevent a contact from being used on new transactions. |
-| [Deleting Contacts](Deleting_Contacts.htm) | Use this procedure to remove contacts from the database. |
-| [Viewing Audit History](Viewing_Audit_History_cont.htm) | Use this procedure to track changes to contact records. Information is displayed only if you have set up an audit for contacts in Audit Maintenance. |
+| [Adding Contacts](Adding_Contacts.md) | Use this procedure to add a contact. |
+| [Viewing Contact Associations](Viewing_Contact_Associations.md) | Use this procedure to view the relationships between a contact and customers or suppliers. |
+| [Designating Contacts as Active](Designating_Contacts_as_Active.md) | Use this procedure to make a contact available for use on transactions. |
+| [Designating Contacts as Inactive](Designating_Contacts_as_Inactive.md) | Use this procedure to prevent a contact from being used on new transactions. |
+| [Deleting Contacts](Deleting_Contacts.md) | Use this procedure to remove contacts from the database. |
+| [Viewing Audit History](Viewing_Audit_History_cont.md) | Use this procedure to track changes to contact records. Information is displayed only if you have set up an audit for contacts in Audit Maintenance. |
 
 ## Fields
 
@@ -77,8 +77,8 @@ Active
 Select this check box to activate the contact. Clearing the check
 box maintains the contact information, but sets the contact status
 to inactive. See [Designating
-Contacts as Active](Designating_Contacts_as_Active.htm) or [Designating
-Contacts as Inactive](Designating_Contacts_as_Inactive.htm) for more information.
+Contacts as Active](Designating_Contacts_as_Active.md) or [Designating
+Contacts as Inactive](Designating_Contacts_as_Inactive.md) for more information.
 
 Phone/Extension
 

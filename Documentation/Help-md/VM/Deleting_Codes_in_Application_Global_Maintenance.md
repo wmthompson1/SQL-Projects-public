@@ -25,4 +25,4 @@ If the code cannot be deleted, a message
 is displayed and the code is not deleted. Certain codes cannot be
 deleted if they are used on a record in your database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

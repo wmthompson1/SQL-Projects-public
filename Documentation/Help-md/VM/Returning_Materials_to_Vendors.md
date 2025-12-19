@@ -62,10 +62,10 @@ The Receipt Quantity that appears on the printed or viewed receiver
 becomes a negative quantity, indicating a return. If the Purchase
 Order was closed, VISUAL re-releases it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Returning_Materials_with_Demand_Links_to_Vendors.htm) Returning Materials with Demand Links
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Returning_Materials_with_Demand_Links_to_Vendors.md) Returning Materials with Demand Links
 to Vendors
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Demand_Links.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Demand_Links.md)
 Viewing Demand Links

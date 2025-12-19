@@ -5,7 +5,7 @@ Work Order Estimate vs. Actual Detail
 
 # Work Order Estimate vs. Actual Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid compares the estimated costs of work orders with the actual costs
 incurred. Only closed orders are evaluated.
 
@@ -23,10 +23,10 @@ Actual Cost, Variance, Release Date, Want Date, Close Date, Desired
 Qty, Received Qty, Stock U/M, Part ID, Part Desc. Status, Product
 Code, Commodity Code, Warehouse ID, Planner ID, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

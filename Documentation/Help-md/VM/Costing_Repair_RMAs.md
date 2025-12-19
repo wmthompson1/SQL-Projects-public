@@ -29,4 +29,4 @@ repair work order. The same processing that occurs in scenario 1 occurs
 in scenario 2, but the processing is against the new customer order
 instead of the original customer order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

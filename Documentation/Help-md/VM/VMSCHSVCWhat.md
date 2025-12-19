@@ -40,15 +40,15 @@ Use the Scheduling Service executable (VMSCHSVC.exe) to perform
 these procedures:
 
 * [Installing
-  the Scheduling Service](VMSCHSVCfrmMain.htm)
+  the Scheduling Service](VMSCHSVCfrmMain.md)
 * [Removing
-  the Scheduling Service](Removing_the_Scheduling_Service.htm)
+  the Scheduling Service](Removing_the_Scheduling_Service.md)
 
 Use the Concurrent Scheduler window to perform these procedures:
 
 * [Scheduling
-  the Scheduler Service](Scheduling_the_Scheduler_Service.htm)
+  the Scheduler Service](Scheduling_the_Scheduler_Service.md)
 * [Deactivating
-  the Service](Deactivating_the_Service.htm)
+  the Service](Deactivating_the_Service.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

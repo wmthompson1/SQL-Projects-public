@@ -16,15 +16,15 @@ To print the chart:
    Project Summary Chart.
 3. Specify the chart parameters.
    See [Viewing the
-   Project Summary Chart](Viewing_the_Project_Summary_Chart.htm).
+   Project Summary Chart](Viewing_the_Project_Summary_Chart.md).
 4. Click Print.
    Only the chart is printed. The values used to construct the chart
    are not printed, even if you are viewing them in the Project Summary
    Chart dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Project_Summary_Chart.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Project_Summary_Chart.md)
 Project Summary Chart
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_the_Project_Summary_Chart.htm) Viewing the Project Summary Chart
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_the_Project_Summary_Chart.md) Viewing the Project Summary Chart
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

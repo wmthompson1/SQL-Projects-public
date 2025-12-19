@@ -33,4 +33,4 @@ VISUAL moves the window to the front and makes it the default
 Click the Cancel button to exit the dialog
 box and return to the main display.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

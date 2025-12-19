@@ -20,4 +20,4 @@ This provides shop floor access to the object. The letter p appears
 in the upper left corner of the card if a picture is present in this
 operation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -9,7 +9,7 @@ Printing the Report Times Report
    Audit Maintenance.
 2. Optionally, filter the
    results. See [Filtering Audit
-   Results](Filtering_Audit_Results.htm).
+   Results](Filtering_Audit_Results.md).
 3. In the Reporting Options
    section, specify how to output the report:
 

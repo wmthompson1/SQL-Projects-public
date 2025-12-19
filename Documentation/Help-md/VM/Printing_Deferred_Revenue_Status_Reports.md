@@ -22,7 +22,7 @@ customer balances and deferred amounts.
    and an Ending Date for the report.
 4. Specify the output for
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 5. Select the appropriate
    option from the Customer section.
 
@@ -71,4 +71,4 @@ deferred revenue status.
 
 6. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

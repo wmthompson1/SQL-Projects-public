@@ -17,7 +17,7 @@ After an inventory transaction has been saved, you cannot modify
 it.
 
 Depending on your settings in [Preference
-Maintenance](VMPRFMNTfrmPreferenceMaintenance.htm), you may be able to delete an inventory transaction.
+Maintenance](VMPRFMNTfrmPreferenceMaintenance.md), you may be able to delete an inventory transaction.
 If the DeletePermission entry in the InventoryEntry section is set
 to Y, then the Delete button becomes available in Inventory Transaction
 Entry. You can delete an inventory transaction only if it has not
@@ -28,4 +28,4 @@ could result in unexpected inventory levels. A safer alternative is
 to use the opposite type of transaction to make corrections. For example,
 if you issue a material incorrectly, use the Issue Return procedure.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

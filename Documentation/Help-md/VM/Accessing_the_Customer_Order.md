@@ -18,4 +18,4 @@ to edit the order.
 When finished, you can exit Customer Order Entry, or move back to
 the Customer Order Status window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

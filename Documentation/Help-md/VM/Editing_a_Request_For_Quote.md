@@ -35,13 +35,13 @@ this date as necessary.
 4. Click the Save
    button to save the changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_a_Line_Item.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_a_Line_Item.md)
 Adding a Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Line_Item.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Line_Item.md)
 Editing a Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Line_Item.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Line_Item.md)
 Deleting a Line Item
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

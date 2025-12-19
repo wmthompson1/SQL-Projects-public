@@ -57,4 +57,4 @@ information is grouped by Warehouse and Location. One line appears
 for each lot number, showing the Part Description, Quantity in the
 Location, Expiration Date, and Creation Date of the lot number.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

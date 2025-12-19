@@ -12,6 +12,6 @@ orders.
 View this information:
 
 * [Viewing
-  Part Exceptions](Viewing_Part_Exceptions.htm)
+  Part Exceptions](Viewing_Part_Exceptions.md)
 * [Viewing
-  Work Order Audit Details for a Schedule](Viewing_Work_Order_Audit_Details_for_a_Schedule.htm)
+  Work Order Audit Details for a Schedule](Viewing_Work_Order_Audit_Details_for_a_Schedule.md)

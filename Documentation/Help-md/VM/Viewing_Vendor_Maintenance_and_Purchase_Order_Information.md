@@ -20,11 +20,11 @@ The system opens either Purchase Order Entry or the Purchase Management
 Window depending on your settings in Preferences Maintenance. If you
 specified VMPURENT for the POEntryProgram entry in the Visual Mfg
 section, then the system opens [Purchase
-Order Entry](VMPURENTfrmPurchaseOrder.htm). If you specified VMPURWIN for the POEntryProgram
+Order Entry](VMPURENTfrmPurchaseOrder.md). If you specified VMPURWIN for the POEntryProgram
 entry in the Visual Mfg section, then the system opens the [Purchase
-Management Window](VMPURWINWhat.htm). For more information on specifying settings,
+Management Window](VMPURWINWhat.md). For more information on specifying settings,
 refer to [Preference
-Maintenance](VMPRFMNTfrmPreferenceMaintenance.htm).
+Maintenance](VMPRFMNTfrmPreferenceMaintenance.md).
 
 ## Viewing Purchase Order documents
 
@@ -46,4 +46,4 @@ displays a list of referenced documents. Documents are linked with
 that purchase order line item when no diagonal line appears across
 the toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Inquiry.md) User-defined Help

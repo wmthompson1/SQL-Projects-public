@@ -19,7 +19,7 @@ To use the Price Repair Orders dialog box:
 
 1. First, ship the repaired
    parts to the customer. See [Shipping
-   the Repaired Materials](Shipping_the_Repaired_Materials.htm).
+   the Repaired Materials](Shipping_the_Repaired_Materials.md).
 2. If you are licensed
    to use multiple sites, click the Site ID
    arrow and select the site in which you want to price the repair

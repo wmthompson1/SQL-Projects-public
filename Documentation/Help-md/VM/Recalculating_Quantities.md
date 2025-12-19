@@ -26,4 +26,4 @@ Quantities from the Edit menu.
 When the quantities are current, VISUAL places a check mark next
 to this option. If you see the check mark, it is unnecessary to recalculate.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

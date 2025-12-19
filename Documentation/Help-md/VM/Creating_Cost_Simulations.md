@@ -63,15 +63,15 @@ from your engineering master.
    If multiple parts are displayed in the Parts table, you can use
    the Fill Down feature to apply the same markups to all parts.
    See [Using the Fill Down
-   Feature](Using_the_Fill_Down_Feature.htm)  For more information, see these topics:
+   Feature](Using_the_Fill_Down_Feature.md)  For more information, see these topics:
 
 * [Using
-  the Parts Cost Simulation Table](Understanding_Parts_Cost_Simulation.htm)
+  the Parts Cost Simulation Table](Understanding_Parts_Cost_Simulation.md)
 * [Using
-  the Resource Cost Simulation Table](Understanding_Resource_Cost_Simulation.htm)
+  the Resource Cost Simulation Table](Understanding_Resource_Cost_Simulation.md)
 * [Using
-  the Outside Service Cost Simulation Table](Understanding_Outside_Service_Cost_Simulation.htm)
+  the Outside Service Cost Simulation Table](Understanding_Outside_Service_Cost_Simulation.md)
 
 7. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

@@ -11,15 +11,15 @@ Translation Maintenance.
 To create a language pack, complete these steps:
 
 1. [Create
-   the language pack ID.](Creating_Language_Pack_IDs.htm)
+   the language pack ID.](Creating_Language_Pack_IDs.md)
 2. [Gather
-   the text strings to be translated.](Gathering_Text_Strings_for_a_Language_Pack.htm) Alternatively, you can
+   the text strings to be translated.](Gathering_Text_Strings_for_a_Language_Pack.md) Alternatively, you can
    [import an existing language
-   strings file](Importing_Translations.htm) to begin the translation.
+   strings file](Importing_Translations.md) to begin the translation.
 3. [Specify
-   translations for text strings.](Specifying_Translations_for_Text_Strings.htm)
+   translations for text strings.](Specifying_Translations_for_Text_Strings.md)
 4. [Test
-   the translations.](Testing_the_Translation.htm)
+   the translations.](Testing_the_Translation.md)
 
 The Translation Maintenance window contains these fields and check
 boxes:
@@ -55,7 +55,7 @@ A string is considered untranslated when the value in the Visual column
 exactly matches the value in the Foreign column, or when the Foreign
 column is blank and the Visual column is populated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

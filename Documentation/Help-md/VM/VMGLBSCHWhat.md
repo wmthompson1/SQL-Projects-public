@@ -52,20 +52,20 @@ schedules at one time on the same screen. The system also makes it
 easy for you to flip back and forth between Work Orders and to easily
 switch between the Scheduling Window and the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Schedule_Inputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Schedule_Inputs.md)
 Schedule Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_order_Scheduling_Inputs.htm) Work order Scheduling Inputs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_order_Scheduling_Inputs.md) Work order Scheduling Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resource_Scheduling_Inputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Resource_Scheduling_Inputs.md)
 Resource Scheduling Inputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Outputs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Outputs.md)
 Scheduling Outputs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Standard_Schedule.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](The_Standard_Schedule.md)
 Standard Schedule
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_the_Scheduling_Results.htm) Viewing Schedule Results
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_the_Scheduling_Results.md) Viewing Schedule Results

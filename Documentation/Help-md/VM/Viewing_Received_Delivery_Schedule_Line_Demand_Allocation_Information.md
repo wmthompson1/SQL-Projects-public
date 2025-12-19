@@ -11,4 +11,4 @@ to demand, you can view the quantity that you allocated to demand
 sources in the Total Quantity Allocated
 column in the Purchase Receipts dialog box line item table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

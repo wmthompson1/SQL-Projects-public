@@ -19,4 +19,4 @@ To add a toolbar button:
    Add User Toolbar.
 4. To customize the button
    and tooltip, use Toolbar Maintenance. See [Setting
-   Up User Toolbars](Setting_Up_User_Toolbars.htm).
+   Up User Toolbars](Setting_Up_User_Toolbars.md).

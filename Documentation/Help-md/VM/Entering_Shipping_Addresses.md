@@ -58,7 +58,7 @@ the preferred shipping method to use for shipments to this address.
 Ship Charge Acct If you have specified the customer
 account to charge when shipments are sent by the selected ship via
 method, the account ID is displayed. See [Adding
-Customer Shipment Accounts](Adding_Customer_Shipment_Accounts_vmcusmnt.htm).
+Customer Shipment Accounts](Adding_Customer_Shipment_Accounts_vmcusmnt.md).
 
 Sales Rep ID
 Specify the sales representative responsible for sales to this address.
@@ -113,7 +113,7 @@ specify override information.
 * User Defined
 * E-Commerce
 
-See [Adding New Customers](VMCUSMNTfrmCustomer.htm) for
+See [Adding New Customers](VMCUSMNTfrmCustomer.md) for
 information about the fields on these tabs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

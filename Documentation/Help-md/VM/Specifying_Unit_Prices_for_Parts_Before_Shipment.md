@@ -45,6 +45,6 @@ VISUAL knows to charge 1.00 per unit of Part A, and updates the Unit
 Price with any quantity break information.
 
 [Price Effectivity
-in Shipping Entry](Price_Effectivity_in_Shipping_Entry.htm)
+in Shipping Entry](Price_Effectivity_in_Shipping_Entry.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

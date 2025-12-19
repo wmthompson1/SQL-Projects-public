@@ -41,4 +41,4 @@ box.
 | --- | --- |
 | POSTIT.gif | You cannot make any changes to your Trace IDs in the inventory Trace Details dialog box. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

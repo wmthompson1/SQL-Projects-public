@@ -10,6 +10,6 @@ automatically assign unique IDs to new pieces of equipment.
 
 The procedure for setting up auto numbering in the Equipment Maintenance
 window is the same as in all other windows that support auto numbering.
-Click [here](Using_Auto_Numbering.htm) for more information.
+Click [here](Using_Auto_Numbering.md) for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

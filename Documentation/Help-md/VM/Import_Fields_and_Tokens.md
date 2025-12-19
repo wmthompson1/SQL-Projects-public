@@ -16,4 +16,4 @@ to analyze data. Tokens start with a value of zero; fields start with
 a value of 1. Field 1 is equal to Token # 0. See the Analyzing
 Data before Importation for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

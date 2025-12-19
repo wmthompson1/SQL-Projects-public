@@ -175,4 +175,4 @@ were using before you selected Back. You can also click the Forward button or pr
 The Help menu contains commands for accessing the
 Workflow help system.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

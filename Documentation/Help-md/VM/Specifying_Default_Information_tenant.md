@@ -88,7 +88,7 @@ blank, then Due on Receipt is used as the default terms.
 You cannot specify terms with specific date
 definitions or installments. These types of terms are not displayed
 when you click the Terms browse button. See [Adding
-Terms](Entering_Information_in_Terms_Maintenance.htm).
+Terms](Entering_Information_in_Terms_Maintenance.md).
 
 Due on Receipt ID
 If you have set up more than one terms ID as due on receipt, use
@@ -166,6 +166,6 @@ you can load your existing macros from the workstation to the database.
 Similarly, if you previously stored macros in the database but now
 store them on the workstation, you can load your existing macros from
 the database onto the workstation. See [Storing
-Macros](Storing_Macros.htm).
+Macros](Storing_Macros.md).
 
 10. Click Save.

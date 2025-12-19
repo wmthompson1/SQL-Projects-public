@@ -16,4 +16,4 @@ Entering IBT Line Specs and Viewing Pictures
    line highlighted, click the Picture
    button to view a picture associated with the line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

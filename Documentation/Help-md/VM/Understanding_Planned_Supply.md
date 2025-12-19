@@ -116,6 +116,6 @@ cost category, it uses the departments default cost category set.
 | --- | --- |
 | POSTIT.gif | During an adjust out or transfer of inventory from a project warehouse where the part in question may happen to exist on two different WBS's, the WBS and task that is charged with relieving inventory is the WBS/task associated with the FIFO layer relieved. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

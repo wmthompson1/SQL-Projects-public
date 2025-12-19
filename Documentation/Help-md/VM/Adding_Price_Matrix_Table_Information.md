@@ -108,4 +108,4 @@ beyond the Expire Date. Enter the Expire Date in Windows system format.
    Book main toolbar, click the Save button
    to save changes to the current record.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

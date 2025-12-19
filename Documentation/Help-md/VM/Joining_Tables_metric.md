@@ -46,12 +46,12 @@ column to use for the join criteria.
 7. Click Add.
 
 Next step: [Selecting
-Columns for the Data Source](Selecting_Columns_for_the_Data_Source.htm)
+Columns for the Data Source](Selecting_Columns_for_the_Data_Source.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.md)
 Creating Data Sources
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

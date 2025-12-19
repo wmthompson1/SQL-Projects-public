@@ -66,9 +66,9 @@ because you have already done so at the consignment phase.
 If you are receiving a partial order, click
 the Save toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Consignment_Receiver_Information.htm) Printing Consignment Receiver Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Consignment_Receiver_Information.md) Printing Consignment Receiver Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.htm) Printing Consignment Receiver Thermal
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.md) Printing Consignment Receiver Thermal
 Labels
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.md) User-defined Help

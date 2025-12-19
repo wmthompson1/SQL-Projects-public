@@ -15,4 +15,4 @@ the vendor that is currently selected as the preferred vendor, change
 to a different Preferred Vendor before clicking on the Delete
 button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Outside_Service_Maintenance.md) User-defined Help

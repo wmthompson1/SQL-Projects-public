@@ -15,7 +15,7 @@ Assigning IBT Receipt Quantities to Work Order Material Requirement Demand
    column, enter what portion of the total IBT Order Quantity you
    want to receive. By default, the entire Order Quantity appears
    in this column. See [Receiving
-   Interbranch Transfer Entries](VMIBTRCVfrmReceiving.htm) for more information.
+   Interbranch Transfer Entries](VMIBTRCVfrmReceiving.md) for more information.
 
 Besides being the receipt quantity, this
 quantity is now what is available to you to assign to demand.
@@ -127,4 +127,4 @@ Quantity of the work order material requirement line.
     button to commit the allocation of supply from the IBT receipt
     quantity to the work orders material requirement demand.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

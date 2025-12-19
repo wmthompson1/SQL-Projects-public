@@ -62,5 +62,5 @@ button.
    adding information to your layout, click the Save
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.md)
 User-defined Help

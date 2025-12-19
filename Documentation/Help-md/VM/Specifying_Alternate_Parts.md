@@ -8,7 +8,7 @@ Specifying Alternate Parts
 Use the Alternate Parts tab to specify the parts that can be used
 in place of the main part on the material card. The system activates
 this tab when you select Allow Alternate Parts on the [Header
-Card](Creating_Masters_and_Work_Orders.htm).
+Card](Creating_Masters_and_Work_Orders.md).
 
 If you do not have security access to add alternate parts, the system
 deactivates the tab.
@@ -39,7 +39,7 @@ sub-assemblies, the end product of a sub-assembly cannot be used as
 an alternate part for any of the materials that make up the sub-assembly.
 
 Because you specify default alternate parts on the part record in
-[Part Maintenance](VMPRTMNTfrmPart.htm), you may find that
+[Part Maintenance](VMPRTMNTfrmPart.md), you may find that
 some of the alternate parts listed in the Alternate Parts tab are
 not valid selections for a particular work order. You can delete the
 invalid alternate parts by selecting the line item, then clicking
@@ -114,4 +114,4 @@ and the alternate parts specified on the material card in the Alternate
 Parts list. Click a part in the left pane to view information about
 the part in the tables.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

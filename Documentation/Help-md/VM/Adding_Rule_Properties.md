@@ -51,15 +51,15 @@ you want to use.
 9. When you have finished
    setting up the rule, click the Ok button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Evaluation_Sequences.htm) Working with Evaluation Sequences
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Evaluation_Sequences.md) Working with Evaluation Sequences
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Tasks.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Tasks.md)
 Working with Tasks
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.md)
 Working with Statements
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Authorizations.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Authorizations.md)
 Working with Authorizations

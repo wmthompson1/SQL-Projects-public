@@ -16,4 +16,4 @@ In the above example, operation 20 is 40% complete which makes the
 project Task 40 % complete, however, operation 30 and 40 are not complete
 and do not need to be in order to see a 100% completion at the task.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

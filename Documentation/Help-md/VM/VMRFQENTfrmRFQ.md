@@ -47,7 +47,7 @@ will receive the parts, leave this field blank.
 
 4. Specify
    vendor information. See [Entering
-   Vendor Responses](VMRFQENTfrmVendorQuote.htm).
+   Vendor Responses](VMRFQENTfrmVendorQuote.md).
 5. Click
    the Insert Row button.
 6. If the request for quote
@@ -104,6 +104,6 @@ a Part ID.
    specify the quantities for which you are requesting quotes.
 9. Click Save
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Request_For_Quote.htm) Editing Quotes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Request_For_Quote.md) Editing Quotes

@@ -29,14 +29,14 @@ type in a value or select a value from the drop-down menu.
    feature, then the user receives a reminder when the reminder event
    is triggered.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.md)
 Activity Reminders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

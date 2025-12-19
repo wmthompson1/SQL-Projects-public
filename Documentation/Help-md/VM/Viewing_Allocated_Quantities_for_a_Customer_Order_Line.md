@@ -24,4 +24,4 @@ Links appears in the Supply Type column, they indicates that
 you have made the allocation (soft allocated) supply to the line using
 the Assign Supply dialog box and accompanying allocation features.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -7,7 +7,7 @@ Placing Purchase Orders for Material Requirements
 
 You can place a purchase order for one or more material requirements
 directly from the [Material
-Availability](Viewing_Material_Availability_Information.htm) dialog box.
+Availability](Viewing_Material_Availability_Information.md) dialog box.
 
 You can purchase materials for a single line in the Material Availability
 dialog box or for multiple lines.

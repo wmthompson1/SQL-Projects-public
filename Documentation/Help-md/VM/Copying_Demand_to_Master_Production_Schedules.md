@@ -36,7 +36,7 @@ Suggested MPS This
 option is available only if you have activated the Suggested MPS feature.
 Select this option to copy the quantity that VISUAL suggests that
 you use in the master production schedule. See [Suggested
-MPS](Suggested_MPS.htm).
+MPS](Suggested_MPS.md).
 
 All Warehouses
 Click the arrow and select the warehouse to use to evaluate demand.

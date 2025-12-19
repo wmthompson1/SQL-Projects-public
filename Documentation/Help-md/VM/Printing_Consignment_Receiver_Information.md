@@ -80,6 +80,6 @@ is a two-dimensional or matrix barcode. QR stands for quick response.
 
 7. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSNRCVfrmConsignmentReceiving.htm) What is Consignment Receipt Entry?
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCSNRCVfrmConsignmentReceiving.md) What is Consignment Receipt Entry?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Consignment_Receiving.md) User-defined Help

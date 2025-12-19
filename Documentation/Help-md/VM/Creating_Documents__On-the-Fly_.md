@@ -12,7 +12,7 @@ To use drag-and-drop:
 
 1. Access the Document
    Reference dialog. See [Referencing
-   Documents](Referencing_Documents.htm).
+   Documents](Referencing_Documents.md).
 2. Open Windows Explorer
    or Microsoft Outlook to locate the document you want to add as
    a reference.
@@ -76,4 +76,4 @@ these messages may be displayed:
    and will not be saved. Click Ok to exit
    the dialog.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

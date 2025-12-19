@@ -10,13 +10,13 @@ Infor VISUAL Enterprise Projects/ Aerospace and Defense.
 
 |  |  |
 | --- | --- |
-| POSTIT.gif | For more information on the Manufacturing Window, click [here](VMMFGWINWhat.htm). |
+| POSTIT.gif | For more information on the Manufacturing Window, click [here](VMMFGWINWhat.md). |
 
 Use the Project Window to establish the reporting
 structure of your contract or project. Projects represent contracts
 or any other work initiatives you need to manage. For example, capital
 improvements, research and development, or product builds.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Terms_and_Conditions.htm) Setting Up Terms and Conditions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Terms_and_Conditions.md) Setting Up Terms and Conditions

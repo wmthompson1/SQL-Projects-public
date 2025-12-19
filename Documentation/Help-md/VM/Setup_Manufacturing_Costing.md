@@ -97,4 +97,4 @@ Because the projected cost of $1640 is greater than the $1280 of
 actual cost charged to the work order, the value of the 5 units received
 is equal to the actual cost.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

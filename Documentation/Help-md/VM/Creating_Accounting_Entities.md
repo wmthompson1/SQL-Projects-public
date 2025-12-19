@@ -27,31 +27,31 @@ Use the tabs to define additional information about
 the accounting entity. Refer to these topics:
 
 [Specifying
-Information on the General Tab](Specifying_Information_in_the_General_Tab_of_Accounting_Entity_Maintenance.htm)
+Information on the General Tab](Specifying_Information_in_the_General_Tab_of_Accounting_Entity_Maintenance.md)
 
-[About Costing Options](Accessing_the_Costing_Tab.htm)
+[About Costing Options](Accessing_the_Costing_Tab.md)
 
-[Setting Up Standard Costing](Setting_Up_Standard_Costing.htm)
+[Setting Up Standard Costing](Setting_Up_Standard_Costing.md)
 
-[Setting Up Actual Costing](Setting_Up_Actual_Costing.htm)
+[Setting Up Actual Costing](Setting_Up_Actual_Costing.md)
 
-[Setting Up Average Costing](Setting_Up_Average_Costing.htm)
+[Setting Up Average Costing](Setting_Up_Average_Costing.md)
 
 [Specifying
-a POC Revenue Recognition Method](Specifying_a_POC_Revenue_Recognition_Method.htm)
+a POC Revenue Recognition Method](Specifying_a_POC_Revenue_Recognition_Method.md)
 
-[Setting VAT Information](Setting_VAT_Information.htm)
+[Setting VAT Information](Setting_VAT_Information.md)
 
-[Setting Intrastat Information](Setting_Intrastat_Information.htm)
+[Setting Intrastat Information](Setting_Intrastat_Information.md)
 
 [Entering General
-Intrastat Information](Entering_General_Intrastat_Information.htm)
+Intrastat Information](Entering_General_Intrastat_Information.md)
 
 [Setting Electronic
-Payment Information](Setting_Electronic_Payment_Information.htm)
+Payment Information](Setting_Electronic_Payment_Information.md)
 
 [Setting Order
-Management Global Values](Setting_Order_Management_Global_Values.htm)
+Management Global Values](Setting_Order_Management_Global_Values.md)
 
 [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab.htm)
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab.md)

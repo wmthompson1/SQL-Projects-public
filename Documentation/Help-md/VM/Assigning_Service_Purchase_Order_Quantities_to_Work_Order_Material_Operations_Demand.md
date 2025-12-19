@@ -90,4 +90,4 @@ Requirement Quantity of the work order line.
     to commit the allocation of supply from purchase order line work
     order's material operation demand line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

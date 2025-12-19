@@ -9,9 +9,9 @@ Use Auto Numbering to generate contract numbers for the purchase
 contracts you set up in Vendor RFQ Entry.
 
 For more information on setting up purchase contracts, refer to
-[Entering a New Request For Quote](VMRFQENTfrmRFQ.htm),
-[Entering Quotes From Vendors](VMRFQENTfrmVendorQuote.htm),
-and [Viewing Purchase Contracts](Viewing_Purchase_Contracts.htm).
+[Entering a New Request For Quote](VMRFQENTfrmRFQ.md),
+[Entering Quotes From Vendors](VMRFQENTfrmVendorQuote.md),
+and [Viewing Purchase Contracts](Viewing_Purchase_Contracts.md).
 
 1. Select Edit,
    Purchase Contract Auto Numbering.

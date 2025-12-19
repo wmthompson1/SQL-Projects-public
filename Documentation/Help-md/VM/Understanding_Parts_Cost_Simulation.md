@@ -185,7 +185,7 @@ appear in the Previous Total Cost column.
 4. If you edited simulation
    costs, click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Fill_Down_Feature.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Fill_Down_Feature.md)
 Using the Fill Down Feature
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

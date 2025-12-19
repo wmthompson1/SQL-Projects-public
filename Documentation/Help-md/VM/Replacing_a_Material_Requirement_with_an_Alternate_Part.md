@@ -9,7 +9,7 @@ You can use the Alternate Parts dialog box to replace a material
 requirement specified on a work order with an alternate part.
 
 Define alternate parts for work orders in [Part
-Maintenance](VMPRTMNTfrmPart.htm).
+Maintenance](VMPRTMNTfrmPart.md).
 
 If you are licensed to use multiple sites, the alternate part and
 the part it replaces must both exist in the selected site.
@@ -33,4 +33,4 @@ If the part is a piece-tracked part, the system replaces the original
 part ID and usage UM on the material card with the part ID and the
 usage UM of the alternate part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

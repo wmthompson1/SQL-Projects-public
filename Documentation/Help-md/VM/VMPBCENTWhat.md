@@ -149,6 +149,6 @@ the milestones expense account to the finished goods account, thereby
 crossing the boundary from the profit/loss statement back to the balance
 sheet.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Progress_Billing_Entry.htm) Starting Progress Billing Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Progress_Billing_Entry.md) Starting Progress Billing Entry
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

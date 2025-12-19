@@ -72,4 +72,4 @@ share a common Buyer.
    in Purchase Order Entry, select an entry and click the Purchase
    Order button or double-click the appropriate line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

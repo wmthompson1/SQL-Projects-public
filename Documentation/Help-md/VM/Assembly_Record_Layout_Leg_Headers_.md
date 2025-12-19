@@ -51,4 +51,4 @@ the right of the decimal point.
 | 30 | Assembly UDF 10 | String(80) | N | The value for User Defined Field 10. |
 | 31 | Assembly UDF Layout ID | String(15) | N | The ID of the UDF Layout. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

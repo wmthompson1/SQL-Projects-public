@@ -15,7 +15,7 @@ Infor. All rights reserved.
 
 File updated December 2024.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Additional_Trademarks.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Additional_Trademarks.md)
 Additional Trademarks
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Troubleshooting_within_VISUAL_Help.htm) Troubleshooting VISUAL Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Troubleshooting_within_VISUAL_Help.md) Troubleshooting VISUAL Help

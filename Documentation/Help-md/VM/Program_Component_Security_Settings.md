@@ -12,7 +12,7 @@ Click the Component button and specify Y to allow access to program
 components or N to deny access to components.
 
 Refer to [Setting Information
-on the Program Security Tab](Setting_Program_Security.htm) for more information.
+on the Program Security Tab](Setting_Program_Security.md) for more information.
 
 | **Menu String**  **Program ID** | **Components** | **Notes** |
 | Accounting Window  VFGLAWIN | Maintain G/L Single Budget  Maintain G/L Multiple Budgets  Change Active Status  Change Account Type  Close/Reopen Period  Print Trial Balance  Print Basic Balance Sheet  Print Basic Income Statement  Maintain Subordinate Accounts | Maintain G/L Single Budget disables the Single Budget item in the Budget drop-down menu. If you disable the Budget field in Fields security, this function is also disabled despite your setting here.  Maintain G/L Multiple Budgets disables the Multiple Budgets item in the Budget drop-down menu. If you disable the Budget field in Fields security, this function is also disabled despite your setting here.  Change Active Status prohibits user from changing the Active check box selection. If you disable the Active field in Fields security, this function is also disabled despite your setting here.  Change Account Type disables the Account Type options  Close/Reopen Period disables the Maintain, Close/Reopen Period function  Print Trial Balance disables the File, Print Trial Balance function  Print Basic Balance Sheet disables the File, Print Basic Balance Sheet function  Print Basic Income Statement disables the File, Print Basic Income Statement option |
@@ -63,4 +63,4 @@ on the Program Security Tab](Setting_Program_Security.htm) for more information.
 | Work Order Traveller  VMTRVRPT | Schedule Report | If you specify No for the Schedule Report setting, the user cannot create schedules for the Work Order Traveller service. |
 | Workflow Designer  VMWRKFLO | Allow Inactive Status Only |  |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

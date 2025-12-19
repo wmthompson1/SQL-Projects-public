@@ -36,4 +36,4 @@ Graph
 Type - You can change the type of graph on which you want to
 view your information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Utilization_Percentages.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Utilization_Percentages.md) User-defined Help

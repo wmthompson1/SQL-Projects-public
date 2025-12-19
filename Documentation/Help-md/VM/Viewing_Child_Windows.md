@@ -17,4 +17,4 @@ moves that window to the front.
 * Order Revision History
 * [WIP/VAS](javascript:void(0);)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

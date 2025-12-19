@@ -40,7 +40,7 @@ creation of the IBT from a source of supply using the Assign
 Supply to IBT Line option in the IBT Entry window. For example,
 if you allocated full supply to this IBT from a purchase order, this
 value is equal to the IBT Order Quantity. See [Allocating
-Supply to IBT Lines](Allocating_Supply_to_Interbranch_Transfers.htm) for more information.
+Supply to IBT Lines](Allocating_Supply_to_Interbranch_Transfers.md) for more information.
 
 Fulfilled Quantity
 - The portion of the quantity that you have allocated to demand successfully
@@ -105,4 +105,4 @@ Quantity of the customer order delivery schedule line.
     button to commit the allocation of supply from the IBT receipt
     quantity to the customer order delivery schedule line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Receipt_Entry.md) User-defined Help

@@ -52,4 +52,4 @@ a line on an order from within the Service Dispatch History window,
 change the date for the line and order you want and click the Save button. VISUAL saves the new date to the
 purchase order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

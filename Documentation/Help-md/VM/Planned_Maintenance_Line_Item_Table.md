@@ -54,7 +54,7 @@ WO Sub ID The Base ID of the work order.
 Def Status The default status of the
 work order. Set work order defaults by using the Edit menu option,
 [Work
-Order Defaults](Setting_a_Work_Order_Default_Status_Planned_Maintenance.htm).
+Order Defaults](Setting_a_Work_Order_Default_Status_Planned_Maintenance.md).
 
 WO Create Date The date on which VISUAL
 created the work order.
@@ -75,4 +75,4 @@ order to which the work order is attached.
 
 Last Invoice The last Invoice ID created.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

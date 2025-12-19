@@ -28,4 +28,4 @@ Netable - This quantity is always equal
 to the On Hand quantity. The quantity of parts for which you can determine
 netting information - your entire stock at any one time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

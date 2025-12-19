@@ -15,4 +15,4 @@ History, and ECN Task Maintenance.
 For more information on limiting access to ECN features, refer to
 your VISUAL documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

@@ -21,6 +21,6 @@ The Generate VMDI Layouts window appears.
 The Generate VDMI window contains buttons, pull-down menus, option
 buttons and tabs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_VMDI_Exchange_Window.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_VMDI_Exchange_Window.md)

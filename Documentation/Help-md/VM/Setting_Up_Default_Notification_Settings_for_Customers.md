@@ -69,10 +69,10 @@ the order is edited, an update notification is sent.
 
 You can override the automatic sending of emails in Customer Order
 Entry. To set these preferences, see [Setting
-Notification Maintenance window Preferences](Setting_Notification_Maintenance_window_Preferences.htm).
+Notification Maintenance window Preferences](Setting_Notification_Maintenance_window_Preferences.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMNFTMNTfrmNotification.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMNFTMNTfrmNotification.md)
 Creating Email Templates for Notifications
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

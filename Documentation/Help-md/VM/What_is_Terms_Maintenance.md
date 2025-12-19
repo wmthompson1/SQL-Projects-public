@@ -15,4 +15,4 @@ If you use Infor VISUAL for .NET Global Financials, this menu selection
 is inactive. You must define terms in Global Financials. Refer to
 your Global Financials online help for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

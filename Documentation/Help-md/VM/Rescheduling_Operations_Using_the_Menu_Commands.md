@@ -23,4 +23,4 @@ The Freeze Operation dialog box appears.
    to complete the procedure, or Cancel
    to close the dialog box without rescheduling the operation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

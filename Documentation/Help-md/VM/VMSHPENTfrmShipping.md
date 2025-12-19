@@ -298,7 +298,7 @@ age limit is checked if the customer has a Receivable Age Limit. If
 the customer has unpaid invoices older than the receivable age limit
 a dialog is displayed. You cannot ship the order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Intrastat_Items_for_a_Customer_Order.htm) Shipping Intrastat Items for a Customer
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Intrastat_Items_for_a_Customer_Order.md) Shipping Intrastat Items for a Customer
 Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

@@ -16,4 +16,4 @@ The Employee Maintenance window appears with no information in it.
 
 The Employee Maintenance window contains both entry fields and buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.md) User-defined Help

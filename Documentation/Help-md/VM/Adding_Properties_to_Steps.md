@@ -18,7 +18,7 @@ The Step Properties dialog box appears.
 
 |  |  |
 | --- | --- |
-| IMPORTNT.gif | The following read-only information appears in the dialog box status section: Status, Started on, Last notified, and Completed. For more information on status fields, refer to [Viewing Status Information](Viewing_Status_Information.htm). |
+| IMPORTNT.gif | The following read-only information appears in the dialog box status section: Status, Started on, Last notified, and Completed. For more information on status fields, refer to [Viewing Status Information](Viewing_Status_Information.md). |
 
 3. In the Label field,
    enter a name for the step. You may want to consider using a name
@@ -50,7 +50,7 @@ When re-evaluating a workflow, the evaluation
 sequence in the Rule Properties dialog box is checked.
 
 For more information on evaluations, refer
-to [Working with Evaluations](Working_with_Evaluation_Sequences.htm).
+to [Working with Evaluations](Working_with_Evaluation_Sequences.md).
 
 |  |  |
 | --- | --- |
@@ -63,7 +63,7 @@ to [Working with Evaluations](Working_with_Evaluation_Sequences.htm).
    to evaluate this step periodically, select the Evaluate on Timer
    check box. The system evaluates the step based on the interval
    you set in [Preference
-   Maintenance](VMPRFMNTfrmPreferenceMaintenance.htm). For example, if you specified 15 in Preferences
+   Maintenance](VMPRFMNTfrmPreferenceMaintenance.md). For example, if you specified 15 in Preferences
    Maintenance, the system would evaluate the step every 15 minutes.
 
 To set up the interval to use in Preferences
@@ -150,7 +150,7 @@ ${VE.VMORDENT.EXE}
    rules to identify errors in a process. For example, if you require
    an expiration date on all quotes, you can set up a workflow rule
    that tests for the existence of an expiration date. See [Working
-   with Rules](Working_with_Rules.htm).
+   with Rules](Working_with_Rules.md).
 
 Use the VE Program Action area to specify
 the actions that occur when the rule that is immediately before the
@@ -180,7 +180,7 @@ box, then <null> is displayed in the error dialog.
     any VISUAL documents to this step, click the Document
     Reference button and select the documents you want. For
     more information on document references, refer to [Referencing
-    Documents](Referencing_Documents_Workflow.htm).
+    Documents](Referencing_Documents_Workflow.md).
 11. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

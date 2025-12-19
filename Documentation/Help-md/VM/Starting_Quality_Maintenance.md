@@ -16,4 +16,4 @@ The Quality Maintenance window appears.
 The Quality Maintenance window lists all of the defined gauges for
 your system.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

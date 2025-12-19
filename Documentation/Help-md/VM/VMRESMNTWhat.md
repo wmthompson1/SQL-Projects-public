@@ -18,6 +18,6 @@ This information is vital for proper scheduling and work order costing.
 The information you enter here appears and is used in many other parts
 of the system.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Shop_Resource_Maintenance.htm) Starting Shop Resource Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Shop_Resource_Maintenance.md) Starting Shop Resource Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

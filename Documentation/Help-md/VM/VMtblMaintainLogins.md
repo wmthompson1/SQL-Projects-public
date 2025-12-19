@@ -41,4 +41,4 @@ Users are signed out when the next attempt
 to save data or run reports. They must sign in to VISUAL again to
 use the system.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Admin_Guide.md) User-defined Help

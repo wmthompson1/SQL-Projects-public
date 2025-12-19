@@ -55,4 +55,4 @@ the date on which you want this period to finish.
 The Maintain Period ID window closes and
 VISUAL saves the changes to your period list to your database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.md) User Defined Help

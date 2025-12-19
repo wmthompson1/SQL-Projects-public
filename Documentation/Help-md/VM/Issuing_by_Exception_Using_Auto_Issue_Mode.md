@@ -8,7 +8,7 @@ Issuing by Exception Using Auto Issue Mode
 You can issue material requirement quantities from
 warehouse locations to released work orders using auto issue mode.
 Depending on the [Issue
-Negative settings specified in Site Maintenance](Specifying_Information_on_the_General_Tab_site.htm), you can issue
+Negative settings specified in Site Maintenance](Specifying_Information_on_the_General_Tab_site.md), you can issue
 materials even though the specified warehouse location might not contain
 sufficient quantities. The ability to issue materials beyond the current
 on hand level allows you to immediately issue materials that may
@@ -145,4 +145,4 @@ If you cleared the Preview
 transactions before Saving check box, then the inventory transactions
 are generated when you click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

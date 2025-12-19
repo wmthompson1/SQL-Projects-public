@@ -8,29 +8,29 @@ Key/Version
 The eight layout keys represent each of the four VISUAL targets intended
 for importing or exporting. They include:
 
-[CPO](VMDI_Integration_Requirements.htm#CPO) - Select this
+[CPO](VMDI_Integration_Requirements.md#CPO) - Select this
 layout key for inbound customer orders.
 
-[PLN](VMDI_Integration_Requirements.htm#PLN) - Select this
+[PLN](VMDI_Integration_Requirements.md#PLN) - Select this
 layout key for inbound customer part forecasts.
 
-[ASN](VMDI_Integration_Requirements.htm#ASN) - Select this
+[ASN](VMDI_Integration_Requirements.md#ASN) - Select this
 layout key for outbound Advanced Ship Notices.
 
-[INV](VMDI_Integration_Requirements.htm#INV) - Select this
+[INV](VMDI_Integration_Requirements.md#INV) - Select this
 layout key for outbound invoices.
 
-[VPO](VMDI_Integration_Requirements.htm#VPO) - Select this
+[VPO](VMDI_Integration_Requirements.md#VPO) - Select this
 layout key for outbound vendor purchase orders.
 
-[ACK](VMDI_Integration_Requirements.htm#ACK) - Select this
+[ACK](VMDI_Integration_Requirements.md#ACK) - Select this
 layout key for outbound customer invoices.
 
-[CSH](VMDI_Integration_Requirements.htm#CSH) Select this
+[CSH](VMDI_Integration_Requirements.md#CSH) Select this
 layout key for inbound cash receipts.
 
-[RCA](VMDI_Integration_Requirements.htm#RCA) Select this
+[RCA](VMDI_Integration_Requirements.md#RCA) Select this
 layout key for outbound material receipts (receiving advices).
 
-[WSA](Creating_WSA_Layouts.htm) Select this layout key
+[WSA](Creating_WSA_Layouts.md) Select this layout key
 for Warehouse Shipping Advance layouts

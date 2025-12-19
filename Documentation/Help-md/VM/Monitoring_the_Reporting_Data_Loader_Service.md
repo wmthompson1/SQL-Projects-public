@@ -22,10 +22,10 @@ To view and reset the last run date:
    was last run is displayed in the Last Run field. To clear this
    date, click Clear, and then click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Reporting_Database_Tables.md)
 Reporting Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCfrmMain.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRDTASVCfrmMain.md)
 Installing the Visual Reporting Data Loader Service
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

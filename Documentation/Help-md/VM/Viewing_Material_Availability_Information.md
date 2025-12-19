@@ -18,7 +18,7 @@ in the Project Available (after issue), On Hand, and Available columns.
 If you specify N for this preference setting and a specific universally
 planned warehouse is identified for the material, then only the inventory
 in the specified warehouse is displayed. See [Setting
-the UseUniversalForMaterialAvailability Preference](Setting_the_UseUniversalForMaterialAvailability_Preference.htm).
+the UseUniversalForMaterialAvailability Preference](Setting_the_UseUniversalForMaterialAvailability_Preference.md).
 
 If you perform an action that affects material availability, such
 as creating a purchase order or updating and recalculating material
@@ -248,4 +248,4 @@ Required Quantity Fulfilled
 - The portion of the material requirement's Required Quantity that
 has been fulfilled through the use allocations.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

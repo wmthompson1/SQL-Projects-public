@@ -11,4 +11,4 @@ date is outside the allocation fence, the Allocation Utility ignores it
 during allocation.
 
 For more information on the [VISUAL
-Allocation Utility](VMALCUTLWhat.htm), click here.
+Allocation Utility](VMALCUTLWhat.md), click here.

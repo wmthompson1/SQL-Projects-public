@@ -89,4 +89,4 @@ access to all of your personal address books.
 3. Click the Ok
    button to output the log file report to the selected print destination.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

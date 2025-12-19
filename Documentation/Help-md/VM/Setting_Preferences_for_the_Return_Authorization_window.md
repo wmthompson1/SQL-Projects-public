@@ -7,7 +7,7 @@ Setting Preferences for the Return Authorization window
 
 You can set some of the defaults and the processing behavior of
 the Return Authorization window. See [Using
-Preference Maintenance](VMPRFMNTfrmPreferenceMaintenance.htm).
+Preference Maintenance](VMPRFMNTfrmPreferenceMaintenance.md).
 
 This table lists the entries in the RMA section of Preferences Maintenance
 and possible values:

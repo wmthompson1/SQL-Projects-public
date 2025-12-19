@@ -14,7 +14,7 @@ of work orders to inventory, shipment of finished goods, and inventory
 adjustments.
 
 VISUAL uses two applications to setup and apply part traceability.
-Use [Part Trace Profile Maintenance](VTTRPMNTWhat.htm)
+Use [Part Trace Profile Maintenance](VTTRPMNTWhat.md)
 to describe how you want traceability to work for a part. You should
 be familiar with that chapter before proceeding.
 
@@ -23,6 +23,6 @@ and to report, maintain, and print traceability records. Additionally,
 all applications that are involved in material transactions have a
 Part Traceability button and dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Part_Trace_Maintenance.htm) Starting Part Trace Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Part_Trace_Maintenance.md) Starting Part Trace Maintenance

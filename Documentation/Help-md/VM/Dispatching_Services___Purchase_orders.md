@@ -20,4 +20,4 @@ the Purchase Order Entry Window.
 VISUAL dispatches the parts and the number
 of parts dispatched appears in the Total Quantity Dispatched column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

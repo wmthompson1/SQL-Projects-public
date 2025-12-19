@@ -34,4 +34,4 @@ criteria, that project appears in the Project window.
 If a project does not exist and you want
 to enter a new search, click the New button on the toolbar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

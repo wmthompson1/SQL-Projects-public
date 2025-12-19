@@ -63,5 +63,5 @@ lines you wish to delete.
    Selected button to delete only the selected lines, or Delete All to delete requirements for all
    lines showing in the table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md)
 User-defined Help

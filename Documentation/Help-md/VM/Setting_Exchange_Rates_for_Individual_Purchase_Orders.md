@@ -37,7 +37,7 @@ Sell Rate and New Buy Rate fields.
 
 You return to the Purchase Order Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Exchange_Rates_for_a_Period_of_Time.htm) Viewing Exchange Rates for a Period
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Exchange_Rates_for_a_Period_of_Time.md) Viewing Exchange Rates for a Period
 of Time

@@ -21,7 +21,7 @@ You must select the proper type you cannot
 open an engineering master if you select the Work
 Order button. You can specify a default type in Preference
 Maintenance. See [Specifying
-the Default Document Type in the Open Dialog](Specifying_the_Default_Document_Type_in_the_Open_Dialog.htm).
+the Default Document Type in the Open Dialog](Specifying_the_Default_Document_Type_in_the_Open_Dialog.md).
 
 3. Select the size preferences
    and display mode here, so you dont need to immediately access
@@ -52,6 +52,6 @@ If there is already a master/work order
 in the Manufacturing Window, it is closed automatically. If an edit
 to an object was in process, you are allowed to confirm this action.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Searching_for_Masters_and_Work_Orders.htm) Searching for Masters and Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Searching_for_Masters_and_Work_Orders.md) Searching for Masters and Work Orders

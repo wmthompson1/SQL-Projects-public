@@ -30,12 +30,12 @@ To test the query, use the Data tab.
 
 Next step:
 
-[Activating the data source.](Activating_the_Data_Source.htm)
+[Activating the data source.](Activating_the_Data_Source.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Creating_Data_Sources.md)
 Creating Data Sources
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

@@ -193,4 +193,4 @@ line is closed.
 Quote Ln # If you created a quote as
 part of an evaluation RMA, the line number of the quote is inserted.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

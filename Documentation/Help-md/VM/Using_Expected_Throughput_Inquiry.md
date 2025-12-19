@@ -47,15 +47,15 @@ information by day, select this option.
    button. To display the data as a table, click the Table
    toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Throughput_Details.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Throughput_Details.md)
 Viewing Expected Throughput Inquiry Details
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Throughput_Inquiry_Graphs_Tabularly.htm) Viewing Expected Throughput Details
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Expected_Throughput_Inquiry_Graphs_Tabularly.md) Viewing Expected Throughput Details
 Tabularly
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Interpreting_Expected_Throughput_Inquiry_Delta_Graph_Information.htm) Viewing and Interpreting Expected Throughput
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Interpreting_Expected_Throughput_Inquiry_Delta_Graph_Information.md) Viewing and Interpreting Expected Throughput
 Inquiry Delta Graph Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Expected_Throughput_Reports.htm) Printing Expected Throughput Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Expected_Throughput_Reports.md) Printing Expected Throughput Reports

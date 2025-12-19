@@ -39,4 +39,4 @@ Unallocated Demand
 - The quantity, if any, that you have yet to allocate to the customer
 order to meet its quantitative requirements.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

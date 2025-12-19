@@ -47,25 +47,25 @@ DATE - QTY
 Since Today is NOT included in the proration, the qty of 21787 is
 added only as a delivery schedule for 3/8/02.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.htm) CPO Discrete Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.md) CPO Discrete Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.htm) PLN Discrete Quantities Example 1
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.md) PLN Discrete Quantities Example 1
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_2.htm) PLN Discrete Quantities Example 2
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_2.md) PLN Discrete Quantities Example 2
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_3.htm) PLN Discrete Quantities Example 3
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_3.md) PLN Discrete Quantities Example 3
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_4.htm) PLN Discrete Quantities Example 4
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_4.md) PLN Discrete Quantities Example 4
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_6.htm) PLN Discrete Quantities Example 6
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_6.md) PLN Discrete Quantities Example 6
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_7.htm) PLN Discrete Quantities Example 7
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_7.md) PLN Discrete Quantities Example 7
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_8.htm) PLN Discrete Quantities Example 8
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_8.md) PLN Discrete Quantities Example 8
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.htm) PLN CUMM Shipped Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.md) PLN CUMM Shipped Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.htm) PLN CUMM FAB Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.md) PLN CUMM FAB Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.md)
 Working with Subtract Intransit Quantities (CPO CUM Quantities)

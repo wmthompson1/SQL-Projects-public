@@ -46,11 +46,11 @@ new activities and reminders. You can specify how frequently to check
 for new activities and reminders in the Preferences dialog in Activity
 Maintenance.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

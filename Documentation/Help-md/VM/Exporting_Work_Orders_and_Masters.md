@@ -27,4 +27,4 @@ The information now exists in the file name
 .eng in the directory you specified in the same format used by the
 clipboard copy/paste functions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

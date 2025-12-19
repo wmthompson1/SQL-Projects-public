@@ -16,7 +16,7 @@ also assign activities to other VISUAL users.
 
 ## Starting the Activity Entry Window
 
-From an [application](VMACTENTWhat.htm) that supports
+From an [application](VMACTENTWhat.md) that supports
 activities, select Edit, Activity
 Entry.
 
@@ -26,9 +26,9 @@ This table shows the tasks that you can complete in the Activity
 Entry window:
 
 | Task | Description |
-| [Creating Activity Categories](Creating_Activity_Categories.htm) | Use this procedure to create activity categories. Activity categories describe the topic of the activity. For example, activity categories could include customer credit, sales planning, or vendor contracts. |
-| [Creating Activity Types](Creating_Activity_Types.htm) | Use this procedure to create activity types. Activity types describe how the activity is conducted. For example, activity types could include phone call, e-mail, or meeting. |
-| [Creating Activities](Creating_Activities.htm) | Use this procedure to create activities. |
+| [Creating Activity Categories](Creating_Activity_Categories.md) | Use this procedure to create activity categories. Activity categories describe the topic of the activity. For example, activity categories could include customer credit, sales planning, or vendor contracts. |
+| [Creating Activity Types](Creating_Activity_Types.md) | Use this procedure to create activity types. Activity types describe how the activity is conducted. For example, activity types could include phone call, e-mail, or meeting. |
+| [Creating Activities](Creating_Activities.md) | Use this procedure to create activities. |
 
 ## Fields
 
@@ -78,7 +78,7 @@ Activity Type
 Specify the type for this activity. Use activity types to categorize
 the type of action to take to complete the activity. Examples of activity
 types are Call and E-mail. See [Creating
-Activity Types](Creating_Activity_Types.htm).
+Activity Types](Creating_Activity_Types.md).
 
 Category
 ID
@@ -87,7 +87,7 @@ Specify the category for this activity. Use activity categories
 to generically describe the topic of the activity. Examples of activity
 categories are Customer Credit, Vendor Contracts, or Part Specification
 Review. See [Creating Activity
-Categories](Creating_Activity_Categories.htm).
+Categories](Creating_Activity_Categories.md).
 
 Status
 
@@ -123,7 +123,7 @@ Reminder
 
 To send a reminder notification for this activity, select the Reminder
 Days check box. Specify the day and time to send the reminder.  See
-[Activity Reminders](Activity_Reminders.htm).
+[Activity Reminders](Activity_Reminders.md).
 
 Assign To (Owner)
 
@@ -184,8 +184,8 @@ Comments
 Specify a more detailed description of this task or any other information
 pertinent to the task.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

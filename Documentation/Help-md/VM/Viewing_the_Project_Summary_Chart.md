@@ -28,7 +28,7 @@ view only a chart, select this check box. To view the chart and the
 values used for the chart, clear this check box. If you view the values
 used in the chart, the values are displayed in a grid. You can sort
 and group the information in the grid in a variety of ways and export
-the information in the grid to Microsoft Excel. See [Grids](Grids.htm).
+the information in the grid to Microsoft Excel. See [Grids](Grids.md).
 
 4. To specify the information
    to view in the chart, click Setup Chart.
@@ -81,9 +81,9 @@ Earned Hours
    The chart is drawn. If you cleared the Chart Only check box, the
    values used to draw the chart are displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Project_Summary_Chart.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Project_Summary_Chart.md)
 Project Summary Chart
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_the_Project_Summary_Chart.htm) Printing the Project Summary Chart
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_the_Project_Summary_Chart.md) Printing the Project Summary Chart
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

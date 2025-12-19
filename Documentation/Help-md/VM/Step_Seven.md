@@ -65,4 +65,4 @@ You can use the Show Source for Actuals option under
 the Info menu in the Project Summary window to view the details behind
 the actual amounts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

@@ -20,10 +20,10 @@ any information in the database via the Query Tool, regardless of
 their security settings. The data displayed may be sensitive; therefore,
 the system administrator may want to limit accessibility to VMQUERY.exe.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYfrmMain.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYfrmMain.md)
 Creating a Query
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Query_Results_Outside_of_the_Query_Tool.htm) Displaying Query Results Outside of
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_Query_Results_Outside_of_the_Query_Tool.md) Displaying Query Results Outside of
 the Query Tool

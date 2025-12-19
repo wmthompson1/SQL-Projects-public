@@ -21,4 +21,4 @@ Until the quantity equals the quantity of the customer order delivery
 schedule line, you can still allocate supply to the delivery schedule
 line from one of the six available supplying sources.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

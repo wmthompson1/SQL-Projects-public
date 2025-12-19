@@ -5,7 +5,7 @@ Vendor Performance Detail
 
 # Vendor Performance Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid shows the number of purchases you received early, the number
 received on time, and the number received late.
 
@@ -24,10 +24,10 @@ Recv Date, Received Date, Received Qty, Order Qty, Purchase U/M, Status,
 Buyer, Product Code, Commodity Code, Part ID, Part Desc., Service
 ID, Service Desc., Site ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

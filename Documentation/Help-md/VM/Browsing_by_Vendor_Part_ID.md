@@ -13,4 +13,4 @@ Purchase Orders by Vendor Part ID. The system lists the purchase
 orders sorted by vendor part ID. Double-click a line in the table
 to open the purchase order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

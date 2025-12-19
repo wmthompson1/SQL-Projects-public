@@ -32,11 +32,11 @@ not considered in the supplier performance rating.
 Use Supplier Performance to:
 
 * [Set
-  up supplier performance criteria](Setting_Up_Supplier_Performance_Criteria.htm)
+  up supplier performance criteria](Setting_Up_Supplier_Performance_Criteria.md)
 * [View
-  the supplier performance graph](VMSUPPFMfrmSupplierPerformance.htm)
+  the supplier performance graph](VMSUPPFMfrmSupplierPerformance.md)
 * [Export
-  supplier performance information to Microsoft Excel](Exporting_Supplier_Performance_Information_to_Microsoft_Excel.htm)
+  supplier performance information to Microsoft Excel](Exporting_Supplier_Performance_Information_to_Microsoft_Excel.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](How_Supplier_Performance_Ratings_are_Calculated.htm) How Supplier Performance Ratings are
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](How_Supplier_Performance_Ratings_are_Calculated.md) How Supplier Performance Ratings are
 Calculated

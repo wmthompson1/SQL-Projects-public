@@ -90,4 +90,4 @@ is in effect. By clicking on the pgm security
 button, located at the bottom of the window, access to the Costing
 Tools option can be denied, on a user-by-user basis.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Costing_Tools.md) User-defined Help

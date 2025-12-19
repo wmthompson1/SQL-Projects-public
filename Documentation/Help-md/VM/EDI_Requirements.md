@@ -29,4 +29,4 @@ Global Solutions will help determine your EDI implementation requirements
 by conducting a needs assessment, assisting with an EDI software purchase,
 providing services and support, and providing services and support.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

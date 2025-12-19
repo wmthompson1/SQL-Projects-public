@@ -85,7 +85,7 @@ All top-level parts
    | --- | --- |
    | POSTIT.gif | If you do not select Permanently Save All Levels, the implosion results appear only in the Costing section of the current screen. Permanently Save All Levels is automatically turned on and cannot be changed when you choose All Top Level Parts. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Implode_Costs_from_Engineering_Master_back_to_the_Part.htm) Implode Costs from Engineering Master
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Implode_Costs_from_Engineering_Master_back_to_the_Part.md) Implode Costs from Engineering Master
 back to the Part
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

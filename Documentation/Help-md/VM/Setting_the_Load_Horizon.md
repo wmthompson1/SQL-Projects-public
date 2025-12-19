@@ -24,4 +24,4 @@ The schedule ID appears in the Scheduling
 Window. A solid blue vertical line appears in the window at the point
 in the schedule at which the horizon occurs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

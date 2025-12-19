@@ -48,4 +48,4 @@ Active Click the Active
 check box to apply the filter. Clear the check box to remove the filter
 and view all warehouses in the warehouse drop-down list.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

@@ -78,4 +78,4 @@ above) is created immediately upon creation of the shipment transaction.
 When the work order is given its permanent cost the cost is carried
 to the related shipments.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

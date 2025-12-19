@@ -19,4 +19,4 @@ Input File Rules for Creating Masters
 * A tab character must follow
   the last field and each line must end with CRLF.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

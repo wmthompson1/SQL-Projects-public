@@ -7,7 +7,7 @@ Picking Up Materials
 
 Use this procedure to pick up the materials in a move request. You can
 also pick up materials in the Move Request window. See [Using
-the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.htm).
+the Move Request Window to Pick Up Move Requests](Using_the_Move_Request_Window_to_Pick_Up_Move_Requests.md).
 
 1. Select Inventory,
    Material Handler Queue.

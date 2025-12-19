@@ -89,4 +89,4 @@ Complete example:
 | Search Condition: |
 | CUSTOMER\_ORDER.CUSTOMER\_ID = CUSTOMER.ID  AND UDF\_DEF.PROGRAM\_ID = USER\_DEF\_FIELDS.PROGRAM\_ID  AND UDF\_DEF.ID = USER\_DEF\_FIELDS.ID  AND CUSTOMER\_ORDER.ID = USER\_DEF\_FIELDS.DOCUMENT\_ID  AND USER\_DEF\_FIELDS.PROGRAM\_ID = 'VMORDENT'  AND UDF\_DEF.LABEL = 'String 1'  AND USER\_DEF\_FIELDS.STRING\_VAL = 'Test 1' |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

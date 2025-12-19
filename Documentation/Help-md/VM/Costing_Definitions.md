@@ -45,4 +45,4 @@ raw materials issued and the amount of labor incurred to date, both
 at standard. Fabricated products that are in finished goods inventory
 are valued at their standard cost based on the bill of material.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

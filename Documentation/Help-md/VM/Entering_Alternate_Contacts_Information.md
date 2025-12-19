@@ -17,7 +17,7 @@ primary contact. Specify additional contacts in the Alternate Contacts
 dialog box.
 
 When you add an alternate contact, the contact is also added to
-the [Email Documents](Maintaining_Customer_E-mail_Document_Lists.htm) list.
+the [Email Documents](Maintaining_Customer_E-mail_Document_Lists.md) list.
 
 You
 can manage basic information about your contacts directly in the Contacts
@@ -94,8 +94,8 @@ Address-
 The street address, city, state, zipcode, and country of the contact
 is displayed.
 
-If the contact you want to use does not exist, you can [add the contact](VMCONMNTfrmContact.htm)
+If the contact you want to use does not exist, you can [add the contact](VMCONMNTfrmContact.md)
 to your database. To add a new contact, click Add
 New Contact. The Contact Maintenance window is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

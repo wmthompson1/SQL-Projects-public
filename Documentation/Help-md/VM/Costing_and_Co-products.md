@@ -13,7 +13,7 @@ co-product list provides its own standard.
 If actual costing is in use, VISUAL eventually recalculates the
 cost of each work order, and ultimately each receipt, assigning the
 actual cost as the receipt cost. This is done by the [Costing
-Utilities](VMAPLUTLWhat.htm).
+Utilities](VMAPLUTLWhat.md).
 
 For single-part work orders this is a process of summing the cost
 of the work order, calculating a unit cost, multiplying the unit cost
@@ -43,4 +43,4 @@ applied, not the product line of the parts themselves. All parts of
 a multi-part work order are assumed to be part of the same product
 line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -31,4 +31,4 @@ No Major Sequence
 | By Department ID | VMLABR10.QRP |
 | Labor Detail | VMLABRPT.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

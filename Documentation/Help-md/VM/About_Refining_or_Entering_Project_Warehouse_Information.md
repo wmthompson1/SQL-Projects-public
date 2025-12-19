@@ -14,4 +14,4 @@ If you chose not to create the project warehouse when you created
 the project, you must create a project warehouse through Warehouse
 Maintenance with the same ID as the project.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

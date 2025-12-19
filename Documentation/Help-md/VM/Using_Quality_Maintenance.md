@@ -19,4 +19,4 @@ for measurement. After this, you may occasionally use this program
 to add or delete gages, defect classifications or characteristics
 for measurement.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

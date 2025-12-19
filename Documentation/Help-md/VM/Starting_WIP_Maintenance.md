@@ -13,4 +13,4 @@ From the Inventory menu, select WIP Maintenance.
 
 The WIP Maintenance window appears with no information in it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_WIP_Maintenance.md) User-defined Help

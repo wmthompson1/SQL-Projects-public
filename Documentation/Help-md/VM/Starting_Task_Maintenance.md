@@ -17,4 +17,4 @@ From the Eng/Mfg menu, select Task Maintenance.
 The Task Maintenance window appears, displaying all tasks for the
 user currently signed into the database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Task_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Task_Maintenance.md) User-defined Help

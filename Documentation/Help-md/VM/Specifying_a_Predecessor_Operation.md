@@ -41,4 +41,4 @@ You can view the predecessor operations defined on a work order
 or engineering master. Select Info, Predecessor Operations. The system displays operations
 along with their predecessors.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

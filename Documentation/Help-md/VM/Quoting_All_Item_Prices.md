@@ -44,4 +44,4 @@ from the drop down list.
    | --- | --- |
    | POSTIT.gif | Changes in this dialog will affect the Quoted Unit Price shown in the Prices dialog for each individual line item. Any changes will override unit prices that may have been calculated from costs. This feature is most useful as a quick way to quote prices when not automatically calculating prices. You can then view resulting profit margins by using the Cost Detail report. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

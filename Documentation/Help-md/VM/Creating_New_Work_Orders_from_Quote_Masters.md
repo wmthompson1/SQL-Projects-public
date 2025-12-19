@@ -81,4 +81,4 @@ If you create a work order from a master
 that uses obsolete resources, the system sets the status of the operation
 that uses the obsolete resource to cancelled.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -29,6 +29,6 @@ the View menu.
 If you do not select the List All Exceptions option, only the exceptions
 for the selected card appear in the Exceptions table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINdlgMfgWinEditException.htm) Creating and Editing Exceptions
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMMFGWINdlgMfgWinEditException.md) Creating and Editing Exceptions

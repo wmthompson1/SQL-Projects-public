@@ -19,4 +19,4 @@ line. In this case, each line represents a single packlist shipment,
 and the Shipped Quantity shows the amount shipped on that packlist.
 Returns appear as negative Shipped Quantities.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

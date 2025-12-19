@@ -32,4 +32,4 @@ measure. It lists the master Type, Work Order/Master Leg ID, the Allow
 Updates flag, Leg Status, Last Update Date, Last Update By, and Last
 Update from Reference for each master where the part is used.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

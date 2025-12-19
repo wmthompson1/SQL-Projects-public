@@ -23,7 +23,7 @@ To create a milestone:
 3. In the Order
    ID field, click the browse button and select the order to progress
    bill. The order must be linked to a work order. See [Associating
-   Line Items To Work Orders](Associating_Line_Items_To_Work_Orders.htm).
+   Line Items To Work Orders](Associating_Line_Items_To_Work_Orders.md).
 4. Highlight the appropriate
    line item in the Progress Billing Entry window.
 5. Select Edit,
@@ -45,4 +45,4 @@ The operation is associated with the milestone.
 The ID of the milestone is inserted after the resource ID used on
 the operation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

@@ -8,11 +8,11 @@ Specifying Other Part Information
 For each part, you can specify:
 
 * [Part
-  Language Descriptions](Maintaining_Part_Language_Descriptions.htm)
+  Language Descriptions](Maintaining_Part_Language_Descriptions.md)
 * [Part-specific
-  Unit of Measure Conversion](Setting_Up_Unit_of_Measure_Conversion_for_Specific_Parts.htm)
+  Unit of Measure Conversion](Setting_Up_Unit_of_Measure_Conversion_for_Specific_Parts.md)
 * [Container
-  Information](Creating_Containers_for_Parts.htm)
+  Information](Creating_Containers_for_Parts.md)
 * Default Thermal Labels
 
 If you are licensed to use multiple sites, this information is specified

@@ -44,4 +44,4 @@ for Capacity Constrained Resource.
 
 For more information on DBR, refer to What is Drum-Buffer-Rope?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md)

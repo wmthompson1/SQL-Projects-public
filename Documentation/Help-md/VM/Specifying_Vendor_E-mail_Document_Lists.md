@@ -35,4 +35,4 @@ all of the vendor's associated contacts by allowable site.
    select the Send to document contacts
    check box to e-mail the document to the contacts you specified.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

@@ -21,4 +21,4 @@ Order Entry child window.
 | --- | --- |
 | POSTIT.gif | Because the Purchase Order Entry window is an integral part of the Purchase Management Window, when you close the Purchase Order Entry Window, the Purchase Management Window also closes. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

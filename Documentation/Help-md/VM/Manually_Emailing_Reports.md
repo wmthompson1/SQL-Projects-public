@@ -17,10 +17,10 @@ in the same directory as your VISUAL executables.
 See these topics:
 
 * [Reports
-  That Can Be Emailed to Customers](Reports_That_Can_Be_Emailed_to_Customers.htm)
+  That Can Be Emailed to Customers](Reports_That_Can_Be_Emailed_to_Customers.md)
 * [Reports
-  That Can Be Emailed to Vendors](Reports_That_Can_Be_Emailed_to_Vendors.htm)
+  That Can Be Emailed to Vendors](Reports_That_Can_Be_Emailed_to_Vendors.md)
 * [Specifying
-  Email Lists for Documents](Specifying_Email_Lists_for_Documents.htm)
+  Email Lists for Documents](Specifying_Email_Lists_for_Documents.md)
 * [E-mailing
-  Reports](E-mailing_Reports.htm)
+  Reports](E-mailing_Reports.md)

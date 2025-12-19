@@ -18,13 +18,13 @@ Creating Move Requests in Issue and Return by Exception
 5. Complete the required information
    in the Inventory Transaction Entry window. See one of these topics:
 6. [Issuing
-   Materials with the Work Order Material Issues Table](Issuing_Materials_with_the_Work_Order_Material_Issues_Table.htm)
+   Materials with the Work Order Material Issues Table](Issuing_Materials_with_the_Work_Order_Material_Issues_Table.md)
 7. [Issuing
-   by Exception Using Auto Issue Mode](Issuing_by_Exception_Using_Auto_Issue_Mode.htm)
+   by Exception Using Auto Issue Mode](Issuing_by_Exception_Using_Auto_Issue_Mode.md)
 8. [Returning
-   Materials with the Work Order Material Issues Table](Returning_Materials_with_the_Work_Order_Material_Issues_Table.htm)
+   Materials with the Work Order Material Issues Table](Returning_Materials_with_the_Work_Order_Material_Issues_Table.md)
 9. [Using
-   Auto Return Mode](Using_Auto_Return_Mode.htm)
+   Auto Return Mode](Using_Auto_Return_Mode.md)
 
 6. Click Save.
    The move request is generated. If you have not enabled the Auto Save
@@ -95,5 +95,5 @@ used to generate the move request is displayed.
 
 7. Complete the other fields
    in the move request as necessary. See [Manually
-   Creating a Move Request](Manually_Creating_a_Move_Request.htm).
+   Creating a Move Request](Manually_Creating_a_Move_Request.md).
 8. Click Save.

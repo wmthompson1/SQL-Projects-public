@@ -57,7 +57,7 @@ Cost Category ID
 - If you are licensed to use projects/A&D, specify the cost category
 ID to use to track budgets and costs. You can assign a material or
 ODC cost category. See [Setting
-Up Cost Categories](Setting_Up_Cost_Categories.htm).
+Up Cost Categories](Setting_Up_Cost_Categories.md).
 
 5. In the upper table,
    select the product code for which to specify account information.
@@ -123,4 +123,4 @@ account credits.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

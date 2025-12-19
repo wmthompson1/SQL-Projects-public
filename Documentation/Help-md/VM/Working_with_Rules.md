@@ -14,4 +14,4 @@ before the workflow proceeds to the next step.
 You can also assign Authorizations to restrict the enactment of
 a workflow step to a specific user or group of users.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

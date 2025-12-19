@@ -77,8 +77,8 @@ databases, or the one available Site ID for single-site databases.
    type or that it cannot find the Document ID. If you specify a
    Document ID that does not exist, then you are prompted to create
    the document. See [Creating
-   Document References in Maintenance Windows](Creating_Document_References_in_Maintenance_Windows.htm).
+   Document References in Maintenance Windows](Creating_Document_References_in_Maintenance_Windows.md).
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

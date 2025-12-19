@@ -66,4 +66,4 @@ point.
 8. Click the Save
    button to save the currency.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Currency_Exchange_Rate_Maintenance.md) User-defined Help

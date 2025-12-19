@@ -49,8 +49,8 @@ for this bank.
 
 If you have not already done so, enter the Address information for
 your bank on the Address tab, as described in [Entering
-Vendor Bank Account Information](Entering_Vendor_Bank_Information.htm).
+Vendor Bank Account Information](Entering_Vendor_Bank_Information.md).
 
 To save the Vendor Bank account Payment information, click Save. To exit the dialog box, click Close.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_Maintenance.md) User-defined Help

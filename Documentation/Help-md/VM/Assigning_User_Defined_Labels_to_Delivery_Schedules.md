@@ -19,7 +19,7 @@ The Customer Order Entry window appears.
 
 2. If you are creating
    a new order, follow [order
-   entry procedures](VMORDENTfrmCustomerOrder.htm).
+   entry procedures](VMORDENTfrmCustomerOrder.md).
 
 Click the Our Order ID
 button to select the order with the delivery schedule.
@@ -72,4 +72,4 @@ on two lines.
 
 The fields now appear in the line item table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

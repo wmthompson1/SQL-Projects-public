@@ -18,7 +18,7 @@ removing the contact from your database.
 
 If you no longer want to use a contact, you can designate the contact
 as inactive instead of deleting the contact. See [Designating
-Contacts Inactive](Designating_Contacts_as_Inactive.htm).
+Contacts Inactive](Designating_Contacts_as_Inactive.md).
 
 To delete a contact:
 

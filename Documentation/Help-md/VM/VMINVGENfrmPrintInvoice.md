@@ -53,7 +53,7 @@ can also have this process create actual receivable invoices.
 
 If you selected the Retain excess balance for future
 shipments option on the [Shipment
-Trk tab in Site Maintenance](Setting_Shipment_Tracking_Information.htm), certain options may be disabled in
+Trk tab in Site Maintenance](Setting_Shipment_Tracking_Information.md), certain options may be disabled in
 Invoice Forms. If at least one customer order has been partially shipped
 and has a pre-invoice applied to it, the system disables the Create
 A/R Invoices, Combine All Packlists for an Order on One Invoice, and
@@ -61,8 +61,8 @@ Combine All Packlists for a Customer on One Invoice options. You can
 re-activate these options by generating invoices for pre-invoiced
 orders with partial shipments. To identify these orders, print the
 [List
-of Pre-Invoiced Orders with Partial Shipments](Printing_a_List_of_Pre-invoiced_Orders_with_Partial_Shipments.htm) report. Then, use
-the [Generate/Print One Invoice](Printing_Invoices_2.htm)
+of Pre-Invoiced Orders with Partial Shipments](Printing_a_List_of_Pre-invoiced_Orders_with_Partial_Shipments.md) report. Then, use
+the [Generate/Print One Invoice](Printing_Invoices_2.md)
 option available on the File menu to generate an invoice for each
 order in the List of Pre-Invoiced Orders with Partial Shipments report.
 After you generate each invoice, the system reactivates the Create
@@ -129,7 +129,7 @@ that the packlists are for the site that you specified in the Site
 ID field. For example, you cannot combine all packlists for consolidated
 sales orders, where multiple sites are specified on the sales order,
 on to one invoice. See [Consolidated
-Sales](Consolidated_Sales.htm).
+Sales](Consolidated_Sales.md).
 
 Combine
 All Packlists for a Customer on one Invoice Select this check
@@ -195,7 +195,7 @@ Defined - If you have previously set up personalized forms
 for your invoices, select the User Defined option you want to use
 for this print run. You can customize the labels displayed for user
 defined formats. See [Customizing
-User Defined Format Labels](Customizing_User_Defined_Format_Labels.htm).
+User Defined Format Labels](Customizing_User_Defined_Format_Labels.md).
 
 10. If you are e-mailing
     invoices, use the Email File Format section to specify the format
@@ -257,4 +257,4 @@ If you selected Create A/R Invoices, VISUAL
 creates an Accounts Receivable invoice for each invoice number. You
 can view these in A/R Invoice Entry.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Invoice_Forms.md) User-defined Help

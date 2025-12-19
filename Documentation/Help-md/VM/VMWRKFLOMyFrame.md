@@ -15,7 +15,7 @@ properties used to define the rules and conditions of the workflow.
 The vertical toolbar contains objects that represent
 steps or tasks in a workflow. To add properties to the step, edit
 the properties dialog box. See [Building
-Workflow Templates](Building_Workflow_Templates.htm).
+Workflow Templates](Building_Workflow_Templates.md).
 
 To add an object to the work area:
 
@@ -157,7 +157,7 @@ the view setting.
 In a workflow, the graphical representation of a rule
 is a line connecting two steps. To add properties to the rule, edit
 the properties dialog box. See [Building
-Workflow Templates](Building_Workflow_Templates.htm).
+Workflow Templates](Building_Workflow_Templates.md).
 
 To add a rule line to the work area:
 
@@ -262,6 +262,6 @@ To print the work area, do one of the following:
   menu, click Print Diagram.
 
 For more information on printing, refer to [Using
-the Print Details Menu](Using_the_Print_Details_Menu.htm).
+the Print Details Menu](Using_the_Print_Details_Menu.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

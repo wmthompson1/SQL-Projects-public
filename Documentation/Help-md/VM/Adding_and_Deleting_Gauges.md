@@ -55,4 +55,4 @@ If you want to cancel the deletion, click
 the Refresh button. Your gauge is not deleted
 until you click the Save button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Quality_Maintenance.md) User-defined Help

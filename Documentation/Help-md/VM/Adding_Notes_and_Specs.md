@@ -17,4 +17,4 @@ To add notes and specs for the test, click the Test
 Specs or Test Notes buttons located
 in the lower right corner of the window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.md) User-defined Help

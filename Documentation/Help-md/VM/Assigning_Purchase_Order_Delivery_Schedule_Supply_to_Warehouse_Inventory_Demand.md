@@ -61,4 +61,4 @@ Assign to Demand dialog box line item table.
    to commit the allocation of supply from the P/O delivery schedule
    line to the warehouse inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

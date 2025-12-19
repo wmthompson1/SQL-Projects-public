@@ -38,4 +38,4 @@ normally, getting the value from the customer order. If there is no
 Part ID referenced on the new order then the parts are returned in
 a manner similar to a miscellaneous shipment.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

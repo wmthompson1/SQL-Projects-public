@@ -70,4 +70,4 @@ VMDI - Infor VISUALs Data Interchange
 program. VMDI is used to generate layouts for inbound and outbound
 data, and exchange the data between .VDI files and the VISUAL database.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

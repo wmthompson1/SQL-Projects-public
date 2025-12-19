@@ -26,4 +26,4 @@ The Sort Preferences dialog box closes and
 VISUAL sorts the information in the Project Summary window table on
 the criteria you selected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

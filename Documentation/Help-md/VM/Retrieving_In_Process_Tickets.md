@@ -14,4 +14,4 @@ displayed. To view the in-process ticket for a particular employee,
 select an employee before clicking Retrieve
 in Process.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

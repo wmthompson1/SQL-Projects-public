@@ -35,9 +35,9 @@ This table shows the tasks that you can complete in the Account
 Balance Dimensions Service window:
 
 | Task | Description |
-| [Installing the Service](VMACCTBALDIMSVCfrmMain.htm#Install) | If you do not use single sign-on, use this procedure to install the service. |
-| [Installing the Service in a Single Sign-on Environment](VMACCTBALDIMSVCfrmMain.htm#SSOinstall) | If you use single sign-on, use this procedure to install the service. |
-| [Uninstall the Service](VMACCTBALDIMSVCfrmMain.htm#Uninstall) | Use this procedure to uninstall the service. |
+| [Installing the Service](VMACCTBALDIMSVCfrmMain.md#Install) | If you do not use single sign-on, use this procedure to install the service. |
+| [Installing the Service in a Single Sign-on Environment](VMACCTBALDIMSVCfrmMain.md#SSOinstall) | If you use single sign-on, use this procedure to install the service. |
+| [Uninstall the Service](VMACCTBALDIMSVCfrmMain.md#Uninstall) | Use this procedure to uninstall the service. |
 
 ## Fields
 

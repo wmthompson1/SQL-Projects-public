@@ -65,4 +65,4 @@ font size of text in the work area.
 Use the View Size drop-down box to change
 the magnification of the workflow in the Workflow window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

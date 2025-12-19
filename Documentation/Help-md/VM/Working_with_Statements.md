@@ -36,8 +36,8 @@ Workflow Rule the list displays Label, Status, and Time Complete.
 If you select Workflow Step, the list displays Action, Label, Status,
 Time Started, Time Complete, and Time Notified. For more information,
 refer to [Using the Workflow
-Step Table](Using_the_Workflow_Step_Table.htm) and [Using
-the Workflow Rule Table](Using_the_Workflow_Rule_Table.htm).
+Step Table](Using_the_Workflow_Step_Table.md) and [Using
+the Workflow Rule Table](Using_the_Workflow_Rule_Table.md).
 
 4. If your statement requires
    an operator, click in the Operator column, click the arrow; then
@@ -109,7 +109,7 @@ values)
 
    |  |  |
    | --- | --- |
-   | IMPORTNT.gif | You can view a list of status values for all VISUAL tables from VISUALs Application Global Maintenance window. On the Application Global Maintenance windows Maintain menu, click Workflow Status Codes. For more information on Workflow Status codes, refer to [Viewing Workflow Status Codes](Viewing_Workflow_Status_Codes.htm). |
+   | IMPORTNT.gif | You can view a list of status values for all VISUAL tables from VISUALs Application Global Maintenance window. On the Application Global Maintenance windows Maintain menu, click Workflow Status Codes. For more information on Workflow Status codes, refer to [Viewing Workflow Status Codes](Viewing_Workflow_Status_Codes.md). |
 
 8. If you want to combine
    two statements or compare more than one value, click in the Logical
@@ -174,4 +174,4 @@ used in customer order lines, you would enter the following:
    setting up your Step or Rule, click the Ok
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

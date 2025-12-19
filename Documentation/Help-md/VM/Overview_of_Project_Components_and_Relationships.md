@@ -87,4 +87,4 @@ and then issue to projects as you need. If this is the case, you should
 handle these purchases as Commercial. You may also want to handle
 the sale of spare parts after project completion in the same manner.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

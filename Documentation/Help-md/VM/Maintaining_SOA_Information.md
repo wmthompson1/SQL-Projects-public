@@ -113,4 +113,4 @@ After you generate BODs, the system deactivates the Visual Instance
 ID, Tenant ID, SOA Location, and Calendar Name fields. You cannot
 edit the information in these fields after BODs are generated.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

@@ -37,4 +37,4 @@ for the cross-selling part.
 6. Enter a quantity for
    the line and other necessary information and then click the Save button to commit the order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -18,4 +18,4 @@ window.
 You can select different views of the graph
 from the Views menu and other options from the Options menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.md) User-defined Help

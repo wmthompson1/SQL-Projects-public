@@ -27,8 +27,8 @@ and auto-issue parts on the same work order:
   Based on Operation Qty Complete method, then a prorated quantity
   is issued.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.md)
 Working with Backflushing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Auto-issue_Parts.md)
 Auto-issue Parts

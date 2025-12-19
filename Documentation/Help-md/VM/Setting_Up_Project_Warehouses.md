@@ -40,4 +40,4 @@ You can also plan for the purchase or manufacture of some parts
 to a project warehouse and for other parts to be purchased and fabricated
 in a common warehouse or company owned inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

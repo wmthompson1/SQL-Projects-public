@@ -77,4 +77,4 @@ the revenue recognition transactions to the General Ledger.
    the transactions can be printed for filing purposes, or can be
    printed at another time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Closing_Procedures.md) User-defined Help

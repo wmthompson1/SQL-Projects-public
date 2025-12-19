@@ -17,13 +17,13 @@ from inactive to active. When a template is active, VISUAL starts
 a workflow each time a document (for example, a purchase order or
 work order) is saved and meets the conditions specified in the template.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Steps.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Steps.md)
 Working with Steps
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Rules.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Rules.md)
 Working with Rules
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_with_Statements.md)
 Working with Statements

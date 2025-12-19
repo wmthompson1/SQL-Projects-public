@@ -13,7 +13,7 @@ for each customer are shown.
 
 Backorders are not included in this report.
 See the [Customer Backlog
-Report](VMCBORPTfrmPrintBacklogReport.htm).
+Report](VMCBORPTfrmPrintBacklogReport.md).
 
 ## Starting the Customer Bookings Report Window
 
@@ -26,7 +26,7 @@ This table shows the tasks that you can complete in the Customer
 Bookings Report window:
 
 | Task | Description |
-| [Printing the Customer Bookings Report](Printing_the_Customer_Bookings_Report.htm) | Use this procedure to generate customer booking reports. |
+| [Printing the Customer Bookings Report](Printing_the_Customer_Bookings_Report.md) | Use this procedure to generate customer booking reports. |
 
 ## Fields
 
@@ -89,7 +89,7 @@ Report
 output
 
 Select the output format for the report. See [Report
-Output Options](Report_Output_Options.htm).
+Output Options](Report_Output_Options.md).
 
 Sequence
 
@@ -99,4 +99,4 @@ the Print Month to date/Year to date summary or Print Month to date
 summary check boxes, you can sort the report by Customer ID, Customer
 Name, or None.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Bookings_Report.md) User-defined Help

@@ -95,4 +95,4 @@ VMDI Exchange sessions. Log files include:
 * Vendor ID and Vendor Purchase
   Order Number exported
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

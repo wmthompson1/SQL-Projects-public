@@ -19,5 +19,5 @@ Use the Vendor View panel to view information about the selected
 vendor. You can view summary information, detail information, and
 a chart. For information about how to set up summary information
 and detail information, see [In-context
-View Panels](In-context_View_Panels.htm). For information about the Vendor view panel chart,
-see [Vendor View Panel Chart](Vendor_View_Panel_Chart.htm).
+View Panels](In-context_View_Panels.md). For information about the Vendor view panel chart,
+see [Vendor View Panel Chart](Vendor_View_Panel_Chart.md).

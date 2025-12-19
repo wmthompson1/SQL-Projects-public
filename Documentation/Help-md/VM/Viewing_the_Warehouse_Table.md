@@ -33,4 +33,4 @@ all of these types of characters it appears as follows: Numbered IDs
 first, Upper case alpha character second, and Lower case alpha characters
 last.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

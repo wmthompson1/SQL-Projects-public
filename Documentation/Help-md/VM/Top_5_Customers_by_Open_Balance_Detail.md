@@ -5,7 +5,7 @@ Top Customers by Open Balance Detail
 
 # Top Customers by Open Balance Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid lists the unpaid invoices for the customers with the largest
 open balance. You can specify the number of customers to include.
 Unpaid invoices that are overdue and invoices that are not due to
@@ -22,10 +22,10 @@ Details: Customer ID, Customer Name, Invoice
 Date, Due Date, Last Paid Date, Total Amount, Discount Given, Paid
 Amount, Balance Amount, Sales Rep, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

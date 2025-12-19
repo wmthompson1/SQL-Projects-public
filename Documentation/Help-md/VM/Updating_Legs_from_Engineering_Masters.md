@@ -49,7 +49,7 @@ them.
 Include updatable legs
 only Select this check box to view only legs that are eligible
 to be updated. Refer to [Designating
-Legs and Engineering Masters as Eligible for Updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.htm). Clear the
+Legs and Engineering Masters as Eligible for Updating](Designating_Legs_and_Engineering_Masters_as_Eligible_for_Updating.md). Clear the
 check box to view any master where the part ID is used for a leg.
 
 Exclude legs already
@@ -153,4 +153,4 @@ the user who last updated the master.
    report to view the changes the update process made. Click Yes to view the report. Click No
    if you do not want to review the report.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

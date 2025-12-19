@@ -75,4 +75,4 @@ Material Planning Window - You can modify
 the status of supply work orders directly from the Material Planning
 Window main screen.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

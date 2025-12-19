@@ -19,7 +19,7 @@ Employee
 ID Specify a unique identifier for the employee. To comply
 with the European Union GDPR rules, we recommend that you do not use
 personal information, such as the employee's name, for the ID. See
-[What Is Individual Privacy?](VMINDPRVWhat.htm).
+[What Is Individual Privacy?](VMINDPRVWhat.md).
 
 First/MI/Last
 Specify the employees name in these fields.
@@ -79,15 +79,15 @@ the employees email address.
 4. Click the Save
    toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Shifts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Shifts.md)
 Defining Shifts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Employee_Information.htm) Editing Employee Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Employee_Information.md) Editing Employee Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_With_Earning_Codes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_With_Earning_Codes.md)
 Working With Earning Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_With_Indirect_Codes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Working_With_Indirect_Codes.md)
 Working With Indirect Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Employee_Maintenance.md) User-defined Help

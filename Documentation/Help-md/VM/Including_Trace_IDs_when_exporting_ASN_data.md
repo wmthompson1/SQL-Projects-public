@@ -93,4 +93,4 @@ in a single file.
 | --- | --- |
 | POSTIT.gif | If you are setting an EDI map in a 3rd-party mapping application, you will want to set up the ASL and ASX records as separate records. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help

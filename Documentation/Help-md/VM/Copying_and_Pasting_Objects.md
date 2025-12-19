@@ -106,4 +106,4 @@ same operation sequence numbers.
 | --- | --- |
 | POSTIT.gif | Cut works basically the same as Copy except the object is removed from its current location. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -8,7 +8,7 @@ Work Order Hours Roll-up Information
 Use the Work Order Hours Roll-up dialog to compare the actual labor
 hours spent on a work order to standard expected hours. Set up standard
 hours in Part Maintenance. See [Calculating
-Standard Unit Hours](Calculating_Standard_Unit_Hours.htm).
+Standard Unit Hours](Calculating_Standard_Unit_Hours.md).
 
 If only purchased parts are used as material requirements in the
 work order, then one line for the part specified on the work order
@@ -43,13 +43,13 @@ Information.
 See these topics:
 
 [Work
-Order Hours Roll-up Dialog and Costing Method](Work_Order_Hours_Roll-up_Dialog_and_Costing_Method.htm)
+Order Hours Roll-up Dialog and Costing Method](Work_Order_Hours_Roll-up_Dialog_and_Costing_Method.md)
 
 [Viewing
-Work Order Hours Roll-up Information](Viewing_Work_Order_Hours_Roll-up_Information.htm)
+Work Order Hours Roll-up Information](Viewing_Work_Order_Hours_Roll-up_Information.md)
 
 [Viewing
-Work Order Actual Hours Detail Information](Viewing_Work_Order_Actual_Hours_Detail_Information.htm)
+Work Order Actual Hours Detail Information](Viewing_Work_Order_Actual_Hours_Detail_Information.md)
 
 [Specifying
-Color Preferences in the Work Order Hours Roll-up Dialog](Specifying_Color_Preferences_in_the_Work_Order_Hours_Roll-up_Dialog.htm)
+Color Preferences in the Work Order Hours Roll-up Dialog](Specifying_Color_Preferences_in_the_Work_Order_Hours_Roll-up_Dialog.md)

@@ -149,4 +149,4 @@ The total amount recognized is $2,000 + $500 = $2,500.
 In subsequent periods, the same calculations are made, then any
 previously recognized revenue amounts are subtracted.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

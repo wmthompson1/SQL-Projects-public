@@ -20,4 +20,4 @@ To add or view billing specifications for customer order line numbers
 in Progress Billing, select the line then click the Billing
 Specs button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

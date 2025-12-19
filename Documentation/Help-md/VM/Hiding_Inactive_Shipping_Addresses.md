@@ -5,7 +5,7 @@ Hiding Inactive Shipping Addresses
 
 # Hiding Inactive Shipping Addresses
 
-Use Preferences Maintenance to specify whether [inactive shipping addresses](Inactivating_Shipping_Addresses.htm)
+Use Preferences Maintenance to specify whether [inactive shipping addresses](Inactivating_Shipping_Addresses.md)
 are hidden in the List Ship-to-IDs browse table and the Shipping Addresses
 dialog.
 
@@ -28,4 +28,4 @@ Y to hide inactive addresses. Specify N to show inactive addresses.
 
 4. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

@@ -13,4 +13,4 @@ Details on the Edit menu.
 The Service Trace Details window opens populated with the appropriate
 Tarce IDs for the current part in the Service Planning window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

@@ -16,16 +16,16 @@ and receive data from PLM. Use the utility for the following integration
 procedures:
 
 * [Creating
-  directories for XML files](PLM2VESRVCWhat.htm#xmlfiles). These files contain data from VISUAL
+  directories for XML files](PLM2VESRVCWhat.md#xmlfiles). These files contain data from VISUAL
   and PLM.
 * [Specifying
-  item default data](PLM2VESRVCWhat.htm#itemdefaultdata)
+  item default data](PLM2VESRVCWhat.md#itemdefaultdata)
 * [Transferring
-  current VISUAL data to PLM in bulk](PLM2VESRVCWhat.htm#bulktransfer)
+  current VISUAL data to PLM in bulk](PLM2VESRVCWhat.md#bulktransfer)
 * [Transferring
-  selected current VISUAL data to PLM](PLM2VESRVCWhat.htm#selecttransfer)
+  selected current VISUAL data to PLM](PLM2VESRVCWhat.md#selecttransfer)
 * [Transferring
-  new data between VISUAL and PLM](PLM2VESRVCWhat.htm#newdata)
+  new data between VISUAL and PLM](PLM2VESRVCWhat.md#newdata)
 
 ## Creating Directories for XML Files
 

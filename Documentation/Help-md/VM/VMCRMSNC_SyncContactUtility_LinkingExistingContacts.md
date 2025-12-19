@@ -72,8 +72,8 @@ the frmContactSnc section.
    table. Actions taken to process contacts are written to the log
    file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.htm) What is the Synchronize Contact
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.md) What is the Synchronize Contact
 Utility?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.md)
 Navigating in the Synchronize Contact Utility

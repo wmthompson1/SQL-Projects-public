@@ -43,4 +43,4 @@ calculations based on your settings.
 For more information on VISUALs Costing
 Utility, refer to your Infor VISUAL documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

@@ -162,7 +162,7 @@ orders rls w/in field.
 
 |  |  |
 | --- | --- |
-| POSTIT.gif | You can only use the Release Near, Suggested Release Near, and Planned Orders Released Within functions if you have selected to use VISUALs Net by Required Date option. For more information, refer to [Netting By Required Date](Netting_By_Required_Date.htm). |
+| POSTIT.gif | You can only use the Release Near, Suggested Release Near, and Planned Orders Released Within functions if you have selected to use VISUALs Net by Required Date option. For more information, refer to [Netting By Required Date](Netting_By_Required_Date.md). |
 
 6. Select the search criteria
    for the exceptions qualifications section. Select the appropriate

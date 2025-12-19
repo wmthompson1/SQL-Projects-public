@@ -7,7 +7,7 @@ Infor VISUAL Enterprise Project Glossary
 
 The glossary contains some common A&D terms.
 
-[A](Infor_VISUAL_Enterprise_Project_Glossary.htm#A) [B](Infor_VISUAL_Enterprise_Project_Glossary.htm#B) [C](Infor_VISUAL_Enterprise_Project_Glossary.htm#C) [D](Infor_VISUAL_Enterprise_Project_Glossary.htm#D) [E](Infor_VISUAL_Enterprise_Project_Glossary.htm#E) [F](Infor_VISUAL_Enterprise_Project_Glossary.htm#F) [I](Infor_VISUAL_Enterprise_Project_Glossary.htm#I) [M](Infor_VISUAL_Enterprise_Project_Glossary.htm#M) [P](Infor_VISUAL_Enterprise_Project_Glossary.htm#P) [R](Infor_VISUAL_Enterprise_Project_Glossary.htm#R) [S](Infor_VISUAL_Enterprise_Project_Glossary.htm#S) [T](Infor_VISUAL_Enterprise_Project_Glossary.htm#T) [V](Infor_VISUAL_Enterprise_Project_Glossary.htm#V) [W](Infor_VISUAL_Enterprise_Project_Glossary.htm#W)
+[A](Infor_VISUAL_Enterprise_Project_Glossary.md#A) [B](Infor_VISUAL_Enterprise_Project_Glossary.md#B) [C](Infor_VISUAL_Enterprise_Project_Glossary.md#C) [D](Infor_VISUAL_Enterprise_Project_Glossary.md#D) [E](Infor_VISUAL_Enterprise_Project_Glossary.md#E) [F](Infor_VISUAL_Enterprise_Project_Glossary.md#F) [I](Infor_VISUAL_Enterprise_Project_Glossary.md#I) [M](Infor_VISUAL_Enterprise_Project_Glossary.md#M) [P](Infor_VISUAL_Enterprise_Project_Glossary.md#P) [R](Infor_VISUAL_Enterprise_Project_Glossary.md#R) [S](Infor_VISUAL_Enterprise_Project_Glossary.md#S) [T](Infor_VISUAL_Enterprise_Project_Glossary.md#T) [V](Infor_VISUAL_Enterprise_Project_Glossary.md#V) [W](Infor_VISUAL_Enterprise_Project_Glossary.md#W)
 
 ## A
 
@@ -246,4 +246,4 @@ which the WBS refers.
 Warehouse Defaults - Template VISUAL copies
 when you create a project warehouse.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

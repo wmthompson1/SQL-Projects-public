@@ -37,13 +37,13 @@ Use the DBR Scheduling Service executable (VMDBRSVC.exe) to perform
 these procedures:
 
 * [Installing
-  the DBR Scheduling Service](VMDBRSVCfrmMain.htm)
+  the DBR Scheduling Service](VMDBRSVCfrmMain.md)
 * [Removing
-  the DBR Scheduling Service](Removing_the_DBR_Scheduler_Service.htm)
+  the DBR Scheduling Service](Removing_the_DBR_Scheduler_Service.md)
 
 Use the DBR Scheduler window to perform these procedures:
 
 * [Scheduling
-  the DBR Scheduling Service](Scheduling_the_DBR_Scheduler_Service.htm)
+  the DBR Scheduling Service](Scheduling_the_DBR_Scheduler_Service.md)
 * [Deactivating
-  the DBR Scheduling Service](Deactivating_the_DBR_Scheduler_Service.htm)
+  the DBR Scheduling Service](Deactivating_the_DBR_Scheduler_Service.md)

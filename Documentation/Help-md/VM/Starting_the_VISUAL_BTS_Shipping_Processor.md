@@ -11,7 +11,7 @@ from the main Infor VISUAL menu.
 From the directory where your executables are installed, double-click
 Vmbtsshp.exe.
 
-Click [here](VISUAL_BTS_Shipping_Entry_Table.htm) to
+Click [here](VISUAL_BTS_Shipping_Entry_Table.md) to
 view definitions of the columns in the Pending Transaction and Complete
 Transaction portions of the window.
 

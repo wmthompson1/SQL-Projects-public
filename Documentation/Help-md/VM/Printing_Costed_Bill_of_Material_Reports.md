@@ -53,7 +53,7 @@ that are subject to active engineering change notices.
 
 6. Specify the output for
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 
 [About
-the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.htm)
+the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.md)

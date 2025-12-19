@@ -15,18 +15,18 @@ browse table and save it to your database.
 See these topics:
 
 * [Opening
-  an Advanced Browse Dialog](Opening_an_Advanced_Browse_Dialog.htm)
+  an Advanced Browse Dialog](Opening_an_Advanced_Browse_Dialog.md)
 * [Searching
-  Advanced Browse Tables](Searching_Advanced_Browse_Tables.htm)
+  Advanced Browse Tables](Searching_Advanced_Browse_Tables.md)
 * [Using
-  Sites in Advanced Browse Tables](Using_Sites_in_Advanced_Browse_Tables.htm)
+  Sites in Advanced Browse Tables](Using_Sites_in_Advanced_Browse_Tables.md)
 * [Selecting
-  a Search Item from the Advanced Browse Table](Selecting_a_Search_Item_from_the_Advanced_Browse_Table.htm)
+  a Search Item from the Advanced Browse Table](Selecting_a_Search_Item_from_the_Advanced_Browse_Table.md)
 * [Editing
-  Information in the Advanced Browse Table](Editing_Information_in_the_Advanced_Browse_Table.htm)
+  Information in the Advanced Browse Table](Editing_Information_in_the_Advanced_Browse_Table.md)
 * [Printing
-  the Browse Result Set](Printing_the_Browse_Result_Set.htm)
+  the Browse Result Set](Printing_the_Browse_Result_Set.md)
 * [Exporting
-  the Advanced Browse Table to Excel](Exporting_the_Advanced_Browse_Table_to_Excel.htm)
+  the Advanced Browse Table to Excel](Exporting_the_Advanced_Browse_Table_to_Excel.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

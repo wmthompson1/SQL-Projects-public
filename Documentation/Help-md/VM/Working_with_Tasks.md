@@ -12,7 +12,7 @@ the workflow proceeds to the next step.
 For each member of the Task List Notification, Workflow generates
 a task notification in the VISUAL Task Maintenance window, Outlook,
 or both. For more information, refer to the [Setting
-Workflow Preferences](VMWRKFLOPrefsProp.htm) section.
+Workflow Preferences](VMWRKFLOPrefsProp.md) section.
 
 |  |  |
 | --- | --- |
@@ -105,4 +105,4 @@ To grant permission:
    about other permission levels.
 7. Click Ok.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

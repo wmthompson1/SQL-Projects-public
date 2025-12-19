@@ -17,4 +17,4 @@ ship the part to a customer.
 
 ![ebx_-1275037266.gif](ebx_-1275037266.gif "ebx_-1275037266.gif")
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

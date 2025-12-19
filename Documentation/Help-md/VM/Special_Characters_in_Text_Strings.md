@@ -16,7 +16,7 @@ and recommended best practices:
 | %1, %2, %3, and so on | A token. A token is made up of the percent sign followed by a number. | If a text string includes a token, also include the token in your translation. The token is replaced by information in your database.  You cannot add a token to a text string that does not already use one. |
 | <<< | Line break in a table column header. | You can move or remove the line break. Users can change the location of the line break in the Configure Line Item Table dialog that is available on windows with the tables. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMTRNMNTWhat.md)
 What is Translation Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

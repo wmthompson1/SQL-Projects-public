@@ -15,5 +15,5 @@ You may also want to use this tab to enter in the actual costs of the
 ECN implementation after the ECN is complete as a way of providing an
 audit to the ECN.
 
-Click [here](Entering_Information_on_the_Cost_Analysis_Tab.htm)
+Click [here](Entering_Information_on_the_Cost_Analysis_Tab.md)
 for more information.

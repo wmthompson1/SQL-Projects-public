@@ -16,7 +16,7 @@ To build the evaluation work order:
    and select Manufacturing Window.
 2. Build operations and
    materials as necessary. See [Creating
-   Masters and Work Orders](Creating_Masters_and_Work_Orders.htm).
+   Masters and Work Orders](Creating_Masters_and_Work_Orders.md).
 3. Acquire the required
    materials and enter labor tickets for operations. Costs accrue
    to the WIP accounts.

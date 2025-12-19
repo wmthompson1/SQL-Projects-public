@@ -11,7 +11,7 @@ Print - Select this option to send the report
 to a printer.
 
 View - Select this option to view the report
-on screen. See [Viewing Reports](Viewing_Reports.htm).
+on screen. See [Viewing Reports](Viewing_Reports.md).
 
 File - Select this option to save the report
 as a text file.

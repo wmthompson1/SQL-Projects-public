@@ -11,7 +11,7 @@ completed labor for the master (using Labor Ticket Entry), you are
 ready to enter and analyze Quality test data using the List of Tests
 application.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_List_of_Tests.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_List_of_Tests.md)
 Using List of Tests
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_List_of_Tests.md) User-defined Help

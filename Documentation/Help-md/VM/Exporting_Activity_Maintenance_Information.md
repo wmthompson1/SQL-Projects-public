@@ -10,7 +10,7 @@ to Microsoft Excel or to an XML file. To export the information to
 Microsoft Excel:
 
 1. [Access
-   Activity Maintenance](Starting_Activity_Maintenance.htm).
+   Activity Maintenance](Starting_Activity_Maintenance.md).
 2. In the table, select
    the rows to export.
 3. Right-click the table
@@ -21,7 +21,7 @@ Microsoft Excel:
 To export the information to XML:
 
 1. [Access
-   Activity Maintenance](Starting_Activity_Maintenance.htm).
+   Activity Maintenance](Starting_Activity_Maintenance.md).
 2. In the table, select
    the rows to export.
 3. Right-click the table
@@ -57,11 +57,11 @@ for the tags.
 
 5. Click Export.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTMNTfrmActivities.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTMNTfrmActivities.md)
 Reviewing Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

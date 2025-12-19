@@ -24,4 +24,4 @@ the table.
 4. Click the Save
    button to complete the deletion.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.md) User-defined Help

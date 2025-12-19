@@ -73,7 +73,7 @@ Entry if there is a discrepancy.
 
 Click the Setup
 button to set up overtime. Set [Setting
-Overtime](Setting_Overtime.htm).
+Overtime](Setting_Overtime.md).
 
 10. Click Ok.
 
@@ -86,4 +86,4 @@ a file name.
 At this point you are ready for the import
 function within Payroll. See the Payroll documentation for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Labor_Ticket_Entry.md) User-defined Help

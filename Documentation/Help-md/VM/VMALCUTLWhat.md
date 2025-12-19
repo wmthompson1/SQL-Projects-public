@@ -15,12 +15,12 @@ for suitable links of supply for customer orders, one line at a time.
 If you are licensed to use multiple sites, set up
 allocations by site.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocation_Processing.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Allocation_Processing.md)
 Allocation Processing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Behind_the_Scenes_of_the_Allocation_Process.htm) Behind the Scenes of the Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Behind_the_Scenes_of_the_Allocation_Process.md) Behind the Scenes of the Allocation
 Process
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Allocation_Utilities.htm) Starting the Allocation Utilities
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Allocation_Utilities.md) Starting the Allocation Utilities

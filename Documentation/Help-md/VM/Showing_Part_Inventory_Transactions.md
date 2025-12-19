@@ -47,4 +47,4 @@ and Quantity Traced; this is the number for which you need to account.
 To commit the changes made in the Traceability dialog box, click
 the Save Part Trace button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

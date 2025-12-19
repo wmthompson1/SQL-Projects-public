@@ -62,8 +62,8 @@ contains all the existing costs.
 9. Click the Save
    button on the main VISUAL Price Book toolbar to save your changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Cost_Matrix_Table_Information.htm) Adding Cost Matrix Table Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Cost_Matrix_Table_Information.md) Adding Cost Matrix Table Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Cost_Matrix_Information.htm) Editing and Deleting Cost Matrix Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Cost_Matrix_Information.md) Editing and Deleting Cost Matrix Information

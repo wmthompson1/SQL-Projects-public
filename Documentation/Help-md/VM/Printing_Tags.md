@@ -61,4 +61,4 @@ are also blank lines for entering Quantity and Counted by information.
 | --- | --- |
 | POSTIT.gif | You should modify the standard tag form during implementation. Depending upon the size of your tag forms, you may need to adjust the report. You may also want to setup to print double tags to allow one to mark the location and another to be forwarded for data entry. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

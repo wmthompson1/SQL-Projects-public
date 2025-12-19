@@ -58,7 +58,7 @@ these calculations are made:
   value specified for the part in Part Maintenance.
 
 See [Calculating
-Standard Unit Hours](Calculating_Standard_Unit_Hours.htm).
+Standard Unit Hours](Calculating_Standard_Unit_Hours.md).
 
 Std. Run Hours
 The total hours that are estimated to complete the run of the quantity
@@ -81,7 +81,7 @@ these calculations are made:
   value specified for the part in Part Maintenance.
 
 See [Calculating
-Standard Unit Hours](Calculating_Standard_Unit_Hours.htm).
+Standard Unit Hours](Calculating_Standard_Unit_Hours.md).
 
 Act. Total Hours
 The total hours that have been reported on labor tickets for the
@@ -184,4 +184,4 @@ is made
    viewing work order hours roll-up information, select File,
    Close.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_Order_Hours_Roll-up_Information.htm) Work Order Hours Roll-up Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_Order_Hours_Roll-up_Information.md) Work Order Hours Roll-up Information

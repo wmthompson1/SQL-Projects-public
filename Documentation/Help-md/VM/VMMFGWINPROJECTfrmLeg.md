@@ -162,4 +162,4 @@ You can enter budgets on the task cards or in Budget Maintenance.
 Click the ETC tab to view current estimate to complete figures for
 the tasks attached to the leg.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

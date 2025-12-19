@@ -14,4 +14,4 @@ into the database and add other users. This account has full privileges,
 and is used as the starting point to set up other users and their
 privileges.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

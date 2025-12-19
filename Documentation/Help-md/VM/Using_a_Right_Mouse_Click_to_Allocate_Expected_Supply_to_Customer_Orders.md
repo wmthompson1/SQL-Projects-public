@@ -37,4 +37,4 @@ a plus box appears next to the line to which you allocated supply.
 If you click this plus box, the ID of the supplying source from which
 you allocated the supply appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

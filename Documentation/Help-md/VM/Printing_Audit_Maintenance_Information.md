@@ -16,4 +16,4 @@ The Report Time Auditing report lists the report duration information
 currently displayed in the Audit Maintenance window. VISUAL groups
 the information by report.
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

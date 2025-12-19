@@ -96,7 +96,7 @@ Received This status indicates that
 the customer has returned the materials. This status is selected by
 the system when you specify the RMA ID on the Customer Order Shipment
 Return dialog box. See [Receiving
-Returned Materials](Receiving_Returned_Materials.htm).
+Returned Materials](Receiving_Returned_Materials.md).
 
 Closed This status indicates that the
 RMA process is complete.
@@ -109,4 +109,4 @@ On Hold This status indicates that the
 RMA process is temporarily on hold. The RMA is not ready to be closed
 or canceled, but processing has stopped.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Return_Material_Authorization.md) User-defined Help

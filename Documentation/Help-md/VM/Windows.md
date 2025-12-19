@@ -21,5 +21,5 @@ windows. Use these elements to add additional pertinent information
 to the record you create. You access these secondary features from
 menus and toolbar buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

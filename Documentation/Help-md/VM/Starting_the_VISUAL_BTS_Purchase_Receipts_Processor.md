@@ -19,7 +19,7 @@ and to make any other changes.
 
 [Click here
 to view definitions of the columns in both the Pending and Complete
-portions of the window.](VISUAL_BTS_Purchase_Receipts_Entry_Table.htm)
+portions of the window.](VISUAL_BTS_Purchase_Receipts_Entry_Table.md)
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Starting
 VBTS Purchase Receipt Entry User Defined Information

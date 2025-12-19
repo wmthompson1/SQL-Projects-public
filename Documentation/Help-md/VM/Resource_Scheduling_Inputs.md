@@ -107,4 +107,4 @@ of the schedule if it results in an earlier finish. In the backward
 direction, the Scheduler will choose an earlier finish date if it
 results in a later start (perhaps due to more capacity duration.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

@@ -79,4 +79,4 @@ task, 18 lines appears in the upper portion of the table. The bottom
 portion of the table contains the total amounts for all of the tasks
 within your project.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

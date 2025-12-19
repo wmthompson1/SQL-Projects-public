@@ -273,4 +273,4 @@ Ship Date 06/03/2001 has been created. Please have it shipped.
 14. Click the Save
     button to save the new event.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Message_Maintenance.md) User-defined Help

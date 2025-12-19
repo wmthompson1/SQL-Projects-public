@@ -21,4 +21,4 @@ A menu appears.
 For example, to access the properties of
 an object in the work area, right-click the object and select Properties. The Properties dialog box appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

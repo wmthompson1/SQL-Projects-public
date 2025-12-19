@@ -33,7 +33,7 @@ the database on which to run the service.
 5. Click Remove
    Service.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VRPTSVCWhat.md)
 What is the Reporting Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Traveller.md) User-defined Help

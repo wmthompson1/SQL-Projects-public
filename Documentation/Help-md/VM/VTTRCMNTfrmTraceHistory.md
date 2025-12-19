@@ -31,4 +31,4 @@ with the trace history for the trace you selected.
    viewing or printing the trace history, close the Trace History
    window by clicking the Close button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

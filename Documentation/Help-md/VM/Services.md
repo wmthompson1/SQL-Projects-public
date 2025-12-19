@@ -20,12 +20,12 @@ This section of the online help provides an overview of services.
 For detailed information about each service, see these topics:
 
 * [What
-  is the Visual Reporting Data Loader Service?](VRDTASVCWhat.htm)
+  is the Visual Reporting Data Loader Service?](VRDTASVCWhat.md)
 * [What
-  is the Scheduling Service?](VMSCHSVCWhat.htm)
+  is the Scheduling Service?](VMSCHSVCWhat.md)
 * [What
-  is the Reporting Service?](VRPTSVCWhat.htm)
+  is the Reporting Service?](VRPTSVCWhat.md)
 * [What
-  is the Costing Service?](VMCSTSVCWhat.htm)
+  is the Costing Service?](VMCSTSVCWhat.md)
 * [What
-  is the MRP Service?](VMMRPSVCWhat.htm)
+  is the MRP Service?](VMMRPSVCWhat.md)

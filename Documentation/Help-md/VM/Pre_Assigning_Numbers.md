@@ -54,6 +54,6 @@ The Traceability window automatically closes.
 The new numbers are created, and are listed
 when receiving quantities of finished goods using Inventory Transaction
 Entry, or when receiving quantities of purchased goods, using [Purchase
-Receipt Entry](VMRCVENTWhat.htm).
+Receipt Entry](VMRCVENTWhat.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

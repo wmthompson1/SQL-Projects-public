@@ -8,7 +8,7 @@ Editing Activities in Activity Maintenance
 To edit activities in Activity Maintenance:
 
 1. [Access
-   Activity Maintenance](Starting_Activity_Maintenance.htm).
+   Activity Maintenance](Starting_Activity_Maintenance.md).
 2. You can edit information
    in these fields:
 3. Reminder.
@@ -33,11 +33,11 @@ To edit activities in Activity Maintenance:
 
 3. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

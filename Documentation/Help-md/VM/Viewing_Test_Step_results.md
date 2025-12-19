@@ -21,4 +21,4 @@ button to view test step exceptions. You can also view test notes,
 subgroup notes, result notes capabilities, exceptions, XBar, and graphs
 and histograms of test results by clicking on the appropriate buttons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.md) User-defined Help

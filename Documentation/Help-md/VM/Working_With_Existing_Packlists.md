@@ -64,10 +64,10 @@ the Packlists table by date.
 You can delete a bad packlist by calling it
 up and clicking on the Delete button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Packlists.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Packlists.md)
 Editing Packlists
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Packlists.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Packlists.md)
 Deleting Packlists
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

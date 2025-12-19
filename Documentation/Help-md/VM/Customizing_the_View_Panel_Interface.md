@@ -12,12 +12,12 @@ types.
 See these topics:
 
 * [Choosing
-  a Button Display](Choosing_a_Button_Display.htm)
+  a Button Display](Choosing_a_Button_Display.md)
 * [Removing
-  Buttons](Removing_Buttons.htm)
+  Buttons](Removing_Buttons.md)
 * [Rearranging
-  Buttons](Rearranging_Buttons.htm)
+  Buttons](Rearranging_Buttons.md)
 * [Setting
-  Up the Summary View](Setting_Up_the_Summary_View.htm)
+  Up the Summary View](Setting_Up_the_Summary_View.md)
 * [Setting
-  Up the Info View](Setting_Up_the_Info_View.htm)
+  Up the Info View](Setting_Up_the_Info_View.md)

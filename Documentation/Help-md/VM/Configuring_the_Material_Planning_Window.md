@@ -41,4 +41,4 @@ Safety Stock from the View menu.
 VISUAL deducts the safety stock figures and re-populates the Material
 Planning window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

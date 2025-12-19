@@ -25,6 +25,6 @@ the following fields:
   VISUAL charges the actual cost. If the service ordered cost is
   less than the minimum charge, VISUAL charges the minimum charge.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Service_Information_to_the_Database.htm) Adding Service Information to the Database
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Service_Information_to_the_Database.md) Adding Service Information to the Database
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

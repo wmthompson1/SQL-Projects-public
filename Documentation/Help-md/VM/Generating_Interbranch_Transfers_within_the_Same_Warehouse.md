@@ -62,7 +62,7 @@ the Country ID from the drop-down list, or click the browse button
 to search for the Country ID in which the warehouse is located.
 
 You can also add warehouse addresses in
-[Warehouse Maintenance](Adding_Addresses_to_a_Warehouse.htm).
+[Warehouse Maintenance](Adding_Addresses_to_a_Warehouse.md).
 
 4. Click Save
    to save the address.
@@ -88,6 +88,6 @@ displayed.
    within the same warehouse, you must enter this information manually.
 10. Perform the steps listed
     in [Generating Inter Branch
-    Transfers](VMIBTENTfrmInterBranchXfer.htm) to complete the entry.
+    Transfers](VMIBTENTfrmInterBranchXfer.md) to complete the entry.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Entry.md) User-defined Help

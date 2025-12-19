@@ -39,7 +39,7 @@ the browse button and select the bitmap to display for this button.
 Toolbar buttons have three modes: the active mode, the inactive mode,
 and the hover mode. To display properly, your bitmap must have all
 three modes. See [Setting
-Up Toolbar Bitmaps](Setting_Up_Toolbar_Bitmaps.htm).
+Up Toolbar Bitmaps](Setting_Up_Toolbar_Bitmaps.md).
 
 ToolTip Specify
 a short tip that is displayed when you hover your cursor over the
@@ -67,7 +67,7 @@ Double-click the browse button and select the macro to run. Ensure
 that the macro that you select can be run in the program specified
 in the Program Name field. Otherwise, the macro will not be run See
 [Setting
-Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.htm).
+Up VISUAL to Store Macros on Workstations](Setting_Up_VISUAL_to_Store_Macros_on_Workstations.md).
 
 * To run a macro
   stored in the database, specify this information:
@@ -84,7 +84,7 @@ an event, such as OnAfterSave, this message is displayed when you
 save the toolbar: Standard macros are not allowed. This column is
 displayed only if the Store Macros in Database check box is selected
 in Application Global Maintenance. See [Setting
-Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.htm).
+Up VISUAL to Store Macros in the Database](Setting_Up_VISUAL_to_Store_Macros_in_the_Database.md).
 
 * To run a VISUAL
   executable, specify this information:
@@ -120,7 +120,7 @@ To pass information to an external, custom program, select the Use
 Key in Cmd Line check box. You can use the command line information
 to populate your external program with information from the current
 window. See [Using
-Toolbar Buttons to Pass Information to Custom Applications](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.htm).
+Toolbar Buttons to Pass Information to Custom Applications](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.md).
 
 This table shows the applications that can
 pass information to an external program and the information that is
@@ -156,16 +156,16 @@ external executable.
    toolbars, click the Close button.
 8. Restart VISUAL.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Toolbars.md)
 User Toolbars
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Displaying_User_Toolbars.md)
 Activating the User Toolbar Function
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.htm) Using Toolbar Buttons to Pass Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Toolbar_Buttons_to_Pass_Information_to_Custom_Applications.md) Using Toolbar Buttons to Pass Information
 to Custom Executables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Toolbar_Bitmaps.md)
 Setting Up Toolbar Bitmaps
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

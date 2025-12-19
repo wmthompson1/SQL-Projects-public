@@ -17,7 +17,7 @@ Use this report to review the costs that were specified in a simulation.
 3. Click the Simulation
    ID browse button and select the simulation.
 4. Select an [output
-   option](Report_Output_Options.htm).
+   option](Report_Output_Options.md).
 5. Click Print.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

@@ -55,4 +55,4 @@ After check box next to the appropriate task stage.
 5. Click the Close
    button to return to the ECN Entry.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_ECN_Entry.md) User-defined Help

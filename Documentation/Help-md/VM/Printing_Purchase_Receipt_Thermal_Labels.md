@@ -13,7 +13,7 @@ Purchase Receipt Entry supports the printing of thermal barcode
 labels for purchase receipts. Before you try to print any thermal
 labels for a purchase order, design the appropriate thermal labels
 using the [Label Printer
-Setup Utility](BARCODE.chm::/What_is_VISUAL_BTS_.htm).
+Setup Utility](What_is_VISUAL_BTS_.md).
 
 1. From the File menu,
    select Print Receiver.
@@ -192,7 +192,7 @@ This setting is especially useful for container
 labels that are part of a label group. When selected, VISUAL automatically
 creates the appropriate number of carton labels for a shipment. Make
 this setting a default using the [Label
-Printer Setup Utility](BARCODE.chm::/What_is_VISUAL_BTS_.htm)
+Printer Setup Utility](What_is_VISUAL_BTS_.md)
 
 Label Printer
 - If appropriate, adjust the label printer you want to use to print
@@ -204,4 +204,4 @@ these labels.
 Based on your starting and ending preference,
 VISUAL prints a range of thermal labels for the specified receivers.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

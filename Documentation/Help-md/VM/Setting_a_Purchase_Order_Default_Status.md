@@ -26,6 +26,6 @@ on the scheduled start date.
 3. Click the Ok
    button to commit this preference.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Outside_Services.htm) Dispatching Outside Services
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Outside_Services.md) Dispatching Outside Services

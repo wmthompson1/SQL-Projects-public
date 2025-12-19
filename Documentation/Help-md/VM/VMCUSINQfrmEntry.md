@@ -124,16 +124,16 @@ Click the Next
 or Prev buttons to view the next or previous
 customer order from the search results table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Shipments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Shipments.md)
 Viewing Customer Shipments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Back_Orders_Customer_Inquiry.htm) Viewing Back Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Back_Orders_Customer_Inquiry.md) Viewing Back Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Status_Customer_Inquiry.htm) Viewing Work Order Status
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Work_Order_Status_Customer_Inquiry.md) Viewing Work Order Status
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Month-to-Date_and_Year-to-Date_Customer_Status.htm) Viewing Month-to-Date and Year-to-Date
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Month-to-Date_and_Year-to-Date_Customer_Status.md) Viewing Month-to-Date and Year-to-Date
 Customer Status
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_the_Line_Item_Table.htm) Configuring the Line Item Table
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_the_Line_Item_Table.md) Configuring the Line Item Table
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md) User-defined Help

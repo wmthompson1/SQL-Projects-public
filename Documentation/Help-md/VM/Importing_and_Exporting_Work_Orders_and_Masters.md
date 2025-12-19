@@ -21,8 +21,8 @@ This feature can be used in the following ways:
   | --- | --- |
   | IMPORTNT.gif | Do not attempt to import data from an exported Infor VISUAL file that you have changed or from another system without assistance from your Infor Global Solutions Partner or Customer Support. There are many issues involved. For example if you are importing a master with new Part Ids you must also provide for the Part IDs to be loaded into Part Maintenance. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Exporting_Work_Orders_and_Masters.htm) Exporting Work Orders and Masters
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Exporting_Work_Orders_and_Masters.md) Exporting Work Orders and Masters
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Importing_Work_Orders_and_Masters.htm) Importing Work Orders and Masters
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Importing_Work_Orders_and_Masters.md) Importing Work Orders and Masters

@@ -40,7 +40,7 @@ This table shows the task that you can complete in the Code Mapping
 Maintenance window:
 
 | Task | Description |
-| [Using Code Mapping Maintenance](Using_Code_Mapping_Maintenance.htm) | Use this procedure to map VISUAL codes to standard codes. |
+| [Using Code Mapping Maintenance](Using_Code_Mapping_Maintenance.md) | Use this procedure to map VISUAL codes to standard codes. |
 
 ## Fields
 

@@ -23,4 +23,4 @@ Window. You can select a different schedule in the Scheduling Window.
 If you are licensed to use a single site, the production schedule
 for your enterprise is loaded when you launch the Scheduling Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

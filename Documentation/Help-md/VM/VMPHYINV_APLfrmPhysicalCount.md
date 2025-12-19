@@ -18,4 +18,4 @@ The Physical Inventory Count dialog box appears.
 You can have multiple counts in process at any time. You can enter
 counts for only one active physical count ID at a time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

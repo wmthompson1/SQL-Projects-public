@@ -88,7 +88,7 @@ If you are viewing information for a detail row, then Detail is inserted.
 
 The Burden Distributions dialog box shows
 the same information as the standard [Burden
-Detail](Viewing_Burden_Information.htm) dialog box. This information is also shown:
+Detail](Viewing_Burden_Information.md) dialog box. This information is also shown:
 
 Inv Tx Qty The
 total quantity of materials for the supplying inventory transaction

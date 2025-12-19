@@ -36,4 +36,4 @@ see the conversion factor.
 | --- | --- |
 | POSTIT.gif | This table is used globally throughout the system. Each part master may also contain its own conversion table. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unit_of_Measure_Maintenance.md) User-defined Help

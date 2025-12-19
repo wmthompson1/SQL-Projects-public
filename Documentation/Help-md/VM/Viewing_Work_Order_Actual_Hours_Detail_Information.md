@@ -27,4 +27,4 @@ Act. Run Hours The actual hours that were spent running the operations that prod
 
 6. To exit the dialog, select File, Exit.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_Order_Hours_Roll-up_Information.htm) Work Order Hours Roll-up Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Work_Order_Hours_Roll-up_Information.md) Work Order Hours Roll-up Information

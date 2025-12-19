@@ -19,9 +19,9 @@ Use the Visual Reporting Data Loader Service executable to perform
 these procedures:
 
 * [Installing
-  the Visual Reporting Data Loader Service](VRDTASVCfrmMain.htm)
+  the Visual Reporting Data Loader Service](VRDTASVCfrmMain.md)
 * [Removing
-  the Reporting Data Loader Service](Removing_the_Reporting_Data_Loader_Service.htm)
+  the Reporting Data Loader Service](Removing_the_Reporting_Data_Loader_Service.md)
 
 In addition to these procedures, the SYSADM user can set up the
 service schedule and monitor the service. To perform these procedures,
@@ -29,13 +29,13 @@ use the Visual Reporting Data dialog available in Application Global
 Maintenance. See these procedures:
 
 * [Scheduling
-  the Reporting Data Loader Service](Scheduling_the_Reporting_Data_Loader_Service.htm)
+  the Reporting Data Loader Service](Scheduling_the_Reporting_Data_Loader_Service.md)
 * [Monitoring
-  the Reporting Data Loader Service](Monitoring_the_Reporting_Data_Loader_Service.htm)
+  the Reporting Data Loader Service](Monitoring_the_Reporting_Data_Loader_Service.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Updating_the_Reporting_Database_Tables.htm) Updating the Reporting Database Tables
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Updating_the_Reporting_Database_Tables.md) Updating the Reporting Database Tables
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

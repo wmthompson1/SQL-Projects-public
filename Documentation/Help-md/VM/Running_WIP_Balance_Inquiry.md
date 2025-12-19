@@ -145,4 +145,4 @@ ID.
     the Print Setup button to modify printer
     options.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_WIP_Balance_Reports.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_WIP_Balance_Reports.md) User-defined Help

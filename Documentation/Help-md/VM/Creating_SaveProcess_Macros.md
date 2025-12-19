@@ -25,6 +25,6 @@ Use these guidelines to create SaveProcess macros:
 * END\_DATE
 * PERCENT\_COMPLETE
 
-See [Creating Macros](Creating_Macros.htm).
+See [Creating Macros](Creating_Macros.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

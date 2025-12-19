@@ -14,4 +14,4 @@ system date for conversion, you must make this change before you enter
 a single transaction in the system. The two options related to currency
 conversion are: Transaction Date (Typical) and Current System Date.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

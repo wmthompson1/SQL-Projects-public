@@ -73,4 +73,4 @@ the Delete check box if you do not want to track user deletions.
    Write Triggers button. To write the triggers for all tables, click
    the Write All Triggers button.
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

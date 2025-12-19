@@ -46,4 +46,4 @@ You can continue to search for other instances
 by reselecting Find Part ID. The prior search string is retained.
 Press Search again to find the next requirement.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

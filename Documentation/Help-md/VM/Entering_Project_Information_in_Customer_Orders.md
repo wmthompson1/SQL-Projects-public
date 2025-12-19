@@ -56,4 +56,4 @@ entering requires a Receiving and Inspection Report (DD250), select
 the DD250 Required check box on the Other tab of the Customer Order
 Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

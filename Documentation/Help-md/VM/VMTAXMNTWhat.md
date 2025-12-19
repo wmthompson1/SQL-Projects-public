@@ -8,7 +8,7 @@ What is Sales Tax Group Maintenance?
 Sales Tax Group Maintenance allows you to create,
 edit, and delete sales tax group and sales tax information. This is
 the tax information used in [Customer Order
-Entry](VMORDENTWhat.htm).
+Entry](VMORDENTWhat.md).
 
 You can also create a Tax Group ID to assign as a default Tax ID
 for a customer. By assigning a default Tax Group ID in Customer Maintenance,
@@ -30,6 +30,6 @@ order. The currency of the tax ceiling is not validated against the
 currency of the customer order. You should use an identification code
 that indicates which currency should be used with the tax group.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Sales_Tax_Group_Maintenance.htm) Starting Sales Tax Group Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Sales_Tax_Group_Maintenance.md) Starting Sales Tax Group Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Sales_Tax_Group_Maintenance.md) User-defined Help

@@ -18,10 +18,10 @@ the Part Trace Maintenance application.
 * Pre-Assigning of lot numbers
   and quantities for a part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Trace_Records.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Trace_Records.md)
 Modifying Trace Records
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Trace_IDs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Trace_IDs.md)
 Editing Trace IDs

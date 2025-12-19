@@ -63,13 +63,13 @@ You must also know how to add users and create user groups.
 Refer to the following sections:
 
 * For information on using
-  Task Maintenance, refer to [Task Maintenance](VMTSKMNTWhat.htm).
+  Task Maintenance, refer to [Task Maintenance](VMTSKMNTWhat.md).
 * For information on adding
   documents in Document Maintenance, refer to [Adding
-  Documents](VMDOCMNTfrmDocuments.htm).
+  Documents](VMDOCMNTfrmDocuments.md).
 * For information on setting
   up groups for tasks and authorizations, refer to [Application
-  Global Maintenance](VMAPLGLBWhat.htm).
+  Global Maintenance](VMAPLGLBWhat.md).
 
 ## Workflow and Double-byte Characters
 
@@ -78,7 +78,7 @@ you use a double-byte character in any area of workflow, the character
 will not be stored or displayed correctly. Use single-byte characters
 only.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKFLOWfOpen.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKFLOWfOpen.md)
 Starting Workflow
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

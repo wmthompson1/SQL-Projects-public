@@ -7,7 +7,7 @@ Generating Purchase Orders from Purchase Requisitions
 
 For information about generating internal buy/sell
 orders from purchase requisitions, see [Generating
-Internal Purchase Orders from Requisitions](Generating_Internal_Purchase_Orders_from_Requisitions.htm)
+Internal Purchase Orders from Requisitions](Generating_Internal_Purchase_Orders_from_Requisitions.md)
 
 Purchase requisitions are eligible to become purchase
 orders if hey have been approved by the appropriate individual or
@@ -126,4 +126,4 @@ Entry window, displaying the purchase order.
 | --- | --- |
 | POSTIT.gif | If you did in fact choose to create multiple purchase orders, VISUAL displays only the first it created. To view any other it may have created, manually change Our Order ID to the next available ID, which VISUAL uses for the next vendor. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Requisition_Entry.md) User-defined Help

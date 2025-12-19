@@ -32,4 +32,4 @@ customer. Use Customer Notes for internal dialogs regarding the customer.
 
 All notations in VISUAL function in the same way.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

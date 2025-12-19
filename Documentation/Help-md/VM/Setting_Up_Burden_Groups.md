@@ -61,4 +61,4 @@ set up a project type for non-project work so that VISUAL can correctly
 burden your non-project costs and assign those costs to the appropriate
 Burden G/L account.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

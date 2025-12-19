@@ -40,11 +40,11 @@ is not available.
    select all three or any combination thereof.
 9. Specify the output format
    for the report. See [Report
-   Output Options](Report_Output_Options.htm).
+   Output Options](Report_Output_Options.md).
 10. From the File menu,
     select Print/View or click the Print button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQCAPRPTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VQCAPRPTWhat.md)
 What is the Capability Report?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Capability_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Capability_Report.md) User-defined Help

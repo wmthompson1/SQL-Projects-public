@@ -10,7 +10,7 @@ shipping procedure, with special emphasis on VISUALs creation of
 multiple pack lists.
 
 1. Enter a [sales
-   order](VMORDENTfrmCustomerOrder.htm) using the Customer Order Entry window. For this example,
+   order](VMORDENTfrmCustomerOrder.md) using the Customer Order Entry window. For this example,
    the sales order has three lines, each with a different Shipto
    ID.
 2. Using the Shipping Entry

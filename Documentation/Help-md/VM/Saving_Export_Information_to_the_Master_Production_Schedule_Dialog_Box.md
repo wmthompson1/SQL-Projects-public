@@ -9,7 +9,7 @@ After you build the export information, you can insert the information
 to the Master Production Schedule dialog box. To insert the information:
 
 1. Build the [export
-   information](Exporting_Forecasts_to_Excel_std.htm).
+   information](Exporting_Forecasts_to_Excel_std.md).
 2. Click the Import
    tab.
 3. Specify this information:

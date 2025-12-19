@@ -33,7 +33,7 @@ you must post the journals manually using the Post Manufacturing Journals
 window. The Costing Service does not post manufacturing journals.
 
 If you set up the Costing Service, you can still [run
-costing utilities manually](VMAPLUTLfrmApplUtilities.htm).
+costing utilities manually](VMAPLUTLfrmApplUtilities.md).
 
 ## Tasks
 
@@ -41,11 +41,11 @@ This table shows the tasks that you can complete in the Costing
 Utilities window:
 
 | Task | Description |
-| [Installing the Costing Service](Installing_the_Costing_Service.htm) | Use this task to install the service. |
-| [Scheduling the Costing Service](Scheduling_the_Costing_Service.htm) | Use this task to schedule when the service is run. |
-| [Deactivating the Costing Service Schedule for a Site](Deactivating_the_Costing_Service_Schedule_for_a_Site.htm) | Use this task to deactivate the service for a site. |
-| [Deleting the Costing Service Schedule for a Site](Deleting_the_Costing_Service_Schedule_for_a_Site.htm) | Use this task to delete the service schedule. |
-| [Removing the Costing Service](Removing_the_Costing_Service.htm) | Use this task to remove the costing service. |
+| [Installing the Costing Service](Installing_the_Costing_Service.md) | Use this task to install the service. |
+| [Scheduling the Costing Service](Scheduling_the_Costing_Service.md) | Use this task to schedule when the service is run. |
+| [Deactivating the Costing Service Schedule for a Site](Deactivating_the_Costing_Service_Schedule_for_a_Site.md) | Use this task to deactivate the service for a site. |
+| [Deleting the Costing Service Schedule for a Site](Deleting_the_Costing_Service_Schedule_for_a_Site.md) | Use this task to delete the service schedule. |
+| [Removing the Costing Service](Removing_the_Costing_Service.md) | Use this task to remove the costing service. |
 
 ## Fields
 
@@ -84,4 +84,4 @@ the log file is limited to 1 MB. When the log file approaches 1 MB,
 the log is renamed to VMCSTSVC\_[Your Site Name]\_[Current date time].log,
 and a new VMCSTSVC\_[Your Site Name].log is created.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

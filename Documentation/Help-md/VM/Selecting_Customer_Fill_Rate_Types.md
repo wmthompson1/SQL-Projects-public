@@ -18,4 +18,4 @@ W (Whole Order) - When unavailable inventory
 for a part on an order line item reaches the fill rate threshold,
 VISUAL cancels the whole order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

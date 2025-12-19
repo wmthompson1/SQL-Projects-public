@@ -31,4 +31,4 @@ VISUAL deletes the vendors information.
 This does not remove the vendor from the list of available vendors,
 just from this part.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

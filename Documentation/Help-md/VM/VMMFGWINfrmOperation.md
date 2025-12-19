@@ -45,7 +45,7 @@ copies all of the information in the operation type into this operation.
 You can set up a preference in Preferences
 Maintenance to always load the default information type and suppress
 this message. See [Suppressing
-the Load Defaults from Operation Type Message](Suppressing_the_Load_Defaults_from_Operation_Type_Message.htm).
+the Load Defaults from Operation Type Message](Suppressing_the_Load_Defaults_from_Operation_Type_Message.md).
 
 4. Adjust the Sequence
    Number, if necessary.
@@ -161,38 +161,38 @@ Window.
 | --- | --- |
 | POSTIT.gif | If you want to quickly add an operation with minimal details, clear the Operation Edit Form option on the Views menu.  When you add an operation, a list of resources appears, select the resource you want to use for the operation.  VISUAL creates an operation for that resource with the next sequential number using only the information from the resource.  If you have opened the Operation child window, you can use the Show/Hide Edit Operation Form toolbar buttons to hide or show the Operation window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Scrap_Yield_Information.htm) Entering Scrap/Yield Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Scrap_Yield_Information.md) Entering Scrap/Yield Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Test_ID.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Test_ID.md)
 Selecting a Test ID
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_a_Drawing_Number.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_a_Drawing_Number.md)
 Specifying a Drawing Number
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_When_Setup_Can_Begin.htm) Specifying When Setup Can Begin
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_When_Setup_Can_Begin.md) Specifying When Setup Can Begin
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Labor_Reporting_on_the_Operation_Card.htm) Setting Up Labor Reporting
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Labor_Reporting_on_the_Operation_Card.md) Setting Up Labor Reporting
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Discontinous_Operations.htm) Scheduling Discontinuous Operations
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Scheduling_Discontinous_Operations.md) Scheduling Discontinuous Operations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_a_Predecessor_Operation.htm) Specifying a Predecessor Operation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_a_Predecessor_Operation.md) Specifying a Predecessor Operation
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Capacity_Use_Information.htm) Specifying Capacity Use Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Capacity_Use_Information.md) Specifying Capacity Use Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Overriding_Costs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Overriding_Costs.md)
 Overriding Costs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Concurrent_Resources.htm) Specifying Concurrent Resources
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Concurrent_Resources.md) Specifying Concurrent Resources
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_a_Picture_Object.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_a_Picture_Object.md)
 Embedding a Picture/Object
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Outside_Service_Information.htm) Adding Outside Service Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Outside_Service_Information.md) Adding Outside Service Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Quotes.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Quotes.md)
 Adding Quotes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Services.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Dispatching_Services.md)
 Dispatching Services
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -113,4 +113,4 @@ you made.
 | --- | --- |
 | POSTIT.gif | Notice the Quantity Used area for the vendor or customer to use for their inventory usage and the Received By signature area. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.md) User-defined Help

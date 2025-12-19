@@ -6,7 +6,7 @@ Running Costing Utilities Manually
 # Running Costing Utilities Manually
 
 Use the Costing Utilities window to run costing manually
-at any time. You can also set up a service to run costing. See [Running Costing with the Costing Service](VMCSTSVCWhat.htm).
+at any time. You can also set up a service to run costing. See [Running Costing with the Costing Service](VMCSTSVCWhat.md).
 
 To run costing utilities manually:
 
@@ -79,4 +79,4 @@ toolbar button.
 11. Click the Exit
     toolbar button on the Costing Utility.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

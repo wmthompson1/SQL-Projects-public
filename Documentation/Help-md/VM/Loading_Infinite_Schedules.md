@@ -14,4 +14,4 @@ If you have multiple infinite schedules defined, VISUAL picks and
 displays the first infinite that occurs in the database. If you select
 the option again, VISUAL adds the next infinite schedule to the display.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

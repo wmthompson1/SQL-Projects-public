@@ -42,7 +42,7 @@ The Clear Cumms dialog box appears.
 3. Enter date in the Accum
    Clear Date field or select an Accum Clear Date by clicking the
    calendar button. You can also right-click the [calendar
-   button](Using_the_Calendar_Button.htm) and choose one of 7 different date options, though
+   button](Using_the_Calendar_Button.md) and choose one of 7 different date options, though
    only the 3 "Back..." options are valid selections for
    this field. See the below note.
 
@@ -62,7 +62,7 @@ without a customer order in the Customer Order Entry window.
 To use this option, after step 2 above,
 click the Our Order ID button and choose
 an EDI order, or begin creating a new EDI order. For more on creating
-new sales orders, click [here](VMORDENTfrmCustomerOrder.htm).
+new sales orders, click [here](VMORDENTfrmCustomerOrder.md).
 
 by Customer -
 Select the by Customer option button if you want to view a list of
@@ -104,4 +104,4 @@ before it proceeds.
 
 VISUAL clears the specified accumulators.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

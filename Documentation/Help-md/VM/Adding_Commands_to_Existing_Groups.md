@@ -36,11 +36,11 @@ To add commands to groups:
 The Customize dialog box closes and VISUAL adds the new command
 to the bottom of the group you selected in your Personal Menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Groups.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Groups.md)
 Adding New Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.htm) Adding Non-VISUAL Commands to Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Non-VISUAL_Commands_to_Groups.md) Adding Non-VISUAL Commands to Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.htm) Removing Commands from Groups
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Removing_Commands_from_Groups.md) Removing Commands from Groups
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

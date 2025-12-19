@@ -22,20 +22,20 @@ This table shows the tasks that you can complete in Application
 Global Maintenance:
 
 | Task | Description |
-| [Specifying Information on the General Tab](VMAPLGLB-tabGeneral.htm) | Specify the corporate address, barcode transaction system settings, recent file list limit, purchase quote type, and oldest open invoice setting, |
-| [Specifying Scheduling Information](Specifying_Scheduling_Information_Tenant.htm) | Specify default schedule and calendar exceptions. |
-| [Specifying Default Information](Specifying_Default_Information_tenant.htm) | Specify certain application-wide information, including:   * Trace ID information * How to use customer   pricing in shipping entry * Default Document   Maintenance options * Password requirements   in Workflow * PLM connection settings * Where to store macros |
-| [Adding Terms](Entering_Information_in_Terms_Maintenance.htm) | Define the payment terms you use when you invoice customers and when vendors invoice you. |
-| [Setting the Default Login Profile](Setting_the_Default_Login_Profile.htm) | Set default sign in information for the work station. |
-| [Setting Report Format File Overrides](Setting_Report_Format_File_Overrides.htm) | Specify the custom reports to use in place of the standard QRPs. |
-| [Maintaining Global Codes and Types](Maintaining_Global_Codes_and_Types.htm) | Specify a variety of common terms, such as SIC codes, FOB codes, territories, and commodities. |
-| [Bid Rate Maintenance](Bid_Rate_Maintenance.htm) | Create bid categories and groups to use in the estimating process |
-| [Creating Export Formats](Exporting_Formats.htm) | Create electronic file formats. |
-| [Verifying VISUAL .NET Configuration Settings](Verifying_VISUAL_.NET_Configuration_Settings.htm) | Administer the connection to the .NET databases and executable. Menu option is displayed for Global Financials licensees only. |
-| [Updating the Reporting Database Tables](Updating_the_Reporting_Database_Tables.htm) | Specify how to update the tables that dashboard metrics use as sources of data. |
-| [Monitoring Reporting Service Print Jobs](Monitoring_Reporting_Service_Print_Jobs.htm) | If you have set up the VISUAL Reporting Service (VRPTSVC.EXE) to automatically run print jobs based on a schedule, use the Report Service Configurations dialog to monitor print jobs. |
-| [Setting Program Preferences](Setting_Program_Preferences.htm) | Specify the tab to display by default when Application Global Maintenance is opened. Also specify the executable to use as the default customer order entry and purchase order entry program. |
-| [Maintaining SOA Information](Maintaining_SOA_Information.htm) | If you use business object documents (BODs) to integrate VISUAL to another product, use SOA Maintenance to set the default information that must appear on each BOD. |
+| [Specifying Information on the General Tab](VMAPLGLB-tabGeneral.md) | Specify the corporate address, barcode transaction system settings, recent file list limit, purchase quote type, and oldest open invoice setting, |
+| [Specifying Scheduling Information](Specifying_Scheduling_Information_Tenant.md) | Specify default schedule and calendar exceptions. |
+| [Specifying Default Information](Specifying_Default_Information_tenant.md) | Specify certain application-wide information, including:   * Trace ID information * How to use customer   pricing in shipping entry * Default Document   Maintenance options * Password requirements   in Workflow * PLM connection settings * Where to store macros |
+| [Adding Terms](Entering_Information_in_Terms_Maintenance.md) | Define the payment terms you use when you invoice customers and when vendors invoice you. |
+| [Setting the Default Login Profile](Setting_the_Default_Login_Profile.md) | Set default sign in information for the work station. |
+| [Setting Report Format File Overrides](Setting_Report_Format_File_Overrides.md) | Specify the custom reports to use in place of the standard QRPs. |
+| [Maintaining Global Codes and Types](Maintaining_Global_Codes_and_Types.md) | Specify a variety of common terms, such as SIC codes, FOB codes, territories, and commodities. |
+| [Bid Rate Maintenance](Bid_Rate_Maintenance.md) | Create bid categories and groups to use in the estimating process |
+| [Creating Export Formats](Exporting_Formats.md) | Create electronic file formats. |
+| [Verifying VISUAL .NET Configuration Settings](Verifying_VISUAL_.NET_Configuration_Settings.md) | Administer the connection to the .NET databases and executable. Menu option is displayed for Global Financials licensees only. |
+| [Updating the Reporting Database Tables](Updating_the_Reporting_Database_Tables.md) | Specify how to update the tables that dashboard metrics use as sources of data. |
+| [Monitoring Reporting Service Print Jobs](Monitoring_Reporting_Service_Print_Jobs.md) | If you have set up the VISUAL Reporting Service (VRPTSVC.EXE) to automatically run print jobs based on a schedule, use the Report Service Configurations dialog to monitor print jobs. |
+| [Setting Program Preferences](Setting_Program_Preferences.md) | Specify the tab to display by default when Application Global Maintenance is opened. Also specify the executable to use as the default customer order entry and purchase order entry program. |
+| [Maintaining SOA Information](Maintaining_SOA_Information.md) | If you use business object documents (BODs) to integrate VISUAL to another product, use SOA Maintenance to set the default information that must appear on each BOD. |
 
 ## Fields
 
@@ -198,4 +198,4 @@ Indicates how to macros are stored and read. Select the check box
 to store and read macros from the database. Clear the check box to
 store and read macros from the work station.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

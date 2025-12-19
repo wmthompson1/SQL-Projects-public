@@ -89,4 +89,4 @@ or it can be imported like this:
 The data for each transaction varies and can change depending on
 many factors, such as linked orders.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Running_the_BTS_Import_Utility.htm) Running the BTS Import Utility
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Running_the_BTS_Import_Utility.md) Running the BTS Import Utility

@@ -69,10 +69,10 @@ you can also redact this information with the Individual Privacy program:
 | History | V\_HISTORY | CONTACT\_FIRST\_NAME  CONTACT\_EMAIL  CONTACT\_LAST\_NAME |
 | Accounts | V\_ACCOUNT | NAME  CONTACT\_FIRST\_NAME  CONTACT\_INITIAL  CONTACT\_LAST\_NAME  ADDR\_1  ADDR\_2  ADDR\_3  CITY  STATE  ZIPCODE  COUNTRY  COUNTRY\_ID  COUNTY\_NAME  BILL\_TO\_NAME  BILL\_TO\_ADDR\_1  BILL\_TO\_ADDR\_2  BILL\_TO\_ADDR\_3  BILL\_TO\_CITY  BILL\_TO\_STATE  BILL\_TO\_ZIPCODE  BILL\_TO\_COUNTRY  CONTACT\_POSITION  CONTACT\_EMAIL  CONTACT\_MOBILE  CONTACT\_FAX  CONTACT\_HOME  CONTACT\_HONORIFIC  CONTACT\_SALUTATION  CONTACT\_OTHER  BUS\_PHONE  WEB\_USER\_ID  WEB\_PASSWORD  URL |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Redacting_Data.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Redacting_Data.md)
 Redacting Data
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

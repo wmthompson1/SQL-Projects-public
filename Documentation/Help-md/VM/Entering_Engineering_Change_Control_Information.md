@@ -145,6 +145,6 @@ an Engineering Change Control Notice for a Work Order
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Activating
 an Engineering Change Control Notice for a Master
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Applying_Change_Notices_to_Work_Orders.htm) Applying Change Notices to Work Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Applying_Change_Notices_to_Work_Orders.md) Applying Change Notices to Work Orders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -61,4 +61,4 @@ and reschedules it if the frozen finish date is less than the schedule
 As Of date. The Scheduler adjusts the duration of frozen operations
 based on the remaining quantity.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

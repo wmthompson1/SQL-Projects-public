@@ -86,4 +86,4 @@ to the path of the document.
    new Document ID in Document Maintenance to assign Stage and Revision
    information or to select it for ECN Revision control.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

@@ -14,4 +14,4 @@ All subordinate operations and material requirements are deleted
 along with the leg. VISUAL automatically recalculates Start, end,
 and material quantities after the deletion.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

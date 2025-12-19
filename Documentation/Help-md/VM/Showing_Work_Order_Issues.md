@@ -125,4 +125,4 @@ transactions; it has not been shipped, and can be checked or repaired.
 For the other receipt, you find an issue to a customer order. You
 note the Order ID, and can contact the customer for a possible recall.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

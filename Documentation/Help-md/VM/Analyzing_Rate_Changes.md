@@ -43,4 +43,4 @@ The rate you selected is compared against
 the Current or Applied rate for this project and report appears with
 the appropriate figures.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Change_Impact_Analysis.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Change_Impact_Analysis.md) User-defined Help

@@ -25,6 +25,6 @@ group.
 | By Territory | VMCBORP8.QRP |
 | By Due Date | VMCBORP9.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCBORPTfrmPrintBacklogReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCBORPTfrmPrintBacklogReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.md) User-defined Help

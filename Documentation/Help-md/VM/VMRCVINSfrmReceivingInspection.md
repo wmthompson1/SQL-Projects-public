@@ -36,7 +36,7 @@ VISUAL returns the receiver or releases
 the parts into inventory.
 
 For more information on returning material
-to vendors, click [here](Returning_Materials_to_Vendors.htm).
+to vendors, click [here](Returning_Materials_to_Vendors.md).
 
 ## Performing Partial Returns/Releases
 
@@ -85,7 +85,7 @@ VISUAL transfers the quantity you passed
 to the parts default location, or the location you specified.
 
 For more information on returning material
-to vendors, click [here](Returning_Materials_to_Vendors.htm).
+to vendors, click [here](Returning_Materials_to_Vendors.md).
 
 ## Clearing Selections
 
@@ -93,7 +93,7 @@ If you have made selections but not saved them, you
 can clear your selections by clicking the Clear
 Selections toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Receiving_Inspection.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Receiving_Inspection.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVINSWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMRCVINSWhat.md)
 What is Receiving Inspection?

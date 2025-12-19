@@ -51,6 +51,6 @@ the order of the listing.
 | Standard Form | VMENGRP1.QRP |
 | Short Form | VMENGRP2.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMENGRPTfrmPrintEngineeringReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMENGRPTfrmPrintEngineeringReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Engineering_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Engineering_Report.md) User-defined Help

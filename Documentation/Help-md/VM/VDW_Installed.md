@@ -6,7 +6,7 @@ VDW Installed
 ## VDW Installed
 
 Unless the [Allocations
-Require Warehouse/Location](Enabling_Warehouse_Location_Requirements_for_Allocations.htm) option is selected in Application Global
+Require Warehouse/Location](Enabling_Warehouse_Location_Requirements_for_Allocations.md) option is selected in Application Global
 Maintenance, this option is unavailable.
 
 If this warehouse is a VISUAL D

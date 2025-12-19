@@ -113,13 +113,13 @@ counting:
 8. For information
    about how parts are evaluated for including in a cycle count,
    see [Physical Inventory
-   Cycle Counts](Physical_Inventory_Cycle_Counts.htm).
+   Cycle Counts](Physical_Inventory_Cycle_Counts.md).
 9. To specify
    the parts and warehouses that use cycle counting, see [Cycle
-   Count Setup](Cycle_Counts.htm).
+   Count Setup](Cycle_Counts.md).
 10. To identify
     A, B, and C parts, see [Using
-    ABC Analysis](Using_ABC_Analysis.htm).
+    ABC Analysis](Using_ABC_Analysis.md).
 11. Select Lock each location
     and Lock all part inventory to prevent transactions from occurring
     against the parts currently under evaluation in physical inventory.
@@ -189,4 +189,4 @@ You can create blank tags also, if you select
 the option in the dialog box. There are other options to check whether
 to lock each location and all part inventory.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

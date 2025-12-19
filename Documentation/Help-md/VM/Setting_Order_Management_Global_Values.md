@@ -127,35 +127,35 @@ produces a minimum fill rate quantity of 800.
 
 6. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enabling_Warehouse_Location_Requirements_for_Allocations.htm) Enabling Warehouse/Location Requirement
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enabling_Warehouse_Location_Requirements_for_Allocations.md) Enabling Warehouse/Location Requirement
 for Allocations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Default_Shipping_Weight_U_M.htm) Selecting a Default Shipping Weight
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Default_Shipping_Weight_U_M.md) Selecting a Default Shipping Weight
 U/M
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Default_Oldest_Open_Invoice_Setting.htm) Selecting a Default Oldest Open Invoice
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Default_Oldest_Open_Invoice_Setting.md) Selecting a Default Oldest Open Invoice
 Setting
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Customer_Order_Allocation_Level.htm) Selecting a Customer Order Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Customer_Order_Allocation_Level.md) Selecting a Customer Order Allocation
 Level
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Requirement_Allocation_Level.htm) Selecting a Requirement Allocation Level
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Selecting_a_Requirement_Allocation_Level.md) Selecting a Requirement Allocation Level
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Priority_Codes.htm) Entering Customer Priority Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Priority_Codes.md) Entering Customer Priority Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Order_Types.htm) Entering Customer Order Types
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Order_Types.md) Entering Customer Order Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_WIP_VAS_Information.htm) Entering WIP/VAS Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_WIP_VAS_Information.md) Entering WIP/VAS Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Types.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Customer_Types.md)
 Entering Customer Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Harmonized_Tariff_Schedule_(HTS)_Codes.htm) Entering HTS Codes
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Harmonized_Tariff_Schedule_(HTS)_Codes.md) Entering HTS Codes
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_HTS_Duty_Percents_by_Country_of_Origin.htm) Entering HTS Duty Percents by Country
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_HTS_Duty_Percents_by_Country_of_Origin.md) Entering HTS Duty Percents by Country
 of Origin
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Part_Alias_Types.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Part_Alias_Types.md)
 Entering Part Alias Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

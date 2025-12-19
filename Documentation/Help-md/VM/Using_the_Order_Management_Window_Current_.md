@@ -80,9 +80,9 @@ the order line.
 Amount Shipped - The dollar amount of
 what you have shipped from the order line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Current_Customer_Order_Information.htm) Viewing Current Customer Order Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Current_Customer_Order_Information.md) Viewing Current Customer Order Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Sources_of_Supply_for_the_Current_Customer_Order.htm) Viewing Sources of Supply for the Current
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Sources_of_Supply_for_the_Current_Customer_Order.md) Viewing Sources of Supply for the Current
 Customer Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

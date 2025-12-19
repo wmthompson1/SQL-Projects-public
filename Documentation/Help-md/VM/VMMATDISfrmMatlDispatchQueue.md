@@ -18,11 +18,11 @@ This table shows the tasks that you can complete in the Move Requests
 window:
 
 | Task | Description |
-| [Sorting and Filtering the Material Handler Queue Table](Sorting_and_Filtering_the_Material_Handler_Queue_Table.htm) | Use this task to specify the move requests to view in the material handler queue table. |
-| [Assigning Move Requests to an Employee](Assigning_Move_Requests_to_an_Employee.htm) | Use this task to assign a move request to an employee. |
-| [Picking Up Materials](Picking_Up_Materials.htm) | Use this task to pick up materials for a move request. |
-| [Delivering a Move Request](Delivering_a_Move_Request.htm) | Use this task to deliver the materials for a move request. |
-| [Delivering Materials to an Alternate Location](Delivering_Materials_to_an_Alternate_Location.htm) | Use this task to deliver the materials to a different location than the one specified on the move request. |
+| [Sorting and Filtering the Material Handler Queue Table](Sorting_and_Filtering_the_Material_Handler_Queue_Table.md) | Use this task to specify the move requests to view in the material handler queue table. |
+| [Assigning Move Requests to an Employee](Assigning_Move_Requests_to_an_Employee.md) | Use this task to assign a move request to an employee. |
+| [Picking Up Materials](Picking_Up_Materials.md) | Use this task to pick up materials for a move request. |
+| [Delivering a Move Request](Delivering_a_Move_Request.md) | Use this task to deliver the materials for a move request. |
+| [Delivering Materials to an Alternate Location](Delivering_Materials_to_an_Alternate_Location.md) | Use this task to deliver the materials to a different location than the one specified on the move request. |
 
 ## Fields
 
@@ -111,7 +111,7 @@ Equip Type
 
 The piece of equipment that the material handler should use to move
 the parts. Set up equipment types in the Move Equipment Type dialog
-box. See [Move Equipment Types](Move_Equipment_Types.htm).
+box. See [Move Equipment Types](Move_Equipment_Types.md).
 
 Weight
 

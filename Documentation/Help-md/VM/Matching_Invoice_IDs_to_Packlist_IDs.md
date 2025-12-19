@@ -18,7 +18,7 @@ Optionally, you can use the packlist ID as the invoice ID. Set up this functiona
 2. If you are printing the packlist for a particular order, specify the ID of the order in the Order ID field. Otherwise, leave this field blank.
 3. Select File, Print Pack Lists.
 4. In the Print section, click Before Shipment.
-5. If you are printing the packlist for the order that you selected in the main Shipping Entry window, click Current Order. Otherwise, use the filters to print packlists. See [Creating Packlist IDs Before Shipment](Creating_Packlist_IDs_Before_Shipment.htm).
+5. If you are printing the packlist for the order that you selected in the main Shipping Entry window, click Current Order. Otherwise, use the filters to print packlists. See [Creating Packlist IDs Before Shipment](Creating_Packlist_IDs_Before_Shipment.md).
 6. Click Ok.
 7. If the packlist is printed correctly, click Yes in the dialog.
 8. When you are prompted to save the packlist ID, click Yes.

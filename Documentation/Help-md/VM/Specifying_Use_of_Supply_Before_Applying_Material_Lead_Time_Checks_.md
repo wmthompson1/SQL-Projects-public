@@ -33,4 +33,4 @@ The Concurrent Scheduler considers purchase orders, purchase order
 delivery schedules, Coproducts, work orders, and, if netting planned
 orders, planned orders, as supply.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

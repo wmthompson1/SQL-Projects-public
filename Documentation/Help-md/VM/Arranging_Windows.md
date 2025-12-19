@@ -12,4 +12,4 @@ as you preference for the view display. Select Arrange
 Icons to move minimized windows to the bottom of the Order
 Management Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

@@ -30,16 +30,16 @@ all four fields are active. If it were a purchased part, only the
 Material and Burden fields would be active (purchased parts have no
 Labor, Burden, or Service associated with them).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Fabricated_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Fabricated_Parts.md)
 Fabricated Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchased_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchased_Parts.md)
 Purchased Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Consumable_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Consumable_Parts.md)
 Consumable Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Accounts_by_Product_Code.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Accounts_by_Product_Code.md)
 Accounts by Product Code
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

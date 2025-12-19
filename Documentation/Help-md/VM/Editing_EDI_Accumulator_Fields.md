@@ -16,7 +16,7 @@ button to save changes.
 The dialog box closes and you return to the Customer Order Entry
 window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_EDI_Accumulators.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_EDI_Accumulators.md)
 Viewing EDI Accumulators
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

@@ -42,4 +42,4 @@ to provide a simple understanding of the two concepts involved. It
 is strongly recommended that the senior management of a company evaluate
 their organization to best determine the method to be implemented.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

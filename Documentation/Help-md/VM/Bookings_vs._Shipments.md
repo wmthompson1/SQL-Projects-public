@@ -5,7 +5,7 @@ Bookings vs. Shipments
 
 # Bookings vs. Shipments
 
-This [dashboard](VMDBOARDWhat.htm) analytic
+This [dashboard](VMDBOARDWhat.md) analytic
 shows the monetary total of your customer orders and the monetary
 total of shipments to your customers.
 
@@ -35,14 +35,14 @@ ID, Site ID
 Detail grids: Click a Booking bar to view
 the customer orders that contribute to the total shown by the bar
 in the [Bookings vs. Shipments
-Detail](Bookings_vs._Shipments_Detail.htm) grid. Click a Shipments bar to view the packlists that
+Detail](Bookings_vs._Shipments_Detail.md) grid. Click a Shipments bar to view the packlists that
 contribute to the total shown by the bar in the [Bookings
-vs. Shipments Detail](Bookings_vs._Shipments_Detail.htm) grid.
+vs. Shipments Detail](Bookings_vs._Shipments_Detail.md) grid.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

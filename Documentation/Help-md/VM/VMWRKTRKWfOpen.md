@@ -40,15 +40,15 @@ is for every enactment of the workflow.
 The workflow you selected appears in the
 Workflow Tracker window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_Color_Codes_in_Workflow_Tracker.htm) Understanding Color Codes in Workflow
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Understanding_Color_Codes_in_Workflow_Tracker.md) Understanding Color Codes in Workflow
 Tracker
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKLineProp.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKLineProp.md)
 Viewing Rule Status Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKBoxProp.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKTRKBoxProp.md)
 Viewing Step Status Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.htm) Using the Workflow Gatekeeper
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Workflow_Gatekeeper.md) Using the Workflow Gatekeeper

@@ -26,9 +26,9 @@ To track tasks, use Task Maintenance
 See these topics:
 
 * [What
-  are Activities?](VMACTENTWhat.htm)
+  are Activities?](VMACTENTWhat.md)
 * [What
-  is Task Maintenance?](VMTSKMNTWhat.htm)
+  is Task Maintenance?](VMTSKMNTWhat.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -22,6 +22,6 @@ profiles, the use of which allows you to create numerous different
 equipment maintenance scheduling scenarios. See the next section for
 more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Auto_Numbering_Planned_Maintenance.htm) Setting Up Auto Numbering
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Auto_Numbering_Planned_Maintenance.md) Setting Up Auto Numbering

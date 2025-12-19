@@ -24,4 +24,4 @@ Microsoft Excel.  To export to Excel:
 8. Promise Ship
    Date
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.htm) Viewing the Supplier Performance Graph
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSUPPFMfrmSupplierPerformance.md) Viewing the Supplier Performance Graph

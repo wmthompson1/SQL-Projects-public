@@ -42,4 +42,4 @@ date for a new supply order.
 | --- | --- |
 | POSTIT.gif | The Material Planning Window table is configurable. There are many columns in this table. You may especially wish to hide, move, resize, or rename some of the columns in this table to make viewing easier. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

@@ -80,4 +80,4 @@ is shown: Part ID, Part Description, Unit of Measure, On-Hand Quantity
 Quantity), Count (for all tags of the part), and New Value (value
 based on the Count). Previous Value and New Value are totaled.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

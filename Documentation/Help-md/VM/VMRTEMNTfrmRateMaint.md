@@ -101,4 +101,4 @@ When you have finished deleting Rates, click
 the Close Window button, or from the File
 menu, select Exit.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Rate_Maintenance.md) User-defined Help

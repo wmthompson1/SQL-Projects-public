@@ -29,10 +29,10 @@ menu selection:
    relaunch VISUAL. The Links toolbar is no longer displayed, and
    the Links item in the File menu is no longer available.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_URL_Links.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_URL_Links.md)
 Adding URL Links
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](URL_Links_Toolbar.md)
 URL Links Toolbar
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

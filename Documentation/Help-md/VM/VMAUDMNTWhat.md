@@ -21,4 +21,4 @@ The scope of the Audit Maintenance function allows you to track
 any non-binary field in the database. However, Infor does not recommend
 that you track every field, as this places a strain on your database.
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

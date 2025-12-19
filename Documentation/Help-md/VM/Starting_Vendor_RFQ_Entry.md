@@ -25,4 +25,4 @@ specifications, Buyer, and status.
 Vendor RFQ Line Item Table - This table
 contains one line for each separate ordered item on Request for Quote.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Vendor_RFQ_Entry.md) User-defined Help

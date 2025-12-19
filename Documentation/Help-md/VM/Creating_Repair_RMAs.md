@@ -89,5 +89,5 @@ who placed the original order, leave this field blank.
    Create work order(s) for the repairs? To create a work order
    for the repair work, click Yes. See
    [Creating the Repair
-   Work Order](Creating_the_Repair_Work_Order.htm). If you do not want to create a work order, click
+   Work Order](Creating_the_Repair_Work_Order.md). If you do not want to create a work order, click
    No.

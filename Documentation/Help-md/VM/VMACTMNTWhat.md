@@ -8,14 +8,14 @@ What is Activity Maintenance?
 Use Activity Maintenance to:
 
 * [Review
-  your activities](VMACTMNTfrmActivities.htm)
+  your activities](VMACTMNTfrmActivities.md)
 * [Edit
-  basic activity information](Editing_Activities.htm)
+  basic activity information](Editing_Activities.md)
 * Open activities for editing
-  in [Activity Entry](VMACTENTfrmActivityEntry.htm)
+  in [Activity Entry](VMACTENTfrmActivityEntry.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

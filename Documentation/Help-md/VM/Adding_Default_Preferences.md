@@ -44,5 +44,5 @@ table shows only the entries for the section you specify.
 8. Click the Save
    button. The current date is inserted in the Modify Date column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Default_Preferences.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Default_Preferences.md)
 Default Preferences

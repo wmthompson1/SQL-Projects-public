@@ -61,6 +61,6 @@ Specify the quantity to issue to the requirement.
 
 You can also automatically issue materials
 to requirements based on rules that you select. See [Issuing
-by Exception Using Auto Issue Mode](Issuing_by_Exception_Using_Auto_Issue_Mode.htm).
+by Exception Using Auto Issue Mode](Issuing_by_Exception_Using_Auto_Issue_Mode.md).
 
 7. Click Save.

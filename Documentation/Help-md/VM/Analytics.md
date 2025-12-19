@@ -23,20 +23,20 @@ graph. You also cannot customize the colors used in the graphs.
 See these topics:
 
 * [Adding
-  an Analytic](Adding_an_Analytic.htm)
+  an Analytic](Adding_an_Analytic.md)
 * [Changing
-  an Analytic](Changing_an_Analytic.htm)
+  an Analytic](Changing_an_Analytic.md)
 * [Viewing
-  Analytic Data](Viewing_Analytic_Data.htm)
+  Analytic Data](Viewing_Analytic_Data.md)
 * [Viewing
-  Transactions for a Data Point](Viewing_Transactions_for_a_Data_Point.htm)
+  Transactions for a Data Point](Viewing_Transactions_for_a_Data_Point.md)
 * [Printing
-  an Analytic](Printing_an_Analytic.htm)
+  an Analytic](Printing_an_Analytic.md)
 * [Removing
-  an Analytic](Removing_an_Analytic.htm)
+  an Analytic](Removing_an_Analytic.md)
 * [Available
-  Analytics](Available_Analytics.htm)
+  Analytics](Available_Analytics.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) Creating a Dashboard
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) Creating a Dashboard
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

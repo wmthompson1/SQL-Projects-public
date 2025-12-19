@@ -42,6 +42,6 @@ The totals of the three shifts cannot exceed
 | --- | --- |
 | POSTIT.gif | First Shift is the period of hours starting at the 1st Shift Start time and ending after the specified number of hours in the shift. Second shift follows immediately after the first shift and ends after the specified number of hours. Third shift is after the second shift; it ends after the specified number of hours.  For example, if you specify a shift start of 7:00:00 AM, a first shift length of 8 hours, a second shift length of 8 hours, and a third shift length of 7 hours, first shift is 7:00 AM to 3:00 PM, the second shift is 3:00 p.m. to 11:00 p.m., and the third shift is 11:00 p.m. to 6 a.m. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Resource_Calendar_Exceptions.htm) Shop Resource Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Resource_Calendar_Exceptions.md) Shop Resource Maintenance

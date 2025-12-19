@@ -52,6 +52,6 @@ Comma, Tab, or Null (Fixed Length) as a delimiter.
 5. Begin to define a record
    layout.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Interchange.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Record_Layouts.htm)Defining
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Defining_Record_Layouts.md)Defining

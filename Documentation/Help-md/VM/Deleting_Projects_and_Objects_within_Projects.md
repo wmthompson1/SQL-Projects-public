@@ -36,4 +36,4 @@ deletes the object you selected from the project.
 | --- | --- |
 | POSTIT.gif | Deleting the main header card deletes the complete project; always double-check to make sure you have are deleting the correct object. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

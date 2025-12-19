@@ -65,4 +65,4 @@ The Current Part Only option is not available.
 8. Click Ok.
 
 [About
-the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.htm)
+the Costed Bill of Material Report Window](VMCSTBOMfrmPrintCostedBOMReport.md)

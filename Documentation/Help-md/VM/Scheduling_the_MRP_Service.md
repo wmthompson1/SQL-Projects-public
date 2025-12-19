@@ -27,7 +27,7 @@ To schedule the MRP Service:
 4. Specify the settings
    to use when MRP is run. The settings you can specify are the same
    settings you can select if you run MRP manually. See [Running
-   Material Requirements Planning Manually](Using_Material_Requirements_Planning.htm).
+   Material Requirements Planning Manually](Using_Material_Requirements_Planning.md).
 5. Specify when the service
    is active. Specify this information:
 

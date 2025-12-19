@@ -58,4 +58,4 @@ button to delete the resources from a particular Group Resource ID.
 Use the Copy button
 to copy the member list from one Group Resource ID to another.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

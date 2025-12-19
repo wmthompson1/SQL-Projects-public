@@ -11,7 +11,7 @@ to you and activities that you created.
 To review activities:
 
 1. [Access
-   Activity Maintenance](Starting_Activity_Maintenance.htm).
+   Activity Maintenance](Starting_Activity_Maintenance.md).
 2. To view only the activities
    assigned to you and the activities you created, select the My
    Activities Only check box. To view all activities, clear the My
@@ -36,7 +36,7 @@ a reminder has been set up for this activity, then the check box is
 selected. The assigned to user will receive a reminder provided that
 the user activates the reminder feature in Activity Maintenance Preferences.
 See [Activating Reminder
-Features](Activating_Reminder_Features.htm).
+Features](Activating_Reminder_Features.md).
 
 Category ID
 The ID of the category for this activity is displayed.
@@ -125,11 +125,11 @@ reminder is generated is displayed.
 Snooze Interval
 This field is reserved for future use.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 What is Activity Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -90,12 +90,12 @@ pass.
    making changes to your scheduling preferences, press click the
    OK button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Concurrent_Scheduler_Preferences.htm) Setting Concurrent Scheduler Preferences
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Concurrent_Scheduler_Preferences.md) Setting Concurrent Scheduler Preferences
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Allocation_Options.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Allocation_Options.md)
 Setting Allocation Options
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Material_Options.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Material_Options.md)
 Setting Material Options

@@ -42,9 +42,9 @@ basis. Estimates you enter in one site can only be converted to orders
 in the same site. If you are licensed to use a single site, enter
 quotes on an enterprise-wide basis.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Estimating_Process.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Estimating_Process.md)
 Estimating Process
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_The_Estimating_Window.htm) Starting the Estimating Window
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_The_Estimating_Window.md) Starting the Estimating Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

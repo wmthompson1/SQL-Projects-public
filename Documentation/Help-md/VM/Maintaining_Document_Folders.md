@@ -7,7 +7,7 @@ Maintaining Document Folders
 
 Use document folders to manage where your documents
 are stored. You can set up document folders in a variety of ways.
-See [Planning Document Storage](VMDOCMNTWhat.htm).
+See [Planning Document Storage](VMDOCMNTWhat.md).
 
 Document file paths can be up to 255 characters long, except for
 the Global Document path which is up to 128 characters long.
@@ -48,7 +48,7 @@ documents.
    to set the default file path for your selected Site and Reference
    Type combination.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTWhat.md)
 What is Document Maintenance?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

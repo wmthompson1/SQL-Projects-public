@@ -33,7 +33,7 @@ This table shows the task that you can complete in the Contact Maintenance
 window:
 
 | Task | Description |
-| [Creating Customer Groups](Creating_Customer_Groups.htm) | Use this procedure to create a customer group. |
+| [Creating Customer Groups](Creating_Customer_Groups.md) | Use this procedure to create a customer group. |
 
 ## Fields
 

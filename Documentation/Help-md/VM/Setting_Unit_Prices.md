@@ -20,17 +20,17 @@ information is maintained at the tenant level.
 
 If you specify pricing for a customer, then the pricing is used
 on orders for the customer. See [Customer
-Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.htm).
+Order Pricing Hierarchy](Customer_Order_Pricing_Hierarchy.md).
 
 This procedure describes how to set up customer pricing in Part
 Maintenance. You can also set up customer pricing in Customer Maintenance.
 See [Specifying Part Pricing for
-the Customer](VMCUSMNTfrmPartPricing.htm).
+the Customer](VMCUSMNTfrmPartPricing.md).
 
 To require that customer-specific pricing be set up for a part at
 the time of shipment, use the Effectivity Date Price for Shipments
 field on the Costing tab. See [Requiring
-the Use of Customer-specific Pricing at Shipment](Establishing_Customer_Price_Effectivity.htm).
+the Use of Customer-specific Pricing at Shipment](Establishing_Customer_Price_Effectivity.md).
 
 To add unit prices by customer:
 
@@ -105,4 +105,4 @@ currency. The customers currency is displayed beneath the table.
 
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Maintenance.md) User-defined Help

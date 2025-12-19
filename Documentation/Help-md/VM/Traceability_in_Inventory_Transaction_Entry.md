@@ -84,17 +84,17 @@ The following sections discuss the Create
 and/or Enter Lot Numbers and Set Quantities steps for specific inventory
 transactions. The rest of the steps are identical for all transactions.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Issue_of_Inventory_to_a_Work_Order.htm) For Issue of Inventory to a Work Order
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Issue_of_Inventory_to_a_Work_Order.md) For Issue of Inventory to a Work Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Return_of_Issued_Material_from_a_Work_Order.htm) For Return of Issued Material from a
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Return_of_Issued_Material_from_a_Work_Order.md) For Return of Issued Material from a
 Work Order
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Receipt_of_Finished_Goods.htm) For Receipt of Finished Goods
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Receipt_of_Finished_Goods.md) For Receipt of Finished Goods
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Receipt_Return_of_Finished_Goods.htm) For Receipt Return of Finished Goods
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Receipt_Return_of_Finished_Goods.md) For Receipt Return of Finished Goods
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Adjust_In_or_Adjust_Out_from_Inventory.htm) For Adjust In or Adjust Out from Inventory
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Adjust_In_or_Adjust_Out_from_Inventory.md) For Adjust In or Adjust Out from Inventory
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Transfer_Quantities_Between_Locations.htm) For Transfer Quantities Between Locations
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](For_Transfer_Quantities_Between_Locations.md) For Transfer Quantities Between Locations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

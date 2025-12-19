@@ -9,12 +9,12 @@ There are a number of options available for outputting
 Inventory Transactions information.
 
 * [Printing
-  Inventory Transaction Trace Labels](Printing_Inventory_Transaction_Trace_Labels.htm)
+  Inventory Transaction Trace Labels](Printing_Inventory_Transaction_Trace_Labels.md)
 * [Printing
-  Thermal Labels](Printing_Part_Thermal_Labels.htm)
+  Thermal Labels](Printing_Part_Thermal_Labels.md)
 * [Printing
-  Inventory Transaction Reports](Printing_Inventory_Transaction_Reports.htm)
+  Inventory Transaction Reports](Printing_Inventory_Transaction_Reports.md)
 * [Modifying
-  Report Formats](Modifying_Report_Formats.htm)
+  Report Formats](Modifying_Report_Formats.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

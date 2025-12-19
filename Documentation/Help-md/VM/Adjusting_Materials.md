@@ -43,7 +43,7 @@ locations that can store the part, click the Location browse button.
 6. For Adjust/In transactions,
    specify the costs of the materials you are adjusting in. To use
    the [costs defined on the
-   part record](VMPRTMNTfrmPart.htm#Costing), leave these fields blank. To override the costs,
+   part record](VMPRTMNTfrmPart.md#Costing), leave these fields blank. To override the costs,
    specify the Material, Labor, Burden, and Service costs for the
    new inventory. Take care not to specify zero. If you specify zero,
    then when this material is applied to the cost of a later work
@@ -61,15 +61,15 @@ locations that can store the part, click the Location browse button.
 
 Reason Specify
 the reason for the adjustment. Depending on [your
-settings in Site Maintenance](Specifying_Information_on_the_Defaults_Tab_site.htm), this field may be required.
+settings in Site Maintenance](Specifying_Information_on_the_Defaults_Tab_site.md), this field may be required.
 
 Account ID Specify
 the account to use to record the costs of this adjustment. To use
 the default account specified in the [sites
-general ledger interface](VF.chm::/Using_the_G_L_Account_Interface_Table.htm), leave this field blank.
+general ledger interface](Using_the_G_L_Account_Interface_Table.md), leave this field blank.
 
 9. If you use [dimensional
-   reporting](VF.chm::/Dimension_Reporting.htm), the default dimension IDs for the debit transaction
+   reporting](Dimension_Reporting.md), the default dimension IDs for the debit transaction
    are inserted into the Dimension 1 and Dimension 2 fields. The
    priorities you established for debit transactions for Adjustments
    are used to determine which IDs are inserted into the fields.
@@ -92,4 +92,4 @@ is populated with the default WBS Code, Project Reference Sequence
 Number, and Sub ID for the project. The department ID associated with
 the default WBS code is also inserted. You can specify different information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

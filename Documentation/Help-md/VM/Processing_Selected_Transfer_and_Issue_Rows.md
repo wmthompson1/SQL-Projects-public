@@ -26,16 +26,16 @@ VISUAL BTS processes the selected row. The standard VISUAL Purchase
 Receipt Entry window appears instantaneously and then disappears.
 The transaction is now processed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Timer_Options.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Timer_Options.md)
 Setting Timer Options
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Populating_Pending_Transactions_on_the_Timer.htm) Populating Pending Transactions on the
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Populating_Pending_Transactions_on_the_Timer.md) Populating Pending Transactions on the
 Timer
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Timer.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_the_Timer.md)
 Starting the Timer
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Stopping_the_Timer.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Stopping_the_Timer.md)
 Stopping the Timer
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Starting

@@ -49,4 +49,4 @@ assures that work will not begin until you specify otherwise.
 4. Click the Ok
    button to commit these preferences.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

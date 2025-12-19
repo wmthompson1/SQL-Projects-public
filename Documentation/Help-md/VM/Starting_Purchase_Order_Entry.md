@@ -34,4 +34,4 @@ This table contains one line for each separate purchase on the purchase
 order. You can configure this table; you can show, hide, resize, rename,
 and move columns to suit your individual needs.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

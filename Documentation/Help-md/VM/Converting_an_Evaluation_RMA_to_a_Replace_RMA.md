@@ -57,4 +57,4 @@ process, this check box has no effect.
 If you have not received the materials during the evaluation, then
 change the type from Evaluation to Replace. Then, process the replace
 RMA as you normally would. See [Replace
-RMAs](What_Are_Replace_RMAs_.htm).
+RMAs](What_Are_Replace_RMAs_.md).

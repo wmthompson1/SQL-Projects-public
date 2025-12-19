@@ -29,4 +29,4 @@ These rules and scenarios apply to journal preparation only. You
 can run receipt transaction costing and inventory transaction costing
 with the service at any time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

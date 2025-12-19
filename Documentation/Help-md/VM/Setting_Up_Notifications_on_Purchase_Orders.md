@@ -95,8 +95,8 @@ check box.
 13. Complete the order and
     then click the Save button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMNFTMNTfrmNotification.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMNFTMNTfrmNotification.md)
 Creating Email Templates for Notifications
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -21,6 +21,6 @@ To delete a reporting service print job configuration:
    retain the configuration in your database, click Delete
    again. The X is removed from the row header.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Monitoring_Reporting_Service_Print_Jobs.htm) Monitoring Reporting Service Print Jobs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Monitoring_Reporting_Service_Print_Jobs.md) Monitoring Reporting Service Print Jobs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

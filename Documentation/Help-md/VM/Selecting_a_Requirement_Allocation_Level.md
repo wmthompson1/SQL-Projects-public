@@ -17,4 +17,4 @@ Partial Allocation  This selection allows
 you to allocate supply to the work order requirement, but makes allocation
 optional.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

@@ -168,4 +168,4 @@ The Concurrent Scheduler allows you to prioritize work orders on
 a scale of one to fifty. In situations where work orders compete for
 the same resource, this decides which takes priority.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

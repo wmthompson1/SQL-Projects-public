@@ -19,7 +19,7 @@ VISUAL Allocation Utility considers only customer orders as demand.
 
 See Also
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Behind_the_Scenes_of_the_Allocation_Process.htm) Behind the Scenes of the Allocation
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Behind_the_Scenes_of_the_Allocation_Process.md) Behind the Scenes of the Allocation
 Processor
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md)

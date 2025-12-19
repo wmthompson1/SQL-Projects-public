@@ -31,4 +31,4 @@ in the To section.
 VISUAL copies the tests from the existing
 work order to the current work order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Operation_Input.md) User-defined Help

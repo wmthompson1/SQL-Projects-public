@@ -56,5 +56,5 @@ location.
    a forward request, the deliver to location information is blank.
 9. Complete the other fields
    in the move request as necessary. See [Manually
-   Creating a Move Request](Manually_Creating_a_Move_Request.htm).
+   Creating a Move Request](Manually_Creating_a_Move_Request.md).
 10. Click Save.

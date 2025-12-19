@@ -5,7 +5,7 @@ Top Projects
 
 # Top Projects
 
-This [dashboard](VMDBOARDWhat.htm) analytic
+This [dashboard](VMDBOARDWhat.md) analytic
 is available only if you are licensed to use projects/A&D functionality.
 This analytic shows the projects with the highest target price. You
 can specify the number of projects to view in the chart.
@@ -31,13 +31,13 @@ Business Line, Project Type, Contract Type, Contract Admin, Program
 Manager, Financial Analyst, Site ID
 
 Detail grid: Click any bar to view the
-[Project Info](Project_Info_detail.htm) detail grid filtered
+[Project Info](Project_Info_detail.md) detail grid filtered
 to the selected project.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

@@ -18,10 +18,10 @@ This table shows the tasks that you can complete in the Move Requests
 window:
 
 | Task | Description |
-| [Adjusting WIP Materials into Locations](Adjusting_WIP_Materials_into_Locations.htm) | Use this procedure to adjust materials into a WIP location. |
-| [Adjusting WIP Materials out of Locations](Adjusting_WIP_Materials_out_of_Locations.htm) | Use this procedure to adjust materials out of a WIP location. |
-| [Transferring WIP Materials Between Locations](Transferring_WIP_Materials_Between_Locations.htm) | Use this procedure to move materials from one WIP location to another. |
-| [Reviewing WIP Inventory Transactions](Reviewing_WIP_Inventory_Transactions.htm) | Use this procedure to review completed WIP inventory transactions. |
+| [Adjusting WIP Materials into Locations](Adjusting_WIP_Materials_into_Locations.md) | Use this procedure to adjust materials into a WIP location. |
+| [Adjusting WIP Materials out of Locations](Adjusting_WIP_Materials_out_of_Locations.md) | Use this procedure to adjust materials out of a WIP location. |
+| [Transferring WIP Materials Between Locations](Transferring_WIP_Materials_Between_Locations.md) | Use this procedure to move materials from one WIP location to another. |
+| [Reviewing WIP Inventory Transactions](Reviewing_WIP_Inventory_Transactions.md) | Use this procedure to review completed WIP inventory transactions. |
 
 ## Fields
 

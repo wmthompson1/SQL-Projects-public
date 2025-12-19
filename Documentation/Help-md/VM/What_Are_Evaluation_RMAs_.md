@@ -25,16 +25,16 @@ missteps in the RMA cycle.
 Use these procedures to enter and process evaluation RMAs:
 
 * [Creating
-  Evaluation RMAs](Creating_Evaluation_RMAs.htm)
+  Evaluation RMAs](Creating_Evaluation_RMAs.md)
 * [Building
-  the Repair Quote](Building_the_Repair_Quote.htm)
+  the Repair Quote](Building_the_Repair_Quote.md)
 * [Building
-  the Evaluation Work Order](Building_the_Evaluation_Work_Order.htm)
+  the Evaluation Work Order](Building_the_Evaluation_Work_Order.md)
 * [Receiving
-  Returned Materials to an Evaluation RMA](Receiving_Returned_Materials_to_an_Evaluation_RMA.htm)
+  Returned Materials to an Evaluation RMA](Receiving_Returned_Materials_to_an_Evaluation_RMA.md)
 * [Converting
-  an Evaluation RMA](Converting_an_Evaluation_RMA.htm)
+  an Evaluation RMA](Converting_an_Evaluation_RMA.md)
 * [Closing
-  or Canceling Incomplete Evaluation RMAs](Closing_or_Canceling_Incomplete_Evaluation_RMAs.htm)
+  or Canceling Incomplete Evaluation RMAs](Closing_or_Canceling_Incomplete_Evaluation_RMAs.md)
 * [Charging
-  a Fee for an Evaluation](Charging_a_Fee_for_an_Evaluation.htm)
+  a Fee for an Evaluation](Charging_a_Fee_for_an_Evaluation.md)

@@ -117,7 +117,7 @@ days.
    to commit these settings.
 5. Continue on to specify E-Commerce
    settings for each of the customers shipping addresses. Click
-   [here](Setting_Customer_Shipping_Address_E_Commerce_Preferences.htm)
+   [here](Setting_Customer_Shipping_Address_E_Commerce_Preferences.md)
    for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

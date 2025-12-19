@@ -162,9 +162,9 @@ MRP may take a few minutes to run, depending
 on the number of parts that require processing, the number of demand
 orders, the speed of your machine, and other factors.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](MRP_Processing.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](MRP_Processing.md)
 MRP Processing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Firming_and_Releasing_Planned_Orders.htm) Firming and Releasing Planned Orders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Firming_and_Releasing_Planned_Orders.md) Firming and Releasing Planned Orders

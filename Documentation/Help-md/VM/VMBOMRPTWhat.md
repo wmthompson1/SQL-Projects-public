@@ -28,7 +28,7 @@ unit of measure appear.
 
 VMBOMRPT.QRP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMBOMRPTfrmPrintBOMReport.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMBOMRPTfrmPrintBOMReport.md)
 Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Bill_of_Material_Report.md) User-defined Help

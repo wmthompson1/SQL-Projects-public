@@ -19,5 +19,5 @@ To add an honorific code:
 4. Specify the honorific.
 5. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.htm) Deleting Codes in Application Global
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Codes_in_Application_Global_Maintenance.md) Deleting Codes in Application Global
 Maintenance

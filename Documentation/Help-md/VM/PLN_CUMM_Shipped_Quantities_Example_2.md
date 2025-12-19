@@ -37,32 +37,32 @@ PLN CUMM Shipped Quantities - Example 2
 |  |  |  |
 | Note: since the customer forecast (HDR) data received from our trading partner includes quantities prior to today and we are NOT starting the proration on the transmission date, Today is automatically included in the proration. As a result, examples 9 and 10 create the same set of customer forecasts. | | |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.htm) CPO Discrete Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](CPO_Discrete_Quantities_Example_1.md) CPO Discrete Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.htm) PLN Discrete Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_Discrete_Quantities_Example_1.md) PLN Discrete Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_1.md) PLN CUMM Shipped Quantities Example
 1
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_3.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_3.md) PLN CUMM Shipped Quantities Example
 3
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_4.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_4.md) PLN CUMM Shipped Quantities Example
 4
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_5.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_5.md) PLN CUMM Shipped Quantities Example
 5
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_6.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_6.md) PLN CUMM Shipped Quantities Example
 6
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_7.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_7.md) PLN CUMM Shipped Quantities Example
 7
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_8.htm) PLN CUMM Shipped Quantities Example
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_Shipped_Quantities_Example_8.md) PLN CUMM Shipped Quantities Example
 8
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.htm) PLN CUMM FAB Quantities Examples
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](PLN_CUMM_FAB_Quantities_Example_1.md) PLN CUMM FAB Quantities Examples
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Test_Scenario_1.md)
 Working with Subtract Intransit Quantities (CPO CUM Quantities)

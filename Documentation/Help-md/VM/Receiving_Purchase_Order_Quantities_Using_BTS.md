@@ -39,7 +39,7 @@ depend on the scanned purchase order.
 
 [Click
 here for an example of the receipt of goods from a purchase order
-using VBTS](An_Example_of_the_Receipt_of_Goods_From_a_Purchase_Order_Using_VBTS.htm)
+using VBTS](An_Example_of_the_Receipt_of_Goods_From_a_Purchase_Order_Using_VBTS.md)
 
 ![btn_mini.gif](btn_mini.gif "btn_mini.gif") Receiving
 PO Quantities using BTS User Defined Information

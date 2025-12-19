@@ -36,4 +36,4 @@ supports high contrast mode in the material panel and is not affected
 by the Size Preference settingsonly the background and text colors
 are affected.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -18,8 +18,8 @@ Viewing Engineering Master Simulation costs
    Eng Master Costs. The Engineering Master
    Simulation Costs table is displayed.
 5. Select an [output
-   option](Report_Output_Options.htm).
+   option](Report_Output_Options.md).
 6. Select File,
    Print.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

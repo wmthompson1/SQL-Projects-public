@@ -10,7 +10,7 @@ conduct on a predefined schedule, such as every thirty days. To select
 the parts and warehouse that are subject to cycle counts, use Part
 Maintenance.
 
-See [Cycle Counts](Cycle_Counts.htm).
+See [Cycle Counts](Cycle_Counts.md).
 
 If you have set up cycle counting for parts in a warehouse, then
 these actions occur when you initialize a physical inventory count:

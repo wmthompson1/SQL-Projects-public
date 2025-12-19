@@ -27,5 +27,5 @@ entity level includes:
 Information you define at the accounting entity level applies to
 each of the sites that belong to the entity.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMAENMNTfrmAccountingEntity.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMAENMNTfrmAccountingEntity.md)
 Creating an Accounting Entity

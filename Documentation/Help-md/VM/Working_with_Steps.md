@@ -24,4 +24,4 @@ with the step. Some of the things you may want to consider are:
   one step or rule can effect other steps, you may also want to
   consider what happens on prior and subsequent rules and steps.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

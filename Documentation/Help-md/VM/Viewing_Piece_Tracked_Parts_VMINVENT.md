@@ -6,10 +6,10 @@ Viewing Piece Tracked Parts
 # Viewing Piece Tracked Parts
 
 When [adjusting in
-or adjusting out](Adjusting_Materials.htm) part quantities, you can view piece tracked inventory
+or adjusting out](Adjusting_Materials.md) part quantities, you can view piece tracked inventory
 information. You can view this information in the main Inventory Transaction
 window. You can also view this information when you [transfer
-inventory](VMINVENT_APLfrmInventoryTransfer.htm) between warehouse locations.
+inventory](VMINVENT_APLfrmInventoryTransfer.md) between warehouse locations.
 
 For example, if you need to adjust in 200 pieces of Part 5/8 stock,
 but are unsure of how many parts you currently have in the location

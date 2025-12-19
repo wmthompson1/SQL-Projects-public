@@ -128,4 +128,4 @@ VISUAL prints the report.
 | Use Work Order Status | VMWIPRPT.QRP |
 | Use Posted Value | VMWIPRP2.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_in_Process_Report.md) User-defined Help

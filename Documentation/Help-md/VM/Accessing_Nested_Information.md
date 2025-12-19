@@ -100,4 +100,4 @@ with the project summary lines you highlight.
 3. Double-click a line
    to view the Show Detail for Actuals window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

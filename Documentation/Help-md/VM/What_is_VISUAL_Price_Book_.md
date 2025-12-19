@@ -38,6 +38,6 @@ See also:
 
 |  |  |  |  |  |  |  |  |  |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| [Prices](VPBfrmPriceMatrix.htm) | [Costs](VPBCosts.htm) | [Discounts](VPBDiscounts.htm) | [Markups](VPBMarkups.htm) | [Markdowns](VPBMarkdowns.htm) | [Groups](VPBfrmPartGroups.htm) | [Part](VPBfrmPartGroups.htm) | [Commissions](VPBfrmCommissionMatrix.htm) | [Formulas](VPBfrmFormulas.htm) |
+| [Prices](VPBfrmPriceMatrix.md) | [Costs](VPBCosts.md) | [Discounts](VPBDiscounts.md) | [Markups](VPBMarkups.md) | [Markdowns](VPBMarkdowns.md) | [Groups](VPBfrmPartGroups.md) | [Part](VPBfrmPartGroups.md) | [Commissions](VPBfrmCommissionMatrix.md) | [Formulas](VPBfrmFormulas.md) |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_VISUAL_Price_Book.md) User-defined Help

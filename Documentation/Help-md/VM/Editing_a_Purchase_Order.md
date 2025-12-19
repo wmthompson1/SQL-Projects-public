@@ -13,7 +13,7 @@ reopen the order before saving changes.
 If receipts have been made for a purchase order, then your ability
 to edit the order depends upon whether the Prevent edit of PO after
 receipt check box is selected for the vendor in Vendor Maintenance.
-[See Adding Vendors](VMVNDMNTfrmVendor.htm).
+[See Adding Vendors](VMVNDMNTfrmVendor.md).
 
 If the Prevent edit of PO after receipt check box is selected for
 the vendor, then you cannot edit any information on the purchase order
@@ -153,7 +153,7 @@ Reassign materials you
 have already received from one work order to another
 
 Add new line items using the method described
-in [Creating a Purchase Order](VMPURENTfrmPurchaseOrder.htm).
+in [Creating a Purchase Order](VMPURENTfrmPurchaseOrder.md).
 - You must re-release a closed PO to add new line items.
 
 Delete any un-received lines, as necessary.
@@ -161,4 +161,4 @@ Delete any un-received lines, as necessary.
 4. Click Save
    to save the changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help

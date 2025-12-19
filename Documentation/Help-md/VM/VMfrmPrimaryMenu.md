@@ -54,24 +54,24 @@ down the Shift key and pressing the Ins (Insert) key.
 These menus are used in all windows:
 
 * [File
-  Menu](File_Menu.htm)
+  Menu](File_Menu.md)
 * [Edit
-  Menu](Edit_Menu.htm)
+  Menu](Edit_Menu.md)
 * [View
-  Menu](View_Menu.htm)
+  Menu](View_Menu.md)
 * [Options
-  Menu](Options_Menu.htm)
+  Menu](Options_Menu.md)
 * [Help
-  Menu](Help_Menu.htm)
+  Menu](Help_Menu.md)
 
 Other menus with the same or similar options are used in several
 windows. These menus include:
 
 * [Info
-  Menu](Info_Menu.htm)
+  Menu](Info_Menu.md)
 * [Notes
-  Menu](Notes_Menu.htm)
+  Menu](Notes_Menu.md)
 * [Macros
-  Menu](Macros_Menu.htm)
+  Menu](Macros_Menu.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

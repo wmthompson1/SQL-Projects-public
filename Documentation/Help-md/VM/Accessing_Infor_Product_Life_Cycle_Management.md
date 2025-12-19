@@ -16,8 +16,8 @@ from Part Maintenance, you must meet these criteria:
 * You must specify that the
   site has access to PLM. You can specify this information either
   in [Application
-  Global Maintenance](Specifying_Default_PLM_Access_Information_in_Application_Global_Maintenance.htm) or in [Site
-  Maintenance](Specifying_Site-specific_PLM_Access_Information_in_Site_Maintenance.htm).
+  Global Maintenance](Specifying_Default_PLM_Access_Information_in_Application_Global_Maintenance.md) or in [Site
+  Maintenance](Specifying_Site-specific_PLM_Access_Information_in_Site_Maintenance.md).
 * You must specify the URL
   to use to access PLM for the site. You can specify this information
   either in Application Global Maintenance or in Site Maintenance.

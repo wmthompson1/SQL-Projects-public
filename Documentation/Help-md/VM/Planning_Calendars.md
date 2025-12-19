@@ -37,4 +37,4 @@ Tuesday, Wednesday, and Thursday is 100. On Friday, gross demand is
 is only 800 - as it is greater than the 500 of real demand - for the
 entire week.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

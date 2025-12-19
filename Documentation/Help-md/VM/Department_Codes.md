@@ -19,9 +19,9 @@ departments you use in your projects must also exist in the G/L. Departments,
 along with Cost Categories, determine where VISUAL charges your costs
 in your projects and general ledger.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Departments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Departments.md)
 Adding Departments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Subordinate_Departments.htm) Specifying Subordinate Departments
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Subordinate_Departments.md) Specifying Subordinate Departments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User-defined Help

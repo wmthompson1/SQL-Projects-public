@@ -5,7 +5,7 @@ Process Activity % Over Standard
 
 # Process Activity % Over Standard
 
-This [dashboard](VMDBOARDWhat.htm) analytic shows the
+This [dashboard](VMDBOARDWhat.md) analytic shows the
 percentage of steps in your leadtime processes that took longer than
 the specified standard.
 
@@ -25,14 +25,14 @@ ID
 Filters: Customer ID, Territory, Product
 Code, Part ID, Process ID, Process Type, Sites.
 
-Detail Grid: Click a bar to view the [Process Activity % Over Std](Process_Activity___Over_Std.htm)
+Detail Grid: Click a bar to view the [Process Activity % Over Std](Process_Activity___Over_Std.md)
 detail grid filtered to display the process IDs that contribute to
 the bar.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Analytics.md)
 Analytics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

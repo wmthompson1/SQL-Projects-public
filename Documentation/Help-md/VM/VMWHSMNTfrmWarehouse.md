@@ -83,7 +83,7 @@ Planned Warehouse If you want this warehouse to be an independently
 planned warehouse, select the Independently Planned
 Warehouse check box. Independently planned warehouses are eligible
 for MRP on an individual basis. Warehouses that are not independently
-planned belong to the warehouse designation UNIVERSAL. Click [here](MRP_Processing.htm)
+planned belong to the warehouse designation UNIVERSAL. Click [here](MRP_Processing.md)
 for more information.
 
 WIP/VAS Supported
@@ -91,7 +91,7 @@ If the warehouse supports WIP/VAS, select the WIP/VAS
 Supported check box. WIP/VAS must be globally activated in
 Application Global Maintenance. For more information on setting WIP/VAS
 information, refer to [Setting
-WIP/VAS Information for Warehouses](Setting_WIP_VAS_Information_for_Warehouses.htm).
+WIP/VAS Information for Warehouses](Setting_WIP_VAS_Information_for_Warehouses.md).
 
 Warehouse
 WIP/VAS If this warehouse supports WIP/VAS, click the Warehouse WIP/VAS browse button and set up the
@@ -192,7 +192,7 @@ Vendor option. Double-click the Vendor ID browse button and
 select the vendor with whom you want to associate this location.
 
 For more information, refer to [What
-is Consignment Receipt Entry.](VMCSNRCVfrmConsignmentReceiving.htm)
+is Consignment Receipt Entry.](VMCSNRCVfrmConsignmentReceiving.md)
 
 |  |  |
 | --- | --- |
@@ -206,4 +206,4 @@ is Consignment Receipt Entry.](VMCSNRCVfrmConsignmentReceiving.htm)
     entering locations for this warehouse, select the Exit
     option from the File menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Warehouse_Maintenance.md) User-defined Help

@@ -10,7 +10,7 @@ numbers, work orders, and sales orders. Use auto-numbering if you
 want VISUAL to automatically assign IDs as it completes transactions
 involving call numbers, work orders, and sales orders. Without auto-numbering
 preferences specified, you must assign IDs to the above three types.
-See [Using Auto Numbering](Using_Auto_Numbering.htm).
+See [Using Auto Numbering](Using_Auto_Numbering.md).
 
 To set call number auto-numbering preferences, from the Edit menu
 select Auto Numbering, Call
@@ -25,7 +25,7 @@ Sales Order ID.
 
 The auto-numbering dialog box appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Auto_Numbering.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Auto_Numbering.md)
 Establishing Auto-numbering Preferences

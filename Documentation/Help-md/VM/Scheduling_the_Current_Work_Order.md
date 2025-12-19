@@ -74,4 +74,4 @@ Total Days Delay
 - Similar to Determinant Path Days Delay, this is the days delay for
 all operations in the work order, not just the determinant path.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

@@ -36,9 +36,9 @@ table by data group.
 After you run a search, you can generate a report about a data subject
 and redact a data subjects information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVfrmIndividualPrivacy.htm) Searching for a Data Subject
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVfrmIndividualPrivacy.md) Searching for a Data Subject
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

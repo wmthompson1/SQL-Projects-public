@@ -67,4 +67,4 @@ This value is influenced by the number of days late and the value
 you specify in the Yield % field in the Soft Allocations Setup dialog.
 5 % is the default.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

@@ -14,14 +14,14 @@ The Concurrent Scheduler supports two types of schedule: Finite
 and Infinite capacity. A finite capacity schedule uses the capacities
 defined for each shop resource, while an infinite capacity schedule
 ignores any capacity constraints. See [Behind
-the Scenes of the Scheduling Process](Behind_the_Scenes_of_the_Scheduling_Process.htm).
+the Scenes of the Scheduling Process](Behind_the_Scenes_of_the_Scheduling_Process.md).
 
 ## Check Material Availability
 
 This option allows on-hand quantities, planned availability, and
 part acquisition lead times to affect the schedule. For more information,
 see [Running the Concurrent
-Scheduler Manually](Running_the_Concurrent_Scheduler.htm).
+Scheduler Manually](Running_the_Concurrent_Scheduler.md).
 
 ## Fit Tolerance
 
@@ -32,4 +32,4 @@ looks for a slot into which it can fit 90% of the operation. It is
 assumed that the remaining 10% of the operation can be completed in
 this 90% time slot. The value must be between 50 and 100 percent.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

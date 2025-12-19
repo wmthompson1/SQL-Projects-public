@@ -29,5 +29,5 @@ on the leg must also use an auto-reporting resource:
 | Backflush Subordinate Legs check box cleared  Generate Labor Tickets During Backflush check box selected | Qty | Qty |
 | Backflush Subordinate Legs check box selected  Generate Labor Tickets During Backflush check box selected | Qty, Hrs, Cost | Qty, Hrs, Cost |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Backflushing_Labor_Tickets.md)
 Working with Backflushing

@@ -104,4 +104,4 @@ the promise of supply.
 Several days later, the Customer Service rep places a followup call
 to see if everything arrived on time and in good condition.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Order_Management_Window.md) User-defined Help

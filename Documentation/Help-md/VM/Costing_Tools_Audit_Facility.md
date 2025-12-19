@@ -35,25 +35,25 @@ the Selection Area of the Costing Tools window, except for the Exceptions
 only check box control the column display in the Detail Area of the
 window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchases.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Purchases.md)
 Purchase
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP.md)
 WIP
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finished_Goods.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Finished_Goods.md)
 Finished Goods
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipments.md)
 Shipments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adjustments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adjustments.md)
 Adjustments
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Indirect_Labor.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Indirect_Labor.md)
 Indirect Labor
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP_Balance.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](WIP_Balance.md)
 WIP Balance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help

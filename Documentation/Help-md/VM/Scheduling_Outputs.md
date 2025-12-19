@@ -28,4 +28,4 @@ these constraints could be called a "critical path."
 The determinant path operations appear in the Scheduling Window
 as green bars. Late determinant path operations appear as olive bars.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

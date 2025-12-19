@@ -299,24 +299,24 @@ button to select effective and discontinue dates.
 | --- | --- |
 | POSTIT.gif | If you want to quickly add a material with minimal details, clear the Material Edit Form option on the Views menu.  When you add a material, a list of parts appears, select the part you want to use for the material.  VISUAL creates an material requirement with the next sequential number using only the information from the part record.  If you have opened the Material child window, you can use the Show/Hide Edit Material Form toolbar buttons to hide or show the Material window. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Overriding_Material_Costs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Overriding_Material_Costs.md)
 Overriding Material Costs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Vendor_Information.htm) Specifying Vendor Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Vendor_Information.md) Specifying Vendor Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_a_Picture_Object.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_a_Picture_Object.md)
 Embedding a Picture/Object
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Quantity_Break_Costs.htm) Setting Quantity Break Costs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Quantity_Break_Costs.md) Setting Quantity Break Costs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Planning_Leadtime_Information.htm) Specifying Planning/Leadtime Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Planning_Leadtime_Information.md) Specifying Planning/Leadtime Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Material_User_Defined_Field_Labels.htm) Material Requirement User Defined Field
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_Material_User_Defined_Field_Labels.md) Material Requirement User Defined Field
 Labels
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Reference_Designators.htm) Specifying Reference Designators
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Reference_Designators.md) Specifying Reference Designators
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Alternate_Parts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Alternate_Parts.md)
 Specifying Alternate Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

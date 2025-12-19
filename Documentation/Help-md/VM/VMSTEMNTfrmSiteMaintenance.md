@@ -41,18 +41,18 @@ To create a site:
 Refer to these topics to complete the site record:
 
 [Specifying
-Information on the General Tab](Specifying_Information_on_the_General_Tab_site.htm)
+Information on the General Tab](Specifying_Information_on_the_General_Tab_site.md)
 
 [Specifying
-Information on the Scheduling Tab](Specifying_Information_on_the_Scheduling_Tab_site.htm)
+Information on the Scheduling Tab](Specifying_Information_on_the_Scheduling_Tab_site.md)
 
 [Setting Shipment
-Tracking Information](Setting_Shipment_Tracking_Information.htm)
+Tracking Information](Setting_Shipment_Tracking_Information.md)
 
 [Specifying Information
-on the ECN Tab](Specifying_Information_on_the_ECN_Tab.htm)
+on the ECN Tab](Specifying_Information_on_the_ECN_Tab.md)
 
 [Specifying
-Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.htm)
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Application_Global_Maintenance.md) User Defined Help

@@ -43,7 +43,7 @@ check box. When you are finished, click Ok.
    schedule is selected by default. You can select more than one
    schedule. If you select multiple schedules, you can use delta
    graphs to compare differences between them. See [Viewing
-   & Interpreting Customer Service Impact Delta Graph Information](Viewing_Interpreting_Customer_Service_Impact_Delta_Graph_Information.htm).
+   & Interpreting Customer Service Impact Delta Graph Information](Viewing_Interpreting_Customer_Service_Impact_Delta_Graph_Information.md).
 6. In the Measurement section,
    select how to measure customer service impact:
 
@@ -121,28 +121,28 @@ service impact is shown for this Schedule ID by day.
     button. To display the data as a table, click the Table
     toolbar button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Customer_Service_Impact_Graph_Window.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Customer_Service_Impact_Graph_Window.md)
 Using the Customer Service Impact Inquiry Graph Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Customer_Service_Impact_Graphs_.htm) Modifying Customer Service Impact Inquiry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Modifying_Customer_Service_Impact_Graphs_.md) Modifying Customer Service Impact Inquiry
 Graphs
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Service_Impact_Graphic_Information_Tabularly.htm) Viewing Customer Service Impact Graphs
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Service_Impact_Graphic_Information_Tabularly.md) Viewing Customer Service Impact Graphs
 Tabularly
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Service_Impact_Graph_Details.htm) Viewing Customer Service Impact inquiry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Customer_Service_Impact_Graph_Details.md) Viewing Customer Service Impact inquiry
 Graph Details
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Navigating_in_the_Customer_Service_Impact_Detail_Dialog_Box.htm) Navigating in the Customer Service Impact
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Navigating_in_the_Customer_Service_Impact_Detail_Dialog_Box.md) Navigating in the Customer Service Impact
 Inquiry Detail Dialog
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_the_Customer_Service_Impact_Detail_Dialog_Box_Line_Item_Table.htm) Configuring the Customer Service Impact
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Configuring_the_Customer_Service_Impact_Detail_Dialog_Box_Line_Item_Table.md) Configuring the Customer Service Impact
 Inquiry Detail Dialog
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Interpreting_Customer_Service_Impact_Delta_Graph_Information.htm) Viewing and Interpreting Customer Service
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Interpreting_Customer_Service_Impact_Delta_Graph_Information.md) Viewing and Interpreting Customer Service
 Impact Inquiry Delta Graph Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Customer_Service_Impact_Reports.htm) Printing Customer Service Impact Inquiry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Customer_Service_Impact_Reports.md) Printing Customer Service Impact Inquiry
 Reports

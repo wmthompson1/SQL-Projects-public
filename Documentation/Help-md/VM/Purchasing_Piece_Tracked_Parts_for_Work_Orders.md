@@ -14,5 +14,5 @@ This is true even if you use the CalcQtyByPieces = N setting in Preferences
 Maintenance.
 
 See [Calculated
-Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.htm) and [Purchasing
-Materials for Work Orders](Purchasing_Materials.htm).
+Quantity Values for Piece Tracked Parts](Calculated_Quantity_Values_for_Piece_Tracked_Parts.md) and [Purchasing
+Materials for Work Orders](Purchasing_Materials.md).

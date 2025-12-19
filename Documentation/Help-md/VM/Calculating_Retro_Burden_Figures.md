@@ -86,4 +86,4 @@ and updates the Project Summary window with the new information.
 When you have finished calculating retro
 burdens, click the Close button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

@@ -51,10 +51,10 @@ Output table.
 To export specific rows to Excel, select the rows in the Query Tool
 Output table and then select File, Send query output to Excel.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYWhat.md)
 What is the Query Tool?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYfrmMain.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMQUERYfrmMain.md)
 Creating a Query

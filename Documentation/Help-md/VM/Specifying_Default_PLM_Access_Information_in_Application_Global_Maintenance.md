@@ -8,7 +8,7 @@ Specifying Default PLM Access Information in Application Global Maintenance
 Use Application Global Maintenance to specify default PLM access
 information. The information you specify can be used for all sites
 in your database, or you can choose to [override
-PLM access information on a site-by-site basis in Site Maintenance](Specifying_Site-specific_PLM_Access_Information_in_Site_Maintenance.htm).
+PLM access information on a site-by-site basis in Site Maintenance](Specifying_Site-specific_PLM_Access_Information_in_Site_Maintenance.md).
 
 To specify default access information:
 

@@ -60,8 +60,8 @@ AR Payments
 Payment Ref ID, Payment ID, Customer ID, Payment Date, Payment Amount,
 Total Amount, Invoice ID, Cust Order(s).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.md)
 Using the Tree Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -24,4 +24,4 @@ Code or sets this as the purchase receipt lines default HTS Code.
 4. Click the Save
    button to commit these new or modified settings.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Receipt_Entry.md) User-defined Help

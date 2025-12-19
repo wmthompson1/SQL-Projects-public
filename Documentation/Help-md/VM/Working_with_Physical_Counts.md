@@ -6,7 +6,7 @@ Working with Physical Counts
 # Working with Physical Counts
 
 For more information on Physical Inventory Counting,
-refer to [What is Physical Inventory Count?](VMPHYINVWhat.htm)
+refer to [What is Physical Inventory Count?](VMPHYINVWhat.md)
 
 VISUAL prevents you from performing physical inventory counts on
 project warehouses that do not have at least one associated WBS code.
@@ -43,7 +43,7 @@ this count.
 | --- | --- |
 | POSTIT.gif | If you are counting a non-project warehouse, the above fields appear gray. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPHYINVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMPHYINVWhat.md)
 What is Physical Inventory Count?

@@ -138,4 +138,4 @@ in read-only mode during editing. Even though the default mode of
 display is hidden, you can reconfigure the line item table to show
 any of the user-defined fields.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

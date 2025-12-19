@@ -18,7 +18,7 @@ After you run a search, you can use the Find Next and Find Previous
 buttons to navigate among your search results. You can also use the
 Up key and the Down key to navigate among your search results. If
 you [specified
-a color for Found Rows in the Preferences dialog](Specifying_Color_Preferences_in_the_Costs_Table.htm), then all rows
+a color for Found Rows in the Preferences dialog](Specifying_Color_Preferences_in_the_Costs_Table.md), then all rows
 that match your search criteria are highlighted with the color you
 specified.
 

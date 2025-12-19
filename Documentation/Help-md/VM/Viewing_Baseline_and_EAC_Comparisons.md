@@ -28,4 +28,4 @@ in the Project EAC/Target Costs window.
    viewing your Baseline/EAC Comparisons, click the Close
    button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

@@ -24,7 +24,7 @@ there is no need to specify this information.
    ID (Sold To) button or arrow to select from a list of valid
    Language IDs. If no Language IDs appear in the Languages dialog
    box or drop down box, you have not added any Language IDs to the
-   database. See [Entering Languages](Entering_Languages.htm).
+   database. See [Entering Languages](Entering_Languages.md).
 
 This is the Language ID you want to associate
 with the customers main address.
@@ -41,10 +41,10 @@ with the customers billing address.
 4. Click the Save
    button to commit the Language IDs to this customer.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Languages.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Entering_Languages.md)
 Entering Languages
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Language_QRP_Forms.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Language_QRP_Forms.md)
 Language QRP Forms
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

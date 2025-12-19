@@ -22,7 +22,7 @@ The Call Reporting dialog box appears.
    sites to include in the report. If you are licensed to use a single
    site, this field is unavailable.
 3. Specify a date range
-   for the report by clicking the [calendar](Using_the_Calendar_Button.htm)
+   for the report by clicking the [calendar](Using_the_Calendar_Button.md)
    buttons or manually entering a date range.
 4. Select a Report by option
    button. Choices include, customer, engineer, area, equipment,
@@ -107,4 +107,4 @@ and/or CC the file.
 8. Click the Cancel
    button to return to the Unplanned Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Unplanned_Maintenance.md) User-defined Help

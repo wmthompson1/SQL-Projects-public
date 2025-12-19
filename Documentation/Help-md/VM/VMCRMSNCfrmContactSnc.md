@@ -56,14 +56,14 @@ the frmContactSnc section.
    table and their associated IDs to the database. Actions for processing
    contacts are written to the log file.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_What.md)
 What is the Synchronize Contact Utility?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_InterfaceOvrvw.md)
 Navigating in the Synchronize Contact Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_CustomerAccountTableSort.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_CustomerAccountTableSort.md)
 Sorting the Contact table in the Synchronize Contact Utility
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_LinkingExistingContacts.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNC_SyncContactUtility_LinkingExistingContacts.md)
 Linking Existing Contacts

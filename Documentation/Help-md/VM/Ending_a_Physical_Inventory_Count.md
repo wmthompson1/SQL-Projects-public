@@ -118,4 +118,4 @@ the database. This is because many part records may be changing. Because
 concurrent inventory transactions may not be possible, it is easiest
 to perform this procedure at a low-use time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Physical_Inventory_Count.md) User-defined Help

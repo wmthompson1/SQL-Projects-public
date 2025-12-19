@@ -37,4 +37,4 @@ The Edit Command Item dialog box closes.
 The Customize dialog box closes and your
 changes appear in the Personal Menu.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

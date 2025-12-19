@@ -29,4 +29,4 @@ To mark billing events:
    | --- | --- |
    | POSTIT.gif | VISUAL does not generate invoices until you print them. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Billing_Inquiry.md) User-defined Help

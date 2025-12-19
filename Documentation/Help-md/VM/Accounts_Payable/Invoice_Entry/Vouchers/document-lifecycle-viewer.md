@@ -16,4 +16,4 @@ For sales lifecycle documents you can view the analogous AR fields (Quotes, Orde
 _Source: Document_Lifecycle_Viewer.htm (converted)._ 
 
 **See also:**
-![nav](../../../../../Visual Mfg Help Files/VM/btn_mini.gif) `Using the Tree Display` — original help index icon
+![nav](btn_mini.gif) `Using the Tree Display` — original help index icon

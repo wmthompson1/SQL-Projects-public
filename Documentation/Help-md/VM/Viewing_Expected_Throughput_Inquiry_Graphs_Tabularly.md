@@ -15,4 +15,4 @@ ranges (daily, weekly, or monthly) for which you requested utilization
 information each represent one column in the table. The dollar amount
 of expected throughput appears for the selected time period as well.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Throughput_Window.md) User-defined Help

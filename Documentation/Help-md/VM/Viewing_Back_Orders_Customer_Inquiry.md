@@ -35,4 +35,4 @@ Click the Next
 or Prev buttons to view the next or previous
 backorder from the search results table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Inquiry.md) User-defined Help

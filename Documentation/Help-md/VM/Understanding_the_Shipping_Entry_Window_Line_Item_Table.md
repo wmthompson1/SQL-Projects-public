@@ -221,12 +221,12 @@ account for the part. Enter G/L accounts in the Accounting Window.
 Packlist Long Description - A description
 of the packlist. Enter descriptions using the Edit Packlist function.
 See [Working With Existing
-Packlists](Working_With_Existing_Packlists.htm).
+Packlists](Working_With_Existing_Packlists.md).
 
 Ship Dimensions - Shipping dimensions
 for the order. Enter ship dimensions using the Edit Packlist function.
 See [Working With Existing
-Packlists](Working_With_Existing_Packlists.htm).
+Packlists](Working_With_Existing_Packlists.md).
 
 User Defined 1-10 - User defined field
 labels for this customer order line.
@@ -273,4 +273,4 @@ Has Delivery Schedule - VISUAL selects
 this check box if the customer order line is a customer order delivery
 schedule line.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

@@ -217,4 +217,4 @@ default.
 | --- | --- |
 | POSTIT.gif | Depending on Status object you select, the Search Set check box indicates if you are searching within a set. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Planned_Maintenance.md) User-defined Help

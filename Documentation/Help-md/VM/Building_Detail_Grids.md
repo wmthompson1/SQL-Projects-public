@@ -22,11 +22,11 @@ To build a detail grid, follow these basic steps:
    grid.
 
 See [Creating Detail Type
-Grids](Creating_Detail_Type_Grids.htm), [Creating
-Top N and Bottom N Detail Grids with Individual Values](Creating_Top_N_and_Bottom_N_Detail_Grids_with_Individual_Values.htm), or [Creating
-Top N and Bottom N Detail Grids with Aggregated Values](Creating_Top_N_and_Bottom_N_Detail_Grids_with_Aggregated_Values.htm).
+Grids](Creating_Detail_Type_Grids.md), [Creating
+Top N and Bottom N Detail Grids with Individual Values](Creating_Top_N_and_Bottom_N_Detail_Grids_with_Individual_Values.md), or [Creating
+Top N and Bottom N Detail Grids with Aggregated Values](Creating_Top_N_and_Bottom_N_Detail_Grids_with_Aggregated_Values.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Custom_Metrics.md)
 Custom Metrics
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

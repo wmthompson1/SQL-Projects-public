@@ -62,4 +62,4 @@ want to delete and click the Delete button.
 Click Ok to save any changes to the Edit
 Delivery Schedules dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User Defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User Defined Help

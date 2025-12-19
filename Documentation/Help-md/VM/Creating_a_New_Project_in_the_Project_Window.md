@@ -39,7 +39,7 @@ when you attempt to save the record.
 If you enter a new ID in the Project Info
 field, when you tab out of the field the system will ask you if you
 want to create the project. Click Yes to create the project in the
-[Project Maintenance](Creating_New_Projects.htm) window.
+[Project Maintenance](Creating_New_Projects.md) window.
 
 4. Use the Calendar buttons
    to select Release and Want dates.
@@ -90,7 +90,7 @@ drawing, you can view but not alter that drawing by clicking the View button.
 Entered By The
 method used to create the project is displayed. This field is populated
 by the system. For more information, see [Working
-with Information in the Entered By Field](Working_with_Information_in_the_Entered_By_Field_in_the_Manufacturing_Window.htm).
+with Information in the Entered By Field](Working_with_Information_in_the_Entered_By_Field_in_the_Manufacturing_Window.md).
 
 Product Code
 If you want to include a Product Code for this project, click the
@@ -173,7 +173,7 @@ button to select a CLIN from a list.
 
 You cannot enter a CLIN until you have set
 up the contract for the project in Customer Order Entry. See [About
-Entering Contract Information in Customer Order Entry](About_Entering_Contract_Information_in_Customer_Order_Entry.htm).
+Entering Contract Information in Customer Order Entry](About_Entering_Contract_Information_in_Customer_Order_Entry.md).
 
 Customer WBS -
 If the customer uses a WBS code that is different from yours, enter
@@ -213,4 +213,4 @@ After you have created a new project, you
 can add tasks, legs, and mate rials to meet the individual needs of
 your project or contract.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

@@ -29,7 +29,7 @@ that you entered in the Dispatch Quantity column now appears in the
 Total Quantity Dispatched column. You can view any record of this
 dispatch in the Service Dispatch Entry window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Order_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_the_Service_Auto_Dispatch_Preference.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_the_Service_Auto_Dispatch_Preference.md)
 Setting the Service Auto Dispatch Preference

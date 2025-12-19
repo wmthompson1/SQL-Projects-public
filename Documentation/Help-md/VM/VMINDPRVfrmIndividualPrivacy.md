@@ -21,7 +21,7 @@ To search for a data subject:
    of the name. For example, to search for John Smith, you could
    enter JO. For a complete list of the tables that are searched,
    see [Finding Data
-   Subject Information](Finding_Data_Subject_Information.htm).
+   Subject Information](Finding_Data_Subject_Information.md).
 
 The search results are
 inserted in the table sorted by Data Group. You can use the Data Group
@@ -31,7 +31,7 @@ column, click the columns header.
 To export the results to Microsoft Excel, select File,
 Send to Microsoft Excel.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINDPRVWhat.md)
 What Is Individual Privacy?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

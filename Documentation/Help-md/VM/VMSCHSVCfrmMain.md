@@ -11,7 +11,7 @@ is installed by site. If you have multiple sites, install the service
 for each site whose schedules you would like to run with the service.
 
 Before you install the service, make sure the computer where you
-are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.htm).
+are installing the service meets the [prerequisites](Prerequisites_for_Installing_VISUAL_Services.md).
 
 To install the service:
 
@@ -91,10 +91,10 @@ and a new VMSCHSVC\_[Your Site Name].log is created.
    each site whose schedules you would like to run with the service.
 
 After you install the service, specify [when
-to run the service](Scheduling_the_Scheduler_Service.htm) in the Set as Schedule dialog in the Concurrent
+to run the service](Scheduling_the_Scheduler_Service.md) in the Set as Schedule dialog in the Concurrent
 Scheduler window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMSCHSVCWhat.md)
 What is the Scheduling Service?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

@@ -14,4 +14,4 @@ meet the specific needs of the report on which you are working.
 You can Print, View,
 and Export your data from the report window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINTRPTfrmPrintIntrastatReport.htm) Printing Intrastat and ESL Reports
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMINTRPTfrmPrintIntrastatReport.md) Printing Intrastat and ESL Reports

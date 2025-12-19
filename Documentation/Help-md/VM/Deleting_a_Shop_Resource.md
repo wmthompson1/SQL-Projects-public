@@ -85,4 +85,4 @@ Click the New button or select Clear All Fields from the Edit menu.
 
 The Shop Resource Maintenance window is cleared.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shop_Resource_Maintenance.md) User-defined Help

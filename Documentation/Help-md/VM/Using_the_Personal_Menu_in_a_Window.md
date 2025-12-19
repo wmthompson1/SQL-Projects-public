@@ -15,9 +15,9 @@ Click a group name to view the items in the group.
 
 Click an item to open it.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_the_Personal_Menu.htm) Setting Up the Personal Menu
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_the_Personal_Menu.md) Setting Up the Personal Menu
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Customizing_the_Personal_Menu_within_a_Window.htm) Customizing the Personal Menu within
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Customizing_the_Personal_Menu_within_a_Window.md) Customizing the Personal Menu within
 a Window
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

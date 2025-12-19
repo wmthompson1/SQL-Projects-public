@@ -7,7 +7,7 @@ Disabling Single Sign On
 
 To disable single sign on, you must sign in as the SYSADM user as
 described in [Logging
-on as SYSADM when Single Sign On Is Enabled](Logging_on_as_SYSADM_When_Single_Sign_On_Is_Enabled.htm). After you sign in
+on as SYSADM when Single Sign On Is Enabled](Logging_on_as_SYSADM_When_Single_Sign_On_Is_Enabled.md). After you sign in
 as SYSADM, select Security, Single Sign On Maintenance. Clear the
 Single Sign On Enabled check box.
 

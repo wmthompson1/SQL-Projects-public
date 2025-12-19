@@ -33,7 +33,7 @@ database.
 If you click the Stop
 button, VISUAL asks you to confirm the action.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Create_VISUAL_Eng_Master.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Create_VISUAL_Eng_Master.md)
 Creating VISUAL Master Bills of Materials
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

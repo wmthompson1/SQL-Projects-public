@@ -122,6 +122,6 @@ shows the source transaction for each cost incurred.
 | Comparative Totals with Breakdown | VMWRKRP5.QRP |
 | Detail Transactions | VMWRKRP6.QRP |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKCSTfrmWorkOrderCostReport.htm) Printing
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMWRKCSTfrmWorkOrderCostReport.md) Printing
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Master_Cost_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Work_Order_Master_Cost_Report.md) User-defined Help

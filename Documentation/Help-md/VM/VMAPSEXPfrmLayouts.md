@@ -22,7 +22,7 @@ This table shows the tasks that you can complete in the Data Extraction
 Layouts window:
 
 | Task | Description |
-| [Setting Up Data Extraction Layouts](Setting_Up_Data_Extraction_Layouts.htm) | Use this procedure to specify the database columns to use in data extraction layouts. |
+| [Setting Up Data Extraction Layouts](Setting_Up_Data_Extraction_Layouts.md) | Use this procedure to specify the database columns to use in data extraction layouts. |
 
 ## Fields
 
@@ -55,5 +55,5 @@ Line items tables tab
 
 Specify the tables that contain line-level information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.md)
 User-defined Help

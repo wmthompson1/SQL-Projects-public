@@ -48,15 +48,15 @@ your linked information is going to change.
 A complete discussion of Embedding and Linking is contained in the
 Windows Users Manual.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding.md)
 Embedding
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_an_Embedded_Object.htm) Embedding an Embedded Object
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Embedding_an_Embedded_Object.md) Embedding an Embedded Object
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Linking.md)
 Linking
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Linked_Object.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_a_Linked_Object.md)
 Editing a Linked Object
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

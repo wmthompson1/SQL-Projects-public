@@ -26,7 +26,7 @@ Starting the Advanced Material Planning Window
 7. The header of the Advanced
    Material Planning Window is the same as the header of the Standard
    Material Planning Window. See [Viewing
-   Part Information](Viewing_Part_Information.htm).
+   Part Information](Viewing_Part_Information.md).
 8. In the table, each period
    you defined in the Planning Calendar has its own column. These
    rows are displayed:
@@ -78,7 +78,7 @@ This row is displayed only if you have selected Calculate Suggested
 MPS from the Options menu and the part you are viewing is master scheduled.
 This row shows the quantity that VISUAL suggests that you add to your
 master production schedule. See [Suggested
-MPS](Suggested_MPS.htm).
+MPS](Suggested_MPS.md).
 
 Proposed Inventory
 This row is displayed only if you have selected Calculate Suggested
@@ -87,4 +87,4 @@ This row shows the quantity that is projected to be in your inventory
 if you update your master production schedule with the suggested value
 and then run MRP.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

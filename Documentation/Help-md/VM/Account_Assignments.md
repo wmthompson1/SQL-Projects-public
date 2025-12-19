@@ -15,16 +15,16 @@ that affects the way costing information is reported. These areas
 are:
 
 * [Shop
-  Resource Maintenance](Shop_Resource_Maintenance.htm)
+  Resource Maintenance](Shop_Resource_Maintenance.md)
 * [Service
-  Maintenance](Service_Maintenance.htm)
+  Maintenance](Service_Maintenance.md)
 * [Part
-  Maintenance](Part_Maintenance.htm)
+  Maintenance](Part_Maintenance.md)
 * [Employee
-  Maintenance](VMEMPMNTfrmEmployee.htm)
+  Maintenance](VMEMPMNTfrmEmployee.md)
 * [Manufacturing
-  Window](VMMFGWINWhat.htm)
+  Window](VMMFGWINWhat.md)
 * [Customer
-  Order Entry](VMORDENTWhat.htm)
+  Order Entry](VMORDENTWhat.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

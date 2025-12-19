@@ -7,7 +7,7 @@ Specifying Site-specific PLM Access Information in Site Maintenance
 
 Use Site Maintenance to specify whether to use the
 [default
-PLM access information specified in Application Global Maintenance](Specifying_Default_PLM_Access_Information_in_Application_Global_Maintenance.htm)
+PLM access information specified in Application Global Maintenance](Specifying_Default_PLM_Access_Information_in_Application_Global_Maintenance.md)
 or to override the default information. The information you specify
 for a site in Site Maintenance determines how you access PLM when
 you are viewing a part in that site.

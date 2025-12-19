@@ -46,4 +46,4 @@ returned for incorporation into the linked work order.
 Resource ID - The ID of the service that
 the outside vendor is performing on the dispatched parts.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

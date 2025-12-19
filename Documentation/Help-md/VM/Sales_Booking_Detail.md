@@ -5,7 +5,7 @@ Sales Booking Detail
 
 # Sales Booking Detail
 
-This [dashboard](VMDBOARDWhat.htm) detail
+This [dashboard](VMDBOARDWhat.md) detail
 grid lists customer orders.
 
 Date filter applies to: Customer Order
@@ -22,10 +22,10 @@ Date, Status, Order Qty, Selling U/M, Unit Price, Trade Disc. Pct.,
 Amount Ordered, Currency ID, Part ID, Part Desc., Service Charge ID,
 Sales Rep, Territory, Product Code, Commodity Code, Site ID.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Detail_Grids.md)
 Detail Grids
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDBOARDWhat.md)
 What is the Dashboard?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

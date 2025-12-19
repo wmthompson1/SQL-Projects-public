@@ -83,7 +83,7 @@ these fields are not displayed.
    based on the amount remaining to be invoiced.
 8. Select the output for
    the report. See [Report Output
-   Options](Report_Output_Options.htm).
+   Options](Report_Output_Options.md).
 9. Click Print.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Backlog_Report.md) User-defined Help

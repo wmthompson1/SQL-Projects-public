@@ -5,5 +5,5 @@ Part Alias Types
 
 ## Part Alias Types
 
-Click this button to enter Part Alias Types. Click [here](Entering_Part_Alias_Types.htm)
+Click this button to enter Part Alias Types. Click [here](Entering_Part_Alias_Types.md)
 for more information.

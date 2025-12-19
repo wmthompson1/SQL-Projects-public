@@ -19,13 +19,13 @@ This table shows the tasks that you can complete in the Audit Maintenance
 window:
 
 | Task | Description |
-| [Configuring Audit Files](Configuring_Audit_Files.htm) | Use this procedure to set up audits of database columns. |
-| [Auditing Report Times](Auditing_Report_Times.htm) | Use this procedure to set up audits of reports. |
-| [Viewing Audit Results](Viewing_Audit_Results.htm) | Use this procedure to view the results of audits. |
-| [Filtering Audit Results](Filtering_Audit_Results.htm) | Use this procedure to filter audit results. |
-| [Printing the Audit History Report](Printing_the_Audit_History_Report.htm) | Use this procedure to print audit results. |
-| [Exporting Audit History Information to Excel or XML](Exporting_Audit_History_Information_to_Excel_or_XML.htm) | Use this procedure to export the contents of the Audit Maintenance results table to Excel or XML. |
-| [Printing the Report Times Report](Printing_the_Report_Times_Report.htm) | If you track report duration, use this procedure to print the results of report audits. |
+| [Configuring Audit Files](Configuring_Audit_Files.md) | Use this procedure to set up audits of database columns. |
+| [Auditing Report Times](Auditing_Report_Times.md) | Use this procedure to set up audits of reports. |
+| [Viewing Audit Results](Viewing_Audit_Results.md) | Use this procedure to view the results of audits. |
+| [Filtering Audit Results](Filtering_Audit_Results.md) | Use this procedure to filter audit results. |
+| [Printing the Audit History Report](Printing_the_Audit_History_Report.md) | Use this procedure to print audit results. |
+| [Exporting Audit History Information to Excel or XML](Exporting_Audit_History_Information_to_Excel_or_XML.md) | Use this procedure to export the contents of the Audit Maintenance results table to Excel or XML. |
+| [Printing the Report Times Report](Printing_the_Report_Times_Report.md) | If you track report duration, use this procedure to print the results of report audits. |
 
 ## Fields
 
@@ -165,4 +165,4 @@ the row refers to a report and you have selected the Audit Report
 Times and Report Audit check boxes, the system inserts the end time
 of the report.
 
-[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.htm) User-defined Help
+[![](btn_mini.gif)](User-defined_Help_Files_-_Audit_Maintenance.md) User-defined Help

@@ -16,7 +16,7 @@ parts, you can edit its contents, specifically the quantity dispatched.
 
 The Vendor Service Dispatches dialog box
 appears. For more information on dispatching parts for service, click
-[here](VMSRVDISfrmServiceDispatch.htm).
+[here](VMSRVDISfrmServiceDispatch.md).
 
 The Order ID and Pack List ID appear in
 read-only reference fields at the top of the dialog box.
@@ -35,7 +35,7 @@ appropriate, select a Ship Via code for the dispatch.
 
 Carrier - If appropriate,
 select a carrier code for the dispatch. Use [Application
-Global Maintenance](Adding_Carriers.htm) to add carriers to the database.
+Global Maintenance](Adding_Carriers.md) to add carriers to the database.
 
 If applicable, in the line item table below,
 adjust the quantity dispatched in the Quantity Dispatched column.
@@ -57,4 +57,4 @@ Save" option is active, the Dispatch Pallet Details dialog box
 appears, allowing you to modify pallet lines before you save the dispatch
 pack list.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Receiving_Report.md) User-defined Help

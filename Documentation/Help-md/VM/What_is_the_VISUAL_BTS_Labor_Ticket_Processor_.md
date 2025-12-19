@@ -15,7 +15,7 @@ The new module has all of the same functionality as the current wedge
 offering, but is hardware independent and is coded into the Material
 Barcode executable, so it maintains the look and feel of that module.
 For more information on [VISUAL
-Material Barcoding](What_is_VISUAL_BTS_Material_Tracking_.htm), see the previous section.
+Material Barcoding](What_is_VISUAL_BTS_Material_Tracking_.md), see the previous section.
 
 VISUAL/ALTS supports the following general features:
 
@@ -46,5 +46,5 @@ AMTS. Therefore, rather than repeating the explanation in this section,
 please click [here](javascript:void(0);) and select the appropriate button
 from the popup menu to view instructions for a procedure.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Transaction_Briefs.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Transaction_Briefs.md)
 Transaction Level Briefs

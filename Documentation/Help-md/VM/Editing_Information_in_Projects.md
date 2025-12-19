@@ -31,4 +31,4 @@ open all of the Edit dialog boxes (header, task, leg/material) at
 the same time and when you click a new object, VISUAL highlights the
 appropriate Edit dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

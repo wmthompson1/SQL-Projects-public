@@ -74,4 +74,4 @@ Plus/Minus Hours
 VISUAL populates the table with the information
 you requested.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Costing_Tools.md) User-defined Help

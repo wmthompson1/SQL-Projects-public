@@ -53,8 +53,8 @@ For example, if you are viewing the Graphical Display and then exit
 the window, the Graphical Display is shown again the next time you
 access the Document Lifecycle Viewer.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Key_Differences_in_Document_Lifecycle_Views.htm) Key Differences in Document Lifecycle
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Key_Differences_in_Document_Lifecycle_Views.md) Key Differences in Document Lifecycle
 Views
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

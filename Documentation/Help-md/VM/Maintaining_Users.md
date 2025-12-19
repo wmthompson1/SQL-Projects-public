@@ -70,7 +70,7 @@ into VISUAL.
 
 Password - Specify
 the users password. See [Managing
-Password Configuration](Managing_Password_Configuration.htm).
+Password Configuration](Managing_Password_Configuration.md).
 
 Repeat Password
 - Repeat the user's password.
@@ -100,7 +100,7 @@ To change a users password:
 
 Password Specify
 the users password. See [Managing
-Password Configuration](Managing_Password_Configuration.htm).
+Password Configuration](Managing_Password_Configuration.md).
 
 Repeat Password
 Repeat the users password.
@@ -115,7 +115,7 @@ They will not be able to sign in to VISUAL with their existing passwords.
 
 To create a password expiration policy, use the Password Configuration
 dialog. See [Managing
-Password Configuration](Managing_Password_Configuration.htm).
+Password Configuration](Managing_Password_Configuration.md).
 
 1. Select Security,
    Users.
@@ -179,4 +179,4 @@ with the CRM check box selected.
 You can specify application licensing usage when you create the
 user or update existing users.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User-defined_Help_Files_-_Security.md) User-defined Help

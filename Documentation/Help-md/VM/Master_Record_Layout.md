@@ -55,4 +55,4 @@ the right of the decimal point.
 | 30 | Split ID | String(3) | N | If the work order has been split, the ID of the split. |
 | 31 | Warehouse ID | String(15) | N | The warehouse where the manufactured product is stored. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

@@ -82,6 +82,6 @@ information for the new budget set up.
 
 Before you can spread your projects budget,
 you must first schedule that project. For more information, refer
-to [Scheduling Projects](Scheduling_Projects.htm).
+to [Scheduling Projects](Scheduling_Projects.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

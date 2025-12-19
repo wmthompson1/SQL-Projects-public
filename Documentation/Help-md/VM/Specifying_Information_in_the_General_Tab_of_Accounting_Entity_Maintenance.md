@@ -34,7 +34,7 @@ not used in a single entity, single site database.
    click the arrow and select USA. This field enables menus when
    you build a baseline database. The field does not control the
    translations used in the interface. See [What
-   Is Translation Maintenance?](VMTRNMNTWhat.htm).
+   Is Translation Maintenance?](VMTRNMNTWhat.md).
 6. In the Effective Exchange
    Rate Date section, specify which date should be used to determine
    the exchange rate to apply to a transaction. Select one of these

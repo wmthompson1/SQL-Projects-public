@@ -68,4 +68,4 @@ The Close/Reopen Maintenance window appears.
    | --- | --- |
    | POSTIT.gif | VISUAL allows you to have an unlimited number of open periods. Use caution in deciding which periods to reopen because period and/or year-end reports may have already been generated. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Close_Reopen_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Close_Reopen_Maintenance.md) User-defined Help

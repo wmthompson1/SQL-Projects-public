@@ -62,9 +62,9 @@ all the existing commissions.
 9. Click the Save
    button on the main VISUAL Price Book toolbar to save your changes.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commissions_Matrix_Table_Information.htm) Adding Commissions Matrix Table Information
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_Commissions_Matrix_Table_Information.md) Adding Commissions Matrix Table Information
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Commissions_Matrix_Information.htm) Editing and Deleting Commissions Matrix
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Commissions_Matrix_Information.md) Editing and Deleting Commissions Matrix
 Information

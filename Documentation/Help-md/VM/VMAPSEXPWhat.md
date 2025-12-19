@@ -31,5 +31,5 @@ It is possible for you to place a shortcut icon on your Windows
 desktop to start the APS Export program. Consult your Windows documentation
 for instructions on setting up shortcut icons.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_APS.md)
 User-defined Help

@@ -57,8 +57,8 @@ You can trigger the progress billing by
 either event date or milestone, but you CANNOT have both in one event.
 
 See [Creating
-Milestones](Creating_Milestones.htm).
+Milestones](Creating_Milestones.md).
 
 8. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Progress_Billing_Entry.md) User-defined Help

@@ -33,4 +33,4 @@ Customer Order Entry in the subject line.
 For more information on using Microsoft
 Outlook, consult your Microsoft Outlook user documentation.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

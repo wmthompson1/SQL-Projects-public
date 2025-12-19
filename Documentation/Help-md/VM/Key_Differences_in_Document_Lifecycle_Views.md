@@ -18,7 +18,7 @@ document views:
 | Can I see if documents are attached to the transactions? Can I open attached documents? | No | Yes |
 | Can I see if activities are attached to the transactions? Can I open attached activities? | No | Yes |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Choosing_a_Document_Lifecycle_Display.htm) Choosing a Document Lifecycle Display
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Choosing_a_Document_Lifecycle_Display.md) Choosing a Document Lifecycle Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

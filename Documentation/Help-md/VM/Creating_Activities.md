@@ -70,13 +70,13 @@ then the Status field is updated to In Process.
 Activity Type Specify the type for this activity.
 Use activity types to categorize the type of action to take to complete
 the activity. Examples of activity types are Call and E-mail. See
-[Creating Activity Types](Creating_Activity_Types.htm).
+[Creating Activity Types](Creating_Activity_Types.md).
 
 Category ID Specify the category for this activity.
 Use activity categories to generically describe the topic of the activity.
 Examples of activity categories are Customer Credit, Vendor Contracts,
 or Part Specification Review. See [Creating
-Activity Categories](Creating_Activity_Categories.htm).
+Activity Categories](Creating_Activity_Categories.md).
 
 Status Specify the activitys current status.
 Depending on the status you select, the % Complete field and Completed
@@ -120,8 +120,8 @@ of this task or any other information pertinent to the task.
 
 3. Click Save.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTWhat.md)
 What are Activities?
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

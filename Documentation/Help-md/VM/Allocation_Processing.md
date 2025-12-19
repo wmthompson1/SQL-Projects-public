@@ -10,4 +10,4 @@ allocations in two modes: by part and by warehouse. Allocation by
 part commits supply to demand irrespective of warehouse; allocation
 by warehouse commits supply to demand from the same warehouse.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help

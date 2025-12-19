@@ -25,7 +25,7 @@ See Using Auto Numbering more information.
 
 If
 you are editing an existing order, refer to [Editing
-a Customer Order](Editing_a_Customer_Order.htm).
+a Customer Order](Editing_a_Customer_Order.md).
 
 4. Move
    to the Customer ID field and enter the ID for the customer who
@@ -132,7 +132,7 @@ field, and customer order line 1 has a status of Inherit, then line
 a status other than inherit, the header status is ignored.
 
 See [Working
-with Order Statuses](Working_with_Order_Statuses.htm).
+with Order Statuses](Working_with_Order_Statuses.md).
 
 FOB
 - Click the FOB arrow and select the Free On Board point you want
@@ -149,7 +149,7 @@ you ship items by the ship via method that you selected, specify the
 customers account number. If you have specified the customer account
 to charge when shipments are sent by the selected ship via method,
 the account ID is displayed. See [Adding
-Customer Shipment Accounts.](Adding_Customer_Shipment_Accounts_vmordent.htm)
+Customer Shipment Accounts.](Adding_Customer_Shipment_Accounts_vmordent.md)
 
 Carrier
 ID - Click the Carrier ID arrow and select the shipping carrier
@@ -171,7 +171,7 @@ button. If the contact you want to use is not yet in the database,
 click Add New
 Contact.
 See [Adding
-Contacts](VMCONMNTfrmContact.htm).
+Contacts](VMCONMNTfrmContact.md).
 
 If
 you do not want to assign a contact to this order, click the
@@ -186,7 +186,7 @@ in the Monetary tab:
 
 Terms - Click the browse
 button and select the appropriate Terms for this order. Refer to [Adding
-Terms](Entering_Information_in_Terms_Maintenance.htm) for more information.
+Terms](Entering_Information_in_Terms_Maintenance.md) for more information.
 
 Cust Bank ID
 - Click the browse button and select the appropriate Customer Bank
@@ -414,7 +414,7 @@ A new row appears in the line item table.
 
 |  |  |
 | --- | --- |
-| POSTIT.gif | This list contains ALL of the columns that can appear in the order line table. For more information on viewing or hiding columns in the table, refer to [Configuring\_Line\_Item\_Tables](Configuring_Line_Item_Tables.htm). |
+| POSTIT.gif | This list contains ALL of the columns that can appear in the order line table. For more information on viewing or hiding columns in the table, refer to [Configuring\_Line\_Item\_Tables](Configuring_Line_Item_Tables.md). |
 
 11. Specify
     the ordered item.
@@ -477,7 +477,7 @@ Code, and Customer Part ID. Only the unit price is required.
   Project users, if you select a project related Part ID, you must
   select an appropriate WBS Code, Proj Ref Seq No, Proj Ref Sud
   ID, and Dept ID combination. For more information, refer to [Enforcing
-  Referential Integrity](Enforcing_Referential_Integrity.htm).
+  Referential Integrity](Enforcing_Referential_Integrity.md).
 
 12. Specify
     the quantity ordered. If the customer is ordering a standard part,
@@ -499,12 +499,12 @@ Code, and Customer Part ID. Only the unit price is required.
     finish date after you select File, Check Schedule Availability.
     For more information on checking schedule availability, refer
     to [Checking
-    Schedule Availability](Checking_Schedule_Availability_C_O_E_.htm).
+    Schedule Availability](Checking_Schedule_Availability_C_O_E_.md).
 
 14. After
     you have specified a part and quantity, and if you have selected
     the Auto calculate check box in [Customer
-    Order Preferences](Specifying_Customer_Order_Preferences.htm), the system determines the supply status
+    Order Preferences](Specifying_Customer_Order_Preferences.md), the system determines the supply status
     based on the calculation setting you specified. If you did not
     select the Auto calculate check box, you can click the
     Calculate Supply Status button
@@ -641,7 +641,7 @@ from the header, select one of these statuses:
 * Cancelled/Void
 
 See [Working
-with Order Statuses](Working_with_Order_Statuses.htm).
+with Order Statuses](Working_with_Order_Statuses.md).
 
 19. Double
     click the ShipTo ID column header to select an alphanumeric ShipTo
@@ -673,14 +673,14 @@ When you save the customer order, VISUAL:
 | --- | --- |
 | POSTIT.gif | If you specified a nonexistent work order for a custom part, there will be no engineering master from which to copy the work order. VISUAL gives you the option of creating a work order header with an unreleased status. If you choose to do this, you can manually create or copy to the new header using the Manufacturing Window Otherwise, VISUAL cancels the creation of the customer order. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repeating_Lines.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Repeating_Lines.md)
 Repeating Lines
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Shipping_Addresses.htm) Adding New Shipping Addresses
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Adding_New_Shipping_Addresses.md) Adding New Shipping Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Shipping_Addresses.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Shipping_Addresses.md)
 Deleting Shipping Addresses
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

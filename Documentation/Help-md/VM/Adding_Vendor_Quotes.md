@@ -20,7 +20,7 @@ quotes on a site-by-site basis.
 
 |  |  |
 | --- | --- |
-| TIP.gif | You can also specify vendor pricing in Vendor RFQ Entry. When you approve a vendor quote in Vendor RFQ Entry, you can automatically update the pricing specified for the vendor on the part record. When you approve the quote, select the Create Part Master Vendor-quotes check box. The pricing structure specified on the RFQ is copied to the part record. See [Approving Quotes](Approving_Quotes.htm). |
+| TIP.gif | You can also specify vendor pricing in Vendor RFQ Entry. When you approve a vendor quote in Vendor RFQ Entry, you can automatically update the pricing specified for the vendor on the part record. When you approve the quote, select the Create Part Master Vendor-quotes check box. The pricing structure specified on the RFQ is copied to the part record. See [Approving Quotes](Approving_Quotes.md). |
 
 To add vendor quotes for the part:
 

@@ -26,4 +26,4 @@ the opportunity to update or cancel changes to the embedded object.
 Select the Update Object option to return to the Manufacturing windows
 with the edited object.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Manufacturing_Window.md) User-defined Help

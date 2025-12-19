@@ -7,7 +7,7 @@ Viewing Credit Rating and Settlement Rating Information
 
 Before you can view Credit Rating information for the selected customer,
 you must set up Credit Rating thresholds and a Credit Limit for the
-customer in [Customer Maintenance](VMCUSMNTfrmCustomer.htm).
+customer in [Customer Maintenance](VMCUSMNTfrmCustomer.md).
 Before you can view Settlement Rating information for the selected
 customer, you must set up Settlement Rating thresholds for the customer
 in Customer Maintenance. The system deactivates the Credit Rating
@@ -38,4 +38,4 @@ At the bottom of the dialog box, the system displays the total number
 of payments, the number of payments made on time, and the percentage
 of payments made on time.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

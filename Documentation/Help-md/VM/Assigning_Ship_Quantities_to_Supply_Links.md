@@ -84,10 +84,10 @@ Vendor Part ID
 | --- | --- |
 | POSTIT.gif | After you fully ship a customer order, you cannot assign ship quantities to supply links. If you select the option from the Edit menu after shipping the line, the Assign To Supply dialog box still appears with the supply links for the C/O line in the line item table, but the Ok button is unavailable. The order is closed after it is shipped. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Customer_Order_Delivery_Schedule_Lines.htm) Shipping Customer Order Delivery Schedule
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Shipping_Customer_Order_Delivery_Schedule_Lines.md) Shipping Customer Order Delivery Schedule
 Lines
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Ship_Quantities_to_Customer_Order_Delivery_Schedule_lines_with_Demand_Links.htm) Assigning Ship Quantities to Customer
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Assigning_Ship_Quantities_to_Customer_Order_Delivery_Schedule_lines_with_Demand_Links.md) Assigning Ship Quantities to Customer
 Order Delivery Schedule lines with Demand Links
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Shipping_Entry.md) User-defined Help

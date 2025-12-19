@@ -17,4 +17,4 @@ From the File menu, select Freeze Current project.
 To Unfreeze projects, select the Unfreeze Current
 Project option.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

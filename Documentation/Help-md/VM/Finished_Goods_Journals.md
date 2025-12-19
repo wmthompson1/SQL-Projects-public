@@ -38,7 +38,7 @@ Account selection for finished goods receipts follows the priority: product-code
 
 ## Examples & User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help
 
 The Finish Goods Journal contains a listing of the
 summary transactions created by the Costing Utilities as a result
@@ -112,4 +112,4 @@ of this report will reconcile, but if you use separate locations for
 work order receipts and returns, the amounts reported by location
 will not reconcile.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_DBR_Maintenance.md) User-defined Help

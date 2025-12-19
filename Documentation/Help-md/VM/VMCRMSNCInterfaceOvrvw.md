@@ -135,5 +135,5 @@ are to be logged. The file name is saved to the local preference file
 VMCRMSNC.INI with the key name Log File Name" in the frmCustomerSnc
 section.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.htm) What is the Synchronize Customer/Account
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCRMSNCWhat.md) What is the Synchronize Customer/Account
 Utility?

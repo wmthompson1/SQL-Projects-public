@@ -77,4 +77,4 @@ to the customer order. Continuing to look, it finds the unreleased
 work order with a release date of 1/11/2004 and an order quantity
 of 5,000, and allocates the remainder to the customer order.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Allocation_Utilities.md) User-defined Help

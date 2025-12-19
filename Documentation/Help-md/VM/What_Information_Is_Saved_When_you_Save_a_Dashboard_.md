@@ -15,6 +15,6 @@ are viewing the Sales Bookings analytic and you have clicked a bar
 to view the bookings for that bar, only the Sales Bookings analytic
 is saved. The grid you opened when you clicked the bar is not saved.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) Creating a Dashboard
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) Creating a Dashboard
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_File_Menu.md) User-defined Help

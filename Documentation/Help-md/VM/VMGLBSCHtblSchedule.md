@@ -41,10 +41,10 @@ view the others in the Scheduling Window.
    VISUAL completes the remaining fields when you run the Global
    Scheduler.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Make_a_Schedule_Active.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Make_a_Schedule_Active.md)
 Make a Schedule Active
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Schedule.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_a_Schedule.md)
 Deleting a Schedule
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concurrent_Scheduler.md) User-defined Help

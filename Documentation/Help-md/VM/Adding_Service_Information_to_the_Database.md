@@ -62,7 +62,7 @@ is charged.
 After the service has been added to the
 database it can be used on an Engineering Master or Work Order.
 
-See [Service Maintenance](VMSRVMNTWhat.htm)
+See [Service Maintenance](VMSRVMNTWhat.md)
 for more information.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

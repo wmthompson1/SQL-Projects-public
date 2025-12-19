@@ -74,6 +74,6 @@ template is not active within the VISUAL logic.
 VISUAL creates a new Workflow Template.
 
 To build a workflow, refer to the [Building
-Workflow Templates](Building_Workflow_Templates.htm).
+Workflow Templates](Building_Workflow_Templates.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Workflow.md) User-defined Help

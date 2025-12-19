@@ -41,4 +41,4 @@ Status, WBS Code and description, and WBS Status. The report also
 indicates whether the project is government-related, and whether each
 WBS code is billable.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_General_Project_Topics.md) User-defined Help

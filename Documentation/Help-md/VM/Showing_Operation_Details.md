@@ -22,7 +22,7 @@ that operation appears.
 All of the information in the top sections
 of the window is identical to that defined in the Manufacturing Window
 Operation dialog box. Start and Finish are the dates determined by
-the [Concurrent Scheduler](VMGLBSCHWhat.htm). The Quantity
+the [Concurrent Scheduler](VMGLBSCHWhat.md). The Quantity
 shown is the End Quantity, and Completed is the quantity reported
 complete from Labor Ticket Entry.
 
@@ -36,4 +36,4 @@ and you are looking at operation 20 of sub ID 1 (the second leg),
 using NEXT displays operation 30. If you choose PREV, operation 10
 appears.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Scheduling_Window.md) User-defined Help

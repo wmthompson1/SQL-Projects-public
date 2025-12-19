@@ -21,4 +21,4 @@ notes, and test notes result notes by clicking on the appropriate
 buttons. Click the Quantitative button to view a histogram of the
 test results.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Test_Definition.md) User-defined Help

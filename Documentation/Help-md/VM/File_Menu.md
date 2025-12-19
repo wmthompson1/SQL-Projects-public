@@ -23,6 +23,6 @@ directly from Customer Order Entry.
 
 For certain applications, you can also set up the File menu to list
 the documents you most recently accessed. See [Setting
-Up the Recently Used Documents List](Setting_Up_the_Recently_Used_Documents_List.htm).
+Up the Recently Used Documents List](Setting_Up_the_Recently_Used_Documents_List.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md) User-defined Help

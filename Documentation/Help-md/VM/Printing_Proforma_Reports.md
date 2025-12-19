@@ -92,4 +92,4 @@ unique group in the sequence, the total amount quoted is shown. For
 example, if sequencing by month, a total quoted amount for each month
 is printed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Estimating_Window.md) User-defined Help

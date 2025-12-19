@@ -29,7 +29,7 @@ an error, informing you the customer does not exist.
 
 Only customers you have added to your VISUAL
 database are eligible for selection. For more information on adding
-customers to your database, click [here](VMCUSMNTfrmCustomer.htm).
+customers to your database, click [here](VMCUSMNTfrmCustomer.md).
 
 The customers default shipping address
 appears in the data field to the right.
@@ -216,7 +216,7 @@ tab contains information about the existing planned maintenance for
 this equipment. You cannot enter any information into the Profiles
 tab. Within the Profiles tab line item field, are equipment profiles
 for Equipment ID currently in the window. Establish these profiles
-for scheduling purposes in the Planned Maintenance window. Click [here](Entering_Equipment_Profiles.htm) for more information.
+for scheduling purposes in the Planned Maintenance window. Click [here](Entering_Equipment_Profiles.md) for more information.
 
 Equipment Maintenance uses Standard VE Engineering masters as templates
 for creating work orders. You can attach multiple maintenance profiles
@@ -231,7 +231,7 @@ When you create the work order later, the VISUAL creates jobs based
 on the given profile.rts
 
 The Profiles tab displays profiles for the Equipment ID. Enter profiles
-in [Planned Maintenance](Entering_Equipment_Profiles.htm).
+in [Planned Maintenance](Entering_Equipment_Profiles.md).
 
 If a piece of equipment has a Part ID, you cannot select a Profile
 ID unless an engineering master exists for the Part ID. The Equipment
@@ -333,4 +333,4 @@ Use
 No contact toolbar
 button.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Equipment_Maintenance.md) User-defined Help

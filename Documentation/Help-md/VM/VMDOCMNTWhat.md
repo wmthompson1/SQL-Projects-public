@@ -20,7 +20,7 @@ Documents can be stored in centralized directories by reference
 type, site, entity, tenant, or globally. Use the Document Folder feature
 to designate the storage folder
 for documents at each level. See [Maintaining
-Document Folders](Maintaining_Document_Folders.htm).
+Document Folders](Maintaining_Document_Folders.md).
 
 If you set up specific directories for sites and reference types,
 we recommend that you use drag-and-drop to add new documents and use
@@ -67,38 +67,38 @@ documents and document references are made:
 | Customer Maintenance | Tenant |
 | Vendor Maintenance | Tenant |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Document_Maintenance.htm) Starting Document Maintenance
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Document_Maintenance.md) Starting Document Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Document_Categories.htm) Setting Up Document Categories
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Document_Categories.md) Setting Up Document Categories
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Document_Folders.htm) Maintaining Document Folders
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Document_Folders.md) Maintaining Document Folders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Default_Reference_Types.htm) Maintaining Default Reference Types
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Maintaining_Default_Reference_Types.md) Maintaining Default Reference Types
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTfrmDocuments.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMDOCMNTfrmDocuments.md)
 Adding Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCVTDOCfrmAddDrawings.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMCVTDOCfrmAddDrawings.md)
 Adding Part Drawings to Document Maintenance
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Allowable_Sites_for_Tenant_Documents.htm) Setting Allowable Sites for Tenant Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Allowable_Sites_for_Tenant_Documents.md) Setting Allowable Sites for Tenant Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Document_References.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_Document_References.md)
 Editing Documents References
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Where_Documents_are_Used.htm) Viewing Where Documents are Used
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Where_Documents_are_Used.md) Viewing Where Documents are Used
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Document_References.htm) Deleting Documents References
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Deleting_Document_References.md) Deleting Documents References
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Attached_Documents.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Viewing_Attached_Documents.md)
 Viewing Attached Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Moving_Documents.htm) Copying and Moving Documents
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Copying_and_Moving_Documents.md) Copying and Moving Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Document_Lists.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Printing_Document_Lists.md)
 Printing Document Listings
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Referencing_Documents.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Referencing_Documents.md)
 Referencing Documents
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Document_Maintenance.md) User-defined Help

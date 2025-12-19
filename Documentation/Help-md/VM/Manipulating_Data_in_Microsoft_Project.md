@@ -39,4 +39,4 @@ You should not do any of the following:
   Category XXXX not found in Visual Manufacturing. Unable to save
   the data from Microsoft Project."
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Summary.md) User-defined Help

@@ -46,4 +46,4 @@ to multiple lots. Instead, use Inventory Transaction Entry Adjust/In.
 Sub-tags created in this way appear in Enter Recounts for the tag,
 and in subsequent printings of tags and tag reports.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Part_Trace_Maintenance.md) User-defined Help

@@ -36,4 +36,4 @@ not post it as a Work In Process inventory. Because costs in the system
 are transferred when inventory transactions occur, you should cancel
 "Expense" jobs manually in the Manufacturing Window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Utilities.md) User-defined Help

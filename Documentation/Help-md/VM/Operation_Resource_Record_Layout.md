@@ -28,4 +28,4 @@ the right of the decimal point.
 | 5 | Schedule Type | Number(2) | N | Specify 0 for continuous scheduling. Specify 1 for discontinuous scheduling. |
 | 6 | Minimum Segment Size | Number String(12.2) | N | If the schedule is discontinuous, the minimum run duration on one resource unit before a second unit can be scheduled. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Data_Import_Utility.md) User-defined Help

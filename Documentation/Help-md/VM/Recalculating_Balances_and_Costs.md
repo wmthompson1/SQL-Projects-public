@@ -110,4 +110,4 @@ If you are licensed to use multiple sites, click the Site ID drop-down
 button and select the site to use to recalculate balances, then access
 the dialog box.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Costing_Tools.md) User-defined Help

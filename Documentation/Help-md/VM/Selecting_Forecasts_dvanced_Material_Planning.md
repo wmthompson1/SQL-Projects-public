@@ -34,4 +34,4 @@ using this function. You can set up a forecast and master production
 schedule for any part, but MRP is only use it to generate planned
 orders if the parts order policy is Master Schedule.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Material_Planning_Window.md) User-defined Help

@@ -44,14 +44,14 @@ is displayed.
 Category The category of the activity
 is displayed.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](VMACTENTfrmActivityEntry.md)
 Creating Activities
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.md)
 Activity Reminders
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Activity_Reminders.md)
 Activating Reminder Features
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

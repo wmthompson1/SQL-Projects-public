@@ -55,7 +55,7 @@ discount to a number of records.
 4. Click the Save
    button to save your changes to the Part Groups window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Part_Groups_Matrix_Information.htm) Editing and Deleting Part Groups Matrix
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Editing_and_Deleting_Part_Groups_Matrix_Information.md) Editing and Deleting Part Groups Matrix
 Information

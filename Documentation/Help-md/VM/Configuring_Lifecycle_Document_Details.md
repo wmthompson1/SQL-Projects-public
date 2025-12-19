@@ -70,8 +70,8 @@ do not apply to Purchase Order Entry.
 The settings you specify are saved in the Preferences Maintenance
 table.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Using_the_Tree_Display.md)
 Using the Tree Display
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Concepts_Common_Features.md)
 User-defined Help

@@ -27,4 +27,4 @@ Cost simulation is useful for:
   | --- | --- |
   | POSTIT.gif | Use cost simulation to reset costs only. If you need to revalue your inventory, use the standard VISUAL revaluation process. For more information on revaluation of inventory, refer to your Infor VISUAL documentation. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Cost_Simulation.md) User-defined Help

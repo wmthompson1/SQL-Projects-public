@@ -15,4 +15,4 @@ For the header, the meter shows the total completion of the project.
 For tasks, legs, and materials, the meter shows the completion status
 of the individual object.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Project_Window.md) User-defined Help

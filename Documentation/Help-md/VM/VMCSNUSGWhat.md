@@ -11,7 +11,7 @@ the report and send it to your vendors or customers notifying them
 of the parts you have used.
 
 For more information on printing Consignment Usage reports, refer
-to the [Printing Consigned Usage Reports](VMCSNUSGfrmMain.htm)
+to the [Printing Consigned Usage Reports](VMCSNUSGfrmMain.md)
 topic.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Interbranch_Transfer_Shipping_Entry.md) User-defined Help

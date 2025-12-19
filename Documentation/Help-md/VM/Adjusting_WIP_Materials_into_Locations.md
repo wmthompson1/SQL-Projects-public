@@ -59,6 +59,6 @@ If you are moving the parts to a WIP location, specify the ID of the
 location. If you specified a warehouse in the Warehouse field, the
 WIP Location browse table is filtered to show the locations in the
 warehouse that you selected. Set up WIP locations in Warehouse Maintenance.
-See [WIP Inventory Locations](WIP_Inventory_Locations.htm).
+See [WIP Inventory Locations](WIP_Inventory_Locations.md).
 
 9. Click Save.

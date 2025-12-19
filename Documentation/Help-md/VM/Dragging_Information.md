@@ -50,4 +50,4 @@ new location.
 | Session PO |  | Dragging parts to the Session P/O History child window creates POs for them. VISUAL consolidates parts by preferred vendor. |
 | Part Management | Dragging a vendor from the Part Management tool to the Purchase Order Entry tool,  populates the PO header with information for that vendor.  Dragging a PO from the Part Management view to the PO Entry tool opens that PO in the Purchase Order Entry tool. |  |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Purchase_Management_Window.md) User-defined Help

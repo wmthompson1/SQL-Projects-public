@@ -23,6 +23,6 @@ the breakdowns appear in the table.
 | --- | --- |
 | POSTIT.gif | If you want to view the figures in a different currency, click the Currency ID and select the currency in which you want to view the figures. |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Revenue_Recognition.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_Defined_Help_Files_Project_Revenue_Recognition.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.htm) Enforcing Referential Integrity
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Enforcing_Referential_Integrity.md) Enforcing Referential Integrity

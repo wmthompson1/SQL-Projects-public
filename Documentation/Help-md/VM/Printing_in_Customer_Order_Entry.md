@@ -9,14 +9,14 @@ There are a number of options available for outputting
 customer order information.
 
 * [Printing
-  Acknowledgments](Printing_Acknowledgments.htm)
+  Acknowledgments](Printing_Acknowledgments.md)
 * [Printing
-  Order/Acknowledgment Thermal Labels](Printing_Customer_Order_Acknowledgment_Thermal_Labels.htm)
+  Order/Acknowledgment Thermal Labels](Printing_Customer_Order_Acknowledgment_Thermal_Labels.md)
 * [Printing
-  Customer Orders](Printing_Customer_Orders.htm)
+  Customer Orders](Printing_Customer_Orders.md)
 * [Printing
-  EDI Reports](Printing_EDI_Reports.htm)
+  EDI Reports](Printing_EDI_Reports.md)
 * [Printing
-  Formats](Printing_Formats.htm)
+  Formats](Printing_Formats.md)
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Order_Entry.md) User-defined Help

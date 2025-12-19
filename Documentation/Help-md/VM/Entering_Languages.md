@@ -44,9 +44,9 @@ pastes the Language ID description only.
 7. Click the Close
    button to return to the main Customer Maintenance window.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Customer_Language_Forms.htm) Specifying Customer Language Forms
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Specifying_Customer_Language_Forms.md) Specifying Customer Language Forms
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Language_QRP_Forms.htm)
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Language_QRP_Forms.md)
 Language QRP Forms
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Customer_Maintenance.md) User-defined Help

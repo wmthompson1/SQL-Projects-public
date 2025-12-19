@@ -25,13 +25,13 @@ information for multiple warehouse.
 After you select the parts that are cycle counted, use Physical
 Inventory Count to conduct the count.
 
-See [What is Physical Inventory Count?](VMPHYINVWhat.htm).
+See [What is Physical Inventory Count?](VMPHYINVWhat.md).
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_the_Date_Preference_for_Cycle_Counting.htm) Setting Up the Date Preference for Cycle
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_the_Date_Preference_for_Cycle_Counting.md) Setting Up the Date Preference for Cycle
 Counting
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Cycle_Count_Setups_for_all_Parts.htm) Setting Up Cycle Counts for Multiple
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Cycle_Count_Setups_for_all_Parts.md) Setting Up Cycle Counts for Multiple
 Parts
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Cycle_Count_for_an_Individual_Part.htm) Setting Up Cycle Count for an Individual
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Setting_Up_Cycle_Count_for_an_Individual_Part.md) Setting Up Cycle Count for an Individual
 Part

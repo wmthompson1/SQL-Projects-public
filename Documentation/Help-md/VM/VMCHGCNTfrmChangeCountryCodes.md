@@ -31,7 +31,7 @@ This table shows the tasks that you can complete in the Change Country
 Utility window:
 
 | Task | Description |
-| [Using the Change Country Utility](Using_the_Change_Country_Utility.htm) | Use this procedure to replace a free-form country code with an ISO code. |
+| [Using the Change Country Utility](Using_the_Change_Country_Utility.md) | Use this procedure to replace a free-form country code with an ISO code. |
 
 ## Fields
 

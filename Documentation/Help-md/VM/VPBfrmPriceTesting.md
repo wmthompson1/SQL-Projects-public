@@ -127,4 +127,4 @@ Discount Tip -
 If you specified any Discount tips in the Formulas function, VISUAL
 inserts the Tip in the Discount Tip column.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.htm) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Price_Book.md) User-defined Help

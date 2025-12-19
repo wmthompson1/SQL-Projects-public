@@ -22,7 +22,7 @@ original sales order, and in the new back order. The link is broken
 to allow you maximum flexibility in processing the back order and
 the original order. You can link the orders through the manual internal
 buy/sell process. See [Creating
-internal orders manually](Creating_Internal_Orders_Manually.htm).
+internal orders manually](Creating_Internal_Orders_Manually.md).
 
 When you receive a partial shipment of an internal order, you have
 the same options as when you receive a partial shipment of an external
