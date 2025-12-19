@@ -132,13 +132,13 @@ IF OBJECT_ID('tempdb..#temp5') IS NOT NULL DROP TABLE #temp5
 
 DECLARE @Tester int
   -- ,@Part_ID nvarchar(30) =  null; -- '71507E-1100153'
-declare @part_id nvarchar(250) = '70750B-071-MIL-NG';
+declare @part_id nvarchar(250) = NULL;  -- '70750B-071-MIL-NG';
 --'25243C-112 X 11.25 X 68.00' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
 -- ,@SITE_id nvarchar(30) -- = 'SK01'
 
 Set @Tester = 0
 --Set @SITE_id = 'SK01'
-DECLARE @workorder_base_id nvarchar(30) = NULL --'1789047'; --'1670717'; -- '1801171'; -- '1793687'
+DECLARE @workorder_base_id nvarchar(30) = '1802575' --'1789047'; --'1670717'; -- '1801171'; -- '1793687'
 -- '1801516'; -- -- '1799404'
 dECLARE @Transaction_ID nvarchar(30) =  NULL; -- '138481'
 --  '139140';
@@ -265,6 +265,7 @@ from #inventory_trans i
   on i.WORKORDER_BASE_ID=a.BASE_ID
     and i.WORKORDER_LOT_ID=a.LOT_ID and
     i.WORKORDER_SPLIT_ID = a.SPLIT_ID
+    and i.WORKORDER_SUB_ID = a.SUB_ID
 
 
   INNER JOIN OPERATION o
@@ -284,7 +285,8 @@ from #inventory_trans i
 where 1=1
   --and i.warehouse_id = 'Auburn Mtl Cage'
   AND (i.workorder_base_id = @workorder_base_id OR @workorder_base_id IS NULL)
-  and a.STATUS not in ('X', 'C')
+  --and a.STATUS not in ('X', 'C')
+  and a.STATUS in ('R', 'E', 'H', 'S', 'P', 'F','C')  -- Released, Enroute, Hold, Started, Partially Complete, Finished,Closed
 
   and (i.part_id = @Part_ID
   or @Part_ID IS NULL )
