@@ -199,7 +199,7 @@ Manually subtract material from inventory for corrections, scrap, or losses.
 - `DESCRIPTION` (explanation of adjustment)
 
 **Related Help Files:**
-- [Adjusting Materials](../Help-md/VM/Adjusting_Materials.md)
+- [Adjusting Materials](Adjusting_Materials.md)
 
 ---
 
@@ -255,7 +255,7 @@ When a purchase order line is linked to a work order requirement:
 **Net Result:** Material flows through inventory with minimal dwell time
 
 **Related Documentation:**
-- [Inventory Transactions](../Help-md/VM/Inventory_Transactions.md)
+- [Inventory Transactions](Inventory_Transactions.md)
 
 ---
 
@@ -275,7 +275,7 @@ When shipping a customer order with linked work order:
    - CLASS='I', TYPE='O'
 
 **Related Documentation:**
-- [Creating Inventory Transactions (Shipping)](../Help-md/VM/Creating_Inventory_Transactions.md)
+- [Creating Inventory Transactions (Shipping)](Creating_Inventory_Transactions.md)
 
 ---
 
@@ -292,8 +292,8 @@ When shipping a customer order with linked work order:
 
 ### ERP Help Files
 - [Using Inventory Transaction Entry](VMINVENT_APLfrmInventoryEntry.md) - Main transaction entry screen
-- [BTS_BI_Basic_Inventory_Transactions](../Help-md/VM/BTS_BI_Basic_Inventory_Transactions.md) - BTS integration
-- [Inventory Transaction Costing](../Help-md/VM/Inventory_Transaction_Costing.md) - Cost accounting
+- [BTS_BI_Basic_Inventory_Transactions](BTS_BI_Basic_Inventory_Transactions.md) - BTS integration
+- [Inventory Transaction Costing](Inventory_Transaction_Costing.md) - Cost accounting
 
 ---
 
@@ -364,8 +364,8 @@ WHERE p.QTY_ON_HAND <> ISNULL(t.Calculated_QOH, 0);
 - Trace IDs for material genealogy
 
 **Related:**
-- [For Issue of Inventory to a Work Order](../Help-md/VM/For_Issue_of_Inventory_to_a_Work_Order.md) (traceability section)
-- [Setting Part Traceability Inventory Transaction Entry](../Help-md/VM/Setting_Part_Traceability_Inventory_Transaction_Entry.md)
+- [For Issue of Inventory to a Work Order](For_Issue_of_Inventory_to_a_Work_Order.md) (traceability section)
+- [Setting Part Traceability Inventory Transaction Entry](Setting_Part_Traceability_Inventory_Transaction_Entry.md)
 
 ### Move Requests
 - Material movement requests
@@ -373,8 +373,8 @@ WHERE p.QTY_ON_HAND <> ISNULL(t.Calculated_QOH, 0);
 - Pick/put-away workflows
 
 **Related:**
-- [Creating Move Requests in Inventory Transaction Entry](../Help-md/VM/Creating_Move_Requests_in_Inventory_Transaction_Entry.md)
-- [Move Requests in Inventory Transaction Entry](../Help-md/VM/Move_Requests_in_Inventory_Transaction_Entry.md)
+- [Creating Move Requests in Inventory Transaction Entry](Creating_Move_Requests_in_Inventory_Transaction_Entry.md)
+- [Move Requests in Inventory Transaction Entry](Move_Requests_in_Inventory_Transaction_Entry.md)
 
 ---
 

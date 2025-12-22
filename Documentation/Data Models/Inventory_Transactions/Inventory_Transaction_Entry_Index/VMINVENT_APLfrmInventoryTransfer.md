@@ -36,7 +36,7 @@ To transfer inventory between locations:
    the quantity on hand in the parts default warehouse location
    may be inserted by default. You can specify a different value.
    See [Using
-   the Primary Warehouse and Location as the Default From Location](../../../Help-md/VM/Using_the_Primary_Warehouse_and_Location_as_the_Default_From_Location.md).
+   the Primary Warehouse and Location as the Default From Location](Using_the_Primary_Warehouse_and_Location_as_the_Default_From_Location.md).
 
 If you are transferring a piece-tracked
 part, specify the number of pieces and the required dimensions. To
@@ -48,16 +48,16 @@ view the dimensions of pieces in your inventory, click Inventory Pieces.
    When you transfer materials between warehouses, adjustment transactions
    are made. The Site Maintenance settings that apply to inventory
    adjustments also apply to transfers. See [Specifying
-   Information on the Defaults Tab](../../../Help-md/VM/Specifying_Information_on_the_Defaults_Tab_site.md).
+   Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
 7. In the From fields,
    specify the warehouse location from which you are transferring
    the part. Depending on your preferences settings, the parts primary
    warehouse and location may be inserted by default. You can specify
    a different value. See [Using
-   the Primary Warehouse and Location as the Default From Location](../../../Help-md/VM/Using_the_Primary_Warehouse_and_Location_as_the_Default_From_Location.md).
+   the Primary Warehouse and Location as the Default From Location](Using_the_Primary_Warehouse_and_Location_as_the_Default_From_Location.md).
 
 If you use [dimensional
-reporting](VF.chm::/Dimension_Reporting.md), the default dimension IDs for the debit transaction
+reporting](Dimension_Reporting.md), the default dimension IDs for the debit transaction
 are inserted into the Dimension 1 and Dimension 2 fields. The priorities
 you established for debit transactions for Adjustments are used to
 determine which IDs are inserted into the fields. Click the browse
@@ -70,7 +70,7 @@ in the Customer Order ID field.
    the warehouse location to which you are transferring the part.
 
 If you use [dimensional
-reporting](VF.chm::/Dimension_Reporting.md), the default dimension IDs for the debit transaction
+reporting](Dimension_Reporting.md), the default dimension IDs for the debit transaction
 are inserted into the Dimension 1 and Dimension 2 fields. The priorities
 you established for debit transactions for Adjustments are used to
 determine which IDs are inserted into the fields. Click the browse
@@ -85,4 +85,4 @@ The transfer creates an Adjust Out transaction
 for the From location, and a matching Adjust In transaction for the
 To location.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

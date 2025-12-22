@@ -90,7 +90,7 @@ Employee
 ID - The ID of the employee who worked on the labor ticket.
 This field is available only if you select the Autogen Labor During
 Receipt check box in Site Maintenance. See [Specifying
-Information on the Defaults Tab](../../../Help-md/VM/Specifying_Information_on_the_Defaults_Tab_site.md).
+Information on the Defaults Tab](Specifying_Information_on_the_Defaults_Tab_site.md).
 
 Required
 - The quantity required on the material requirement card. A value
@@ -133,7 +133,7 @@ Length/Width/Height
 of the required pieces. Values are displayed in these fields for Issues
 and Issue Returns. Values are displayed depending on which dimensions
 are required for the piece. See [Setting
-Up Piece Tracked Parts in Part Maintenance](../../../Help-md/VM/Setting_Up_Piece_Tracked_Parts_in_Part_Maintenance.md).
+Up Piece Tracked Parts in Part Maintenance](Setting_Up_Piece_Tracked_Parts_in_Part_Maintenance.md).
 
 Transaction Class - The type of inventory transaction.
 
@@ -184,12 +184,12 @@ record the transaction cost.
 User Dimension 1 and 2 - For adjust in and adjust
 out transactions, the user dimensions associated with the transaction.
 See [Creating Dimension
-IDs](VF.chm::/Creating_Dimension_IDs.md).
+IDs](Creating_Dimension_IDs.md).
 
 Customer Order ID - If you use dimensional reporting
 and track costs by customer ID, the customer order ID associated with
 the adjustment. See [Dimension
-Reporting](VF.chm::/Dimension_Reporting.md).
+Reporting](Dimension_Reporting.md).
 
 Work Order Table
 - For receipt by part transactions, a list of work orders for the
@@ -216,4 +216,4 @@ ID - The department to charge for the transaction. This field
 is available only if you are licensed to use Projects A&D functions
 and are performing an adjust-in transaction.
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help

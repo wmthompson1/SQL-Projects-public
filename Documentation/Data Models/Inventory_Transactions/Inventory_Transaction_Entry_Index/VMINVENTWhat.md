@@ -25,13 +25,13 @@ Use Inventory Transaction Entry to perform these functions:
 * [Adjusting
   inventory](Adjusting_Materials.md) on-hand quantities to reconcile with actual physical
   quantities. Physical Inventory Count does this automatically.
-* [Viewing](../../../Help-md/VM/Viewing_and_Modifying_Transaction_Information.md)
+* [Viewing](Viewing_and_Modifying_Transaction_Information.md)
   of inventory transactions created automatically by Purchase Receipt
   Entry, Shipping Entry, Physical Inventory Count, and Labor Ticket
   Entry auto-issues.
 * [Transferring
   inventory](VMINVENT_APLfrmInventoryTransfer.md) between part locations
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/Starting_Inventory_Transaction_Entry.md) Starting Inventory Transaction Entry
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](Starting_Inventory_Transaction_Entry.md) Starting Inventory Transaction Entry

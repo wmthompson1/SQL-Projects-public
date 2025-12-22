@@ -173,9 +173,9 @@ Each should link to:
 ### 1. Receipt of Fabricated Material into Inventory
 
 **ERP Help Files:**
-- [Receipt by Work Order](../Help-md/VM/Receiving_Materials_Into_Inventory.md)
-- [Receipt by Part](../Help-md/VM/Receiving_by_Part.md)
-- [Receipt by Part Inventory Transaction Entry](../Help-md/VM/Receipt_by_Part_Inventory_Transaction_Entry.md)
+- [Receipt by Work Order](Receiving_Materials_Into_Inventory.md)
+- [Receipt by Part](Receiving_by_Part.md)
+- [Receipt by Part Inventory Transaction Entry](Receipt_by_Part_Inventory_Transaction_Entry.md)
 
 **Database:** CLASS='R', TYPE='I' | Effect: +QTY
 
@@ -184,8 +184,8 @@ Each should link to:
 ### 2. Issue Material to a Work Order
 
 **ERP Help Files:**
-- [Issuing Materials to Work Orders](../Help-md/VM/VMINVENTfrmIssue.md)
-- [Issue by Exception](../Help-md/VM/VMINVENT_APLfrmIssue.md)
+- [Issuing Materials to Work Orders](VMINVENTfrmIssue.md)
+- [Issue by Exception](VMINVENT_APLfrmIssue.md)
 
 **Detailed Documentation:**
 - [Issue Material to Work Order - Complete Guide](Issue_Material_to_Work_Order.md) ✓
@@ -197,8 +197,8 @@ Each should link to:
 ### 3. Adjust Material Into Inventory
 
 **ERP Help Files:**
-- [Adjusting Materials](../Help-md/VM/Adjusting_Materials.md)
-- [For Adjust In or Adjust Out from Inventory](../Help-md/VM/For_Adjust_In_or_Adjust_Out_from_Inventory.md)
+- [Adjusting Materials](Adjusting_Materials.md)
+- [For Adjust In or Adjust Out from Inventory](For_Adjust_In_or_Adjust_Out_from_Inventory.md)
 
 **Database:** CLASS='A', TYPE='I' | Effect: +QTY
 
@@ -207,8 +207,8 @@ Each should link to:
 ### 4. Receipt Return (Return to Work Order)
 
 **ERP Help Files:**
-- [Returning Received Materials](../Help-md/VM/Returning_Received_Materials.md)
-- [For Receipt Return of Finished Goods](../Help-md/VM/For_Receipt_Return_of_Finished_Goods.md)
+- [Returning Received Materials](Returning_Received_Materials.md)
+- [For Receipt Return of Finished Goods](For_Receipt_Return_of_Finished_Goods.md)
 
 **Database:** CLASS='R', TYPE='O' | Effect: -QTY
 
@@ -217,8 +217,8 @@ Each should link to:
 ### 5. Issue Return (Return to Stockroom)
 
 **ERP Help Files:**
-- [Returning Issued Materials](../Help-md/VM/Returning_Issued_Materials.md)
-- [For Return of Issued Material from a Work Order](../Help-md/VM/For_Return_of_Issued_Material_from_a_Work_Order.md)
+- [Returning Issued Materials](Returning_Issued_Materials.md)
+- [For Return of Issued Material from a Work Order](For_Return_of_Issued_Material_from_a_Work_Order.md)
 
 **Detailed Documentation:**
 - [Issue Return to Stockroom - Complete Guide](Issue_Return_to_Stockroom.md) ✓
@@ -230,7 +230,7 @@ Each should link to:
 ### 6. Adjust Material Out of Inventory
 
 **ERP Help Files:**
-- [Adjusting Materials](../Help-md/VM/Adjusting_Materials.md) (same as #3)
+- [Adjusting Materials](Adjusting_Materials.md) (same as #3)
 
 **Database:** CLASS='A', TYPE='O' | Effect: -QTY
 ```

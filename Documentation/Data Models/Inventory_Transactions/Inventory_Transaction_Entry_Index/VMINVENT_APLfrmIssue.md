@@ -31,4 +31,4 @@ mode without warehouse prompts:
 | Can I issue traced parts? | Yes | No | No |
 | Can I return traced parts? | **Yes** | Yes | Yes |
 
-[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](../../../Help-md/VM/User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
+[![btn_mini.gif](btn_mini.gif "btn_mini.gif")](User_defined_Help_Files_Inventory_Transaction_Entry.md) User-defined Help
