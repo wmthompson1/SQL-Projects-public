@@ -46,4 +46,6 @@ CREATE TABLE INVENTORY_TRANS (
 
 ## Related Documentation
 - [Material Requirements Flow](materiall_requirements_flow.md) - Detailed CLASS+TYPE definitions
-- [Inventory Transaction Terminology Guide](Inventory_Transaction_Entry_Index/Inventory_Transaction_Terminology_Guide.md) - Complete terminology reference
+- [Inventory Transaction Terminology Guide](Inventory_Transaction_Terminology_Guide.md) - Complete terminology reference
+- [Issue Material to Work Order](Issue_Material_to_Work_Order.md) - I+O operation guide
+- [Issue Return to Stockroom](Issue_Return_to_Stockroom.md) - I+I operation guide
