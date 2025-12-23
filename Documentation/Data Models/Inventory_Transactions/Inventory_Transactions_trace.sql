@@ -1,4 +1,6 @@
--- S1.2.1.1 Inventory_Transactions_Filtered
+
+-- C:\Users\williamt\OneDrive - Skills Inc GCC High\Documents\sql\222_Data_Models\Inventory_Transactions\
+--Inventory_Transactions_Trace.sql
 -- file path: SQL_Reports/Inventory/Inventory - Transactions AI Review.sql
 -- run at sql-lab-2 in prod
 -- dw in stage on sql-bi-1
@@ -137,12 +139,12 @@ IF OBJECT_ID('tempdb..#temp5') IS NOT NULL DROP TABLE #temp5
 
 
 DECLARE @Tester int
-   ,@Part_ID nvarchar(30) = null --'25243C-112 X 11.25 X 68.00' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
+   ,@Part_ID nvarchar(30) = '70756E-3100427'; --'25243C-112 X 11.25 X 68.00' --'65B83903-7' -- '315A6015-14'  -- '287T4518-27' -- 315A6015-14 --  'BACR10AK10C'  -- '212A1214-13'  -- 'BACR10AK10C'
  -- ,@SITE_id nvarchar(30) -- = 'SK01'
 
  Set @Tester = 0
  --Set @SITE_id = 'SK01'
- DECLARE @workorder_base_id nvarchar(30) = '1802575' --'1773882'  ---'1789047';  --1801171' ; -- '1793687' -- '1801516'; -- -- '1799404'
+ DECLARE @workorder_base_id nvarchar(30) = NULL; -- '1802575' --'1773882'  ---'1789047';  --1801171' ; -- '1793687' -- '1801516'; -- -- '1799404'
 dECLARE @Transaction_ID nvarchar(30) = NULL;  --'138481' --  '139140';
 DECLARE @TRACE_ID nvarchar(30) = NULL; -- '179473';  -- '183938/1' ;  
 
@@ -219,18 +221,17 @@ include([transaction_date]
 
 
 
-select * from #inventory_trans
-where workorder_base_id = @workorder_base_id or @workorder_base_id IS NULL;
-
+select * from #inventory_trans i
+where workorder_base_id = @workorder_base_id or @workorder_base_id IS NULL
+and (part_id = @Part_ID or @Part_ID IS NULL)
+order by i.transaction_date desc, TRANSACTION_ID, WORKORDER_BASE_ID, WORKORDER_LOT_ID
+;
 
 -- select 
 --  'inventory_trans' NOTE
 -- ,* from inventory_trans t  
 -- where workorder_base_id = '1801171';;
 -- --@workorder_base_id   -- -- '1793687' -- --'1801516'; -- -- '1799404'
-
-select STATUS, * from work_order
-where base_id = @workorder_base_id; -- '1801171';  -- '1793687' -- ----  @workorder_base_id   -- -- '1793687' -- '1801516'; -- -- '1799404' -- 1793687
 
 -- select 
 --   'TRACE_INV_TRANS' NOTE
