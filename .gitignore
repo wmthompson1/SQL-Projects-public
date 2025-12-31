@@ -231,4 +231,4 @@ docker/arangodb_data/
 *.dot
 
 # sensitive notes
-000index.md
+000index*.md
