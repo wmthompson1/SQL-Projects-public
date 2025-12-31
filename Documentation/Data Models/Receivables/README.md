@@ -1,5 +1,21 @@
 Data Models (DDL) — Receivables-related tables
 
+## Schema Reference
+
+For complete table definitions, relationships, and join patterns, see:
+- **[Receivables Tables Reference](../../Schema/RECEIVABLES_TABLES.md)** - Comprehensive schema documentation with ER diagrams
+
+### Quick DDL Links
+Key receivables table definitions:
+- [RECEIVABLE](../../Schema/Tables/dbo.RECEIVABLE.sql) / [RECEIVABLE_LINE](../../Schema/Tables/dbo.RECEIVABLE_LINE.sql) - Customer invoices
+- [SHIPPER](../../Schema/Tables/dbo.SHIPPER.sql) / [SHIPPER_LINE](../../Schema/Tables/dbo.SHIPPER_LINE.sql) - Shipments/packlists
+- [CUSTOMER_ORDER](../../Schema/Tables/dbo.CUSTOMER_ORDER.sql) / [CUST_ORDER_LINE](../../Schema/Tables/dbo.CUST_ORDER_LINE.sql) - Sales orders
+- [CUSTOMER](../../Schema/Tables/dbo.CUSTOMER.sql) - Customer master
+- [INVENTORY_TRANS](../../Schema/Tables/dbo.INVENTORY_TRANS.sql) / [INV_TRANS_DIST](../../Schema/Tables/dbo.INV_TRANS_DIST.sql) - Inventory movements
+- [CASH_RECEIPT_LINE](../../Schema/Tables/dbo.CASH_RECEIPT_LINE.sql) - Payment receipts
+
+## Background
+
 Authoritative replacement note (2025-12-05):
 - The guessed DDL templates in this folder were replaced with authoritative CREATE scripts extracted from the `LIVE` database using the schema-extract tool.
 - Source files: `Documentation/Data Models/ddl/schema-extract/output/LIVE/` (per-table scripts, e.g. `dbo.RECEIVABLE.sql`).

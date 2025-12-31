@@ -1,12 +1,42 @@
--- main database schema
-folder url: https
-Documentation\Data Models\ddl\schema-extract\output\LIVE\README.md
-Quick index: the full per-table CREATE scripts are in this folder. To help find files quickly I added `TABLE_INDEX.md` which maps table name → filename (e.g. `PAYABLE` → `dbo.PAYABLE.sql`).
+# Schema Files Moved
 
-To (re)generate the index locally run:
+⚠️ **This location is deprecated.**
 
-```powershell
-pwsh -NoProfile -ExecutionPolicy Bypass -Command "& 'Documentation/Data Models/ddl/schema-extract/output/LIVE/generate_table_index.ps1'"
+Schema DDL files have been moved to a more prominent location for better discoverability.
+
+## New Location
+
+**All DDL files are now at:** `Documentation/Schema/Tables/`
+
+- **Main index:** [Documentation/Schema/README.md](../../../../../Schema/README.md)
+- **Table index:** [Documentation/Schema/TABLE_INDEX.md](../../../../../Schema/TABLE_INDEX.md)
+- **Payables reference:** [Documentation/Schema/PAYABLES_TABLES.md](../../../../../Schema/PAYABLES_TABLES.md)
+- **Receivables reference:** [Documentation/Schema/RECEIVABLES_TABLES.md](../../../../../Schema/RECEIVABLES_TABLES.md)
+
+## Why the Move?
+
+The schema DDL files are foundational reference material that deserve prominent placement. The new location:
+- Is easier to discover (top-level sibling to Data Models)
+- Has better organization with domain-specific documentation
+- Includes comprehensive ER diagrams and join patterns
+- Provides cross-links to related data model queries
+
+## Quick Links
+
+[Go to new schema location →](../../../../../Schema/)
+
+## Migration Path
+
+If you have bookmarks or scripts referencing files in this location:
+
+**Old path pattern:**
+```
+Documentation/Data Models/ddl/schema-extract/output/LIVE/dbo.PAYABLE.sql
 ```
 
-Output: `Documentation/Data Models/ddl/schema-extract/output/LIVE/TABLE_INDEX.md`
+**New path pattern:**
+```
+Documentation/Schema/Tables/dbo.PAYABLE.sql
+```
+
+Update your references to use the new path structure.
