@@ -232,3 +232,7 @@ docker/arangodb_data/
 
 # sensitive notes
 000index*.md
+
+# SQLite databases
+*.db
+.db.*
