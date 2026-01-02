@@ -180,9 +180,9 @@ placeholder="e.g., Show me inventory value by cost center for month end"
 ```
 
 ### Category Dropdown Choices
-**Location**: `get_category_choices()` function references `schema/queries/index.json`
+**Location**: `get_category_choices()` function references `app_schema/queries/index.json`
 
-**File to Edit**: `schema/queries/index.json`
+**File to Edit**: `app_schema/queries/index.json`
 
 **Current Categories**:
 ```json
@@ -330,7 +330,7 @@ resources=[
 
 ## 6. Ground Truth SQL Query Files
 
-**Location**: `schema/queries/*.sql` files
+**Location**: `app_schema/queries/*.sql` files
 
 ### Files to Update:
 1. `quality_control.sql` → Replace with actual quality queries or delete
@@ -375,8 +375,8 @@ ORDER BY WO.BASE_ID;
 - [ ] Replace SQL templates in `SQL_TEMPLATES` dictionary (search app.py)
 - [ ] Update query intent keywords for table detection (lines 380-392)
 - [ ] Modify Gradio placeholder text (line 926)
-- [ ] Update `schema/queries/index.json` with your categories
-- [ ] Create/update SQL files in `schema/queries/` folder
+- [ ] Update `app_schema/queries/index.json` with your categories
+- [ ] Create/update SQL files in `app_schema/queries/` folder
 - [ ] Update MCP discovery metadata (lines 515-520)
 - [ ] Test with actual database connection
 
