@@ -5,7 +5,7 @@ This guide documents how to set up, load, and update the SQLite database for the
 ## File Locations
 
 ```
-schema/
+app_schema/
 ├── manufacturing.db          # SQLite database (auto-created)
 ├── schema_sqlite.sql         # DDL - CREATE TABLE statements
 └── queries/
@@ -24,7 +24,7 @@ The app automatically initializes the database on startup:
 
 ```python
 # In app.py - init_sqlite_db()
-# Reads schema/schema_sqlite.sql and creates tables in schema/manufacturing.db
+# Reads app_schema/schema_sqlite.sql and creates tables in app_schema/manufacturing.db
 ```
 
 Just run the app:
@@ -39,10 +39,10 @@ To manually recreate the database from schema:
 
 ```bash
 # Delete existing database (if any)
-rm -f schema/manufacturing.db
+rm -f app_schema/manufacturing.db
 
 # Load schema using sqlite3
-sqlite3 schema/manufacturing.db < schema/schema_sqlite.sql
+sqlite3 app_schema/manufacturing.db < app_schema/schema_sqlite.sql
 ```
 
 ### Option 3: Load Sample Data
@@ -50,7 +50,7 @@ sqlite3 schema/manufacturing.db < schema/schema_sqlite.sql
 If you have sample data CSV files:
 
 ```bash
-sqlite3 schema/manufacturing.db
+sqlite3 app_schema/manufacturing.db
 .mode csv
 .import suppliers.csv suppliers
 .import product_defects.csv product_defects
@@ -61,7 +61,7 @@ sqlite3 schema/manufacturing.db
 
 ### Step 1: Edit the DDL File
 
-Modify `schema/schema_sqlite.sql` with your new table definitions:
+Modify `app_schema/schema_sqlite.sql` with your new table definitions:
 
 ```sql
 -- Example: Add a new table
@@ -75,8 +75,8 @@ CREATE TABLE IF NOT EXISTS new_table (
 ### Step 2: Regenerate Database
 
 ```bash
-rm -f schema/manufacturing.db
-sqlite3 schema/manufacturing.db < schema/schema_sqlite.sql
+rm -f app_schema/manufacturing.db
+sqlite3 app_schema/manufacturing.db < app_schema/schema_sqlite.sql
 ```
 
 ### Step 3: Restart the App
@@ -95,7 +95,7 @@ The `schema_edges` table defines foreign key relationships for the schema graph:
 ### View Current Edges
 
 ```bash
-sqlite3 schema/manufacturing.db "SELECT * FROM schema_edges"
+sqlite3 app_schema/manufacturing.db "SELECT * FROM schema_edges"
 ```
 
 ### Add New Relationship
@@ -147,9 +147,9 @@ SELECT * FROM another_table;
 
 ### Adding a New Category
 
-1. Create new SQL file: `schema/queries/new_category.sql`
+1. Create new SQL file: `app_schema/queries/new_category.sql`
 
-2. Update `schema/queries/index.json`:
+2. Update `app_schema/queries/index.json`:
 
 ```json
 {
@@ -178,17 +178,17 @@ curl "http://localhost:5000/mcp/tools/get_saved_queries?category_id=new_category
 
 | Task | Command |
 |------|---------|
-| View all tables | `sqlite3 schema/manufacturing.db ".tables"` |
-| View table schema | `sqlite3 schema/manufacturing.db ".schema table_name"` |
-| Count rows | `sqlite3 schema/manufacturing.db "SELECT COUNT(*) FROM table_name"` |
-| Export to CSV | `sqlite3 -csv schema/manufacturing.db "SELECT * FROM table_name" > out.csv` |
-| Rebuild database | `rm -f schema/manufacturing.db && sqlite3 schema/manufacturing.db < schema/schema_sqlite.sql` |
+| View all tables | `sqlite3 app_schema/manufacturing.db ".tables"` |
+| View table schema | `sqlite3 app_schema/manufacturing.db ".schema table_name"` |
+| Count rows | `sqlite3 app_schema/manufacturing.db "SELECT COUNT(*) FROM table_name"` |
+| Export to CSV | `sqlite3 -csv app_schema/manufacturing.db "SELECT * FROM table_name" > out.csv` |
+| Rebuild database | `rm -f app_schema/manufacturing.db && sqlite3 app_schema/manufacturing.db < app_schema/schema_sqlite.sql` |
 
 ## Environment Variables
 
 | Variable | Default | Description |
 |----------|---------|-------------|
-| `DATABASE_URL` | `sqlite:///schema/manufacturing.db` | Database connection string |
+| `DATABASE_URL` | `sqlite:///app_schema/manufacturing.db` | Database connection string |
 | `QUERY_API_KEY` | (none) | API key for `/mcp/tools/save_query` endpoint |
 
 ## Troubleshooting
@@ -197,7 +197,7 @@ curl "http://localhost:5000/mcp/tools/get_saved_queries?category_id=new_category
 
 ```bash
 # Find and kill any processes using the database
-fuser -k schema/manufacturing.db
+fuser -k app_schema/manufacturing.db
 ```
 
 ### Schema Changes Not Reflected
