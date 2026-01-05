@@ -1,0 +1,4 @@
+Rule Name,Enabled,Subject trigger (SubjectWords),From trigger (FromNames),Target folder,From Addresses
+Server Alerts,TRUE,,Server Alerts,williamt@skillsinc.com\Inbox\Server,
+Spotlight notification for,TRUE,Spotlight notification for,,williamt@skillsinc.com\Inbox\Spotlight,
+[The job failed.] ,TRUE,[The job failed.] ,,williamt@skillsinc.com\Inbox\Priority,
