@@ -1,0 +1,11 @@
+gateways:
+  local:
+    connection:
+      type: duckdb
+      database: local.db
+default_gateway: local
+
+model_defaults:
+  dialect: duckdb
+  # Optional: Default start date for models if not specified in the model file
+  # start: 2022-01-01 

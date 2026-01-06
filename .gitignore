@@ -236,3 +236,7 @@ docker/arangodb_data/
 # SQLite databases
 *.db
 .db.*
+
+# markdown scratchpad
+Documentation/scratchpad/100*
+

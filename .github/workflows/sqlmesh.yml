@@ -1,0 +1,46 @@
+name: SQLMesh Bot
+run-name: 🚀 SQLMesh Bot 🚀
+
+on:
+  pull_request:
+    types:
+      - synchronize
+      - opened
+    paths:
+      - 'Utilities/SQLMesh/**'
+      - '.github/workflows/sqlmesh.yml'
+
+# Latest commit will be used to create PR environment
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.ref_name }}
+  cancel-in-progress: true
+
+jobs:
+  sqlmesh:
+    name: SQLMesh CI/CD Bot
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write      # Access code in PR
+      issues: write        # Post comments
+      checks: write        # Update check runs
+      pull-requests: write # Merge capability
+
+    steps:
+      - name: Checkout PR branch
+        uses: actions/checkout@v4
+        with:
+          ref: refs/pull/${{ github.event.issue.pull_request && github.event.issue.number || github.event.pull_request.number }}/merge
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+
+      - name: Install SQLMesh with LSP extras
+        run: pip install --upgrade pip && pip install "sqlmesh[lsp]"
+        shell: bash
+
+      - name: Run SQLMesh CI/CD Bot
+        run: |
+          sqlmesh_cicd -p Utilities/SQLMesh github --token ${{ secrets.GITHUB_TOKEN }} run-all
+        shell: bash
