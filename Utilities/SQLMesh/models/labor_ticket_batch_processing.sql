@@ -1,7 +1,3 @@
--- Labor Ticket Batch Processing Model
--- Purpose: Tracks labor tickets requiring batch burden cost updates
--- Uses POSTING_CANDIDATE flag for restart-safe ETL operations
-
 MODEL (
     name labor_ticket_batch_processing,  -- The name of the model
     kind FULL                             -- Complete refresh on each run
