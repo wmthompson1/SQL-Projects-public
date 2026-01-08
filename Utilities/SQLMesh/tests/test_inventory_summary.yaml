@@ -1,0 +1,15 @@
+test_inventory_summary:
+  model: inventory_summary
+  inputs:
+    inventory_transactions:
+      - transaction_id: 1
+  outputs:
+    query:
+      sql: "SELECT * FROM inventory_summary"
+      rows:
+        - item_id: 101
+          ds: '2026-01-01'
+          total_inbound: 50.0
+          total_outbound: 0.0
+          net_quantity: 50.0
+          transaction_count: 1

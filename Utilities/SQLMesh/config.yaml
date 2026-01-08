@@ -3,6 +3,7 @@ gateways:
     connection:
       type: duckdb
       database: local.db
+
 default_gateway: local
 
 model_defaults:
