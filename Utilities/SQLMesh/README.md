@@ -1,5 +1,13 @@
 note: .github\workflows\sqlmesh.yml  -- I may have versioned this file using multiple commits
 
+# Run workflow steps
+python load_inventory_data.py
+sqlmesh --paths . info
+sqlmesh --paths . test
+sqlmesh --paths . plan dev --auto-apply --include-unmodified
+sqlmesh --paths . fetchdf "SELECT * FROM default__dev.inventory_summary LIMIT 5"
+
+
 sqlmesh --paths . plan dev --auto-apply --include-unmodified
 
 ======================================================================
