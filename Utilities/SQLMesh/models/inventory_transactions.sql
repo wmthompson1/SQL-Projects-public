@@ -1,15 +1,14 @@
 MODEL (
     name inventory_transactions,
-    kind SEED (
-        path '../seeds/inventory_transactions.csv'
-    ),
-    columns (
-        transaction_id INTEGER,
-        item_id INTEGER,
-        transaction_type VARCHAR,
-        quantity DOUBLE,
-        transaction_date TIMESTAMP,
-        warehouse_id VARCHAR
-    ),
-    description 'Raw inventory transaction data loaded from CSV seed file.'
+    kind FULL,
+    description 'Test/source model that loads Utilities/SQLMesh/seeds/inventory_transactions.csv for local testing.'
 );
+
+SELECT
+    CAST(transaction_id AS INTEGER) AS transaction_id,
+    CAST(item_id AS INTEGER) AS item_id,
+    transaction_type,
+    CAST(quantity AS DOUBLE) AS quantity,
+    CAST(transaction_date AS TIMESTAMP) AS transaction_date,
+    warehouse_id
+FROM read_csv_auto('seeds/inventory_transactions.csv', header=true);
