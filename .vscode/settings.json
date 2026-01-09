@@ -2,5 +2,13 @@
 	"omnisharp.useModernNet": true,
 	"omnisharp.loggingLevel": "debug",
 	"chat.useAgentSkills": true,
-	"sqltools.useNodeRuntime": true
+	"sqltools.useNodeRuntime": true,
+	"sqltools.connections": [
+		{
+			"name": "DuckDB - local.db",
+			"driver": "SQLite",
+			"database": "${workspaceFolder}/Utilities/SQLMesh/local.db",
+			"previewLimit": 200
+		}
+	]
 }
