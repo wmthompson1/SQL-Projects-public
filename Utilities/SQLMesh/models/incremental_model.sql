@@ -1,5 +1,5 @@
 MODEL (
-  name sqlmesh_example.incremental_model,
+  name incremental_model,
   kind INCREMENTAL_BY_TIME_RANGE (
     time_column event_date
   ),

@@ -60,7 +60,7 @@ Instead of running PowerShell directly in SQL Server Agent:
 
 2. **Option B**: File-based triggering
    - SQL Server job creates trigger file
-   - Separate Windows service/task monitors for trigger file
+   - Separate Windows service/task monitors for the trigger file
    - External process runs PowerShell script
 
 ## Quick Test Commands

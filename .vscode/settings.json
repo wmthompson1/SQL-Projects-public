@@ -1,4 +1,5 @@
 {
 	"omnisharp.useModernNet": true,
-	"omnisharp.loggingLevel": "debug"
+	"omnisharp.loggingLevel": "debug",
+	"chat.useAgentSkills": true
 }
