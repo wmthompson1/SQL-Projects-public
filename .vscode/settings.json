@@ -2,5 +2,5 @@
 	"omnisharp.useModernNet": true,
 	"omnisharp.loggingLevel": "debug",
 	"chat.useAgentSkills": true,
-	"sqltools.useNodeRuntime": false
+	"sqltools.useNodeRuntime": true
 }

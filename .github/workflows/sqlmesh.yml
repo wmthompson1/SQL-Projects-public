@@ -1,7 +1,7 @@
 name: SQLMesh CI/CD
 
 on:
-  pull_request:
+  pull_request: 
     types: [opened, synchronize, reopened]
   push:
     branches: [main]
@@ -21,10 +21,10 @@ jobs:
       - name: Install dependencies
         run: pip install sqlmesh
 
-      - name: Run SQLMesh plan (PR preview)
+      - name:  Run SQLMesh plan (PR preview)
         if: github.event_name == 'pull_request'
-        run: sqlmesh --paths . plan dev --auto-apply
+        run: sqlmesh --paths Utilities/SQLMesh plan dev --auto-apply
 
       - name: Run SQLMesh plan (Production deploy)
-        if: github. event_name == 'push' && github.ref == 'refs/heads/main'
-        run: sqlmesh --paths . plan prod --auto-apply
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: sqlmesh --paths Utilities/SQLMesh plan prod --auto-apply

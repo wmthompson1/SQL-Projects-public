@@ -10,7 +10,7 @@ sqlmesh init duckdb
 
 This scaffolds:
 ```
-my-sqlmesh-project/
+Utilities/sqlMesh/
 ├── config.yaml           # Database connection + model defaults
 ├── models/               # SQL model definitions
 ├── seeds/                # CSV/JSON data files
