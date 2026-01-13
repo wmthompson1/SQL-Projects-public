@@ -1,11 +1,11 @@
 MODEL (
     name items_agg,
     kind FULL,
-    description 'Aggregate quantities per item (uses items_dim).'
+    description 'Count of items per prefix (demonstrates aggregation on items_dim).'
 );
 
 SELECT
-    item_id,
-    SUM(qty) AS total_qty
-FROM local.main.items_dim
-GROUP BY item_id;
+    SUBSTRING(id, 1, 1) AS id_prefix,
+    COUNT(*) AS item_count
+FROM items_dim
+GROUP BY SUBSTRING(id, 1, 1);

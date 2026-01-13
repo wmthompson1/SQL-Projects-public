@@ -13,7 +13,7 @@ SELECT
   item_id,
   event_date,
 FROM
-  sqlmesh_example.seed_model
+  seed_model
 WHERE
   event_date BETWEEN @start_date AND @end_date
   

@@ -1,7 +1,7 @@
 test_full_model:
   model: full_model
   inputs:
-    sqlmesh_example.incremental_model:
+    incremental_model:
       - id: 1
         item_id: 101
         event_date: '2026-01-01'
