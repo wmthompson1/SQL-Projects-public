@@ -1,0 +1,21 @@
+{
+  "name": "sql-projects",
+  "version": "1.0.0",
+  "description": "Oct 17, 2025\r https://github.com/Skills-Inc-Org",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Skills-Inc-Org/SQL-Projects.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Skills-Inc-Org/SQL-Projects/issues"
+  },
+  "homepage": "https://github.com/Skills-Inc-Org/SQL-Projects#readme"
+}

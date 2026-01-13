@@ -43,7 +43,9 @@ $InputFilePath = Join-Path -Path $project -ChildPath "Input\BOE.xls"
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
     ## $testInputFile = $project + "Input\Test Input Excel File Nov 2025 - Copy.xls"
-    $testInputFile = $project + "Input\xlDetailExport 003243654 Test William.xls"
+    # xlDetailExport 9703
+    # $testInputFile = $project + "Input\xlDetailExport 003243654 Test William.xls"
+    $testInputFile = $project + "Input\xlDetailExport 9703.xls"
     ## 
     $testOutputFile = $project + "Input\BOE.xls"
     
@@ -503,11 +505,11 @@ $site_supplier_code = $Worksheet.Range("D11").Value2
 [string]$best_code = $Worksheet.Range("D10").Value2
 #payment_check_date(B7)
 $payment_check_date = [datetime]::FromOADate(($Worksheet.Range("B7").Value2));
-$dtePayment_check_date     = ([datetime]($payment_check_date)).ToString("yyyy-MM-dd hh:mm tt")
+$dtePayment_check_date     = ([datetime]($payment_check_date)).ToString("yyyy-MM-dd HH:mm:ss")
 
 #payment_settlement_date(B8)
 $payment_settlement_date = [datetime]::FromOADate(($Worksheet.Range("B8").Value2));
-$dtePayment_settlement_date    = ([datetime]($payment_settlement_date)).ToString("yyyy-MM-dd hh:mm tt")
+$dtePayment_settlement_date    = ([datetime]($payment_settlement_date)).ToString("yyyy-MM-dd HH:mm:ss")
 
 #payment(B6)
 $payment = $Worksheet.Range("B6").Value2
@@ -524,15 +526,15 @@ $time = (Get-Date).ToString("yyyy-MM-dd hh:mm")
 $tab = @()
 
 $obj = New-Object PSObject -Property @{
-    check_trace_num       = ($check_trace_num)
-    site_supplier_code       = ($site_supplier_code)
-    best_code       = ($best_code)
-    payment_check_date     = ($dtePayment_check_date)
-    payment_settlement_date    = ($dtePayment_settlement_date)
+    check_trace_num       = [string]($check_trace_num)
+    site_supplier_code       = [string]($site_supplier_code)
+    best_code       = [string]($best_code)
+    payment_check_date     = [string]($dtePayment_check_date)
+    payment_settlement_date    = [string]($dtePayment_settlement_date)
 
     payment   = ($payment)
-    invoices_paid_str  = ($invoices_paid_str)
-    payment_status = ($payment_status)
+    invoices_paid_str  = [string]($invoices_paid_str)
+    payment_status = [string]($payment_status)
 
 
      }

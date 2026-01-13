@@ -1,8 +1,21 @@
 test_full_model:
   model: full_model
-  inputs: {}
+  inputs:
+    sqlmesh_example.incremental_model:
+      - id: 1
+        item_id: 101
+        event_date: '2026-01-01'
+      - id: 2
+        item_id: 101
+        event_date: '2026-01-02'
+      - id: 3
+        item_id: 102
+        event_date: '2026-01-03'
   outputs:
     query:
-      sql: "SELECT COUNT(*) AS cnt FROM full_model"
+      sql: "SELECT * FROM full_model ORDER BY item_id"
       rows:
-        - cnt: 0
+        - item_id: 101
+          num_orders: 2
+        - item_id: 102
+          num_orders: 1
