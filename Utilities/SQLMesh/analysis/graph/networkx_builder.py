@@ -83,9 +83,9 @@ class LineageGraphBuilder:
                     self.graph.add_node(
                         table_name,
                         node_type='table',
-                        database=table.get('database'),
-                        schema=table.get('schema'),
-                        table=table.get('table')
+                        database=table.get('database') or '',
+                        schema=table.get('schema') or '',
+                        table=table.get('table') or ''
                     )
                     self.table_nodes.add(table_name)
                 
