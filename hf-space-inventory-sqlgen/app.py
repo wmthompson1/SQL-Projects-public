@@ -21,12 +21,21 @@ from pydantic import BaseModel, Field
 import gradio as gr
 from sqlalchemy import create_engine, text, inspect
 from sqlalchemy.exc import SQLAlchemyError
+from ground_truth_integration import GroundTruthQueryManager
 
 SCHEMA_DIR = os.path.join(os.path.dirname(__file__), "app_schema")
 QUERIES_DIR = os.path.join(SCHEMA_DIR, "queries")
 QUERY_API_KEY = os.environ.get("QUERY_API_KEY", "")
 SQLITE_DB_PATH = os.path.join(SCHEMA_DIR, "manufacturing.db")
 db_engine = None
+
+# Initialize Ground Truth Query Manager
+try:
+    query_mgr = GroundTruthQueryManager("ground_truth_queries.sql")
+    print(f"✅ Loaded {len(query_mgr.queries)} ground truth queries")
+except Exception as e:
+    print(f"⚠️  Could not load ground truth queries: {e}")
+    query_mgr = None
 
 def get_db_engine():
     """Get or create SQLite database engine"""
@@ -1056,6 +1065,78 @@ def create_gradio_interface():
             3. Paste context into Copilot Chat
             4. Ask follow-up questions about your manufacturing data
             """)
+        
+        # Add Ground Truth Examples Tab
+        if query_mgr and query_mgr.queries:
+            with gr.Tab("📚 Ground Truth Examples"):
+                gr.Markdown("""
+                ## Ground Truth SQL Query Examples
+                
+                These queries demonstrate best practices for DuckDB SQL generation from natural language.
+                Use them as reference when building your own queries.
+                """)
+                
+                with gr.Row():
+                    example_dropdown = gr.Dropdown(
+                        choices=query_mgr.export_for_gradio(),
+                        label="Select an Example Query",
+                        info="Choose a query to see the SQL code",
+                        interactive=True
+                    )
+                
+                with gr.Row():
+                    example_sql_output = gr.Code(
+                        label="SQL Code",
+                        language="sql",
+                        lines=15
+                    )
+                
+                with gr.Row():
+                    with gr.Column():
+                        example_category = gr.Textbox(label="Category", interactive=False)
+                    with gr.Column():
+                        example_tables = gr.Textbox(label="Tables Used", interactive=False)
+                
+                example_natural_lang = gr.Textbox(
+                    label="Natural Language Description",
+                    interactive=False,
+                    lines=2
+                )
+                
+                def load_example(sql_code):
+                    """Load example metadata when query is selected"""
+                    if not sql_code:
+                        return "", "", "", ""
+                    
+                    # Find the matching query
+                    for query in query_mgr.queries:
+                        if query['sql'] == sql_code:
+                            return (
+                                sql_code,
+                                query['category'],
+                                query['tables'],
+                                query['natural_language']
+                            )
+                    return sql_code, "", "", ""
+                
+                example_dropdown.change(
+                    fn=load_example,
+                    inputs=[example_dropdown],
+                    outputs=[example_sql_output, example_category, example_tables, example_natural_lang]
+                )
+                
+                gr.Markdown("""
+                ### Query Pattern Coverage
+                
+                | Pattern | Description | Example |
+                |---------|-------------|---------|
+                | **Basic Filtering** | WHERE clauses, simple SELECT | Filter by numeric thresholds |
+                | **Aggregation** | GROUP BY, COUNT, SUM, AVG | Totals per batch or category |
+                | **Date Filtering** | DATE_TRUNC, date ranges | Time-based analysis |
+                | **Window Functions** | RANK, ROW_NUMBER, LAG/LEAD | Ranking and analytics |
+                | **CTEs** | WITH clauses | Complex multi-step queries |
+                | **Conditional Logic** | CASE WHEN statements | Categorization and bucketing |
+                """)
     
     return demo
 
@@ -1063,7 +1144,6 @@ def create_gradio_interface():
 get_db_engine()
 initial_tables = get_all_tables()
 print(f"SQLite database initialized with {len(initial_tables)} tables")
-
 gradio_app = create_gradio_interface()
 app = gr.mount_gradio_app(app, gradio_app, path="/gradio")
 

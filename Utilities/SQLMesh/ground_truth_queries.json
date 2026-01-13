@@ -1,0 +1,38 @@
+[
+  {
+    "category": "Basic filtering",
+    "natural_language": "Show me all labor tickets with more than 7 hours",
+    "tables": "labor_ticket_batch_processing",
+    "sql": "SELECT \n    ticket_id,\n    batch_id,\n    labor_hours,\n    created_at\nFROM labor_ticket_batch_processing\nWHERE labor_hours > 7.0\nORDER BY labor_hours DESC;"
+  },
+  {
+    "category": "Aggregation",
+    "natural_language": "What is the total labor hours per batch?",
+    "tables": "labor_ticket_batch_processing",
+    "sql": "SELECT \n    batch_id,\n    COUNT(*) as ticket_count,\n    SUM(labor_hours) as total_hours,\n    AVG(labor_hours) as avg_hours_per_ticket,\n    MIN(labor_hours) as min_hours,\n    MAX(labor_hours) as max_hours\nFROM labor_ticket_batch_processing\nGROUP BY batch_id\nORDER BY total_hours DESC;"
+  },
+  {
+    "category": "Date filtering + Aggregation",
+    "natural_language": "Show daily labor statistics for January 2026",
+    "tables": "labor_ticket_batch_processing",
+    "sql": "SELECT \n    DATE_TRUNC('day', created_at) as work_date,\n    COUNT(*) as tickets_processed,\n    SUM(labor_hours) as total_hours,\n    ROUND(AVG(labor_hours), 2) as avg_hours\nFROM labor_ticket_batch_processing\nWHERE created_at >= '2026-01-01' \n  AND created_at < '2026-02-01'\nGROUP BY DATE_TRUNC('day', created_at)\nORDER BY work_date;"
+  },
+  {
+    "category": "Window functions",
+    "natural_language": "Rank batches by total hours and show top 3",
+    "tables": "labor_ticket_batch_processing",
+    "sql": "WITH batch_totals AS (\n    SELECT \n        batch_id,\n        COUNT(*) as ticket_count,\n        SUM(labor_hours) as total_hours\n    FROM labor_ticket_batch_processing\n    GROUP BY batch_id\n)\nSELECT \n    batch_id,\n    ticket_count,\n    total_hours,\n    RANK() OVER (ORDER BY total_hours DESC) as rank\nFROM batch_totals\nORDER BY rank\nLIMIT 3;"
+  },
+  {
+    "category": "Basic filtering + Aggregation",
+    "natural_language": "Show inventory movement summary by warehouse",
+    "tables": "default__dev.inventory_transactions",
+    "sql": "SELECT \n    warehouse_id,\n    transaction_type,\n    COUNT(*) as transaction_count,\n    SUM(quantity) as total_quantity,\n    MIN(transaction_date) as first_transaction,\n    MAX(transaction_date) as last_transaction\nFROM default__dev.inventory_transactions\nGROUP BY warehouse_id, transaction_type\nORDER BY warehouse_id, transaction_type;"
+  },
+  {
+    "category": "Conditional aggregation",
+    "natural_language": "Categorize labor tickets by workload (light/medium/heavy) and count them",
+    "tables": "labor_ticket_batch_processing",
+    "sql": "SELECT \n    CASE \n        WHEN labor_hours < 5.0 THEN 'Light'\n        WHEN labor_hours >= 5.0 AND labor_hours < 8.0 THEN 'Medium'\n        ELSE 'Heavy'\n    END as workload_category,\n    COUNT(*) as ticket_count,\n    AVG(labor_hours) as avg_hours,\n    SUM(labor_hours) as total_hours\nFROM labor_ticket_batch_processing\nGROUP BY \n    CASE \n        WHEN labor_hours < 5.0 THEN 'Light'\n        WHEN labor_hours >= 5.0 AND labor_hours < 8.0 THEN 'Medium'\n        ELSE 'Heavy'\n    END\nORDER BY \n    CASE workload_category\n        WHEN 'Light' THEN 1\n        WHEN 'Medium' THEN 2\n        WHEN 'Heavy' THEN 3\n    END;"
+  }
+]
