@@ -230,8 +230,8 @@ docker/arangodb_data/
 *.graphml
 *.dot
 
-# sensitive notes only unnumbered
-000index.md
+# sensitive notes 
+000index*.md
 
 # SQLite databases
 *.db
