@@ -7,7 +7,7 @@ for the SQL generation Gradio interface.
 
 import json
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
 import re
 
 
@@ -16,7 +16,7 @@ class GroundTruthQueryManager:
     
     def __init__(self, queries_file: str = "ground_truth_queries.sql"):
         self.queries_file = Path(queries_file)
-        self.queries: List[Dict[str, str]] = []
+        self.queries: Dict[str, Dict[str, Any]] = {}
         self.load_queries()
     
     def load_queries(self) -> None:
@@ -35,7 +35,8 @@ class GroundTruthQueryManager:
             
             query_data = self._parse_query_block(raw_query)
             if query_data:
-                self.queries.append(query_data)
+                query_name = query_data['natural_language']
+                self.queries[query_name] = query_data
     
     def _parse_query_block(self, block: str) -> Optional[Dict[str, str]]:
         """Extract metadata and SQL from a query block."""
@@ -72,20 +73,34 @@ class GroundTruthQueryManager:
         
         return None
     
-    def get_all_queries(self) -> List[Dict[str, str]]:
-        """Return all parsed queries."""
+    def get_all_queries(self) -> Dict[str, Dict[str, Any]]:
+        """
+        Get all queries with their metadata
+        
+        Returns:
+            Dict[str, Dict[str, Any]]: Dictionary mapping query names to query data
+        """
         return self.queries
+    
+    def get_query(self, query_name: str) -> Optional[str]:
+        """Get SQL for a specific query by name."""
+        query_data = self.queries.get(query_name)
+        return query_data['sql'] if query_data else None
+
+    def get_query_metadata(self, query_name: str) -> Optional[Dict[str, Any]]:
+        """Get full metadata for a specific query."""
+        return self.queries.get(query_name)
     
     def get_by_category(self, category: str) -> List[Dict[str, str]]:
         """Get queries filtered by category."""
-        return [q for q in self.queries if category.lower() in q['category'].lower()]
+        return [q for q in self.queries.values() if category.lower() in q['category'].lower()]
     
     def search_queries(self, search_term: str) -> List[Dict[str, str]]:
         """Search queries by natural language or SQL content."""
         results = []
         search_lower = search_term.lower()
         
-        for query in self.queries:
+        for query in self.queries.values():
             if (search_lower in query['natural_language'].lower() or
                 search_lower in query['sql'].lower() or
                 search_lower in query['category'].lower()):
@@ -97,7 +112,7 @@ class GroundTruthQueryManager:
         """Export queries in Gradio dropdown format [(label, value), ...]."""
         return [
             (f"{q['category']}: {q['natural_language']}", q['sql'])
-            for q in self.queries
+            for q in self.queries.values()
         ]
     
     def export_json(self, output_file: str = "ground_truth_queries.json") -> None:
@@ -110,36 +125,6 @@ class GroundTruthQueryManager:
         print(f"Exported {len(self.queries)} queries to {output_path}")
 
 
-def integrate_with_gradio_endpoint(manager: GroundTruthQueryManager):
-    """
-    Example integration with Gradio app.py endpoint.
-    
-    Add this to your Gradio interface:
-    
-    ```python
-    from ground_truth_integration import GroundTruthQueryManager
-    
-    query_manager = GroundTruthQueryManager("ground_truth_queries.sql")
-    
-    # Add dropdown with example queries
-    with gr.Row():
-        example_queries = gr.Dropdown(
-            choices=query_manager.export_for_gradio(),
-            label="Example Queries",
-            interactive=True
-        )
-    
-    # Auto-populate SQL input when example selected
-    example_queries.change(
-        fn=lambda sql: sql,
-        inputs=[example_queries],
-        outputs=[sql_input_box]
-    )
-    ```
-    """
-    pass
-
-
 if __name__ == "__main__":
     # Test the manager
     manager = GroundTruthQueryManager("ground_truth_queries.sql")
@@ -147,30 +132,11 @@ if __name__ == "__main__":
     print(f"Loaded {len(manager.queries)} queries\n")
     
     # Show all queries
-    for i, query in enumerate(manager.queries, 1):
-        print(f"\nQuery {i}:")
+    for i, (name, query) in enumerate(manager.queries.items(), 1):
+        print(f"\nQuery {i}: {name}")
         print(f"  Category: {query['category']}")
-        print(f"  Natural Language: {query['natural_language']}")
         print(f"  Tables: {query['tables']}")
         print(f"  SQL Preview: {query['sql'][:100]}...")
     
     # Export to JSON
     manager.export_json()
-    
-    print("\n" + "="*80)
-    print("Gradio Integration Example:")
-    print("="*80)
-    print("\nAdd this to hf-space-inventory-sqlgen/app.py:\n")
-    print("""
-from ground_truth_integration import GroundTruthQueryManager
-
-# Initialize at app startup
-query_mgr = GroundTruthQueryManager("../Utilities/SQLMesh/ground_truth_queries.sql")
-
-# In your Gradio interface:
-example_dropdown = gr.Dropdown(
-    choices=query_mgr.export_for_gradio(),
-    label="Load Example Query",
-    interactive=True
-)
-    """)

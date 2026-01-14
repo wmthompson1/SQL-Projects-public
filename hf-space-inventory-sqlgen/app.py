@@ -37,6 +37,20 @@ except Exception as e:
     print(f"⚠️  Could not load ground truth queries: {e}")
     query_mgr = None
 
+# ...existing code...
+# After: query_mgr = GroundTruthQueryManager("ground_truth_queries.sql")
+
+# ============ MCP Pydantic Models ============
+class MCPToolRequest(BaseModel):
+    """Request model for MCP tool calls"""
+    arguments: dict = {}
+
+class MCPToolResponse(BaseModel):
+    """Response model for MCP tool calls"""
+    content: str
+
+# ...existing code continues with get_db_engine()...
+
 def get_db_engine():
     """Get or create SQLite database engine"""
     global db_engine
@@ -518,6 +532,49 @@ async def root():
     """
 
 
+@app.post("/mcp/tools/get_example_queries", response_model=MCPToolResponse)
+async def get_example_queries(request: MCPToolRequest):
+    """Get all available ground truth example queries"""
+    try:
+        if query_mgr is None:
+            raise HTTPException(status_code=503, detail="Ground truth queries not loaded")
+        
+        queries = query_mgr.get_all_queries()
+        response_data = {
+            "queries": list(queries.keys()),
+            "count": len(queries)
+        }
+        return MCPToolResponse(content=json.dumps(response_data))
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+@app.post("/mcp/tools/get_example_query", response_model=MCPToolResponse)
+async def get_example_query(request: MCPToolRequest):
+    """Get a specific ground truth query by name"""
+    try:
+        if query_mgr is None:
+            raise HTTPException(status_code=503, detail="Ground truth queries not loaded")
+        
+        query_name = request.arguments.get("query_name")
+        if not query_name:
+            raise HTTPException(status_code=400, detail="query_name required in arguments")
+        
+        query = query_mgr.get_query(query_name)
+        if not query:
+            raise HTTPException(status_code=404, detail=f"Query not found: {query_name}")
+        
+        response_data = {
+            "query_name": query_name,
+            "sql": query
+        }
+        return MCPToolResponse(content=json.dumps(response_data))
+    except HTTPException:
+        raise
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# ...existing code continues with create_gradio_interface()...
+
 @app.get("/mcp/discover", response_model=MCPDiscoveryResponse)
 async def mcp_discover():
     """MCP Discovery endpoint - returns available tools and capabilities"""
@@ -532,15 +589,8 @@ async def mcp_discover():
                 input_schema={
                     "type": "object",
                     "properties": {
-                        "query": {
-                            "type": "string",
-                            "description": "Natural language query about inventory"
-                        },
-                        "include_explanation": {
-                            "type": "boolean",
-                            "default": True,
-                            "description": "Include explanation of generated SQL"
-                        }
+                        "query": {"type": "string", "description": "Natural language query about inventory"},
+                        "include_explanation": {"type": "boolean", "default": True, "description": "Include explanation of generated SQL"}
                     },
                     "required": ["query"]
                 }
@@ -548,11 +598,7 @@ async def mcp_discover():
             MCPToolDefinition(
                 name="get_schema",
                 description="Get the database schema for inventory tables",
-                input_schema={
-                    "type": "object",
-                    "properties": {},
-                    "required": []
-                }
+                input_schema={"type": "object", "properties": {}, "required": []}
             ),
             MCPToolDefinition(
                 name="get_sql_templates",
@@ -574,59 +620,54 @@ async def mcp_discover():
                 description="Analyze uploaded CSV to suggest schema and queries",
                 input_schema={
                     "type": "object",
-                    "properties": {
-                        "csv_content": {
-                            "type": "string",
-                            "description": "CSV file content as string"
-                        }
-                    },
+                    "properties": {"csv_content": {"type": "string", "description": "CSV file content as string"}},
                     "required": ["csv_content"]
                 }
             ),
             MCPToolDefinition(
                 name="get_db_tables",
                 description="Get list of all tables from connected PostgreSQL database",
-                input_schema={
-                    "type": "object",
-                    "properties": {},
-                    "required": []
-                }
+                input_schema={"type": "object", "properties": {}, "required": []}
             ),
             MCPToolDefinition(
                 name="get_table_ddl",
                 description="Get CREATE TABLE SQL for a specific table",
                 input_schema={
                     "type": "object",
-                    "properties": {
-                        "table_name": {
-                            "type": "string",
-                            "description": "Name of the table to get DDL for"
-                        }
-                    },
+                    "properties": {"table_name": {"type": "string", "description": "Name of the table to get DDL for"}},
                     "required": ["table_name"]
                 }
             ),
             MCPToolDefinition(
                 name="get_all_ddl",
                 description="Get CREATE TABLE SQL for all tables in the database",
-                input_schema={
-                    "type": "object",
-                    "properties": {},
-                    "required": []
-                }
+                input_schema={"type": "object", "properties": {}, "required": []}
             ),
             MCPToolDefinition(
                 name="execute_sql",
                 description="Execute read-only SQL query (SELECT only) against the database",
                 input_schema={
                     "type": "object",
-                    "properties": {
-                        "sql": {
-                            "type": "string",
-                            "description": "SQL SELECT query to execute"
-                        }
-                    },
+                    "properties": {"sql": {"type": "string", "description": "SQL SELECT query to execute"}},
                     "required": ["sql"]
+                }
+            ),
+        
+            # ADD THESE TWO NEW TOOLS HERE:
+            MCPToolDefinition(
+                name="get_example_queries",
+                description="List all available ground truth SQL example queries",
+                input_schema={"type": "object", "properties": {}, "required": []}
+            ),
+            MCPToolDefinition(
+                name="get_example_query",
+                description="Retrieve a specific ground truth SQL query by name",
+                input_schema={
+                    "type": "object",
+                    "properties": {
+                        "query_name": {"type": "string", "description": "Name of the ground truth query to retrieve"}
+                    },
+                    "required": ["query_name"]
                 }
             )
         ],
@@ -648,8 +689,6 @@ async def mcp_discover():
             }
         ]
     )
-
-
 @app.post("/mcp/tools/generate_sql", response_model=SQLGenerationResponse)
 async def generate_sql(request: SQLGenerationRequest):
     """Generate SQL from natural language query"""
