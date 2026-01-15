@@ -244,3 +244,10 @@ Documentation/scratchpad/100*
 # Test scratchpad files (local only)
 hf-space-inventory-sqlgen/mytest*.md
 Documentation/scratchpad/
+
+# SQLMesh logs
+Utilities/SQLMesh/logs/
+
+# Log directories (all locations)
+logs/
+**/logs/
