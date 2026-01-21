@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 """
 020_Entry_Point_ArangoDB_Graph_Persistence.py
 ArangoDB Graph Persistence for NetworkX
@@ -57,22 +56,16 @@ class ArangoDBConfig:
             password: Database password (default: env DATABASE_PASSWORD)
             database_name: Database name (default: env DATABASE_NAME or 'networkx_graphs')
         """
-        # Prefer `DATABASE_NAME` (explicit). Default to `manufacturing_graph`.
         self.host = host or os.getenv("DATABASE_HOST", "http://localhost:8529")
         self.username = username or os.getenv("DATABASE_USERNAME", "root")
         self.password = password or os.getenv("DATABASE_PASSWORD", "")
-        self.database_name = (
-            database_name
-            or os.getenv("DATABASE_NAME")
-            or "manufacturing_graph"
-        )
+        self.database_name = database_name or os.getenv("DATABASE_NAME", "networkx_graphs")
     
     def set_environment_variables(self):
         """Set environment variables for nx-arangodb"""
         os.environ["DATABASE_HOST"] = self.host
         os.environ["DATABASE_USERNAME"] = self.username
         os.environ["DATABASE_PASSWORD"] = self.password
-        # Set the canonical DATABASE_* env vars
         os.environ["DATABASE_NAME"] = self.database_name
     
     def get_connection_info(self) -> Dict[str, str]:
@@ -269,7 +262,7 @@ def demo_arangodb_persistence_local():
     print("   - DATABASE_HOST (e.g., https://your-instance.arangodb.cloud:8529)")
     print("   - DATABASE_USERNAME (e.g., root)")
     print("   - DATABASE_PASSWORD (your password)")
-    print("   - DATABASE_NAME (e.g., manufacturing_graph)")
+    print("   - DATABASE_NAME (e.g., manufacturing_graphs)")
     print("3. Install: pip install nx-arangodb")
     
     if not NXADB_AVAILABLE:
@@ -287,7 +280,7 @@ config = ArangoDBConfig(
     host="https://your-instance.arangodb.cloud:8529",
     username="root",
     password="your-password",
-    database_name="manufacturing_graph"
+    database_name="manufacturing_graphs"
 )
 
 persistence = ArangoDBGraphPersistence(config)

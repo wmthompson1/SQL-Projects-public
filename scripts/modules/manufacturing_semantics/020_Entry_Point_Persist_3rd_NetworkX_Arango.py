@@ -10,7 +10,15 @@ Workflow:
 3. Verify metadata preservation
 """
 
+import sys
+import os
 import networkx as nx
+
+# Ensure local module path is importable when executed from repo root
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+if SCRIPT_DIR not in sys.path:
+    sys.path.insert(0, SCRIPT_DIR)
+
 from arangodb_persistence import ArangoDBConfig, ArangoDBGraphPersistence
 
 print("=" * 75)

@@ -62,10 +62,10 @@ Policy: [Documentation/Policies/VirtualEnv.md](../Documentation/Policies/Virtual
 Extract authoritative DDLs from live database (requires network access to `sql-lab-1`):
 
 ```powershell
-.\Documentation\Data Models\ddl\schema-extract\extract-schema.ps1 `
+.\Documentation\Schema\ddl-extract\extract-schema.ps1 `
   -ServerInstance 'sql-lab-1' `
   -Databases 'LIVE','LIVEAccounting' `
-  -OutputDir '.\Documentation\Data Models\ddl\schema-extract\output' `
+  -OutputDir '.\Documentation\Schema\ddl-extract\output' `
   -UseIntegratedAuth -TrustServerCertificate
 
 # Filter specific tables
@@ -98,6 +98,35 @@ python app.py  # Starts FastAPI + Gradio on port 7860
 - Ground-truth SQL templates: `schema/queries/{category}.sql` with `schema/queries/index.json` for categorization
 
 ## File Organization & Conventions
+
+### Documentation Structure
+```
+Documentation/
+├── Schema/                   # ✅ Centralized schema documentation
+│   ├── Tables/               # Authoritative DDL files
+│   ├── Data_Models/          # ✅ Domain-specific flow documentation
+│   │   ├── Payables/
+│   │   ├── Inventory_Transactions/
+│   │   └── Work_Orders/
+│   └── ddl-extract/          # ✅ Schema extraction tooling
+├── Policies/
+└── Help-md/
+```
+
+### Schema Documentation Conventions
+- **DDL Files** (`Documentation/Schema/Tables/`): CREATE TABLE scripts
+- **Data Models** (`Documentation/Schema/Data_Models/`): Business flow docs
+- **Extraction Tools** (`Documentation/Schema/ddl-extract/`): PowerShell extraction scripts
+
+**Schema Extraction Workflow:**
+```powershell
+# ✅ UPDATED PATH
+.\Documentation\Schema\ddl-extract\extract-schema.ps1 `
+  -ServerInstance 'sql-lab-1' `
+  -Databases 'LIVE','LIVEAccounting' `
+  -OutputDir '.\Documentation\Schema\ddl-extract\output' `
+  -UseIntegratedAuth -TrustServerCertificate
+```
 
 ### Report SQL Files
 - Location: `SQL_Reports/{Domain}/{ReportName}.sql`

@@ -1,0 +1,11 @@
+benchmark_id,metric_name,benchmark_level,benchmark_value,industry_segment,source,year,created_date
+1,OEE,World Class,0.85,Manufacturing,Trade Association,2024,2024-03-26 10:54:11
+2,OEE,Average,0.6,Manufacturing,Industry Report,2024,2024-01-24 11:48:36
+3,First Pass Yield,World Class,0.99,Aerospace,Industry Report,2024,2024-05-30 13:03:04
+4,First Pass Yield,Average,0.95,Aerospace,Trade Association,2024,2024-08-08 05:18:00
+5,MTBF,World Class,2000,Industrial Equipment,Industry Report,2024,2024-09-28 15:00:08
+6,Defect Rate (PPM),World Class,100,Automotive,Research Study,2024,2024-12-15 06:33:20
+7,Defect Rate (PPM),Average,1000,Automotive,Industry Report,2024,2024-03-30 02:52:30
+8,On-Time Delivery,World Class,0.98,Supply Chain,Research Study,2024,2024-07-14 22:33:46
+9,Inventory Turns,World Class,12,Manufacturing,Research Study,2024,2024-05-03 18:07:10
+10,Scrap Rate,World Class,0.02,Manufacturing,Research Study,2024,2024-03-14 08:27:13

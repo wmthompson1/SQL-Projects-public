@@ -1,0 +1,31 @@
+failure_id,equipment_id,failure_date,failure_type,failure_mode,severity_level,downtime_hours,repair_cost,parts_replaced,technician_assigned,failure_description,root_cause_analysis,preventive_action,mtbf_impact,created_at
+1,61,2024-10-22 19:18:42,Pneumatic,Overheating,Major,13.07,6312.17,None,Tech-B,Equipment failure requiring 13.1h repair,Under investigation,Process adjustment,40.0,2024-10-22 19:18:42
+2,12,2024-12-23 11:14:30,Hydraulic,Controller Failure,Major,5.27,5115.21,Controller,Tech-E,Equipment failure requiring 5.3h repair,Under investigation,Update maintenance schedule,-31.8,2024-12-23 11:14:30
+3,16,2024-03-04 05:16:10,Pneumatic,Motor Burnout,Major,1.57,21133.04,Sensor,Tech-D,Equipment failure requiring 1.6h repair,Environmental stress,Update maintenance schedule,49.3,2024-03-04 05:16:10
+4,37,2024-10-15 23:18:17,Hydraulic,Bearing Wear,Minor,11.22,1723.57,Motor,Tech-D,Equipment failure requiring 11.2h repair,Manufacturing defect,Operator training,-10.4,2024-10-15 23:18:17
+5,56,2024-06-07 19:50:02,Hydraulic,Overheating,Major,16.14,14523.7,Controller,Tech-D,Equipment failure requiring 16.1h repair,Overload condition,Increase inspection frequency,-8.0,2024-06-07 19:50:02
+6,55,2024-04-13 14:02:28,Mechanical,Belt Snap,Major,21.43,1309.14,Belt,Tech-B,Equipment failure requiring 21.4h repair,Overload condition,Update maintenance schedule,19.9,2024-04-13 14:02:28
+7,50,2024-08-28 07:15:06,Software,Calibration Drift,Major,1.38,15603.24,Belt,Tech-D,Equipment failure requiring 1.4h repair,Wear and tear,Increase inspection frequency,38.3,2024-08-28 07:15:06
+8,49,2024-10-16 23:40:06,Electrical,Controller Failure,Critical,8.92,1713.86,Sensor,Tech-E,Equipment failure requiring 8.9h repair,Environmental stress,Increase inspection frequency,-32.1,2024-10-16 23:40:06
+9,21,2024-06-28 04:00:33,Hydraulic,Overheating,Minor,4.3,5556.07,Sensor,Tech-B,Equipment failure requiring 4.3h repair,Wear and tear,Update maintenance schedule,11.4,2024-06-28 04:00:33
+10,43,2024-09-25 22:36:04,Pneumatic,Overheating,Major,20.47,23103.78,Belt,Tech-D,Equipment failure requiring 20.5h repair,Improper maintenance,Update maintenance schedule,47.2,2024-09-25 22:36:04
+11,40,2024-05-14 10:38:13,Software,Motor Burnout,Major,18.02,15493.67,Belt,Tech-E,Equipment failure requiring 18.0h repair,Manufacturing defect,Process adjustment,-25.5,2024-05-14 10:38:13
+12,34,2024-11-07 08:49:39,Software,Calibration Drift,Major,20.09,7484.68,Controller,Tech-C,Equipment failure requiring 20.1h repair,Environmental stress,Update maintenance schedule,-48.3,2024-11-07 08:49:39
+13,22,2024-12-12 23:56:04,Electrical,Hydraulic Leak,Critical,16.94,15036.36,Controller,Tech-D,Equipment failure requiring 16.9h repair,Improper maintenance,Process adjustment,22.3,2024-12-12 23:56:04
+14,67,2024-04-21 20:57:27,Pneumatic,Belt Snap,Critical,16.22,6604.84,Bearing,Tech-A,Equipment failure requiring 16.2h repair,Manufacturing defect,Operator training,-37.1,2024-04-21 20:57:27
+15,62,2024-12-19 06:18:39,Mechanical,Vibration Damage,Major,3.21,7883.29,Controller,Tech-C,Equipment failure requiring 3.2h repair,Improper maintenance,Update maintenance schedule,13.0,2024-12-19 06:18:39
+16,17,2024-07-30 13:29:27,Electrical,Bearing Wear,Critical,8.41,748.94,Sensor,Tech-C,Equipment failure requiring 8.4h repair,Manufacturing defect,Operator training,34.8,2024-07-30 13:29:27
+17,29,2024-07-14 02:20:00,Pneumatic,Bearing Wear,Critical,3.99,3965.16,None,Tech-C,Equipment failure requiring 4.0h repair,Wear and tear,Replace aging components,27.9,2024-07-14 02:20:00
+18,51,2024-04-14 16:48:05,Software,Electrical Short,Minor,8.33,15075.19,Motor,Tech-C,Equipment failure requiring 8.3h repair,Manufacturing defect,Update maintenance schedule,12.8,2024-04-14 16:48:05
+19,56,2024-08-29 00:05:03,Mechanical,Calibration Drift,Minor,13.55,5850.82,Bearing,Tech-C,Equipment failure requiring 13.6h repair,Under investigation,Update maintenance schedule,5.3,2024-08-29 00:05:03
+20,51,2024-04-06 09:26:36,Hydraulic,Hydraulic Leak,Critical,16.85,2275.74,Controller,Tech-E,Equipment failure requiring 16.9h repair,Overload condition,Increase inspection frequency,38.5,2024-04-06 09:26:36
+21,53,2024-05-31 06:41:00,Electrical,Sensor Malfunction,Critical,4.98,21520.39,Motor,Tech-C,Equipment failure requiring 5.0h repair,Environmental stress,Update maintenance schedule,-31.7,2024-05-31 06:41:00
+22,3,2024-07-27 07:34:11,Software,Hydraulic Leak,Minor,15.92,11543.68,Controller,Tech-D,Equipment failure requiring 15.9h repair,Manufacturing defect,Operator training,28.1,2024-07-27 07:34:11
+23,41,2024-10-03 01:01:12,Electrical,Calibration Drift,Major,1.27,9845.01,Controller,Tech-A,Equipment failure requiring 1.3h repair,Improper maintenance,Increase inspection frequency,14.7,2024-10-03 01:01:12
+24,9,2024-09-06 15:57:09,Hydraulic,Belt Snap,Critical,21.4,24841.9,Sensor,Tech-B,Equipment failure requiring 21.4h repair,Overload condition,Increase inspection frequency,-34.5,2024-09-06 15:57:09
+25,21,2024-10-01 13:20:52,Electrical,Electrical Short,Minor,22.76,23635.84,Belt,Tech-D,Equipment failure requiring 22.8h repair,Overload condition,Replace aging components,-5.2,2024-10-01 13:20:52
+26,18,2024-06-21 05:48:23,Pneumatic,Sensor Malfunction,Minor,5.18,19933.59,Bearing,Tech-B,Equipment failure requiring 5.2h repair,Wear and tear,Replace aging components,-17.0,2024-06-21 05:48:23
+27,2,2024-10-20 03:55:30,Electrical,Bearing Wear,Critical,5.56,5333.08,Belt,Tech-D,Equipment failure requiring 5.6h repair,Environmental stress,Increase inspection frequency,23.4,2024-10-20 03:55:30
+28,47,2024-03-03 15:34:29,Mechanical,Vibration Damage,Major,18.91,3978.86,Belt,Tech-E,Equipment failure requiring 18.9h repair,Manufacturing defect,Update maintenance schedule,25.1,2024-03-03 15:34:29
+29,8,2024-06-10 09:04:13,Electrical,Belt Snap,Minor,21.62,9569.78,Bearing,Tech-A,Equipment failure requiring 21.6h repair,Improper maintenance,Replace aging components,23.5,2024-06-10 09:04:13
+30,22,2024-10-11 09:24:17,Electrical,Bearing Wear,Critical,19.68,7135.9,Motor,Tech-A,Equipment failure requiring 19.7h repair,Improper maintenance,Process adjustment,-20.4,2024-10-11 09:24:17

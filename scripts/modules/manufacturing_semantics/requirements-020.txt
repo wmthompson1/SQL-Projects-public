@@ -1,0 +1,19 @@
+# Dependencies for 020_Entry_Point_ArangoDB_Graph_Persistence.py
+# Add to your virtualenv or merge into requirements-dev.txt as needed.
+
+networkx==3.6.1            # core NetworkX (already in requirements-dev.txt)
+python-arango==8.2.3       # ArangoDB driver (already in requirements-dev.txt)
+nx-arangodb               # nx-arangodb: NetworkX <> ArangoDB persistence wrapper (no pinned version)
+python-dotenv==1.2.1       # env var support (already in requirements-dev.txt)
+
+# Optional GPU-acceleration (only if NVIDIA GPU + RAPIDS available)
+# cugraph                 # RAPIDS cuGraph - install only on compatible CUDA systems
+# nx_cugraph              # networkx-cugraph integration (if used)
+
+# Installation example (from repo root virtualenv):
+# pip install -r scripts/modules/manufacturing_semantics/requirements-020.txt
+
+# Notes:
+# - `nx-arangodb` expects `python-arango` for low-level ArangoDB access.
+# - If you use GPU-accelerated backends (cuGraph), follow RAPIDS install instructions for your CUDA version.
+# - Test in the repository virtual environment: & .\.venv\Scripts\Activate.ps1 (PowerShell) then pip install

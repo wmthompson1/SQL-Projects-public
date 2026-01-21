@@ -1,0 +1,31 @@
+user_id,username,first_name,last_name,email,role,department,hire_date,is_active,created_date
+1,dromero63,Dale,Romero,dale.romero@manufacturing.com,Supervisor,Planning,2022-01-22,True,2024-10-15 11:03:44
+2,eolson11,Eric,Olson,eric.olson@manufacturing.com,Maintenance Tech,Production,2021-04-04,True,2024-11-12 08:13:01
+3,mbell67,Melanie,Bell,melanie.bell@manufacturing.com,Plant Manager,Engineering,2019-12-19,True,2024-08-07 11:07:06
+4,awilson73,Angela,Wilson,angela.wilson@manufacturing.com,Operator,Planning,2023-04-20,True,2024-04-16 22:46:27
+5,jperez28,Joshua,Perez,joshua.perez@manufacturing.com,Production Manager,Finance,2015-11-29,True,2024-10-09 02:43:58
+6,rhoffman21,Roy,Hoffman,roy.hoffman@manufacturing.com,Operator,Engineering,2020-01-20,True,2024-01-17 08:25:40
+7,khowell37,Katrina,Howell,katrina.howell@manufacturing.com,Production Manager,Finance,2024-08-21,False,2024-04-29 09:37:55
+8,ehawkins81,Emily,Hawkins,emily.hawkins@manufacturing.com,Maintenance Tech,Engineering,2016-04-15,True,2024-03-17 09:40:16
+9,cbarrett19,Chelsea,Barrett,chelsea.barrett@manufacturing.com,Supervisor,Production,2016-11-10,True,2024-10-18 10:30:28
+10,hjohnson57,Heather,Johnson,heather.johnson@manufacturing.com,Supervisor,Engineering,2022-09-21,True,2024-05-19 18:13:17
+11,jfarmer70,Joshua,Farmer,joshua.farmer@manufacturing.com,Analyst,Engineering,2015-11-26,False,2024-08-09 11:44:07
+12,sbell78,Sandra,Bell,sandra.bell@manufacturing.com,Production Manager,Production,2016-01-10,True,2024-10-21 21:22:35
+13,hthomas3,Howard,Thomas,howard.thomas@manufacturing.com,Production Manager,Planning,2015-06-14,True,2024-11-29 16:06:03
+14,djones36,Diane,Jones,diane.jones@manufacturing.com,Quality Engineer,Planning,2019-11-21,True,2024-02-16 17:06:45
+15,jbonilla45,Joyce,Bonilla,joyce.bonilla@manufacturing.com,Plant Manager,Maintenance,2018-08-08,True,2024-06-17 14:59:15
+16,cmoreno89,Christopher,Moreno,christopher.moreno@manufacturing.com,Analyst,Maintenance,2022-06-06,True,2024-10-08 01:20:09
+17,nchavez59,Nicholas,Chavez,nicholas.chavez@manufacturing.com,Supervisor,Maintenance,2017-10-30,True,2024-07-25 18:44:09
+18,ecollins1,Eric,Collins,eric.collins@manufacturing.com,Analyst,Engineering,2015-08-11,True,2024-11-14 18:08:58
+19,mpugh81,Mark,Pugh,mark.pugh@manufacturing.com,Analyst,Production,2017-04-13,True,2024-05-27 15:57:04
+20,cware90,Caitlyn,Ware,caitlyn.ware@manufacturing.com,Analyst,Production,2015-04-29,True,2024-05-02 05:45:58
+21,ewebster40,Eric,Webster,eric.webster@manufacturing.com,Operator,Planning,2019-07-30,True,2024-02-28 16:48:02
+22,bmiller16,Brandon,Miller,brandon.miller@manufacturing.com,Quality Engineer,Engineering,2023-01-14,True,2024-05-19 15:07:39
+23,scoleman62,Scott,Coleman,scott.coleman@manufacturing.com,Analyst,Quality,2020-02-14,True,2024-04-07 21:49:21
+24,cperry66,Catherine,Perry,catherine.perry@manufacturing.com,Quality Engineer,Production,2018-02-05,True,2024-09-16 09:43:38
+25,jhunt1,Jason,Hunt,jason.hunt@manufacturing.com,Production Manager,Finance,2018-05-07,True,2024-12-03 17:49:38
+26,mrodriguez20,Michael,Rodriguez,michael.rodriguez@manufacturing.com,Analyst,Planning,2020-06-06,True,2024-10-05 13:44:01
+27,ewatkins59,Erika,Watkins,erika.watkins@manufacturing.com,Quality Manager,Quality,2022-10-27,True,2024-04-29 14:57:21
+28,aparker6,Alison,Parker,alison.parker@manufacturing.com,Quality Manager,Finance,2020-04-21,True,2024-12-05 23:44:21
+29,jjoyce20,Jeffrey,Joyce,jeffrey.joyce@manufacturing.com,Analyst,Production,2016-06-01,True,2024-06-18 03:39:14
+30,bharris57,Brian,Harris,brian.harris@manufacturing.com,Supervisor,Planning,2020-02-15,True,2024-07-28 23:50:23

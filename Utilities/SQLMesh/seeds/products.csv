@@ -1,0 +1,31 @@
+product_id,product_name,product_category,unit_cost,unit_price,weight_kg,lead_time_days,min_order_qty,status,created_date
+1,Lay-6391,Industrial,3605.81,6644.39,12.275,46,100,Active,2024-02-24 15:28:44
+2,Big-8586,Industrial,920.64,1660.76,27.915,59,1,Discontinued,2024-03-09 16:55:01
+3,Size-9855,Defense,4940.07,7965.8,37.787,33,50,Pending Approval,2024-09-15 15:32:13
+4,Single-2707,Defense,2257.27,4890.94,23.786,21,5,Pending Approval,2024-05-21 18:58:47
+5,Hotel-4599,Electronics,3152.4,5585.53,35.706,20,10,Active,2024-06-12 19:39:58
+6,Task-3888,Aerospace,734.95,1247.91,7.725,18,1,Discontinued,2024-07-27 12:02:49
+7,Case-1120,Defense,2356.33,3461.18,21.065,54,50,Pending Approval,2024-01-11 20:57:36
+8,Only-5863,Electronics,2411.05,3829.22,19.56,58,25,Development,2024-10-06 21:57:49
+9,As-4571,Industrial,2466.74,4357.71,1.548,26,100,Pending Approval,2024-07-26 06:00:32
+10,Peace-8851,Electronics,4601.73,5683.4,19.762,41,100,Active,2024-02-12 23:24:06
+11,Or-7664,Electronics,721.71,1036.55,13.082,25,5,Discontinued,2024-06-16 12:17:16
+12,Or-7006,Electronics,1427.37,2180.95,4.187,6,100,Development,2024-01-27 12:44:30
+13,Girl-759,Industrial,3268.21,7126.34,47.486,17,1,Development,2024-03-19 08:41:06
+14,Religious-1974,Industrial,2394.13,4628.24,10.976,49,10,Active,2024-03-26 22:03:35
+15,Can-1976,Defense,4820.49,10658.73,8.272,24,1,Development,2024-01-14 11:21:28
+16,Item-6249,Defense,3402.87,5838.14,35.779,9,50,Pending Approval,2024-11-17 08:50:30
+17,Health-5041,Aerospace,3501.11,8071.39,30.061,12,50,Active,2024-06-26 19:23:47
+18,Tv-1229,Electronics,3324.53,6176.14,17.127,59,25,Discontinued,2024-02-24 15:47:02
+19,Reduce-7632,Automotive,3196.15,6774.24,21.831,51,50,Pending Approval,2024-05-18 22:25:28
+20,Yeah-7716,Defense,3884.48,6860.95,36.578,22,10,Active,2024-02-14 10:09:19
+21,Social-7713,Electronics,1257.12,2439.82,33.443,26,1,Discontinued,2024-06-15 06:37:14
+22,Land-4332,Electronics,1099.99,1806.67,44.028,49,10,Development,2024-01-06 18:48:35
+23,Trip-6758,Industrial,473.78,869.46,37.932,49,25,Pending Approval,2024-12-30 17:52:12
+24,Whole-1624,Electronics,3975.02,6290.49,20.28,20,10,Pending Approval,2024-10-24 13:26:08
+25,Set-5732,Electronics,2789.69,4890.76,37.322,26,10,Pending Approval,2024-08-20 09:51:49
+26,Approach-2076,Automotive,1294.45,2767.11,15.846,52,50,Pending Approval,2024-04-04 06:58:25
+27,Field-4630,Industrial,3706.09,7938.3,48.833,38,50,Active,2024-02-21 07:04:03
+28,Plan-3039,Automotive,1176.04,1873.37,35.43,13,10,Active,2024-01-28 20:08:49
+29,Forget-2168,Automotive,3502.22,7106.81,37.664,11,1,Development,2024-05-25 17:05:24
+30,He-3120,Electronics,2230.32,5475.76,12.699,60,25,Active,2024-02-03 14:35:21

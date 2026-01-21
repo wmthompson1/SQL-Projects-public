@@ -1,0 +1,31 @@
+supplier_id,supplier_name,contact_email,phone,address,performance_rating,certification_level,lead_time_days,payment_terms,created_date
+1,"Rodriguez, Components",jillrhodes@miller.com,989.608.3863,"65423 Garcia Light, West Melanieview, AS 06196",3.54,IATF16949,18,Net 45,2024-03-12 03:43:54
+2,"Stevens, Solutions",arnoldmaria@mcclure.com,7344131647,"3419 Amanda Gardens Apt. 764, Lake Mark, WI 07832",3.63,ISO13485,5,Net 30,2024-02-17 07:57:37
+3,Underwood Precision,nadams@walter.biz,+1-772-542-3884x9696,"710 Eric Estate, Carlsonfurt, MS 78605",4.26,AS9100,38,Net 45,2024-11-28 19:50:26
+4,Rice-Maddox Technologies,frazierdanny@potter.com,(727)404-8281x48932,"570 Sarah Wells, Johnbury, FM 74865",3.83,NADCAP,20,Net 30,2024-03-22 15:23:12
+5,Miller Systems,spenceamanda@anderson.net,(848)796-3834,"713 Caleb Brooks Apt. 930, Lake Crystalbury, CA 04618",3.92,ISO9001,24,Net 30,2024-02-17 13:49:57
+6,Jones-Young Components,ilewis@walls.info,(331)516-5667x01065,"87262 Ford Well, South Lindseyside, CT 07131",4.04,IATF16949,41,Net 60,2024-01-23 16:43:37
+7,"Kidd, Solutions",gabrieltucker@hancock.com,(206)247-4687x2343,"09788 Brian Pass Apt. 219, Lake Michellefurt, DE 75169",3.69,ISO13485,8,Net 60,2024-11-17 22:31:10
+8,Riley Systems,barnesbrandy@stewart.com,946.324.7510,"384 Sarah Cliff, West Justin, NV 71701",4.37,ISO14001,7,Net 30,2024-12-04 08:17:51
+9,"Turner, Materials",contrerasangela@garcia.com,001-282-344-9353x4874,"0052 Martin Mills Suite 801, Lake Rebeccaside, AZ 48894",4.98,ISO9001,9,2/10 Net 30,2024-05-22 16:30:29
+10,"Tran, Systems",rachel05@fleming.com,(886)592-3226x025,"16073 Lisa Mount Suite 433, Lake Jamesmouth, KY 09600",3.74,IATF16949,16,Net 60,2024-12-25 23:35:39
+11,Bell-Hicks Components,sheila14@carpenter.com,896-555-6981,"60883 Reynolds Shores Suite 951, Williamchester, MD 53244",4.41,ISO9001,37,Net 45,2024-03-24 16:49:49
+12,"Phillips, Technologies",lbyrd@carroll.com,336-699-5777x3872,"34332 Brandon Mountains Apt. 769, Lake Heather, NM 52884",3.9,ISO14001,38,Net 45,2024-12-16 11:48:24
+13,Hernandez Manufacturing,staffordmichelle@osborne.com,001-787-908-3172x788,"727 Green Gateway Suite 873, Scottport, IA 36115",3.84,AS9100,23,2/10 Net 30,2024-05-17 02:24:35
+14,Flores-Fernandez Precision,edwardreyes@mccarthy.biz,(258)776-0366x90967,"6889 Tracy Groves Suite 706, Elizabethfurt, VA 22133",4.87,NADCAP,23,Net 45,2024-12-01 18:10:35
+15,Calhoun-Hooper Technologies,meadowsbrittany@johnson.info,(804)665-3755,"1708 Zoe Keys Apt. 100, East Mary, RI 20474",4.83,ISO14001,32,Net 45,2024-05-15 05:05:01
+16,Martinez Precision,elliottjeffery@scott.com,001-324-619-0496x63193,"058 Stanley Cliff, Alexanderchester, GU 64752",4.62,NADCAP,19,2/10 Net 30,2024-10-25 14:32:30
+17,Hamilton Systems,bzimmerman@gross.com,+1-587-976-9453x147,"0752 Lewis Union Suite 549, Angelahaven, ID 11722",3.83,ISO9001,35,2/10 Net 30,2024-02-16 01:42:55
+18,Cortez Components,hannahbrewer@west-smith.com,763.849.5788,"7444 David Fields Suite 182, East Joanna, KY 95473",3.73,ISO9001,30,Net 30,2024-07-16 13:53:39
+19,"Bray, Metalworks",wallkenneth@white-smith.net,(240)608-4271,"7520 Everett Neck Apt. 167, New Crystalton, FL 20056",4.99,NADCAP,19,Net 30,2024-12-14 04:10:14
+20,"Avery, Solutions",yobrien@perez.info,496-549-9091x3341,"120 Hayes Ranch, Carterbury, LA 93163",4.63,ISO14001,24,Net 30,2024-05-30 15:49:45
+21,Warner-Gibson Industries,sandrafrench@lawrence.com,+1-632-942-1024,"4648 Kim Rapid, South Jessicaview, AK 12471",4.18,ISO14001,19,Net 45,2024-09-16 03:52:27
+22,Hayden Materials,keyemily@johnston-hines.com,787.342.9671x7565,"6746 Shawn Island, Marcusfurt, VI 67950",4.76,NADCAP,41,Net 45,2024-03-19 13:36:49
+23,Sandoval Industries,mgutierrez@cox.com,548.424.7710,"086 Jeffrey Ville Apt. 712, Cantuport, NY 92960",4.31,NADCAP,3,Net 60,2024-09-07 00:42:32
+24,Perry-Olson Components,jsanchez@reyes.net,001-921-446-5840x4499,"755 Gibson Islands Apt. 396, Port Kimberly, AZ 42205",4.89,IATF16949,18,Net 30,2024-05-03 20:39:24
+25,"Kennedy, Components",tylerjohnson@sanford.info,687-702-6217,"158 Finley Road Suite 809, East Crystalport, IN 98381",3.63,ISO13485,7,Net 45,2024-03-06 17:18:16
+26,Hamilton Solutions,wallaceheather@williams.com,(856)523-8692x221,"237 Stevens Shores Apt. 748, North Scott, MI 77515",3.75,NADCAP,41,2/10 Net 30,2024-04-18 19:38:06
+27,Fowler-Coleman Precision,stephen43@castaneda-rodriguez.biz,001-259-944-0640,"95339 Byrd Stravenue Apt. 104, Johnsonstad, VA 17725",4.57,ISO13485,45,Net 60,2024-08-12 18:50:39
+28,Browning Aerospace,ithompson@walter.com,(547)845-1712,"60481 Richardson Summit Suite 965, Lake Jesustown, RI 74085",3.68,ISO9001,7,Net 60,2024-01-11 21:25:10
+29,Herman-Walker Solutions,reidsteven@turner.com,471-813-8267x5869,"9640 Robinson Mills, Port Michael, TX 48648",3.85,ISO9001,3,Net 30,2024-12-28 22:58:39
+30,"Winters, Manufacturing",james17@bates.org,5055329318,"2904 Vanessa Plains, Laurenville, TN 03880",3.84,AS9100,24,Net 30,2024-09-20 08:39:55

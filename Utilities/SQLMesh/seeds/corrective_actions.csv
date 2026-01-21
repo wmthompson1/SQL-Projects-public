@@ -1,0 +1,31 @@
+action_id,incident_id,action_type,description,assigned_to,open_date,due_date,close_date,status,effectiveness_score,created_date
+1,5,Supplier Corrective Action,Should share face build market issue can mouth.,Justin Barnett,2024-07-04,2024-07-21,2024-07-23,Closed,1.0,2024-07-04 14:16:23
+2,30,Training,Author technology amount affect TV television office of remember individual.,Alex Nguyen,2024-07-28,2024-08-21,2024-09-17,Closed,0.96,2024-07-28 22:04:09
+3,25,Training,Least ready gun join black job hundred bad that second develop single baby.,Kerry Lee,2024-02-23,2024-03-21,2024-05-16,Closed,0.72,2024-02-23 01:17:47
+4,16,Design Change,Go when population challenge bill eight community check service away.,Lori Marshall,2024-02-26,2024-04-15,2024-04-23,Closed,0.91,2024-02-26 12:10:02
+5,9,Root Cause Analysis,Service large under north play person ten physical character attention kind field ever.,Jordan Collins,2024-11-10,2024-12-01,2024-12-14,Closed,1.0,2024-11-10 16:09:07
+6,18,Design Change,Also hard expert popular within bed order his oil west school.,Terry Armstrong,2024-03-07,2024-04-23,,Open,,2024-03-07 22:07:16
+7,7,Supplier Corrective Action,Focus little character artist billion tonight gas research.,Carrie Wright,2024-01-05,2024-02-28,,Pending Verification,,2024-01-05 09:49:52
+8,15,Supplier Corrective Action,Yard model particular hair truth hold simple quickly appear piece free.,Justin Hughes,2024-06-15,2024-07-24,,In Progress,,2024-06-15 22:48:56
+9,12,Root Cause Analysis,Rich prevent trade their four old center glass whose.,Jenna Larson,2024-12-18,2025-02-02,,In Progress,,2024-12-18 13:01:23
+10,20,Supplier Corrective Action,Finally heavy social spend prove stock school.,Kelsey Lucas,2024-06-14,2024-08-07,2024-08-02,Closed,0.93,2024-06-14 09:30:39
+11,8,Supplier Corrective Action,Meet adult final week game she court yourself choice fast small.,Kimberly Rodgers,2024-01-23,2024-03-12,2024-03-09,Closed,0.84,2024-01-23 14:05:23
+12,19,Training,Also from short capital heavy class story side speak close join improve.,Cynthia Wallace,2024-09-27,2024-11-19,2024-12-17,Closed,0.89,2024-09-27 19:39:23
+13,13,Root Cause Analysis,Sell six doctor dream whole six tough create question.,Jessica Hammond,2024-10-05,2024-10-28,2024-10-12,Closed,0.94,2024-10-05 11:05:14
+14,20,Training,Me industry class current painting their appear lose he various.,Kelli Martinez,2024-10-23,2024-11-09,2024-12-15,Closed,0.8,2024-10-23 01:16:20
+15,19,Supplier Corrective Action,Several evening town challenge join watch develop.,Gregory Johnson,2024-11-25,2025-01-14,,Pending Verification,,2024-11-25 04:49:59
+16,15,Equipment Calibration,How hear history bank different five.,Miguel Rogers,2024-01-10,2024-02-05,2024-03-20,Closed,0.72,2024-01-10 06:49:13
+17,6,Supplier Corrective Action,Case expert stop receive catch relationship large.,Bobby Scott,2024-09-14,2024-10-12,2024-09-23,Closed,0.76,2024-09-14 03:17:30
+18,5,Supplier Corrective Action,Nature road month book explain feeling answer.,Riley Bryant,2024-07-17,2024-08-31,2024-09-06,Closed,0.87,2024-07-17 16:55:40
+19,23,Inspection Enhancement,Student matter movie place offer responsibility fact.,Harry Duncan,2024-06-29,2024-07-22,2024-07-18,Closed,0.98,2024-06-29 08:31:20
+20,26,Process Change,Professor beat window attack moment medical write never.,John Reid,2024-12-22,2025-01-14,2025-01-11,Closed,0.81,2024-12-22 16:20:34
+21,25,Supplier Corrective Action,Effect administration small general run pick sign same forward and.,Robin Thompson,2024-05-07,2024-06-22,2024-07-19,Closed,0.93,2024-05-07 05:05:37
+22,14,Process Change,Wonder long consider care respond want already cut social though firm.,James Ochoa,2024-11-26,2025-01-10,2024-12-13,Closed,0.78,2024-11-26 00:37:57
+23,27,Root Cause Analysis,Education send course ground sit tend forward buy happy threat sea thus.,William Crawford,2024-03-11,2024-03-30,,Pending Verification,,2024-03-11 03:32:18
+24,21,Supplier Corrective Action,Happen something entire bar interesting issue yet Congress family bill foreign fast.,Mitchell Jackson,2024-06-15,2024-07-21,2024-07-31,Closed,0.7,2024-06-15 10:57:43
+25,1,Design Change,Goal amount thank good your ever woman way avoid point guy.,Meghan Cisneros,2024-12-12,2025-02-08,2024-12-28,Closed,0.72,2024-12-12 10:52:26
+26,4,Process Change,Support question just call door population gun.,Amanda Hernandez,2024-09-30,2024-11-13,2024-12-09,Closed,0.85,2024-09-30 03:24:29
+27,20,Design Change,We head several off morning huge power economic box save material.,Justin Green,2024-10-24,2024-12-17,,In Progress,,2024-10-24 17:49:49
+28,1,Equipment Calibration,Region Democrat partner really your customer career available common.,Yolanda Cochran,2024-02-18,2024-03-15,2024-04-15,Closed,0.96,2024-02-18 11:03:04
+29,21,Process Change,Property remember nearly face feel church remember record company gun.,William Conner,2024-03-29,2024-05-25,2024-05-06,Closed,0.94,2024-03-29 02:04:33
+30,4,Process Change,So ago network hard sound necessary partner beat finally.,Dr. Kelly Hammond DVM,2024-01-05,2024-01-23,2024-01-14,Closed,0.83,2024-01-05 10:19:55

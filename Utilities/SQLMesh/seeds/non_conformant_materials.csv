@@ -1,0 +1,327 @@
+ncm_id,incident_date,product_line,supplier_id,material_type,defect_description,quantity_affected,severity,root_cause,cost_impact,status,created_date
+1,2024-01-01,Engine Mounts,23,Nickel Superalloy,Material hardness below specification - failed Rockwell test,115,Major,Incoming inspection escape,6498.24,Closed,2024-01-01 00:00:00
+2,2024-01-04,Hydraulic Actuators,17,Ceramic Matrix Composite,Grain structure anomaly - improper heat treatment by supplier,493,Critical,Raw material batch variation,28546.58,Closed,2024-01-04 00:00:00
+3,2024-01-05,Control Valves,7,Titanium Alloy Ti-6Al-4V,Material hardness below specification - failed Rockwell test,13,Minor,Raw material batch variation,260.81,Closed,2024-01-05 00:00:00
+4,2024-01-06,Turbine Blades,10,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,49,Minor,Raw material batch variation,1959.89,Closed,2024-01-06 00:00:00
+5,2024-01-07,Control Valves,24,Aluminum 7075-T6,Grain structure anomaly - improper heat treatment by supplier,424,Critical,Incoming inspection escape,44182.18,Closed,2024-01-07 00:00:00
+6,2024-01-11,Engine Mounts,26,Magnesium AZ31B,Dimensional variance exceeds tolerance - undersized bar stock,182,Major,Supplier process deviation,2370.75,Closed,2024-01-11 00:00:00
+7,2024-01-11,Composite Panels,19,Inconel 718,Dimensional variance exceeds tolerance - undersized bar stock,47,Minor,Incoming inspection escape,721.73,Closed,2024-01-11 00:00:00
+8,2024-01-13,Hydraulic Actuators,20,Carbon Fiber Composite,Material hardness below specification - failed Rockwell test,169,Critical,Specification interpretation error,28336.56,Closed,2024-01-13 00:00:00
+9,2024-01-14,Landing Gear,14,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,40,Minor,Supplier process deviation,1892.23,Closed,2024-01-14 00:00:00
+10,2024-01-15,Sensor Assemblies,28,Copper C110,Grain structure anomaly - improper heat treatment by supplier,21,Major,Supplier process deviation,5805.53,Under Review,2024-01-15 00:00:00
+11,2024-01-15,Composite Panels,20,Copper C110,Lot traceability documentation incomplete,154,Major,Transportation damage,1904.54,Closed,2024-01-15 00:00:00
+12,2024-01-16,Precision Bearings,30,Magnesium AZ31B,Chemical composition out of spec - carbon content high,457,Critical,Raw material batch variation,18932.9,Closed,2024-01-16 00:00:00
+13,2024-01-16,Hydraulic Actuators,23,Magnesium AZ31B,Storage damage - corrosion from improper handling,38,Major,Documentation error,3029.84,Closed,2024-01-16 00:00:00
+14,2024-01-17,Turbine Blades,4,Inconel 718,Surface contamination detected - oil residue on raw stock,303,Critical,Specification interpretation error,27329.03,Under Review,2024-01-17 00:00:00
+15,2024-01-20,Hydraulic Actuators,3,Ceramic Matrix Composite,Storage damage - corrosion from improper handling,220,Critical,Raw material batch variation,11597.57,Closed,2024-01-20 00:00:00
+16,2024-01-21,Engine Mounts,7,Inconel 718,Chemical composition out of spec - carbon content high,70,Critical,Incoming inspection escape,14448.52,Under Review,2024-01-21 00:00:00
+17,2024-01-21,Engine Mounts,28,Magnesium AZ31B,Certificate of Conformance missing required test data,20,Major,Supplier process deviation,5949.55,Closed,2024-01-21 00:00:00
+18,2024-01-22,Composite Panels,24,Titanium Alloy Ti-6Al-4V,Lot traceability documentation incomplete,211,Critical,Supplier change notification missed,39851.01,Closed,2024-01-22 00:00:00
+19,2024-01-23,Landing Gear,3,Copper C110,Surface contamination detected - oil residue on raw stock,196,Major,Specification interpretation error,6668.87,Closed,2024-01-23 00:00:00
+20,2024-01-24,Hydraulic Actuators,8,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,10,Minor,Incoming inspection escape,1226.87,Closed,2024-01-24 00:00:00
+21,2024-01-24,Landing Gear,2,Copper C110,Material substitution without engineering approval,37,Minor,Raw material batch variation,1610.09,Pending Disposition,2024-01-24 00:00:00
+22,2024-01-25,Landing Gear,26,Ceramic Matrix Composite,Certificate of Conformance missing required test data,135,Major,Documentation error,9056.78,Closed,2024-01-25 00:00:00
+23,2024-01-25,Landing Gear,8,Titanium Alloy Ti-6Al-4V,Material hardness below specification - failed Rockwell test,145,Major,Incoming inspection escape,1422.02,Closed,2024-01-25 00:00:00
+24,2024-01-27,Turbine Blades,8,Stainless Steel 304L,Material hardness below specification - failed Rockwell test,24,Minor,Storage condition failure,691.82,Pending Disposition,2024-01-27 00:00:00
+25,2024-01-27,Hydraulic Actuators,30,Carbon Fiber Composite,Storage damage - corrosion from improper handling,326,Critical,Supplier change notification missed,8664.57,Under Review,2024-01-27 00:00:00
+26,2024-01-29,Turbine Blades,24,Nickel Superalloy,Chemical composition out of spec - carbon content high,470,Critical,Supplier process deviation,28118.37,Closed,2024-01-29 00:00:00
+27,2024-01-29,Engine Mounts,22,Inconel 718,Storage damage - corrosion from improper handling,14,Minor,Documentation error,1126.92,Closed,2024-01-29 00:00:00
+28,2024-01-31,Composite Panels,10,Copper C110,Certificate of Conformance missing required test data,18,Minor,Transportation damage,1240.59,Closed,2024-01-31 00:00:00
+29,2024-02-04,Precision Bearings,15,Titanium Alloy Ti-6Al-4V,Certificate of Conformance missing required test data,148,Major,Specification interpretation error,8650.04,Closed,2024-02-04 00:00:00
+30,2024-02-04,Engine Mounts,2,Aluminum 7075-T6,Storage damage - corrosion from improper handling,71,Critical,Raw material batch variation,31846.14,Closed,2024-02-04 00:00:00
+31,2024-02-05,Precision Bearings,27,Inconel 718,Certificate of Conformance missing required test data,152,Critical,Supplier change notification missed,8548.73,Closed,2024-02-05 00:00:00
+32,2024-02-05,Landing Gear,4,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,161,Major,Transportation damage,5834.02,Closed,2024-02-05 00:00:00
+33,2024-02-06,Hydraulic Actuators,8,Titanium Alloy Ti-6Al-4V,Chemical composition out of spec - carbon content high,43,Minor,Specification interpretation error,326.68,Closed,2024-02-06 00:00:00
+34,2024-02-07,Hydraulic Actuators,22,Magnesium AZ31B,Material hardness below specification - failed Rockwell test,165,Critical,Specification interpretation error,5814.03,Closed,2024-02-07 00:00:00
+35,2024-02-07,Precision Bearings,16,Titanium Alloy Ti-6Al-4V,Material substitution without engineering approval,95,Major,Transportation damage,7400.51,Closed,2024-02-07 00:00:00
+36,2024-02-08,Control Valves,29,Aluminum 7075-T6,Storage damage - corrosion from improper handling,82,Critical,Documentation error,24970.69,Closed,2024-02-08 00:00:00
+37,2024-02-08,Control Valves,24,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,36,Minor,Supplier change notification missed,617.37,Closed,2024-02-08 00:00:00
+38,2024-02-11,Composite Panels,23,Nickel Superalloy,Surface contamination detected - oil residue on raw stock,56,Critical,Incoming inspection escape,21348.59,Open,2024-02-11 00:00:00
+39,2024-02-13,Engine Mounts,16,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,248,Critical,Supplier process deviation,14723.68,Closed,2024-02-13 00:00:00
+40,2024-02-14,Turbine Blades,8,Copper C110,Material hardness below specification - failed Rockwell test,131,Major,Transportation damage,4562.29,Closed,2024-02-14 00:00:00
+41,2024-02-15,Landing Gear,17,Ceramic Matrix Composite,Material substitution without engineering approval,22,Minor,Raw material batch variation,1303.25,Closed,2024-02-15 00:00:00
+42,2024-02-15,Control Valves,1,Titanium Alloy Ti-6Al-4V,Grain structure anomaly - improper heat treatment by supplier,12,Minor,Supplier process deviation,183.22,Closed,2024-02-15 00:00:00
+43,2024-02-17,Turbine Blades,5,Magnesium AZ31B,Incoming inspection failed - visual defects on surface,15,Minor,Specification interpretation error,598.36,Closed,2024-02-17 00:00:00
+44,2024-02-18,Sensor Assemblies,20,Inconel 718,Certificate of Conformance missing required test data,344,Critical,Supplier process deviation,43586.07,Closed,2024-02-18 00:00:00
+45,2024-02-18,Composite Panels,2,Magnesium AZ31B,Chemical composition out of spec - carbon content high,287,Critical,Documentation error,10987.16,Closed,2024-02-18 00:00:00
+46,2024-02-19,Precision Bearings,26,Stainless Steel 304L,Material substitution without engineering approval,13,Minor,Incoming inspection escape,1222.02,Pending Disposition,2024-02-19 00:00:00
+47,2024-02-20,Sensor Assemblies,30,Tool Steel D2,Surface contamination detected - oil residue on raw stock,113,Critical,Supplier change notification missed,28120.76,Closed,2024-02-20 00:00:00
+48,2024-02-21,Sensor Assemblies,21,Nickel Superalloy,Certificate of Conformance missing required test data,23,Minor,Transportation damage,501.59,Closed,2024-02-21 00:00:00
+49,2024-02-23,Sensor Assemblies,26,Copper C110,Certificate of Conformance missing required test data,365,Critical,Supplier change notification missed,10550.66,Closed,2024-02-23 00:00:00
+50,2024-02-23,Control Valves,1,Stainless Steel 304L,Material substitution without engineering approval,127,Major,Supplier change notification missed,1922.94,Closed,2024-02-23 00:00:00
+51,2024-02-25,Precision Bearings,1,Nickel Superalloy,Material hardness below specification - failed Rockwell test,59,Major,Transportation damage,8773.23,Closed,2024-02-25 00:00:00
+52,2024-02-27,Landing Gear,26,Carbon Fiber Composite,Material hardness below specification - failed Rockwell test,26,Major,Raw material batch variation,5535.71,Under Review,2024-02-27 00:00:00
+53,2024-02-29,Landing Gear,24,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,44,Major,Specification interpretation error,5473.45,Closed,2024-02-29 00:00:00
+54,2024-02-29,Turbine Blades,19,Carbon Fiber Composite,Grain structure anomaly - improper heat treatment by supplier,85,Major,Documentation error,2160.54,Closed,2024-02-29 00:00:00
+55,2024-03-01,Precision Bearings,15,Copper C110,Grain structure anomaly - improper heat treatment by supplier,185,Critical,Raw material batch variation,36934.48,Closed,2024-03-01 00:00:00
+56,2024-03-02,Sensor Assemblies,26,Copper C110,Lot traceability documentation incomplete,34,Minor,Raw material batch variation,1884.04,Closed,2024-03-02 00:00:00
+57,2024-03-02,Landing Gear,19,Nickel Superalloy,Certificate of Conformance missing required test data,45,Minor,Incoming inspection escape,1871.57,Closed,2024-03-02 00:00:00
+58,2024-03-03,Control Valves,13,Carbon Fiber Composite,Incoming inspection failed - visual defects on surface,51,Major,Specification interpretation error,3970.88,Closed,2024-03-03 00:00:00
+59,2024-03-03,Engine Mounts,9,Magnesium AZ31B,Material hardness below specification - failed Rockwell test,21,Major,Transportation damage,5922.45,Closed,2024-03-03 00:00:00
+60,2024-03-05,Engine Mounts,23,Carbon Fiber Composite,Material hardness below specification - failed Rockwell test,42,Major,Raw material batch variation,8211.6,Closed,2024-03-05 00:00:00
+61,2024-03-05,Hydraulic Actuators,19,Carbon Fiber Composite,Grain structure anomaly - improper heat treatment by supplier,234,Critical,Storage condition failure,6149.0,Closed,2024-03-05 00:00:00
+62,2024-03-07,Engine Mounts,23,Nickel Superalloy,Chemical composition out of spec - carbon content high,118,Critical,Incoming inspection escape,40376.03,Open,2024-03-07 00:00:00
+63,2024-03-07,Hydraulic Actuators,6,Magnesium AZ31B,Certificate of Conformance missing required test data,61,Major,Transportation damage,3160.66,Closed,2024-03-07 00:00:00
+64,2024-03-08,Engine Mounts,6,Inconel 718,Grain structure anomaly - improper heat treatment by supplier,179,Major,Documentation error,9266.02,Closed,2024-03-08 00:00:00
+65,2024-03-09,Turbine Blades,5,Aluminum 7075-T6,Chemical composition out of spec - carbon content high,143,Critical,Supplier process deviation,15723.43,Open,2024-03-09 00:00:00
+66,2024-03-09,Control Valves,14,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,139,Critical,Storage condition failure,39251.54,Closed,2024-03-09 00:00:00
+67,2024-03-10,Landing Gear,16,Titanium Alloy Ti-6Al-4V,Lot traceability documentation incomplete,14,Minor,Documentation error,1222.88,Closed,2024-03-10 00:00:00
+68,2024-03-11,Landing Gear,28,Nickel Superalloy,Material hardness below specification - failed Rockwell test,196,Major,Specification interpretation error,8584.67,Closed,2024-03-11 00:00:00
+69,2024-03-12,Landing Gear,14,Titanium Alloy Ti-6Al-4V,Certificate of Conformance missing required test data,163,Critical,Incoming inspection escape,29800.14,Open,2024-03-12 00:00:00
+70,2024-03-14,Hydraulic Actuators,5,Magnesium AZ31B,Lot traceability documentation incomplete,58,Major,Specification interpretation error,9936.06,Closed,2024-03-14 00:00:00
+71,2024-03-14,Control Valves,15,Tool Steel D2,Material hardness below specification - failed Rockwell test,262,Critical,Supplier change notification missed,47265.51,Closed,2024-03-14 00:00:00
+72,2024-03-15,Precision Bearings,30,Tool Steel D2,Incoming inspection failed - visual defects on surface,33,Minor,Supplier process deviation,1008.47,Open,2024-03-15 00:00:00
+73,2024-03-16,Turbine Blades,26,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,63,Major,Incoming inspection escape,6529.26,Closed,2024-03-16 00:00:00
+74,2024-03-18,Turbine Blades,27,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,50,Minor,Specification interpretation error,998.54,Closed,2024-03-18 00:00:00
+75,2024-03-18,Turbine Blades,9,Copper C110,Material substitution without engineering approval,32,Minor,Transportation damage,1331.21,Closed,2024-03-18 00:00:00
+76,2024-03-19,Composite Panels,15,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,51,Critical,Supplier process deviation,21706.26,Closed,2024-03-19 00:00:00
+77,2024-03-22,Control Valves,13,Nickel Superalloy,Chemical composition out of spec - carbon content high,27,Minor,Supplier change notification missed,1358.48,Closed,2024-03-22 00:00:00
+78,2024-03-22,Landing Gear,24,Magnesium AZ31B,Storage damage - corrosion from improper handling,88,Major,Storage condition failure,6163.09,Closed,2024-03-22 00:00:00
+79,2024-03-24,Control Valves,30,Ceramic Matrix Composite,Material substitution without engineering approval,41,Minor,Incoming inspection escape,1428.07,Closed,2024-03-24 00:00:00
+80,2024-03-24,Landing Gear,27,Titanium Alloy Ti-6Al-4V,Storage damage - corrosion from improper handling,200,Major,Documentation error,6388.68,Closed,2024-03-24 00:00:00
+81,2024-03-25,Precision Bearings,1,Nickel Superalloy,Certificate of Conformance missing required test data,47,Minor,Incoming inspection escape,1434.18,Open,2024-03-25 00:00:00
+82,2024-03-28,Precision Bearings,8,Tool Steel D2,Storage damage - corrosion from improper handling,45,Major,Raw material batch variation,1912.86,Pending Disposition,2024-03-28 00:00:00
+83,2024-03-28,Landing Gear,28,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,163,Major,Supplier process deviation,6543.26,Closed,2024-03-28 00:00:00
+84,2024-03-30,Hydraulic Actuators,3,Inconel 718,Dimensional variance exceeds tolerance - undersized bar stock,49,Minor,Storage condition failure,955.82,Closed,2024-03-30 00:00:00
+85,2024-03-30,Precision Bearings,27,Nickel Superalloy,Lot traceability documentation incomplete,183,Major,Specification interpretation error,3701.54,Open,2024-03-30 00:00:00
+86,2024-03-31,Hydraulic Actuators,25,Magnesium AZ31B,Material hardness below specification - failed Rockwell test,319,Critical,Documentation error,14226.33,Closed,2024-03-31 00:00:00
+87,2024-03-31,Precision Bearings,22,Aluminum 7075-T6,Grain structure anomaly - improper heat treatment by supplier,75,Critical,Incoming inspection escape,22456.98,Closed,2024-03-31 00:00:00
+88,2024-04-01,Sensor Assemblies,21,Stainless Steel 304L,Certificate of Conformance missing required test data,167,Major,Supplier process deviation,3753.53,Closed,2024-04-01 00:00:00
+89,2024-04-01,Sensor Assemblies,25,Ceramic Matrix Composite,Certificate of Conformance missing required test data,33,Minor,Storage condition failure,913.92,Closed,2024-04-01 00:00:00
+90,2024-04-02,Control Valves,18,Inconel 718,Grain structure anomaly - improper heat treatment by supplier,489,Critical,Supplier change notification missed,43534.22,Closed,2024-04-02 00:00:00
+91,2024-04-02,Landing Gear,26,Inconel 718,Certificate of Conformance missing required test data,80,Critical,Raw material batch variation,42773.48,Closed,2024-04-02 00:00:00
+92,2024-04-03,Hydraulic Actuators,13,Copper C110,Lot traceability documentation incomplete,215,Critical,Supplier change notification missed,9453.04,Closed,2024-04-03 00:00:00
+93,2024-04-04,Engine Mounts,11,Copper C110,Lot traceability documentation incomplete,30,Minor,Documentation error,1860.9,Closed,2024-04-04 00:00:00
+94,2024-04-07,Composite Panels,16,Magnesium AZ31B,Incoming inspection failed - visual defects on surface,33,Major,Supplier change notification missed,1051.49,Closed,2024-04-07 00:00:00
+95,2024-04-08,Hydraulic Actuators,28,Nickel Superalloy,Incoming inspection failed - visual defects on surface,111,Major,Incoming inspection escape,7149.64,Under Review,2024-04-08 00:00:00
+96,2024-04-08,Hydraulic Actuators,4,Aluminum 7075-T6,Material substitution without engineering approval,491,Critical,Specification interpretation error,45129.84,Closed,2024-04-08 00:00:00
+97,2024-04-09,Hydraulic Actuators,1,Nickel Superalloy,Material hardness below specification - failed Rockwell test,258,Critical,Storage condition failure,14071.59,Closed,2024-04-09 00:00:00
+98,2024-04-10,Engine Mounts,27,Carbon Fiber Composite,Certificate of Conformance missing required test data,281,Critical,Storage condition failure,37858.54,Open,2024-04-10 00:00:00
+99,2024-04-11,Precision Bearings,10,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,312,Critical,Supplier process deviation,46233.81,Closed,2024-04-11 00:00:00
+100,2024-04-11,Sensor Assemblies,26,Carbon Fiber Composite,Material hardness below specification - failed Rockwell test,44,Minor,Incoming inspection escape,192.17,Closed,2024-04-11 00:00:00
+101,2024-04-12,Control Valves,3,Nickel Superalloy,Surface contamination detected - oil residue on raw stock,23,Major,Specification interpretation error,7011.76,Closed,2024-04-12 00:00:00
+102,2024-04-12,Engine Mounts,20,Copper C110,Dimensional variance exceeds tolerance - undersized bar stock,13,Minor,Incoming inspection escape,1767.52,Closed,2024-04-12 00:00:00
+103,2024-04-15,Precision Bearings,13,Magnesium AZ31B,Grain structure anomaly - improper heat treatment by supplier,25,Minor,Documentation error,125.05,Closed,2024-04-15 00:00:00
+104,2024-04-16,Engine Mounts,25,Magnesium AZ31B,Grain structure anomaly - improper heat treatment by supplier,23,Major,Incoming inspection escape,9890.71,Closed,2024-04-16 00:00:00
+105,2024-04-17,Sensor Assemblies,1,Nickel Superalloy,Material hardness below specification - failed Rockwell test,40,Minor,Transportation damage,1673.94,Pending Disposition,2024-04-17 00:00:00
+106,2024-04-17,Precision Bearings,20,Aluminum 7075-T6,Incoming inspection failed - visual defects on surface,31,Major,Transportation damage,2324.25,Closed,2024-04-17 00:00:00
+107,2024-04-18,Precision Bearings,17,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,6,Minor,Supplier process deviation,1698.91,Closed,2024-04-18 00:00:00
+108,2024-04-21,Engine Mounts,24,Magnesium AZ31B,Incoming inspection failed - visual defects on surface,23,Minor,Documentation error,973.69,Closed,2024-04-21 00:00:00
+109,2024-04-21,Precision Bearings,4,Tool Steel D2,Dimensional variance exceeds tolerance - undersized bar stock,267,Critical,Storage condition failure,28106.84,Closed,2024-04-21 00:00:00
+110,2024-04-23,Hydraulic Actuators,17,Nickel Superalloy,Material substitution without engineering approval,46,Minor,Incoming inspection escape,708.0,Closed,2024-04-23 00:00:00
+111,2024-04-23,Composite Panels,4,Nickel Superalloy,Material hardness below specification - failed Rockwell test,442,Critical,Documentation error,16011.17,Pending Disposition,2024-04-23 00:00:00
+112,2024-04-24,Precision Bearings,13,Tool Steel D2,Grain structure anomaly - improper heat treatment by supplier,479,Critical,Raw material batch variation,25666.1,Closed,2024-04-24 00:00:00
+113,2024-04-24,Engine Mounts,28,Ceramic Matrix Composite,Grain structure anomaly - improper heat treatment by supplier,246,Critical,Raw material batch variation,36490.72,Closed,2024-04-24 00:00:00
+114,2024-04-25,Landing Gear,3,Inconel 718,Certificate of Conformance missing required test data,58,Major,Documentation error,5867.94,Closed,2024-04-25 00:00:00
+115,2024-04-26,Precision Bearings,19,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,171,Major,Storage condition failure,6605.72,Closed,2024-04-26 00:00:00
+116,2024-04-28,Hydraulic Actuators,24,Tool Steel D2,Storage damage - corrosion from improper handling,110,Critical,Supplier process deviation,34419.35,Closed,2024-04-28 00:00:00
+117,2024-05-02,Turbine Blades,22,Nickel Superalloy,Incoming inspection failed - visual defects on surface,457,Critical,Incoming inspection escape,36879.32,Closed,2024-05-02 00:00:00
+118,2024-05-03,Engine Mounts,18,Magnesium AZ31B,Lot traceability documentation incomplete,332,Critical,Documentation error,35199.45,Closed,2024-05-03 00:00:00
+119,2024-05-03,Precision Bearings,23,Copper C110,Incoming inspection failed - visual defects on surface,277,Critical,Storage condition failure,33220.4,Closed,2024-05-03 00:00:00
+120,2024-05-04,Landing Gear,17,Magnesium AZ31B,Grain structure anomaly - improper heat treatment by supplier,48,Minor,Specification interpretation error,1127.5,Pending Disposition,2024-05-04 00:00:00
+121,2024-05-04,Sensor Assemblies,3,Tool Steel D2,Storage damage - corrosion from improper handling,36,Minor,Incoming inspection escape,223.12,Closed,2024-05-04 00:00:00
+122,2024-05-05,Composite Panels,17,Stainless Steel 304L,Material substitution without engineering approval,331,Critical,Specification interpretation error,23224.42,Under Review,2024-05-05 00:00:00
+123,2024-05-07,Hydraulic Actuators,1,Carbon Fiber Composite,Storage damage - corrosion from improper handling,254,Critical,Supplier change notification missed,35836.15,Pending Disposition,2024-05-07 00:00:00
+124,2024-05-07,Hydraulic Actuators,4,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,452,Critical,Raw material batch variation,47104.44,Closed,2024-05-07 00:00:00
+125,2024-05-08,Landing Gear,29,Tool Steel D2,Certificate of Conformance missing required test data,381,Critical,Raw material batch variation,46777.92,Closed,2024-05-08 00:00:00
+126,2024-05-08,Hydraulic Actuators,17,Nickel Superalloy,Certificate of Conformance missing required test data,300,Critical,Supplier process deviation,34198.52,Open,2024-05-08 00:00:00
+127,2024-05-10,Hydraulic Actuators,19,Inconel 718,Certificate of Conformance missing required test data,125,Critical,Storage condition failure,26647.14,Closed,2024-05-10 00:00:00
+128,2024-05-12,Composite Panels,29,Carbon Fiber Composite,Incoming inspection failed - visual defects on surface,34,Minor,Supplier process deviation,677.2,Closed,2024-05-12 00:00:00
+129,2024-05-13,Sensor Assemblies,16,Carbon Fiber Composite,Grain structure anomaly - improper heat treatment by supplier,125,Major,Documentation error,5599.29,Closed,2024-05-13 00:00:00
+130,2024-05-14,Engine Mounts,23,Aluminum 7075-T6,Dimensional variance exceeds tolerance - undersized bar stock,276,Critical,Storage condition failure,41016.47,Open,2024-05-14 00:00:00
+131,2024-05-15,Sensor Assemblies,11,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,25,Minor,Transportation damage,181.15,Closed,2024-05-15 00:00:00
+132,2024-05-16,Engine Mounts,3,Stainless Steel 304L,Chemical composition out of spec - carbon content high,19,Minor,Supplier process deviation,1246.66,Closed,2024-05-16 00:00:00
+133,2024-05-16,Sensor Assemblies,10,Stainless Steel 304L,Surface contamination detected - oil residue on raw stock,11,Minor,Incoming inspection escape,1121.05,Closed,2024-05-16 00:00:00
+134,2024-05-17,Landing Gear,2,Titanium Alloy Ti-6Al-4V,Grain structure anomaly - improper heat treatment by supplier,381,Critical,Supplier change notification missed,47129.41,Closed,2024-05-17 00:00:00
+135,2024-05-18,Landing Gear,15,Tool Steel D2,Storage damage - corrosion from improper handling,120,Major,Raw material batch variation,6650.07,Closed,2024-05-18 00:00:00
+136,2024-05-18,Turbine Blades,24,Tool Steel D2,Material hardness below specification - failed Rockwell test,33,Minor,Transportation damage,1313.85,Closed,2024-05-18 00:00:00
+137,2024-05-20,Precision Bearings,10,Magnesium AZ31B,Storage damage - corrosion from improper handling,94,Major,Incoming inspection escape,4837.17,Closed,2024-05-20 00:00:00
+138,2024-05-20,Control Valves,1,Titanium Alloy Ti-6Al-4V,Surface contamination detected - oil residue on raw stock,129,Major,Supplier change notification missed,7530.66,Closed,2024-05-20 00:00:00
+139,2024-05-23,Engine Mounts,11,Aluminum 7075-T6,Incoming inspection failed - visual defects on surface,309,Critical,Specification interpretation error,39127.21,Closed,2024-05-23 00:00:00
+140,2024-05-23,Engine Mounts,12,Inconel 718,Lot traceability documentation incomplete,43,Minor,Storage condition failure,1842.29,Closed,2024-05-23 00:00:00
+141,2024-05-25,Control Valves,13,Copper C110,Material substitution without engineering approval,41,Minor,Documentation error,171.72,Closed,2024-05-25 00:00:00
+142,2024-05-25,Precision Bearings,30,Stainless Steel 304L,Surface contamination detected - oil residue on raw stock,19,Minor,Supplier change notification missed,410.99,Pending Disposition,2024-05-25 00:00:00
+143,2024-05-26,Sensor Assemblies,3,Nickel Superalloy,Certificate of Conformance missing required test data,39,Minor,Supplier process deviation,1503.85,Under Review,2024-05-26 00:00:00
+144,2024-05-28,Composite Panels,10,Aluminum 7075-T6,Incoming inspection failed - visual defects on surface,119,Major,Documentation error,7381.17,Pending Disposition,2024-05-28 00:00:00
+145,2024-05-29,Landing Gear,21,Aluminum 7075-T6,Lot traceability documentation incomplete,44,Minor,Supplier process deviation,1025.41,Under Review,2024-05-29 00:00:00
+146,2024-06-03,Landing Gear,22,Stainless Steel 304L,Surface contamination detected - oil residue on raw stock,38,Major,Storage condition failure,6080.9,Closed,2024-06-03 00:00:00
+147,2024-06-03,Precision Bearings,26,Titanium Alloy Ti-6Al-4V,Storage damage - corrosion from improper handling,118,Major,Incoming inspection escape,7008.82,Closed,2024-06-03 00:00:00
+148,2024-06-04,Engine Mounts,7,Inconel 718,Material substitution without engineering approval,52,Major,Supplier change notification missed,3590.21,Closed,2024-06-04 00:00:00
+149,2024-06-04,Control Valves,10,Nickel Superalloy,Incoming inspection failed - visual defects on surface,64,Critical,Supplier process deviation,39679.27,Closed,2024-06-04 00:00:00
+150,2024-06-05,Composite Panels,24,Carbon Fiber Composite,Certificate of Conformance missing required test data,12,Minor,Supplier change notification missed,1656.42,Closed,2024-06-05 00:00:00
+151,2024-06-05,Engine Mounts,15,Nickel Superalloy,Certificate of Conformance missing required test data,243,Critical,Raw material batch variation,31990.24,Closed,2024-06-05 00:00:00
+152,2024-06-08,Composite Panels,24,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,465,Critical,Transportation damage,17504.82,Closed,2024-06-08 00:00:00
+153,2024-06-10,Control Valves,23,Carbon Fiber Composite,Lot traceability documentation incomplete,159,Major,Supplier change notification missed,6523.47,Pending Disposition,2024-06-10 00:00:00
+154,2024-06-10,Composite Panels,8,Magnesium AZ31B,Storage damage - corrosion from improper handling,24,Major,Raw material batch variation,4222.75,Under Review,2024-06-10 00:00:00
+155,2024-06-12,Precision Bearings,10,Inconel 718,Grain structure anomaly - improper heat treatment by supplier,95,Major,Storage condition failure,2082.68,Under Review,2024-06-12 00:00:00
+156,2024-06-12,Engine Mounts,3,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,112,Major,Supplier change notification missed,8663.2,Closed,2024-06-12 00:00:00
+157,2024-06-15,Control Valves,13,Ceramic Matrix Composite,Storage damage - corrosion from improper handling,117,Major,Documentation error,7764.47,Pending Disposition,2024-06-15 00:00:00
+158,2024-06-15,Composite Panels,29,Inconel 718,Dimensional variance exceeds tolerance - undersized bar stock,27,Minor,Specification interpretation error,1304.04,Closed,2024-06-15 00:00:00
+159,2024-06-16,Composite Panels,15,Titanium Alloy Ti-6Al-4V,Grain structure anomaly - improper heat treatment by supplier,96,Major,Documentation error,8307.04,Closed,2024-06-16 00:00:00
+160,2024-06-16,Hydraulic Actuators,1,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,26,Minor,Incoming inspection escape,1623.01,Pending Disposition,2024-06-16 00:00:00
+161,2024-06-17,Composite Panels,29,Carbon Fiber Composite,Storage damage - corrosion from improper handling,156,Major,Supplier process deviation,2266.14,Closed,2024-06-17 00:00:00
+162,2024-06-18,Control Valves,16,Aluminum 7075-T6,Incoming inspection failed - visual defects on surface,234,Critical,Specification interpretation error,7974.71,Closed,2024-06-18 00:00:00
+163,2024-06-19,Control Valves,19,Ceramic Matrix Composite,Lot traceability documentation incomplete,108,Critical,Specification interpretation error,21091.92,Closed,2024-06-19 00:00:00
+164,2024-06-20,Sensor Assemblies,27,Stainless Steel 304L,Material hardness below specification - failed Rockwell test,497,Critical,Documentation error,7858.74,Closed,2024-06-20 00:00:00
+165,2024-06-20,Control Valves,10,Tool Steel D2,Grain structure anomaly - improper heat treatment by supplier,131,Major,Supplier process deviation,5459.92,Closed,2024-06-20 00:00:00
+166,2024-06-21,Sensor Assemblies,17,Tool Steel D2,Lot traceability documentation incomplete,11,Minor,Storage condition failure,198.04,Closed,2024-06-21 00:00:00
+167,2024-06-21,Precision Bearings,3,Aluminum 7075-T6,Chemical composition out of spec - carbon content high,216,Critical,Storage condition failure,31203.37,Under Review,2024-06-21 00:00:00
+168,2024-06-22,Composite Panels,18,Tool Steel D2,Surface contamination detected - oil residue on raw stock,459,Critical,Specification interpretation error,33408.83,Open,2024-06-22 00:00:00
+169,2024-06-24,Composite Panels,22,Copper C110,Lot traceability documentation incomplete,32,Minor,Supplier process deviation,1096.56,Closed,2024-06-24 00:00:00
+170,2024-06-24,Turbine Blades,14,Carbon Fiber Composite,Grain structure anomaly - improper heat treatment by supplier,470,Critical,Raw material batch variation,43867.62,Closed,2024-06-24 00:00:00
+171,2024-06-25,Hydraulic Actuators,9,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,5,Minor,Storage condition failure,1511.79,Closed,2024-06-25 00:00:00
+172,2024-06-28,Sensor Assemblies,14,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,26,Minor,Transportation damage,1413.63,Closed,2024-06-28 00:00:00
+173,2024-06-28,Precision Bearings,6,Titanium Alloy Ti-6Al-4V,Certificate of Conformance missing required test data,23,Minor,Supplier change notification missed,281.6,Closed,2024-06-28 00:00:00
+174,2024-06-29,Landing Gear,2,Ceramic Matrix Composite,Dimensional variance exceeds tolerance - undersized bar stock,101,Major,Supplier process deviation,1678.49,Closed,2024-06-29 00:00:00
+175,2024-07-01,Control Valves,14,Inconel 718,Dimensional variance exceeds tolerance - undersized bar stock,315,Critical,Incoming inspection escape,43196.2,Open,2024-07-01 00:00:00
+176,2024-07-03,Hydraulic Actuators,8,Inconel 718,Material hardness below specification - failed Rockwell test,74,Critical,Raw material batch variation,34917.77,Closed,2024-07-03 00:00:00
+177,2024-07-04,Turbine Blades,24,Stainless Steel 304L,Grain structure anomaly - improper heat treatment by supplier,156,Critical,Storage condition failure,10124.23,Closed,2024-07-04 00:00:00
+178,2024-07-04,Landing Gear,19,Tool Steel D2,Certificate of Conformance missing required test data,139,Critical,Raw material batch variation,15252.12,Closed,2024-07-04 00:00:00
+179,2024-07-08,Precision Bearings,20,Copper C110,Dimensional variance exceeds tolerance - undersized bar stock,125,Major,Storage condition failure,8491.63,Closed,2024-07-08 00:00:00
+180,2024-07-08,Hydraulic Actuators,10,Nickel Superalloy,Material hardness below specification - failed Rockwell test,24,Minor,Transportation damage,859.48,Closed,2024-07-08 00:00:00
+181,2024-07-09,Composite Panels,19,Ceramic Matrix Composite,Incoming inspection failed - visual defects on surface,64,Major,Storage condition failure,2739.94,Closed,2024-07-09 00:00:00
+182,2024-07-10,Engine Mounts,25,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,45,Minor,Documentation error,1373.04,Closed,2024-07-10 00:00:00
+183,2024-07-12,Control Valves,16,Inconel 718,Certificate of Conformance missing required test data,43,Major,Supplier change notification missed,4642.89,Closed,2024-07-12 00:00:00
+184,2024-07-12,Sensor Assemblies,12,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,22,Minor,Documentation error,1709.42,Closed,2024-07-12 00:00:00
+185,2024-07-14,Turbine Blades,17,Stainless Steel 304L,Lot traceability documentation incomplete,31,Minor,Documentation error,1840.63,Closed,2024-07-14 00:00:00
+186,2024-07-14,Control Valves,8,Stainless Steel 304L,Lot traceability documentation incomplete,198,Major,Incoming inspection escape,8640.96,Closed,2024-07-14 00:00:00
+187,2024-07-15,Sensor Assemblies,14,Nickel Superalloy,Dimensional variance exceeds tolerance - undersized bar stock,18,Minor,Documentation error,543.32,Closed,2024-07-15 00:00:00
+188,2024-07-16,Hydraulic Actuators,8,Ceramic Matrix Composite,Dimensional variance exceeds tolerance - undersized bar stock,119,Major,Incoming inspection escape,2822.93,Closed,2024-07-16 00:00:00
+189,2024-07-16,Sensor Assemblies,4,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,184,Major,Storage condition failure,1736.17,Closed,2024-07-16 00:00:00
+190,2024-07-17,Control Valves,9,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,40,Minor,Supplier process deviation,644.58,Closed,2024-07-17 00:00:00
+191,2024-07-18,Landing Gear,26,Magnesium AZ31B,Storage damage - corrosion from improper handling,57,Major,Storage condition failure,7576.56,Closed,2024-07-18 00:00:00
+192,2024-07-19,Landing Gear,20,Tool Steel D2,Surface contamination detected - oil residue on raw stock,77,Major,Raw material batch variation,1865.63,Closed,2024-07-19 00:00:00
+193,2024-07-19,Control Valves,13,Magnesium AZ31B,Grain structure anomaly - improper heat treatment by supplier,6,Minor,Specification interpretation error,977.62,Open,2024-07-19 00:00:00
+194,2024-07-20,Engine Mounts,2,Stainless Steel 304L,Material substitution without engineering approval,5,Minor,Supplier change notification missed,415.49,Closed,2024-07-20 00:00:00
+195,2024-07-21,Turbine Blades,18,Ceramic Matrix Composite,Grain structure anomaly - improper heat treatment by supplier,29,Minor,Raw material batch variation,1802.85,Closed,2024-07-21 00:00:00
+196,2024-07-24,Control Valves,13,Copper C110,Chemical composition out of spec - carbon content high,33,Minor,Transportation damage,1559.61,Closed,2024-07-24 00:00:00
+197,2024-07-25,Hydraulic Actuators,19,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,95,Major,Storage condition failure,8582.03,Closed,2024-07-25 00:00:00
+198,2024-07-25,Landing Gear,20,Ceramic Matrix Composite,Chemical composition out of spec - carbon content high,169,Major,Supplier process deviation,2248.25,Closed,2024-07-25 00:00:00
+199,2024-07-27,Precision Bearings,27,Aluminum 7075-T6,Dimensional variance exceeds tolerance - undersized bar stock,10,Minor,Supplier change notification missed,1708.31,Closed,2024-07-27 00:00:00
+200,2024-07-28,Composite Panels,30,Nickel Superalloy,Lot traceability documentation incomplete,34,Minor,Supplier process deviation,655.05,Under Review,2024-07-28 00:00:00
+201,2024-07-28,Control Valves,22,Aluminum 7075-T6,Certificate of Conformance missing required test data,357,Critical,Raw material batch variation,19788.65,Open,2024-07-28 00:00:00
+202,2024-07-29,Turbine Blades,26,Ceramic Matrix Composite,Chemical composition out of spec - carbon content high,417,Critical,Supplier process deviation,23060.84,Open,2024-07-29 00:00:00
+203,2024-08-02,Control Valves,9,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,127,Major,Raw material batch variation,9258.78,Closed,2024-08-02 00:00:00
+204,2024-08-03,Precision Bearings,2,Magnesium AZ31B,Storage damage - corrosion from improper handling,86,Critical,Storage condition failure,37776.67,Closed,2024-08-03 00:00:00
+205,2024-08-06,Landing Gear,30,Ceramic Matrix Composite,Surface contamination detected - oil residue on raw stock,194,Critical,Supplier process deviation,23020.55,Closed,2024-08-06 00:00:00
+206,2024-08-08,Hydraulic Actuators,21,Nickel Superalloy,Certificate of Conformance missing required test data,337,Critical,Raw material batch variation,11773.5,Closed,2024-08-08 00:00:00
+207,2024-08-09,Turbine Blades,30,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,44,Minor,Transportation damage,1933.15,Closed,2024-08-09 00:00:00
+208,2024-08-12,Sensor Assemblies,17,Carbon Fiber Composite,Incoming inspection failed - visual defects on surface,59,Major,Storage condition failure,5981.66,Closed,2024-08-12 00:00:00
+209,2024-08-14,Engine Mounts,2,Ceramic Matrix Composite,Surface contamination detected - oil residue on raw stock,11,Minor,Storage condition failure,1970.3,Closed,2024-08-14 00:00:00
+210,2024-08-15,Turbine Blades,13,Aluminum 7075-T6,Lot traceability documentation incomplete,296,Critical,Raw material batch variation,19576.65,Open,2024-08-15 00:00:00
+211,2024-08-15,Hydraulic Actuators,29,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,48,Minor,Incoming inspection escape,285.75,Closed,2024-08-15 00:00:00
+212,2024-08-16,Turbine Blades,22,Aluminum 7075-T6,Chemical composition out of spec - carbon content high,316,Critical,Raw material batch variation,48679.22,Closed,2024-08-16 00:00:00
+213,2024-08-19,Precision Bearings,15,Aluminum 7075-T6,Storage damage - corrosion from improper handling,144,Major,Storage condition failure,2230.46,Closed,2024-08-19 00:00:00
+214,2024-08-19,Engine Mounts,14,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,29,Minor,Raw material batch variation,800.15,Closed,2024-08-19 00:00:00
+215,2024-08-21,Landing Gear,26,Aluminum 7075-T6,Certificate of Conformance missing required test data,305,Critical,Raw material batch variation,46308.68,Closed,2024-08-21 00:00:00
+216,2024-08-21,Precision Bearings,26,Stainless Steel 304L,Material hardness below specification - failed Rockwell test,127,Critical,Raw material batch variation,16227.66,Pending Disposition,2024-08-21 00:00:00
+217,2024-08-24,Sensor Assemblies,7,Inconel 718,Certificate of Conformance missing required test data,389,Critical,Raw material batch variation,23493.41,Closed,2024-08-24 00:00:00
+218,2024-08-25,Precision Bearings,18,Magnesium AZ31B,Chemical composition out of spec - carbon content high,102,Major,Raw material batch variation,4034.22,Open,2024-08-25 00:00:00
+219,2024-08-27,Precision Bearings,12,Magnesium AZ31B,Storage damage - corrosion from improper handling,36,Major,Incoming inspection escape,7485.98,Closed,2024-08-27 00:00:00
+220,2024-08-27,Sensor Assemblies,17,Ceramic Matrix Composite,Grain structure anomaly - improper heat treatment by supplier,92,Major,Supplier process deviation,4513.84,Closed,2024-08-27 00:00:00
+221,2024-08-29,Sensor Assemblies,4,Carbon Fiber Composite,Incoming inspection failed - visual defects on surface,189,Major,Documentation error,5062.76,Closed,2024-08-29 00:00:00
+222,2024-08-30,Hydraulic Actuators,10,Inconel 718,Certificate of Conformance missing required test data,420,Critical,Supplier change notification missed,25171.47,Open,2024-08-30 00:00:00
+223,2024-08-30,Sensor Assemblies,25,Titanium Alloy Ti-6Al-4V,Lot traceability documentation incomplete,86,Major,Supplier process deviation,4302.62,Closed,2024-08-30 00:00:00
+224,2024-08-31,Landing Gear,2,Aluminum 7075-T6,Grain structure anomaly - improper heat treatment by supplier,187,Major,Supplier process deviation,8731.19,Closed,2024-08-31 00:00:00
+225,2024-08-31,Composite Panels,27,Stainless Steel 304L,Material hardness below specification - failed Rockwell test,31,Minor,Specification interpretation error,1331.74,Closed,2024-08-31 00:00:00
+226,2024-09-04,Composite Panels,27,Aluminum 7075-T6,Lot traceability documentation incomplete,35,Major,Transportation damage,5873.46,Closed,2024-09-04 00:00:00
+227,2024-09-04,Hydraulic Actuators,18,Aluminum 7075-T6,Surface contamination detected - oil residue on raw stock,136,Critical,Documentation error,26227.06,Pending Disposition,2024-09-04 00:00:00
+228,2024-09-09,Hydraulic Actuators,5,Stainless Steel 304L,Lot traceability documentation incomplete,195,Critical,Documentation error,30022.99,Open,2024-09-09 00:00:00
+229,2024-09-09,Control Valves,17,Titanium Alloy Ti-6Al-4V,Material hardness below specification - failed Rockwell test,171,Major,Incoming inspection escape,9999.31,Closed,2024-09-09 00:00:00
+230,2024-09-12,Precision Bearings,25,Aluminum 7075-T6,Surface contamination detected - oil residue on raw stock,49,Major,Storage condition failure,6448.06,Under Review,2024-09-12 00:00:00
+231,2024-09-12,Turbine Blades,22,Inconel 718,Material substitution without engineering approval,133,Major,Transportation damage,2748.16,Closed,2024-09-12 00:00:00
+232,2024-09-14,Landing Gear,10,Magnesium AZ31B,Material substitution without engineering approval,47,Minor,Supplier process deviation,1430.4,Closed,2024-09-14 00:00:00
+233,2024-09-15,Engine Mounts,25,Titanium Alloy Ti-6Al-4V,Surface contamination detected - oil residue on raw stock,13,Minor,Supplier process deviation,556.5,Closed,2024-09-15 00:00:00
+234,2024-09-15,Precision Bearings,29,Copper C110,Grain structure anomaly - improper heat treatment by supplier,493,Critical,Incoming inspection escape,32992.69,Closed,2024-09-15 00:00:00
+235,2024-09-17,Hydraulic Actuators,11,Stainless Steel 304L,Chemical composition out of spec - carbon content high,11,Minor,Specification interpretation error,1545.81,Closed,2024-09-17 00:00:00
+236,2024-09-17,Composite Panels,18,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,180,Major,Raw material batch variation,3590.53,Pending Disposition,2024-09-17 00:00:00
+237,2024-09-18,Control Valves,22,Tool Steel D2,Material hardness below specification - failed Rockwell test,437,Critical,Storage condition failure,22348.66,Closed,2024-09-18 00:00:00
+238,2024-09-18,Landing Gear,15,Ceramic Matrix Composite,Lot traceability documentation incomplete,19,Minor,Incoming inspection escape,377.23,Closed,2024-09-18 00:00:00
+239,2024-09-20,Turbine Blades,13,Copper C110,Lot traceability documentation incomplete,161,Major,Documentation error,8328.89,Closed,2024-09-20 00:00:00
+240,2024-09-20,Precision Bearings,19,Inconel 718,Storage damage - corrosion from improper handling,39,Minor,Supplier process deviation,1559.5,Closed,2024-09-20 00:00:00
+241,2024-09-21,Composite Panels,20,Inconel 718,Material substitution without engineering approval,49,Minor,Supplier change notification missed,1311.5,Closed,2024-09-21 00:00:00
+242,2024-09-23,Turbine Blades,3,Magnesium AZ31B,Chemical composition out of spec - carbon content high,137,Major,Documentation error,3984.04,Under Review,2024-09-23 00:00:00
+243,2024-09-26,Hydraulic Actuators,11,Tool Steel D2,Surface contamination detected - oil residue on raw stock,77,Major,Incoming inspection escape,4729.37,Closed,2024-09-26 00:00:00
+244,2024-09-27,Turbine Blades,29,Stainless Steel 304L,Grain structure anomaly - improper heat treatment by supplier,375,Critical,Specification interpretation error,21097.15,Pending Disposition,2024-09-27 00:00:00
+245,2024-09-27,Hydraulic Actuators,13,Stainless Steel 304L,Lot traceability documentation incomplete,30,Minor,Specification interpretation error,1264.45,Closed,2024-09-27 00:00:00
+246,2024-09-29,Turbine Blades,26,Inconel 718,Chemical composition out of spec - carbon content high,16,Minor,Transportation damage,635.77,Open,2024-09-29 00:00:00
+247,2024-09-30,Turbine Blades,17,Stainless Steel 304L,Surface contamination detected - oil residue on raw stock,282,Critical,Documentation error,17325.8,Closed,2024-09-30 00:00:00
+248,2024-10-01,Composite Panels,8,Magnesium AZ31B,Chemical composition out of spec - carbon content high,39,Minor,Supplier process deviation,305.22,Closed,2024-10-01 00:00:00
+249,2024-10-02,Engine Mounts,6,Inconel 718,Incoming inspection failed - visual defects on surface,5,Minor,Specification interpretation error,1637.09,Open,2024-10-02 00:00:00
+250,2024-10-06,Sensor Assemblies,5,Carbon Fiber Composite,Surface contamination detected - oil residue on raw stock,27,Minor,Documentation error,1239.59,Pending Disposition,2024-10-06 00:00:00
+251,2024-10-06,Hydraulic Actuators,18,Inconel 718,Storage damage - corrosion from improper handling,7,Minor,Supplier change notification missed,835.06,Closed,2024-10-06 00:00:00
+252,2024-10-07,Landing Gear,6,Inconel 718,Storage damage - corrosion from improper handling,144,Major,Transportation damage,2421.38,Closed,2024-10-07 00:00:00
+253,2024-10-10,Composite Panels,3,Copper C110,Grain structure anomaly - improper heat treatment by supplier,65,Major,Transportation damage,5874.17,Closed,2024-10-10 00:00:00
+254,2024-10-11,Control Valves,13,Inconel 718,Incoming inspection failed - visual defects on surface,21,Major,Supplier process deviation,8725.94,Closed,2024-10-11 00:00:00
+255,2024-10-15,Turbine Blades,6,Inconel 718,Material hardness below specification - failed Rockwell test,111,Major,Supplier change notification missed,5784.75,Open,2024-10-15 00:00:00
+256,2024-10-15,Turbine Blades,22,Copper C110,Storage damage - corrosion from improper handling,379,Critical,Storage condition failure,30940.44,Under Review,2024-10-15 00:00:00
+257,2024-10-16,Landing Gear,16,Inconel 718,Storage damage - corrosion from improper handling,8,Minor,Documentation error,217.41,Closed,2024-10-16 00:00:00
+258,2024-10-16,Landing Gear,14,Stainless Steel 304L,Lot traceability documentation incomplete,107,Major,Raw material batch variation,2316.02,Closed,2024-10-16 00:00:00
+259,2024-10-17,Sensor Assemblies,24,Magnesium AZ31B,Storage damage - corrosion from improper handling,99,Major,Transportation damage,9728.45,Open,2024-10-17 00:00:00
+260,2024-10-17,Precision Bearings,1,Carbon Fiber Composite,Surface contamination detected - oil residue on raw stock,75,Major,Supplier change notification missed,7542.61,Pending Disposition,2024-10-17 00:00:00
+261,2024-10-18,Engine Mounts,15,Stainless Steel 304L,Lot traceability documentation incomplete,23,Minor,Incoming inspection escape,1559.92,Closed,2024-10-18 00:00:00
+262,2024-10-18,Control Valves,27,Copper C110,Grain structure anomaly - improper heat treatment by supplier,50,Major,Raw material batch variation,1115.64,Closed,2024-10-18 00:00:00
+263,2024-10-20,Engine Mounts,15,Copper C110,Dimensional variance exceeds tolerance - undersized bar stock,129,Major,Specification interpretation error,9722.77,Closed,2024-10-20 00:00:00
+264,2024-10-20,Composite Panels,21,Tool Steel D2,Surface contamination detected - oil residue on raw stock,451,Critical,Documentation error,10625.97,Closed,2024-10-20 00:00:00
+265,2024-10-21,Turbine Blades,18,Inconel 718,Grain structure anomaly - improper heat treatment by supplier,179,Major,Raw material batch variation,6959.63,Pending Disposition,2024-10-21 00:00:00
+266,2024-10-23,Engine Mounts,16,Nickel Superalloy,Grain structure anomaly - improper heat treatment by supplier,472,Critical,Documentation error,22387.19,Closed,2024-10-23 00:00:00
+267,2024-10-28,Landing Gear,16,Inconel 718,Certificate of Conformance missing required test data,14,Minor,Incoming inspection escape,775.9,Pending Disposition,2024-10-28 00:00:00
+268,2024-10-28,Sensor Assemblies,17,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,147,Major,Incoming inspection escape,2986.03,Open,2024-10-28 00:00:00
+269,2024-11-01,Engine Mounts,8,Tool Steel D2,Storage damage - corrosion from improper handling,82,Major,Transportation damage,7956.18,Closed,2024-11-01 00:00:00
+270,2024-11-01,Control Valves,28,Nickel Superalloy,Incoming inspection failed - visual defects on surface,18,Minor,Supplier change notification missed,1424.85,Under Review,2024-11-01 00:00:00
+271,2024-11-02,Hydraulic Actuators,7,Aluminum 7075-T6,Lot traceability documentation incomplete,157,Major,Storage condition failure,7794.69,Closed,2024-11-02 00:00:00
+272,2024-11-02,Engine Mounts,26,Copper C110,Grain structure anomaly - improper heat treatment by supplier,38,Major,Transportation damage,4082.49,Closed,2024-11-02 00:00:00
+273,2024-11-06,Turbine Blades,22,Nickel Superalloy,Chemical composition out of spec - carbon content high,61,Major,Transportation damage,8234.46,Closed,2024-11-06 00:00:00
+274,2024-11-07,Control Valves,15,Stainless Steel 304L,Incoming inspection failed - visual defects on surface,56,Major,Documentation error,1572.52,Closed,2024-11-07 00:00:00
+275,2024-11-10,Sensor Assemblies,27,Nickel Superalloy,Chemical composition out of spec - carbon content high,29,Minor,Specification interpretation error,845.28,Closed,2024-11-10 00:00:00
+276,2024-11-11,Composite Panels,10,Stainless Steel 304L,Incoming inspection failed - visual defects on surface,466,Critical,Raw material batch variation,12410.9,Closed,2024-11-11 00:00:00
+277,2024-11-11,Precision Bearings,1,Nickel Superalloy,Storage damage - corrosion from improper handling,100,Major,Transportation damage,6629.27,Pending Disposition,2024-11-11 00:00:00
+278,2024-11-12,Composite Panels,11,Titanium Alloy Ti-6Al-4V,Certificate of Conformance missing required test data,12,Minor,Transportation damage,1864.74,Under Review,2024-11-12 00:00:00
+279,2024-11-13,Engine Mounts,23,Titanium Alloy Ti-6Al-4V,Storage damage - corrosion from improper handling,168,Critical,Specification interpretation error,31877.47,Closed,2024-11-13 00:00:00
+280,2024-11-14,Control Valves,25,Aluminum 7075-T6,Dimensional variance exceeds tolerance - undersized bar stock,88,Major,Raw material batch variation,7163.33,Closed,2024-11-14 00:00:00
+281,2024-11-14,Composite Panels,10,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,5,Minor,Specification interpretation error,805.37,Under Review,2024-11-14 00:00:00
+282,2024-11-15,Turbine Blades,28,Magnesium AZ31B,Dimensional variance exceeds tolerance - undersized bar stock,146,Major,Documentation error,9196.37,Closed,2024-11-15 00:00:00
+283,2024-11-15,Precision Bearings,4,Carbon Fiber Composite,Storage damage - corrosion from improper handling,34,Minor,Transportation damage,1345.33,Open,2024-11-15 00:00:00
+284,2024-11-16,Hydraulic Actuators,15,Inconel 718,Material hardness below specification - failed Rockwell test,380,Critical,Incoming inspection escape,13688.05,Closed,2024-11-16 00:00:00
+285,2024-11-17,Composite Panels,3,Carbon Fiber Composite,Certificate of Conformance missing required test data,133,Major,Storage condition failure,4601.81,Pending Disposition,2024-11-17 00:00:00
+286,2024-11-19,Control Valves,14,Inconel 718,Material hardness below specification - failed Rockwell test,120,Critical,Supplier process deviation,10077.07,Closed,2024-11-19 00:00:00
+287,2024-11-19,Precision Bearings,29,Stainless Steel 304L,Material substitution without engineering approval,13,Minor,Storage condition failure,1844.4,Closed,2024-11-19 00:00:00
+288,2024-11-22,Engine Mounts,28,Tool Steel D2,Dimensional variance exceeds tolerance - undersized bar stock,6,Minor,Supplier change notification missed,1194.89,Closed,2024-11-22 00:00:00
+289,2024-11-23,Landing Gear,24,Stainless Steel 304L,Storage damage - corrosion from improper handling,5,Minor,Incoming inspection escape,493.01,Closed,2024-11-23 00:00:00
+290,2024-11-24,Hydraulic Actuators,29,Stainless Steel 304L,Storage damage - corrosion from improper handling,239,Critical,Supplier process deviation,30303.11,Closed,2024-11-24 00:00:00
+291,2024-11-28,Sensor Assemblies,20,Titanium Alloy Ti-6Al-4V,Surface contamination detected - oil residue on raw stock,160,Critical,Raw material batch variation,45864.35,Closed,2024-11-28 00:00:00
+292,2024-11-29,Composite Panels,10,Titanium Alloy Ti-6Al-4V,Material substitution without engineering approval,452,Critical,Supplier process deviation,26383.7,Closed,2024-11-29 00:00:00
+293,2024-12-01,Turbine Blades,24,Titanium Alloy Ti-6Al-4V,Chemical composition out of spec - carbon content high,37,Major,Storage condition failure,3297.53,Open,2024-12-01 00:00:00
+294,2024-12-01,Composite Panels,12,Carbon Fiber Composite,Incoming inspection failed - visual defects on surface,107,Major,Storage condition failure,9042.62,Pending Disposition,2024-12-01 00:00:00
+295,2024-12-02,Landing Gear,21,Magnesium AZ31B,Incoming inspection failed - visual defects on surface,75,Major,Documentation error,5635.46,Closed,2024-12-02 00:00:00
+296,2024-12-02,Turbine Blades,17,Nickel Superalloy,Material substitution without engineering approval,377,Critical,Documentation error,6892.83,Under Review,2024-12-02 00:00:00
+297,2024-12-03,Landing Gear,15,Titanium Alloy Ti-6Al-4V,Surface contamination detected - oil residue on raw stock,135,Major,Supplier process deviation,8567.15,Closed,2024-12-03 00:00:00
+298,2024-12-05,Landing Gear,26,Carbon Fiber Composite,Lot traceability documentation incomplete,154,Major,Raw material batch variation,9077.12,Closed,2024-12-05 00:00:00
+299,2024-12-06,Landing Gear,3,Tool Steel D2,Certificate of Conformance missing required test data,119,Major,Raw material batch variation,5643.61,Closed,2024-12-06 00:00:00
+300,2024-12-08,Engine Mounts,19,Tool Steel D2,Grain structure anomaly - improper heat treatment by supplier,168,Major,Storage condition failure,4946.87,Closed,2024-12-08 00:00:00
+301,2024-12-08,Composite Panels,6,Titanium Alloy Ti-6Al-4V,Incoming inspection failed - visual defects on surface,71,Critical,Storage condition failure,26442.07,Closed,2024-12-08 00:00:00
+302,2024-12-09,Precision Bearings,7,Nickel Superalloy,Incoming inspection failed - visual defects on surface,37,Major,Specification interpretation error,6792.61,Closed,2024-12-09 00:00:00
+303,2024-12-10,Sensor Assemblies,5,Ceramic Matrix Composite,Storage damage - corrosion from improper handling,172,Critical,Transportation damage,21413.57,Closed,2024-12-10 00:00:00
+304,2024-12-10,Hydraulic Actuators,10,Magnesium AZ31B,Incoming inspection failed - visual defects on surface,56,Major,Supplier process deviation,4601.62,Open,2024-12-10 00:00:00
+305,2024-12-11,Precision Bearings,11,Carbon Fiber Composite,Material hardness below specification - failed Rockwell test,144,Major,Storage condition failure,4849.81,Closed,2024-12-11 00:00:00
+306,2024-12-11,Hydraulic Actuators,1,Magnesium AZ31B,Dimensional variance exceeds tolerance - undersized bar stock,15,Minor,Specification interpretation error,747.85,Closed,2024-12-11 00:00:00
+307,2024-12-12,Control Valves,14,Titanium Alloy Ti-6Al-4V,Dimensional variance exceeds tolerance - undersized bar stock,183,Major,Documentation error,3849.9,Closed,2024-12-12 00:00:00
+308,2024-12-14,Precision Bearings,12,Tool Steel D2,Lot traceability documentation incomplete,81,Major,Storage condition failure,1958.46,Open,2024-12-14 00:00:00
+309,2024-12-14,Engine Mounts,18,Magnesium AZ31B,Grain structure anomaly - improper heat treatment by supplier,481,Critical,Transportation damage,44870.05,Under Review,2024-12-14 00:00:00
+310,2024-12-15,Engine Mounts,16,Tool Steel D2,Chemical composition out of spec - carbon content high,12,Minor,Transportation damage,1905.24,Under Review,2024-12-15 00:00:00
+311,2024-12-17,Engine Mounts,24,Ceramic Matrix Composite,Material hardness below specification - failed Rockwell test,29,Minor,Supplier process deviation,1057.51,Under Review,2024-12-17 00:00:00
+312,2024-12-17,Landing Gear,30,Stainless Steel 304L,Dimensional variance exceeds tolerance - undersized bar stock,473,Critical,Storage condition failure,8293.25,Under Review,2024-12-17 00:00:00
+313,2024-12-18,Engine Mounts,10,Magnesium AZ31B,Lot traceability documentation incomplete,76,Critical,Specification interpretation error,44980.16,Closed,2024-12-18 00:00:00
+314,2024-12-18,Composite Panels,4,Aluminum 7075-T6,Certificate of Conformance missing required test data,348,Critical,Documentation error,35503.51,Closed,2024-12-18 00:00:00
+315,2024-12-19,Composite Panels,20,Nickel Superalloy,Chemical composition out of spec - carbon content high,123,Major,Supplier process deviation,7946.93,Closed,2024-12-19 00:00:00
+316,2024-12-19,Composite Panels,20,Stainless Steel 304L,Material hardness below specification - failed Rockwell test,17,Minor,Supplier process deviation,1723.92,Closed,2024-12-19 00:00:00
+317,2024-12-20,Sensor Assemblies,23,Inconel 718,Certificate of Conformance missing required test data,471,Critical,Documentation error,12266.46,Closed,2024-12-20 00:00:00
+318,2024-12-20,Engine Mounts,7,Aluminum 7075-T6,Storage damage - corrosion from improper handling,49,Minor,Raw material batch variation,480.55,Under Review,2024-12-20 00:00:00
+319,2024-12-22,Turbine Blades,23,Carbon Fiber Composite,Certificate of Conformance missing required test data,197,Major,Supplier process deviation,1191.26,Closed,2024-12-22 00:00:00
+320,2024-12-22,Landing Gear,25,Aluminum 7075-T6,Incoming inspection failed - visual defects on surface,183,Major,Supplier process deviation,5435.58,Closed,2024-12-22 00:00:00
+321,2024-12-23,Landing Gear,23,Inconel 718,Certificate of Conformance missing required test data,412,Critical,Supplier process deviation,8115.93,Closed,2024-12-23 00:00:00
+322,2024-12-23,Turbine Blades,1,Carbon Fiber Composite,Chemical composition out of spec - carbon content high,336,Critical,Specification interpretation error,23059.66,Closed,2024-12-23 00:00:00
+323,2024-12-24,Engine Mounts,20,Stainless Steel 304L,Material substitution without engineering approval,18,Minor,Storage condition failure,1845.18,Under Review,2024-12-24 00:00:00
+324,2024-12-25,Landing Gear,29,Magnesium AZ31B,Storage damage - corrosion from improper handling,23,Minor,Raw material batch variation,455.09,Closed,2024-12-25 00:00:00
+325,2024-12-26,Control Valves,13,Nickel Superalloy,Chemical composition out of spec - carbon content high,31,Minor,Storage condition failure,1060.18,Closed,2024-12-26 00:00:00
+326,2024-12-31,Hydraulic Actuators,23,Tool Steel D2,Dimensional variance exceeds tolerance - undersized bar stock,28,Minor,Incoming inspection escape,874.57,Under Review,2024-12-31 00:00:00
