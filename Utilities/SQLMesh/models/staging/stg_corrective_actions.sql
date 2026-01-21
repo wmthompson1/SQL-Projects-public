@@ -5,13 +5,12 @@ MODEL (
   ),
   cron '@daily',
   grain (capa_id, ncm_id),
+    partitioned_by (target_date),
   audits (
     UNIQUE_VALUES(columns = (capa_id)),
     NOT_NULL(columns = (capa_id))
   ),
-  columns (
-    effectiveness_score 'CAPA effectiveness score'
-  )
+  
 );
 
 SELECT

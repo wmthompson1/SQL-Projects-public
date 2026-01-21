@@ -15,5 +15,3 @@ SELECT
   desired_ship_date,
   customer_order_hash
 FROM raw.cust_order_line;
-
-```
