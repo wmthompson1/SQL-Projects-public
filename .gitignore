@@ -230,6 +230,9 @@ docker/arangodb_data/
 *.graphml
 *.dot
 
+# Local Arango backups
+data/backups/
+
 # sensitive notes 
 000index*.md
 
