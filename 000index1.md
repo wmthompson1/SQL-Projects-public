@@ -1,3 +1,30 @@
+# venv
+PS C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects> Get-ChildItem .\.venv\Scripts -Force | Select-Object Name
+
+Name
+----
+activate
+activate.bat
+Activate.ps1
+deactivate.bat
+pip.exe
+pip3.11.exe
+pip3.exe
+python.exe
+pythonw.exe
+
+PS C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects> & .\.venv\Scripts\python.exe -m pip install --upgrade pip
+Requirement already satisfied: pip in c:\users\williamt\source\skillsinc\skills-inc-org\sql-projects\.venv\lib\site-packages (24.0)
+Collecting pip
+  Using cached pip-25.3-py3-none-any.whl.metadata (4.7 kB)
+Using cached pip-25.3-py3-none-any.whl (1.8 MB)
+Installing collected packages: pip
+  Attempting uninstall: pip
+    Found existing installation: pip 24.0
+    Uninstalling pip-24.0:
+      Successfully uninstalled pip-24.0
+Successfully installed pip-25.3
+
 ## Gradio endpoint (app) 1
 cd hf-space-inventory-sqlgen; python app.py
 

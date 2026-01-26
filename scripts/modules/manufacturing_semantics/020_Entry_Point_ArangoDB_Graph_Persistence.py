@@ -143,14 +143,17 @@ class ArangoDBGraphPersistence:
                     name=name,
                     incoming_graph_data=graph,
                     write_batch_size=write_batch_size,
-                    overwrite=overwrite
+                    overwrite=overwrite,
+                    # nx-arangodb uses overwrite_graph as the clear flag; pass both for compatibility
+                    overwrite_graph=overwrite
                 )
             else:
                 adb_graph = nxadb.Graph(
                     name=name,
                     incoming_graph_data=graph,
                     write_batch_size=write_batch_size,
-                    overwrite=overwrite
+                    overwrite=overwrite,
+                    overwrite_graph=overwrite
                 )
             
             print(f"✅ Graph '{name}' successfully persisted to ArangoDB")
@@ -353,9 +356,72 @@ for node, score in result.items():
     
     else:
         print("\n✅ nx-arangodb is installed!")
-        print("⚠️  No ArangoDB connection configured.")
-        print("Set DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_NAME")
-        print("to enable persistence features.")
+
+        # Prefer explicit DATABASE_* env vars, fall back to ARANGO_* if present
+        host = os.getenv("DATABASE_HOST") or os.getenv("ARANGO_HOST")
+        username = os.getenv("DATABASE_USERNAME") or os.getenv("ARANGO_USER")
+        password = os.getenv("DATABASE_PASSWORD") or os.getenv("ARANGO_PASSWORD")
+        database_name = os.getenv("DATABASE_NAME") or os.getenv("ARANGO_DB") or "networkx_graphs"
+
+        if not (host and username and password):
+            print("⚠️  No ArangoDB connection configured.")
+            print("Set DATABASE_HOST, DATABASE_USERNAME, DATABASE_PASSWORD, DATABASE_NAME")
+            print("to enable persistence features.")
+        else:
+            print("🔌 Attempting ArangoDB connection test...")
+            print(f"   Host: {host}")
+            print(f"   Username: {username}")
+            print(f"   Database: {database_name}")
+
+            # Simple connection test using python-arango if available, else skip test
+            try:
+                from arango import ArangoClient
+                client = ArangoClient(hosts=[host])
+                # try to obtain the database handle (will raise on auth failure)
+                try:
+                    db = client.db(database_name, username=username, password=password)
+                    print(f"✅ Connected to ArangoDB database '{database_name}'")
+                except Exception:
+                    # Database may not exist yet; try to create it (requires root)
+                    try:
+                        if username == 'root':
+                            if not client.databases():
+                                # If client.databases() works, proceed normally
+                                pass
+                        if database_name not in client.databases():
+                            client.create_database(database_name)
+                            print(f"🔧 Created database '{database_name}'")
+                        db = client.db(database_name, username=username, password=password)
+                        print(f"✅ Connected to ArangoDB database '{database_name}' after creation")
+                    except Exception as e:
+                        print(f"❌ ArangoDB connection/create failed: {e}")
+                        db = None
+            except Exception:
+                db = None
+
+            # If we have a reachable DB and nx-arangodb, run a tiny persistence demo
+            if db is not None:
+                try:
+                    config = ArangoDBConfig(host=host, username=username, password=password, database_name=database_name)
+                    persistence = ArangoDBGraphPersistence(config)
+
+                    # tiny sample graph
+                    G = nx.DiGraph()
+                    G.add_node("A", label="alpha")
+                    G.add_node("B", label="beta")
+                    G.add_edge("A", "B", relation="connects")
+
+                    name = "sample_persistence_test"
+                    print(f"📤 Persisting sample graph '{name}' to ArangoDB (overwrite=True)...")
+                    adb_graph = persistence.persist_graph(G, name=name, write_batch_size=1000, overwrite=True)
+
+                    print("📥 Loading back the persisted graph to verify...")
+                    loaded = persistence.load_graph(name=name, directed=True)
+                    print(f"✅ Verification: nodes={loaded.number_of_nodes()}, edges={loaded.number_of_edges()}")
+                except Exception as e:
+                    print(f"❌ Persistence demo failed: {e}")
+            else:
+                print("⚠️  Skipping persistence demo due to failed DB connectivity or missing python-arango")
     
     print(f"\n{'=' * 75}")
     print("📖 Reference: NVIDIA Developer Blog")
