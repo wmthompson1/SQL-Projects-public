@@ -237,8 +237,12 @@ data/backups/
 000index*.md
 
 # SQLite databases
+# SQLite databases
+# ignore all .db files by default
 *.db
 .db.*
+# keep SQLMesh local state DB (needed in repo)
+!Utilities/SQLMesh/local.db
 
 # markdown scratchpad
 Documentation/scratchpad/100*
