@@ -206,16 +206,73 @@ function Get-WorksheetSafe {
     throw "Workbook is null and could not be recovered for file: $FilePath"
   }
 
+  # First, attempt direct access
   try {
     $ws = $global:Workbook.Worksheets.Item($index)
     return $ws
   }
   catch {
-    Write-Log "WARN: Get-WorksheetSafe: failed to get worksheet item ${index}: $($_.Exception.Message)"
-    try { $ws = $global:Workbook.ActiveSheet; if ($ws) { return $ws } } catch {}
-    try { $ws = $global:Workbook.Worksheets | Select-Object -First 1; if ($ws) { return $ws } } catch {}
-    throw "Worksheet could not be retrieved from workbook for file: $FilePath"
+    Write-Log "WARN: Get-WorksheetSafe: direct Worksheets.Item($index) failed: $($_.Exception.Message)"
   }
+
+  # Collect diagnostics about the workbook
+  try { $wbName = $global:Workbook.Name } catch { $wbName = '<unknown>' }
+  try { $wbFull = $global:Workbook.FullName } catch { $wbFull = '<unknown>' }
+  try { $wsCount = $global:Workbook.Worksheets.Count } catch { $wsCount = '<unknown>' }
+  Write-Log "DEBUG: Workbook diagnostics - Name: $wbName FullName: $wbFull Worksheets.Count: $wsCount"
+
+  # If we have a count, try enumerating each worksheet by index
+  if ([int]::TryParse([string]$wsCount,[ref]$null) -or ($wsCount -is [int])) {
+    try {
+      for ($i = 1; $i -le $global:Workbook.Worksheets.Count; $i++) {
+        try {
+          Write-Log "DEBUG: Trying Worksheets.Item($i)"
+          $candidate = $global:Workbook.Worksheets.Item($i)
+          if ($candidate) { Write-Log "INFO: Get-WorksheetSafe: returning worksheet index $i ($($candidate.Name))"; return $candidate }
+        }
+        catch { Write-Log "DEBUG: Worksheets.Item($i) access failed: $($_.Exception.Message)" }
+      }
+    }
+    catch { Write-Log "WARN: Enumeration of Worksheets failed: $($_.Exception.Message)" }
+  }
+
+  # Try Sheets collection as an alternative
+  try {
+    $sheets = $global:Workbook.Sheets
+    if ($sheets) {
+      foreach ($s in $sheets) {
+        try { Write-Log "DEBUG: Found sheet candidate: $($s.Name)"; return $s } catch { }
+      }
+    }
+  }
+  catch { Write-Log "DEBUG: Accessing Sheets collection failed: $($_.Exception.Message)" }
+
+  # As a last resort, attempt to recreate the Excel COM and reopen the workbook
+  Write-Log "WARN: Get-WorksheetSafe: attempting to recreate Excel COM and reopen workbook as last resort"
+  try {
+    $targetPath = $wbFull
+    if ([string]::IsNullOrEmpty($targetPath)) { $targetPath = $FilePath }
+    $newExcel = New-Object -ComObject Excel.Application
+    Invoke-ComRetry { $newExcel.Visible = $false }
+    Invoke-ComRetry { $newExcel.EnableEvents = $false }
+    $newWb = $null
+    try { Invoke-ComRetry { $newWb = $newExcel.Workbooks.Open($targetPath, 0) } } catch { Write-Log "DEBUG: Reopen with new Excel instance failed: $($_.Exception.Message)" }
+    if ($null -ne $newWb) {
+      # replace global Excel and Workbook
+      try { Invoke-ComRetry { $Excel.Quit() } } catch {}
+      try { $Excel,$null | ForEach-Object { [void][Runtime.Interopservices.Marshal]::ReleaseComObject($_) } } catch {}
+      $global:Excel = $newExcel
+      $global:Workbook = $newWb
+      try {
+        $ws = $global:Workbook.Worksheets.Item($index)
+        if ($ws) { Write-Log "INFO: Get-WorksheetSafe: recovered worksheet after recreating Excel"; return $ws }
+      }
+      catch { Write-Log "DEBUG: After recreate, worksheet access still failed: $($_.Exception.Message)" }
+    }
+  }
+  catch { Write-Log "ERROR: Get-WorksheetSafe recreate attempt failed: $($_.Exception.Message)" }
+
+  throw "Worksheet could not be retrieved from workbook for file: $FilePath (WorkbookName: $wbName, WorksheetsCount: $wsCount)"
 }
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
