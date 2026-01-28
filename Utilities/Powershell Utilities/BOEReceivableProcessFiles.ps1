@@ -441,15 +441,25 @@ catch {
   Write-Log "ERROR: Workbooks.Open stack: $($_.Exception.StackTrace)"
   throw
 }
-try {
-  Invoke-ComRetry { $Excel.AskToUpdateLinks = $false }
+Write-Log "INFO: Skipping setting Application-level properties (AskToUpdateLinks/DisplayAlerts) after Open to avoid COM busy errors. Workbook opened with UpdateLinks=0."
+
+# Validate that Workbook was opened successfully before using it
+if ($null -eq $Workbook) {
+  Write-Log "ERROR: Workbook variable is null after Open for file: $FilePath"
+  Write-Log "Attempting one more Open attempt..."
+  try {
+    Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($FilePath, 0) }
+  }
+  catch {
+    Write-Log "ERROR: Retry Workbooks.Open failed: $($_.Exception.Message)"
+  }
+  if ($null -eq $Workbook) {
+    Write-Log "FATAL: Workbook still null after retry. Aborting to avoid null dereference. File: $FilePath"
+    try { Invoke-ComRetry { $Excel.Quit() } } catch {}
+    throw "Workbook open failed for $FilePath"
+  }
 }
-catch {
-  Write-Warning "Unable to set Excel.AskToUpdateLinks after open: $($_.Exception.Message)"
-  Write-Log "WARN: Unable to set Excel.AskToUpdateLinks after open: $($_.Exception.Message)"
-}
-try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } }
-catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts after open: $($_.Exception.Message)" }
+
 #$Worksheets = $Workbooks.worksheets
 $Worksheet = $Workbook.Worksheets.Item(1)
 $worksheet.Activate();
