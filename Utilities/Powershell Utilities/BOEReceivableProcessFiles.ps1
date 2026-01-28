@@ -324,6 +324,77 @@ function Get-WorksheetSafe {
     }
   }
   catch { Write-Log "ERROR: Get-WorksheetSafe recreate attempt failed: $($_.Exception.Message)" }
+  # Attempt OLE DB fallback: read sheet without Excel COM and populate a new workbook
+  try {
+    Write-Log "WARN: Get-WorksheetSafe: attempting OLE DB fallback to read workbook: $FilePath"
+    $oleWb = $null
+    function OleDb_ReadToWorkbook {
+      param([string]$sourcePath)
+      # determine Excel type
+      $ext = [System.IO.Path]::GetExtension($sourcePath).ToLower()
+      if ($ext -eq '.xlsx') { $extProp = 'Excel 12.0 Xml' }
+      else { $extProp = 'Excel 8.0' }
+
+      # Prefer ACE providers; do not attempt legacy Jet to avoid bitness/registration issues
+      $providers = @()
+      if ([type]::GetTypeFromProgID('Microsoft.ACE.OLEDB.16.0')) { $providers += 'Microsoft.ACE.OLEDB.16.0' }
+      if ([type]::GetTypeFromProgID('Microsoft.ACE.OLEDB.12.0')) { $providers += 'Microsoft.ACE.OLEDB.12.0' }
+      if ($providers.Count -eq 0) {
+        Write-Log "WARN: No ACE OLE DB providers registered. OLE DB fallback unavailable."
+        return $null
+      }
+
+      foreach ($prov in $providers) {
+        $connString = "Provider=$prov;Data Source=$sourcePath;Extended Properties='$extProp;HDR=YES;IMEX=1';"
+        try {
+          $conn = New-Object System.Data.OleDb.OleDbConnection $connString
+          $conn.Open()
+          $schema = $conn.GetOleDbSchemaTable([System.Data.OleDb.OleDbSchemaGuid]::Tables, $null)
+          if (-not $schema -or $schema.Rows.Count -eq 0) { $conn.Close(); continue }
+          $sheetName = $schema.Rows[0].TABLE_NAME
+          $query = "SELECT * FROM [$sheetName]"
+          $adapter = New-Object System.Data.OleDb.OleDbDataAdapter ($query, $conn)
+          $dt = New-Object System.Data.DataTable
+          $adapter.Fill($dt) | Out-Null
+          $conn.Close()
+
+          # populate into new workbook
+          $newWb = $Excel.Workbooks.Add()
+          $newWs = $newWb.Worksheets.Item(1)
+          # write header row
+          for ($ci=0; $ci -lt $dt.Columns.Count; $ci++) {
+            $hdr = $dt.Columns[$ci].ColumnName
+            try { $newWs.Cells.Item(1, $ci+1).Value2 = $hdr } catch {}
+          }
+          # write data rows
+          $r=2
+          foreach ($dr in $dt.Rows) {
+            for ($ci=0; $ci -lt $dt.Columns.Count; $ci++) {
+              try { $newWs.Cells.Item($r, $ci+1).Value2 = $dr[$ci] } catch {}
+            }
+            $r++
+          }
+          return $newWb
+        }
+        catch {
+          Write-Log "DEBUG: OleDb provider $prov failed: $($_.Exception.Message)"
+          continue
+        }
+      }
+      return $null
+    }
+
+    $oleWb = OleDb_ReadToWorkbook -sourcePath $FilePath
+    if ($oleWb) {
+      $global:Workbook = $oleWb
+      Write-Log "INFO: Get-WorksheetSafe: OLE DB fallback succeeded and populated new workbook"
+      try { $ws = $global:Workbook.Worksheets.Item($index); return $ws } catch { }
+    }
+    else {
+      Write-Log "ERROR: Get-WorksheetSafe: OLE DB fallback could not read workbook"
+    }
+  }
+  catch { Write-Log "ERROR: Get-WorksheetSafe OLE DB fallback exception: $($_.Exception.Message)" }
 
   throw "Worksheet could not be retrieved from workbook for file: $FilePath (WorkbookName: $wbName, WorksheetsCount: $wsCount)"
 }
