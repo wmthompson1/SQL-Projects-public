@@ -138,7 +138,38 @@ function Open-WorkbookSafe {
 
   try {
     Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0) }
-    if ($null -ne $global:Workbook) { Write-Log "INFO: Open-WorkbookSafe: Opened workbook via Workbooks.Open: $path"; return }
+    if ($null -ne $global:Workbook) {
+      try { $cnt = $global:Workbook.Worksheets.Count } catch { $cnt = 0 }
+      if ($cnt -gt 0) { Write-Log "INFO: Open-WorkbookSafe: Opened workbook via Workbooks.Open: $path (Worksheets.Count=$cnt)"; return }
+      Write-Log "WARN: Open-WorkbookSafe: workbook opened but Worksheets.Count=$cnt. Will attempt reopen variants."
+      try { Invoke-ComRetry { $global:Workbook.Close($false) } } catch {}
+      try { [System.Runtime.Interopservices.Marshal]::ReleaseComObject($global:Workbook) | Out-Null } catch {}
+      $global:Workbook = $null
+
+      # Try read-only reopen
+      try {
+        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0, $true) }
+        try { $cnt2 = $global:Workbook.Worksheets.Count } catch { $cnt2 = 0 }
+        if ($cnt2 -gt 0) { Write-Log "INFO: Open-WorkbookSafe: reopened workbook as ReadOnly (Worksheets.Count=$cnt2)"; return }
+        Write-Log "WARN: ReadOnly reopen returned Worksheets.Count=$cnt2"
+        try { Invoke-ComRetry { $global:Workbook.Close($false) } } catch {}
+        try { [System.Runtime.Interopservices.Marshal]::ReleaseComObject($global:Workbook) | Out-Null } catch {}
+        $global:Workbook = $null
+      }
+      catch { Write-Log "DEBUG: ReadOnly reopen failed: $($_.Exception.Message)" }
+
+      # Try reopen with CorruptLoad=1 (last parameter). Provide placeholders for intermediate params.
+      try {
+        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0, $true, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, 1) }
+        try { $cnt3 = $global:Workbook.Worksheets.Count } catch { $cnt3 = 0 }
+        if ($cnt3 -gt 0) { Write-Log "INFO: Open-WorkbookSafe: reopened workbook with CorruptLoad=1 (Worksheets.Count=$cnt3)"; return }
+        Write-Log "WARN: CorruptLoad reopen returned Worksheets.Count=$cnt3"
+        try { Invoke-ComRetry { $global:Workbook.Close($false) } } catch {}
+        try { [System.Runtime.Interopservices.Marshal]::ReleaseComObject($global:Workbook) | Out-Null } catch {}
+        $global:Workbook = $null
+      }
+      catch { Write-Log "DEBUG: CorruptLoad reopen failed: $($_.Exception.Message)" }
+    }
   }
   catch {
     Write-Log "WARN: Open-WorkbookSafe initial Open failed: $($_.Exception.Message)"
