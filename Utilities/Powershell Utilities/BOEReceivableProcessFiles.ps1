@@ -446,15 +446,63 @@ Write-Log "INFO: Skipping setting Application-level properties (AskToUpdateLinks
 # Validate that Workbook was opened successfully before using it
 if ($null -eq $Workbook) {
   Write-Log "ERROR: Workbook variable is null after Open for file: $FilePath"
-  Write-Log "Attempting one more Open attempt..."
+  # Inspect Workbooks collection for diagnostics
   try {
-    Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($FilePath, 0) }
+    $wbCount = $Excel.Workbooks.Count
+    Write-Log "INFO: Excel.Workbooks.Count = $wbCount"
   }
   catch {
-    Write-Log "ERROR: Retry Workbooks.Open failed: $($_.Exception.Message)"
+    Write-Log "WARN: Unable to read Excel.Workbooks.Count: $($_.Exception.Message)"
+    $wbCount = 0
   }
+
+  if ($wbCount -gt 0) {
+    Write-Log "INFO: Attempting to locate the opened workbook in Excel.Workbooks by FullName/Name"
+    try {
+      foreach ($wb in $Excel.Workbooks) {
+        try {
+          $full = $wb.FullName 2>$null
+          $nm = $wb.Name 2>$null
+          Write-Log "DEBUG: Found workbook candidate - Name: $nm, FullName: $full"
+          if ($full -and ($full -eq $FilePath)) {
+            Write-Log "INFO: Matching workbook FullName found in Workbooks collection"
+            $global:Workbook = $wb
+            break
+          }
+          if ($nm -and ($nm -eq $FileName)) {
+            Write-Log "INFO: Matching workbook Name found in Workbooks collection"
+            $global:Workbook = $wb
+            break
+          }
+        }
+        catch { }
+      }
+      # fallback to ActiveWorkbook or Item(1)
+      if ($null -eq $Workbook) {
+        try {
+          Write-Log "INFO: Trying ActiveWorkbook as fallback"
+          $global:Workbook = $Excel.ActiveWorkbook
+        }
+        catch { }
+      }
+      if ($null -eq $Workbook) {
+        try {
+          Write-Log "INFO: Trying Workbooks.Item(1) as last resort"
+          $global:Workbook = $Excel.Workbooks.Item(1)
+        }
+        catch { }
+      }
+    }
+    catch {
+      Write-Log "WARN: Error while scanning Workbooks collection: $($_.Exception.Message)"
+    }
+  }
+  else {
+    Write-Log "INFO: No workbooks found in Excel.Workbooks collection"
+  }
+
   if ($null -eq $Workbook) {
-    Write-Log "FATAL: Workbook still null after retry. Aborting to avoid null dereference. File: $FilePath"
+    Write-Log "FATAL: Workbook still null after collection lookup. Aborting to avoid null dereference. File: $FilePath"
     try { Invoke-ComRetry { $Excel.Quit() } } catch {}
     throw "Workbook open failed for $FilePath"
   }
