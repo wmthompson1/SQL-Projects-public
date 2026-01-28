@@ -178,10 +178,10 @@ $fullpath = "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Util
     Write-Output "=== COLUMN ANALYSIS ==="
     foreach ($header in $headers) {
         $sampleValues = $data | Select-Object -First 3 -ExpandProperty $header | Where-Object { $_ -ne "" }
-        if ($sampleValues.Count -gt 0) {
+            if ($sampleValues.Count -gt 0) {
             $sample = $sampleValues -join ", "
             if ($sample.Length -gt 50) { $sample = $sample.Substring(0, 50) + "..." }
-            Write-Output "$header : $sample"
+            Write-Output "${header} : ${sample}"
         }
     }
     

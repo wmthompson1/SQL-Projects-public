@@ -128,6 +128,6 @@ foreach ($formatName in $formats.Keys) {
     $pattern = $formats[$formatName]
     $matches = ($sampleDates | Where-Object { $_ -match $pattern }).Count
     if ($matches -gt 0) {
-        Write-Output "$formatName : $matches/$($sampleDates.Count) matches"
+        Write-Output "${formatName} : $matches/$($sampleDates.Count) matches"
     }
 }

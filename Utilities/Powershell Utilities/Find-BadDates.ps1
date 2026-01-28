@@ -85,7 +85,7 @@ if ($issues.Count -eq 0) {
         for ($i = $start; $i -le $end; $i++) {
             $val = $data[$i-1].$dateColumn
             $marker = if ($i -eq 1733) { " ← SSIS FAILED HERE" } else { "" }
-            Write-Output "Row $i : $val$marker"
+            Write-Output "Row ${i} : ${val}${marker}"
         }
     }
 }

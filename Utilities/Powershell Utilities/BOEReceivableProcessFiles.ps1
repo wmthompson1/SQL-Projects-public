@@ -15,6 +15,28 @@
 ##  regarding BOEReceivableProcessFiles.ps1 and conversion rate column, I am ready to test now.
 
 ##  cd "C:\Users\williamt\source\skillsinc\skills-inc-org\SQL-Projects\Utilities\Powershell Utilities\"
+##  .\BOEReceivableProcessFiles.ps1
+
+## Running locally on dev machine requires Excel installed
+##  Note: Excel COM automation is not available on servers without Office installed
+##  Typical deployment location: Production server with Office installed
+##  Running locally resolves to local input/output paths for testing
+
+## Local
+## testing locally ingests $testInputFile instead of App input file.
+## output: Utilities\Powershell Utilities\Boeing_Export_YYYYMMDDV1.csv
+## Utilities\Powershell Utilities\ProcessComplete
+
+## Server
+## Script output path is SSIS input path 1 of 2
+## output: \\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process\Boeing_Export_YYYYMMDDV1.csv
+## sample: \\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Process\BOEReceivableHeader_20260128.csv
+
+## sql-bi-1 launch 
+## cd E:\ITDA\Operations\BOEReceivables
+## cd 'E:\ITDA\Operations\BOEReceivables' .\BOEReceivableProcessFiles.ps1
+## IMPORTANT: The script runs on sql-bi-1 but file paths are on 
+## \\skillsinc.local\public\IS\DataTransfer\BOE Receivable\
 ##**********************************************************************************************/
 
 Write-Output ""
@@ -40,12 +62,77 @@ if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
 }
 
 $InputFilePath = Join-Path -Path $project -ChildPath "Input\BOE.xls"
+
+# Setup logging directory and helper
+$LogDir = Join-Path -Path $project -ChildPath "logs"
+# Also create logs under the Process output share
+$LogDirOutputs = Join-Path -Path $project -ChildPath "Process\logs"
+
+foreach ($d in @($LogDir, $LogDirOutputs)) {
+    if (-not (Test-Path -Path $d)) {
+        try {
+            New-Item -ItemType Directory -Path $d -Force | Out-Null
+        }
+        catch {
+            Write-Warning "Failed to create log directory ${d}: $($_.Exception.Message)"
+        }
+    }
+}
+
+$LogFile = Join-Path -Path $LogDir -ChildPath "BOE_Excel_Diag.log"
+$LogFileOutputs = Join-Path -Path $LogDirOutputs -ChildPath "BOE_Excel_Diag.log"
+
+function Write-Log {
+  param([string]$Message)
+  $ts = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+  $line = "${ts} - $Message"
+  try {
+    $line | Out-File -FilePath $LogFile -Encoding UTF8 -Append
+    $line | Out-File -FilePath $LogFileOutputs -Encoding UTF8 -Append
+  }
+  catch {
+    Write-Warning "Failed to write to log files ${LogFile} and ${LogFileOutputs}: $($_.Exception.Message)"
+  }
+  Write-Output $Message
+}
+
+# Helper: invoke COM actions with retry on RPC_E_CALL_REJECTED (HRESULT 0x80010001)
+function Invoke-ComRetry {
+  param(
+    [Parameter(Mandatory=$true)] [ScriptBlock] $Action,
+    [int] $MaxAttempts = 6,
+    [int] $BaseDelayMs = 250
+  )
+
+  for ($attempt = 1; $attempt -le $MaxAttempts; $attempt++) {
+    try {
+      & $Action
+      return
+    }
+    catch {
+      $ex = $_.Exception
+      $h = $ex.HResult 2>$null
+      $msg = $ex.Message
+      # Retry on common COM busy/rejection HRESULTs or messages such as RPC_E_CALL_REJECTED and 0x800AC472
+      if ($h -eq -2147418111 -or $msg -like '*Call was rejected*' -or $msg -like '*0x800AC472*' -or $msg -like '*800AC472*') {
+        $delay = [int]($BaseDelayMs * [math]::Pow(2, $attempt - 1))
+        Write-Log "COM call rejected or busy (HResult: $h) (attempt $attempt/$MaxAttempts). Sleeping ${delay}ms and retrying... Exception: $msg"
+        Start-Sleep -Milliseconds $delay
+        continue
+      }
+      else {
+        throw
+      }
+    }
+  }
+  throw "COM action failed after $MaxAttempts attempts"
+}
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
     ## $testInputFile = $project + "Input\Test Input Excel File Nov 2025 - Copy.xls"
     # xlDetailExport 9703
     # $testInputFile = $project + "Input\xlDetailExport 003243654 Test William.xls"
-    $testInputFile = $project + "Input\xlDetailExport 9703.xls"
+    $testInputFile = $project + "Input\xlDetailExport 20260119.xls"
     ## 
     $testOutputFile = $project + "Input\BOE.xls"
     
@@ -255,15 +342,114 @@ If ((Test-Path -Path $FilePath) -eq $false) {
 
 
 # Setup Excel, open $File and set the the first worksheet
+# Create Excel COM object
 $Excel = New-Object -ComObject Excel.Application
-$Excel.visible = $false
-$Excel.DisplayAlerts = $false
-$Excel.EnableEvents = $false
-$Excel.AskToUpdateLinks = $false
-$Excel.DisplayAlerts = $false
-$Workbook = $Excel.workbooks.open($FilePath)
-$Excel.AskToUpdateLinks = $false
-$Excel.DisplayAlerts = $false
+Invoke-ComRetry { $Excel.visible = $false }
+Invoke-ComRetry { $Excel.DisplayAlerts = $false }
+
+# Log Excel version information to help diagnose server versioning issues
+try {
+  $excelVersion = $Excel.Version
+  Write-Log "Excel COM Version: $excelVersion"
+}
+catch {
+  Write-Warning "Unable to read Excel.Version: $($_.Exception.Message)"
+  Write-Log "WARN: Unable to read Excel.Version: $($_.Exception.Message)"
+}
+try {
+  $appVersion = $Excel.Application.Version
+  Write-Log "Excel.Application.Version: $appVersion"
+}
+catch {
+  Write-Warning "Unable to read Excel.Application.Version: $($_.Exception.Message)"
+  Write-Log "WARN: Unable to read Excel.Application.Version: $($_.Exception.Message)"
+}
+
+# Probe AskToUpdateLinks availability (some Excel builds may not expose this property)
+try {
+  $askVal = $Excel.AskToUpdateLinks
+  Write-Log "AskToUpdateLinks property present, current value: $askVal"
+}
+catch {
+  Write-Warning "AskToUpdateLinks property not accessible: $($_.Exception.Message)"
+  Write-Log "WARN: AskToUpdateLinks property not accessible: $($_.Exception.Message)"
+}
+
+# Ensure events are disabled before interacting with workbook
+Invoke-ComRetry { $Excel.EnableEvents = $false }
+try {
+  Invoke-ComRetry { $Excel.AskToUpdateLinks = $false }
+}
+catch {
+  Write-Warning "Unable to set Excel.AskToUpdateLinks: $($_.Exception.Message)"
+  Write-Log "WARN: Unable to set Excel.AskToUpdateLinks: $($_.Exception.Message)"
+}
+Invoke-ComRetry { $Excel.DisplayAlerts = $false }
+
+# --- Additional COM/Version diagnostics ---
+try {
+  $rcwType = $Excel.GetType()
+  if ($rcwType) {
+    Write-Log "RCW Type FullName: $($rcwType.FullName)"
+    Write-Log "RCW Type Assembly: $($rcwType.Assembly.FullName)"
+  }
+}
+catch {
+  Write-Log "WARN: Unable to inspect RCW type: $($_.Exception.Message)"
+}
+
+try {
+  $progidType = [System.Type]::GetTypeFromProgID("Excel.Application")
+  if ($progidType) {
+    Write-Log "ProgID Type FullName: $($progidType.FullName)"
+    Write-Log "ProgID GUID: $($progidType.GUID)"
+    Write-Log "ProgID Assembly: $($progidType.Assembly.FullName)"
+  }
+  else {
+    Write-Log "WARN: ProgID type not found for Excel.Application"
+  }
+}
+catch {
+  Write-Log "WARN: Unable to get ProgID type: $($_.Exception.Message)"
+}
+
+# Registry probes for common Office install metadata
+try {
+  $officeKey = 'HKLM:\SOFTWARE\Microsoft\Office'
+  $officeKeyWow = 'HKLM:\SOFTWARE\Wow6432Node\Microsoft\Office'
+  if (Test-Path $officeKey) { Write-Log "Registry: Found $officeKey" } else { Write-Log "Registry: Not found $officeKey" }
+  if (Test-Path $officeKeyWow) { Write-Log "Registry: Found $officeKeyWow" } else { Write-Log "Registry: Not found $officeKeyWow" }
+
+  $clickKey = 'HKLM:\SOFTWARE\Microsoft\Office\ClickToRun\Configuration'
+  if (Test-Path $clickKey) {
+    $cfg = Get-ItemProperty -Path $clickKey -ErrorAction SilentlyContinue
+    Write-Log "ClickToRun ProductVersion: $($cfg.ProductVersion)"
+  }
+  else { Write-Log "ClickToRun key not found: $clickKey" }
+}
+catch {
+  Write-Log "WARN: Registry probe failed: $($_.Exception.Message)"
+}
+
+try {
+  Write-Log "Opening workbook with UpdateLinks=0 to prevent link prompts: $FilePath"
+  # UpdateLinks parameter (2nd) = 0 -> don't update external links on open
+  Invoke-ComRetry { $global:Workbook = $Excel.workbooks.open($FilePath, 0) }
+}
+catch {
+  Write-Log "ERROR: Workbooks.Open failed: $($_.Exception.Message)"
+  Write-Log "ERROR: Workbooks.Open stack: $($_.Exception.StackTrace)"
+  throw
+}
+try {
+  Invoke-ComRetry { $Excel.AskToUpdateLinks = $false }
+}
+catch {
+  Write-Warning "Unable to set Excel.AskToUpdateLinks after open: $($_.Exception.Message)"
+  Write-Log "WARN: Unable to set Excel.AskToUpdateLinks after open: $($_.Exception.Message)"
+}
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } }
+catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts after open: $($_.Exception.Message)" }
 #$Worksheets = $Workbooks.worksheets
 $Worksheet = $Workbook.Worksheets.Item(1)
 $worksheet.Activate();
@@ -278,10 +464,10 @@ $SheetName = $Worksheet.Name;
 $wb22 = $Excel.Workbooks.Add()
 $ws2 = $wb22.Worksheets.item(1) 
 
-$Excel.DisplayAlerts = $false
-$wb22.SaveAs($FilePath2 , $xlFixedFormat) 
-$wb22.Close($true);
-$Excel.DisplayAlerts = $false
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts for wb2: $($_.Exception.Message)" }
+try { $wb22.SaveAs($FilePath2 , $xlFixedFormat) } catch { Write-Log "ERROR: wb2 SaveAs failed: $($_.Exception.Message)"; throw }
+try { $wb22.Close($true) } catch { Write-Log "WARN: wb2 Close failed: $($_.Exception.Message)" }
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts after wb2 close: $($_.Exception.Message)" }
 
 
 # #>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -564,8 +750,8 @@ $null = $Workbook.ActiveSheet.Range("A1").PasteSpecial(-4163)
 #  Requirement # FR 5.2
 # #########################
 
-$Excel.DisplayAlerts = $false
-$Excel.EnableEvents = $false
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts (section): $($_.Exception.Message)" }
+try { Invoke-ComRetry { $Excel.EnableEvents = $false } } catch { Write-Log "WARN: Unable to set Excel.EnableEvents (section): $($_.Exception.Message)" }
 
 # Note: StartDate column search skipped for BOE Receivable data
 # (Column does not exist in BOE export format)
@@ -573,9 +759,9 @@ $Excel.EnableEvents = $false
 # $FormatType = "Date"
 # FindSearchRangeDates $Worksheet $SearchString $FormatType;
 
-$Excel.DisplayAlerts = $false
-$Workbook.Save() 
-$Excel.DisplayAlerts = $false
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts before Save: $($_.Exception.Message)" }
+try { $Workbook.Save() } catch { Write-Log "ERROR: Workbook.Save failed: $($_.Exception.Message)" }
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts after Save: $($_.Exception.Message)" }
 
 
 # note the search and format validation was skipped for BOE.
@@ -586,8 +772,8 @@ $Excel.DisplayAlerts = $false
 # FindSearchRangeDates $Worksheet $SearchString $FormatType;
 
 
-$Excel.DisplayAlerts = $false
-$Workbook.Save() 
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts before Save(2): $($_.Exception.Message)" }
+try { $Workbook.Save() } catch { Write-Log "ERROR: Workbook.Save failed(2): $($_.Exception.Message)" }
 
 
 # ### ////////////////////////////
@@ -627,7 +813,7 @@ for ($i = 1; $i -le 20; $i++) {
         if ($cellText) {
             $normalizedText = $cellText.Replace([char]160, " ").Trim()
             if ($i -eq 14) {
-                Write-Output "Row 14, Col $j : '$cellText' -> normalized: '$normalizedText'"
+              Write-Output "Row 14, Col ${j} : '${cellText}' -> normalized: '${normalizedText}'"
             }
             if ($normalizedText -eq "Boeing Invoice #") {
                 $Search2 = $Worksheet.Cells.Item($i, $j)
@@ -661,7 +847,15 @@ $null = $Worksheet.Range($c1,$c2).Select
 # FR 5.022
 # Development risk -  must assign to a range (which will remain)
 $RangeTest2 =  $Worksheet.Range($c1,$c2).Copy();
-$wb2 = $Excel.workbooks.open($FilePath2)
+$wb2 = $null
+try {
+  Write-Log "Opening intermediate workbook with UpdateLinks=0: $FilePath2"
+  Invoke-ComRetry { $global:wb2 = $Excel.workbooks.open($FilePath2, 0) }
+}
+catch {
+  Write-Log "ERROR: Failed to open intermediate workbook ${FilePath2}: $($_.Exception.Message)"
+  throw
+}
 $ws2 = $wb2.Worksheets.item(1) 
 $ws2.activate()
 
@@ -900,10 +1094,10 @@ catch {
   throw 
 }
 
-#$Excel.DisplayAlerts = $false
-
-# ### //////////////////
-# Ver 2 FR 5.022 Ends
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts before re-activating worksheet: $($_.Exception.Message)" }
+#$Worksheets = $Workbooks.worksheets
+$Worksheet = $Workbook.Worksheets.Item(1)
+$worksheet.Activate();
 # ### /////////////////
 
 # ################################################
@@ -991,22 +1185,22 @@ try {
   }
 
 # prepare to close and clean up
-$Excel.DisplayAlerts = $false
-$Excel.EnableEvents = $false
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts during cleanup: $($_.Exception.Message)" }
+try { Invoke-ComRetry { $Excel.EnableEvents = $false } } catch { Write-Log "WARN: Unable to set Excel.EnableEvents during cleanup: $($_.Exception.Message)" }
 
-$Excel.DisplayAlerts = $false
-$Excel.EnableEvents = $false
+try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts during cleanup(2): $($_.Exception.Message)" }
+try { Invoke-ComRetry { $Excel.EnableEvents = $false } } catch { Write-Log "WARN: Unable to set Excel.EnableEvents during cleanup(2): $($_.Exception.Message)" }
 
-$Workbook.close($false) 
+try { $Workbook.close($false) } catch { Write-Log "WARN: Workbook.Close during cleanup failed: $($_.Exception.Message)" }
 
 #Release the com objects
-$Workbook,$Worksheet, $Excel | ForEach-Object {
-  [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
+try {
+  $Workbook,$Worksheet, $Excel | ForEach-Object {
+    [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
+  }
+} catch { Write-Log "WARN: ReleaseComObject failed: $($_.Exception.Message)" }
 
-}
-
-
-$Excel.quit()
+try { Invoke-ComRetry { $Excel.quit() } } catch { Write-Log "WARN: Excel.Quit failed: $($_.Exception.Message)" }
 
 Stop-Process -Name excel -Force -ErrorAction SilentlyContinue
 
