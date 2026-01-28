@@ -326,7 +326,29 @@ function Get-WorksheetSafe {
   catch { Write-Log "ERROR: Get-WorksheetSafe recreate attempt failed: $($_.Exception.Message)" }
   # Attempt OLE DB fallback: read sheet without Excel COM and populate a new workbook
   try {
-    Write-Log "WARN: Get-WorksheetSafe: attempting OLE DB fallback to read workbook: $FilePath"
+    # Prefer to use the local temp copy (created in Open-WorkbookSafe) for OLE DB reads
+    $sourceForOle = $FilePath
+    if ($global:LocalCopyPath -and (Test-Path $global:LocalCopyPath)) { $sourceForOle = $global:LocalCopyPath }
+    Write-Log "WARN: Get-WorksheetSafe: attempting OLE DB fallback to read workbook: $sourceForOle"
+
+    # Wait briefly for any exclusive lock to clear (helps when producer writes and leaves exclusive lock briefly)
+    $maxWaitSeconds = 15
+    $waited = 0
+    while ($waited -lt $maxWaitSeconds) {
+      try {
+        $fs = [System.IO.File]::Open($sourceForOle,'Open','Read','None')
+        $fs.Close()
+        break
+      }
+      catch {
+        Write-Log "DEBUG: File appears locked ($sourceForOle). Waiting 1s (waited $waited/$maxWaitSeconds)..."
+        Start-Sleep -Seconds 1
+        $waited += 1
+      }
+    }
+
+    if ($waited -ge $maxWaitSeconds) { Write-Log "WARN: File remained locked after $maxWaitSeconds seconds, proceeding to OLE DB attempt anyway." }
+
     $oleWb = $null
     function OleDb_ReadToWorkbook {
       param([string]$sourcePath)
@@ -384,7 +406,8 @@ function Get-WorksheetSafe {
       return $null
     }
 
-    $oleWb = OleDb_ReadToWorkbook -sourcePath $FilePath
+    # Use the computed source path which prefers a local temp copy when available
+    $oleWb = OleDb_ReadToWorkbook -sourcePath $sourceForOle
     if ($oleWb) {
       $global:Workbook = $oleWb
       Write-Log "INFO: Get-WorksheetSafe: OLE DB fallback succeeded and populated new workbook"
@@ -851,12 +874,20 @@ $SheetName = $Worksheet.Name;
 #
 #
 ###############################################
-$wb22 = $Excel.Workbooks.Add()
-$ws2 = $wb22.Worksheets.item(1) 
+$null = $null
+Write-Log "DEBUG: Creating temporary workbook (wb22) via Workbooks.Add() with COM retry"
+try {
+  Invoke-ComRetry { $global:wb22 = $Excel.Workbooks.Add() }
+  Invoke-ComRetry { $ws2 = $global:wb22.Worksheets.Item(1) }
+}
+catch {
+  Write-Log "ERROR: Failed to create workbook wb22 via Workbooks.Add(): $($_.Exception.Message)"
+  throw
+}
 
 try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts for wb2: $($_.Exception.Message)" }
-try { $wb22.SaveAs($FilePath2 , $xlFixedFormat) } catch { Write-Log "ERROR: wb2 SaveAs failed: $($_.Exception.Message)"; throw }
-try { $wb22.Close($true) } catch { Write-Log "WARN: wb2 Close failed: $($_.Exception.Message)" }
+try { $global:wb22.SaveAs($FilePath2 , $xlFixedFormat) } catch { Write-Log "ERROR: wb2 SaveAs failed: $($_.Exception.Message)"; throw }
+try { $global:wb22.Close($true) } catch { Write-Log "WARN: wb2 Close failed: $($_.Exception.Message)" }
 try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts after wb2 close: $($_.Exception.Message)" }
 
 
