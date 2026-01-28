@@ -305,6 +305,59 @@ function Get-WorksheetSafe {
 
   throw "Worksheet could not be retrieved from workbook for file: $FilePath (WorkbookName: $wbName, WorksheetsCount: $wsCount)"
 }
+
+# Cleanup helper: close and release only workbooks that match known paths to avoid impacting other Excel instances
+function Cleanup-Excel {
+  param([Microsoft.Office.Interop.Excel.Application]$excelInstance)
+
+  if ($null -eq $excelInstance) { return }
+
+  $candidates = @()
+  # collect candidate paths to close if present
+  foreach ($p in @($FilePath, $FilePath2, $ProcessFilePath, $FilePath4, $Result_intermediate, $Result)) {
+    if ($p -and (Test-Path $p)) { $candidates += (Get-Item $p).FullName }
+  }
+
+  try {
+    $workbooks = $null
+    try { $workbooks = $excelInstance.Workbooks } catch { }
+    if ($workbooks) {
+      foreach ($wb in $workbooks) {
+        try {
+          $full = $null
+          try { $full = $wb.FullName } catch { }
+          if ($full) {
+            foreach ($target in $candidates) {
+              if ($full -eq $target) {
+                Write-Log "CLEANUP: Closing workbook: $full"
+                try { $wb.Close($false) } catch { Write-Log "WARN: workbook Close failed: $($_.Exception.Message)" }
+                try { [Runtime.Interopservices.Marshal]::ReleaseComObject($wb) | Out-Null } catch {}
+                break
+              }
+            }
+          }
+        }
+        catch { }
+      }
+    }
+  }
+  catch { Write-Log "WARN: Cleanup-Excel error while closing workbooks: $($_.Exception.Message)" }
+
+  # Release known object variables if present
+  foreach ($objName in @('wb2','wb22','Workbook','Worksheet')) {
+    try {
+      if (Get-Variable -Name $objName -Scope Script -ErrorAction SilentlyContinue) {
+        $o = Get-Variable -Name $objName -Scope Script -ValueOnly
+        if ($o) { try { [Runtime.Interopservices.Marshal]::ReleaseComObject($o) | Out-Null } catch {} }
+      }
+    } catch {}
+  }
+
+  try { Invoke-ComRetry { $excelInstance.Quit() } } catch { Write-Log "WARN: Cleanup-Excel Excel.Quit failed: $($_.Exception.Message)" }
+  try { [Runtime.Interopservices.Marshal]::ReleaseComObject($excelInstance) | Out-Null } catch {}
+  $null = [GC]::Collect()
+  $null = [GC]::WaitForPendingFinalizers()
+}
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
     ## $testInputFile = $project + "Input\Test Input Excel File Nov 2025 - Copy.xls"
@@ -1424,24 +1477,16 @@ try {
   }
 
 # prepare to close and clean up
-try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts during cleanup: $($_.Exception.Message)" }
-try { Invoke-ComRetry { $Excel.EnableEvents = $false } } catch { Write-Log "WARN: Unable to set Excel.EnableEvents during cleanup: $($_.Exception.Message)" }
-
-try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts during cleanup(2): $($_.Exception.Message)" }
-try { Invoke-ComRetry { $Excel.EnableEvents = $false } } catch { Write-Log "WARN: Unable to set Excel.EnableEvents during cleanup(2): $($_.Exception.Message)" }
-
-try { $Workbook.close($false) } catch { Write-Log "WARN: Workbook.Close during cleanup failed: $($_.Exception.Message)" }
-
-#Release the com objects
 try {
-  $Workbook,$Worksheet, $Excel | ForEach-Object {
-    [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_)
-  }
-} catch { Write-Log "WARN: ReleaseComObject failed: $($_.Exception.Message)" }
-
-try { Invoke-ComRetry { $Excel.quit() } } catch { Write-Log "WARN: Excel.Quit failed: $($_.Exception.Message)" }
-
-Stop-Process -Name excel -Force -ErrorAction SilentlyContinue
+  Cleanup-Excel -excelInstance $Excel
+}
+catch {
+  Write-Log "WARN: Cleanup-Excel failed: $($_.Exception.Message)"
+  # Fall back to best-effort cleanup
+  try { $Workbook.close($false) } catch { Write-Log "WARN: Workbook.Close during fallback cleanup failed: $($_.Exception.Message)" }
+  try { $Workbook,$Worksheet, $Excel | ForEach-Object { [void] [Runtime.Interopservices.Marshal]::ReleaseComObject($_) } } catch { Write-Log "WARN: Fallback ReleaseComObject failed: $($_.Exception.Message)" }
+  try { Invoke-ComRetry { $Excel.quit() } } catch { Write-Log "WARN: Fallback Excel.Quit failed: $($_.Exception.Message)" }
+}
 
 # Step 1: Daily Operations Verification - Final File Operations
 Write-Output ""
