@@ -64,8 +64,9 @@ if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
 $InputFilePath = Join-Path -Path $project -ChildPath "Input\BOE.xls"
 
 # Setup logging directory and helper
-$LogDir = Join-Path -Path $project -ChildPath "logs"
-# Also create logs under the Process output share
+# Primary log location on the shared data transfer folder for easier access
+$LogDir = '\\skillsinc.local\public\IS\DataTransfer\BOE Receivable\Logs'
+# Also keep the Process subfolder log location for backward compatibility
 $LogDirOutputs = Join-Path -Path $project -ChildPath "Process\logs"
 
 foreach ($d in @($LogDir, $LogDirOutputs)) {
@@ -126,6 +127,95 @@ function Invoke-ComRetry {
     }
   }
   throw "COM action failed after $MaxAttempts attempts"
+}
+
+# --- Workbook safety helpers moved earlier so functions are defined before use when script
+#     is executed under SQL Agent (ensures functions are available regardless of invocation mode)
+function Open-WorkbookSafe {
+  param([string]$path)
+
+  if ($null -ne $global:Workbook) { return }
+
+  try {
+    Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0) }
+    if ($null -ne $global:Workbook) { Write-Log "INFO: Open-WorkbookSafe: Opened workbook via Workbooks.Open: $path"; return }
+  }
+  catch {
+    Write-Log "WARN: Open-WorkbookSafe initial Open failed: $($_.Exception.Message)"
+  }
+
+  # Inspect existing Workbooks collection for a matching candidate
+  try {
+    foreach ($wb in $Excel.Workbooks) {
+      try {
+        $full = $wb.FullName 2>$null
+        $nm = $wb.Name 2>$null
+        Write-Log "DEBUG: Open-WorkbookSafe candidate - Name: $nm, FullName: $full"
+        if ($full -and ($full -eq $path)) {
+          $global:Workbook = $wb
+          Write-Log "INFO: Open-WorkbookSafe: matched FullName in Workbooks collection"
+          break
+        }
+      }
+      catch { }
+    }
+  }
+  catch {
+    Write-Log "WARN: Error scanning Workbooks collection: $($_.Exception.Message)"
+  }
+
+  if ($null -eq $global:Workbook) {
+    try { $global:Workbook = $Excel.ActiveWorkbook } catch { }
+  }
+
+  if ($null -eq $global:Workbook) {
+    try { $global:Workbook = $Excel.Workbooks.Item(1) } catch { }
+  }
+
+  # If still null, attempt to recreate Excel COM and reopen the file
+  if ($null -eq $global:Workbook) {
+    Write-Log "WARN: Open-WorkbookSafe: Workbook still null - attempting to recreate Excel COM and reopen"
+    try {
+      $newExcel = New-Object -ComObject Excel.Application
+      Invoke-ComRetry { $newExcel.Visible = $false }
+      Invoke-ComRetry { $newExcel.EnableEvents = $false }
+      Invoke-ComRetry { $global:Workbook = $newExcel.Workbooks.Open($path, 0) }
+      if ($null -ne $global:Workbook) {
+        # replace global Excel with new instance for continued processing
+        try { Invoke-ComRetry { $Excel.Quit() } } catch {}
+        try { $Excel,$null | ForEach-Object { [void][Runtime.Interopservices.Marshal]::ReleaseComObject($_) } } catch {}
+        $global:Excel = $newExcel
+        Write-Log "INFO: Open-WorkbookSafe: recreated Excel COM and reopened workbook"
+        return
+      }
+    }
+    catch {
+      Write-Log "ERROR: Open-WorkbookSafe failed to recreate Excel and open file: $($_.Exception.Message)"
+    }
+  }
+}
+
+function Get-WorksheetSafe {
+  param([int]$index = 1)
+
+  if ($null -eq $global:Workbook) {
+    Open-WorkbookSafe -path $FilePath
+  }
+
+  if ($null -eq $global:Workbook) {
+    throw "Workbook is null and could not be recovered for file: $FilePath"
+  }
+
+  try {
+    $ws = $global:Workbook.Worksheets.Item($index)
+    return $ws
+  }
+  catch {
+    Write-Log "WARN: Get-WorksheetSafe: failed to get worksheet item ${index}: $($_.Exception.Message)"
+    try { $ws = $global:Workbook.ActiveSheet; if ($ws) { return $ws } } catch {}
+    try { $ws = $global:Workbook.Worksheets | Select-Object -First 1; if ($ws) { return $ws } } catch {}
+    throw "Worksheet could not be retrieved from workbook for file: $FilePath"
+  }
 }
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
@@ -509,7 +599,7 @@ if ($null -eq $Workbook) {
 }
 
 #$Worksheets = $Workbooks.worksheets
-$Worksheet = $Workbook.Worksheets.Item(1)
+$Worksheet = Get-WorksheetSafe -index 1
 $worksheet.Activate();
 
 $SheetName = $Worksheet.Name;
@@ -656,6 +746,9 @@ function IsNull($objectToCheck) {
 
   return $false
 }
+
+# Open-WorkbookSafe and Get-WorksheetSafe are defined earlier in the file to ensure availability
+# during different PowerShell invocation modes (moved to top of script near Invoke-ComRetry).
 ## ////////////////////////////////////////////////////////////////// 
 ## ////////////////////////////////////////////////////////////////// 
 
@@ -675,7 +768,7 @@ $j=1
 
 try {
 
-$CurrentSheet = $Workbook.WorkSheets.Item($j)
+$CurrentSheet = Get-WorksheetSafe -index $j
 $CurrentSheet.application.activewindow.splitcolumn = 0
 $CurrentSheet.application.activewindow.splitrow = 0
 # $CurrentSheet.application.activewindow.freezepanes = $true
@@ -1154,7 +1247,7 @@ catch {
 
 try { Invoke-ComRetry { $Excel.DisplayAlerts = $false } } catch { Write-Log "WARN: Unable to set Excel.DisplayAlerts before re-activating worksheet: $($_.Exception.Message)" }
 #$Worksheets = $Workbooks.worksheets
-$Worksheet = $Workbook.Worksheets.Item(1)
+$Worksheet = Get-WorksheetSafe -index 1
 $worksheet.Activate();
 # ### /////////////////
 
