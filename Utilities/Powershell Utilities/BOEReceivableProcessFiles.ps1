@@ -135,6 +135,28 @@ function Open-WorkbookSafe {
   param([string]$path)
 
   if ($null -ne $global:Workbook) { return }
+  
+  # Validate source exists and is reasonable size
+  if (-not (Test-Path $path)) {
+    Write-Log "ERROR: Open-WorkbookSafe: source file not found: $path"
+    return
+  }
+  try { $fi = Get-Item $path -ErrorAction Stop } catch { Write-Log "ERROR: Open-WorkbookSafe: cannot access $path: $($_.Exception.Message)"; return }
+  try { $size = $fi.Length } catch { $size = 0 }
+  if ($size -le 0) { Write-Log "WARN: Open-WorkbookSafe: source file size is zero for $path" }
+  
+  # Copy to local temp file to avoid network/SMB/permission/protected-view issues
+  try {
+    $localCopy = Join-Path -Path $env:TEMP -ChildPath ("BOE_temp_{0}_{1}" -f ([guid]::NewGuid().ToString('N')), $fi.Name)
+    Copy-Item -Path $path -Destination $localCopy -Force -ErrorAction Stop
+    Write-Log "DEBUG: Open-WorkbookSafe: copied source to local temp: $localCopy"
+    $openPath = $localCopy
+    $global:LocalCopyPath = $localCopy
+  }
+  catch {
+    Write-Log "WARN: Open-WorkbookSafe: failed to copy to local temp, will attempt to open original: $($_.Exception.Message)"
+    $openPath = $path
+  }
 
   try {
     Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0) }
@@ -357,6 +379,14 @@ function Cleanup-Excel {
   try { [Runtime.Interopservices.Marshal]::ReleaseComObject($excelInstance) | Out-Null } catch {}
   $null = [GC]::Collect()
   $null = [GC]::WaitForPendingFinalizers()
+  # Remove local copy if created
+  try {
+    if ($global:LocalCopyPath -and (Test-Path $global:LocalCopyPath)) {
+      Remove-Item -Path $global:LocalCopyPath -Force -ErrorAction SilentlyContinue
+      Write-Log "CLEANUP: Removed local temp copy: $global:LocalCopyPath"
+      Remove-Variable -Name LocalCopyPath -Scope Global -ErrorAction SilentlyContinue
+    }
+  } catch { }
 }
 # Simulate app file input for local testing
 if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
