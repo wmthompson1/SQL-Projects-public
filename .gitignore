@@ -258,3 +258,8 @@ Utilities/SQLMesh/logs/
 # Log directories (all locations)
 logs/
 **/logs/
+
+# Ignore Excel/CSV input and process files for BOE PowerShell utilities
+Utilities/Powershell Utilities/Input/*.xls
+Utilities/Powershell Utilities/Process/*.xls
+Utilities/Powershell Utilities/Process/*.csv
