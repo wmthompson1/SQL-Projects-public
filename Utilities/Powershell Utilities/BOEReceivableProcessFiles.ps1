@@ -141,7 +141,7 @@ function Open-WorkbookSafe {
     Write-Log "ERROR: Open-WorkbookSafe: source file not found: $path"
     return
   }
-  try { $fi = Get-Item $path -ErrorAction Stop } catch { Write-Log "ERROR: Open-WorkbookSafe: cannot access $path: $($_.Exception.Message)"; return }
+  try { $fi = Get-Item $path -ErrorAction Stop } catch { $err = $_.Exception.Message; Write-Log ("ERROR: Open-WorkbookSafe: cannot access {0}: {1}" -f $path,$err); return }
   try { $size = $fi.Length } catch { $size = 0 }
   if ($size -le 0) { Write-Log "WARN: Open-WorkbookSafe: source file size is zero for $path" }
   
