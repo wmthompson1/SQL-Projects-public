@@ -1280,7 +1280,49 @@ catch {
   Write-Log "ERROR: Failed to open intermediate workbook ${FilePath2}: $($_.Exception.Message)"
   throw
 }
-$ws2 = $wb2.Worksheets.item(1) 
+
+# Ensure $wb2 is valid before accessing Worksheets
+if ($null -eq $wb2) {
+  Write-Log "WARN: wb2 is null after Open($FilePath2). Attempting recovery/retries."
+  # Retry a few times with backoff
+  for ($r = 1; $r -le 3; $r++) {
+    Start-Sleep -Seconds (2 * $r)
+    try {
+      Invoke-ComRetry { $global:wb2 = $Excel.Workbooks.Open($FilePath2, 0) }
+    }
+    catch { Write-Log "DEBUG: Retry $r open failed: $($_.Exception.Message)" }
+    if ($null -ne $wb2) { break }
+  }
+
+  # Scan existing Workbooks for a match
+  if ($null -eq $wb2) {
+    try {
+      foreach ($cand in $Excel.Workbooks) {
+        try {
+          $full = $cand.FullName 2>$null
+          if ($full -and ($full -eq $FilePath2)) { $wb2 = $cand; Write-Log "INFO: Found matching wb2 in Workbooks collection"; break }
+        } catch {}
+      }
+    } catch { Write-Log "DEBUG: Error scanning Workbooks collection during wb2 recovery: $($_.Exception.Message)" }
+  }
+
+  # As a last attempt, leverage Open-WorkbookSafe to try to recover
+  if ($null -eq $wb2) {
+    try {
+      Open-WorkbookSafe -path $FilePath2
+      if ($global:Workbook -and ($global:Workbook.FullName -eq $FilePath2)) { $wb2 = $global:Workbook; Write-Log "INFO: Open-WorkbookSafe recovered wb2" }
+    }
+    catch { Write-Log "DEBUG: Open-WorkbookSafe attempt failed: $($_.Exception.Message)" }
+  }
+
+  if ($null -eq $wb2) {
+    Write-Log "ERROR: Unable to open or recover intermediate workbook: $FilePath2. Skipping this file to avoid null dereference."
+    # Depending on desired behavior, either continue to next file or throw. We choose to throw here so the agent/job scheduler records a failure.
+    throw "Intermediate workbook could not be opened or recovered: $FilePath2"
+  }
+}
+
+$ws2 = $wb2.Worksheets.item(1)
 $ws2.activate()
 
 $wb2.ActiveSheet.Range("A1").PasteSpecial(8) | Out-Null
