@@ -1332,6 +1332,9 @@ if ($null -eq $wb2) {
     # Depending on desired behavior, either continue to next file or throw. We choose to throw here so the agent/job scheduler records a failure.
     throw "Intermediate workbook could not be opened or recovered: $FilePath2"
   }
+} catch {
+  Write-Log "ERROR: Tabular extraction failed: $($_.Exception.Message)"
+  throw
 }
 
 $ws2 = $wb2.Worksheets.item(1)
