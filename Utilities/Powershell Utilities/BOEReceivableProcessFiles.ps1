@@ -48,6 +48,9 @@ $nl = [Environment]::NewLine
 [string]$filepath = $null;
 [bool]$bln = $false;
 
+# When true, script will throw on intermediate workbook open failures; when false it will log and exit gracefully
+$FailOnOpen = $false
+
 $range1="A1:A1"
 $range2="A1:A1"
 
@@ -332,7 +335,8 @@ function Get-WorksheetSafe {
     Write-Log "WARN: Get-WorksheetSafe: attempting OLE DB fallback to read workbook: $sourceForOle"
 
     # Wait briefly for any exclusive lock to clear (helps when producer writes and leaves exclusive lock briefly)
-    $maxWaitSeconds = 15
+    # Increase lock wait to 30s to tolerate brief exclusive-write windows by the producer
+    $maxWaitSeconds = 30
     $waited = 0
     while ($waited -lt $maxWaitSeconds) {
       try {
@@ -1273,12 +1277,20 @@ $null = $Worksheet.Range($c1,$c2).Select
 $RangeTest2 =  $Worksheet.Range($c1,$c2).Copy();
 $wb2 = $null
 try {
-  Write-Log "Opening intermediate workbook with UpdateLinks=0: $FilePath2"
-  Invoke-ComRetry { $global:wb2 = $Excel.workbooks.open($FilePath2, 0) }
-}
-catch {
-  Write-Log "ERROR: Failed to open intermediate workbook ${FilePath2}: $($_.Exception.Message)"
-  throw
+    Write-Log "Opening intermediate workbook with UpdateLinks=0 (prefer local copy): $FilePath2"
+    # Prefer Open-WorkbookSafe which will copy to local temp and attempt multiple reopen strategies
+    try {
+      Open-WorkbookSafe -path $FilePath2
+      if ($global:Workbook) { $wb2 = $global:Workbook; Write-Log "INFO: Open-WorkbookSafe opened intermediate workbook" }
+      else {
+        Write-Log "DEBUG: Open-WorkbookSafe did not return a workbook; falling back to direct Open with retries"
+        Invoke-ComRetry -MaxAttempts 8 { $global:wb2 = $Excel.Workbooks.Open($FilePath2, 0) }
+        if ($null -ne $global:wb2) { $wb2 = $global:wb2; Write-Log "INFO: Direct Open succeeded on fallback" }
+      }
+    }
+    catch {
+      Write-Log "ERROR: Failed initial open attempt for intermediate workbook ${FilePath2}: $($_.Exception.Message)"
+    }
 }
 
 # Ensure $wb2 is valid before accessing Worksheets
