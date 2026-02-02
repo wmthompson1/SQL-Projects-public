@@ -4,6 +4,7 @@ Date     Modified By	Change Description
 -------- -------------  ------------------------------------------------------------
 20210909 tt				new version
 20220211 mp				correction on logic to get document reference from EM's (didn't pull when legs were involved).  Spice Works Help Desk Ticket #1630
+20260202 wt				Add UDF115 to indicate Supplier Controlled Drawing
 **********************************************************************************************/
 
 declare @ORDER_ID NVARCHAR(15) = '184341'  -- Purchase Order ID to report on
@@ -41,6 +42,10 @@ LEFT JOIN USER_DEF_FIELDS U1  --> ADCN
 	ON D.ID = U1.DOCUMENT_ID
 	AND U1.PROGRAM_ID = 'VMDOCMNT'
 	AND U1.ID = 'UDF-0000032'
+LEFT JOIN USER_DEF_FIELDS UDF115  --> Supplier Controlled Drawing
+	ON D.ID = UDF115.DOCUMENT_ID
+	AND UDF115.PROGRAM_ID = 'VMDOCMNT'
+	AND UDF115.ID = 'UDF-0000115'
 WHERE DSL.SUPPLY_BASE_ID = @ORDER_ID
 )
 --SELECT * FROM CTE_DOCS
@@ -215,6 +220,11 @@ WHERE DSL.SUPPLY_BASE_ID = @ORDER_ID
 		WHEN UDF2.STRING_VAL = 'Not Controlled' THEN 0
 		WHEN UDF2.STRING_VAL = '' THEN 0
 	ELSE 1 END AS 'Part_Controller_L'
+
+		, CASE WHEN UDF115.BOOL_VAL IS NULL THEN 0
+		WHEN UDF115.BOOL_VAL = 1 THEN 1
+		else 0
+	END AS 'Supplier_Controlled_Drawing'
 FROM PURCHASE_ORDER PO
 LEFT OUTER JOIN PURC_ORDER_LINE POL
 	ON PO.ID = POL.PURC_ORDER_ID 
@@ -311,6 +321,12 @@ LEFT OUTER JOIN USER_DEF_FIELDS UDF74
 	ON UDF74.DOCUMENT_ID = DSL.UDF_WO
 	AND UDF74.PROGRAM_ID = 'VMMFGWIN_OP'
 	AND UDF74.ID = 'UDF-0000074'
+
+LEFT JOIN [LIVE].[dbo].[USER_DEF_FIELDS] udf115 (nolock)
+  	ON P.ID = udf115.DOCUMENT_ID
+	and udf115.[PROGRAM_ID] = 'VMPRTMNT'
+    and udf115.id like 'UDF-00115'
+
 WHERE PO.ID = @ORDER_ID
 )
 
@@ -399,4 +415,6 @@ SELECT ORDER_ID
 		WHEN REPLACE(REPLACE(POL_LONG_DESCRIPTION, CHAR(13), ''), CHAR(10), '') = REPLACE(REPLACE(PAB_LONG_DESCRIPTION, CHAR(13), ''), CHAR(10), '') THEN NULL
 		ELSE POL_LONG_DESCRIPTION
 	END AS POL_LONG_DESCRIPTION, UDF_StringV_WO, UDF_WO, Item, Part_Controller_L
+	,Supplier_Controlled_Drawing
+	, case when Supplier_Controlled_Drawing = 1 then 'Supplier Controlled Drawing' else null end Supplier_Controlled_Drawing_desc
 FROM CTE_BASE
