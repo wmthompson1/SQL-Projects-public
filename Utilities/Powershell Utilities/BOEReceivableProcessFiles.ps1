@@ -117,8 +117,17 @@ function Invoke-ComRetry {
       $ex = $_.Exception
       $h = $ex.HResult 2>$null
       $msg = $ex.Message
-      # Retry on common COM busy/rejection HRESULTs or messages such as RPC_E_CALL_REJECTED and 0x800AC472
-      if ($h -eq -2147418111 -or $msg -like '*Call was rejected*' -or $msg -like '*0x800AC472*' -or $msg -like '*800AC472*') {
+        # Retry on common COM busy/rejection HRESULTs or messages such as RPC_E_CALL_REJECTED, RPC_E_SERVERCALL_RETRYLATER and 0x800AC472
+        if (
+          $h -eq -2147418111 -or 
+          $msg -like '*Call was rejected*' -or 
+          $msg -like '*0x800AC472*' -or 
+          $msg -like '*800AC472*' -or 
+          $msg -like '*application is busy*' -or 
+          $msg -like '*RPC_E_SERVERCALL_RETRYLATER*' -or 
+          $msg -like '*0x8001010A*' -or 
+          $msg -like '*8001010A*'
+         ) {
         $delay = [int]($BaseDelayMs * [math]::Pow(2, $attempt - 1))
         Write-Log "COM call rejected or busy (HResult: $h) (attempt $attempt/$MaxAttempts). Sleeping ${delay}ms and retrying... Exception: $msg"
         Start-Sleep -Milliseconds $delay
@@ -134,6 +143,23 @@ function Invoke-ComRetry {
 
 # --- Workbook safety helpers moved earlier so functions are defined before use when script
 #     is executed under SQL Agent (ensures functions are available regardless of invocation mode)
+
+function Wait-FileStable {
+  param([string]$Path,[int]$StableSeconds=10,[int]$TimeoutSeconds=180,[int]$PollMs=500)
+  $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
+  $last = -1; $stable=0
+  while ((Get-Date) -lt $deadline) {
+    if (-not (Test-Path $Path)) { Start-Sleep -Milliseconds $PollMs; continue }
+    try { $len = (Get-Item $Path -ErrorAction Stop).Length } catch { Start-Sleep -Milliseconds $PollMs; continue }
+    if ($len -eq $last) {
+      $stable += $PollMs/1000
+      if ($stable -ge $StableSeconds) { return $true }
+    } else { $stable = 0; $last = $len }
+    Start-Sleep -Milliseconds $PollMs
+  }
+  return $false
+}
+
 function Open-WorkbookSafe {
   param([string]$path)
 
@@ -159,13 +185,37 @@ function Open-WorkbookSafe {
   catch {
     Write-Log "WARN: Open-WorkbookSafe: failed to copy to local temp, will attempt to open original: $($_.Exception.Message)"
     $openPath = $path
+    # Try secondary fallback to system drive temp in case $env:TEMP is not writable for the agent account
+    try {
+      $fallbackDir = Join-Path -Path ($env:SystemDrive + '\Temp') -ChildPath 'BOE_Temp'
+      if (-not (Test-Path $fallbackDir)) { New-Item -ItemType Directory -Path $fallbackDir -Force | Out-Null }
+      $fallbackCopy = Join-Path -Path $fallbackDir -ChildPath ("BOE_temp_{0}_{1}" -f ([guid]::NewGuid().ToString('N')), $fi.Name)
+      Copy-Item -Path $path -Destination $fallbackCopy -Force -ErrorAction Stop
+      Write-Log "DEBUG: Open-WorkbookSafe: copied source to fallback temp: $fallbackCopy"
+      $openPath = $fallbackCopy
+      $global:LocalCopyPath = $fallbackCopy
+    }
+    catch {
+      Write-Log "WARN: Open-WorkbookSafe: fallback copy to system temp failed: $($_.Exception.Message)"
+      $openPath = $path
+    }
   }
-
+  
+  # Verify the chosen open path exists and record its size for diagnostics
   try {
-    Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0) }
+    if (-not (Test-Path $openPath)) { Write-Log "ERROR: Open-WorkbookSafe: chosen openPath does not exist: $openPath"; return }
+    $openFi = Get-Item -Path $openPath -ErrorAction Stop
+    Write-Log "DEBUG: Open-WorkbookSafe: using openPath: $openPath (Size=$($openFi.Length) bytes)"
+  }
+  catch {
+    Write-Log ("ERROR: Open-WorkbookSafe: unable to stat openPath {0}: {1}" -f $openPath, $_.Exception.Message)
+    return
+  }
+  try {
+    Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($openPath, 0) }
     if ($null -ne $global:Workbook) {
       try { $cnt = $global:Workbook.Worksheets.Count } catch { $cnt = 0 }
-      if ($cnt -gt 0) { Write-Log "INFO: Open-WorkbookSafe: Opened workbook via Workbooks.Open: $path (Worksheets.Count=$cnt)"; return }
+      if ($cnt -gt 0) { Write-Log "INFO: Open-WorkbookSafe: Opened workbook via Workbooks.Open: $openPath (Worksheets.Count=$cnt)"; return }
       Write-Log "WARN: Open-WorkbookSafe: workbook opened but Worksheets.Count=$cnt. Will attempt reopen variants."
       try { Invoke-ComRetry { $global:Workbook.Close($false) } } catch {}
       try { [System.Runtime.Interopservices.Marshal]::ReleaseComObject($global:Workbook) | Out-Null } catch {}
@@ -173,7 +223,7 @@ function Open-WorkbookSafe {
 
       # Try read-only reopen
       try {
-        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0, $true) }
+        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($openPath, 0, $true) }
         try { $cnt2 = $global:Workbook.Worksheets.Count } catch { $cnt2 = 0 }
         if ($cnt2 -gt 0) { Write-Log "INFO: Open-WorkbookSafe: reopened workbook as ReadOnly (Worksheets.Count=$cnt2)"; return }
         Write-Log "WARN: ReadOnly reopen returned Worksheets.Count=$cnt2"
@@ -185,7 +235,7 @@ function Open-WorkbookSafe {
 
       # Try reopen with CorruptLoad=1 (last parameter). Provide placeholders for intermediate params.
       try {
-        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($path, 0, $true, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, 1) }
+        Invoke-ComRetry { $global:Workbook = $Excel.Workbooks.Open($openPath, 0, $true, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, $null, 1) }
         try { $cnt3 = $global:Workbook.Worksheets.Count } catch { $cnt3 = 0 }
         if ($cnt3 -gt 0) { Write-Log "INFO: Open-WorkbookSafe: reopened workbook with CorruptLoad=1 (Worksheets.Count=$cnt3)"; return }
         Write-Log "WARN: CorruptLoad reopen returned Worksheets.Count=$cnt3"
@@ -207,7 +257,7 @@ function Open-WorkbookSafe {
         $full = $wb.FullName 2>$null
         $nm = $wb.Name 2>$null
         Write-Log "DEBUG: Open-WorkbookSafe candidate - Name: $nm, FullName: $full"
-        if ($full -and ($full -eq $path)) {
+        if ($full -and ($full -eq $openPath)) {
           $global:Workbook = $wb
           Write-Log "INFO: Open-WorkbookSafe: matched FullName in Workbooks collection"
           break
@@ -235,7 +285,7 @@ function Open-WorkbookSafe {
       $newExcel = New-Object -ComObject Excel.Application
       Invoke-ComRetry { $newExcel.Visible = $false }
       Invoke-ComRetry { $newExcel.EnableEvents = $false }
-      Invoke-ComRetry { $global:Workbook = $newExcel.Workbooks.Open($path, 0) }
+      Invoke-ComRetry { $global:Workbook = $newExcel.Workbooks.Open($openPath, 0) }
       if ($null -ne $global:Workbook) {
         # replace global Excel with new instance for continued processing
         try { Invoke-ComRetry { $Excel.Quit() } } catch {}
@@ -491,7 +541,7 @@ if ($env:COMPUTERNAME -eq "WILLIAM-ADMINPC") {
     ## $testInputFile = $project + "Input\Test Input Excel File Nov 2025 - Copy.xls"
     # xlDetailExport 9703
     # $testInputFile = $project + "Input\xlDetailExport 003243654 Test William.xls"
-    $testInputFile = $project + "Input\xlDetailExport 20260119.xls"
+    $testInputFile = $project + "Input\xlDetailExport 20260119.xlsx"
     ## 
     $testOutputFile = $project + "Input\BOE.xls"
     
@@ -790,82 +840,47 @@ catch {
   Write-Log "WARN: Registry probe failed: $($_.Exception.Message)"
 }
 
-try {
-  Write-Log "Opening workbook with UpdateLinks=0 to prevent link prompts: $FilePath"
-  # UpdateLinks parameter (2nd) = 0 -> don't update external links on open
-  Invoke-ComRetry { $global:Workbook = $Excel.workbooks.open($FilePath, 0) }
-}
-catch {
-  Write-Log "ERROR: Workbooks.Open failed: $($_.Exception.Message)"
-  Write-Log "ERROR: Workbooks.Open stack: $($_.Exception.StackTrace)"
-  throw
-}
-Write-Log "INFO: Skipping setting Application-level properties (AskToUpdateLinks/DisplayAlerts) after Open to avoid COM busy errors. Workbook opened with UpdateLinks=0."
+Write-Log "Opening workbook via Open-WorkbookSafe (local temp copy preferred): $FilePath"
 
-# Validate that Workbook was opened successfully before using it
-if ($null -eq $Workbook) {
-  Write-Log "ERROR: Workbook variable is null after Open for file: $FilePath"
-  # Inspect Workbooks collection for diagnostics
+# Wait for file to become stable on disk to avoid SMB/lock races
+if (-not (Wait-FileStable -Path $FilePath -StableSeconds 10 -TimeoutSeconds 120)) {
+  Write-Log "WARN: $FilePath did not become stable within timeout; proceeding to open anyway"
+}
+
+# Open main workbook through safe routine (uses local temp and robust variants)
+Open-WorkbookSafe -path $FilePath
+
+# Validate workbook is open and has at least one sheet
+$wsCount = 0
+try { $wsCount = $global:Workbook.Worksheets.Count } catch { $wsCount = 0 }
+if ($null -eq $global:Workbook -or $wsCount -lt 1) {
+  Write-Log "FATAL: Workbook open produced zero worksheets (Count=$wsCount) for: $FilePath"
+
+  # Diagnostics: report local temp copy presence, size, and first 4 bytes signature
   try {
-    $wbCount = $Excel.Workbooks.Count
-    Write-Log "INFO: Excel.Workbooks.Count = $wbCount"
-  }
-  catch {
-    Write-Log "WARN: Unable to read Excel.Workbooks.Count: $($_.Exception.Message)"
-    $wbCount = 0
-  }
-
-  if ($wbCount -gt 0) {
-    Write-Log "INFO: Attempting to locate the opened workbook in Excel.Workbooks by FullName/Name"
-    try {
-      foreach ($wb in $Excel.Workbooks) {
-        try {
-          $full = $wb.FullName 2>$null
-          $nm = $wb.Name 2>$null
-          Write-Log "DEBUG: Found workbook candidate - Name: $nm, FullName: $full"
-          if ($full -and ($full -eq $FilePath)) {
-            Write-Log "INFO: Matching workbook FullName found in Workbooks collection"
-            $global:Workbook = $wb
-            break
-          }
-          if ($nm -and ($nm -eq $FileName)) {
-            Write-Log "INFO: Matching workbook Name found in Workbooks collection"
-            $global:Workbook = $wb
-            break
-          }
-        }
-        catch { }
+    if ($global:LocalCopyPath -and (Test-Path $global:LocalCopyPath)) {
+      $size = (Get-Item $global:LocalCopyPath).Length
+      Write-Log "DIAG: Local temp copy present: $global:LocalCopyPath ($size bytes)"
+      try {
+        $fs = [System.IO.File]::Open($global:LocalCopyPath,'Open','Read','ReadWrite')
+        $buf = New-Object byte[] 4
+        $read = $fs.Read($buf,0,4)
+        $fs.Close()
+        $sig = ($buf | ForEach-Object { $_.ToString('X2') }) -join ' '
+        Write-Log "DIAG: First 4 bytes: $sig"
       }
-      # fallback to ActiveWorkbook or Item(1)
-      if ($null -eq $Workbook) {
-        try {
-          Write-Log "INFO: Trying ActiveWorkbook as fallback"
-          $global:Workbook = $Excel.ActiveWorkbook
-        }
-        catch { }
-      }
-      if ($null -eq $Workbook) {
-        try {
-          Write-Log "INFO: Trying Workbooks.Item(1) as last resort"
-          $global:Workbook = $Excel.Workbooks.Item(1)
-        }
-        catch { }
-      }
+      catch { Write-Log "DIAG: Header check failed: $($_.Exception.Message)" }
     }
-    catch {
-      Write-Log "WARN: Error while scanning Workbooks collection: $($_.Exception.Message)"
+    else {
+      Write-Log "DIAG: No LocalCopyPath recorded (Open-WorkbookSafe may not have completed)"
     }
   }
-  else {
-    Write-Log "INFO: No workbooks found in Excel.Workbooks collection"
-  }
+  catch { Write-Log "DIAG: Local copy diagnostic exception: $($_.Exception.Message)" }
 
-  if ($null -eq $Workbook) {
-    Write-Log "FATAL: Workbook still null after collection lookup. Aborting to avoid null dereference. File: $FilePath"
-    try { Invoke-ComRetry { $Excel.Quit() } } catch {}
-    throw "Workbook open failed for $FilePath"
-  }
+  throw "Workbook open failed for $FilePath"
 }
+Write-Log "INFO: Open-WorkbookSafe succeeded (Worksheets.Count=$wsCount) for: $FilePath"
+ 
 
 #$Worksheets = $Workbooks.worksheets
 $Worksheet = Get-WorksheetSafe -index 1
@@ -1291,6 +1306,9 @@ try {
     catch {
       Write-Log "ERROR: Failed initial open attempt for intermediate workbook ${FilePath2}: $($_.Exception.Message)"
     }
+}
+catch {
+  Write-Log "ERROR: Intermediate open block failed: $($_.Exception.Message)"
 }
 
 # Ensure $wb2 is valid before accessing Worksheets
@@ -1766,6 +1784,53 @@ catch {
 Write-Output "=== STEP 1 VERIFICATION COMPLETE ==="
 Write-Output "Primary Output: $Result"
 Write-Output "Archive Location: $ProcessCompleteResultFilePath"
+
+
+
+## Final safety cleanup: ensure workbooks and Excel COM are closed and released
+try {
+  if ($null -ne $global:Workbook) {
+    try { Invoke-ComRetry { $global:Workbook.Close($false) } } catch { Write-Log "WARN: Final cleanup Workbook.Close failed: $($_.Exception.Message)" }
+  }
+  # Close intermediate workbooks if still present
+  foreach ($candidate in @('wb2','wb22')) {
+    try {
+      if (Get-Variable -Name $candidate -Scope Script -ErrorAction SilentlyContinue) {
+        $obj = Get-Variable -Name $candidate -Scope Script -ValueOnly
+        if ($obj) { try { $obj.Close($false) } catch {} }
+      }
+    } catch {}
+  }
+
+  # Release known COM objects
+  foreach ($objName in @('wb2','wb22','Workbook','Worksheet')) {
+    try {
+      if (Get-Variable -Name $objName -Scope Script -ErrorAction SilentlyContinue) {
+        $o = Get-Variable -Name $objName -Scope Script -ValueOnly
+        if ($o) { try { [Runtime.Interopservices.Marshal]::ReleaseComObject($o) | Out-Null } catch {} }
+      }
+    } catch {}
+  }
+
+  # Quit Excel and release
+  try { if ($null -ne $Excel) { Invoke-ComRetry { $Excel.Quit() } } } catch { Write-Log "WARN: Final cleanup Excel.Quit failed: $($_.Exception.Message)" }
+  try { if ($null -ne $Excel) { [Runtime.Interopservices.Marshal]::ReleaseComObject($Excel) | Out-Null } } catch {}
+
+  # Force garbage collection for RCWs
+  try { [GC]::Collect(); [GC]::WaitForPendingFinalizers() } catch {}
+
+  # Remove local temp copy if created
+  try {
+    if ($global:LocalCopyPath -and (Test-Path $global:LocalCopyPath)) {
+      Remove-Item -Path $global:LocalCopyPath -Force -ErrorAction SilentlyContinue
+      Write-Log "CLEANUP: Removed local temp copy: $global:LocalCopyPath"
+      Remove-Variable -Name LocalCopyPath -Scope Global -ErrorAction SilentlyContinue
+    }
+  } catch {}
+}
+catch {
+  Write-Log "ERROR: Final safety cleanup encountered an error: $($_.Exception.Message)"
+}
 
 
 

@@ -262,4 +262,14 @@ logs/
 # Ignore Excel/CSV input and process files for BOE PowerShell utilities
 Utilities/Powershell Utilities/Input/*.xls
 Utilities/Powershell Utilities/Process/*.xls
+Utilities/Powershell Utilities/Process/*.xlsx
+Utilities/Powershell Utilities/Process/*.xlsm
+Utilities/Powershell Utilities/Process/*.xlsb
 Utilities/Powershell Utilities/Process/*.csv
+
+# Completed process outputs
+Utilities/Powershell Utilities/ProcessComplete/*.xls
+Utilities/Powershell Utilities/ProcessComplete/*.xlsx
+Utilities/Powershell Utilities/ProcessComplete/*.xlsm
+Utilities/Powershell Utilities/ProcessComplete/*.xlsb
+Utilities/Powershell Utilities/ProcessComplete/*.csv
