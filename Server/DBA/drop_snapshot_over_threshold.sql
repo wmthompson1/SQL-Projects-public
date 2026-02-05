@@ -107,13 +107,14 @@ END
 -- Audit table for snapshot drops (created once)
 IF OBJECT_ID('Staging.managedData.SnapshotDropLog', 'U') IS NULL
 BEGIN
-    CREATE TABLE Staging.managedData.SnapshotDropLog (
-        LogID INT IDENTITY(1,1) PRIMARY KEY,
-        SnapshotName SYSNAME NULL,
-        SourceDB SYSNAME NULL,
-        DropTime DATETIME2 DEFAULT SYSUTCDATETIME(),
-        Success BIT,
-        Message NVARCHAR(4000)
+    CREATE TABLE Staging.[managedData].[SnapshotDropLog](
+        [LogID] [int] IDENTITY(1,1) PRIMARY KEY,
+        [SnapshotName] [sysname] NULL,
+        [SourceDB] [sysname] NULL,
+    DropTime DATETIME2 DEFAULT SYSUTCDATETIME(),
+        [Success] [bit] NULL,
+        [Message] [nvarchar](4000) NULL,
+        [InsertDate] [datetime2] DEFAULT GETDATE(),
     );
 END
 
