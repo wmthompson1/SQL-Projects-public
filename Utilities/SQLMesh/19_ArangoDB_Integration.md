@@ -168,7 +168,7 @@ python Utilities/SQLMesh/generate_twin_tables.py \
   --output models/staging
 ```
 
-See [19_Twin_Tables.md](19_Twin_Tables.md) for details.
+See [20_Twin_Tables.md](20_Twin_Tables.md) for details.
 
 ## Graph Collections
 
