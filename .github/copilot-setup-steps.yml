@@ -1,0 +1,50 @@
+name: Setup Development Environment for Copilot
+
+steps:
+  # Setup Python environment
+  - name: Set up Python
+    uses: actions/setup-python@v5
+    with:
+      python-version: '3.11'
+      cache: 'pip'
+  
+  # Install Python dependencies
+  - name: Install Python dependencies
+    run: |
+      python -m pip install --upgrade pip
+      pip install -r requirements.txt
+      pip install -r requirements-dev.txt
+  
+  # Setup PowerShell (for cross-platform support)
+  - name: Install PowerShell
+    run: |
+      if [ "$RUNNER_OS" == "Linux" ]; then
+        sudo apt-get update
+        sudo apt-get install -y powershell
+      fi
+    shell: bash
+  
+  # Setup Node.js (minimal, for package.json)
+  - name: Set up Node.js
+    uses: actions/setup-node@v4
+    with:
+      node-version: '18'
+  
+  # Create .env template (don't populate secrets)
+  - name: Create .env template
+    run: |
+      cat > .env << 'EOF'
+      # ArangoDB Connection (local development)
+      ARANGO_HOST=http://127.0.0.1:8529
+      ARANGO_DB=_system
+      ARANGO_USER=dev_user
+      ARANGO_PASSWORD=
+      
+      # SQL Server Connection (not available in CI)
+      SQL_SERVER=sql-lab-1
+      SQL_DATABASE=LIVE
+      
+      # OpenAI API (if needed for testing)
+      OPENAI_API_KEY=
+      EOF
+    shell: bash

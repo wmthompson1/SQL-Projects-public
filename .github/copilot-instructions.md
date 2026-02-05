@@ -2,6 +2,35 @@
 
 This repository contains SQL reports, data models, and utilities for a manufacturing ERP (Visual Manufacturing) running on SQL Server. The codebase primarily supports business intelligence reporting, database schema documentation, and data analysis workflows.
 
+## Code Standards
+
+### Required Commands
+```bash
+# Python environment setup (required for all Python work)
+python -m venv .venv
+source .venv/bin/activate  # Linux/Mac
+.\.venv\Scripts\Activate.ps1  # Windows PowerShell
+
+# Install dependencies
+pip install -r requirements.txt  # Core dependencies
+pip install -r requirements-dev.txt  # Development dependencies
+
+# Testing
+python -m pytest  # Run Python tests
+python test_client.py --base-url http://localhost:7860  # Test HF Space app
+
+# PowerShell scripts (use pwsh for cross-platform)
+pwsh ./Documentation/Schema/generate_table_index.ps1  # Regenerate schema index
+pwsh ./Documentation/Schema/ddl-extract/extract-schema.ps1  # Extract schema from SQL Server
+```
+
+### Development Guidelines
+1. **Always use fully-qualified table names** in SQL: `Live.dbo.TABLE_NAME`
+2. **Virtual environments required** for Python work - never install to system Python
+3. **Never commit secrets** - `.env` files are gitignored
+4. **Follow existing patterns** - review similar files before creating new ones
+5. **Document schema changes** - update DDL files and regenerate table index
+
 ## Architecture Overview
 
 ### Core Components
