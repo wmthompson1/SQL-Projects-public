@@ -5,6 +5,16 @@ Add commands to verify synchronization with the remote repository.
 
 Bookmark the [SQL_Reports folder](https://github.com/Skills-Inc-Org/SQL-Projects/tree/main/SQL_Reports)
 
+## GitHub Copilot Integration
+
+This repository is configured with comprehensive GitHub Copilot instructions to help with:
+- SQL report development and maintenance
+- Python script development
+- Schema documentation and data modeling
+- Manufacturing ERP workflows
+
+See [.github/COPILOT_INSTRUCTIONS.md](.github/COPILOT_INSTRUCTIONS.md) for details on how Copilot is configured to work with this repository.
+
 ## SQL and AI
 
 https://github.com/Skills-Inc-Org/SQL-Projects
