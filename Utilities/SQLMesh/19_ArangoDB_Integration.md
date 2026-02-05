@@ -240,4 +240,4 @@ python scripts/nx_to_arango.py --graph-file your_graph.gpickle
 - [scripts/nx_to_arango.py](../../scripts/nx_to_arango.py) - Graph persistence script
 - [Documentation/arango-setup.md](../../Documentation/arango-setup.md) - ArangoDB setup guide
 - [Documentation/Policies/ENV-Handling.md](../../Documentation/Policies/ENV-Handling.md) - Credential management
-- [19_Twin_Tables.md](19_Twin_Tables.md) - Twin table generation
+- [20_Twin_Tables.md](20_Twin_Tables.md) - Twin table generation
