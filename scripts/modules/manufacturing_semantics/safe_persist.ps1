@@ -61,6 +61,9 @@ param(
     [switch]$ForceOverwrite,
     
     [Parameter()]
+    [switch]$DryRun,
+    
+    [Parameter()]
     [string]$BackupDir = "backups"
 )
 
@@ -124,6 +127,12 @@ function Test-Scripts {
     
     if (-not (Test-Path $PersistScript)) {
         $missing += "020_Entry_Point_Persist_SQLite_to_Arango.py"
+    }
+    
+    # Optional helper for running dry-run without PowerShell quoting issues
+    $DryHelper = Join-Path $ScriptDir "run_dry_persist.py"
+    if (-not (Test-Path $DryHelper)) {
+        $missing += "run_dry_persist.py"
     }
     
     if ($missing.Count -gt 0) {
@@ -259,6 +268,27 @@ try {
     else {
         Write-WarningMessage "Backup skipped (--SkipBackup flag used)"
         Write-WarningMessage "Proceeding without backup - data loss is possible!"
+    }
+    
+    # Dry-run handling: run helper and exit early
+    if ($DryRun) {
+        Write-Step "Dry-run requested: running dry-run helper (no ArangoDB contact)"
+        $dryHelper = Join-Path $ScriptDir "run_dry_persist.py"
+        try {
+            python $dryHelper
+            if ($LASTEXITCODE -eq 0) {
+                Write-Success "Dry-run complete. No changes made to ArangoDB."
+                exit 0
+            }
+            else {
+                Write-ErrorMessage "Dry-run helper returned non-zero exit code"
+                exit $LASTEXITCODE
+            }
+        }
+        catch {
+            Write-ErrorMessage "Failed to execute dry-run helper: $_"
+            exit 1
+        }
     }
     
     # Persistence step
