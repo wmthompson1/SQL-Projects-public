@@ -15,6 +15,15 @@ This repository is configured with comprehensive GitHub Copilot instructions to 
 
 See [.github/COPILOT_INSTRUCTIONS.md](.github/COPILOT_INSTRUCTIONS.md) for details on how Copilot is configured to work with this repository.
 
+## Running Python Scripts from PowerShell
+
+**Having trouble running Python scripts?** See:
+- [Documentation/PowerShell_Python_Scripts.md](Documentation/PowerShell_Python_Scripts.md) - Fix PowerShell parser errors
+- [scripts/run_python_script.ps1](scripts/run_python_script.ps1) - Helper script for running Python scripts
+
+**Missing script error?** See:
+- [scripts/modules/manufacturing_semantics/README_MISSING_SCRIPT.md](scripts/modules/manufacturing_semantics/README_MISSING_SCRIPT.md) - How to get scripts from closed PRs
+
 ## SQL and AI
 
 https://github.com/Skills-Inc-Org/SQL-Projects
