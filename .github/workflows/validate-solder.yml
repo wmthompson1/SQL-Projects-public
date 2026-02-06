@@ -1,3 +1,4 @@
+---
 name: Validate Solder Pattern
 
 on:
@@ -118,25 +119,36 @@ jobs:
 
       - name: Create minimal SQLite fixture
         run: |
-          echo "Creating minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
+          echo "Ensuring minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
           mkdir -p hf-space-inventory-sqlgen/app_schema
-          python - <<'PY'
-            import sqlite3, os
-            db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
-            os.makedirs(os.path.dirname(db), exist_ok=True)
-            conn = sqlite3.connect(db)
-            cur = conn.cursor()
-            # Minimal staging tables used by Solder pattern tests
-            cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
-            cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
-            cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
-            cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
-            cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
-            cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
-            conn.commit()
-            conn.close()
-            print('Created minimal SQLite fixture at', db)
-          PY
+          if [ ! -f "$SQLITE_PATH" ]; then
+            echo "Creating mock SQLite database for testing..."
+            cat > /tmp/create_manufacturing_db.py <<'EOF'
+import sqlite3
+import os
+
+db_path = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
+os.makedirs(os.path.dirname(db_path), exist_ok=True)
+
+conn = sqlite3.connect(db_path)
+cursor = conn.cursor()
+
+# Minimal staging tables used by Solder pattern tests
+cursor.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
+cursor.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
+cursor.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
+cursor.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
+cursor.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
+cursor.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
+
+conn.commit()
+conn.close()
+print('Created minimal SQLite fixture at', db_path)
+EOF
+            python /tmp/create_manufacturing_db.py
+          else
+            echo "✅ SQLite database already exists at $SQLITE_PATH"
+          fi
 
       - name: Verify SQLite Database
         run: |
@@ -180,8 +192,8 @@ jobs:
           cd scripts/modules/manufacturing_semantics
           
           # Run pytest if available
-          if command -v pytest &> /dev/null; then
-            pytest tests/solder_tests/ -v 2>/dev/null || echo "⚠️  No pytest tests found yet"
+          if command -v pytest >/dev/null 2>&1; then
+            pytest tests/solder_tests/ -v || echo "⚠️  No pytest tests found yet"
           else
             echo "⚠️  pytest not installed, skipping integration tests"
           fi
