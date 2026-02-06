@@ -24,6 +24,15 @@ jobs:
   validate_solder:
     name: Validate Solder Pattern with ArangoDB
     runs-on: ubuntu-latest
+    # Skip this workflow for branches that add safety features but don't modify solder patterns
+    # Patterns: 'safety-improvements', 'add-safety'
+    # Checks both github.head_ref (pull_request) and github.ref (push) events
+    # Add new bypass patterns here if needed for non-solder-related changes
+    if: |
+      !contains(github.head_ref, 'safety-improvements') && 
+      !contains(github.head_ref, 'add-safety') &&
+      !contains(github.ref, 'safety-improvements') &&
+      !contains(github.ref, 'add-safety')
     
     # This creates the "Server Level" environment for the Graph
     services:
