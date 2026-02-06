@@ -392,6 +392,22 @@ export DATABASE_NAME="networkx_graphs"
 
 # SQLite source database
 export SQLITE_PATH="hf-space-inventory-sqlgen/app_schema/manufacturing.db"
+<<<<<<< HEAD
+=======
+
+## Dry-run / Test Mode Environment Variables
+
+The safety tooling supports two environment variables to run dry-runs without contacting ArangoDB:
+
+- **`TEST_MODE=1`**: Enables test mode — loads data from the SQLite source only and avoids connecting to production data sources.
+- **`SKIP_PERSIST=1`**: Skips ArangoDB connection and persistence entirely; the scripts will print a dry-run summary and exit.
+
+Example (local dry-run):
+
+```bash
+TEST_MODE=1 SKIP_PERSIST=1 python 020_Entry_Point_Persist_SQLite_to_Arango.py
+```
+>>>>>>> f46eb79804215e2f43bd2501073568c06d7a7c6c
 ```
 
 ### File Locations

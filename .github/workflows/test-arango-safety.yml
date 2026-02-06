@@ -1,0 +1,34 @@
+name: Test ArangoDB Safety Features
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/modules/manufacturing_semantics/**'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/modules/manufacturing_semantics/**'
+
+jobs:
+  test_safety:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install networkx
+
+      - name: Run Safety Tests (Dry-Run)
+        run: |
+          cd scripts/modules/manufacturing_semantics/
+          python test_safety_features.py
+        env:
+          TEST_MODE: "1"
+          SKIP_PERSIST: "1"

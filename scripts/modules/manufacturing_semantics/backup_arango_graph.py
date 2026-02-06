@@ -39,10 +39,11 @@ SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 if SCRIPT_DIR not in sys.path:
     sys.path.insert(0, SCRIPT_DIR)
 
-from arangodb_persistence import ArangoDBConfig, ArangoDBGraphPersistence
+# NOTE: Arango imports are deferred to `main()` to avoid requiring Arango libraries
+# when this module is imported by tooling (e.g., tests or static analysis).
 
 
-def list_graphs(persistence: ArangoDBGraphPersistence) -> List[str]:
+def list_graphs(persistence) -> List[str]:
     """
     List all graphs available in ArangoDB.
     
@@ -81,7 +82,7 @@ def list_graphs(persistence: ArangoDBGraphPersistence) -> List[str]:
 
 
 def backup_graph(
-    persistence: ArangoDBGraphPersistence,
+    persistence,
     graph_name: str,
     output_path: Optional[str] = None
 ) -> Optional[str]:
@@ -186,7 +187,7 @@ def backup_graph(
 
 
 def restore_graph(
-    persistence: ArangoDBGraphPersistence,
+    persistence,
     backup_path: str,
     graph_name: Optional[str] = None,
     overwrite: bool = False
@@ -301,9 +302,16 @@ def main():
     print("=" * 75)
     print("ArangoDB Graph Backup Utility")
     print("=" * 75)
+<<<<<<< HEAD
     
     # Connect to ArangoDB
     try:
+=======
+    # Connect to ArangoDB (import lazily to avoid requiring Arango packages at import time)
+    try:
+        from arangodb_persistence import ArangoDBConfig, ArangoDBGraphPersistence
+
+>>>>>>> f46eb79804215e2f43bd2501073568c06d7a7c6c
         config = ArangoDBConfig()
         persistence = ArangoDBGraphPersistence(config)
         print(f"\n✅ Connected to ArangoDB:")
