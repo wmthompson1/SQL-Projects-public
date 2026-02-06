@@ -1,12 +1,12 @@
 scripts\modules\manufacturing_semantics\000index.md
 
-scripts\modules\manufacturing_semantics\semantic_schema\semantic_schema..md
-.\Utilities\Powershell Utilities\venv_setup.ps1
-cd .\Utilities\Powershell Utilities\
+Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
+& ".\Utilities\Powershell Utilities\venv_setup.ps1"
+& ".\.venv\Scripts\Activate.ps1"
 
-Python: Create Environment
-choose venv
-python.terminal.activateEnvironment
+scripts\modules\manufacturing_semantics\semantic_schema\semantic_schema..md
+
+
 
 - or -
 Preferences: Open User Settings
