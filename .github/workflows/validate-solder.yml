@@ -47,6 +47,25 @@ jobs:
         # prematurely when health checks run before initialization finishes.
 
     steps:
+      - name: Debug - Runner and Container Info
+        run: |
+          echo "=== Runner Information ==="
+          echo "Runner OS: $(uname -a)"
+          echo "Runner CPU: $(nproc) cores"
+          echo "Runner Memory: $(free -h | grep Mem)"
+          echo ""
+          echo "=== Docker Information ==="
+          docker version || echo "Docker not available"
+          echo ""
+          echo "=== Running Containers ==="
+          docker ps -a || echo "Cannot list containers"
+          echo ""
+          echo "=== Network Connectivity ==="
+          curl -v http://localhost:8529/_api/version 2>&1 || echo "ArangoDB not yet accessible"
+          echo ""
+          echo "=== Service Container Logs (if available) ==="
+          docker logs $(docker ps -aq --filter "ancestor=arangodb:3.11" | head -1) 2>&1 || echo "Cannot fetch logs yet"
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
