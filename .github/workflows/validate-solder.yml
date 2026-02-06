@@ -42,13 +42,30 @@ jobs:
           ARANGO_NO_AUTH: 1  # Simplifies CI; use secrets for production
         ports:
           - 8529:8529
-        options: >-
-          --health-cmd "curl -f http://localhost:8529/_api/version || exit 1"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+        # Intentionally omit Docker-level health check options; use explicit
+        # readiness polling below. Some runners mark containers unhealthy
+        # prematurely when health checks run before initialization finishes.
 
     steps:
+      - name: Debug - Runner and Container Info
+        run: |
+          echo "=== Runner Information ==="
+          echo "Runner OS: $(uname -a)"
+          echo "Runner CPU: $(nproc) cores"
+          echo "Runner Memory: $(free -h | grep Mem)"
+          echo ""
+          echo "=== Docker Information ==="
+          docker version || echo "Docker not available"
+          echo ""
+          echo "=== Running Containers ==="
+          docker ps -a || echo "Cannot list containers"
+          echo ""
+          echo "=== Network Connectivity ==="
+          curl -v http://localhost:8529/_api/version 2>&1 || echo "ArangoDB not yet accessible"
+          echo ""
+          echo "=== Service Container Logs (if available) ==="
+          docker logs $(docker ps -aq --filter "ancestor=arangodb:3.11" | head -1) 2>&1 || echo "Cannot fetch logs yet"
+
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -68,11 +85,58 @@ jobs:
             pip install -r scripts/modules/manufacturing_semantics/requirements.txt
           fi
 
-      - name: Wait for ArangoDB to be Ready
+      - name: Wait for ArangoDB to be Ready (explicit polling)
         run: |
-          echo "Waiting for ArangoDB to be ready..."
-          timeout 30 bash -c 'until curl -f http://localhost:8529/_api/version; do sleep 2; done'
-          echo "✅ ArangoDB is ready"
+          echo "⏳ Waiting for ArangoDB to start (max 120s)..."
+          START_TIME=$(date +%s)
+
+          timeout 120 bash -c '
+            until curl -sf http://localhost:8529/_api/version >/dev/null 2>&1; do
+              echo "  Still waiting for ArangoDB..."
+              sleep 3
+            done
+          ' || {
+            echo "❌ ArangoDB failed to start within 120 seconds"
+            echo "--- docker ps ---"
+            docker ps -a --no-trunc || true
+            echo "--- docker inspect (arangodb) ---"
+            docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1 | xargs -r docker inspect || true
+            echo "--- docker logs (arangodb) ---"
+            CID=$(docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1)
+            if [ -n "$CID" ]; then
+              docker logs "$CID" || true
+            else
+              echo "No arangodb container found"
+            fi
+            exit 1
+          }
+
+          END_TIME=$(date +%s)
+          ELAPSED=$((END_TIME - START_TIME))
+          echo "✅ ArangoDB is ready (took ${ELAPSED}s)"
+          curl -sf http://localhost:8529/_api/version || true
+
+      - name: Create minimal SQLite fixture
+        run: |
+          echo "Creating minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
+          mkdir -p hf-space-inventory-sqlgen/app_schema
+          python - <<'PY'
+import sqlite3, os
+db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
+os.makedirs(os.path.dirname(db), exist_ok=True)
+conn = sqlite3.connect(db)
+cur = conn.cursor()
+# Minimal staging tables used by Solder pattern tests
+cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
+cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
+cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
+cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
+cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
+cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
+conn.commit()
+conn.close()
+print('Created minimal SQLite fixture at', db)
+PY
 
       - name: Verify SQLite Database
         run: |

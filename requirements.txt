@@ -41,5 +41,5 @@ typing-extensions
 
 # Synthetic Data Generation
 Faker>=23.0.0
-arango
+python-arango>=8.0.0
 pyyaml
