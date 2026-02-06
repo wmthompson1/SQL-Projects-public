@@ -44,9 +44,10 @@ jobs:
           - 8529:8529
         options: >-
           --health-cmd "curl -f http://localhost:8529/_api/version || exit 1"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
+          --health-interval 30s
+          --health-timeout 10s
+          --health-retries 10
+          --health-start-period 60s
 
     steps:
       - name: Checkout Code
@@ -71,8 +72,24 @@ jobs:
       - name: Wait for ArangoDB to be Ready
         run: |
           echo "Waiting for ArangoDB to be ready..."
-          timeout 30 bash -c 'until curl -f http://localhost:8529/_api/version; do sleep 2; done'
-          echo "✅ ArangoDB is ready"
+          # Give ArangoDB more time to start on GitHub runners
+          if timeout 120 bash -c 'until curl -f http://localhost:8529/_api/version; do sleep 3; done'; then
+            echo "✅ ArangoDB is ready"
+          else
+            echo "❌ ArangoDB did not become ready within timeout. Dumping container info and logs for debugging..."
+            echo "--- docker ps ---"
+            docker ps -a --no-trunc
+            echo "--- docker inspect (arangodb) ---"
+            docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1 | xargs -r docker inspect || true
+            echo "--- docker logs (arangodb) ---"
+            CID=$(docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1)
+            if [ -n "$CID" ]; then
+              docker logs "$CID" || true
+            else
+              echo "No arangodb container found"
+            fi
+            exit 1
+          fi
 
       - name: Create minimal SQLite fixture
         run: |
