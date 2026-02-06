@@ -302,23 +302,17 @@ def main():
     print("=" * 75)
     print("ArangoDB Graph Backup Utility")
     print("=" * 75)
-<<<<<<< HEAD
-    
-    # Connect to ArangoDB
-    try:
-=======
     # Connect to ArangoDB (import lazily to avoid requiring Arango packages at import time)
     try:
         from arangodb_persistence import ArangoDBConfig, ArangoDBGraphPersistence
 
->>>>>>> f46eb79804215e2f43bd2501073568c06d7a7c6c
         config = ArangoDBConfig()
         persistence = ArangoDBGraphPersistence(config)
         print(f"\n✅ Connected to ArangoDB:")
         print(f"   Database: {config.database_name}")
         print(f"   Host: {config.host}")
     except Exception as e:
-        print(f"\n❌ Failed to connect to ArangoDB: {e}")
+        print(f"\nFailed to connect to ArangoDB: {e}")
         sys.exit(1)
     
     # List graphs mode
