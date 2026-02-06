@@ -24,6 +24,13 @@ See [.github/COPILOT_INSTRUCTIONS.md](.github/COPILOT_INSTRUCTIONS.md) for detai
 **Missing script error?** See:
 - [scripts/modules/manufacturing_semantics/README_MISSING_SCRIPT.md](scripts/modules/manufacturing_semantics/README_MISSING_SCRIPT.md) - How to get scripts from closed PRs
 
+## Git Workflow & WIP Branches
+
+**Need to push local changes?** See:
+- [QUICK_REFERENCE_WIP_PUSH.md](QUICK_REFERENCE_WIP_PUSH.md) - Quick guide for `git push -u origin wip/...`
+- [Documentation/Git_WIP_Branch_Workflow.md](Documentation/Git_WIP_Branch_Workflow.md) - Complete WIP branch workflow
+- [scripts/create_wip_branch.ps1](scripts/create_wip_branch.ps1) - Automated WIP branch helper script
+
 ## SQL and AI
 
 https://github.com/Skills-Inc-Org/SQL-Projects
