@@ -33,24 +33,10 @@ jobs:
       !contains(github.head_ref, 'add-safety') &&
       !contains(github.ref, 'safety-improvements') &&
       !contains(github.ref, 'add-safety')
-    
-<<<<<<< Updated upstream
-    # This creates the "Server Level" environment for the Graph
-    services:
-      arangodb:
-        image: arangodb:3.11
-        env:
-          ARANGO_NO_AUTH: 1  # Simplifies CI; use secrets for production
-        ports:
-          - 8529:8529
-        options: >-
-          --health-cmd "curl -f http://localhost:8529/_api/version || exit 1"
-          --health-interval 10s
-          --health-timeout 5s
-          --health-retries 5
-
-    steps:
-=======
+    env:
+      SKIP_PERSIST: "true"  # CI uses ephemeral ArangoDB
+      ENABLE_PERSIST: "false"
+      DATABASE_HOST: "arangodb-ci"
     # We'll run ArangoDB manually attached to a dedicated Docker network to
     # avoid binding host ports and conflicting with other containers or
     # GitHub Actions `services:`. This lets steps communicate via the
@@ -97,8 +83,6 @@ jobs:
           echo "ArangoDB container started (name=arangodb-ci)"
           # short sleep to give container a moment before polling
           sleep 2
-
->>>>>>> Stashed changes
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -120,11 +104,6 @@ jobs:
 
       - name: Wait for ArangoDB to be Ready
         run: |
-<<<<<<< Updated upstream
-          echo "Waiting for ArangoDB to be ready..."
-          timeout 30 bash -c 'until curl -f http://localhost:8529/_api/version; do sleep 2; done'
-          echo "✅ ArangoDB is ready"
-=======
           echo "⏳ Waiting for ArangoDB to start (max 120s)..."
           START_TIME=$(date +%s)
 
