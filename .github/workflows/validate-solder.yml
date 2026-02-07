@@ -55,14 +55,10 @@ jobs:
       !contains(github.ref, 'safety-improvements') &&
       !contains(github.ref, 'add-safety')
     
-    # This creates the "Server Level" environment for the Graph
-    services:
-      arangodb:
-        image: arangodb:3.11
-        env:
-          ARANGO_NO_AUTH: 1  # Simplifies CI; use secrets for production
-        ports:
-          - 8529:8529
+    # NOTE: using manual docker run for ArangoDB instead of GitHub Actions service
+    # containers. Service containers have exhibited startup/initialization failures
+    # on some runners; running the container manually in a step gives us full
+    # control and reliable logs.
         # Intentionally omit Docker-level health check options; use explicit
         # readiness polling below. Some runners mark containers unhealthy
         # prematurely when health checks run before initialization finishes.
@@ -86,6 +82,23 @@ jobs:
           echo ""
           echo "=== Service Container Logs (if available) ==="
           docker logs $(docker ps -aq --filter "ancestor=arangodb:3.11" | head -1) 2>&1 || echo "Cannot fetch logs yet"
+
+      - name: Start ArangoDB (manual docker run)
+        run: |
+          echo "Starting ArangoDB container via docker run..."
+          # Remove any leftover container from previous runs
+          if [ $(docker ps -a -q -f name=arangodb-ci | wc -l) -gt 0 ]; then
+            docker rm -f arangodb-ci || true
+          fi
+          docker run -d --name arangodb-ci -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
+            echo "Failed to start arangodb container"
+            docker ps -a || true
+            docker logs arangodb-ci || true
+            exit 1
+          }
+          echo "ArangoDB container started (name=arangodb-ci)"
+          # short sleep to give container a moment before polling
+          sleep 2
 
       - name: Checkout Code
         uses: actions/checkout@v4
