@@ -34,6 +34,7 @@ jobs:
       !contains(github.ref, 'safety-improvements') &&
       !contains(github.ref, 'add-safety')
     
+<<<<<<< Updated upstream
     # This creates the "Server Level" environment for the Graph
     services:
       arangodb:
@@ -49,6 +50,55 @@ jobs:
           --health-retries 5
 
     steps:
+=======
+    # We'll run ArangoDB manually attached to a dedicated Docker network to
+    # avoid binding host ports and conflicting with other containers or
+    # GitHub Actions `services:`. This lets steps communicate via the
+    # container name (e.g. http://arangodb-ci:8529) instead of localhost.
+
+    steps:
+      - name: Debug - Runner and Container Info
+        run: |
+          echo "=== Runner Information ==="
+          echo "Runner OS: $(uname -a)"
+          echo "Runner CPU: $(nproc) cores"
+          echo "Runner Memory: $(free -h | grep Mem)"
+          echo ""
+          echo "=== Docker Information ==="
+          docker version || echo "Docker not available"
+          echo ""
+          echo "=== Running Containers ==="
+          docker ps -a || echo "Cannot list containers"
+          echo ""
+          echo "=== Network Connectivity ==="
+          curl -v http://localhost:8529/_api/version 2>&1 || echo "ArangoDB not yet accessible"
+          echo ""
+          echo "=== Service Container Logs (if available) ==="
+          docker logs $(docker ps -aq --filter "ancestor=arangodb:3.11" | head -1) 2>&1 || echo "Cannot fetch logs yet"
+
+      - name: Create Docker network for ArangoDB
+        run: |
+          echo "Creating dedicated Docker network 'ci-net' (idempotent)"
+          docker network create ci-net || true
+
+      - name: Start ArangoDB (manual docker run)
+        run: |
+          echo "Starting ArangoDB container via docker run..."
+          # Remove any leftover container from previous runs
+          if [ $(docker ps -a -q -f name=arangodb-ci | wc -l) -gt 0 ]; then
+            docker rm -f arangodb-ci || true
+          fi
+          docker run -d --name arangodb-ci --network ci-net -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
+            echo "Failed to start arangodb container"
+            docker ps -a || true
+            docker logs arangodb-ci || true
+            exit 1
+          }
+          echo "ArangoDB container started (name=arangodb-ci)"
+          # short sleep to give container a moment before polling
+          sleep 2
+
+>>>>>>> Stashed changes
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -70,9 +120,73 @@ jobs:
 
       - name: Wait for ArangoDB to be Ready
         run: |
+<<<<<<< Updated upstream
           echo "Waiting for ArangoDB to be ready..."
           timeout 30 bash -c 'until curl -f http://localhost:8529/_api/version; do sleep 2; done'
           echo "✅ ArangoDB is ready"
+=======
+          echo "⏳ Waiting for ArangoDB to start (max 120s)..."
+          START_TIME=$(date +%s)
+
+          timeout 120 bash -c '
+            until curl -sf http://arangodb-ci:8529/_api/version >/dev/null 2>&1; do
+              echo "  Still waiting for ArangoDB..."
+              sleep 3
+            done
+          ' || {
+            echo "❌ ArangoDB failed to start within 120 seconds"
+            echo "--- docker ps ---"
+            docker ps -a --no-trunc || true
+            echo "--- docker inspect (arangodb) ---"
+            docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1 | xargs -r docker inspect || true
+            echo "--- docker logs (arangodb) ---"
+            CID=$(docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1)
+            if [ -n "$CID" ]; then
+              docker logs "$CID" || true
+            else
+              echo "No arangodb container found"
+            fi
+            exit 1
+          }
+
+          END_TIME=$(date +%s)
+          ELAPSED=$((END_TIME - START_TIME))
+          echo "✅ ArangoDB is ready (took ${ELAPSED}s)"
+          curl -sf http://arangodb-ci:8529/_api/version || true
+
+      - name: Create minimal SQLite fixture
+        run: |
+          echo "Ensuring minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
+          mkdir -p hf-space-inventory-sqlgen/app_schema
+          if [ ! -f "$SQLITE_PATH" ]; then
+            echo "Creating mock SQLite database for testing..."
+            cat > /tmp/create_db.py <<'EOF'
+import sqlite3
+import os
+
+db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
+os.makedirs(os.path.dirname(db), exist_ok=True)
+
+conn = sqlite3.connect(db)
+cur = conn.cursor()
+
+# Minimal staging tables used by Solder pattern tests
+cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
+cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
+cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
+cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
+cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
+cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
+
+conn.commit()
+conn.close()
+print('Created minimal SQLite fixture at', db)
+EOF
+            python /tmp/create_db.py
+          else
+            echo "✅ SQLite database already exists at $SQLITE_PATH"
+          fi
+>>>>>>> Stashed changes
 
       - name: Verify SQLite Database
         run: |
@@ -92,7 +206,7 @@ jobs:
           # SQLite source
           SQLITE_PATH: ${{ env.SQLITE_PATH }}
           # ArangoDB connection
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
@@ -103,9 +217,9 @@ jobs:
           python -m unittest scripts/modules/manufacturing_semantics/026_Entry_Point_NCM2_Unit_Test.py
         env:
           # ArangoDB connection for tests
-          ARANGO_HOST: localhost
+          ARANGO_HOST: arangodb-ci
           ARANGO_PORT: 8529
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
@@ -123,7 +237,7 @@ jobs:
           fi
         continue-on-error: true
         env:
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
