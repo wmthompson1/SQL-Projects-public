@@ -1,3 +1,24 @@
+# ensure latest main
+git checkout main
+git pull origin main
+
+# create branch (contains your local edit)
+git checkout -b fix-python-indentation-error
+
+# stage & commit
+git add .github/workflows/validate-solder.yml
+git config user.name "repo-bot" || true
+git config user.email "repo-bot@example.com" || true
+git commit -m "fix: replace indented here-doc with temp file approach to prevent IndentationError" -m "The 'python - <<PY' syntax with indented code caused IndentationError in GitHub runners. Replaced with writing /tmp/create_db.py and running it."
+
+# push
+git push origin fix-python-indentation-error
+
+# create PR (gh CLI) or create it via GitHub UI
+gh pr create \
+  --title "Fix Python IndentationError in SQLite fixture creation" \
+  --body "Fixes IndentationError in workflow 'Create minimal SQLite fixture' by replacing an indented here-doc with a temp-file approach. This ensures Python code isn't subject to YAML indentation and should prevent the previous runtime failure." \
+  --base main---
 name: Validate Solder Pattern
 
 on:
@@ -118,14 +139,20 @@ jobs:
 
       - name: Create minimal SQLite fixture
         run: |
-          echo "Creating minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
+          echo "Ensuring minimal SQLite fixture for hf-space-inventory-sqlgen/app_schema/manufacturing.db"
           mkdir -p hf-space-inventory-sqlgen/app_schema
-          python - <<'PY'
-import sqlite3, os
+          if [ ! -f "$SQLITE_PATH" ]; then
+            echo "Creating mock SQLite database for testing..."
+            cat > /tmp/create_db.py <<'EOF'
+import sqlite3
+import os
+
 db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
 os.makedirs(os.path.dirname(db), exist_ok=True)
+
 conn = sqlite3.connect(db)
 cur = conn.cursor()
+
 # Minimal staging tables used by Solder pattern tests
 cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
 cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
@@ -133,10 +160,15 @@ cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY 
 cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
 cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
 cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
+
 conn.commit()
 conn.close()
 print('Created minimal SQLite fixture at', db)
-PY
+EOF
+            python /tmp/create_db.py
+          else
+            echo "✅ SQLite database already exists at $SQLITE_PATH"
+          fi
 
       - name: Verify SQLite Database
         run: |
@@ -180,8 +212,8 @@ PY
           cd scripts/modules/manufacturing_semantics
           
           # Run pytest if available
-          if command -v pytest &> /dev/null; then
-            pytest tests/solder_tests/ -v 2>/dev/null || echo "⚠️  No pytest tests found yet"
+          if command -v pytest >/dev/null 2>&1; then
+            pytest tests/solder_tests/ -v || echo "⚠️  No pytest tests found yet"
           else
             echo "⚠️  pytest not installed, skipping integration tests"
           fi
