@@ -59,6 +59,10 @@ class ArangoDBGraphPersistence:
     """Utility class for persisting NetworkX graphs to ArangoDB"""
     
     def __init__(self, config: Optional[ArangoDBConfig] = None):
+        # Safety guard: require explicit opt-in to perform writes to ArangoDB
+        if os.getenv("ENABLE_PERSIST", "false").lower() != "true":
+            raise RuntimeError("Persistence disabled. Set ENABLE_PERSIST=true to write to ArangoDB")
+
         if not NXADB_AVAILABLE:
             raise ImportError("nx-arangodb package required. Install: pip install nx-arangodb")
         

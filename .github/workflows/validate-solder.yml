@@ -34,28 +34,14 @@ jobs:
       !contains(github.head_ref, 'add-safety') &&
       !contains(github.ref, 'safety-improvements') &&
       !contains(github.ref, 'add-safety')
-    
-    # Provide a lenient service-level healthcheck for ArangoDB.
-    # Some runners mark the service unhealthy before ArangoDB finishes initialization.
-    # These options increase interval, timeout and retries to give ArangoDB more time.
-    services:
-      arangodb:
-        image: arangodb:3.11
-        ports:
-          - 8529:8529
-        options: >-
-          --health-cmd "curl -f http://localhost:8529/_api/version || exit 1"
-          --health-interval 15s
-          --health-timeout 10s
-          --health-retries 10
-
-    # NOTE: using manual docker run for ArangoDB instead of GitHub Actions service
-    # containers. Service containers have exhibited startup/initialization failures
-    # on some runners; running the container manually in a step gives us full
-    # control and reliable logs.
-        # Intentionally omit Docker-level health check options; use explicit
-        # readiness polling below. Some runners mark containers unhealthy
-        # prematurely when health checks run before initialization finishes.
+    env:
+      SKIP_PERSIST: "true"  # CI uses ephemeral ArangoDB
+      ENABLE_PERSIST: "false"
+      DATABASE_HOST: "arangodb-ci"
+    # We'll run ArangoDB manually attached to a dedicated Docker network to
+    # avoid binding host ports and conflicting with other containers or
+    # GitHub Actions `services:`. This lets steps communicate via the
+    # container name (e.g. http://arangodb-ci:8529) instead of localhost.
 
     steps:
       - name: Debug - Runner and Container Info
@@ -77,6 +63,11 @@ jobs:
           echo "=== Service Container Logs (if available) ==="
           docker logs $(docker ps -aq --filter "ancestor=arangodb:3.11" | head -1) 2>&1 || echo "Cannot fetch logs yet"
 
+      - name: Create Docker network for ArangoDB
+        run: |
+          echo "Creating dedicated Docker network 'ci-net' (idempotent)"
+          docker network create ci-net || true
+
       - name: Start ArangoDB (manual docker run)
         run: |
           echo "Starting ArangoDB container via docker run..."
@@ -84,7 +75,7 @@ jobs:
           if [ $(docker ps -a -q -f name=arangodb-ci | wc -l) -gt 0 ]; then
             docker rm -f arangodb-ci || true
           fi
-          docker run -d --name arangodb-ci -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
+          docker run -d --name arangodb-ci --network ci-net -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
             echo "Failed to start arangodb container"
             docker ps -a || true
             docker logs arangodb-ci || true
@@ -93,7 +84,6 @@ jobs:
           echo "ArangoDB container started (name=arangodb-ci)"
           # short sleep to give container a moment before polling
           sleep 2
-
       - name: Checkout Code
         uses: actions/checkout@v4
 
@@ -119,7 +109,7 @@ jobs:
           START_TIME=$(date +%s)
 
           timeout 120 bash -c '
-            until curl -sf http://localhost:8529/_api/version >/dev/null 2>&1; do
+            until curl -sf http://arangodb-ci:8529/_api/version >/dev/null 2>&1; do
               echo "  Still waiting for ArangoDB..."
               sleep 3
             done
@@ -142,7 +132,7 @@ jobs:
           END_TIME=$(date +%s)
           ELAPSED=$((END_TIME - START_TIME))
           echo "✅ ArangoDB is ready (took ${ELAPSED}s)"
-          curl -sf http://localhost:8529/_api/version || true
+          curl -sf http://arangodb-ci:8529/_api/version || true
 
       - name: Create minimal SQLite fixture
         run: |
@@ -195,7 +185,7 @@ EOF
           # SQLite source
           SQLITE_PATH: ${{ env.SQLITE_PATH }}
           # ArangoDB connection
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
@@ -206,9 +196,9 @@ EOF
           python -m unittest scripts/modules/manufacturing_semantics/026_Entry_Point_NCM2_Unit_Test.py
         env:
           # ArangoDB connection for tests
-          ARANGO_HOST: localhost
+          ARANGO_HOST: arangodb-ci
           ARANGO_PORT: 8529
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
@@ -226,7 +216,7 @@ EOF
           fi
         continue-on-error: true
         env:
-          DATABASE_HOST: http://localhost:8529
+          DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
