@@ -100,7 +100,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+            python-version: '3.11'
           cache: "pip"
 
       - name: Install Python Dependencies
@@ -171,7 +171,7 @@ cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
 conn.commit()
 conn.close()
 print('Created minimal SQLite fixture at', db)
-            EOF
+EOF
             python /tmp/create_db.py
           else
             echo "✅ SQLite database already exists at $SQLITE_PATH"
