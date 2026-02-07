@@ -1,24 +1,4 @@
-# ensure latest main
-git checkout main
-git pull origin main
-
-# create branch (contains your local edit)
-git checkout -b fix-python-indentation-error
-
-# stage & commit
-git add .github/workflows/validate-solder.yml
-git config user.name "repo-bot" || true
-git config user.email "repo-bot@example.com" || true
-git commit -m "fix: replace indented here-doc with temp file approach to prevent IndentationError" -m "The 'python - <<PY' syntax with indented code caused IndentationError in GitHub runners. Replaced with writing /tmp/create_db.py and running it."
-
-# push
-git push origin fix-python-indentation-error
-
-# create PR (gh CLI) or create it via GitHub UI
-gh pr create \
-  --title "Fix Python IndentationError in SQLite fixture creation" \
-  --body "Fixes IndentationError in workflow 'Create minimal SQLite fixture' by replacing an indented here-doc with a temp-file approach. This ensures Python code isn't subject to YAML indentation and should prevent the previous runtime failure." \
-  --base main---
+# Workflow: Validate Solder Pattern
 name: Validate Solder Pattern
 
 on:
@@ -55,6 +35,20 @@ jobs:
       !contains(github.ref, 'safety-improvements') &&
       !contains(github.ref, 'add-safety')
     
+    # Provide a lenient service-level healthcheck for ArangoDB.
+    # Some runners mark the service unhealthy before ArangoDB finishes initialization.
+    # These options increase interval, timeout and retries to give ArangoDB more time.
+    services:
+      arangodb:
+        image: arangodb:3.11
+        ports:
+          - 8529:8529
+        options: >-
+          --health-cmd "curl -f http://localhost:8529/_api/version || exit 1"
+          --health-interval 15s
+          --health-timeout 10s
+          --health-retries 10
+
     # NOTE: using manual docker run for ArangoDB instead of GitHub Actions service
     # containers. Service containers have exhibited startup/initialization failures
     # on some runners; running the container manually in a step gives us full
