@@ -1,3 +1,4 @@
+# Workflow: Validate Solder Pattern
 name: Validate Solder Pattern
 
 on:
@@ -89,7 +90,7 @@ jobs:
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: ${{ env.PYTHON_VERSION }}
+            python-version: '3.11'
           cache: "pip"
 
       - name: Install Python Dependencies
@@ -102,7 +103,7 @@ jobs:
             pip install -r scripts/modules/manufacturing_semantics/requirements.txt
           fi
 
-      - name: Wait for ArangoDB to be Ready
+      - name: Wait for ArangoDB to be Ready (explicit polling)
         run: |
           echo "⏳ Waiting for ArangoDB to start (max 120s)..."
           START_TIME=$(date +%s)
@@ -165,7 +166,6 @@ EOF
           else
             echo "✅ SQLite database already exists at $SQLITE_PATH"
           fi
->>>>>>> Stashed changes
 
       - name: Verify SQLite Database
         run: |
@@ -209,8 +209,8 @@ EOF
           cd scripts/modules/manufacturing_semantics
           
           # Run pytest if available
-          if command -v pytest &> /dev/null; then
-            pytest tests/solder_tests/ -v 2>/dev/null || echo "⚠️  No pytest tests found yet"
+          if command -v pytest >/dev/null 2>&1; then
+            pytest tests/solder_tests/ -v || echo "⚠️  No pytest tests found yet"
           else
             echo "⚠️  pytest not installed, skipping integration tests"
           fi

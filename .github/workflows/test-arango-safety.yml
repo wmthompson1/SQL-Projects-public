@@ -1,0 +1,67 @@
+name: Test ArangoDB Safety Features
+
+on:
+  pull_request:
+    paths:
+      - 'scripts/modules/manufacturing_semantics/**'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/modules/manufacturing_semantics/**'
+
+jobs:
+  test_safety:
+    runs-on: ubuntu-latest
+    env:
+      ARANGO_NO_AUTH: '1'
+      ARANGO_HOST: 'http://127.0.0.1:8529'
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Optional ArangoDB health check
+        # This check is tolerant: it will retry and will not fail the job
+        # Tests run in dry-run mode, so Arango being unavailable is acceptable.
+        run: |
+          host="${ARANGO_HOST}"
+          echo "Checking ArangoDB health at $host (ARANGO_NO_AUTH=$ARANGO_NO_AUTH)"
+          attempt=0
+          max_attempts=10
+          until [ $attempt -ge $max_attempts ]; do
+            if [ "$ARANGO_NO_AUTH" = "1" ]; then
+              curl --silent --fail "$host/_api/version" && break || true
+            else
+              if [ -n "$ARANGO_USER" ] && [ -n "$ARANGO_PASS" ]; then
+                curl --silent --fail -u "$ARANGO_USER:$ARANGO_PASS" "$host/_api/version" && break || true
+              else
+                echo "ARANGO_USER/ARANGO_PASS not set; skipping authenticated health check"
+                break
+              fi
+            fi
+            attempt=$((attempt+1))
+            echo "Arango not responding (attempt $attempt/$max_attempts). Retrying in 2s..."
+            sleep 2
+          done
+          if [ $attempt -ge $max_attempts ]; then
+            echo "ArangoDB did not become available after $max_attempts attempts. Continuing (dry-run)."
+          else
+            echo "ArangoDB appears reachable."
+          fi
+        continue-on-error: true
+
+      - name: Install Dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install networkx
+
+      - name: Run Safety Tests (Dry-Run)
+        run: |
+          cd scripts/modules/manufacturing_semantics/
+          python test_safety_features.py
+        env:
+          TEST_MODE: "1"
+          SKIP_PERSIST: "1"
