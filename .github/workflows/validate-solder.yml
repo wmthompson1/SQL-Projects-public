@@ -188,7 +188,7 @@ EOF
           DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
-          DATABASE_PASSWORD: ""
+        #  DATABASE_PASSWORD: ""
 
       - name: Run Solder Unit Tests
         run: |
