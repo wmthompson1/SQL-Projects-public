@@ -161,6 +161,9 @@ jobs:
           if [ ! -f "$SQLITE_PATH" ]; then
             echo "Creating mock SQLite database for testing..."
             # Use printf to write the Python script so we avoid heredoc indentation issues
+            # This expanded fixture creates the schema_* metadata tables used by
+            # the seed loader and inserts minimal perspective/intent rows so the
+            # NCM seed script can run without requiring the full production DDL.
             printf '%s\n' \
               "import sqlite3" \
               "import os" \
@@ -168,13 +171,25 @@ jobs:
               "os.makedirs(os.path.dirname(db), exist_ok=True)" \
               "conn = sqlite3.connect(db)" \
               "cur = conn.cursor()" \
-              "# Minimal staging tables used by Solder pattern tests" \
-              "cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')" \
-              "cur.execute(\"INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ('high', 123.45)\")" \
-              "cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')" \
-              "cur.execute(\"INSERT INTO stg_product_defects (defect_type, product_id) VALUES ('misprint', 1)\")" \
+              "# Staging tables used by Solder pattern tests" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL, defect_description TEXT)')" \
+              "cur.execute(\"INSERT OR IGNORE INTO stg_non_conformant_materials (id, severity, cost_impact, defect_description) VALUES (1, 'high', 123.45, 'fracture')\")" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER, severity TEXT, cost_impact REAL)')" \
+              "cur.execute(\"INSERT OR IGNORE INTO stg_product_defects (id, defect_type, product_id, severity, cost_impact) VALUES (1, 'misprint', 1, 'low', 12.34)\")" \
               "cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')" \
               "cur.execute(\"INSERT OR IGNORE INTO product (id, name) VALUES (1, 'widget')\")" \
+              "# Semantic metadata tables expected by the loader" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_concepts (concept_id INTEGER PRIMARY KEY AUTOINCREMENT, concept_name TEXT UNIQUE, description TEXT)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_concept_fields (concept_field_id INTEGER PRIMARY KEY AUTOINCREMENT, concept_id INTEGER, table_name TEXT, field_name TEXT)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_intents (intent_id INTEGER PRIMARY KEY AUTOINCREMENT, intent_name TEXT, description TEXT)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_perspectives (perspective_id INTEGER PRIMARY KEY AUTOINCREMENT, perspective_name TEXT UNIQUE, description TEXT)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_intent_perspectives (id INTEGER PRIMARY KEY AUTOINCREMENT, intent_id INTEGER, perspective_id INTEGER, intent_factor_weight INTEGER)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_perspective_concepts (id INTEGER PRIMARY KEY AUTOINCREMENT, perspective_id INTEGER, concept_id INTEGER)')" \
+              "cur.execute('CREATE TABLE IF NOT EXISTS schema_intent_concepts (id INTEGER PRIMARY KEY AUTOINCREMENT, intent_id INTEGER, concept_id INTEGER, intent_factor_weight INTEGER)')" \
+              "# Insert minimal perspectives and an example intent" \
+              "cur.execute(\"INSERT OR IGNORE INTO schema_perspectives (perspective_name, description) VALUES ('Quality', 'Quality perspective')\")" \
+              "cur.execute(\"INSERT OR IGNORE INTO schema_perspectives (perspective_name, description) VALUES ('Finance', 'Finance perspective')\")" \
+              "cur.execute(\"INSERT OR IGNORE INTO schema_intents (intent_name, description) VALUES ('Solder', 'Solder pattern intent')\")" \
               "conn.commit()" \
               "conn.close()" \
               "print('Created minimal SQLite fixture at', db)" \
