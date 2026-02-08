@@ -220,6 +220,7 @@ jobs:
           DATABASE_HOST: http://arangodb-ci:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
+          ENABLE_PERSIST: "true"
         #  DATABASE_PASSWORD: ""
 
       - name: Run Solder Unit Tests
