@@ -302,6 +302,10 @@ def main():
     print_graph_stats(G)
     
     print("\n🔗 Step 3: Connecting to ArangoDB...")
+    # Safety guard: require explicit opt-in to perform writes to ArangoDB
+    if os.getenv("ENABLE_PERSIST", "false").lower() != "true":
+        raise RuntimeError("Persistence disabled. Set ENABLE_PERSIST=true to write to ArangoDB")
+
     config = ArangoDBConfig()
     print(f"   Host: {config.host}")
     print(f"   Database: {config.database_name}")
