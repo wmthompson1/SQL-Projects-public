@@ -17,7 +17,8 @@ The Solder Pattern:
 
 import os
 import sqlite3
-from arangodb_helpers.graph_builder import ArangoGraphPersistence
+import networkx as nx
+from arangodb_persistence import ArangoDBConfig, ArangoDBGraphPersistence
 
 SQLITE_PATH = "hf-space-inventory-sqlgen/app_schema/manufacturing.db"
 
@@ -91,16 +92,15 @@ def ensure_ncm_fields_exist(conn):
 
 def load_semantic_graph_with_elevations(conn):
     """Load semantic graph with explicit elevation weights for NCM pattern."""
-    from arangodb_helpers.graph_builder import DirectGraphBuilder
-    
-    G = DirectGraphBuilder()
+    G = nx.DiGraph()
     COLLECTION = "manufacturing_semantic_layer_node"
     
     print("Loading intents...")
     cursor = conn.execute("SELECT intent_id, intent_name, description FROM schema_intents")
     for row in cursor:
         node_key = f"intent_{row['intent_name']}"
-        G.add_node(node_key, COLLECTION,
+        node_id = f"{COLLECTION}/{node_key}"
+        G.add_node(node_id, 
                    type="Intent",
                    intent_id=row['intent_id'],
                    name=row['intent_name'],
@@ -110,7 +110,8 @@ def load_semantic_graph_with_elevations(conn):
     cursor = conn.execute("SELECT perspective_id, perspective_name, description FROM schema_perspectives")
     for row in cursor:
         node_key = f"perspective_{row['perspective_name']}"
-        G.add_node(node_key, COLLECTION,
+        node_id = f"{COLLECTION}/{node_key}"
+        G.add_node(node_id, 
                    type="Perspective",
                    perspective_id=row['perspective_id'],
                    name=row['perspective_name'],
@@ -120,7 +121,8 @@ def load_semantic_graph_with_elevations(conn):
     cursor = conn.execute("SELECT concept_id, concept_name, description FROM schema_concepts")
     for row in cursor:
         node_key = f"concept_{row['concept_name']}"
-        G.add_node(node_key, COLLECTION,
+        node_id = f"{COLLECTION}/{node_key}"
+        G.add_node(node_id, 
                    type="Concept",
                    concept_id=row['concept_id'],
                    name=row['concept_name'],
@@ -130,7 +132,8 @@ def load_semantic_graph_with_elevations(conn):
     cursor = conn.execute("SELECT DISTINCT table_name, field_name FROM schema_concept_fields")
     for row in cursor:
         node_key = f"field_{row['table_name']}_{row['field_name']}"
-        G.add_node(node_key, COLLECTION,
+        node_id = f"{COLLECTION}/{node_key}"
+        G.add_node(node_id, 
                    type="Field",
                    table_name=row['table_name'],
                    field_name=row['field_name'],
@@ -146,7 +149,7 @@ def load_semantic_graph_with_elevations(conn):
     for row in cursor:
         G.add_edge(f"{COLLECTION}/intent_{row['intent_name']}", 
                    f"{COLLECTION}/perspective_{row['perspective_name']}",
-                   "OPERATES_WITHIN",
+                   relationship="OPERATES_WITHIN",
                    weight=row['intent_factor_weight'])
     
     print("Loading Perspective -> Concept edges (USES_DEFINITION)...")
@@ -159,7 +162,7 @@ def load_semantic_graph_with_elevations(conn):
     for row in cursor:
         G.add_edge(f"{COLLECTION}/perspective_{row['perspective_name']}", 
                    f"{COLLECTION}/concept_{row['concept_name']}",
-                   "USES_DEFINITION")
+                   relationship="USES_DEFINITION")
     
     print("Loading Field -> Concept edges (CAN_MEAN)...")
     cursor = conn.execute("""
@@ -171,7 +174,7 @@ def load_semantic_graph_with_elevations(conn):
         field_key = f"field_{row['table_name']}_{row['field_name']}"
         G.add_edge(f"{COLLECTION}/{field_key}", 
                    f"{COLLECTION}/concept_{row['concept_name']}",
-                   "CAN_MEAN")
+                   relationship="CAN_MEAN")
     
     print("Loading Intent -> Concept edges (ELEVATES/SUPPRESSES)...")
     cursor = conn.execute("""
@@ -190,7 +193,7 @@ def load_semantic_graph_with_elevations(conn):
             rel = "NEUTRAL"
         G.add_edge(f"{COLLECTION}/intent_{row['intent_name']}", 
                    f"{COLLECTION}/concept_{row['concept_name']}",
-                   rel,
+                   relationship=rel,
                    weight=weight)
     
     print("\nAdding explicit NCM elevation edges...")
@@ -201,55 +204,62 @@ def load_semantic_graph_with_elevations(conn):
     quality_perspective = f"{COLLECTION}/perspective_Quality"
     finance_perspective = f"{COLLECTION}/perspective_Finance"
     
-    G.add_edge(quality_perspective, ncm_concept,
-               "ELEVATES",
-               elevation_weight=1.0,
-               solder_priority="primary",
-               collision_resolution="Quality perspective selects NCM.severity over defect.severity")
-    print(f"  Added: Quality -> MATERIAL_NON_CONFORMANCE (weight=1.0)")
+    if G.has_node(quality_perspective) and G.has_node(ncm_concept):
+        G.add_edge(quality_perspective, ncm_concept,
+                   relationship="ELEVATES",
+                   elevation_weight=1.0,
+                   solder_priority="primary",
+                   collision_resolution="Quality perspective selects NCM.severity over defect.severity")
+        print(f"  Added: Quality -> MATERIAL_NON_CONFORMANCE (weight=1.0)")
     
-    G.add_edge(quality_perspective, defect_concept,
-               "SUPPRESSES",
-               elevation_weight=0.0,
-               solder_priority="secondary",
-               collision_resolution="Suppressed when NCM is elevated")
-    print(f"  Added: Quality -> PRODUCTION_DEFECT (weight=0.0, suppressed)")
+    if G.has_node(quality_perspective) and G.has_node(defect_concept):
+        G.add_edge(quality_perspective, defect_concept,
+                   relationship="SUPPRESSES",
+                   elevation_weight=0.0,
+                   solder_priority="secondary",
+                   collision_resolution="Suppressed when NCM is elevated")
+        print(f"  Added: Quality -> PRODUCTION_DEFECT (weight=0.0, suppressed)")
     
-    G.add_edge(finance_perspective, fin_ncm_concept,
-               "ELEVATES",
-               elevation_weight=1.0,
-               solder_priority="primary",
-               collision_resolution="Finance perspective selects NCM.cost_impact (actual) over defect.cost_impact (estimated)")
-    print(f"  Added: Finance -> FINANCIAL_LIABILITY_NCM (weight=1.0)")
+    if G.has_node(finance_perspective) and G.has_node(fin_ncm_concept):
+        G.add_edge(finance_perspective, fin_ncm_concept,
+                   relationship="ELEVATES",
+                   elevation_weight=1.0,
+                   solder_priority="primary",
+                   collision_resolution="Finance perspective selects NCM.cost_impact (actual) over defect.cost_impact (estimated)")
+        print(f"  Added: Finance -> FINANCIAL_LIABILITY_NCM (weight=1.0)")
     
-    G.add_edge(finance_perspective, defect_concept,
-               "SUPPRESSES",
-               elevation_weight=0.0,
-               solder_priority="secondary",
-               collision_resolution="Suppressed in Finance - defect.cost_impact is estimated, NCM.cost_impact is actual")
-    print(f"  Added: Finance -> PRODUCTION_DEFECT (weight=0.0, suppressed)")
+    if G.has_node(finance_perspective) and G.has_node(defect_concept):
+        G.add_edge(finance_perspective, defect_concept,
+                   relationship="SUPPRESSES",
+                   elevation_weight=0.0,
+                   solder_priority="secondary",
+                   collision_resolution="Suppressed in Finance - defect.cost_impact is estimated, NCM.cost_impact is actual")
+        print(f"  Added: Finance -> PRODUCTION_DEFECT (weight=0.0, suppressed)")
     
     ncm_severity_field = f"{COLLECTION}/field_stg_non_conformant_materials_severity"
     ncm_cost_field = f"{COLLECTION}/field_stg_non_conformant_materials_cost_impact"
     defect_severity_field = f"{COLLECTION}/field_stg_product_defects_severity"
     defect_cost_field = f"{COLLECTION}/field_stg_product_defects_cost_impact"
     
-    G.add_edge(defect_cost_field, defect_concept,
-               "CAN_MEAN",
-               is_primary=False,
-               table_alias="defect",
-               note="Estimated cost - suppressed in Finance perspective")
-    print(f"  Added: stg_product_defects.cost_impact -> PRODUCTION_DEFECT (estimated)")
+    if G.has_node(defect_cost_field) and G.has_node(defect_concept):
+        G.add_edge(defect_cost_field, defect_concept,
+                   relationship="CAN_MEAN",
+                   is_primary=False,
+                   table_alias="defect",
+                   note="Estimated cost - suppressed in Finance perspective")
+        print(f"  Added: stg_product_defects.cost_impact -> PRODUCTION_DEFECT (estimated)")
     
-    G.add_edge(ncm_severity_field, ncm_concept,
-               "CAN_MEAN",
-               is_primary=True,
-               table_alias="ncm")
+    if G.has_node(ncm_severity_field) and G.has_node(ncm_concept):
+        G.add_edge(ncm_severity_field, ncm_concept,
+                   relationship="CAN_MEAN",
+                   is_primary=True,
+                   table_alias="ncm")
     
-    G.add_edge(ncm_cost_field, fin_ncm_concept,
-               "CAN_MEAN",
-               is_primary=True,
-               table_alias="ncm")
+    if G.has_node(ncm_cost_field) and G.has_node(fin_ncm_concept):
+        G.add_edge(ncm_cost_field, fin_ncm_concept,
+                   relationship="CAN_MEAN",
+                   is_primary=True,
+                   table_alias="ncm")
     
     return G
 
@@ -257,20 +267,20 @@ def load_semantic_graph_with_elevations(conn):
 def print_graph_stats(G):
     """Print graph statistics."""
     print(f"\n📊 Graph Statistics:")
-    if hasattr(G, 'stats'):
-        s = G.stats()
-        print(f"   Nodes: {s.get('nodes')}")
-        print(f"   Edges: {s.get('edges')}")
-        print(f"   Node collections: {s.get('node_types')}")
-        print(f"   Edge types: {s.get('edge_types')}")
-        return
-
-    # Fallback to NetworkX-like API
-    try:
-        print(f"   Nodes: {G.number_of_nodes()}")
-        print(f"   Edges: {G.number_of_edges()}")
-    except Exception:
-        print("   Unable to determine graph size")
+    print(f"   Nodes: {G.number_of_nodes()}")
+    print(f"   Edges: {G.number_of_edges()}")
+    
+    type_counts = {}
+    for _, data in G.nodes(data=True):
+        t = data.get('type', 'unknown')
+        type_counts[t] = type_counts.get(t, 0) + 1
+    print(f"   Node types: {type_counts}")
+    
+    rel_counts = {}
+    for _, _, data in G.edges(data=True):
+        r = data.get('relationship', 'unknown')
+        rel_counts[r] = rel_counts.get(r, 0) + 1
+    print(f"   Edge types: {rel_counts}")
 
 
 def main():
@@ -296,28 +306,29 @@ def main():
     if os.getenv("ENABLE_PERSIST", "false").lower() != "true":
         raise RuntimeError("Persistence disabled. Set ENABLE_PERSIST=true to write to ArangoDB")
 
-    host = os.getenv("ARANGO_HOST", "127.0.0.1")
-    port = int(os.getenv("ARANGO_PORT", "8529"))
-    db_name = os.getenv("ARANGO_DB", "manufacturing_graph")
-
-    print(f"   Host: {host}")
-    print(f"   Port: {port}")
-    print(f"   Database: {db_name}")
-
-    persistence = ArangoGraphPersistence(host=host, port=port, db_name=db_name)
-
+    config = ArangoDBConfig()
+    print(f"   Host: {config.host}")
+    print(f"   Database: {config.database_name}")
+    
+    persistence = ArangoDBGraphPersistence(config)
+    
     print("\n💾 Step 4: Persisting updated graph to ArangoDB...")
-    persistence.persist_graph(G, graph_name="manufacturing_semantic_layer")
-
+    adb_graph = persistence.persist_graph(
+        graph=G,
+        name="manufacturing_semantic_layer",
+        write_batch_size=1000,
+        overwrite=True
+    )
+    
     print("\n✅ Graph persisted successfully!")
-
-    print("\n🔍 Step 5: Verifying persistence (local builder stats)...")
-    try:
-        s = G.stats()
-        print(f"   Nodes (builder): {s.get('nodes')}")
-        print(f"   Edges (builder): {s.get('edges')}")
-    except Exception:
-        print("   Verification: unable to read builder stats")
+    
+    print("\n🔍 Step 5: Verifying persistence...")
+    loaded = persistence.load_graph(
+        name="manufacturing_semantic_layer",
+        directed=True
+    )
+    print(f"   Loaded nodes: {loaded.number_of_nodes()}")
+    print(f"   Loaded edges: {loaded.number_of_edges()}")
     
     print("\n" + "=" * 70)
     print("✅ SUCCESS: NCM elevation weights added to ArangoDB!")

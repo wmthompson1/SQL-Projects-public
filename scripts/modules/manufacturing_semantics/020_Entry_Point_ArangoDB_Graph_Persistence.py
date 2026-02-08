@@ -14,20 +14,16 @@ Demonstrates production-ready graph persistence using nx-arangodb:
 """
 
 import os
-import networkx as nx
-from typing import Optional, Dict, Any, Union, TYPE_CHECKING
+from typing import Optional, Dict, Any
 import json
 
-if TYPE_CHECKING:
-    import nx_arangodb as nxadb
-
 try:
-    import nx_arangodb as nxadb
-    NXADB_AVAILABLE = True
-except ImportError:
-    NXADB_AVAILABLE = False
-    nxadb = None  # type: ignore
-    print("⚠️  nx-arangodb not available. Install with: pip install nx-arangodb")
+    from arango import ArangoClient
+    ARANGO_AVAILABLE = True
+except Exception:
+    ArangoClient = None  # type: ignore
+    ARANGO_AVAILABLE = False
+    print("⚠️  python-arango not available. Install with: pip install python-arango")
 
 
 class ArangoDBConfig:
@@ -96,19 +92,21 @@ class ArangoDBGraphPersistence:
         Args:
             config: ArangoDBConfig instance (creates default if None)
         """
-        if not NXADB_AVAILABLE:
-            raise ImportError("nx-arangodb package required. Install: pip install nx-arangodb")
-        
+        if not ARANGO_AVAILABLE:
+            raise ImportError("python-arango package required. Install: pip install python-arango")
+
         self.config = config or ArangoDBConfig()
         self.config.set_environment_variables()
+        # initialize client lazily
+        self._client = None
     
     def persist_graph(
         self,
-        graph: Union[nx.Graph, nx.DiGraph],
+        graph: Dict[str, Any],
         name: str,
         write_batch_size: int = 50000,
         overwrite: bool = False
-    ) -> Any:
+    ) -> Dict[str, Any]:
         """
         Persist NetworkX graph to ArangoDB
         
@@ -130,46 +128,102 @@ class ArangoDBGraphPersistence:
         Returns:
             nx-arangodb Graph or DiGraph instance
         """
-        print(f"📤 Persisting graph '{name}' to ArangoDB...")
-        print(f"   Graph type: {type(graph).__name__}")
-        print(f"   Nodes: {graph.number_of_nodes()}")
-        print(f"   Edges: {graph.number_of_edges()}")
-        print(f"   Write batch size: {write_batch_size}")
-        
+        """
+        Persist a generic graph to ArangoDB using python-arango.
+
+        The `graph` argument is expected to be a dict with two keys:
+          - 'nodes': list of dicts (documents) to upsert into a node collection
+          - 'edges': list of dicts with `_from` and `_to` arango document ids to insert into an edge collection
+
+        Example:
+          graph = {
+              'nodes': [{'key': 'A', 'label': 'alpha'}, ...],
+              'edges': [{'_from': 'nodes/A', '_to': 'nodes/B', 'relation': 'connects'}, ...]
+          }
+        """
+        print(f"📤 Persisting graph '{name}' to ArangoDB (python-arango)...")
+        print(f"   Nodes: {len(graph.get('nodes', []))}")
+        print(f"   Edges: {len(graph.get('edges', []))}")
+
+        # setup client and DB
+        client = ArangoClient(hosts=[self.config.host])
+        # create DB if missing and user is root (best-effort)
         try:
-            # Choose appropriate ArangoDB graph type
-            if isinstance(graph, nx.DiGraph):
-                adb_graph = nxadb.DiGraph(
-                    name=name,
-                    incoming_graph_data=graph,
-                    write_batch_size=write_batch_size,
-                    overwrite=overwrite,
-                    # nx-arangodb uses overwrite_graph as the clear flag; pass both for compatibility
-                    overwrite_graph=overwrite
-                )
-            else:
-                adb_graph = nxadb.Graph(
-                    name=name,
-                    incoming_graph_data=graph,
-                    write_batch_size=write_batch_size,
-                    overwrite=overwrite,
-                    overwrite_graph=overwrite
-                )
-            
-            print(f"✅ Graph '{name}' successfully persisted to ArangoDB")
-            return adb_graph
-            
-        except Exception as e:
-            print(f"❌ Failed to persist graph: {e}")
-            raise
+            if self.config.username == 'root':
+                if self.config.database_name not in client.databases():
+                    client.create_database(self.config.database_name)
+        except Exception:
+            # ignore permission issues
+            pass
+
+        db = client.db(self.config.database_name, username=self.config.username, password=self.config.password)
+
+        # collections names
+        node_coll = f"{name}_nodes"
+        edge_coll = f"{name}_edges"
+
+        # ensure collections
+        if not db.has_collection(node_coll):
+            db.create_collection(node_coll)
+        if not db.has_collection(edge_coll):
+            db.create_collection(edge_coll, edge=True)
+
+        # create or ensure graph
+        graph_name = name
+        try:
+            if graph_name not in db.graphs():
+                db.create_graph(graph_name, edge_definitions=[{
+                    'edge_collection': edge_coll,
+                    'from_vertex_collections': [node_coll],
+                    'to_vertex_collections': [node_coll]
+                }])
+        except Exception:
+            # ignore if graph already exists or cannot be created
+            pass
+
+        # insert nodes (upsert by _key if provided)
+        nodes = graph.get('nodes', [])
+        if nodes:
+            # convert node dicts to documents with _key when present
+            docs = []
+            for n in nodes:
+                doc = dict(n)
+                if 'key' in doc and '_key' not in doc:
+                    doc['_key'] = doc.pop('key')
+                docs.append(doc)
+            col = db.collection(node_coll)
+            # upsert: first try insert_many, on conflict replace via update
+            for d in docs:
+                try:
+                    col.insert(d)
+                except Exception:
+                    try:
+                        # attempt update by _key
+                        key = d.get('_key')
+                        if key:
+                            col.replace(key, d)
+                    except Exception:
+                        pass
+
+        # insert edges
+        edges = graph.get('edges', [])
+        if edges:
+            ecol = db.collection(edge_coll)
+            for e in edges:
+                try:
+                    ecol.insert(e)
+                except Exception:
+                    pass
+
+        print(f"✅ Persisted graph '{name}' to ArangoDB (collections: {node_coll}, {edge_coll})")
+        return {'node_collection': node_coll, 'edge_collection': edge_coll, 'graph': graph_name}
     
     def load_graph(
         self,
         name: str,
-        directed: bool = True,
         read_batch_size: int = 50000,
         read_parallelism: int = 4
-    ) -> Any:
+    ) -> Dict[str, Any]:
         """
         Load persisted graph from ArangoDB
         
@@ -191,62 +245,30 @@ class ArangoDBGraphPersistence:
         Returns:
             nx-arangodb Graph or DiGraph instance
         """
-        print(f"📥 Loading graph '{name}' from ArangoDB...")
-        print(f"   Graph type: {'DiGraph' if directed else 'Graph'}")
-        print(f"   Read batch size: {read_batch_size}")
-        print(f"   Read parallelism: {read_parallelism}")
-        
-        try:
-            if directed:
-                adb_graph = nxadb.DiGraph(
-                    name=name,
-                    read_batch_size=read_batch_size,
-                    read_parallelism=read_parallelism
-                )
-            else:
-                adb_graph = nxadb.Graph(
-                    name=name,
-                    read_batch_size=read_batch_size,
-                    read_parallelism=read_parallelism
-                )
-            
-            print(f"✅ Graph '{name}' successfully loaded from ArangoDB")
-            print(f"   Nodes: {adb_graph.number_of_nodes()}")
-            print(f"   Edges: {adb_graph.number_of_edges()}")
-            
-            return adb_graph
-            
-        except Exception as e:
-            print(f"❌ Failed to load graph: {e}")
-            raise
+        print(f"📥 Loading graph '{name}' from ArangoDB (python-arango)...")
+
+        client = ArangoClient(hosts=[self.config.host])
+        db = client.db(self.config.database_name, username=self.config.username, password=self.config.password)
+
+        node_coll = f"{name}_nodes"
+        edge_coll = f"{name}_edges"
+
+        result = {'nodes': [], 'edges': []}
+        if db.has_collection(node_coll):
+            for doc in db.collection(node_coll).all():
+                result['nodes'].append(doc)
+        if db.has_collection(edge_coll):
+            for doc in db.collection(edge_coll).all():
+                result['edges'].append(doc)
+
+        print(f"✅ Loaded: nodes={len(result['nodes'])}, edges={len(result['edges'])}")
+        return result
     
-    def convert_to_networkx(
-        self,
-        adb_graph: Any
-    ) -> Union[nx.Graph, nx.DiGraph]:
+    def convert_to_dict(self, persisted: Dict[str, Any]) -> Dict[str, Any]:
         """
-        Convert ArangoDB graph to in-memory NetworkX graph
-        
-        Useful for local analysis or algorithm execution
-        
-        Args:
-            adb_graph: nx-arangodb Graph or DiGraph
-        
-        Returns:
-            NetworkX Graph or DiGraph
+        Return the dictionary representation of a persisted graph (nodes+edges).
         """
-        print(f"🔄 Converting ArangoDB graph to NetworkX...")
-        
-        if isinstance(adb_graph, nxadb.DiGraph):
-            nx_graph = nx.DiGraph(adb_graph)
-        else:
-            nx_graph = nx.Graph(adb_graph)
-        
-        print(f"✅ Conversion complete")
-        print(f"   Nodes: {nx_graph.number_of_nodes()}")
-        print(f"   Edges: {nx_graph.number_of_edges()}")
-        
-        return nx_graph
+        return persisted
 
 
 def demo_arangodb_persistence_local():
