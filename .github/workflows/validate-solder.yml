@@ -141,26 +141,26 @@ jobs:
           if [ ! -f "$SQLITE_PATH" ]; then
             echo "Creating mock SQLite database for testing..."
             cat > /tmp/create_db.py <<'EOF'
-              import sqlite3
-              import os
+            import sqlite3
+            import os
 
-              db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
-              os.makedirs(os.path.dirname(db), exist_ok=True)
+            db = 'hf-space-inventory-sqlgen/app_schema/manufacturing.db'
+            os.makedirs(os.path.dirname(db), exist_ok=True)
 
-              conn = sqlite3.connect(db)
-              cur = conn.cursor()
+            conn = sqlite3.connect(db)
+            cur = conn.cursor()
 
-              # Minimal staging tables used by Solder pattern tests
-              cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
-              cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
-              cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
-              cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
-              cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
-              cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
+            # Minimal staging tables used by Solder pattern tests
+            cur.execute('CREATE TABLE IF NOT EXISTS stg_non_conformant_materials (id INTEGER PRIMARY KEY, severity TEXT, cost_impact REAL)')
+            cur.execute('INSERT INTO stg_non_conformant_materials (severity, cost_impact) VALUES ("high", 123.45)')
+            cur.execute('CREATE TABLE IF NOT EXISTS stg_product_defects (id INTEGER PRIMARY KEY, defect_type TEXT, product_id INTEGER)')
+            cur.execute('INSERT INTO stg_product_defects (defect_type, product_id) VALUES ("misprint", 1)')
+            cur.execute('CREATE TABLE IF NOT EXISTS product (id INTEGER PRIMARY KEY, name TEXT)')
+            cur.execute('INSERT OR IGNORE INTO product (id, name) VALUES (1, "widget")')
 
-              conn.commit()
-              conn.close()
-              print('Created minimal SQLite fixture at', db)
+            conn.commit()
+            conn.close()
+            print('Created minimal SQLite fixture at', db)
             EOF
             python /tmp/create_db.py
           else
