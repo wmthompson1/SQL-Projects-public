@@ -38,7 +38,7 @@ jobs:
     env:
       SKIP_PERSIST: "true"  # CI uses ephemeral ArangoDB
       ENABLE_PERSIST: "false"
-      DATABASE_HOST: "arangodb-ci"
+      DATABASE_HOST: "localhost"
     # We'll run ArangoDB manually attached to a dedicated Docker network to
     # avoid binding host ports and conflicting with other containers or
     # GitHub Actions `services:`. This lets steps communicate via the
@@ -217,7 +217,7 @@ jobs:
           # SQLite source
           SQLITE_PATH: ${{ env.SQLITE_PATH }}
           # ArangoDB connection
-          DATABASE_HOST: http://arangodb-ci:8529
+          DATABASE_HOST: http://localhost:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           ENABLE_PERSIST: "true"
@@ -229,9 +229,9 @@ jobs:
           python -m unittest scripts/modules/manufacturing_semantics/026_Entry_Point_NCM2_Unit_Test.py
         env:
           # ArangoDB connection for tests
-          ARANGO_HOST: arangodb-ci
+          ARANGO_HOST: localhost
           ARANGO_PORT: 8529
-          DATABASE_HOST: http://arangodb-ci:8529
+          DATABASE_HOST: http://localhost:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
@@ -249,7 +249,7 @@ jobs:
           fi
         continue-on-error: true
         env:
-          DATABASE_HOST: http://arangodb-ci:8529
+          DATABASE_HOST: http://localhost:8529
           DATABASE_NAME: networkx_graphs
           DATABASE_USERNAME: root
           DATABASE_PASSWORD: ""
