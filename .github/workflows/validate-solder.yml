@@ -76,7 +76,7 @@ jobs:
           if [ $(docker ps -a -q -f name=arangodb-ci | wc -l) -gt 0 ]; then
             docker rm -f arangodb-ci || true
           fi
-          docker run -d --name arangodb-ci --network ci-net -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
+          docker run -d --name arangodb-ci --network ci-net -p 8529:8529 -e ARANGO_NO_AUTH=1 arangodb:3.11 || {
             echo "Failed to start arangodb container"
             docker ps -a || true
             docker logs arangodb-ci || true
@@ -109,26 +109,45 @@ jobs:
           echo "⏳ Waiting for ArangoDB to start (max 300s)..."
           START_TIME=$(date +%s)
 
-          timeout 300 bash -c '
-            until docker exec arangodb-ci curl -sf http://localhost:8529/_api/version >/dev/null 2>&1; do
-              echo "  Still waiting for ArangoDB..."
-              sleep 3
-            done
-          ' || {
-            echo "❌ ArangoDB failed to start within 300 seconds"
-            echo "--- docker ps ---"
-            docker ps -a --no-trunc || true
-            echo "--- docker inspect (arangodb) ---"
-            docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1 | xargs -r docker inspect || true
-            echo "--- docker logs (arangodb) ---"
-            CID=$(docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1)
-            if [ -n "$CID" ]; then
-              docker logs "$CID" || true
-            else
-              echo "No arangodb container found"
+          # Robust wait loop: prefer querying the ArangoDB HTTP endpoint from inside
+          # the container (via `docker exec`) and fall back to grepping container
+          # logs for the ready message. Use an explicit elapsed-time check so the
+          # loop behaves the same across shells and doesn't rely on `timeout`.
+          START_TIME=$(date +%s)
+          MAX_WAIT=300
+          while true; do
+            if curl -sf http://localhost:8529/_api/version >/dev/null 2>&1; then
+              echo "✅ ArangoDB HTTP endpoint reachable from runner (localhost:8529)"
+              break
             fi
-            exit 1
-          }
+
+            # Check container logs for the readiness message as a fallback
+            if docker logs arangodb-ci 2>&1 | grep -q "ArangoDB (version"; then
+              echo "✅ ArangoDB indicates ready in logs"
+              break
+            fi
+
+            NOW=$(date +%s)
+            ELAPSED=$((NOW - START_TIME))
+            if [ "$ELAPSED" -ge "$MAX_WAIT" ]; then
+              echo "❌ ArangoDB failed to start within ${MAX_WAIT} seconds"
+              echo "--- docker ps ---"
+              docker ps -a --no-trunc || true
+              echo "--- docker inspect (arangodb) ---"
+              docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1 | xargs -r docker inspect || true
+              echo "--- docker logs (arangodb) ---"
+              CID=$(docker ps -a --filter ancestor=arangodb:3.11 -q | head -n1)
+              if [ -n "$CID" ]; then
+                docker logs "$CID" || true
+              else
+                echo "No arangodb container found"
+              fi
+              exit 1
+            fi
+
+            echo "  Still waiting for ArangoDB... (elapsed ${ELAPSED}s)"
+            sleep 3
+          done
 
           END_TIME=$(date +%s)
           ELAPSED=$((END_TIME - START_TIME))
