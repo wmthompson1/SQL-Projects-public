@@ -53,7 +53,7 @@ Add these four secrets:
 |-------------|--------------|-------|
 | `ARANGO_HOST` | `http://your-arango-server:8529` | **Not localhost** - must be accessible from GitHub Actions runners |
 | `ARANGO_USER` | `root` | Or dedicated service account |
-| `ARANGO_PASSWORD` | `Se206attle_rocks` | From your [`.env`](.env ) file |
+| `ARANGO_PASSWORD` | `********` | From your [`.env`](.env ) file |
 | `ARANGO_DB` | `manufacturing_graph` | Database name |
 
 ---
