@@ -1,5 +1,6 @@
 """Direct ArangoDB graph builder without NetworkX dependency."""
 from typing import Dict, List, Any
+import hashlib
 from arango import ArangoClient
 
 
@@ -91,13 +92,26 @@ class ArangoGraphPersistence:
         if not self.db.has_collection(edge_coll_name):
             self.db.create_collection(edge_coll_name, edge=True)
         edge_coll = self.db.collection(edge_coll_name)
-        try:
-            edge_coll.insert_many(builder.edges)
-        except Exception:
-            for e in builder.edges:
+        # Prepare edges with deterministic _key to make persistence idempotent.
+        edges_to_insert: List[Dict[str, Any]] = []
+        for e in builder.edges:
+            # compute deterministic key from from|to|edge_type
+            key_material = f"{e.get('_from','')}|{e.get('_to','')}|{e.get('edge_type','') }"
+            key = hashlib.sha1(key_material.encode('utf-8')).hexdigest()
+            doc = dict(e)
+            doc['_key'] = key
+            edges_to_insert.append(doc)
+
+        # Insert edges idempotently: try insert, on conflict replace to update
+        for ed in edges_to_insert:
+            try:
+                edge_coll.insert(ed)
+            except Exception:
+                # If insert fails (likely key conflict), attempt replace to update existing
                 try:
-                    edge_coll.insert(e)
+                    edge_coll.replace(ed['_key'], ed)
                 except Exception:
+                    # ignore failures to avoid blowing up on transient issues
                     pass
 
         print(f"✅ Persisted {len(builder.nodes)} nodes and {len(builder.edges)} edges to {self.db_name}")

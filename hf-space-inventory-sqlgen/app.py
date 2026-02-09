@@ -13,6 +13,9 @@ import os
 import json
 import csv
 import io
+import re
+import datetime
+import tempfile
 from typing import Optional, List, Dict, Any
 from fastapi import FastAPI, HTTPException, UploadFile, File, Form, Header
 from fastapi.middleware.cors import CORSMiddleware
@@ -21,35 +24,14 @@ from pydantic import BaseModel, Field
 import gradio as gr
 from sqlalchemy import create_engine, text, inspect
 from sqlalchemy.exc import SQLAlchemyError
-from ground_truth_integration import GroundTruthQueryManager
+from solder_engine import SolderEngine
+from production_dispatcher import ProductionDispatcher
 
 SCHEMA_DIR = os.path.join(os.path.dirname(__file__), "app_schema")
 QUERIES_DIR = os.path.join(SCHEMA_DIR, "queries")
 QUERY_API_KEY = os.environ.get("QUERY_API_KEY", "")
 SQLITE_DB_PATH = os.path.join(SCHEMA_DIR, "manufacturing.db")
 db_engine = None
-
-# Initialize Ground Truth Query Manager
-try:
-    query_mgr = GroundTruthQueryManager("ground_truth_queries.sql")
-    print(f"✅ Loaded {len(query_mgr.queries)} ground truth queries")
-except Exception as e:
-    print(f"⚠️  Could not load ground truth queries: {e}")
-    query_mgr = None
-
-# ...existing code...
-# After: query_mgr = GroundTruthQueryManager("ground_truth_queries.sql")
-
-# ============ MCP Pydantic Models ============
-class MCPToolRequest(BaseModel):
-    """Request model for MCP tool calls"""
-    arguments: dict = {}
-
-class MCPToolResponse(BaseModel):
-    """Response model for MCP tool calls"""
-    content: str
-
-# ...existing code continues with get_db_engine()...
 
 def get_db_engine():
     """Get or create SQLite database engine"""
@@ -60,7 +42,14 @@ def get_db_engine():
     return db_engine
 
 def init_sqlite_db():
-    """Initialize SQLite database from schema file"""
+    """Initialize SQLite database from schema file.
+    
+    Executes both CREATE TABLE and INSERT statements to ensure
+    seed data (concepts, perspectives, etc.) is loaded on first run.
+    Uses sqlite3 module directly for proper multi-statement handling.
+    """
+    import sqlite3
+    
     schema_file = os.path.join(SCHEMA_DIR, "schema_sqlite.sql")
     if not os.path.exists(schema_file):
         return
@@ -68,16 +57,19 @@ def init_sqlite_db():
     with open(schema_file, 'r') as f:
         schema_sql = f.read()
     
-    engine = create_engine(f"sqlite:///{SQLITE_DB_PATH}")
-    with engine.connect() as conn:
-        for statement in schema_sql.split(';'):
-            statement = statement.strip()
-            if statement and statement.startswith('CREATE TABLE'):
-                try:
-                    conn.execute(text(statement))
-                    conn.commit()
-                except Exception:
-                    pass  # Table already exists
+    # Replace INSERT with INSERT OR IGNORE for idempotent seeding
+    schema_sql = schema_sql.replace('INSERT INTO', 'INSERT OR IGNORE INTO')
+    
+    # Use sqlite3 directly for executescript (handles multi-line statements)
+    conn = sqlite3.connect(SQLITE_DB_PATH)
+    try:
+        conn.executescript(schema_sql)
+        conn.commit()
+    except Exception as e:
+        # Log but don't fail - some statements may already exist
+        print(f"Database init warning: {e}")
+    finally:
+        conn.close()
 
 def get_table_create_sql(table_name: str) -> str:
     """Generate CREATE TABLE SQL for a given table (SQLite version)"""
@@ -193,7 +185,7 @@ def count_queries_in_file(sql_file_path: str) -> int:
         return 0
 
 def get_query_categories() -> Dict[str, Any]:
-    """Load query index from app_schema/queries/index.json with dynamic query counts"""
+    """Load query index from schema/queries/index.json with dynamic query counts"""
     index_path = os.path.join(QUERIES_DIR, "index.json")
     if not os.path.exists(index_path):
         return {"categories": [], "error": "Query index not found"}
@@ -266,6 +258,167 @@ def save_query_to_file(category_id: str, query_name: str, description: str, sql:
         return {"success": True, "message": f"Query '{query_name}' saved to {category['name']}"}
     except Exception as e:
         return {"success": False, "error": str(e)}
+
+GROUND_TRUTH_DIR = os.path.join(SCHEMA_DIR, "ground_truth")
+GROUND_TRUTH_SQL_DIR = os.path.join(GROUND_TRUTH_DIR, "sql_snippets")
+MANIFEST_PATH = os.path.join(GROUND_TRUTH_DIR, "reviewer_manifest.json")
+
+
+def _sanitize_slug(value: str) -> str:
+    slug = re.sub(r'[^a-z0-9_]', '_', value.lower().strip())
+    slug = re.sub(r'_+', '_', slug).strip('_')
+    return slug or "unknown"
+
+
+def save_sme_submission(sql_text: str, category: str, perspective: str, concept: str, justification: str) -> str:
+    os.makedirs(GROUND_TRUTH_SQL_DIR, exist_ok=True)
+
+    safe_perspective = _sanitize_slug(perspective)
+    safe_concept = _sanitize_slug(concept)
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    binding_key = f"{safe_perspective}_{safe_concept}_{timestamp}"
+    filename = f"{binding_key}.sql"
+    file_path = os.path.join(GROUND_TRUTH_SQL_DIR, filename)
+
+    with open(file_path, "w") as f:
+        f.write(sql_text)
+
+    logic_type = "SPATIAL_ALIAS" if "User_Defined" in sql_text else "DIRECT"
+
+    manifest_entry = {
+        "concept_anchor": concept.upper(),
+        "perspective": perspective,
+        "category": category,
+        "logic_type": logic_type,
+        "file_path": file_path,
+        "sme_justification": justification,
+        "validation_status": "PENDING",
+        "binding_key": binding_key,
+        "created_at": datetime.datetime.now().isoformat()
+    }
+
+    if os.path.exists(MANIFEST_PATH):
+        try:
+            with open(MANIFEST_PATH, "r") as f:
+                manifest = json.load(f)
+        except (json.JSONDecodeError, Exception):
+            manifest = {"approved_snippets": {}}
+    else:
+        manifest = {"approved_snippets": {}}
+
+    if "approved_snippets" not in manifest:
+        manifest["approved_snippets"] = {}
+
+    manifest["approved_snippets"][binding_key] = manifest_entry
+    manifest["last_updated"] = datetime.datetime.now().isoformat()
+
+    tmp_fd, tmp_path = tempfile.mkstemp(dir=GROUND_TRUTH_DIR, suffix=".json")
+    try:
+        with os.fdopen(tmp_fd, "w") as f:
+            json.dump(manifest, f, indent=4)
+        os.replace(tmp_path, MANIFEST_PATH)
+    except Exception:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        raise
+
+    return f"Saved {filename} and updated Reviewer Manifest. Logic type: {logic_type}. Status: PENDING review."
+
+
+def resolve_sql_bindings(sql_dir: str = None) -> List[Dict[str, Any]]:
+    if sql_dir is None:
+        sql_dir = GROUND_TRUTH_SQL_DIR
+
+    bindings = []
+    if not os.path.exists(sql_dir):
+        return bindings
+
+    manifest = {}
+    if os.path.exists(MANIFEST_PATH):
+        try:
+            with open(MANIFEST_PATH, "r") as f:
+                manifest = json.load(f)
+        except Exception:
+            pass
+
+    approved_snippets = manifest.get("approved_snippets", {})
+
+    for filename in sorted(os.listdir(sql_dir)):
+        if not filename.endswith(".sql"):
+            continue
+
+        binding_key = filename.replace(".sql", "")
+        file_path = os.path.join(sql_dir, filename)
+
+        entry = approved_snippets.get(binding_key, {})
+
+        bindings.append({
+            "filename": filename,
+            "binding_key": binding_key,
+            "perspective": entry.get("perspective", ""),
+            "concept": entry.get("concept_anchor", ""),
+            "category": entry.get("category", ""),
+            "justification": entry.get("sme_justification", ""),
+            "validation_status": entry.get("validation_status", "UNKNOWN"),
+            "created_at": entry.get("created_at", ""),
+            "path": file_path
+        })
+
+    return bindings
+
+
+def get_manifest_summary() -> Dict[str, Any]:
+    if not os.path.exists(MANIFEST_PATH):
+        return {"total": 0, "pending": 0, "approved": 0, "rejected": 0, "bindings": []}
+
+    try:
+        with open(MANIFEST_PATH, "r") as f:
+            manifest = json.load(f)
+    except Exception:
+        return {"total": 0, "pending": 0, "approved": 0, "rejected": 0, "bindings": []}
+
+    snippets = manifest.get("approved_snippets", {})
+    bindings_list = list(snippets.values())
+    return {
+        "total": len(bindings_list),
+        "pending": sum(1 for b in bindings_list if b.get("validation_status") == "PENDING"),
+        "approved": sum(1 for b in bindings_list if b.get("validation_status") == "APPROVED"),
+        "rejected": sum(1 for b in bindings_list if b.get("validation_status") == "REJECTED"),
+        "bindings": bindings_list
+    }
+
+
+def update_binding_status(binding_key: str, new_status: str) -> str:
+    if not os.path.exists(MANIFEST_PATH):
+        return "Manifest file not found."
+
+    try:
+        with open(MANIFEST_PATH, "r") as f:
+            manifest = json.load(f)
+    except Exception as e:
+        return f"Error reading manifest: {e}"
+
+    snippets = manifest.get("approved_snippets", {})
+
+    if binding_key not in snippets:
+        return f"Binding key '{binding_key}' not found in manifest."
+
+    snippets[binding_key]["validation_status"] = new_status
+    snippets[binding_key]["reviewed_at"] = datetime.datetime.now().isoformat()
+    manifest["last_updated"] = datetime.datetime.now().isoformat()
+
+    tmp_fd, tmp_path = tempfile.mkstemp(dir=GROUND_TRUTH_DIR, suffix=".json")
+    try:
+        with os.fdopen(tmp_fd, "w") as f:
+            json.dump(manifest, f, indent=4)
+        os.replace(tmp_path, MANIFEST_PATH)
+    except Exception:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        raise
+
+    return f"Updated '{binding_key}' to {new_status}."
+
 
 app = FastAPI(
     title="Manufacturing Inventory SQL Generator",
@@ -532,49 +685,6 @@ async def root():
     """
 
 
-@app.post("/mcp/tools/get_example_queries", response_model=MCPToolResponse)
-async def get_example_queries(request: MCPToolRequest):
-    """Get all available ground truth example queries"""
-    try:
-        if query_mgr is None:
-            raise HTTPException(status_code=503, detail="Ground truth queries not loaded")
-        
-        queries = query_mgr.get_all_queries()
-        response_data = {
-            "queries": list(queries.keys()),
-            "count": len(queries)
-        }
-        return MCPToolResponse(content=json.dumps(response_data))
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-@app.post("/mcp/tools/get_example_query", response_model=MCPToolResponse)
-async def get_example_query(request: MCPToolRequest):
-    """Get a specific ground truth query by name"""
-    try:
-        if query_mgr is None:
-            raise HTTPException(status_code=503, detail="Ground truth queries not loaded")
-        
-        query_name = request.arguments.get("query_name")
-        if not query_name:
-            raise HTTPException(status_code=400, detail="query_name required in arguments")
-        
-        query = query_mgr.get_query(query_name)
-        if not query:
-            raise HTTPException(status_code=404, detail=f"Query not found: {query_name}")
-        
-        response_data = {
-            "query_name": query_name,
-            "sql": query
-        }
-        return MCPToolResponse(content=json.dumps(response_data))
-    except HTTPException:
-        raise
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=str(e))
-
-# ...existing code continues with create_gradio_interface()...
-
 @app.get("/mcp/discover", response_model=MCPDiscoveryResponse)
 async def mcp_discover():
     """MCP Discovery endpoint - returns available tools and capabilities"""
@@ -589,8 +699,15 @@ async def mcp_discover():
                 input_schema={
                     "type": "object",
                     "properties": {
-                        "query": {"type": "string", "description": "Natural language query about inventory"},
-                        "include_explanation": {"type": "boolean", "default": True, "description": "Include explanation of generated SQL"}
+                        "query": {
+                            "type": "string",
+                            "description": "Natural language query about inventory"
+                        },
+                        "include_explanation": {
+                            "type": "boolean",
+                            "default": True,
+                            "description": "Include explanation of generated SQL"
+                        }
                     },
                     "required": ["query"]
                 }
@@ -598,7 +715,11 @@ async def mcp_discover():
             MCPToolDefinition(
                 name="get_schema",
                 description="Get the database schema for inventory tables",
-                input_schema={"type": "object", "properties": {}, "required": []}
+                input_schema={
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
             ),
             MCPToolDefinition(
                 name="get_sql_templates",
@@ -620,54 +741,59 @@ async def mcp_discover():
                 description="Analyze uploaded CSV to suggest schema and queries",
                 input_schema={
                     "type": "object",
-                    "properties": {"csv_content": {"type": "string", "description": "CSV file content as string"}},
+                    "properties": {
+                        "csv_content": {
+                            "type": "string",
+                            "description": "CSV file content as string"
+                        }
+                    },
                     "required": ["csv_content"]
                 }
             ),
             MCPToolDefinition(
                 name="get_db_tables",
                 description="Get list of all tables from connected PostgreSQL database",
-                input_schema={"type": "object", "properties": {}, "required": []}
+                input_schema={
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
             ),
             MCPToolDefinition(
                 name="get_table_ddl",
                 description="Get CREATE TABLE SQL for a specific table",
                 input_schema={
                     "type": "object",
-                    "properties": {"table_name": {"type": "string", "description": "Name of the table to get DDL for"}},
+                    "properties": {
+                        "table_name": {
+                            "type": "string",
+                            "description": "Name of the table to get DDL for"
+                        }
+                    },
                     "required": ["table_name"]
                 }
             ),
             MCPToolDefinition(
                 name="get_all_ddl",
                 description="Get CREATE TABLE SQL for all tables in the database",
-                input_schema={"type": "object", "properties": {}, "required": []}
+                input_schema={
+                    "type": "object",
+                    "properties": {},
+                    "required": []
+                }
             ),
             MCPToolDefinition(
                 name="execute_sql",
                 description="Execute read-only SQL query (SELECT only) against the database",
                 input_schema={
                     "type": "object",
-                    "properties": {"sql": {"type": "string", "description": "SQL SELECT query to execute"}},
-                    "required": ["sql"]
-                }
-            ),
-        
-            # ADD THESE TWO NEW TOOLS HERE:
-            MCPToolDefinition(
-                name="get_example_queries",
-                description="List all available ground truth SQL example queries",
-                input_schema={"type": "object", "properties": {}, "required": []}
-            ),
-            MCPToolDefinition(
-                name="get_example_query",
-                description="Retrieve a specific ground truth SQL query by name",
-                input_schema={
-                    "type": "object",
                     "properties": {
-                        "query_name": {"type": "string", "description": "Name of the ground truth query to retrieve"}
+                        "sql": {
+                            "type": "string",
+                            "description": "SQL SELECT query to execute"
+                        }
                     },
-                    "required": ["query_name"]
+                    "required": ["sql"]
                 }
             )
         ],
@@ -689,6 +815,8 @@ async def mcp_discover():
             }
         ]
     )
+
+
 @app.post("/mcp/tools/generate_sql", response_model=SQLGenerationResponse)
 async def generate_sql(request: SQLGenerationRequest):
     """Generate SQL from natural language query"""
@@ -847,6 +975,639 @@ async def save_query_endpoint(
     return result
 
 
+# =============================================================================
+# SEMANTIC LAYER: Concept, Perspective, and Intent Endpoints
+# =============================================================================
+
+@app.get("/mcp/tools/get_concepts")
+async def get_concepts(domain: Optional[str] = None, concept_type: Optional[str] = None):
+    """Get all schema concepts, optionally filtered by domain or type.
+    
+    Concepts represent multiple possible interpretations of ambiguous fields.
+    Domains: quality, finance, operations, compliance, customer
+    Types: state, metric, classification, outcome
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = "SELECT concept_id, concept_name, concept_type, description, domain FROM schema_concepts WHERE 1=1"
+            params = {}
+            if domain:
+                query += " AND domain = :domain"
+                params["domain"] = domain
+            if concept_type:
+                query += " AND concept_type = :concept_type"
+                params["concept_type"] = concept_type
+            query += " ORDER BY domain, concept_name"
+            
+            result = conn.execute(text(query), params)
+            concepts = [
+                {"concept_id": r[0], "concept_name": r[1], "concept_type": r[2], 
+                 "description": r[3], "domain": r[4]}
+                for r in result.fetchall()
+            ]
+            return {"concepts": concepts, "count": len(concepts)}
+    except Exception as e:
+        return {"error": str(e), "concepts": [], "count": 0}
+
+
+@app.get("/mcp/tools/get_field_concepts")
+async def get_field_concepts(table_name: Optional[str] = None, field_name: Optional[str] = None):
+    """Get concept mappings for ambiguous fields (CAN_MEAN relationships).
+    
+    Shows how the same field can have multiple interpretations based on context.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = """
+                SELECT cf.table_name, cf.field_name, cf.is_primary_meaning, cf.context_hint,
+                       c.concept_id, c.concept_name, c.concept_type, c.description, c.domain
+                FROM schema_concept_fields cf
+                JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                WHERE 1=1
+            """
+            params = {}
+            if table_name:
+                query += " AND cf.table_name = :table_name"
+                params["table_name"] = table_name
+            if field_name:
+                query += " AND cf.field_name = :field_name"
+                params["field_name"] = field_name
+            query += " ORDER BY cf.table_name, cf.field_name, cf.is_primary_meaning DESC"
+            
+            result = conn.execute(text(query), params)
+            mappings = [
+                {
+                    "table_name": r[0], "field_name": r[1], 
+                    "is_primary": bool(r[2]), "context_hint": r[3],
+                    "concept": {
+                        "concept_id": r[4], "concept_name": r[5],
+                        "concept_type": r[6], "description": r[7], "domain": r[8]
+                    }
+                }
+                for r in result.fetchall()
+            ]
+            return {"field_concepts": mappings, "count": len(mappings)}
+    except Exception as e:
+        return {"error": str(e), "field_concepts": [], "count": 0}
+
+
+@app.get("/mcp/tools/get_ambiguous_fields")
+async def get_ambiguous_fields():
+    """Get list of fields that have multiple concept interpretations.
+    
+    These are the fields where perspective/intent matters for correct interpretation.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT cf.table_name, cf.field_name, COUNT(*) as concept_count,
+                       GROUP_CONCAT(c.concept_name, ', ') as concepts,
+                       GROUP_CONCAT(c.domain, ', ') as domains
+                FROM schema_concept_fields cf
+                JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                GROUP BY cf.table_name, cf.field_name
+                HAVING COUNT(*) > 1
+                ORDER BY COUNT(*) DESC
+            """))
+            fields = [
+                {
+                    "table_name": r[0], "field_name": r[1], 
+                    "concept_count": r[2], "concepts": r[3], "domains": r[4]
+                }
+                for r in result.fetchall()
+            ]
+            return {"ambiguous_fields": fields, "count": len(fields)}
+    except Exception as e:
+        return {"error": str(e), "ambiguous_fields": [], "count": 0}
+
+
+@app.get("/mcp/tools/get_perspectives")
+async def get_perspectives():
+    """Get all organizational perspectives.
+    
+    Perspectives are viewpoints that constrain which concept interpretations are valid.
+    Each perspective represents a stakeholder group with specific priorities.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT perspective_id, perspective_name, description, 
+                       stakeholder_role, priority_focus
+                FROM schema_perspectives
+                ORDER BY perspective_name
+            """))
+            perspectives = [
+                {
+                    "perspective_id": r[0], "perspective_name": r[1],
+                    "description": r[2], "stakeholder_role": r[3],
+                    "priority_focus": r[4]
+                }
+                for r in result.fetchall()
+            ]
+            return {"perspectives": perspectives, "count": len(perspectives)}
+    except Exception as e:
+        return {"error": str(e), "perspectives": [], "count": 0}
+
+
+@app.get("/mcp/tools/get_perspective_concepts")
+async def get_perspective_concepts(perspective_name: Optional[str] = None):
+    """Get concepts used by each perspective (USES_DEFINITION relationships).
+    
+    Shows which concept interpretations are valid for each organizational perspective.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = """
+                SELECT p.perspective_name, p.description, p.stakeholder_role,
+                       pc.relationship_type, pc.priority_weight,
+                       c.concept_id, c.concept_name, c.concept_type, c.description as concept_desc, c.domain
+                FROM schema_perspectives p
+                JOIN schema_perspective_concepts pc ON p.perspective_id = pc.perspective_id
+                JOIN schema_concepts c ON pc.concept_id = c.concept_id
+                WHERE 1=1
+            """
+            params = {}
+            if perspective_name:
+                query += " AND p.perspective_name = :perspective_name"
+                params["perspective_name"] = perspective_name
+            query += " ORDER BY p.perspective_name, pc.priority_weight DESC"
+            
+            result = conn.execute(text(query), params)
+            mappings = [
+                {
+                    "perspective": r[0], "perspective_desc": r[1], 
+                    "stakeholder_role": r[2], "relationship_type": r[3],
+                    "priority_weight": r[4],
+                    "concept": {
+                        "concept_id": r[5], "concept_name": r[6],
+                        "concept_type": r[7], "description": r[8], "domain": r[9]
+                    }
+                }
+                for r in result.fetchall()
+            ]
+            return {"perspective_concepts": mappings, "count": len(mappings)}
+    except Exception as e:
+        return {"error": str(e), "perspective_concepts": [], "count": 0}
+
+
+@app.get("/mcp/tools/resolve_field_for_perspective")
+async def resolve_field_for_perspective(table_name: str, field_name: str, perspective_name: str):
+    """Resolve which concept interpretation applies for a field given a perspective.
+    
+    This is the semantic disambiguation endpoint - given a perspective, it returns
+    the correct interpretation of an ambiguous field.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT c.concept_id, c.concept_name, c.concept_type, c.description, c.domain,
+                       cf.context_hint, pc.priority_weight
+                FROM schema_concept_fields cf
+                JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                JOIN schema_perspective_concepts pc ON c.concept_id = pc.concept_id
+                JOIN schema_perspectives p ON pc.perspective_id = p.perspective_id
+                WHERE cf.table_name = :table_name 
+                  AND cf.field_name = :field_name
+                  AND p.perspective_name = :perspective_name
+                ORDER BY pc.priority_weight DESC
+                LIMIT 1
+            """), {"table_name": table_name, "field_name": field_name, "perspective_name": perspective_name})
+            
+            row = result.fetchone()
+            if row:
+                return {
+                    "resolved": True,
+                    "table_name": table_name,
+                    "field_name": field_name,
+                    "perspective": perspective_name,
+                    "concept": {
+                        "concept_id": row[0], "concept_name": row[1],
+                        "concept_type": row[2], "description": row[3], 
+                        "domain": row[4], "context_hint": row[5],
+                        "priority_weight": row[6]
+                    }
+                }
+            else:
+                return {
+                    "resolved": False,
+                    "table_name": table_name,
+                    "field_name": field_name,
+                    "perspective": perspective_name,
+                    "message": "No concept mapping found for this field/perspective combination"
+                }
+    except Exception as e:
+        return {"error": str(e), "resolved": False}
+
+
+@app.get("/mcp/tools/get_intents")
+async def get_intents(category: Optional[str] = None):
+    """Get all analytical intents, optionally filtered by category.
+    
+    Intents are analytical goals that binary-switch concept weights.
+    Each intent elevates one field interpretation to 1.0 while suppressing alternatives to 0.0.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = """
+                SELECT intent_id, intent_name, intent_category, description, typical_question
+                FROM schema_intents
+                WHERE 1=1
+            """
+            params = {}
+            if category:
+                query += " AND intent_category = :category"
+                params["category"] = category
+            query += " ORDER BY intent_category, intent_name"
+            
+            result = conn.execute(text(query), params)
+            intents = [
+                {
+                    "intent_id": r[0], "intent_name": r[1],
+                    "intent_category": r[2], "description": r[3],
+                    "typical_question": r[4]
+                }
+                for r in result.fetchall()
+            ]
+            return {"intents": intents, "count": len(intents)}
+    except Exception as e:
+        return {"error": str(e), "intents": [], "count": 0}
+
+
+@app.get("/mcp/tools/get_intent_weights")
+async def get_intent_weights(intent_name: str):
+    """Get concept weights for a specific intent (the binary elevation/suppression).
+    
+    Returns which concepts are elevated (1.0) vs suppressed (0.0) for this intent.
+    This is the core disambiguation mechanism - intent determines which interpretation wins.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT i.intent_name, i.description, i.typical_question,
+                       ic.intent_factor_weight, ic.explanation,
+                       c.concept_id, c.concept_name, c.concept_type, c.description as concept_desc, c.domain
+                FROM schema_intents i
+                JOIN schema_intent_concepts ic ON i.intent_id = ic.intent_id
+                JOIN schema_concepts c ON ic.concept_id = c.concept_id
+                WHERE i.intent_name = :intent_name
+                ORDER BY ic.intent_factor_weight DESC, c.concept_name
+            """), {"intent_name": intent_name})
+            
+            rows = result.fetchall()
+            if not rows:
+                return {"error": f"Intent '{intent_name}' not found", "weights": []}
+            
+            weights = [
+                {
+                    "intent_factor_weight": r[3],
+                    "status": "ELEVATED" if r[3] == 1.0 else "SUPPRESSED",
+                    "explanation": r[4],
+                    "concept": {
+                        "concept_id": r[5], "concept_name": r[6],
+                        "concept_type": r[7], "description": r[8], "domain": r[9]
+                    }
+                }
+                for r in rows
+            ]
+            
+            return {
+                "intent_name": rows[0][0],
+                "description": rows[0][1],
+                "typical_question": rows[0][2],
+                "weights": weights,
+                "elevated_count": sum(1 for w in weights if w["intent_factor_weight"] == 1.0),
+                "suppressed_count": sum(1 for w in weights if w["intent_factor_weight"] == 0.0)
+            }
+    except Exception as e:
+        return {"error": str(e), "weights": []}
+
+
+@app.get("/mcp/tools/get_intent_queries")
+async def get_intent_queries(intent_name: Optional[str] = None):
+    """Get ground truth SQL queries linked to intents.
+    
+    Maps intents to validated SQL examples that demonstrate the correct interpretation.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = """
+                SELECT i.intent_name, i.intent_category, i.description,
+                       iq.query_category, iq.query_file, iq.query_index, iq.query_name
+                FROM schema_intents i
+                JOIN schema_intent_queries iq ON i.intent_id = iq.intent_id
+                WHERE 1=1
+            """
+            params = {}
+            if intent_name:
+                query += " AND i.intent_name = :intent_name"
+                params["intent_name"] = intent_name
+            query += " ORDER BY i.intent_category, i.intent_name"
+            
+            result = conn.execute(text(query), params)
+            queries = [
+                {
+                    "intent_name": r[0], "intent_category": r[1], "intent_description": r[2],
+                    "query_category": r[3], "query_file": r[4], 
+                    "query_index": r[5], "query_name": r[6]
+                }
+                for r in result.fetchall()
+            ]
+            return {"intent_queries": queries, "count": len(queries)}
+    except Exception as e:
+        return {"error": str(e), "intent_queries": [], "count": 0}
+
+
+@app.get("/mcp/tools/resolve_field_for_intent")
+async def resolve_field_for_intent(table_name: str, field_name: str, intent_name: str):
+    """Resolve which concept interpretation applies for a field given an intent.
+    
+    This is the intent-based semantic disambiguation endpoint.
+    Unlike perspective (which uses priority weights), intent uses binary elevation:
+    - 1.0 = this interpretation is THE correct one for this intent
+    - 0.0 = this interpretation should be ignored for this intent
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT c.concept_id, c.concept_name, c.concept_type, c.description, c.domain,
+                       cf.context_hint, ic.intent_factor_weight, ic.explanation,
+                       i.typical_question
+                FROM schema_concept_fields cf
+                JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                JOIN schema_intent_concepts ic ON c.concept_id = ic.concept_id
+                JOIN schema_intents i ON ic.intent_id = i.intent_id
+                WHERE cf.table_name = :table_name 
+                  AND cf.field_name = :field_name
+                  AND i.intent_name = :intent_name
+                  AND ic.intent_factor_weight = 1.0
+                LIMIT 1
+            """), {"table_name": table_name, "field_name": field_name, "intent_name": intent_name})
+            
+            row = result.fetchone()
+            if row:
+                return {
+                    "resolved": True,
+                    "table_name": table_name,
+                    "field_name": field_name,
+                    "intent": intent_name,
+                    "typical_question": row[8],
+                    "concept": {
+                        "concept_id": row[0], "concept_name": row[1],
+                        "concept_type": row[2], "description": row[3], 
+                        "domain": row[4], "context_hint": row[5],
+                        "intent_factor_weight": row[6], 
+                        "explanation": row[7]
+                    }
+                }
+            else:
+                return {
+                    "resolved": False,
+                    "table_name": table_name,
+                    "field_name": field_name,
+                    "intent": intent_name,
+                    "message": "No elevated concept found for this field/intent combination"
+                }
+    except Exception as e:
+        return {"error": str(e), "resolved": False}
+
+
+@app.get("/mcp/tools/get_intent_perspectives")
+async def get_intent_perspectives(intent_name: Optional[str] = None):
+    """Get OPERATES_WITHIN relationships (Intent → Perspective).
+    
+    Shows which perspective(s) each intent operates within.
+    This is the intermediate constraint layer in the graph traversal:
+    Intent -[OPERATES_WITHIN]-> Perspective -[USES_DEFINITION]-> Concept
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            query = """
+                SELECT i.intent_name, i.intent_category, i.description as intent_desc,
+                       ip.intent_factor_weight, ip.explanation,
+                       p.perspective_id, p.perspective_name, p.description as perspective_desc,
+                       p.stakeholder_role
+                FROM schema_intents i
+                JOIN schema_intent_perspectives ip ON i.intent_id = ip.intent_id
+                JOIN schema_perspectives p ON ip.perspective_id = p.perspective_id
+                WHERE ip.intent_factor_weight = 1.0
+            """
+            params = {}
+            if intent_name:
+                query += " AND i.intent_name = :intent_name"
+                params["intent_name"] = intent_name
+            query += " ORDER BY i.intent_category, i.intent_name"
+            
+            result = conn.execute(text(query), params)
+            mappings = [
+                {
+                    "intent_name": r[0], "intent_category": r[1], 
+                    "intent_description": r[2],
+                    "relationship": "OPERATES_WITHIN",
+                    "intent_factor_weight": r[3], "explanation": r[4],
+                    "perspective": {
+                        "perspective_id": r[5], "perspective_name": r[6],
+                        "description": r[7], "stakeholder_role": r[8]
+                    }
+                }
+                for r in result.fetchall()
+            ]
+            return {"intent_perspectives": mappings, "count": len(mappings)}
+    except Exception as e:
+        return {"error": str(e), "intent_perspectives": [], "count": 0}
+
+
+@app.get("/mcp/tools/resolve_semantic_path")
+async def resolve_semantic_path(table_name: str, field_name: str, intent_name: str):
+    """Full graph traversal: Intent → Perspective → Concept ← Field.
+    
+    This is the complete semantic disambiguation endpoint that follows the graph path:
+    1. Start from Intent
+    2. Traverse OPERATES_WITHIN to get constraining Perspective
+    3. Traverse USES_DEFINITION to get valid Concepts for that Perspective
+    4. Match against Field's CAN_MEAN concepts
+    5. Apply intent_factor_weight to select the elevated concept
+    
+    Returns the deterministically resolved concept for the field given the intent.
+    """
+    engine = get_db_engine()
+    try:
+        with engine.connect() as conn:
+            result = conn.execute(text("""
+                SELECT 
+                    -- Intent info
+                    i.intent_name, i.intent_category, i.typical_question,
+                    -- Perspective info (via OPERATES_WITHIN)
+                    p.perspective_name, p.stakeholder_role,
+                    -- Concept info (via USES_DEFINITION and CAN_MEAN)
+                    c.concept_id, c.concept_name, c.concept_type, c.description, c.domain,
+                    -- Edge weights
+                    ip.intent_factor_weight as operates_within_weight,
+                    pc.priority_weight as uses_definition_weight,
+                    cf.context_hint,
+                    ic.intent_factor_weight as concept_elevation_weight,
+                    ic.explanation
+                FROM schema_concept_fields cf
+                JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                JOIN schema_intent_concepts ic ON c.concept_id = ic.concept_id
+                JOIN schema_intents i ON ic.intent_id = i.intent_id
+                JOIN schema_intent_perspectives ip ON i.intent_id = ip.intent_id
+                JOIN schema_perspectives p ON ip.perspective_id = p.perspective_id
+                JOIN schema_perspective_concepts pc ON p.perspective_id = pc.perspective_id 
+                    AND c.concept_id = pc.concept_id
+                WHERE cf.table_name = :table_name 
+                  AND cf.field_name = :field_name
+                  AND i.intent_name = :intent_name
+                  AND ip.intent_factor_weight = 1.0  -- Active OPERATES_WITHIN path
+                  AND ic.intent_factor_weight = 1.0  -- Elevated concept
+                LIMIT 1
+            """), {"table_name": table_name, "field_name": field_name, "intent_name": intent_name})
+            
+            row = result.fetchone()
+            if row:
+                return {
+                    "resolved": True,
+                    "field": {"table_name": table_name, "field_name": field_name},
+                    "traversal_path": {
+                        "intent": {
+                            "name": row[0], "category": row[1], 
+                            "typical_question": row[2]
+                        },
+                        "operates_within": {
+                            "perspective": row[3], "stakeholder_role": row[4],
+                            "weight": row[10]
+                        },
+                        "uses_definition": {
+                            "priority_weight": row[11]
+                        },
+                        "can_mean": {
+                            "context_hint": row[12]
+                        }
+                    },
+                    "resolved_concept": {
+                        "concept_id": row[5], "concept_name": row[6],
+                        "concept_type": row[7], "description": row[8], 
+                        "domain": row[9],
+                        "elevation_weight": row[13], "explanation": row[14]
+                    }
+                }
+            else:
+                return {
+                    "resolved": False,
+                    "field": {"table_name": table_name, "field_name": field_name},
+                    "intent": intent_name,
+                    "message": "No valid path found. Check that Intent operates within a Perspective that uses a Concept the Field can mean."
+                }
+    except Exception as e:
+        return {"error": str(e), "resolved": False}
+
+
+from semantic_reasoning import (
+    compare_query_plans, resolve_intent_probabilistic, 
+    infer_intent_from_sql, get_graph_syntax_examples,
+    resolve_field_meaning, validate_semantic_model, ResolutionResult
+)
+
+@app.get("/mcp/tools/compare_query_plans")
+async def api_compare_query_plans(table_name: str, field_name: str):
+    """Feature 1: Show how different intents produce different query plans for the same field"""
+    engine = get_db_engine()
+    plans = compare_query_plans(engine, table_name, field_name)
+    return {"field": f"{table_name}.{field_name}", "query_plans": plans, "count": len(plans)}
+
+
+class SQLInput(BaseModel):
+    sql: str
+
+@app.post("/mcp/tools/infer_intent")
+async def api_infer_intent(body: SQLInput):
+    """Feature 3: Automatically infer intent from SQL shape"""
+    engine = get_db_engine()
+    scores = infer_intent_from_sql(engine, body.sql)
+    return {
+        "sql_analyzed": body.sql[:200] + "..." if len(body.sql) > 200 else body.sql,
+        "inferred_intents": [
+            {
+                "intent": s.intent_name,
+                "confidence": s.confidence,
+                "matched_fields": s.matched_fields,
+                "matched_concepts": s.matched_concepts,
+                "explanation": s.explanation
+            } for s in scores[:5]
+        ]
+    }
+
+
+@app.get("/mcp/tools/graph_syntax")
+async def api_graph_syntax(intent_name: str, table_name: str, field_name: str):
+    """Feature 4: Get Cypher and AQL syntax for semantic path traversal"""
+    engine = get_db_engine()
+    return get_graph_syntax_examples(engine, intent_name, table_name, field_name)
+
+
+@app.get("/mcp/tools/resolve_field")
+async def api_resolve_field(intent_name: str, table_name: str, field_name: str):
+    """
+    FORMAL RESOLUTION ALGORITHM
+    
+    For a given (Intent I, Field F), resolve to exactly one Concept C.
+    
+    Algorithm per treatise:
+    1. Find perspectives where Intent operates (weight ≠ -1)
+    2. Find concepts that perspectives use/emphasize
+    3. Filter to concepts the field CAN_MEAN
+    4. Apply intent elevation/suppression
+    5. Assert exactly one result
+    
+    Returns resolution status: 'resolved', 'ambiguous', or 'no_path'
+    """
+    engine = get_db_engine()
+    result = resolve_field_meaning(engine, intent_name, table_name, field_name)
+    return {
+        "intent": result.intent,
+        "field": result.field_name,
+        "status": result.status,
+        "is_valid": result.is_valid,
+        "resolved_concept": result.resolved_concept,
+        "perspective": result.perspective,
+        "candidate_concepts": result.candidate_concepts,
+        "explanation": result.explanation
+    }
+
+
+@app.get("/mcp/tools/validate_model")
+async def api_validate_model():
+    """
+    Validate entire semantic model for resolution completeness.
+    
+    Checks all (Intent, Field) combinations and reports:
+    - Resolved: Valid single-concept resolution
+    - Ambiguous: Multiple concepts (modeling error)
+    - No Path: Missing edges (incomplete model)
+    
+    Use this to detect modeling errors before deploying.
+    """
+    engine = get_db_engine()
+    validation = validate_semantic_model(engine)
+    return {
+        "summary": validation['summary'],
+        "ambiguous_combinations": validation['ambiguous'][:10],
+        "no_path_combinations": validation['no_path'][:10],
+        "total_resolved": validation['summary']['resolved_count'],
+        "total_errors": validation['summary']['ambiguous_count'] + validation['summary']['no_path_count']
+    }
+
+
 def create_gradio_interface():
     """Create the Gradio interface for the Space"""
     
@@ -868,6 +1629,169 @@ def create_gradio_interface():
     def get_live_tables() -> List[str]:
         """Get list of tables from live database"""
         return get_all_tables()
+    
+    def get_perspectives_list() -> List[str]:
+        """Get list of perspectives for dropdown"""
+        engine = get_db_engine()
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(text("SELECT perspective_name FROM schema_perspectives ORDER BY perspective_name"))
+                return [r[0] for r in result.fetchall()]
+        except:
+            return []
+    
+    def get_intents_list() -> List[tuple]:
+        """Get list of intents for dropdown, marking which have ground truth SQL"""
+        engine = get_db_engine()
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(text("""
+                    SELECT intent_name, intent_category, primary_binding_key 
+                    FROM schema_intents ORDER BY intent_category, intent_name
+                """))
+                choices = []
+                for r in result.fetchall():
+                    has_binding = r[2] is not None
+                    label = f"{r[0]} ({r[1]})" if has_binding else f"{r[0]} ({r[1]}) [no SQL]"
+                    choices.append((label, r[0]))
+                return choices
+        except:
+            return []
+    
+    def get_ambiguous_fields_list() -> List[tuple]:
+        """Get list of ambiguous fields for dropdown"""
+        engine = get_db_engine()
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(text("""
+                    SELECT DISTINCT cf.table_name, cf.field_name
+                    FROM schema_concept_fields cf
+                    GROUP BY cf.table_name, cf.field_name
+                    HAVING COUNT(*) > 1
+                    ORDER BY cf.table_name, cf.field_name
+                """))
+                return [(f"{r[0]}.{r[1]}", f"{r[0]}|{r[1]}") for r in result.fetchall()]
+        except:
+            return []
+    
+    def resolve_field_gradio(field_choice: str, intent_choice: str) -> str:
+        """Resolve a field using the full graph traversal"""
+        if not field_choice or not intent_choice:
+            return "Select both a field and an intent to resolve."
+        
+        table_name, field_name = field_choice.split("|")
+        engine = get_db_engine()
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(text("""
+                    SELECT 
+                        i.intent_name, i.intent_category, i.typical_question,
+                        p.perspective_name, p.stakeholder_role,
+                        c.concept_id, c.concept_name, c.concept_type, c.description, c.domain,
+                        ip.intent_factor_weight, pc.priority_weight, cf.context_hint,
+                        ic.intent_factor_weight, ic.explanation
+                    FROM schema_concept_fields cf
+                    JOIN schema_concepts c ON cf.concept_id = c.concept_id
+                    JOIN schema_intent_concepts ic ON c.concept_id = ic.concept_id
+                    JOIN schema_intents i ON ic.intent_id = i.intent_id
+                    JOIN schema_intent_perspectives ip ON i.intent_id = ip.intent_id
+                    JOIN schema_perspectives p ON ip.perspective_id = p.perspective_id
+                    JOIN schema_perspective_concepts pc ON p.perspective_id = pc.perspective_id 
+                        AND c.concept_id = pc.concept_id
+                    WHERE cf.table_name = :table_name 
+                      AND cf.field_name = :field_name
+                      AND i.intent_name = :intent_name
+                      AND ip.intent_factor_weight = 1.0
+                      AND ic.intent_factor_weight = 1.0
+                    LIMIT 1
+                """), {"table_name": table_name, "field_name": field_name, "intent_name": intent_choice})
+                
+                row = result.fetchone()
+                if row:
+                    return f"""## Graph Traversal Result
+
+### Field
+`{table_name}.{field_name}`
+
+### Intent
+**{row[0]}** ({row[1]})
+*"{row[2]}"*
+
+### OPERATES_WITHIN → Perspective
+**{row[3]}**
+Stakeholder: {row[4]}
+
+### USES_DEFINITION → Concept
+**{row[6]}** (type: {row[7]})
+Domain: {row[9]}
+
+### Resolution
+> {row[8]}
+
+**Explanation:** {row[14]}
+"""
+                else:
+                    valid_intents_result = conn.execute(text("""
+                        SELECT DISTINCT i.intent_name, c.concept_name
+                        FROM schema_intents i
+                        JOIN schema_intent_perspectives ip ON i.intent_id = ip.intent_id AND ip.intent_factor_weight = 1.0
+                        JOIN schema_perspective_concepts pc ON ip.perspective_id = pc.perspective_id
+                        JOIN schema_concepts c ON pc.concept_id = c.concept_id
+                        JOIN schema_concept_fields cf ON c.concept_id = cf.concept_id
+                        JOIN schema_intent_concepts ic ON i.intent_id = ic.intent_id AND c.concept_id = ic.concept_id AND ic.intent_factor_weight = 1.0
+                        WHERE cf.table_name = :table_name AND cf.field_name = :field_name
+                    """), {"table_name": table_name, "field_name": field_name})
+                    valid_rows = valid_intents_result.fetchall()
+                    
+                    if valid_rows:
+                        suggestions = "\n".join([f"- **{r[0]}** → resolves to `{r[1]}`" for r in valid_rows])
+                        return f"""## No Valid Path Found
+
+Field: `{table_name}.{field_name}`
+Intent: `{intent_choice}`
+
+The selected intent does not have a valid semantic path to this field.
+
+### Try these intents instead:
+{suggestions}
+"""
+                    else:
+                        return f"""## No Valid Path Found
+
+Field: `{table_name}.{field_name}`
+Intent: `{intent_choice}`
+
+No intents currently have complete semantic paths to this field.
+Check that perspective-concept and intent-concept relationships are seeded.
+"""
+        except Exception as e:
+            return f"Error: {str(e)}"
+    
+    def get_graph_visualization() -> str:
+        """Generate text-based graph visualization"""
+        engine = get_db_engine()
+        try:
+            with engine.connect() as conn:
+                result = conn.execute(text("""
+                    SELECT i.intent_name, p.perspective_name
+                    FROM schema_intent_perspectives ip
+                    JOIN schema_intents i ON ip.intent_id = i.intent_id
+                    JOIN schema_perspectives p ON ip.perspective_id = p.perspective_id
+                    WHERE ip.intent_factor_weight = 1.0
+                    ORDER BY p.perspective_name, i.intent_name
+                """))
+                
+                graph = "## Intent → Perspective Graph\n\n"
+                current_perspective = None
+                for row in result.fetchall():
+                    if row[1] != current_perspective:
+                        current_perspective = row[1]
+                        graph += f"\n### {row[1]}\n"
+                    graph += f"  - {row[0]} → **{row[1]}**\n"
+                
+                return graph
+        except Exception as e:
+            return f"Error loading graph: {str(e)}"
     
     def get_table_ddl_gradio(table_name: str) -> str:
         """Get CREATE TABLE SQL for selected table"""
@@ -925,7 +1849,8 @@ def create_gradio_interface():
         | **Tools** | API endpoints for validation |
         """)
         
-        def build_copilot_context(question: str, include_schema: bool, include_queries: bool, selected_category: str) -> str:
+        def build_copilot_context(question: str, include_schema: bool, include_queries: bool, 
+                                   selected_category: str, include_semantic: bool, selected_intent: str) -> str:
             """Build MCP context package for Copilot"""
             context_parts = []
             
@@ -934,6 +1859,42 @@ def create_gradio_interface():
             if question.strip():
                 context_parts.append("## Prompt")
                 context_parts.append(f"User Question: {question}\n")
+            
+            if include_semantic and selected_intent:
+                context_parts.append("## Semantic Context")
+                context_parts.append(f"**Intent:** {selected_intent}")
+                engine = get_db_engine()
+                try:
+                    with engine.connect() as conn:
+                        result = conn.execute(text("""
+                            SELECT i.intent_name, i.description, i.typical_question,
+                                   p.perspective_name, p.stakeholder_role
+                            FROM schema_intents i
+                            JOIN schema_intent_perspectives ip ON i.intent_id = ip.intent_id
+                            JOIN schema_perspectives p ON ip.perspective_id = p.perspective_id
+                            WHERE i.intent_name = :intent_name AND ip.intent_factor_weight = 1.0
+                        """), {"intent_name": selected_intent})
+                        row = result.fetchone()
+                        if row:
+                            context_parts.append(f"*{row[1]}*")
+                            context_parts.append(f"\n**Perspective:** {row[3]} ({row[4]})")
+                            context_parts.append(f"**Typical Question:** {row[2]}\n")
+                        
+                        result2 = conn.execute(text("""
+                            SELECT c.concept_name, c.description, ic.explanation
+                            FROM schema_intent_concepts ic
+                            JOIN schema_concepts c ON ic.concept_id = c.concept_id
+                            WHERE ic.intent_id = (SELECT intent_id FROM schema_intents WHERE intent_name = :intent_name)
+                              AND ic.intent_factor_weight = 1.0
+                        """), {"intent_name": selected_intent})
+                        elevated = result2.fetchall()
+                        if elevated:
+                            context_parts.append("**Elevated Concepts:**")
+                            for c in elevated:
+                                context_parts.append(f"- {c[0]}: {c[1]}")
+                            context_parts.append("")
+                except:
+                    pass
             
             if include_schema:
                 context_parts.append("## Resources: Database Schema")
@@ -956,6 +1917,7 @@ def create_gradio_interface():
             context_parts.append("- `generate_sql`: Convert natural language to SQL")
             context_parts.append("- `get_table_ddl`: Get schema for specific table")
             context_parts.append("- `validate_sql`: Check SQL syntax against schema")
+            context_parts.append("- `resolve_semantic_path`: Disambiguate field meanings via graph traversal")
             
             return "\n".join(context_parts)
         
@@ -984,6 +1946,15 @@ def create_gradio_interface():
                         interactive=True
                     )
                     
+                    gr.Markdown("#### Semantic Context")
+                    include_semantic = gr.Checkbox(label="Include Semantic Layer Context", value=True)
+                    semantic_intent = gr.Dropdown(
+                        choices=get_intents_list(),
+                        label="Analytical Intent",
+                        info="Intent constrains field interpretations via graph traversal",
+                        interactive=True
+                    )
+                    
                     copy_btn = gr.Button("📋 Copy to Copilot", variant="primary", size="lg")
                 
                 with gr.Column():
@@ -995,7 +1966,7 @@ def create_gradio_interface():
             
             copy_btn.click(
                 fn=build_copilot_context,
-                inputs=[question_input, include_schema, include_queries, query_category],
+                inputs=[question_input, include_schema, include_queries, query_category, include_semantic, semantic_intent],
                 outputs=context_output
             )
         
@@ -1037,20 +2008,46 @@ def create_gradio_interface():
             """)
             
             def load_queries_for_category(category_id: str):
+                print(f"[DEBUG] load_queries_for_category called with: {repr(category_id)}")
                 if not category_id:
-                    return [], ""
+                    print("[DEBUG] category_id is empty, returning empty choices")
+                    return gr.Dropdown(choices=[], value=None), ""
                 queries = get_saved_queries(category_id)
-                choices = [(q['name'], i) for i, q in enumerate(queries)]
+                print(f"[DEBUG] Found {len(queries)} queries")
+                choices = [q['name'] for q in queries]
+                print(f"[DEBUG] Returning choices: {choices}")
                 return gr.Dropdown(choices=choices, value=None), ""
             
-            def load_query_sql(category_id: str, query_idx):
-                if category_id is None or query_idx is None:
-                    return "", ""
+            def _find_binding_key_for_sql(sql_text: str) -> str:
+                """Look up binding key from manifest by matching SQL content"""
+                if not sql_text or not sql_text.strip():
+                    return ""
+                manifest_path = os.path.join(GROUND_TRUTH_DIR, "reviewer_manifest.json")
+                try:
+                    with open(manifest_path, 'r') as f:
+                        manifest = json.load(f)
+                    sql_normalized = sql_text.strip()
+                    for binding_key, entry in manifest.get("approved_snippets", {}).items():
+                        file_path = entry.get("file_path", "")
+                        if os.path.exists(file_path):
+                            with open(file_path, 'r') as sf:
+                                snippet_sql = sf.read().strip()
+                            if snippet_sql == sql_normalized:
+                                return binding_key
+                except Exception as e:
+                    print(f"[DEBUG] Binding key lookup error: {e}")
+                return ""
+
+            def load_query_sql(category_id: str, query_name: str):
+                print(f"[DEBUG] load_query_sql called with category={repr(category_id)}, query={repr(query_name)}")
+                if category_id is None or query_name is None:
+                    return "", "", ""
                 queries = get_saved_queries(category_id)
-                if query_idx < len(queries):
-                    q = queries[query_idx]
-                    return q['sql'], q['description']
-                return "", ""
+                for q in queries:
+                    if q['name'] == query_name:
+                        binding_key = _find_binding_key_for_sql(q['sql'])
+                        return q['sql'], q['description'], binding_key if binding_key else "— not bound to manifest —"
+                return "", "", ""
             
             with gr.Row():
                 with gr.Column():
@@ -1059,17 +2056,19 @@ def create_gradio_interface():
                         label="Query Category",
                         interactive=True
                     )
+                    load_queries_btn = gr.Button("Load Queries", variant="secondary")
                     saved_query_dropdown = gr.Dropdown(
                         choices=[],
                         label="Select Query",
                         interactive=True
                     )
                     saved_description = gr.Textbox(label="Description", interactive=False)
+                    saved_binding_key = gr.Textbox(label="Binding Key (manifest filename)", interactive=False)
                 
                 with gr.Column():
                     saved_sql_output = gr.Code(label="SQL Query", language="sql", lines=15, show_label=True)
             
-            saved_category.change(
+            load_queries_btn.click(
                 fn=load_queries_for_category,
                 inputs=saved_category,
                 outputs=[saved_query_dropdown, saved_sql_output]
@@ -1078,7 +2077,740 @@ def create_gradio_interface():
             saved_query_dropdown.change(
                 fn=load_query_sql,
                 inputs=[saved_category, saved_query_dropdown],
-                outputs=[saved_sql_output, saved_description]
+                outputs=[saved_sql_output, saved_description, saved_binding_key]
+            )
+        
+        with gr.Tab("🔗 Semantic Graph"):
+            gr.Markdown("""
+            ### Semantic Disambiguation via Graph Traversal
+            
+            Resolve ambiguous field meanings using the graph path:
+            
+            ```
+            (:Intent) -[:OPERATES_WITHIN]-> (:Perspective) -[:USES_DEFINITION]-> (:Concept) <-[:CAN_MEAN]- (:Field)
+            ```
+            
+            Select an **Intent** (analytical goal) and an **Ambiguous Field** to see how the graph resolves the field's meaning.
+            """)
+            
+            with gr.Row():
+                with gr.Column():
+                    gr.Markdown("#### 1. Select Intent")
+                    intent_dropdown = gr.Dropdown(
+                        choices=get_intents_list(),
+                        label="Analytical Intent",
+                        info="Intent determines which perspective and concept to use",
+                        interactive=True
+                    )
+                    
+                    gr.Markdown("#### 2. Select Ambiguous Field")
+                    field_dropdown = gr.Dropdown(
+                        choices=get_ambiguous_fields_list(),
+                        label="Field (table.column)",
+                        info="Fields with multiple possible interpretations",
+                        interactive=True
+                    )
+                    
+                    resolve_btn = gr.Button("🔍 Resolve Field Meaning", variant="primary", size="lg")
+                
+                with gr.Column():
+                    resolution_output = gr.Markdown(
+                        value="Select an intent and field, then click **Resolve Field Meaning**.",
+                        label="Graph Traversal Result"
+                    )
+            
+            resolve_btn.click(
+                fn=resolve_field_gradio,
+                inputs=[field_dropdown, intent_dropdown],
+                outputs=resolution_output
+            )
+            
+            gr.Markdown("---")
+            
+            with gr.Accordion("View Intent → Perspective Graph", open=False):
+                graph_output = gr.Markdown(value=get_graph_visualization())
+            
+            gr.Markdown("""
+            #### Semantic MCP Endpoints
+            
+            | Endpoint | Purpose |
+            |----------|---------|
+            | `GET /mcp/tools/get_perspectives` | List organizational perspectives |
+            | `GET /mcp/tools/get_intents` | List analytical intents |
+            | `GET /mcp/tools/get_intent_perspectives` | View OPERATES_WITHIN edges |
+            | `GET /mcp/tools/resolve_semantic_path` | Full graph traversal |
+            """)
+        
+        with gr.Tab("🧠 Advanced Reasoning"):
+            gr.Markdown("""
+            ### Advanced Semantic Reasoning
+            
+            Demonstrates 4 advanced patterns for semantic graph traversal:
+            1. **Query Plan Comparison** - How different intents interpret the same field
+            2. **Probabilistic Intent Resolution** - Rank intents by confidence score
+            3. **SQL Intent Inference** - Automatically detect intent from SQL shape
+            4. **Graph Syntax Mapping** - Cypher and AQL traversal examples
+            """)
+            
+            with gr.Accordion("1. Intent Factor Weight → Query Plan Changes", open=True):
+                gr.Markdown("See how the same field resolves differently under different intents:")
+                
+                with gr.Row():
+                    qp_field = gr.Dropdown(
+                        choices=get_ambiguous_fields_list(),
+                        label="Select Ambiguous Field",
+                        interactive=True
+                    )
+                    qp_btn = gr.Button("Compare Query Plans", variant="primary")
+                
+                qp_output = gr.Markdown()
+                
+                def compare_plans_gradio(field_choice: str) -> str:
+                    if not field_choice:
+                        return "Select a field to compare query plans."
+                    table_name, field_name = field_choice.split("|")
+                    engine = get_db_engine()
+                    plans = compare_query_plans(engine, table_name, field_name)
+                    if not plans:
+                        return f"No query plans found for `{table_name}.{field_name}`"
+                    
+                    output = f"## Query Plans for `{table_name}.{field_name}`\n\n"
+                    for p in plans:
+                        output += f"### Intent: {p['intent']}\n"
+                        output += f"- **Perspective**: {p['perspective']}\n"
+                        output += f"- **Resolves to**: `{p['resolves_to']}`\n"
+                        output += f"- **Elevated concepts**: {', '.join(p['elevated']) or 'None'}\n"
+                        output += f"- **Suggested joins**: {', '.join(p['suggested_joins']) or 'None'}\n\n"
+                    return output
+                
+                qp_btn.click(fn=compare_plans_gradio, inputs=[qp_field], outputs=qp_output)
+            
+            with gr.Accordion("2. Probabilistic Intent Resolution", open=False):
+                gr.Markdown("Given multiple fields, compute confidence scores for each intent:")
+                
+                fields_input = gr.Textbox(
+                    label="Fields (comma-separated: table.field, table.field)",
+                    placeholder="daily_deliveries.ontime_rate, product_defects.severity",
+                    lines=1
+                )
+                prob_btn = gr.Button("Resolve Intents", variant="secondary")
+                prob_output = gr.Markdown()
+                
+                def probabilistic_resolve_gradio(fields_str: str) -> str:
+                    if not fields_str.strip():
+                        return "Enter fields to analyze."
+                    
+                    fields = []
+                    for f in fields_str.split(","):
+                        parts = f.strip().split(".")
+                        if len(parts) == 2:
+                            fields.append((parts[0], parts[1]))
+                    
+                    if not fields:
+                        return "Invalid field format. Use: table.field, table.field"
+                    
+                    engine = get_db_engine()
+                    scores = resolve_intent_probabilistic(engine, fields)
+                    
+                    if not scores:
+                        return "No intents found for the given fields."
+                    
+                    output = "## Intent Confidence Scores\n\n"
+                    output += "| Intent | Confidence | Matched Fields | Matched Concepts |\n"
+                    output += "|--------|------------|----------------|------------------|\n"
+                    for s in scores[:5]:
+                        output += f"| {s.intent_name} | {s.confidence:.1%} | {len(s.matched_fields)} | {', '.join(s.matched_concepts)} |\n"
+                    
+                    return output
+                
+                prob_btn.click(fn=probabilistic_resolve_gradio, inputs=[fields_input], outputs=prob_output)
+            
+            with gr.Accordion("3. Automatic Intent Inference from SQL Shape", open=False):
+                gr.Markdown("Parse SQL to detect likely intent based on tables, columns, and patterns:")
+                
+                sql_input = gr.Textbox(
+                    label="SQL Query",
+                    placeholder="SELECT supplier_id, AVG(ontime_rate) FROM daily_deliveries GROUP BY supplier_id",
+                    lines=3
+                )
+                infer_btn = gr.Button("Infer Intent", variant="secondary")
+                infer_output = gr.Markdown()
+                
+                def infer_intent_gradio(sql: str) -> str:
+                    if not sql.strip():
+                        return "Enter a SQL query to analyze."
+                    
+                    engine = get_db_engine()
+                    scores = infer_intent_from_sql(engine, sql)
+                    
+                    if not scores:
+                        return "Could not infer intent from SQL. Check that tables/columns exist in schema."
+                    
+                    output = "## Inferred Intents\n\n"
+                    for i, s in enumerate(scores[:3]):
+                        medal = ["🥇", "🥈", "🥉"][i] if i < 3 else ""
+                        output += f"### {medal} {s.intent_name} ({s.confidence:.1%})\n"
+                        output += f"- **Matched fields**: {', '.join(s.matched_fields)}\n"
+                        output += f"- **Concepts**: {', '.join(s.matched_concepts)}\n"
+                        output += f"- *{s.explanation}*\n\n"
+                    
+                    return output
+                
+                infer_btn.click(fn=infer_intent_gradio, inputs=[sql_input], outputs=infer_output)
+            
+            with gr.Accordion("4. ArangoDB / Neo4j Traversal Syntax", open=False):
+                gr.Markdown("Generate explicit graph database syntax for the semantic path:")
+                
+                with gr.Row():
+                    syntax_intent = gr.Dropdown(
+                        choices=get_intents_list(),
+                        label="Intent",
+                        interactive=True
+                    )
+                    syntax_field = gr.Dropdown(
+                        choices=get_ambiguous_fields_list(),
+                        label="Field",
+                        interactive=True
+                    )
+                
+                syntax_btn = gr.Button("Generate Graph Syntax", variant="secondary")
+                
+                with gr.Tabs():
+                    with gr.Tab("Cypher (Neo4j)"):
+                        cypher_output = gr.Code(language="sql", label="Cypher Query")
+                    with gr.Tab("AQL (ArangoDB)"):
+                        aql_output = gr.Code(language="sql", label="AQL Query")
+                    with gr.Tab("SQL Equivalent"):
+                        sql_equiv_output = gr.Code(language="sql", label="SQL Query")
+                
+                def generate_syntax_gradio(intent: str, field_choice: str):
+                    if not intent or not field_choice:
+                        return "-- Select intent and field", "-- Select intent and field", "-- Select intent and field"
+                    
+                    table_name, field_name = field_choice.split("|")
+                    engine = get_db_engine()
+                    syntax = get_graph_syntax_examples(engine, intent, table_name, field_name)
+                    
+                    return syntax["cypher"], syntax["aql"], syntax["sql_equivalent"]
+                
+                syntax_btn.click(
+                    fn=generate_syntax_gradio,
+                    inputs=[syntax_intent, syntax_field],
+                    outputs=[cypher_output, aql_output, sql_equiv_output]
+                )
+        
+        with gr.Tab("📝 SME SQL Entry"):
+            gr.Markdown("""
+            ### SME Semantic SQL Submission
+            
+            Submit SQL snippets with semantic metadata for review. Each submission generates:
+            - A **deterministic filename** binding SQL to its semantic context
+            - A **Reviewer Manifest** entry for approval workflow
+            
+            ```
+            Flow: SME Submit → Binding Key → Manifest → Approver Review → ArangoDB Solder
+            ```
+            """)
+            
+            with gr.Row():
+                with gr.Column():
+                    gr.Markdown("#### 1. Semantic Context")
+                    sme_perspective = gr.Dropdown(
+                        choices=get_perspectives_list(),
+                        label="Perspective",
+                        info="The organizational lens for this SQL",
+                        interactive=True
+                    )
+                    sme_concept = gr.Textbox(
+                        label="Concept (e.g., LOT, NCM_COST, DELIVERY_RATE)",
+                        placeholder="Enter the concept this SQL defines"
+                    )
+                    sme_category = gr.Dropdown(
+                        choices=["Inventory", "Quality", "Delivery", "Financial", "Production"],
+                        label="Category",
+                        value="Inventory",
+                        interactive=True
+                    )
+                    
+                    gr.Markdown("#### 2. SQL Statement")
+                    sme_sql = gr.Code(
+                        label="SQL Statement",
+                        language="sql",
+                        lines=8,
+                        value="-- Enter your SQL here\nSELECT "
+                    )
+                    
+                    sme_justification = gr.Textbox(
+                        label="SME Justification / Notes",
+                        placeholder="Why does this SQL represent the concept from this perspective?",
+                        lines=3
+                    )
+                    
+                    sme_submit_btn = gr.Button("Submit for Review", variant="primary", size="lg")
+                    sme_status = gr.Textbox(label="Submission Status", interactive=False)
+                
+                with gr.Column():
+                    gr.Markdown("#### Reviewer's Decision Table")
+                    
+                    def load_reviewer_table() -> str:
+                        bindings = resolve_sql_bindings()
+                        if not bindings:
+                            return "No submissions yet. Use the form on the left to submit SQL."
+                        
+                        output = "| Filename | Perspective | Concept | Status |\n"
+                        output += "|----------|-------------|---------|--------|\n"
+                        
+                        status_icons = {
+                            "PENDING": "⏳",
+                            "APPROVED": "✅",
+                            "REJECTED": "❌",
+                            "UNKNOWN": "❓"
+                        }
+                        
+                        for b in bindings:
+                            icon = status_icons.get(b["validation_status"], "❓")
+                            output += f"| `{b['filename']}` | {b['perspective']} | {b['concept']} | {icon} {b['validation_status']} |\n"
+                        
+                        summary = get_manifest_summary()
+                        output += f"\n**Total: {summary['total']}** | "
+                        output += f"Pending: {summary['pending']} | "
+                        output += f"Approved: {summary['approved']} | "
+                        output += f"Rejected: {summary['rejected']}"
+                        
+                        return output
+                    
+                    reviewer_table = gr.Markdown(value=load_reviewer_table())
+                    refresh_reviewer_btn = gr.Button("Refresh Table", variant="secondary")
+                    
+                    gr.Markdown("#### Review Actions")
+                    with gr.Row():
+                        review_binding_key = gr.Textbox(
+                            label="Binding Key",
+                            placeholder="e.g., quality_ncm_cost_20260208_143000"
+                        )
+                        review_action = gr.Dropdown(
+                            choices=["APPROVED", "REJECTED"],
+                            label="Decision",
+                            interactive=True
+                        )
+                    review_btn = gr.Button("Update Status", variant="secondary")
+                    review_status = gr.Textbox(label="Review Status", interactive=False)
+            
+            def submit_sme(sql, category, perspective, concept, justification):
+                if not sql or not sql.strip() or sql.strip() == "-- Enter your SQL here\nSELECT":
+                    return "Please enter a SQL statement.", load_reviewer_table()
+                if not perspective:
+                    return "Please select a perspective.", load_reviewer_table()
+                if not concept or not concept.strip():
+                    return "Please enter a concept name.", load_reviewer_table()
+                
+                result = save_sme_submission(sql, category or "Inventory", perspective, concept.strip(), justification or "")
+                return result, load_reviewer_table()
+            
+            sme_submit_btn.click(
+                fn=submit_sme,
+                inputs=[sme_sql, sme_category, sme_perspective, sme_concept, sme_justification],
+                outputs=[sme_status, reviewer_table]
+            )
+            
+            refresh_reviewer_btn.click(fn=load_reviewer_table, outputs=reviewer_table)
+            
+            def do_review(binding_key, action):
+                if not binding_key or not binding_key.strip():
+                    return "Enter a binding key.", load_reviewer_table()
+                if not action:
+                    return "Select a decision.", load_reviewer_table()
+                result = update_binding_status(binding_key.strip(), action)
+                return result, load_reviewer_table()
+            
+            review_btn.click(
+                fn=do_review,
+                inputs=[review_binding_key, review_action],
+                outputs=[review_status, reviewer_table]
+            )
+        
+        solder = SolderEngine()
+        
+        with gr.Tab("💬 Ask a Question"):
+            gr.Markdown("""
+            ### Production Dispatcher — Hybrid RAG
+            
+            Ask a **natural language question** about your manufacturing data. The system:
+            1. Routes your question to the correct **Intent** and **Concepts** (closed vocabulary)
+            2. Passes those to the **SolderEngine** to assemble governed SQL
+            3. Returns perspective-aware SQL built entirely from **SME-approved snippets**
+            
+            The LLM acts as a **Semantic Router**, not a SQL generator. All SQL is governed.
+            """)
+            
+            dispatcher = ProductionDispatcher(solder_engine=solder, use_live_api=True)
+            
+            with gr.Row():
+                with gr.Column(scale=1):
+                    gr.Markdown("#### Your Question")
+                    nl_input = gr.Textbox(
+                        label="Natural Language Query",
+                        placeholder="e.g., What are our top defect costs this quarter?",
+                        lines=3,
+                        info="Ask about defects, costs, suppliers, OEE, scheduling, maintenance..."
+                    )
+                    
+                    with gr.Row():
+                        perspective_override = gr.Dropdown(
+                            choices=[("Auto-detect", "")] + [(p, p) for p in dispatcher.perspectives],
+                            value="",
+                            label="Perspective Override",
+                            info="Leave as Auto-detect to let the router choose",
+                            interactive=True
+                        )
+                        dispatch_dialect = gr.Dropdown(
+                            choices=[
+                                ("SQLite", "sqlite"),
+                                ("T-SQL (SQL Server)", "tsql"),
+                                ("PostgreSQL", "postgres"),
+                                ("MySQL", "mysql"),
+                                ("BigQuery", "bigquery"),
+                            ],
+                            value="sqlite",
+                            label="Target Dialect",
+                            interactive=True
+                        )
+                    
+                    with gr.Row():
+                        dispatch_mode = gr.Radio(
+                            choices=[("Live API (HuggingFace)", "live"), ("Demo Mode (Mock)", "mock")],
+                            value="mock",
+                            label="Routing Mode",
+                            info="Demo mode uses keyword matching; Live uses HF Inference API"
+                        )
+                    
+                    dispatch_btn = gr.Button("Ask", variant="primary", size="lg")
+                    
+                    gr.Markdown("#### Example Questions")
+                    gr.Markdown("""
+                    - *"Show me the cost of defects on the East Wall"*
+                    - *"What is our supplier delivery performance?"*
+                    - *"How is OEE trending for the assembly line?"*
+                    - *"What are the top NCM costs this quarter?"*
+                    - *"Which defects have customer impact?"*
+                    - *"What's the maintenance schedule for critical equipment?"*
+                    """)
+                
+                with gr.Column(scale=1):
+                    gr.Markdown("#### Governed SQL Output")
+                    dispatch_sql = gr.Code(label="Assembled SQL", language="sql", lines=14)
+                    
+                    dispatch_metadata = gr.Markdown(label="Routing Metadata")
+                    
+                    dispatch_warnings = gr.Markdown(label="Warnings")
+            
+            def run_dispatch(question, perspective, dialect, mode):
+                if not question or not question.strip():
+                    return (
+                        "-- Enter a question above",
+                        "Enter a natural language question to begin.",
+                        ""
+                    )
+                
+                force_mock = (mode == "mock")
+                persp = perspective if perspective else None
+                
+                result = dispatcher.dispatch(
+                    user_query=question.strip(),
+                    perspective_override=persp,
+                    force_mock=force_mock,
+                    target_dialect=dialect or "sqlite"
+                )
+                
+                meta = f"## Routing Result\n\n"
+                meta += f"**Mode:** {result.routing_mode}\n\n"
+                meta += f"**Confidence:** {result.routing_confidence}\n\n"
+                meta += f"**Intent:** `{result.intent}`\n\n"
+                meta += f"**Binding Key:** `{result.binding_key}`\n\n" if result.binding_key else ""
+                meta += f"**Concepts:** {', '.join(f'`{c}`' for c in result.concepts) if result.concepts else 'None'}\n\n"
+                meta += f"**Perspective:** {result.perspective or 'N/A'}\n\n"
+                
+                if result.assembly_report:
+                    meta += "### Assembly Report\n"
+                    for line in result.assembly_report:
+                        meta += f"{line}\n"
+                    meta += "\n"
+                
+                warn_md = ""
+                if result.warnings:
+                    warn_md = "### Warnings\n"
+                    for w in result.warnings:
+                        warn_md += f"- {w}\n"
+                
+                if result.out_of_scope:
+                    warn_md += "\n**This question is outside the manufacturing domain.** Try asking about defects, costs, suppliers, OEE, scheduling, or maintenance.\n"
+                
+                return result.assembled_sql, meta, warn_md
+            
+            dispatch_btn.click(
+                fn=run_dispatch,
+                inputs=[nl_input, perspective_override, dispatch_dialect, dispatch_mode],
+                outputs=[dispatch_sql, dispatch_metadata, dispatch_warnings]
+            )
+        
+        with gr.Tab("🔧 Solder Engine"):
+            gr.Markdown("""
+            ### Semantic Transpilation Engine
+            
+            The **Solder Pattern** assembles final executable SQL by combining:
+            - **Elevation Weights** from the semantic graph (which concepts are relevant)
+            - **Approved SQL Snippets** from SME submissions (governed ground truth)
+            - **SQLGlot AST Manipulation** for alias renaming, table qualification, and dialect transpilation
+            
+            ```
+            Intent → ELEVATES → Concept → Approved Snippet → SQLGlot AST → Final SQL
+            ```
+            """)
+            
+            with gr.Row():
+                with gr.Column():
+                    gr.Markdown("#### 1. Select Intent")
+                    available_intents = solder.get_available_intents()
+                    intent_choices = [(f"{i['intent_name']} ({i['intent_category']})", i['intent_name']) for i in available_intents]
+                    
+                    solder_intent = gr.Dropdown(
+                        choices=intent_choices,
+                        label="Analytical Intent",
+                        info="Determines which concepts are ELEVATED vs SUPPRESSED",
+                        interactive=True
+                    )
+                    
+                    gr.Markdown("#### 2. Target Concept (optional)")
+                    solder_concept = gr.Textbox(
+                        label="Target Concept",
+                        placeholder="Leave blank to use primary elevated concept",
+                        info="e.g., DefectSeverityCost, NCM_COST"
+                    )
+                    
+                    gr.Markdown("#### 3. Output Dialect")
+                    solder_dialect = gr.Dropdown(
+                        choices=[
+                            ("SQLite", "sqlite"),
+                            ("T-SQL (SQL Server)", "tsql"),
+                            ("PostgreSQL", "postgres"),
+                            ("MySQL", "mysql"),
+                            ("BigQuery", "bigquery"),
+                        ],
+                        value="sqlite",
+                        label="Target SQL Dialect",
+                        interactive=True
+                    )
+                    
+                    with gr.Accordion("Alias Overrides (Advanced)", open=False):
+                        gr.Markdown("Rename table aliases in the soldered SQL:")
+                        alias_old = gr.Textbox(label="Old Alias", placeholder="e.g., t1")
+                        alias_new = gr.Textbox(label="New Alias", placeholder="e.g., defects")
+                    
+                    solder_btn = gr.Button("Solder Query", variant="primary", size="lg")
+                    report_btn = gr.Button("View Elevation Report", variant="secondary")
+                
+                with gr.Column():
+                    gr.Markdown("#### Soldered Output")
+                    soldered_sql_output = gr.Code(label="Final SQL", language="sql", lines=10)
+                    
+                    solder_details = gr.Markdown(label="Solder Details")
+                    
+                    solder_report_output = gr.Markdown(label="Elevation Report")
+            
+            def run_solder(intent, concept, dialect, old_alias, new_alias):
+                if not intent:
+                    return "-- Select an intent to solder", "Select an intent above."
+                
+                overrides = {}
+                if old_alias and old_alias.strip() and new_alias and new_alias.strip():
+                    overrides[old_alias.strip()] = new_alias.strip()
+                
+                result = solder.solder(
+                    intent_name=intent,
+                    target_concept=concept.strip() if concept and concept.strip() else None,
+                    target_dialect=dialect or "sqlite",
+                    context_overrides=overrides if overrides else None
+                )
+                
+                details = f"## Solder Result\n\n"
+                details += f"**Binding Key:** `{result.binding_key}`\n\n"
+                details += f"**Perspective:** {result.perspective}\n\n"
+                details += f"**Concept:** {result.concept}\n\n"
+                details += f"**Logic Type:** {result.logic_type}\n\n"
+                details += f"**Elevation Weight:** {result.elevation_weight}\n\n"
+                details += f"**Dialect:** {result.dialect}\n\n"
+                
+                if result.ast_operations:
+                    details += "### AST Operations\n"
+                    for op in result.ast_operations:
+                        details += f"- {op}\n"
+                    details += "\n"
+                
+                if result.warnings:
+                    details += "### Warnings\n"
+                    for w in result.warnings:
+                        details += f"- {w}\n"
+                
+                return result.soldered_sql, details
+            
+            def run_report(intent):
+                if not intent:
+                    return "Select an intent to view the elevation report."
+                return solder.get_solder_report(intent)
+            
+            solder_btn.click(
+                fn=run_solder,
+                inputs=[solder_intent, solder_concept, solder_dialect, alias_old, alias_new],
+                outputs=[soldered_sql_output, solder_details]
+            )
+            
+            report_btn.click(
+                fn=run_report,
+                inputs=[solder_intent],
+                outputs=solder_report_output
+            )
+            
+            gr.Markdown("---")
+            gr.Markdown("""
+            ### Preview Solder (Multi-Concept Assembly)
+            
+            Combine **multiple concepts** into a single cohesive query. The engine resolves 
+            each concept's approved snippet, applies elevation weights, and assembles them 
+            as projections from a base table. Suppressed concepts become `NULL`.
+            """)
+            
+            with gr.Row():
+                with gr.Column():
+                    assemble_intent = gr.Dropdown(
+                        choices=intent_choices,
+                        label="Intent",
+                        info="Controls which concepts are elevated vs suppressed",
+                        interactive=True
+                    )
+                    
+                    perspective_choices = ["Finance", "Quality", "Operations", "Customer", "Compliance"]
+                    assemble_perspective = gr.Dropdown(
+                        choices=perspective_choices,
+                        label="Perspective",
+                        info="SME perspective for snippet resolution",
+                        interactive=True
+                    )
+                    
+                    assemble_concepts = gr.Textbox(
+                        label="Concepts (comma-separated)",
+                        placeholder="e.g., DefectSeverityCost, DefectSeverityQuality, DefectSeverityCustomer",
+                        info="List the concepts to include as projections"
+                    )
+                    
+                    assemble_base_table = gr.Textbox(
+                        label="Base Table",
+                        value="stg_manufacturing_flat",
+                        info="FROM clause table name"
+                    )
+                    
+                    assemble_dialect = gr.Dropdown(
+                        choices=[
+                            ("SQLite", "sqlite"),
+                            ("T-SQL (SQL Server)", "tsql"),
+                            ("PostgreSQL", "postgres"),
+                            ("MySQL", "mysql"),
+                            ("BigQuery", "bigquery"),
+                        ],
+                        value="sqlite",
+                        label="Target Dialect",
+                        interactive=True
+                    )
+                    
+                    assemble_btn = gr.Button("Assemble Query", variant="primary", size="lg")
+                
+                with gr.Column():
+                    gr.Markdown("#### Assembled Output")
+                    assembled_sql_output = gr.Code(label="Assembled SQL", language="sql", lines=12)
+                    assembled_report = gr.Markdown(label="Assembly Report")
+            
+            def run_assemble(intent, perspective, concepts_str, base_table, dialect):
+                if not intent:
+                    return "-- Select an intent", "Select an intent above."
+                if not concepts_str or not concepts_str.strip():
+                    return "-- Enter concepts", "Enter comma-separated concept names."
+                
+                concepts = [c.strip() for c in concepts_str.split(",") if c.strip()]
+                result = solder.assemble_query(
+                    intent=intent,
+                    perspective=perspective or "",
+                    concepts=concepts,
+                    base_table=base_table or "stg_manufacturing_flat",
+                    target_dialect=dialect or "sqlite"
+                )
+                
+                report_md = f"## Assembly Report\n\n"
+                report_md += f"**Intent:** {result.get('intent', '')}\n\n"
+                report_md += f"**Perspective:** {result.get('perspective', '')}\n\n"
+                report_md += f"**Base Table:** `{result.get('base_table', '')}`\n\n"
+                report_md += f"**Concepts Resolved:** {result.get('concept_count', 0)} / {len(concepts)}\n\n"
+                report_md += f"**Dialect:** {result.get('dialect', 'sqlite')}\n\n"
+                
+                if result.get("report"):
+                    report_md += "### Concept Resolution\n"
+                    for line in result["report"]:
+                        report_md += f"{line}\n"
+                    report_md += "\n"
+                
+                if result.get("warnings"):
+                    report_md += "### Warnings\n"
+                    for w in result["warnings"]:
+                        report_md += f"- {w}\n"
+                
+                return result.get("sql", ""), report_md
+            
+            assemble_btn.click(
+                fn=run_assemble,
+                inputs=[assemble_intent, assemble_perspective, assemble_concepts, assemble_base_table, assemble_dialect],
+                outputs=[assembled_sql_output, assembled_report]
+            )
+        
+        with gr.Tab("🔄 Graph Sync"):
+            gr.Markdown("""
+            ### ArangoDB Graph Sync
+            
+            Synchronize the SQLite semantic layer into ArangoDB as a named graph.
+            This creates/updates the vertex and edge structure:
+            
+            ```
+            (:Intent) -[:OPERATES_WITHIN]-> (:Perspective)
+            (:Intent) -[:ELEVATES {weight}]-> (:Concept)
+            (:Perspective) -[:USES_DEFINITION]-> (:Concept)
+            (:Intent) -[:BOUND_TO]-> (:Binding)
+            ```
+            """)
+            
+            with gr.Row():
+                with gr.Column():
+                    sync_dry_run_btn = gr.Button("Dry Run (Preview)", variant="secondary")
+                    sync_live_btn = gr.Button("Sync to ArangoDB", variant="primary")
+                with gr.Column():
+                    sync_status = gr.Textbox(label="Status", interactive=False, value="Ready")
+            
+            sync_report_output = gr.Code(label="Sync Report", language=None, lines=20)
+            
+            def run_graph_sync(dry_run: bool):
+                try:
+                    from graph_sync import sync_graph
+                    report = sync_graph(dry_run=dry_run)
+                    status = "SUCCESS" if report.success else "FAILED"
+                    if dry_run:
+                        status = "DRY RUN — " + status
+                    return status, report.summary()
+                except Exception as e:
+                    return f"ERROR: {e}", str(e)
+            
+            sync_dry_run_btn.click(
+                fn=lambda: run_graph_sync(dry_run=True),
+                outputs=[sync_status, sync_report_output]
+            )
+            sync_live_btn.click(
+                fn=lambda: run_graph_sync(dry_run=False),
+                outputs=[sync_status, sync_report_output]
             )
         
         with gr.Tab("🔌 MCP Endpoints"):
@@ -1104,78 +2836,6 @@ def create_gradio_interface():
             3. Paste context into Copilot Chat
             4. Ask follow-up questions about your manufacturing data
             """)
-        
-        # Add Ground Truth Examples Tab
-        if query_mgr and query_mgr.queries:
-            with gr.Tab("📚 Ground Truth Examples"):
-                gr.Markdown("""
-                ## Ground Truth SQL Query Examples
-                
-                These queries demonstrate best practices for DuckDB SQL generation from natural language.
-                Use them as reference when building your own queries.
-                """)
-                
-                with gr.Row():
-                    example_dropdown = gr.Dropdown(
-                        choices=query_mgr.export_for_gradio(),
-                        label="Select an Example Query",
-                        info="Choose a query to see the SQL code",
-                        interactive=True
-                    )
-                
-                with gr.Row():
-                    example_sql_output = gr.Code(
-                        label="SQL Code",
-                        language="sql",
-                        lines=15
-                    )
-                
-                with gr.Row():
-                    with gr.Column():
-                        example_category = gr.Textbox(label="Category", interactive=False)
-                    with gr.Column():
-                        example_tables = gr.Textbox(label="Tables Used", interactive=False)
-                
-                example_natural_lang = gr.Textbox(
-                    label="Natural Language Description",
-                    interactive=False,
-                    lines=2
-                )
-                
-                def load_example(sql_code):
-                    """Load example metadata when query is selected"""
-                    if not sql_code:
-                        return "", "", "", ""
-                    
-                    # Find the matching query
-                    for query in query_mgr.queries:
-                        if query['sql'] == sql_code:
-                            return (
-                                sql_code,
-                                query['category'],
-                                query['tables'],
-                                query['natural_language']
-                            )
-                    return sql_code, "", "", ""
-                
-                example_dropdown.change(
-                    fn=load_example,
-                    inputs=[example_dropdown],
-                    outputs=[example_sql_output, example_category, example_tables, example_natural_lang]
-                )
-                
-                gr.Markdown("""
-                ### Query Pattern Coverage
-                
-                | Pattern | Description | Example |
-                |---------|-------------|---------|
-                | **Basic Filtering** | WHERE clauses, simple SELECT | Filter by numeric thresholds |
-                | **Aggregation** | GROUP BY, COUNT, SUM, AVG | Totals per batch or category |
-                | **Date Filtering** | DATE_TRUNC, date ranges | Time-based analysis |
-                | **Window Functions** | RANK, ROW_NUMBER, LAG/LEAD | Ranking and analytics |
-                | **CTEs** | WITH clauses | Complex multi-step queries |
-                | **Conditional Logic** | CASE WHEN statements | Categorization and bucketing |
-                """)
     
     return demo
 
@@ -1183,11 +2843,12 @@ def create_gradio_interface():
 get_db_engine()
 initial_tables = get_all_tables()
 print(f"SQLite database initialized with {len(initial_tables)} tables")
+
 gradio_app = create_gradio_interface()
 app = gr.mount_gradio_app(app, gradio_app, path="/gradio")
 
 
 if __name__ == "__main__":
     import uvicorn
-    port = int(os.environ.get("PORT", 5000))
+    port = int(os.environ.get("PORT", 8080))
     uvicorn.run(app, host="0.0.0.0", port=port)

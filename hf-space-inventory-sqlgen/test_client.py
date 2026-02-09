@@ -21,7 +21,7 @@ from typing import Optional
 class MCPClient:
     """Simple MCP client for testing the inventory SQL generator"""
     
-    def __init__(self, base_url: str = "http://localhost:5000"):
+    def __init__(self, base_url: str = "http://localhost:7860"):
         self.base_url = base_url.rstrip("/")
         self.tools = {}
         self.discovered = False
@@ -93,7 +93,7 @@ def main():
     parser = argparse.ArgumentParser(description="Test MCP Inventory SQL Generator")
     parser.add_argument(
         "--base-url",
-        default="http://localhost:5000",
+        default="http://localhost:7860",
         help="Base URL of the MCP server"
     )
     parser.add_argument(

@@ -5,15 +5,17 @@ This guide documents how to set up, load, and update the SQLite database for the
 ## File Locations
 
 ```
-app_schema/
-├── manufacturing.db          # SQLite database (auto-created)
-├── schema_sqlite.sql         # DDL - CREATE TABLE statements
-└── queries/
-    ├── index.json            # Category definitions
-    ├── quality_control.sql   # Ground truth SQL by category
-    ├── supplier_performance.sql
-    ├── equipment_reliability.sql
-    └── production_analytics.sql
+hf-space-inventory-sqlgen/
+├── app.py                    # Main Gradio + FastAPI application
+├── app_schema/
+│   ├── manufacturing.db      # SQLite database (auto-created)
+│   ├── schema_sqlite.sql     # DDL - CREATE TABLE statements
+│   └── queries/
+│       ├── index.json            # Category definitions
+│       ├── quality_control.sql   # Ground truth SQL by category
+│       ├── supplier_performance.sql
+│       ├── equipment_reliability.sql
+│       └── production_analytics.sql
 ```
 
 ## Loading the Database
@@ -38,6 +40,8 @@ python app.py
 To manually recreate the database from schema:
 
 ```bash
+cd hf-space-inventory-sqlgen
+
 # Delete existing database (if any)
 rm -f app_schema/manufacturing.db
 
@@ -50,6 +54,7 @@ sqlite3 app_schema/manufacturing.db < app_schema/schema_sqlite.sql
 If you have sample data CSV files:
 
 ```bash
+cd hf-space-inventory-sqlgen
 sqlite3 app_schema/manufacturing.db
 .mode csv
 .import suppliers.csv suppliers
@@ -75,6 +80,7 @@ CREATE TABLE IF NOT EXISTS new_table (
 ### Step 2: Regenerate Database
 
 ```bash
+cd hf-space-inventory-sqlgen
 rm -f app_schema/manufacturing.db
 sqlite3 app_schema/manufacturing.db < app_schema/schema_sqlite.sql
 ```
@@ -95,6 +101,7 @@ The `schema_edges` table defines foreign key relationships for the schema graph:
 ### View Current Edges
 
 ```bash
+cd hf-space-inventory-sqlgen
 sqlite3 app_schema/manufacturing.db "SELECT * FROM schema_edges"
 ```
 
@@ -176,6 +183,8 @@ curl "http://localhost:5000/mcp/tools/get_saved_queries?category_id=new_category
 
 ## Quick Reference Commands
 
+Run from `hf-space-inventory-sqlgen/` directory:
+
 | Task | Command |
 |------|---------|
 | View all tables | `sqlite3 app_schema/manufacturing.db ".tables"` |
@@ -197,7 +206,7 @@ curl "http://localhost:5000/mcp/tools/get_saved_queries?category_id=new_category
 
 ```bash
 # Find and kill any processes using the database
-fuser -k app_schema/manufacturing.db
+fuser -k hf-space-inventory-sqlgen/app_schema/manufacturing.db
 ```
 
 ### Schema Changes Not Reflected
@@ -207,10 +216,10 @@ fuser -k app_schema/manufacturing.db
 
 ### Missing Tables
 
-Check that `schema/schema_sqlite.sql` contains all required CREATE TABLE statements.
+Check that `app_schema/schema_sqlite.sql` contains all required CREATE TABLE statements.
 
 ```bash
-sqlite3 schema/manufacturing.db ".tables"
+sqlite3 app_schema/manufacturing.db ".tables"
 ```
 
-Compare with expected tables in `schema_sqlite.sql`.
+Compare with expected tables in `app_schema/schema_sqlite.sql`.
