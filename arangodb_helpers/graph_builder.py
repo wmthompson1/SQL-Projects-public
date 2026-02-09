@@ -41,11 +41,14 @@ class DirectGraphBuilder:
 class ArangoGraphPersistence:
     """Persist graph directly to ArangoDB without NetworkX."""
 
-    def __init__(self, host: str = '127.0.0.1', port: int = 8529, db_name: str = 'manufacturing_graph'):
-        self.client = ArangoClient(hosts=[f'http://{host}:{port}'])
+    def __init__(self, host: str = '127.0.0.1', port: int = 8529, db_name: str = 'manufacturing_graph', username: str = None, password: str = None):
+        endpoint = f'http://{host}:{port}'
+        self.client = ArangoClient(hosts=[endpoint])
         self.sys_db = self.client.db('_system')
         self.db_name = db_name
         self.db = None
+        self.username = username
+        self.password = password
 
     def ensure_database(self):
         """Create database if it doesn't exist and set `self.db`."""
@@ -55,7 +58,14 @@ class ArangoGraphPersistence:
         except Exception:
             # may not have permission; proceed to open DB
             pass
-        self.db = self.client.db(self.db_name)
+        try:
+            if self.username is not None and self.password is not None:
+                self.db = self.client.db(self.db_name, username=self.username, password=self.password)
+            else:
+                self.db = self.client.db(self.db_name)
+        except Exception:
+            # last resort: try without credentials
+            self.db = self.client.db(self.db_name)
 
     def persist_graph(self, builder: DirectGraphBuilder, graph_name: str):
         """Persist nodes and edges to ArangoDB."""
