@@ -1,0 +1,54 @@
+{
+  "bridge_policy_version": "1.1",
+  "collision_resolutions": [
+    {
+      "field": "severity",
+      "perspective": "Quality",
+      "winning_concept": "MATERIAL_NON_CONFORMANCE",
+      "losing_concept": "PRODUCTION_DEFECT",
+      "justification": "Quality audits must prioritize specific material non-conformance over generic production line defect reporting."
+    },
+    {
+      "field": "cost_impact",
+      "perspective": "Finance",
+      "winning_concept": "MATERIAL_NON_CONFORMANCE",
+      "losing_concept": "PRODUCTION_DEFECT",
+      "justification": "Financial liability is driven by material cost impact (NCM) rather than operational production variances."
+    }
+  ]
+}
+{
+  "approved_snippets": {
+    "DEFECT_COST_001": {
+      "concept_anchor": "DEFECTSEVERITYCOST",
+      "perspective": "Finance",
+      "category": "Defects",
+      "logic_type": "DIRECT",
+      "file_path": "defect_cost.sql",
+      "sme_justification": "Test NCM cost snippet",
+      "validation_status": "APPROVED",
+      "created_at": "2026-02-09T00:00:00"
+    },
+    "DEFECT_QUALITY_001": {
+      "concept_anchor": "DEFECTSEVERITYQUALITY",
+      "perspective": "Quality",
+      "category": "Defects",
+      "logic_type": "DIRECT",
+      "file_path": "defect_quality.sql",
+      "sme_justification": "Test quality snippet",
+      "validation_status": "APPROVED",
+      "created_at": "2026-02-09T00:00:00"
+    },
+    "DEFECT_CUSTOMER_001": {
+      "concept_anchor": "DEFECTSEVERITYCUSTOMER",
+      "perspective": "Customer",
+      "category": "Defects",
+      "logic_type": "DIRECT",
+      "file_path": "defect_customer.sql",
+      "sme_justification": "Test customer snippet",
+      "validation_status": "APPROVED",
+      "created_at": "2026-02-09T00:00:00"
+    }
+  },
+  "last_updated": "2026-02-09T00:00:00"
+}

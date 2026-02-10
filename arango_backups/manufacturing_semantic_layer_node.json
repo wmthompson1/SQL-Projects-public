@@ -1,0 +1,110 @@
+[
+  {
+    "_key": "intent_Solder",
+    "_id": "manufacturing_semantic_layer_node/intent_Solder",
+    "_rev": "_lBvn-MK---",
+    "type": "Intent",
+    "intent_id": 1,
+    "name": "Solder",
+    "description": "Solder pattern intent placeholder"
+  },
+  {
+    "_key": "perspective_Quality",
+    "_id": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_rev": "_lBvn-MK--_",
+    "type": "Perspective",
+    "perspective_id": 1,
+    "name": "Quality",
+    "description": "Quality perspective"
+  },
+  {
+    "_key": "perspective_Finance",
+    "_id": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_rev": "_lBvn-MK--A",
+    "type": "Perspective",
+    "perspective_id": 2,
+    "name": "Finance",
+    "description": "Finance perspective"
+  },
+  {
+    "_key": "concept_MATERIAL_NON_CONFORMANCE",
+    "_id": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-MK--B",
+    "type": "Concept",
+    "concept_id": 1,
+    "name": "MATERIAL_NON_CONFORMANCE",
+    "description": "Material-centric defect tracking"
+  },
+  {
+    "_key": "concept_FINANCIAL_LIABILITY_NCM",
+    "_id": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvn-MK--C",
+    "type": "Concept",
+    "concept_id": 2,
+    "name": "FINANCIAL_LIABILITY_NCM",
+    "description": "Financial liability from NCM events"
+  },
+  {
+    "_key": "concept_PRODUCTION_DEFECT",
+    "_id": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-MK--D",
+    "type": "Concept",
+    "concept_id": 3,
+    "name": "PRODUCTION_DEFECT",
+    "description": "Generic production defect"
+  },
+  {
+    "_key": "field_stg_non_conformant_materials_severity",
+    "_id": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_rev": "_lBvn-MK--E",
+    "type": "Field",
+    "table_name": "stg_non_conformant_materials",
+    "field_name": "severity",
+    "name": "stg_non_conformant_materials.severity"
+  },
+  {
+    "_key": "field_stg_non_conformant_materials_cost_impact",
+    "_id": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_rev": "_lBvn-MK--F",
+    "type": "Field",
+    "table_name": "stg_non_conformant_materials",
+    "field_name": "cost_impact",
+    "name": "stg_non_conformant_materials.cost_impact"
+  },
+  {
+    "_key": "field_stg_product_defects_severity",
+    "_id": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_rev": "_lBvn-MK--G",
+    "type": "Field",
+    "table_name": "stg_product_defects",
+    "field_name": "severity",
+    "name": "stg_product_defects.severity"
+  },
+  {
+    "_key": "field_stg_product_defects_defect_type",
+    "_id": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_rev": "_lBvn-MK--H",
+    "type": "Field",
+    "table_name": "stg_product_defects",
+    "field_name": "defect_type",
+    "name": "stg_product_defects.defect_type"
+  },
+  {
+    "_key": "field_stg_product_defects_cost_impact",
+    "_id": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_rev": "_lBvn-MK--I",
+    "type": "Field",
+    "table_name": "stg_product_defects",
+    "field_name": "cost_impact",
+    "name": "stg_product_defects.cost_impact"
+  },
+  {
+    "_key": "field_stg_non_conformant_materials_defect_description",
+    "_id": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_defect_description",
+    "_rev": "_lBvn-MK--J",
+    "type": "Field",
+    "table_name": "stg_non_conformant_materials",
+    "field_name": "defect_description",
+    "name": "stg_non_conformant_materials.defect_description"
+  }
+]
