@@ -1,0 +1,626 @@
+[
+  {
+    "_key": "15705",
+    "_id": "manufacturing_semantic_layer_edges/15705",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_rev": "_lBvn-M2---",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "15706",
+    "_id": "manufacturing_semantic_layer_edges/15706",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_rev": "_lBvn-M2--_",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "15707",
+    "_id": "manufacturing_semantic_layer_edges/15707",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--A",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15708",
+    "_id": "manufacturing_semantic_layer_edges/15708",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--B",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15709",
+    "_id": "manufacturing_semantic_layer_edges/15709",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvn-M2--C",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15710",
+    "_id": "manufacturing_semantic_layer_edges/15710",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--D",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15711",
+    "_id": "manufacturing_semantic_layer_edges/15711",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--E",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15712",
+    "_id": "manufacturing_semantic_layer_edges/15712",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--F",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15713",
+    "_id": "manufacturing_semantic_layer_edges/15713",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--G",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15714",
+    "_id": "manufacturing_semantic_layer_edges/15714",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--H",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15715",
+    "_id": "manufacturing_semantic_layer_edges/15715",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--I",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15716",
+    "_id": "manufacturing_semantic_layer_edges/15716",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--J",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15717",
+    "_id": "manufacturing_semantic_layer_edges/15717",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_defect_description",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--K",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15718",
+    "_id": "manufacturing_semantic_layer_edges/15718",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvn-M2--L",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15719",
+    "_id": "manufacturing_semantic_layer_edges/15719",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--M",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15720",
+    "_id": "manufacturing_semantic_layer_edges/15720",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--N",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15721",
+    "_id": "manufacturing_semantic_layer_edges/15721",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--O",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15722",
+    "_id": "manufacturing_semantic_layer_edges/15722",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--P",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Quality perspective selects NCM.severity over defect.severity"
+  },
+  {
+    "_key": "15723",
+    "_id": "manufacturing_semantic_layer_edges/15723",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--Q",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed when NCM is elevated"
+  },
+  {
+    "_key": "15724",
+    "_id": "manufacturing_semantic_layer_edges/15724",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvn-M2--R",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Finance perspective selects NCM.cost_impact (actual) over defect.cost_impact (estimated)"
+  },
+  {
+    "_key": "15725",
+    "_id": "manufacturing_semantic_layer_edges/15725",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--S",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed in Finance - defect.cost_impact is estimated, NCM.cost_impact is actual"
+  },
+  {
+    "_key": "15726",
+    "_id": "manufacturing_semantic_layer_edges/15726",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvn-M2--T",
+    "edge_type": "CAN_MEAN",
+    "is_primary": false,
+    "table_alias": "defect",
+    "note": "Estimated cost - suppressed in Finance perspective"
+  },
+  {
+    "_key": "15727",
+    "_id": "manufacturing_semantic_layer_edges/15727",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvn-M2--U",
+    "edge_type": "CAN_MEAN",
+    "is_primary": true,
+    "table_alias": "ncm"
+  },
+  {
+    "_key": "15728",
+    "_id": "manufacturing_semantic_layer_edges/15728",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvn-M2--V",
+    "edge_type": "CAN_MEAN",
+    "is_primary": true,
+    "table_alias": "ncm"
+  },
+  {
+    "_key": "15813",
+    "_id": "manufacturing_semantic_layer_edges/15813",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_rev": "_lBvp4qu---",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "15814",
+    "_id": "manufacturing_semantic_layer_edges/15814",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_rev": "_lBvp4qu--_",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "15815",
+    "_id": "manufacturing_semantic_layer_edges/15815",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qu--A",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15816",
+    "_id": "manufacturing_semantic_layer_edges/15816",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qu--B",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15817",
+    "_id": "manufacturing_semantic_layer_edges/15817",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvp4qu--C",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15818",
+    "_id": "manufacturing_semantic_layer_edges/15818",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qu--D",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "15819",
+    "_id": "manufacturing_semantic_layer_edges/15819",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qu--E",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15820",
+    "_id": "manufacturing_semantic_layer_edges/15820",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qu--F",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15821",
+    "_id": "manufacturing_semantic_layer_edges/15821",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15822",
+    "_id": "manufacturing_semantic_layer_edges/15822",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--_",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15823",
+    "_id": "manufacturing_semantic_layer_edges/15823",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--A",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15824",
+    "_id": "manufacturing_semantic_layer_edges/15824",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--B",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15825",
+    "_id": "manufacturing_semantic_layer_edges/15825",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_defect_description",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--C",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15826",
+    "_id": "manufacturing_semantic_layer_edges/15826",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvp4qy--D",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15827",
+    "_id": "manufacturing_semantic_layer_edges/15827",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--E",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15828",
+    "_id": "manufacturing_semantic_layer_edges/15828",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--F",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15829",
+    "_id": "manufacturing_semantic_layer_edges/15829",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--G",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15830",
+    "_id": "manufacturing_semantic_layer_edges/15830",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--H",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15831",
+    "_id": "manufacturing_semantic_layer_edges/15831",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_defect_description",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--I",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15832",
+    "_id": "manufacturing_semantic_layer_edges/15832",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvp4qy--J",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15833",
+    "_id": "manufacturing_semantic_layer_edges/15833",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--K",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15834",
+    "_id": "manufacturing_semantic_layer_edges/15834",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--L",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15835",
+    "_id": "manufacturing_semantic_layer_edges/15835",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--M",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "15836",
+    "_id": "manufacturing_semantic_layer_edges/15836",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--N",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Quality perspective selects NCM.severity over defect.severity"
+  },
+  {
+    "_key": "15837",
+    "_id": "manufacturing_semantic_layer_edges/15837",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--O",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed when NCM is elevated"
+  },
+  {
+    "_key": "15838",
+    "_id": "manufacturing_semantic_layer_edges/15838",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvp4qy--P",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Finance perspective selects NCM.cost_impact (actual) over defect.cost_impact (estimated)"
+  },
+  {
+    "_key": "15839",
+    "_id": "manufacturing_semantic_layer_edges/15839",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--Q",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed in Finance - defect.cost_impact is estimated, NCM.cost_impact is actual"
+  },
+  {
+    "_key": "15840",
+    "_id": "manufacturing_semantic_layer_edges/15840",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lBvp4qy--R",
+    "edge_type": "CAN_MEAN",
+    "is_primary": false,
+    "table_alias": "defect",
+    "note": "Estimated cost - suppressed in Finance perspective"
+  },
+  {
+    "_key": "15841",
+    "_id": "manufacturing_semantic_layer_edges/15841",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lBvp4qy--S",
+    "edge_type": "CAN_MEAN",
+    "is_primary": true,
+    "table_alias": "ncm"
+  },
+  {
+    "_key": "15842",
+    "_id": "manufacturing_semantic_layer_edges/15842",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lBvp4qy--T",
+    "edge_type": "CAN_MEAN",
+    "is_primary": true,
+    "table_alias": "ncm"
+  },
+  {
+    "_key": "1d4efb1b6229b6449742dd74a8c03df4966fb10f",
+    "_id": "manufacturing_semantic_layer_edges/1d4efb1b6229b6449742dd74a8c03df4966fb10f",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_rev": "_lCOs-vO---",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "06968162e69a1002d231cc8fbadd3e899df330ea",
+    "_id": "manufacturing_semantic_layer_edges/06968162e69a1002d231cc8fbadd3e899df330ea",
+    "_from": "manufacturing_semantic_layer_node/intent_Solder",
+    "_to": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_rev": "_lCOs-vi---",
+    "edge_type": "OPERATES_WITHIN",
+    "weight": 1
+  },
+  {
+    "_key": "4265ffd80aceb291af8c873dbf1c65743a1299ec",
+    "_id": "manufacturing_semantic_layer_edges/4265ffd80aceb291af8c873dbf1c65743a1299ec",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lCOs-vu---",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "a000801110f0e32b959c0582376b5c5a18605ca7",
+    "_id": "manufacturing_semantic_layer_edges/a000801110f0e32b959c0582376b5c5a18605ca7",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-v2---",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "9dfb3ac98d53ef88b5051f5b0b0ae58216416807",
+    "_id": "manufacturing_semantic_layer_edges/9dfb3ac98d53ef88b5051f5b0b0ae58216416807",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lCOs-wC---",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "69ab29096fcca67ab2cd3e2e079092cbfcf88dd9",
+    "_id": "manufacturing_semantic_layer_edges/69ab29096fcca67ab2cd3e2e079092cbfcf88dd9",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-wK---",
+    "edge_type": "USES_DEFINITION"
+  },
+  {
+    "_key": "e05be6326f87d01871642753cfd806a15bbd77c1",
+    "_id": "manufacturing_semantic_layer_edges/e05be6326f87d01871642753cfd806a15bbd77c1",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lCOs-wW---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "83a925d5a594e01c708e2fb8c315d4432e77c596",
+    "_id": "manufacturing_semantic_layer_edges/83a925d5a594e01c708e2fb8c315d4432e77c596",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lCOs-wi---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "f5e32dc03a561246dfa88b74a8055e26136adf56",
+    "_id": "manufacturing_semantic_layer_edges/f5e32dc03a561246dfa88b74a8055e26136adf56",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_severity",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-wu---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "8068afe2a46efe9cc2a24f989d65936742f17050",
+    "_id": "manufacturing_semantic_layer_edges/8068afe2a46efe9cc2a24f989d65936742f17050",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_defect_type",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-w6---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "83dd8945f89856c5938987a8d3fa7e348a4068d1",
+    "_id": "manufacturing_semantic_layer_edges/83dd8945f89856c5938987a8d3fa7e348a4068d1",
+    "_from": "manufacturing_semantic_layer_node/field_stg_product_defects_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-xC---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "863a3c4f46eb78acb59b9df054db3d6894edc25f",
+    "_id": "manufacturing_semantic_layer_edges/863a3c4f46eb78acb59b9df054db3d6894edc25f",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_defect_description",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lCOs-xa---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "174d0953136a43fce89e1617b5905a97ae686989",
+    "_id": "manufacturing_semantic_layer_edges/174d0953136a43fce89e1617b5905a97ae686989",
+    "_from": "manufacturing_semantic_layer_node/field_stg_non_conformant_materials_cost_impact",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lCOs-xm---",
+    "edge_type": "CAN_MEAN"
+  },
+  {
+    "_key": "6669a01ec54c9fd85025c068bf853a4e83d8ec21",
+    "_id": "manufacturing_semantic_layer_edges/6669a01ec54c9fd85025c068bf853a4e83d8ec21",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_MATERIAL_NON_CONFORMANCE",
+    "_rev": "_lCOs-1W---",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Quality perspective selects NCM.severity over defect.severity"
+  },
+  {
+    "_key": "1fda593a82e17fa0956b1591ff496001037e0961",
+    "_id": "manufacturing_semantic_layer_edges/1fda593a82e17fa0956b1591ff496001037e0961",
+    "_from": "manufacturing_semantic_layer_node/perspective_Quality",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-1i---",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed when NCM is elevated"
+  },
+  {
+    "_key": "eafd02e07dd312d9163208ee079cdf550902ea6a",
+    "_id": "manufacturing_semantic_layer_edges/eafd02e07dd312d9163208ee079cdf550902ea6a",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_FINANCIAL_LIABILITY_NCM",
+    "_rev": "_lCOs-1u---",
+    "edge_type": "ELEVATES",
+    "elevation_weight": 1,
+    "solder_priority": "primary",
+    "collision_resolution": "Finance perspective selects NCM.cost_impact (actual) over defect.cost_impact (estimated)"
+  },
+  {
+    "_key": "184245e8685591baea013a893604ee86065c006e",
+    "_id": "manufacturing_semantic_layer_edges/184245e8685591baea013a893604ee86065c006e",
+    "_from": "manufacturing_semantic_layer_node/perspective_Finance",
+    "_to": "manufacturing_semantic_layer_node/concept_PRODUCTION_DEFECT",
+    "_rev": "_lCOs-16---",
+    "edge_type": "SUPPRESSES",
+    "elevation_weight": 0,
+    "solder_priority": "secondary",
+    "collision_resolution": "Suppressed in Finance - defect.cost_impact is estimated, NCM.cost_impact is actual"
+  }
+]

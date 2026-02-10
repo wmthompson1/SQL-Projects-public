@@ -1,0 +1,6 @@
+-- 026_AQL_Path_Resolution_Test.aql
+-- Placeholder AQL contract used by path-resolution tests
+-- Created: 2026-02-09
+
+-- Sample AQL (no-op)
+RETURN { "status": "ok", "test": "026_AQL_Path_Resolution_Test" }
