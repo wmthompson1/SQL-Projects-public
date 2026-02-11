@@ -34,15 +34,19 @@ pip install "sqlmesh[snowflake,github,slack]"
 ```
 
 Common extras:
-- `lsp` - VSCode language server support
+- `lsp` - VSCode language server support (optional - only needed for VS Code extension features)
 - `github` - GitHub CI/CD bot integration
 - `slack` - Slack notifications
 
-## VSCode Support
+## VSCode Support (Optional)
+
+> **Note:** LSP is only required if you want to use the SQLMesh VS Code extension for features like column-level lineage, auto-completion, and hover tooltips. It's NOT required for CLI usage (`sqlmesh plan`, `sqlmesh run`, etc.) or web UI (`sqlmesh ui`).
 
 ```bash
 pip install "sqlmesh[lsp]"
 ```
+
+After installation, reload your VS Code window (Ctrl+Shift+P → "Developer: Reload Window").
 
 ## Verify Installation
 

@@ -145,6 +145,7 @@ def get_all_tables() -> List[str]:
     
     try:
         inspector = inspect(engine)
+        inspector.clear_cache()
         return inspector.get_table_names()
     except Exception:
         return []
@@ -219,16 +220,18 @@ def get_saved_queries(category_id: str) -> List[Dict[str, str]]:
             content = f.read()
         
         queries = []
-        current_query = {"name": "", "description": "", "sql": ""}
+        current_query = {"name": "", "description": "", "sql": "", "binding_key": ""}
         lines = content.split('\n')
         
         for line in lines:
             if line.startswith('-- Query:'):
                 if current_query["sql"].strip():
                     queries.append(current_query)
-                current_query = {"name": line.replace('-- Query:', '').strip(), "description": "", "sql": ""}
+                current_query = {"name": line.replace('-- Query:', '').strip(), "description": "", "sql": "", "binding_key": ""}
             elif line.startswith('-- Description:'):
                 current_query["description"] = line.replace('-- Description:', '').strip()
+            elif line.startswith('-- Binding:'):
+                current_query["binding_key"] = line.replace('-- Binding:', '').strip()
             elif not line.startswith('-- ') and line.strip():
                 current_query["sql"] += line + "\n"
         
@@ -268,6 +271,30 @@ def _sanitize_slug(value: str) -> str:
     slug = re.sub(r'[^a-z0-9_]', '_', value.lower().strip())
     slug = re.sub(r'_+', '_', slug).strip('_')
     return slug or "unknown"
+
+
+def _auto_concept_from_sql(sql_text: str) -> str:
+    """Auto-generate a concept name from SQL when user leaves Concept blank."""
+    upper = sql_text.upper()
+    from_match = re.search(r'\bFROM\s+(\w+)', upper)
+    if from_match:
+        table = from_match.group(1)
+        select_cols = re.search(r'SELECT\s+(.*?)\s+FROM', upper, re.DOTALL)
+        if select_cols:
+            cols = select_cols.group(1).strip()
+            if cols == "*":
+                return f"{table}_OVERVIEW"
+            col_parts = []
+            for c in cols.split(','):
+                part = c.strip().split('.')[-1].split(' ')[-1]
+                part = re.sub(r'[^A-Z0-9_]', '', part)
+                if part:
+                    col_parts.append(part)
+            if col_parts and len(col_parts) <= 3:
+                return f"{table}_{'_'.join(col_parts)}"
+            return f"{table}_QUERY"
+        return f"{table}_QUERY"
+    return "UNCLASSIFIED"
 
 
 def save_sme_submission(sql_text: str, category: str, perspective: str, concept: str, justification: str) -> str:
@@ -388,6 +415,148 @@ def get_manifest_summary() -> Dict[str, Any]:
     }
 
 
+CATEGORY_MAP = {
+    "Quality": "quality_control",
+    "Inventory": "production_analytics",
+    "Delivery": "supplier_performance",
+    "Financial": "production_analytics",
+    "Production": "production_analytics",
+}
+
+REVERSE_CATEGORY_MAP = {v: k for k, v in CATEGORY_MAP.items()}
+
+
+def _ensure_manifest_entry(query_name: str, sql_text: str, description: str, category_id: str) -> str:
+    """Reverse bridge: create a PENDING manifest entry for a Ground Truth query that has no binding key."""
+    safe_name = _sanitize_slug(query_name)
+    timestamp = datetime.datetime.now().strftime("%Y%m%d_%H%M%S")
+    binding_key = f"gt_{safe_name}_{timestamp}"
+    filename = f"{binding_key}.sql"
+    file_path = os.path.join(GROUND_TRUTH_SQL_DIR, filename)
+
+    os.makedirs(GROUND_TRUTH_SQL_DIR, exist_ok=True)
+    with open(file_path, "w") as f:
+        f.write(sql_text.strip())
+
+    category_label = REVERSE_CATEGORY_MAP.get(category_id, category_id)
+    logic_type = "SPATIAL_ALIAS" if "User_Defined" in sql_text else "DIRECT"
+
+    manifest_entry = {
+        "concept_anchor": safe_name.upper(),
+        "perspective": "Pending",
+        "category": category_label,
+        "logic_type": logic_type,
+        "file_path": file_path,
+        "sme_justification": f"Auto-created from Ground Truth: {query_name} — {description}",
+        "validation_status": "PENDING",
+        "binding_key": binding_key,
+        "created_at": datetime.datetime.now().isoformat()
+    }
+
+    if os.path.exists(MANIFEST_PATH):
+        try:
+            with open(MANIFEST_PATH, "r") as f:
+                manifest = json.load(f)
+        except (json.JSONDecodeError, Exception):
+            manifest = {"approved_snippets": {}}
+    else:
+        manifest = {"approved_snippets": {}}
+
+    if "approved_snippets" not in manifest:
+        manifest["approved_snippets"] = {}
+
+    manifest["approved_snippets"][binding_key] = manifest_entry
+    manifest["last_updated"] = datetime.datetime.now().isoformat()
+
+    tmp_fd, tmp_path = tempfile.mkstemp(dir=GROUND_TRUTH_DIR, suffix=".json")
+    try:
+        with os.fdopen(tmp_fd, "w") as f:
+            json.dump(manifest, f, indent=4)
+        os.replace(tmp_path, MANIFEST_PATH)
+    except Exception:
+        if os.path.exists(tmp_path):
+            os.unlink(tmp_path)
+        raise
+
+    _inject_binding_tag(query_name, binding_key, category_id)
+
+    return binding_key
+
+
+def _inject_binding_tag(query_name: str, binding_key: str, category_id: str):
+    """Inject a -- Binding: tag into the category .sql file so subsequent loads find it directly."""
+    index = get_query_categories()
+    category = next((c for c in index.get("categories", []) if c["id"] == category_id), None)
+    if not category:
+        return
+    sql_file = os.path.join(QUERIES_DIR, category["file"])
+    if not os.path.exists(sql_file):
+        return
+    with open(sql_file, "r") as f:
+        content = f.read()
+    marker = f"-- Query: {query_name}"
+    if marker not in content:
+        return
+    if f"-- Binding: {binding_key}" in content:
+        return
+    patched = content.replace(marker, f"{marker}\n-- Binding: {binding_key}")
+    with open(sql_file, "w") as f:
+        f.write(patched)
+
+
+def _append_to_category_file(entry: Dict[str, Any], binding_key: str) -> str:
+    category_name = entry.get("category", "")
+    category_id = CATEGORY_MAP.get(category_name, "")
+    if not category_id:
+        category_id = CATEGORY_MAP.get(category_name.title(), "")
+    if not category_id:
+        return f"No category mapping for '{category_name}'"
+
+    index = get_query_categories()
+    category = next((c for c in index.get("categories", []) if c["id"] == category_id), None)
+    if not category:
+        return f"Category '{category_id}' not found in index"
+
+    sql_file = os.path.join(QUERIES_DIR, category["file"])
+
+    concept = entry.get("concept_anchor", binding_key)
+    perspective = entry.get("perspective", "")
+    query_name = f"{concept} ({perspective})"
+    justification = entry.get("sme_justification", "SME-approved query")
+
+    if os.path.exists(sql_file):
+        with open(sql_file, "r") as f:
+            existing = f.read()
+        if binding_key in existing or f"-- Query: {query_name}" in existing:
+            return f"Already in {category['name']} (skipped duplicate)"
+
+    file_path = entry.get("file_path", "")
+    candidates = [
+        file_path,
+        os.path.join(GROUND_TRUTH_SQL_DIR, os.path.basename(file_path)),
+        os.path.join(GROUND_TRUTH_SQL_DIR, f"{binding_key}.sql"),
+        os.path.join(GROUND_TRUTH_DIR, os.path.basename(file_path)),
+        os.path.join(GROUND_TRUTH_DIR, f"{binding_key}.sql"),
+    ]
+
+    sql_text = ""
+    for candidate in candidates:
+        if candidate and os.path.exists(candidate):
+            with open(candidate, "r") as f:
+                sql_text = f.read().strip()
+            break
+
+    if not sql_text:
+        return f"Could not find SQL file for {binding_key}"
+
+    new_entry = f"\n\n-- Query: {query_name}\n-- Description: {justification}\n-- Binding: {binding_key}\n{sql_text}\n"
+
+    with open(sql_file, "a") as f:
+        f.write(new_entry)
+
+    return f"Added to {category['name']} category"
+
+
 def update_binding_status(binding_key: str, new_status: str) -> str:
     if not os.path.exists(MANIFEST_PATH):
         return "Manifest file not found."
@@ -417,7 +586,13 @@ def update_binding_status(binding_key: str, new_status: str) -> str:
             os.unlink(tmp_path)
         raise
 
-    return f"Updated '{binding_key}' to {new_status}."
+    category_msg = ""
+    if new_status == "APPROVED":
+        category_msg = _append_to_category_file(snippets[binding_key], binding_key)
+        if category_msg:
+            category_msg = f" | {category_msg}"
+
+    return f"Updated '{binding_key}' to {new_status}.{category_msg}"
 
 
 app = FastAPI(
@@ -2026,27 +2201,102 @@ Check that perspective-concept and intent-concept relationships are seeded.
                 try:
                     with open(manifest_path, 'r') as f:
                         manifest = json.load(f)
-                    sql_normalized = sql_text.strip()
+
+                    def normalize_sql(s: str) -> str:
+                        if not s:
+                            return ""
+                        # Remove block comments /* ... */
+                        s = re.sub(r"/\*.*?\*/", "", s, flags=re.S)
+                        # Remove line comments -- ...\n
+                        s = re.sub(r"--.*?\n", "\n", s)
+                        # Remove any remaining SQL comments starting at line end
+                        s = re.sub(r"--.*$", "", s, flags=re.M)
+                        # Strip trailing semicolons and whitespace
+                        s = s.replace(';', ' ')
+                        # Collapse whitespace
+                        s = " ".join(s.split())
+                        return s.lower().strip()
+
+                    sql_normalized = normalize_sql(sql_text)
                     for binding_key, entry in manifest.get("approved_snippets", {}).items():
                         file_path = entry.get("file_path", "")
-                        if os.path.exists(file_path):
-                            with open(file_path, 'r') as sf:
-                                snippet_sql = sf.read().strip()
-                            if snippet_sql == sql_normalized:
-                                return binding_key
+                        candidates = []
+                        # Raw path as provided
+                        if file_path:
+                            candidates.append(file_path)
+                        # If manifest entry used a repo-relative path (e.g., app_schema/...), resolve relative to this package
+                        candidates.append(os.path.join(os.path.dirname(__file__), file_path))
+                        # Try resolving as basename inside ground truth directory
+                        candidates.append(os.path.join(GROUND_TRUTH_DIR, os.path.basename(file_path)))
+                        # Try resolving inside sql_snippets
+                        candidates.append(os.path.join(GROUND_TRUTH_SQL_DIR, os.path.basename(file_path)))
+                        # Try canonical binding_key filename inside sql_snippets
+                        candidates.append(os.path.join(GROUND_TRUTH_SQL_DIR, f"{binding_key}.sql"))
+
+                        resolved = None
+                        for candidate in candidates:
+                            try:
+                                if candidate and os.path.exists(candidate):
+                                    resolved = candidate
+                                    break
+                            except Exception:
+                                continue
+
+                        if not resolved:
+                            print(f"[DEBUG] No snippet file found for binding {binding_key}; tried candidates: {candidates}")
+                            continue
+
+                        try:
+                            with open(resolved, 'r') as sf:
+                                snippet_sql = sf.read()
+                        except Exception as e:
+                            print(f"[DEBUG] error reading snippet file {resolved}: {e}")
+                            continue
+
+                        if normalize_sql(snippet_sql) == sql_normalized:
+                            print(f"[DEBUG] Found binding for query -> {binding_key} (file: {resolved})")
+                            return binding_key
                 except Exception as e:
                     print(f"[DEBUG] Binding key lookup error: {e}")
                 return ""
 
+            def _find_binding_key_by_name(query_name: str) -> str:
+                """Look up binding key from manifest by matching query name against concept/perspective"""
+                try:
+                    with open(MANIFEST_PATH, 'r') as f:
+                        manifest = json.load(f)
+                    query_lower = query_name.lower().replace(' ', '').replace('_', '').replace('-', '')
+                    for key, entry in manifest.get("approved_snippets", {}).items():
+                        concept = entry.get("concept_anchor", "").lower().replace('_', '')
+                        perspective = entry.get("perspective", "")
+                        sme_just = entry.get("sme_justification", "").lower()
+                        entry_name = f"{concept} ({perspective.lower()})".replace(' ', '').replace('_', '')
+                        if query_lower == entry_name:
+                            return key
+                        if query_name.lower() in sme_just:
+                            return key
+                except Exception:
+                    pass
+                return ""
+
             def load_query_sql(category_id: str, query_name: str):
-                print(f"[DEBUG] load_query_sql called with category={repr(category_id)}, query={repr(query_name)}")
                 if category_id is None or query_name is None:
                     return "", "", ""
                 queries = get_saved_queries(category_id)
                 for q in queries:
                     if q['name'] == query_name:
-                        binding_key = _find_binding_key_for_sql(q['sql'])
-                        return q['sql'], q['description'], binding_key if binding_key else "— not bound to manifest —"
+                        binding_key = q.get('binding_key', '')
+                        if not binding_key:
+                            raw = _find_binding_key_for_sql(q['sql'])
+                            if raw:
+                                binding_key = raw
+                        if not binding_key:
+                            binding_key = _find_binding_key_by_name(query_name)
+                        if not binding_key:
+                            binding_key = _ensure_manifest_entry(
+                                query_name, q['sql'], q.get('description', ''), category_id
+                            )
+                        return q['sql'], q['description'], binding_key
                 return "", "", ""
             
             with gr.Row():
@@ -2062,12 +2312,42 @@ Check that perspective-concept and intent-concept relationships are seeded.
                         label="Select Query",
                         interactive=True
                     )
-                    saved_description = gr.Textbox(label="Description", interactive=False)
-                    saved_binding_key = gr.Textbox(label="Binding Key (manifest filename)", interactive=False)
+                    saved_description = gr.Textbox(label="Description", interactive=True)
+                    saved_binding_key = gr.Textbox(label="Binding Key (empty = not yet in manifest)", interactive=False)
                 
                 with gr.Column():
-                    saved_sql_output = gr.Code(label="SQL Query", language="sql", lines=15, show_label=True)
+                    saved_sql_output = gr.Code(label="SQL Query", language="sql", lines=15, show_label=True, interactive=True)
             
+            with gr.Row():
+                save_query_btn = gr.Button("Save Changes", variant="primary", elem_id="gt_save_btn")
+                save_query_status = gr.Textbox(label="Save Status", interactive=False)
+
+            def save_query_edits(category_id, query_name, new_sql, new_description):
+                if not category_id or not query_name:
+                    return "Select a category and query first."
+                index = get_query_categories()
+                category = next((c for c in index.get("categories", []) if c["id"] == category_id), None)
+                if not category:
+                    return f"Category '{category_id}' not found."
+                sql_file = os.path.join(QUERIES_DIR, category["file"])
+                if not os.path.exists(sql_file):
+                    return f"File not found: {category['file']}"
+                with open(sql_file, "r") as f:
+                    content = f.read()
+                queries = get_saved_queries(category_id)
+                match = next((q for q in queries if q["name"] == query_name), None)
+                if not match:
+                    return f"Query '{query_name}' not found in {category['file']}."
+                old_sql_block = match["sql"].strip()
+                old_desc_line = f"-- Description: {match['description']}"
+                new_desc_line = f"-- Description: {new_description.strip()}"
+                new_sql_clean = new_sql.strip() if new_sql else old_sql_block
+                updated = content.replace(old_desc_line, new_desc_line)
+                updated = updated.replace(old_sql_block, new_sql_clean)
+                with open(sql_file, "w") as f:
+                    f.write(updated)
+                return f"Saved changes to '{query_name}' in {category['name']}."
+
             load_queries_btn.click(
                 fn=load_queries_for_category,
                 inputs=saved_category,
@@ -2078,6 +2358,13 @@ Check that perspective-concept and intent-concept relationships are seeded.
                 fn=load_query_sql,
                 inputs=[saved_category, saved_query_dropdown],
                 outputs=[saved_sql_output, saved_description, saved_binding_key]
+            )
+
+            save_query_btn.click(
+                fn=save_query_edits,
+                inputs=[saved_category, saved_query_dropdown, saved_sql_output, saved_description],
+                outputs=[save_query_status],
+                api_name="save_ground_truth_edits"
             )
         
         with gr.Tab("🔗 Semantic Graph"):
@@ -2122,7 +2409,8 @@ Check that perspective-concept and intent-concept relationships are seeded.
             resolve_btn.click(
                 fn=resolve_field_gradio,
                 inputs=[field_dropdown, intent_dropdown],
-                outputs=resolution_output
+                outputs=resolution_output,
+                api_name="resolve_semantic_field"
             )
             
             gr.Markdown("---")
@@ -2147,7 +2435,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
             
             Demonstrates 4 advanced patterns for semantic graph traversal:
             1. **Query Plan Comparison** - How different intents interpret the same field
-            2. **Probabilistic Intent Resolution** - Rank intents by confidence score
+            2. **Intent Resolution** - Rank intents by confidence score
             3. **SQL Intent Inference** - Automatically detect intent from SQL shape
             4. **Graph Syntax Mapping** - Cypher and AQL traversal examples
             """)
@@ -2185,7 +2473,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
                 
                 qp_btn.click(fn=compare_plans_gradio, inputs=[qp_field], outputs=qp_output)
             
-            with gr.Accordion("2. Probabilistic Intent Resolution", open=False):
+            with gr.Accordion("2. Intent Resolution", open=False):
                 gr.Markdown("Given multiple fields, compute confidence scores for each intent:")
                 
                 fields_input = gr.Textbox(
@@ -2347,18 +2635,30 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     )
                     
                     sme_submit_btn = gr.Button("Submit for Review", variant="primary", size="lg")
-                    sme_status = gr.Textbox(label="Submission Status", interactive=False)
+                    sme_status = gr.Textbox(label="Submission Status", interactive=False, value="")
                 
                 with gr.Column():
                     gr.Markdown("#### Reviewer's Decision Table")
                     
+                    def _friendly_name(binding_key: str, concept: str, perspective: str) -> str:
+                        """Convert binding key to human-readable name for reviewer."""
+                        if concept and concept != "UNKNOWN":
+                            label = concept.replace("_", " ").title()
+                            if perspective:
+                                return f"{label} ({perspective})"
+                            return label
+                        parts = binding_key.replace("gt_", "").rsplit("_", 2)
+                        if len(parts) >= 2:
+                            return parts[0].replace("_", " ").title()
+                        return binding_key
+
                     def load_reviewer_table() -> str:
                         bindings = resolve_sql_bindings()
                         if not bindings:
                             return "No submissions yet. Use the form on the left to submit SQL."
                         
-                        output = "| Filename | Perspective | Concept | Status |\n"
-                        output += "|----------|-------------|---------|--------|\n"
+                        output = "| Name | Perspective | Concept | Status |\n"
+                        output += "|------|-------------|---------|--------|\n"
                         
                         status_icons = {
                             "PENDING": "⏳",
@@ -2369,7 +2669,8 @@ Check that perspective-concept and intent-concept relationships are seeded.
                         
                         for b in bindings:
                             icon = status_icons.get(b["validation_status"], "❓")
-                            output += f"| `{b['filename']}` | {b['perspective']} | {b['concept']} | {icon} {b['validation_status']} |\n"
+                            name = _friendly_name(b["binding_key"], b.get("concept", ""), b.get("perspective", ""))
+                            output += f"| {name} | {b['perspective']} | {b['concept']} | {icon} {b['validation_status']} |\n"
                         
                         summary = get_manifest_summary()
                         output += f"\n**Total: {summary['total']}** | "
@@ -2383,13 +2684,26 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     refresh_reviewer_btn = gr.Button("Refresh Table", variant="secondary")
                     
                     gr.Markdown("#### Review Actions")
+                    
+                    def get_pending_binding_keys():
+                        bindings = resolve_sql_bindings()
+                        result = []
+                        for b in bindings:
+                            friendly = _friendly_name(b["binding_key"], b.get("concept", ""), b.get("perspective", ""))
+                            status = b.get("validation_status", "UNKNOWN")
+                            label = f"{friendly} [{status}]"
+                            result.append((label, b["binding_key"]))
+                        return result
+                    
                     with gr.Row():
-                        review_binding_key = gr.Textbox(
+                        review_binding_key = gr.Dropdown(
+                            choices=get_pending_binding_keys(),
                             label="Binding Key",
-                            placeholder="e.g., quality_ncm_cost_20260208_143000"
+                            interactive=True,
+                            allow_custom_value=False
                         )
                         review_action = gr.Dropdown(
-                            choices=["APPROVED", "REJECTED"],
+                            choices=["APPROVED", "REJECTED", "PENDING"],
                             label="Decision",
                             interactive=True
                         )
@@ -2397,36 +2711,45 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     review_status = gr.Textbox(label="Review Status", interactive=False)
             
             def submit_sme(sql, category, perspective, concept, justification):
-                if not sql or not sql.strip() or sql.strip() == "-- Enter your SQL here\nSELECT":
-                    return "Please enter a SQL statement.", load_reviewer_table()
+                if not sql or not sql.strip():
+                    return "Please enter a SQL statement.", load_reviewer_table(), gr.update()
+                cleaned_sql = sql.strip()
+                if cleaned_sql in ("-- Enter your SQL here\nSELECT", "-- Enter your SQL here", "SELECT"):
+                    return "Please enter a SQL statement.", load_reviewer_table(), gr.update()
                 if not perspective:
-                    return "Please select a perspective.", load_reviewer_table()
+                    return "Please select a perspective.", load_reviewer_table(), gr.update()
                 if not concept or not concept.strip():
-                    return "Please enter a concept name.", load_reviewer_table()
+                    concept = _auto_concept_from_sql(cleaned_sql)
                 
-                result = save_sme_submission(sql, category or "Inventory", perspective, concept.strip(), justification or "")
-                return result, load_reviewer_table()
+                result = save_sme_submission(cleaned_sql, category or "Inventory", perspective, concept.strip(), justification or "")
+                keys = get_pending_binding_keys()
+                return result, load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
             
             sme_submit_btn.click(
                 fn=submit_sme,
                 inputs=[sme_sql, sme_category, sme_perspective, sme_concept, sme_justification],
-                outputs=[sme_status, reviewer_table]
+                outputs=[sme_status, reviewer_table, review_binding_key]
             )
             
-            refresh_reviewer_btn.click(fn=load_reviewer_table, outputs=reviewer_table)
+            def refresh_reviewer_and_keys():
+                keys = get_pending_binding_keys()
+                return load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
+            
+            refresh_reviewer_btn.click(fn=refresh_reviewer_and_keys, outputs=[reviewer_table, review_binding_key])
             
             def do_review(binding_key, action):
-                if not binding_key or not binding_key.strip():
-                    return "Enter a binding key.", load_reviewer_table()
+                if not binding_key:
+                    return "Select a binding key.", load_reviewer_table(), gr.update()
                 if not action:
-                    return "Select a decision.", load_reviewer_table()
+                    return "Select a decision.", load_reviewer_table(), gr.update()
                 result = update_binding_status(binding_key.strip(), action)
-                return result, load_reviewer_table()
+                keys = get_pending_binding_keys()
+                return result, load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
             
             review_btn.click(
                 fn=do_review,
                 inputs=[review_binding_key, review_action],
-                outputs=[review_status, reviewer_table]
+                outputs=[review_status, reviewer_table, review_binding_key]
             )
         
         solder = SolderEngine()
@@ -2773,15 +3096,22 @@ Check that perspective-concept and intent-concept relationships are seeded.
             gr.Markdown("""
             ### ArangoDB Graph Sync
             
-            Synchronize the SQLite semantic layer into ArangoDB as a named graph.
-            This creates/updates the vertex and edge structure:
+            Push the semantic layer from SQLite into ArangoDB as a named graph (`semantic_graph`).
+            This keeps your cloud graph database in sync with local changes to intents, perspectives,
+            concepts, elevation weights, and SME-approved bindings.
             
-            ```
-            (:Intent) -[:OPERATES_WITHIN]-> (:Perspective)
-            (:Intent) -[:ELEVATES {weight}]-> (:Concept)
-            (:Perspective) -[:USES_DEFINITION]-> (:Concept)
-            (:Intent) -[:BOUND_TO]-> (:Binding)
-            ```
+            **Graph structure:**
+            
+            | Edge | From | To | Purpose |
+            |------|------|----|---------|
+            | `OPERATES_WITHIN` | Intent | Perspective | Which lens an intent uses |
+            | `ELEVATES` | Intent | Concept | Elevation weight (1.0 = primary, 0.0 = neutral) |
+            | `USES_DEFINITION` | Perspective | Concept | Which concepts a perspective defines |
+            | `BOUND_TO` | Intent | Binding | Links intent to its approved SQL snippet |
+            
+            **How to use:**
+            1. Click **Dry Run** to preview what will be synced (reads SQLite only, no ArangoDB connection)
+            2. Click **Sync to ArangoDB** to push changes (creates new documents or updates existing ones)
             """)
             
             with gr.Row():
@@ -2789,17 +3119,20 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     sync_dry_run_btn = gr.Button("Dry Run (Preview)", variant="secondary")
                     sync_live_btn = gr.Button("Sync to ArangoDB", variant="primary")
                 with gr.Column():
-                    sync_status = gr.Textbox(label="Status", interactive=False, value="Ready")
+                    sync_status = gr.Textbox(label="Status", interactive=False, value="Ready — click Dry Run or Sync")
             
-            sync_report_output = gr.Code(label="Sync Report", language=None, lines=20)
+            sync_report_output = gr.Code(label="Sync Report", language=None, lines=22)
             
             def run_graph_sync(dry_run: bool):
                 try:
                     from graph_sync import sync_graph
                     report = sync_graph(dry_run=dry_run)
-                    status = "SUCCESS" if report.success else "FAILED"
                     if dry_run:
-                        status = "DRY RUN — " + status
+                        status = f"DRY RUN — {report.total_vertices} vertices, {report.total_edges} edges ready to sync"
+                    elif report.success:
+                        status = f"SUCCESS — {report.total_vertices} vertices, {report.total_edges} edges synced to ArangoDB"
+                    else:
+                        status = f"FAILED — see errors in report below"
                     return status, report.summary()
                 except Exception as e:
                     return f"ERROR: {e}", str(e)

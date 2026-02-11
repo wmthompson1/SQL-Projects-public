@@ -4,11 +4,18 @@
   "source": "Flask Manufacturing App - LangChain Semantic Layer",
   "categories": [
     {
+      "id": "delivery_performance_perspectives",
+      "name": "Delivery Performance (by Perspective)",
+      "file": "delivery_performance_perspectives.sql",
+      "query_count": 3,
+      "description": "Same field (ontime_rate) interpreted by Ops, Supplier, and Finance perspectives"
+    },
+    {
       "id": "quality_control",
       "name": "Quality Control",
       "file": "quality_control.sql",
-      "query_count": 3,
-      "description": "Defect tracking, NCM management, quality incidents"
+      "query_count": 4,
+      "description": "Defect tracking, NCM management, quality incidents, employee accountability"
     },
     {
       "id": "supplier_performance",
@@ -44,6 +51,7 @@
     "failure_events",
     "production_schedule",
     "production_lines",
-    "quality_costs"
+    "quality_costs",
+    "EMPLOYEE"
   ]
 }
