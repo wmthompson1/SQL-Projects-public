@@ -7,8 +7,6 @@ SQL_Reports/*.sql (production reports)
          ↓
    GitHub Action: Extract Lineage (SQLMesh + SQLGlot)
          ↓
-   NetworkX Graph (.gpickle)
-         ↓
    ArangoDB Graph Database (ground truth semantic layer)
          ↓
    ├─→ Query validation endpoints

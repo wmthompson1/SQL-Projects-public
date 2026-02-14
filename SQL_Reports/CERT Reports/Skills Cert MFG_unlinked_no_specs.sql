@@ -1,8 +1,11 @@
 /*************************************************************************************************
-    [SQL-Lab-2].[LIVE].dbo.        \\\\    [SQL-Lab-2].[LIVEARC].dbo.
--- Visual Enterprise Reports > CERT Reports > Shipping_CERT > Skills Cert MFG_unlinked_no_specs
+Visual Enterprise Reports > CERT Reports > Skills Cert MFG_unlinked_no_specs
+
+
 **************************************************************************************************/
 --DECLARE @PACKLIST AS NVARCHAR(15) = '1449240'
+
+declare @PACKLIST nvarchar(250) = '1486364'
 
 SELECT DISTINCT W.BASE_ID, W.LOT_ID, W.SPLIT_ID
     , dbo.sfnWONUMFormat(W.BASE_ID ,W.LOT_ID , W.SPLIT_ID, W.SUB_ID) as WO_NUM

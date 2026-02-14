@@ -2314,6 +2314,13 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     )
                     saved_description = gr.Textbox(label="Description", interactive=True)
                     saved_binding_key = gr.Textbox(label="Binding Key (empty = not yet in manifest)", interactive=False)
+                    
+                    gr.Markdown("#### Quick Approval")
+                    with gr.Row():
+                        approve_btn_gt = gr.Button("✅ Approve", variant="primary", size="sm")
+                        reject_btn_gt = gr.Button("❌ Reject", variant="stop", size="sm")
+                        pending_btn_gt = gr.Button("⏸️ Pending", variant="secondary", size="sm")
+                    approval_status_gt = gr.Textbox(label="Approval Status", interactive=False, visible=False)
                 
                 with gr.Column():
                     saved_sql_output = gr.Code(label="SQL Query", language="sql", lines=15, show_label=True, interactive=True)
@@ -2365,6 +2372,45 @@ Check that perspective-concept and intent-concept relationships are seeded.
                 inputs=[saved_category, saved_query_dropdown, saved_sql_output, saved_description],
                 outputs=[save_query_status],
                 api_name="save_ground_truth_edits"
+            )
+            
+            def approve_from_gt(binding_key):
+                if not binding_key or binding_key.strip() == "" or "empty" in binding_key.lower():
+                    return gr.update(value="No binding key to approve", visible=True)
+                result = update_binding_status(binding_key.strip(), "APPROVED")
+                return gr.update(value=result, visible=True)
+            
+            def reject_from_gt(binding_key):
+                if not binding_key or binding_key.strip() == "" or "empty" in binding_key.lower():
+                    return gr.update(value="No binding key to reject", visible=True)
+                result = update_binding_status(binding_key.strip(), "REJECTED")
+                return gr.update(value=result, visible=True)
+            
+            def pending_from_gt(binding_key):
+                if not binding_key or binding_key.strip() == "" or "empty" in binding_key.lower():
+                    return gr.update(value="No binding key to set pending", visible=True)
+                result = update_binding_status(binding_key.strip(), "PENDING")
+                return gr.update(value=result, visible=True)
+            
+            approve_btn_gt.click(
+                fn=approve_from_gt,
+                inputs=[saved_binding_key],
+                outputs=[approval_status_gt],
+                api_name="approve_ground_truth_query"
+            )
+            
+            reject_btn_gt.click(
+                fn=reject_from_gt,
+                inputs=[saved_binding_key],
+                outputs=[approval_status_gt],
+                api_name="reject_ground_truth_query"
+            )
+            
+            pending_btn_gt.click(
+                fn=pending_from_gt,
+                inputs=[saved_binding_key],
+                outputs=[approval_status_gt],
+                api_name="pending_ground_truth_query"
             )
         
         with gr.Tab("🔗 Semantic Graph"):
@@ -2698,6 +2744,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     with gr.Row():
                         review_binding_key = gr.Dropdown(
                             choices=get_pending_binding_keys(),
+                            value=None,
                             label="Binding Key",
                             interactive=True,
                             allow_custom_value=False
@@ -2723,7 +2770,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
                 
                 result = save_sme_submission(cleaned_sql, category or "Inventory", perspective, concept.strip(), justification or "")
                 keys = get_pending_binding_keys()
-                return result, load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
+                return result, load_reviewer_table(), gr.update(choices=keys, value=None)
             
             sme_submit_btn.click(
                 fn=submit_sme,
@@ -2733,7 +2780,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
             
             def refresh_reviewer_and_keys():
                 keys = get_pending_binding_keys()
-                return load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
+                return load_reviewer_table(), gr.update(choices=keys, value=None)
             
             refresh_reviewer_btn.click(fn=refresh_reviewer_and_keys, outputs=[reviewer_table, review_binding_key])
             
@@ -2744,7 +2791,7 @@ Check that perspective-concept and intent-concept relationships are seeded.
                     return "Select a decision.", load_reviewer_table(), gr.update()
                 result = update_binding_status(binding_key.strip(), action)
                 keys = get_pending_binding_keys()
-                return result, load_reviewer_table(), gr.update(choices=keys, value=keys[0] if keys else None)
+                return result, load_reviewer_table(), gr.update(choices=keys, value=None)
             
             review_btn.click(
                 fn=do_review,
