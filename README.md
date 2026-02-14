@@ -1,6 +1,12 @@
 Oct 17, 2025
 https://github.com/Skills-Inc-Org
 
+<!-- ci-trigger: trivial update to force CI run -->
+Updated to trigger CI on branch creation.
+
+Oct 17, 2025
+https://github.com/Skills-Inc-Org
+
 Add commands to verify synchronization with the remote repository.
 
 Bookmark the [SQL_Reports folder](https://github.com/Skills-Inc-Org/SQL-Projects/tree/main/SQL_Reports)
