@@ -14,11 +14,19 @@ $absDest = if (Test-Path $DestinationPath) { (Resolve-Path $DestinationPath).Pat
 Write-Host "--- Copying Files from Source to Destination ---" -ForegroundColor Cyan
 
 # 2. Get files, but EXCLUDE the destination path from the search to prevent infinite looping
+# Data file extensions to exclude (comment out line below to include data files)
+$ExcludedExtensions = @('.db', '.csv', '.sqlite', '.sqlite3', '.bak')
+
 $SourceFiles = Get-ChildItem -Path $SourcePath -Recurse -File | 
     Where-Object { 
         $_.LastWriteTime.Date -eq (Get-Date).Date -and 
-        $_.FullName -notlike "$absDest*" 
+        $_.FullName -notlike "$absDest*" -and
+        $_.Extension -notin $ExcludedExtensions
     }
+
+Write-Host "Excluded extensions: $($ExcludedExtensions -join ', ')" -ForegroundColor Yellow
+Write-Host "Files to copy: $($SourceFiles.Count)" -ForegroundColor Cyan
+Write-Host ""
 
 foreach ($File in $SourceFiles) {
     # Calculate relative path to maintain folder structure

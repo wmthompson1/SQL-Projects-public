@@ -1,5 +1,5 @@
 **My MRP 500.002 Outline \- Core Operational**
-
+Repositoritory_Path: Documentation\Architecture Outlne\Architecture 500.002 Outline - Core Operational.md
 
 .github\workflows
 

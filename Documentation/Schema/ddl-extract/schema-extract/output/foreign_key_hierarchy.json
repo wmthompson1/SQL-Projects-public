@@ -1,0 +1,3152 @@
+[
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "APPLICATION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "APPLICATION_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "APP_CONFIG",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "BUDGET_CODE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "BUDGET_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "BUFFER",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "BUFFER_PROFILE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "BURDEN_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "CONSOLID_ACCOUNT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "CONTACT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "COR_INBOX_ENTRY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "COR_OUTBOX_ENTRY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "COST_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "COUNTRY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "CURRENCY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "CUSTOMER_DISCOUNT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "CUSTOMER_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "DEVIATION_REASON",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "DISTRIBUTION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EARNING_CODE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EC",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "ECN_DETAIL",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EQUIP_AREA",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EQUIP_MAINT_ENG",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EQUIP_MAINT_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "EQUIP_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "FINANCIAL_CALENDAR",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "GAGE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "GL_INTERFACE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "GOTO_VMPGM",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "HOLD_REASON",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "INSTALLMENT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "ISSUE_REASON",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "JOURNAL_BATCH",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "LABEL_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "LANGUAGE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "MODE_OF_TRANSPORT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "NATURE_OF_TRANS",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PART_ALIAS_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PHYSICAL_COUNT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PORT_OF_ARRIVAL",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PORT_OF_TRANS",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PROJECT_SUMMARY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "PROJECT_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "RATE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "REGION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "REPORT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "REPORT_CALENDAR",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SALES_TAX",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SALES_TAX_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SERVICE_DISPATCH",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SHIFT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SIMULATION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SOA_DIMENSION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "SPLIT_TRANS",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TARIFF",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TASK_REJ_CODES",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TERMS",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TEST",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TRACE_NUMBERING",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "TRANS_CATEGORY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNITS",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNP_MNT_ESCALATION",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNP_MNT_FAULT_CODE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNP_MNT_FAULT_TYPE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNP_MNT_REM_CODE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "UNP_MNT_URGENCY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VAT_CATEGORY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VENDOR_GROUP",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VEND_BANK_ACCOUNT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VMDI_ACK_CODES",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VMDI_LAYOUT",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VR_DATA_SOURCE",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "VR_MENU",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "V_HISTORY_CATEGORY",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 0,
+    "parent": "(root)",
+    "child": "WITHHOLDING",
+    "fk_columns": "",
+    "referenced_columns": ""
+  },
+  {
+    "level": 1,
+    "parent": "APPLICATION",
+    "child": "APPLICATION_LINK",
+    "fk_columns": "PROGRAM_ID, LANGUAGE_ID",
+    "referenced_columns": "PROGRAM_ID, LANGUAGE_ID"
+  },
+  {
+    "level": 1,
+    "parent": "APP_CONFIG",
+    "child": "APP_CONFIG_ITEM",
+    "fk_columns": "APP_CONFIG_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "APP_CONFIG",
+    "child": "APP_CONFIG_USER",
+    "fk_columns": "DEFAULT_APP_CONFIG_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUDGET_CODE",
+    "child": "ACCOUNT_BUDGET",
+    "fk_columns": "BUDGET_CODE",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUFFER",
+    "child": "BUFFER_STATUS",
+    "fk_columns": "BUFFER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUFFER",
+    "child": "FEEDING_OPERATIONS",
+    "fk_columns": "BUFFER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUFFER_PROFILE",
+    "child": "PART",
+    "fk_columns": "BUFFER_PROFILE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUFFER_PROFILE",
+    "child": "PART_SITE",
+    "fk_columns": "BUFFER_PROFILE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BUFFER_PROFILE",
+    "child": "PART_WAREHOUSE",
+    "fk_columns": "BUFFER_PROFILE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BURDEN_GROUP",
+    "child": "BURDEN_RULE",
+    "fk_columns": "BURDEN_GROUP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "BURDEN_GROUP",
+    "child": "GL_BURDEN_MAP",
+    "fk_columns": "BURDEN_GROUP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONSOLID_ACCOUNT",
+    "child": "CONSOLIDATION_MAP",
+    "fk_columns": "PARENT_ACCT_ID",
+    "referenced_columns": "PARENT_ACCT_ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "CONTACT_BINARY",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "CUSTOMER_ORDER",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "CUST_CONTACT",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "EQUIPMENT",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "IBT",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "IBT_RECEIVER",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "IBT_SHIPPER",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "PURCHASE_ORDER",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "PURC_REQUISITION",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "QUOTE",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "RFQ_VENDOR",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "UNP_MNT_CALLS",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CONTACT",
+    "child": "VEND_CONTACT",
+    "fk_columns": "CONTACT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COR_INBOX_ENTRY",
+    "child": "COR_INBOX_HEADERS",
+    "fk_columns": "C_INBOX_ID",
+    "referenced_columns": "C_ID"
+  },
+  {
+    "level": 1,
+    "parent": "COR_INBOX_ENTRY",
+    "child": "INBOX_ERROR",
+    "fk_columns": "C_INBOX_ID",
+    "referenced_columns": "C_ID"
+  },
+  {
+    "level": 1,
+    "parent": "COR_OUTBOX_ENTRY",
+    "child": "COR_OUTBOX_HEADERS",
+    "fk_columns": "C_OUTBOX_ID",
+    "referenced_columns": "C_ID"
+  },
+  {
+    "level": 1,
+    "parent": "COST_GROUP",
+    "child": "COST_CATEGORY",
+    "fk_columns": "COST_GROUP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "ACCOUNTING_ENTITY",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "CUSTOMER",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "CUSTOMER_BANK",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "CUST_ADDRESS",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "INTRA_ARRIVAL_LINE",
+    "fk_columns": "FROM_COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "INTRA_DISPTCH_LINE",
+    "fk_columns": "FROM_COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "INTRA_RECEIVR_LINE",
+    "fk_columns": "FROM_COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "INTRA_SHIPPER_LINE",
+    "fk_columns": "FROM_COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "SHIPTO_ADDRESS",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "VENDOR",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "VENDOR_BANK",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "COUNTRY",
+    "child": "WAREHOUSE",
+    "fk_columns": "COUNTRY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ACCOUNT",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ACCOUNT_AT_NATIVE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ACCOUNT_BALANCE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ACCOUNT_BAL_DIM",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ADJUSTMENT_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ADJUSTMENT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "ALLOCATION",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "APPLICATION_GLOBAL",
+    "fk_columns": "EURO_CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BANK_ACCOUNT",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BANK_ADJUSTMENT",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BANK_ADJ_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BANK_ADJ_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BURDEN_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "BURD_DIST_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_DISBURSEMENT",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_DISBURSE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_DISBURSE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_RECEIPT",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_RECEIPT_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CASH_RECEIPT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CURRENCY_ENTITY",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CURRENCY_EXCHANGE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CURR_PRICE_INDEX",
+    "fk_columns": "FROM_CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "CUST_ORDER_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "GJ",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "GJ_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "GJ_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "GJ_LINE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "INDIRECT_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "INDIRECT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "INVENTORY_BALANCE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "INV_TRANS_AVE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "INV_TRANS_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "JOURNAL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "JOURNAL_DIM",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "LABOR_TICKET_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "MARKET",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "MARKET_PRICE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PAYABLE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PAYABLE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PAYABLE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PAYB_LINE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PROJECT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PROJECT_INFO",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PROJ_DIST_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PURCHASE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PURC_MATL_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PURC_ORDER_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PURC_REQ_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "PURC_SERV_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "RECEIVABLE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "RECEIVABLE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "RECEIVABLE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "REVALUE_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "REVALUE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "REVENUE_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "REVENUE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "RFQ_VENDOR_QUOTE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "SERVICE_RCPT_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "SHIPMENT_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "SHIPMENT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "SPLIT_TRANS_CURR",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "VENDOR_QUOTE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "VENDOR_SERV_QUOTE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_BALANCE",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_ISSUE_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_ISSUE_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_LABOR_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_PAYB_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_RECEIPT_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_RECEIPT_DIST",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_SERVICE_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CURRENCY",
+    "child": "WIP_SPLIT_DETAIL",
+    "fk_columns": "CURRENCY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "CUSTOMER_DISCOUNT",
+    "child": "DISCOUNT_PRICE",
+    "fk_columns": "DISCOUNT_CODE",
+    "referenced_columns": "DISCOUNT_CODE"
+  },
+  {
+    "level": 1,
+    "parent": "DEVIATION_REASON",
+    "child": "AMTS_PENDING_TRANS",
+    "fk_columns": "DEVIATION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "DEVIATION_REASON",
+    "child": "LABOR_TICKET",
+    "fk_columns": "DEVIATION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "DISTRIBUTION",
+    "child": "DISTRIBUTION_LINE",
+    "fk_columns": "DISTRIBUTION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "DISTRIBUTION",
+    "child": "PROJECT_BUDGET",
+    "fk_columns": "DISTRIBUTION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EARNING_CODE",
+    "child": "EMPLOYEE",
+    "fk_columns": "EARNING_CODE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EARNING_CODE",
+    "child": "SALES_REP",
+    "fk_columns": "EARNING_CODE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EC",
+    "child": "EC_GROUP_USER",
+    "fk_columns": "EC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EC",
+    "child": "EC_HISTORY",
+    "fk_columns": "EC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EC",
+    "child": "EC_LINE",
+    "fk_columns": "EC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EC",
+    "child": "EC_REQUEST",
+    "fk_columns": "EC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EC",
+    "child": "EC_RESPONSE",
+    "fk_columns": "EC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_CO_PRODUCT",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_OPERATION",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_OPER_RESOURCE",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_REQUIREMENT",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_REQ_PART_ALT",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_REQ_REF_DESIG",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "ECN_DETAIL",
+    "child": "ECN_WORKORDER",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ENTRY_NO"
+  },
+  {
+    "level": 1,
+    "parent": "EQUIP_AREA",
+    "child": "EQUIP_BRANCH",
+    "fk_columns": "AREA_ID",
+    "referenced_columns": "id"
+  },
+  {
+    "level": 1,
+    "parent": "EQUIP_MAINT_ENG",
+    "child": "EQUIP_PM_PROFILE",
+    "fk_columns": "ENG_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EQUIP_MAINT_TYPE",
+    "child": "EQUIP_MAINT_DISC",
+    "fk_columns": "MAINT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EQUIP_TYPE",
+    "child": "EQUIP_MODEL",
+    "fk_columns": "TYPE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "EQUIP_TYPE",
+    "child": "UNP_MNT_STD_REPAIR",
+    "fk_columns": "EQUIPMENT_TYPE",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "FINANCIAL_CALENDAR",
+    "child": "CASH_PLAN",
+    "fk_columns": "FIN_CAL_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "FINANCIAL_CALENDAR",
+    "child": "REPORT_CAL_MAP",
+    "fk_columns": "FIN_CAL_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "GAGE",
+    "child": "TEST_STEP",
+    "fk_columns": "GAGE_ID",
+    "referenced_columns": "GAGE_ID"
+  },
+  {
+    "level": 1,
+    "parent": "GL_INTERFACE",
+    "child": "GL_INTERFACE_ACCT",
+    "fk_columns": "INTERFACE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "GOTO_VMPGM",
+    "child": "GOTO_TABLE_COLUMN",
+    "fk_columns": "GOTO_VMPGM_PROGRAM_ID, GOTO_VMPGM_GOTO_ID",
+    "referenced_columns": "PROGRAM_ID, GOTO_ID"
+  },
+  {
+    "level": 1,
+    "parent": "HOLD_REASON",
+    "child": "PART_LOCATION",
+    "fk_columns": "HOLD_REASON_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "INSTALLMENT",
+    "child": "INSTALLMENT_LINE",
+    "fk_columns": "INSTALLMENT_ID, INST_TYPE",
+    "referenced_columns": "ID, INST_TYPE"
+  },
+  {
+    "level": 1,
+    "parent": "ISSUE_REASON",
+    "child": "INVENTORY_TRANS",
+    "fk_columns": "ISSUE_REAS_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "LABEL_TYPE",
+    "child": "LABEL_FORMAT",
+    "fk_columns": "LABEL_TYPE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "LABEL_TYPE",
+    "child": "LABEL_GROUP",
+    "fk_columns": "LABEL_TYPE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "LABEL_TYPE",
+    "child": "LABEL_TYPE_VAR",
+    "fk_columns": "LABEL_TYPE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "LANGUAGE",
+    "child": "LANG_DESCRIPTION",
+    "fk_columns": "LANGUAGE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "PART_ALIAS_TYPE",
+    "child": "PART_ALIAS",
+    "fk_columns": "TYPE",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "PHYSICAL_COUNT",
+    "child": "PHYS_COUNT_LOC_ADJ",
+    "fk_columns": "PHYS_COUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "PHYSICAL_COUNT",
+    "child": "PHYS_COUNT_TAG",
+    "fk_columns": "PHYS_COUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "PORT_OF_TRANS",
+    "child": "VENDOR_ADDRESS",
+    "fk_columns": "TRANS_CODE",
+    "referenced_columns": "CODE"
+  },
+  {
+    "level": 1,
+    "parent": "PROJECT_SUMMARY",
+    "child": "PROJ_SUMM_BURD_AMT",
+    "fk_columns": "PROJECT_SUMMARY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "RATE",
+    "child": "RATE_DETAIL",
+    "fk_columns": "RATE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "REPORT",
+    "child": "REPORT_LINE",
+    "fk_columns": "REPORT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SALES_TAX",
+    "child": "SALES_TAX_PCT",
+    "fk_columns": "SALES_TAX_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SALES_TAX",
+    "child": "SLS_TAX_GRP_TAX",
+    "fk_columns": "SALES_TAX_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SALES_TAX_GROUP",
+    "child": "CUST_ORDER_LINE",
+    "fk_columns": "SALES_TAX_GROUP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SERVICE_DISPATCH",
+    "child": "SERVICE_DISP_LINE",
+    "fk_columns": "DISPATCH_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SHIFT",
+    "child": "SHIFT_DAY",
+    "fk_columns": "SHIFT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SIMULATION",
+    "child": "COST_SIMULATION",
+    "fk_columns": "SIMULATION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SIMULATION",
+    "child": "RES_SIMULATION",
+    "fk_columns": "SIMULATION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SIMULATION",
+    "child": "SER_SIMULATION",
+    "fk_columns": "SIMULATION_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "SOA_DIMENSION",
+    "child": "SOA_CODE_LIST",
+    "fk_columns": "LIST_ID, AGENCY_ID",
+    "referenced_columns": "ID, AGENCY_ID"
+  },
+  {
+    "level": 1,
+    "parent": "TASK_REJ_CODES",
+    "child": "TASK",
+    "fk_columns": "REJECT_CODE",
+    "referenced_columns": "CODE"
+  },
+  {
+    "level": 1,
+    "parent": "TERMS",
+    "child": "RCR_PAYABLE",
+    "fk_columns": "TERMS_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TERMS",
+    "child": "RCR_RECEIVABLE",
+    "fk_columns": "TERMS_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TERMS",
+    "child": "TERMS_INST",
+    "fk_columns": "TERMS_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TEST",
+    "child": "OPERATION_TYPE",
+    "fk_columns": "TEST_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TEST",
+    "child": "TEST_BINARY",
+    "fk_columns": "TEST_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TRACE_NUMBERING",
+    "child": "TRACE_PROFILE",
+    "fk_columns": "NUMBERING_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "TRANS_CATEGORY",
+    "child": "PURC_ORDER_LINE",
+    "fk_columns": "TRANS_CATEGORY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "UNITS",
+    "child": "CUSTOMER_PRICE",
+    "fk_columns": "SELLING_UM",
+    "referenced_columns": "UNIT_OF_MEASURE"
+  },
+  {
+    "level": 1,
+    "parent": "UNITS",
+    "child": "PART_UNITS_CONV",
+    "fk_columns": "FROM_UM",
+    "referenced_columns": "UNIT_OF_MEASURE"
+  },
+  {
+    "level": 1,
+    "parent": "UNITS",
+    "child": "PURC_REQ_LINE",
+    "fk_columns": "PURCHASE_UM",
+    "referenced_columns": "UNIT_OF_MEASURE"
+  },
+  {
+    "level": 1,
+    "parent": "UNITS",
+    "child": "REQUIREMENT",
+    "fk_columns": "USAGE_UM",
+    "referenced_columns": "UNIT_OF_MEASURE"
+  },
+  {
+    "level": 1,
+    "parent": "UNITS",
+    "child": "UNITS_CONVERSION",
+    "fk_columns": "FROM_UM",
+    "referenced_columns": "UNIT_OF_MEASURE"
+  },
+  {
+    "level": 1,
+    "parent": "VAT_CATEGORY",
+    "child": "PAYABLE_LINE",
+    "fk_columns": "VAT_CATEGORY",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VAT_CATEGORY",
+    "child": "RCR_PAYABLE_LINE",
+    "fk_columns": "vat_category",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VAT_CATEGORY",
+    "child": "RCR_RECV_LINE",
+    "fk_columns": "vat_category",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VAT_CATEGORY",
+    "child": "RECEIVABLE_LINE",
+    "fk_columns": "VAT_CATEGORY",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VMDI_LAYOUT",
+    "child": "VMDI_ASSOC",
+    "fk_columns": "LAYOUT_KEY, LAYOUT_VERSION, LAYOUT_DIRECTION",
+    "referenced_columns": "KEY, VERSION, DIRECTION"
+  },
+  {
+    "level": 1,
+    "parent": "VMDI_LAYOUT",
+    "child": "VMDI_DATA",
+    "fk_columns": "LAYOUT_KEY, LAYOUT_VERSION, LAYOUT_DIRECTION",
+    "referenced_columns": "KEY, VERSION, DIRECTION"
+  },
+  {
+    "level": 1,
+    "parent": "VMDI_LAYOUT",
+    "child": "VMDI_TABLE",
+    "fk_columns": "LAYOUT_KEY, LAYOUT_VERSION, LAYOUT_DIRECTION",
+    "referenced_columns": "KEY, VERSION, DIRECTION"
+  },
+  {
+    "level": 1,
+    "parent": "VR_DATA_SOURCE",
+    "child": "VR_ANALYTIC_CONFIG",
+    "fk_columns": "DATA_SOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VR_DATA_SOURCE",
+    "child": "VR_DATA_SOURCE_COLUMN",
+    "fk_columns": "DATA_SOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VR_DATA_SOURCE",
+    "child": "VR_DATA_SOURCE_TABLE",
+    "fk_columns": "DATA_SOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VR_DATA_SOURCE",
+    "child": "VR_GRID_CONFIG",
+    "fk_columns": "DATA_SOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "VR_MENU",
+    "child": "VR_MENU_NODE",
+    "fk_columns": "MENU_ID, LOCALE",
+    "referenced_columns": "ID, LOCALE"
+  },
+  {
+    "level": 1,
+    "parent": "V_HISTORY_CATEGORY",
+    "child": "V_HISTORY",
+    "fk_columns": "CATEGORY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 1,
+    "parent": "WITHHOLDING",
+    "child": "PRODUCT",
+    "fk_columns": "WITHHOLDING_CODE",
+    "referenced_columns": "CODE"
+  },
+  {
+    "level": 2,
+    "parent": "BUFFER_STATUS",
+    "child": "BUFFER_STAT_MATL",
+    "fk_columns": "BUFFER_STATUS_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "CO_PRODUCT",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "CUSTOMER_FORECAST",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "CUST_PRICE_EFFECT",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "CYCLE_COUNT_PART",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "DEMAND_FORECAST",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "EQUIP_PART_PRICE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "MASTER_SCHEDULE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "MOVE_REQUEST_LINE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "PART_BINARY",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "PART_SHIPPING",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "PLANNED_ORDER",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "QUOTED_OPTIONS",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "QUOTE_LINE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "REQUIREMENT_SCHED",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "RFQ_LINE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "SALES_CODE_ENG",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "SELECTED_OPTIONS",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "SERIES_MODEL_PART",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "SERVICE_SHIPPING",
+    "fk_columns": "SERVICE_PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "TEST_RESULT",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "TRACE",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "VENDOR_PART",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "WIP_TRANSACTION",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "WORK_ORDER",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PART",
+    "child": "WORK_ORDER_SCHED",
+    "fk_columns": "PART_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER_ORDER",
+    "child": "CUST_ORDER_BINARY",
+    "fk_columns": "CUST_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER_ORDER",
+    "child": "CUST_ORDER_SHARE",
+    "fk_columns": "CUST_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER_ORDER",
+    "child": "QUOTE_ORDER",
+    "fk_columns": "CUST_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER_ORDER",
+    "child": "SHIPPER",
+    "fk_columns": "CUST_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "IBT",
+    "child": "IBT_LINE",
+    "fk_columns": "IBT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "IBT_RECEIVER",
+    "child": "IBT_RECEIVER_LINE",
+    "fk_columns": "RECEIVER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "IBT_SHIPPER",
+    "child": "IBT_SHIPPER_LINE",
+    "fk_columns": "SHIPPER_ID",
+    "referenced_columns": "SHIPPER_ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURCHASE_ORDER",
+    "child": "CONSIGN_RECEIVER",
+    "fk_columns": "PURC_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURCHASE_ORDER",
+    "child": "PURC_ORDER_BINARY",
+    "fk_columns": "PURC_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURCHASE_ORDER",
+    "child": "RECEIVER",
+    "fk_columns": "PURC_ORDER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_REQUISITION",
+    "child": "PURC_GROUP_USER",
+    "fk_columns": "PURC_REQ_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_REQUISITION",
+    "child": "PURC_HISTORY",
+    "fk_columns": "PURC_REQ_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_REQUISITION",
+    "child": "PURC_REQ_BINARY",
+    "fk_columns": "PURC_REQ_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "QUOTE",
+    "child": "QUOTE_BINARY",
+    "fk_columns": "QUOTE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "COST_CATEGORY",
+    "child": "BURDEN_TRANS",
+    "fk_columns": "BURDEN_CATEGORY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "COST_CATEGORY",
+    "child": "DEPARTMENT",
+    "fk_columns": "LAB_COST_CAT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "COST_CATEGORY",
+    "child": "GJ_LINE",
+    "fk_columns": "COST_CATEGORY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "COST_CATEGORY",
+    "child": "SERVICE_RECEIPT",
+    "fk_columns": "COST_CATEGORY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNTING_ENTITY",
+    "child": "CUSTOMER_ENTITY",
+    "fk_columns": "ENTITY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNTING_ENTITY",
+    "child": "SITE",
+    "fk_columns": "ENTITY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNTING_ENTITY",
+    "child": "VENDOR_ENTITY",
+    "fk_columns": "ENTITY_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CASH_RECEIPT_LINE",
+    "fk_columns": "RECV_CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CUSTOMER_BINARY",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CUSTOMER_CONTACT",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CUSTOMER_SITE",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CUST_CONT_EML_DOC",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "CUST_SHIP_CHG_ACCT",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "CUSTOMER",
+    "child": "LOCATION",
+    "fk_columns": "CUSTOMER_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "CASH_DISBURSE_LINE",
+    "fk_columns": "PAYB_VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "SERVICE",
+    "fk_columns": "VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "VENDOR_BINARY",
+    "fk_columns": "VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "VENDOR_CONTACT",
+    "fk_columns": "VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "VENDOR_REMIT_ADDR",
+    "fk_columns": "VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VENDOR",
+    "child": "VEND_CONT_EML_DOC",
+    "fk_columns": "VENDOR_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "WAREHOUSE",
+    "child": "WAREHOUSE_ADDRESS",
+    "fk_columns": "WAREHOUSE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "WAREHOUSE",
+    "child": "WIP_MAT_LOCATION",
+    "fk_columns": "WAREHOUSE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "ACCOUNT_CHG_LOG",
+    "fk_columns": "ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "ACCOUNT_GROUP",
+    "fk_columns": "ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "ACCOUNT_PROFILE",
+    "fk_columns": "ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "ACCOUNT_SITE",
+    "fk_columns": "ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "CASH_PLAN_ACCOUNT",
+    "fk_columns": "ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "CUST_LINE_BILLING",
+    "fk_columns": "REV_GL_ACCT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "INDIRECT",
+    "fk_columns": "GL_ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "QUOTE_LINE_BILLING",
+    "fk_columns": "REV_GL_ACCT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "REVALUE_LINE",
+    "fk_columns": "GL_ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "SHOP_RESOURCE",
+    "fk_columns": "AFB_GL_ACCT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ACCOUNT",
+    "child": "WORKORD_MILESTONE",
+    "fk_columns": "BUR_GL_ACCT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "ALLOCATION",
+    "child": "ALLOCATION_DETAIL",
+    "fk_columns": "ALLOC_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "BANK_ACCOUNT",
+    "child": "BANK_DEPOSIT",
+    "fk_columns": "BANK_ACCOUNT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PAYABLE",
+    "child": "CREDIT_MEMO_APPLY",
+    "fk_columns": "INV_VOUCHER_ID",
+    "referenced_columns": "VOUCHER_ID"
+  },
+  {
+    "level": 2,
+    "parent": "PROJECT_INFO",
+    "child": "PROJECT_CEILING",
+    "fk_columns": "PROJECT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "RECEIVABLE",
+    "child": "RECEIVABLE_BINARY",
+    "fk_columns": "INVOICE_ID",
+    "referenced_columns": "INVOICE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "RECEIVABLE",
+    "child": "RECEIVABLE_INST",
+    "fk_columns": "INVOICE_ID",
+    "referenced_columns": "INVOICE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "RECEIVABLE",
+    "child": "RECEIVABLE_SHARE",
+    "fk_columns": "INVOICE_ID",
+    "referenced_columns": "INVOICE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "RECEIVABLE",
+    "child": "RECV_MEMO_APPLY",
+    "fk_columns": "INV_INVOICE_ID",
+    "referenced_columns": "INVOICE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "LABOR_TICKET",
+    "child": "LABOR_TICKET_BREAK",
+    "fk_columns": "TRANSACTION_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "LABOR_TICKET",
+    "child": "PRORATED_LABOR_TX",
+    "fk_columns": "TRANSACTION_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "LABOR_TICKET",
+    "child": "TRACE_LABOR_TRANS",
+    "fk_columns": "TRANSACTION_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "EMPLOYEE",
+    "child": "INSPECTION_ORDER",
+    "fk_columns": "EMPLOYEE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "SALES_REP",
+    "child": "RCR_RECV_SHARE",
+    "fk_columns": "SHARE_SALESREP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "SALES_REP",
+    "child": "SALES_REP_SHARE",
+    "fk_columns": "SHARE_SALESREP_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "EC_LINE",
+    "child": "EC_LINE_BINARY",
+    "fk_columns": "EC_ID, LINE_NO",
+    "referenced_columns": "EC_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "ECN_OPERATION",
+    "child": "ECN_OPER_BINARY",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID, SEQUENCE_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID, SEQUENCE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "ECN_REQUIREMENT",
+    "child": "ECN_REQ_BINARY",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID, OPERATION_SEQ_NO, PIECE_NO",
+    "referenced_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID, OPERATION_SEQ_NO, PIECE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "ECN_WORKORDER",
+    "child": "ECN_WO_BINARY",
+    "fk_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID",
+    "referenced_columns": "ECN_ID, LINE_NO, ECN_ENTRY_NO, WORKORDER_SUB_ID"
+  },
+  {
+    "level": 2,
+    "parent": "EQUIP_PM_PROFILE",
+    "child": "EQUIP_PM_SCHEDULE",
+    "fk_columns": "PROFILE_ID",
+    "referenced_columns": "PROFILE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "EQUIP_PM_PROFILE",
+    "child": "EQUIP_PROFILE",
+    "fk_columns": "PROFILE_ID",
+    "referenced_columns": "PROFILE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "CASH_PLAN",
+    "child": "CASH_PLAN_LINE",
+    "fk_columns": "CASH_PLAN_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "TEST_STEP",
+    "child": "CONTROL_LIMITS",
+    "fk_columns": "TEST_ID, STEP_NO",
+    "referenced_columns": "TEST_ID, STEP_NO"
+  },
+  {
+    "level": 2,
+    "parent": "TEST_STEP",
+    "child": "TEST_STEP_BINARY",
+    "fk_columns": "TEST_ID, STEP_NO",
+    "referenced_columns": "TEST_ID, STEP_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PART_LOCATION",
+    "child": "PART_TRACE_LOCATION",
+    "fk_columns": "PART_ID, WAREHOUSE_ID, LOCATION_ID",
+    "referenced_columns": "PART_ID, WAREHOUSE_ID, LOCATION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "INVENTORY_TRANS",
+    "child": "INV_RECEIPT_DIST",
+    "fk_columns": "INV_TRANS_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "INVENTORY_TRANS",
+    "child": "INV_TRANS_DIST",
+    "fk_columns": "IN_TRANS_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "INVENTORY_TRANS",
+    "child": "INV_TRANS_DIST_TRC",
+    "fk_columns": "IN_TRANS_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "INVENTORY_TRANS",
+    "child": "TRACE_INV_TRANS",
+    "fk_columns": "TRANSACTION_ID",
+    "referenced_columns": "TRANSACTION_ID"
+  },
+  {
+    "level": 2,
+    "parent": "LABEL_FORMAT",
+    "child": "LABEL_FORMAT_FIELD",
+    "fk_columns": "LABEL_FORMAT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "LABEL_FORMAT",
+    "child": "LABEL_GROUP_LINE",
+    "fk_columns": "LABEL_FORMAT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "PHYS_COUNT_TAG",
+    "child": "PHYS_TRACE_COUNT",
+    "fk_columns": "PHYS_COUNT_ID, TAG_NO",
+    "referenced_columns": "PHYS_COUNT_ID, TAG_NO"
+  },
+  {
+    "level": 2,
+    "parent": "CUST_ORDER_LINE",
+    "child": "SHIPPER_LINE",
+    "fk_columns": "CUST_ORDER_ID, CUST_ORDER_LINE_NO",
+    "referenced_columns": "CUST_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "CUST_ORDER_LINE",
+    "child": "SHIPPER_LINE_DEL",
+    "fk_columns": "CUST_ORDER_ID, CUST_ORDER_LINE_NO",
+    "referenced_columns": "CUST_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "CUST_ORDER_LINE",
+    "child": "SHIPPER_LINK",
+    "fk_columns": "CUST_ORDER_ID, CUST_ORDER_LINE_NO",
+    "referenced_columns": "CUST_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "SOA_CODE_LIST",
+    "child": "SOA_CODE_MAP",
+    "fk_columns": "LIST_ID, AGENCY_ID, SOA_CODE",
+    "referenced_columns": "LIST_ID, AGENCY_ID, CODE"
+  },
+  {
+    "level": 2,
+    "parent": "TASK",
+    "child": "TASK_BINARY",
+    "fk_columns": "TASK_TYPE, TASK_NO, SEQ_NO",
+    "referenced_columns": "TYPE, TASK_NO, SEQ_NO"
+  },
+  {
+    "level": 2,
+    "parent": "OPERATION_TYPE",
+    "child": "OPERATION",
+    "fk_columns": "OPERATION_TYPE, SITE_ID",
+    "referenced_columns": "ID, SITE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "OPERATION_TYPE",
+    "child": "OPER_TYPE_BINARY",
+    "fk_columns": "OPERATION_TYPE_ID, SITE_ID",
+    "referenced_columns": "ID, SITE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "OPERATION_TYPE",
+    "child": "OPER_TYPE_RESOURCE",
+    "fk_columns": "OPERATION_TYPE_ID, SITE_ID",
+    "referenced_columns": "ID, SITE_ID"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_ORDER_LINE",
+    "child": "CONSIGN_RCVR_LINE",
+    "fk_columns": "PURC_ORDER_ID, PURC_ORDER_LINE_NO",
+    "referenced_columns": "PURC_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_ORDER_LINE",
+    "child": "PURC_LINE_BINARY",
+    "fk_columns": "PURC_ORDER_ID, PURC_ORDER_LINE_NO",
+    "referenced_columns": "PURC_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_ORDER_LINE",
+    "child": "PURC_LINE_DEL",
+    "fk_columns": "PURC_ORDER_ID, PURC_ORDER_LINE_NO",
+    "referenced_columns": "PURC_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_ORDER_LINE",
+    "child": "RECEIVER_LINE",
+    "fk_columns": "PURC_ORDER_ID, PURC_ORDER_LINE_NO",
+    "referenced_columns": "PURC_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_ORDER_LINE",
+    "child": "RECEIVER_LINE_DEL",
+    "fk_columns": "PURC_ORDER_ID, PURC_ORDER_LINE_NO",
+    "referenced_columns": "PURC_ORDER_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "PURC_REQ_LINE",
+    "child": "PURC_REQ_LN_BINARY",
+    "fk_columns": "PURC_REQ_ID, PURC_REQ_LINE_NO",
+    "referenced_columns": "PURC_REQ_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "REQUIREMENT",
+    "child": "REQUIREMENT_BINARY",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, OPERATION_SEQ_NO, PIECE_NO",
+    "referenced_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, OPERATION_SEQ_NO, PIECE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "REQUIREMENT",
+    "child": "REQUIREMENT_COST",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, OPERATION_SEQ_NO, REQ_PIECE_NO",
+    "referenced_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, OPERATION_SEQ_NO, PIECE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "RECEIVABLE_LINE",
+    "child": "RECV_LINE_BINARY",
+    "fk_columns": "INVOICE_ID, RECV_LINE_NO",
+    "referenced_columns": "INVOICE_ID, LINE_NO"
+  },
+  {
+    "level": 2,
+    "parent": "VR_ANALYTIC_CONFIG",
+    "child": "VR_ANALYTIC_CONFIG_PROP",
+    "fk_columns": "ANALYTIC_CONFIG_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 2,
+    "parent": "VR_DATA_SOURCE_COLUMN",
+    "child": "VR_DATA_SRC_DRILLTO_PARAM",
+    "fk_columns": "DATA_SOURCE_ID, DATA_SOURCE_COLUMN_NAME",
+    "referenced_columns": "DATA_SOURCE_ID, NAME"
+  },
+  {
+    "level": 2,
+    "parent": "VR_GRID_CONFIG",
+    "child": "VR_GRID_CONFIG_COLUMN",
+    "fk_columns": "GRID_CONFIG_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "QUOTE_LINE",
+    "child": "QUOTE_LINE_BINARY",
+    "fk_columns": "QUOTE_ID, QUOTE_LINE_NO",
+    "referenced_columns": "QUOTE_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "QUOTE_LINE",
+    "child": "QUOTE_PRICE",
+    "fk_columns": "QUOTE_ID, QUOTE_LINE_NO",
+    "referenced_columns": "QUOTE_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "WORK_ORDER",
+    "child": "WORKORDER_BINARY",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID",
+    "referenced_columns": "TYPE, BASE_ID, LOT_ID, SPLIT_ID, SUB_ID"
+  },
+  {
+    "level": 3,
+    "parent": "WORK_ORDER",
+    "child": "WO_SCH_PRIORITY",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID",
+    "referenced_columns": "TYPE, BASE_ID, LOT_ID, SPLIT_ID, SUB_ID"
+  },
+  {
+    "level": 3,
+    "parent": "WORK_ORDER_SCHED",
+    "child": "OPERATION_SCHED",
+    "fk_columns": "SCHEDULE_ID, WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID",
+    "referenced_columns": "SCHEDULE_ID, WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHIPPER",
+    "child": "RMA",
+    "fk_columns": "PACKLIST_ID",
+    "referenced_columns": "PACKLIST_ID"
+  },
+  {
+    "level": 3,
+    "parent": "IBT_LINE",
+    "child": "IBT_LINE_BINARY",
+    "fk_columns": "IBT_ID, IBT_LINE_NO",
+    "referenced_columns": "IBT_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "DEPARTMENT",
+    "child": "WBS",
+    "fk_columns": "DEF_DEPARTMENT_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "BOL",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "CALENDAR_CHANGE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "CALENDAR_WEEK",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "CASH_BOOK_SUMMARY",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "CASH_PLAN_SITE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "DEFAULT_DATA",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "DEMAND_SUPPLY_LINK",
+    "fk_columns": "DEMAND_SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "EMPLOYEE_SITE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "MOVE_REQUEST",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "PLANNED_MATL_REQ",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "PLANNING_BOM",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "PLANNING_FORECAST",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "PLANNING_MPS",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "PLANNING_PART",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "REQUEST_FOR_QUOTE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "REVALUE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "SCHEDULE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "SERVICE_CHARGE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "SERVICE_SITE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "SHOP_RESOURCE_SITE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "USAGE_ANALYSIS",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "USER_SITE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SITE",
+    "child": "VENDOR_SERVICE",
+    "fk_columns": "SITE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SERVICE",
+    "child": "SERVICE_BINARY",
+    "fk_columns": "SERVICE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "EQUIP_LABOR_PRICE",
+    "fk_columns": "RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "OPERATION_RESOURCE",
+    "fk_columns": "RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "RESOURCE_SCHED",
+    "fk_columns": "RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "SHOP_GROUP",
+    "fk_columns": "GROUP_RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "SHOP_VIEW",
+    "fk_columns": "RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "SHOP_RESOURCE",
+    "child": "UNP_MNT_ENGINEER",
+    "fk_columns": "RESOURCE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 3,
+    "parent": "CASH_PLAN_LINE",
+    "child": "CASH_PLAN_AMOUNT",
+    "fk_columns": "CASH_PLAN_ID, CASH_PLAN_LINE_NO",
+    "referenced_columns": "CASH_PLAN_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "SHIPPER_LINE",
+    "child": "PALLET_DETAIL",
+    "fk_columns": "PACKLIST_ID, PACKLIST_LINE_NO",
+    "referenced_columns": "PACKLIST_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "OPERATION",
+    "child": "BUFFER_STAT_WO_LOC",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, OPERATION_SEQ_NO",
+    "referenced_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, SEQUENCE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "OPERATION",
+    "child": "OPERATION_BINARY",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, SEQUENCE_NO",
+    "referenced_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, SEQUENCE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "OPERATION",
+    "child": "OPERATION_RESOURCE_DISPATCH",
+    "fk_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, SEQUENCE_NO",
+    "referenced_columns": "WORKORDER_TYPE, WORKORDER_BASE_ID, WORKORDER_LOT_ID, WORKORDER_SPLIT_ID, WORKORDER_SUB_ID, SEQUENCE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "CONSIGN_RCVR_LINE",
+    "child": "CNSN_RCVR_LINE_DEL",
+    "fk_columns": "RECEIVER_ID, RECEIVER_LINE_NO",
+    "referenced_columns": "RECEIVER_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "CONSIGN_RCVR_LINE",
+    "child": "INTRA_CNSN_RCVR_LN",
+    "fk_columns": "RECEIVER_ID, RECEIVER_LINE_NO",
+    "referenced_columns": "RECEIVER_ID, LINE_NO"
+  },
+  {
+    "level": 3,
+    "parent": "RECEIVER_LINE",
+    "child": "RECVR_LINE_BINARY",
+    "fk_columns": "RECEIVER_ID, RECEIVER_LINE_NO",
+    "referenced_columns": "RECEIVER_ID, LINE_NO"
+  },
+  {
+    "level": 4,
+    "parent": "RMA",
+    "child": "RMA_BINARY",
+    "fk_columns": "RMA_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "RMA",
+    "child": "RMA_LINE",
+    "fk_columns": "RMA_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "BOL",
+    "child": "CARTON",
+    "fk_columns": "BOL_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "BOL",
+    "child": "PALLET",
+    "fk_columns": "BOL_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "BOL",
+    "child": "TARE",
+    "fk_columns": "BOL_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "REQUEST_FOR_QUOTE",
+    "child": "RFQ_BINARY",
+    "fk_columns": "RFQ_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "SCHEDULE",
+    "child": "OPERATION_AUDIT",
+    "fk_columns": "SCHEDULE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 4,
+    "parent": "SCHEDULE",
+    "child": "WORKORDER_AUDIT",
+    "fk_columns": "SCHEDULE_ID",
+    "referenced_columns": "ID"
+  },
+  {
+    "level": 5,
+    "parent": "RMA_LINE",
+    "child": "RMA_LINE_BINARY",
+    "fk_columns": "RMA_ID, RMA_LINE_NO",
+    "referenced_columns": "RMA_ID, LINE_NO"
+  },
+  {
+    "level": 5,
+    "parent": "RMA_LINE",
+    "child": "RMA_LINE_DSL",
+    "fk_columns": "RMA_ID, RMA_LINE_NO",
+    "referenced_columns": "RMA_ID, LINE_NO"
+  },
+  {
+    "level": 5,
+    "parent": "CARTON",
+    "child": "CARTON_LINE",
+    "fk_columns": "CARTON_ID",
+    "referenced_columns": "ID"
+  }
+]
