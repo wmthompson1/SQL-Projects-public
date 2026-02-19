@@ -14,6 +14,46 @@ steps:
       python -m pip install --upgrade pip
       pip install -r requirements.txt
       pip install -r requirements-dev.txt
+
+  # Create a venv and install project + SQLMesh deps with Fail-Fast pip settings
+  - name: Create venv and install project + SQLMesh deps (Fail-Fast)
+    run: |
+      python3 -m venv .venv
+      . .venv/bin/activate
+      python -m pip install --upgrade pip
+      export PIP_DEFAULT_TIMEOUT=300
+      export PIP_RETRIES=10
+      PIP_DEFAULT_TIMEOUT=300 PIP_RETRIES=10 \
+        pip install -r requirements.txt \
+        --prefer-binary --upgrade-strategy only-if-needed --progress-bar off --no-input --disable-pip-version-check
+      if [ -f Utilities/SQLMesh/requirements.txt ]; then
+        PIP_DEFAULT_TIMEOUT=300 PIP_RETRIES=10 pip install -r Utilities/SQLMesh/requirements.txt --prefer-binary --no-input
+      fi
+    shell: bash
+
+  - name: Create venv and install project + SQLMesh deps (Windows)
+    if: runner.os == 'Windows'
+    run: |
+      python -m venv .venv
+      Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force
+      .\.venv\Scripts\Activate.ps1
+      python -m pip install --upgrade pip
+      $env:PIP_DEFAULT_TIMEOUT='300'; $env:PIP_RETRIES='10'
+      pip install -r requirements.txt --prefer-binary --upgrade-strategy only-if-needed --progress-bar off --no-input --disable-pip-version-check
+      if (Test-Path Utilities/SQLMesh/requirements.txt) { pip install -r Utilities/SQLMesh/requirements.txt --prefer-binary --no-input }
+    shell: pwsh
+
+  - name: Verify SQLMesh installation (optional)
+    run: |
+      . .venv/bin/activate || echo 'activate .venv manually on Windows'
+      python -c "import importlib,sys
+try:
+    m=importlib.import_module('sqlmesh')
+    print('sqlmesh', getattr(m,'__version__', 'unknown'))
+except Exception as e:
+    print('sqlmesh import failed:', e); sys.exit(1)
+"
+    shell: bash
   
   # Setup PowerShell (for cross-platform support)
   - name: Install PowerShell
@@ -30,21 +70,12 @@ steps:
     with:
       node-version: '18'
   
-  # Create .env template (don't populate secrets)
-  - name: Create .env template
+  - name: Install Rust and Cargo at the OS level (optional)
     run: |
-      cat > .env << 'EOF'
-      # ArangoDB Connection (local development)
-      ARANGO_HOST=http://127.0.0.1:8529
-      ARANGO_DB=_system
-      ARANGO_USER=dev_user
-      ARANGO_PASSWORD=
-      
-      # SQL Server Connection (not available in CI)
-      SQL_SERVER=sql-lab-1
-      SQL_DATABASE=LIVE
-      
-      # OpenAI API (if needed for testing)
-      OPENAI_API_KEY=
-      EOF
+      if ! command -v rustc &> /dev/null; then
+        curl https://sh.rustup.rs -sSf | sh -s -- -y
+        # Ensure cargo is available in the current and subsequent steps
+        echo "$HOME/.cargo/bin" >> $GITHUB_PATH
+        source $HOME/.cargo/env
+      fi
     shell: bash
